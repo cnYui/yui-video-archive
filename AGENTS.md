@@ -84,12 +84,16 @@ D:\大疆\                         （git 仓库，remote origin = cnYui/yui-vid
   - B 站旧稿清理清单：里面是用户设成“仅自己可见”的稿件。
 - **视频放 GitHub Releases，不进 git**：
   - 每期一个 release，tag 形如 `yuanlai-01`、`ai-daily-2026-09-29`、`way-to-agi-02`。
-  - 附件是成片 mp4，文件名用英文（中文会被 GitHub 改掉），中文写在标题和说明里。
-  - 只放已经在 B 站公开的那一版。
+  - 附件是成片 mp4，附件名用英文；中文原名放在附件的 label 里，中文标题写在 release 标题和说明里。
+  - 只放已经在 B 站公开的那一版（先核对时长）。
+  - 2026-09-29 已放：原LAI如此 #01–#04、日报 9/27–9/29、Way to AGI #02，共 8 个。README 的「视频存档」表是索引。
 - 新一期发布后：
-  1. 在 `D:\大疆` 跑 `git add -A && git commit && git push`；
-  2. `gh release create <tag> <成片>#<中文名> --repo cnYui/yui-video-archive --title ... --notes ...`；
-  3. 推之前先看 `git status`，有没有不该公开的文件。
+  1. 先看 `git status`，确认没有不该公开的文件；然后在 `D:\大疆` 执行 `git add -A`、`git commit`、`git push`。
+  2. 建 release：`gh release create <tag> --repo cnYui/yui-video-archive --target main --title "<中文标题>" --notes "<B 站链接、规格、目录>"`。
+  3. 上传成片：先用 `gh api repos/cnYui/yui-video-archive/releases/tags/<tag> --jq .id` 拿 id，再执行 `gh api --method POST -H "Content-Type: video/mp4" "https://uploads.github.com/repos/cnYui/yui-video-archive/releases/<id>/assets?name=<英文名>.mp4&label=<URL 编码的中文文件名>" --input <成片路径>`。
+     - 不要直接 `gh release create <tag> <中文名>.mp4`：中文附件名会被 GitHub 换成一串点。
+  4. README「视频存档」表加一行。
+- 记录：`docs/ai/context/20260929-110900-github-public-archive_CN.md`。
 - 公开仓库里不能出现 key、token、cookie、手机号、私人地址。`FISH_API_KEY` 只在环境变量里，照旧不写进文件。
 
 ## 所有视频通用的规则（开工前读）
