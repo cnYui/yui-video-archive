@@ -1,0 +1,384 @@
+{
+  "number": 929,
+  "title": "9月29日，鲸鱼娘带你看看AI圈发生了什么？",
+  "dir_name": "AI每日日报_0929",
+  "date": "2026-09-29",
+  "date_label": "9月29日",
+  "weekday": "周二",
+  "subtitle": "鲸鱼娘带你看看 AI 圈发生了什么",
+  "target_minutes": [
+    5,
+    6
+  ],
+  "question_scene": "S01",
+  "questions": [
+    {
+      "text": "Claude Sonnet 5.5 发布",
+      "scenes": [
+        "S02"
+      ]
+    },
+    {
+      "text": "英伟达推出智能体安全平台",
+      "scenes": [
+        "S03"
+      ]
+    },
+    {
+      "text": "华为开源盘古训练代码",
+      "scenes": [
+        "S04"
+      ]
+    },
+    {
+      "text": "千问打通夸克网盘",
+      "scenes": [
+        "S05"
+      ]
+    },
+    {
+      "text": "Gems 将迁移成 skills",
+      "scenes": [
+        "S06"
+      ]
+    },
+    {
+      "text": "Shopify 让 AI 帮你结账",
+      "scenes": [
+        "S07"
+      ]
+    },
+    {
+      "text": "AMD 收购 World Labs",
+      "scenes": [
+        "S08"
+      ]
+    }
+  ],
+  "chapters": {
+    "S01": "开场",
+    "S02": "Claude Sonnet 5.5 发布",
+    "S03": "英伟达推出智能体安全平台",
+    "S04": "华为开源盘古训练代码",
+    "S05": "千问打通夸克网盘",
+    "S06": "Gems 将迁移成 skills",
+    "S07": "Shopify 让 AI 帮你结账",
+    "S08": "AMD 收购 World Labs",
+    "S09": "回顾"
+  },
+  "bar_labels": {
+    "S01": "开场",
+    "S02": "Sonnet 5.5",
+    "S03": "智能体安全",
+    "S04": "盘古开源",
+    "S05": "千问网盘",
+    "S06": "Gems 迁移",
+    "S07": "AI 结账",
+    "S08": "AMD 收购",
+    "S09": "回顾"
+  },
+  "backgrounds": {
+    "S01": "01_深海气泡.png",
+    "S02": "02_星点.png",
+    "S03": "03_波纹.png",
+    "S04": "01_深海气泡.png",
+    "S05": "02_星点.png",
+    "S06": "03_波纹.png",
+    "S07": "01_深海气泡.png",
+    "S08": "02_星点.png",
+    "S09": "03_波纹.png"
+  },
+  "bg_alpha": 0.9,
+  "bg_blur": 0,
+  "intro_tagline": "",
+  "outro_items": [
+    {
+      "label": "新闻来源",
+      "value": "Anthropic · Anthropic 文档 · TechCrunch"
+    },
+    {
+      "label": "来源（续）",
+      "value": "英伟达新闻稿 · Anthropic 博客 · IT之家 等"
+    },
+    {
+      "label": "形象",
+      "value": "大肥鱼同人 · 上善无形 / ZipZipPipe"
+    },
+    {
+      "label": "视频制作模型",
+      "value": "Opus 5.5"
+    }
+  ],
+  "outro_closing": "感谢大家看到最后",
+  "auto_gestures": false,
+  "presenter": {
+    "id": "whale",
+    "frames": "角色/动作帧"
+  },
+  "badge_html": "AI每日日报<span class=\"n\">09.29</span>",
+  "toc_kicker_html": "<b>今日要闻</b>TODAY",
+  "bar_colors": [
+    "#97C3F0",
+    "#F3C98C",
+    "#4A88DA",
+    "#C6E6FB"
+  ],
+  "news": [
+    {
+      "headline": "Claude Sonnet 5.5 发布",
+      "org": "Anthropic",
+      "source": "Anthropic 官方 · TechCrunch",
+      "source_short": "Anthropic",
+      "date": "9月28日",
+      "points": [
+        "速度快三成以上",
+        "多数任务最多省 30%",
+        "API 单价不变",
+        "上下文 1M token"
+      ],
+      "rundown_key": "Sonnet 5.5",
+      "line_points": [
+        null,
+        0,
+        1,
+        2,
+        3,
+        null,
+        null,
+        null,
+        null
+      ],
+      "refs": [
+        {
+          "name": "Anthropic",
+          "url": "https://www.anthropic.com/claude-sonnet-5-5"
+        },
+        {
+          "name": "Anthropic 文档",
+          "url": "https://platform.claude.com/docs/en/models/sonnet-5-5/overview"
+        },
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/09/28/anthropic-releases-sonnet-5-5-which-it-calls-a-significantly-cheaper-faster-work-partner/"
+        }
+      ],
+      "snap": "../assets/snaps/news_01.png",
+      "snap_src": "techcrunch.com"
+    },
+    {
+      "headline": "英伟达推出智能体安全平台",
+      "org": "NVIDIA / Anthropic",
+      "source": "英伟达官方 · Anthropic 官方博客",
+      "source_short": "英伟达",
+      "date": "9月28日",
+      "points": [
+        "OpenShell 管住权限",
+        "Sentry 毫秒级隔离",
+        "100 多家机构参与",
+        "Claude 托管智能体接入"
+      ],
+      "rundown_key": "英伟达",
+      "line_points": [
+        null,
+        0,
+        null,
+        1,
+        2,
+        3,
+        null,
+        null,
+        null
+      ],
+      "refs": [
+        {
+          "name": "英伟达新闻稿",
+          "url": "https://nvidianews.nvidia.com/news/open-agent-safety-platform"
+        },
+        {
+          "name": "Anthropic 博客",
+          "url": "https://claude.com/blog/giving-companies-more-control-over-their-ai-agents-with-nvidia"
+        }
+      ],
+      "snap": "../assets/snaps/news_02.png",
+      "snap_src": "nvidianews.nvidia.com"
+    },
+    {
+      "headline": "华为开源盘古训练代码",
+      "org": "华为",
+      "source": "IT之家 · GitCode",
+      "source_short": "IT之家",
+      "date": "9月28日",
+      "points": [
+        "预训练和微调代码",
+        "强化学习代码",
+        "面向昇腾芯片",
+        "不代表开放权重"
+      ],
+      "rundown_key": "盘古",
+      "line_points": [
+        0,
+        null,
+        2,
+        1,
+        3,
+        null
+      ],
+      "refs": [
+        {
+          "name": "IT之家",
+          "url": "https://www.ithome.com/1/007/740.htm"
+        },
+        {
+          "name": "GitCode 训练仓库",
+          "url": "https://gitcode.com/ascend-tribe/openPangu-2.0-Training"
+        },
+        {
+          "name": "动点科技",
+          "url": "https://cn.technode.com/post/2026-09-28/huawei-openpangu-2-training-code-open-source/"
+        }
+      ],
+      "snap": "../assets/snaps/news_03.png",
+      "snap_src": "ithome.com"
+    },
+    {
+      "headline": "千问打通夸克网盘",
+      "org": "Qwen",
+      "source": "IT之家 · 手机中国",
+      "source_short": "IT之家",
+      "date": "9月28日",
+      "points": [
+        "授权后读取网盘",
+        "说一句就能找文件",
+        "复习计划和纪念海报",
+        "内容能存回网盘"
+      ],
+      "rundown_key": "夸克网盘",
+      "line_points": [
+        null,
+        0,
+        null,
+        1,
+        2,
+        null,
+        3,
+        null
+      ],
+      "refs": [
+        {
+          "name": "IT之家",
+          "url": "https://www.ithome.com/1/007/871.htm"
+        },
+        {
+          "name": "手机中国",
+          "url": "https://internet.cnmo.com/event/819464.html"
+        }
+      ],
+      "snap": "../assets/snaps/news_04.png",
+      "snap_src": "ithome.com"
+    },
+    {
+      "headline": "Gems 将迁移成 skills",
+      "org": "Google",
+      "source": "9to5Google",
+      "source_short": "9to5Google",
+      "date": "9月27日",
+      "points": [
+        "11 月 17 日开始迁移",
+        "谷歌自动迁移",
+        "打斜杠就能调用",
+        "能同时用好几个"
+      ],
+      "rundown_key": "Gems",
+      "line_points": [
+        null,
+        null,
+        0,
+        1,
+        null,
+        null,
+        2,
+        3,
+        null
+      ],
+      "refs": [
+        {
+          "name": "9to5Google",
+          "url": "https://9to5google.com/2026/09/27/gemini-gems-skills/"
+        }
+      ],
+      "snap": "../assets/snaps/news_05.png",
+      "snap_src": "9to5google.com"
+    },
+    {
+      "headline": "Shopify 让 AI 帮你结账",
+      "org": "Shopify",
+      "source": "Shopify 官方 · TechCrunch",
+      "source_short": "Shopify",
+      "date": "9月28日",
+      "points": [
+        "浏览器智能体能结账",
+        "不靠截图扒网页",
+        "买家确认才下单",
+        "商家不用配置"
+      ],
+      "rundown_key": "Shopify",
+      "line_points": [
+        0,
+        1,
+        null,
+        2,
+        3,
+        null,
+        null
+      ],
+      "refs": [
+        {
+          "name": "Shopify 更新日志",
+          "url": "https://shopify.dev/changelog/posts/webmcp-support-for-checkout"
+        },
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/09/28/shopify-opens-checkout-to-browser-based-ai-agents/"
+        }
+      ],
+      "snap": "../assets/snaps/news_06.png",
+      "snap_src": "shopify.dev"
+    },
+    {
+      "headline": "AMD 收购 World Labs",
+      "org": "AMD",
+      "source": "AMD 官方 · TechCrunch",
+      "source_short": "AMD",
+      "date": "9月28日",
+      "points": [
+        "约 82 亿美元",
+        "全部用股票支付",
+        "李飞飞任首席科学家",
+        "预计年底前完成"
+      ],
+      "rundown_key": "AMD",
+      "line_points": [
+        null,
+        0,
+        1,
+        null,
+        2,
+        null,
+        3
+      ],
+      "refs": [
+        {
+          "name": "AMD 新闻稿",
+          "url": "https://ir.amd.com/news-events/press-releases/detail/1299/amd-to-acquire-world-labs-to-advance-the-future-of-ai-compute"
+        },
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/09/28/amd-will-acquire-fei-fei-lis-world-labs-for-8-2-billion/"
+        }
+      ],
+      "snap": "../assets/snaps/news_07.png",
+      "snap_src": "techcrunch.com"
+    }
+  ],
+  "style": "board"
+}

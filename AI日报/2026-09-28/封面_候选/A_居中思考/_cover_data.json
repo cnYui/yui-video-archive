@@ -1,0 +1,22 @@
+{
+  "line1": "Claude 拒绝回答",
+  "line2": "也要收钱了？",
+  "l1px": 168,
+  "l2px": 236,
+  "maxw": 1400,
+  "textCx": 960,
+  "scale": 9,
+  "frame": [
+    64,
+    64
+  ],
+  "footRow": 62,
+  "fishX": 672,
+  "foot": 1062,
+  "tag": "",
+  "_pose": "think_m0",
+  "_eyes": "idle_look_ur_m0",
+  "_fx": "",
+  "_qmark": true,
+  "_place": "center"
+}

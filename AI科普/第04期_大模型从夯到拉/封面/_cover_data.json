@@ -1,0 +1,27 @@
+{
+  "frame": [
+    64,
+    64
+  ],
+  "footRow": 62,
+  "scale": 9,
+  "ryoX": 232,
+  "rx": 790,
+  "rw": 850,
+  "q": {
+    "sx": 40,
+    "sy": -15
+  },
+  "t1": "大模型",
+  "t2": "谁夯谁拉？",
+  "subHTML": "2026 下半年 · <span class=\"hl\">18 个模型锐评</span>",
+  "plain": "#FFFFFF",
+  "bg": {
+    "scale": 1.0,
+    "fx": 0.5,
+    "fy": 0.5,
+    "opacity": 0.36,
+    "blur": 8
+  },
+  "number": 4
+}

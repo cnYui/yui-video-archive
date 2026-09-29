@@ -1,0 +1,37 @@
+{
+  "stages": {
+    "init": {
+      "at": "2026-09-29 07:26:50"
+    },
+    "build": {
+      "at": "2026-09-29 08:51:47",
+      "script_sha": "32ffada833c7",
+      "chunks": 1
+    },
+    "tts": {
+      "at": "2026-09-29 08:13:02",
+      "model": "s1",
+      "takes": 1
+    },
+    "voice": {
+      "at": "2026-09-29 08:17:59",
+      "takes": 1
+    },
+    "render": {
+      "at": "2026-09-29 08:33:31",
+      "seconds": 343.29,
+      "upload_bytes": 8895616,
+      "check_warnings": 0
+    },
+    "gate": {
+      "at": "2026-09-29 08:35:19",
+      "passed": false,
+      "script_sha": "388fe983c8f2"
+    },
+    "published": {
+      "at": "2026-09-29 09:19:25",
+      "bv": "BV1MKaJ6XEDd"
+    }
+  },
+  "last": "published"
+}

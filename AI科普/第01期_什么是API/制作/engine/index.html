@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>原LAI如此 #01 · 什么是 API — 正片画面</title>
+<!--
+  正片画面引擎。渲染（在 制作/ 下）：
+    python engine/sync_assets.py                       # 素材（精灵/背景）变了先跑这个，生成 engine/assets.js
+    python render.py engine/index.html --data timeline.json -o build/main.mp4 --fps 30
+  数据契约见 ../PRODUCTION.md。所有时刻由 __DATA__（timeline.json）驱动，不写死秒数。
+-->
+<link rel="stylesheet" href="../fonts/fonts.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<script src="assets.js"></script>
+<script src="core.js"></script>
+<script src="scenes.js"></script>
+<script>ENG.boot();</script>
+</body>
+</html>

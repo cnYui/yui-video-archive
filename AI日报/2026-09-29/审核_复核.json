@@ -1,0 +1,28 @@
+{
+ "verdict": "fail",
+ "script_sha": "388fe983c8f2",
+ "issues": [
+  "第 7 条（AMD 收购 World Labs）截图 news_07.png 不合格：AMD 新闻稿页顶部横幅的深色渐变遮罩（header.page-banner.overlay.dark）盖住了整张截图，底色从左边 RGB 18 渐变到右边 115，只有标题勉强能认，导语和正文基本看不清；成片里这一段（约 4:57–5:32）白板上贴的“照片”是一块近黑的卡片。要重截（截图前隐藏这层遮罩），或改用 TechCrunch 那篇做截图。",
+  "第 6 条第 7 句「亚马逊和阿迪达斯是拦着 AI 智能体下单，Shopify 选了相反的方向。」把传闻当事实：TechCrunch 原文是 “some retailers, like Amazon (and Adidas, apparently!), are blocking AI agents from making purchases”，阿迪达斯这半句带着 apparently! 的保留语气，链接只指向一条个人 X 推文（x.com/kesslerIO/status/2104397316673462339，打不开核对），没有官方或正式报道；亚马逊这半句有 Bloomberg 报道撑着（亚马逊拦下 Meta 的 Muse 智能体）。建议删掉“和阿迪达斯”，或整句删。",
+  "第 6 条第 6 句「Shopify 说，合作的智能体有 Muse 和 Instinct。」出处写错：Shopify 更新日志没有提 Muse 和 Instinct，这句是 TechCrunch 自己的叙述（“Top AI agents like Muse and Instinct already have direct partnerships with Shopify for agentic commerce”），不是 Shopify 的说法。建议改成“TechCrunch 提到，Muse 和 Instinct 已经和 Shopify 直接合作”。",
+  "（小问题）第 4 条第 3 个要点「生成复习计划海报」把两个例子（用课程讲义做复习计划、进度看板；用旅行照片做纪念海报）连成了一个词，读起来像“复习计划海报”，原文没有这个说法。建议改成「复习计划、纪念海报」。"
+ ],
+ "checked": [
+  "https://www.anthropic.com/claude-sonnet-5-5",
+  "https://platform.claude.com/docs/en/models/sonnet-5-5/overview",
+  "https://techcrunch.com/2026/09/28/anthropic-releases-sonnet-5-5-which-it-calls-a-significantly-cheaper-faster-work-partner/",
+  "https://nvidianews.nvidia.com/news/open-agent-safety-platform",
+  "https://claude.com/blog/giving-companies-more-control-over-their-ai-agents-with-nvidia",
+  "https://www.ithome.com/1/007/740.htm",
+  "https://gitcode.com/ascend-tribe/openPangu-2.0-Training",
+  "https://cn.technode.com/post/2026-09-28/huawei-openpangu-2-training-code-open-source/",
+  "https://www.ithome.com/1/007/871.htm",
+  "https://internet.cnmo.com/event/819464.html",
+  "https://9to5google.com/2026/09/27/gemini-gems-skills/",
+  "https://shopify.dev/changelog/posts/webmcp-support-for-checkout",
+  "https://techcrunch.com/2026/09/28/shopify-opens-checkout-to-browser-based-ai-agents/",
+  "https://ir.amd.com/news-events/press-releases/detail/1299/amd-to-acquire-world-labs-to-advance-the-future-of-ai-compute",
+  "https://techcrunch.com/2026/09/28/amd-will-acquire-fei-fei-lis-world-labs-for-8-2-billion/",
+  "https://support.claude.com/en/articles/12138966-release-notes"
+ ]
+}

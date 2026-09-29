@@ -1,0 +1,84 @@
+# 公开仓库 cnYui/yui-video-archive 的白名单（2026-09-29 建，规则见 AGENTS.md「GitHub 公开仓库」）
+# 默认不收任何文件，只收下面列出的文本、代码和每期最终封面；视频成片放 GitHub Releases，不进 git。
+# 第三方素材（同人像素包、官方立绘、背景图、BGM、字体、手写笔画数据、新闻截图）和原始拍摄素材一律不收。
+# 改这里之前先想清楚会不会把素材或私人内容带出去。
+
+# 1) 默认全部忽略（目录照常往下找，才能收到下面白名单里的文件）
+*
+!*/
+
+# 2) 白名单：文本和代码
+!*.md
+!*.txt
+!*.srt
+!*.json
+!*.jsonl
+!*.yaml
+!*.yml
+!*.py
+!*.pyw
+!*.ps1
+!*.js
+!*.css
+!*.html
+!.gitignore
+!.gitattributes
+
+# 3) 白名单：每期最终封面（16:9 + 4:3）
+!**/封面/封面_16x9_1920x1080.png
+!**/封面/封面_4x3_1440x1080.png
+!**/04_封面/封面_选定_16x9.png
+!**/04_封面/封面_选定_4x3.png
+
+# 4) 整个目录不收（写在白名单后面，后写的规则优先）
+/真人素材/
+/.claude/
+_旧稿/
+_旧稿_*/
+_旧/
+_skilltest/
+_测试_*/
+_试跑_*/
+_test_*/
+__pycache__/
+node_modules/
+# 第三方素材和字体（山田凉同人像素包仅限个人非商业使用；官方立绘、背景图、BGM、手写笔画数据）
+素材/
+fonts/
+字体/
+# 渲染素材、中间文件、配音原始音频（中间带 / 的规则只匹配根目录，所以要写 **/）
+**/制作/build/
+**/制作/assets/
+**/制作/voice/
+**/配音/raw/
+**/配音/segments/
+# 新闻原文缓存、别人视频的转写、第三方数据、从第三方笔画数据生成的文件
+source_pages.json
+参考分析/
+metr_benchmark_results_*.yaml
+handdata.js
+# 片头片尾的渲染产物（源文件 intro/ outro/ 照收）
+/AI科普/片头片尾/out/
+/AI科普/片头片尾/_archive/
+/AI科普/片头片尾/_qa/
+# 目录联接（指向别处的内容，不重复收）
+/AI日报/片头片尾
+# 日报：抓取日志、快照、抓来的候选原文
+/AI日报/collector/logs/
+/AI日报/collector/health/
+/AI日报/collector/snapshots/
+candidates.json
+candidates.md
+items.jsonl
+# Way to AGI：用户提供的展示视频素材、从原片截的帧
+/Way to AGI/*/教程_Claude做视频/
+/Way to AGI/*/素材/
+/Way to AGI/*/制作/04_封面/face_src/
+/Way to AGI/*/制作/04_封面/face_cut/
+# 录像原始逐条转写（有没用上的重录、上一期的录音）
+/Way to AGI/*/制作/02_出镜/asr/
+/Way to AGI/*/制作/02_出镜/_asr_log.txt
+
+# 5) 单独排除的记录
+# B 站旧稿清理清单：里面是用户设成“仅自己可见”的稿件，不公开
+/docs/ai/context/20260927-103216-bilibili-cleanup_CN.md

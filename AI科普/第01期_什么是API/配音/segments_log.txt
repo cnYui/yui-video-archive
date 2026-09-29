@@ -1,0 +1,18 @@
+C01: 1 segments, take C01_v2.mp3
+C02: 6 segments, take C02_v2.mp3
+C03: 6 segments, take C03_v1.mp3
+C04: 2 segments, take C04_v1.mp3
+C05: 6 segments, take C05_v2.mp3
+C06: 2 segments, take C06_v2.mp3
+C07: 5 segments, take C07_v1.mp3
+C08: 2 segments, take C08_v2.mp3
+C09: 6 segments, take C09_v2.mp3
+C10: 6 segments, take C10_v1.mp3
+C11: 5 segments, take C11_v2.mp3
+C12: 4 segments, take C12_v1.mp3
+C13: 1 segments, take C13_v2.mp3
+C14: 5 segments, take C14_v2.mp3
+C15: 4 segments, take C15_v1.mp3
+C16: 1 segments, take C16_v1.mp3
+C17: 6 segments, take C17_v1.mp3
+total voice 324.0 s

@@ -1,0 +1,1047 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<!-- 教程《如何使用 Claude 来低成本地生成视频》整片（2340×1080，30 fps，无字幕版）。
+     renderAt(t) 画出第 t 秒：同一个 t 永远是同一帧。时间轴在 timeline.js（build_timeline.py 生成），数据在 data.js（prep_media.py 生成）。
+     版式：A = 出镜大框在左、右边写要点；B = 出镜缩到左上角、左下是本章目录、右边大区域放演示；C = 作品展示。
+     字幕带（y 930 以下）先空着，配音录好后再加。 -->
+<link rel="stylesheet" href="file:///D:/大疆/AI科普/素材/字体/fonts.css">
+<style>
+:root { --ink:#1B1B1F; --ink2:#374151; --gray:#6B7280; --gray2:#9AA1AC; --line:#E5E7EB; --soft:#F4F5F7; --orange:#FF4F1A; --marker:#FFD84D; --green:#16A34A; --red:#DC2626; }
+* { box-sizing:border-box; margin:0; padding:0; }
+html, body { width:2340px; height:1080px; background:#fff; overflow:hidden; font-family:'Noto Sans SC', sans-serif; color:var(--ink); }
+#stage, .root { position:absolute; inset:0; }
+.abs { position:absolute; }
+.frame { position:absolute; background:#fff; padding:14px; border:1px solid var(--line); border-radius:10px; box-shadow:0 14px 36px rgba(0,0,0,.14); }
+.frame .inner { position:relative; width:100%; height:100%; border-radius:4px; overflow:hidden; background:#EEF0F3; }
+.frame .inner > img { position:absolute; left:0; top:0; width:100%; height:100%; object-fit:cover; display:block; }
+.tape { position:absolute; width:150px; height:40px; background:rgba(255,214,140,.8); top:-18px; box-shadow:0 1px 2px rgba(0,0,0,.08); z-index:3; }
+.tape.l { left:44px; transform:rotate(-7deg); }
+.tape.r { right:44px; transform:rotate(6deg); }
+.tape.s { width:110px; height:32px; top:-15px; }
+.card { position:absolute; background:var(--soft); border-radius:14px; }
+.wcard { position:absolute; background:#fff; border:1px solid var(--line); border-radius:14px; box-shadow:0 8px 24px rgba(0,0,0,.08); }
+.chip { display:inline-block; padding:5px 18px; border:3px solid var(--orange); color:var(--orange); border-radius:999px; font:800 26px 'Noto Sans SC'; white-space:nowrap; }
+.h1 { font:800 52px/1.25 'Noto Sans SC'; white-space:nowrap; }
+.big { font:800 84px/1.22 'Noto Sans SC'; }
+.mark { background:linear-gradient(transparent 58%, var(--marker) 58%, var(--marker) 92%, transparent 92%); }
+.note { position:absolute; font:500 22px 'Noto Sans SC'; color:var(--gray2); white-space:nowrap; }
+.mono { font-family:'JetBrains Mono','Noto Sans SC', monospace; }
+.code { position:absolute; background:#1E1F22; color:#D4D4D4; border-radius:14px; padding:30px 36px; font:500 28px/1.7 'JetBrains Mono','Noto Sans SC', monospace; white-space:pre; overflow:hidden; box-shadow:0 14px 36px rgba(0,0,0,.18); }
+.code .k { color:#C792EA; } .code .s { color:#C3E88D; } .code .c { color:#7F848E; } .code .n { color:#F78C6C; } .code .f { color:#82AAFF; }
+.caret { display:inline-block; width:14px; height:30px; background:var(--orange); vertical-align:-5px; }
+.sprite { position:absolute; image-rendering:pixelated; }
+.num { display:inline-flex; width:52px; height:52px; border-radius:50%; background:var(--orange); color:#fff; font:800 30px 'Space Grotesk'; align-items:center; justify-content:center; flex:none; }
+.bl { display:flex; align-items:center; gap:22px; font:700 44px/1.3 'Noto Sans SC'; }
+.hl { position:absolute; border:5px solid var(--orange); border-radius:12px; box-shadow:0 0 0 4px rgba(255,79,26,.18); }
+.lab { position:absolute; background:var(--orange); color:#fff; font:800 26px 'Noto Sans SC'; padding:4px 14px; border-radius:8px; white-space:nowrap; }
+.row { display:flex; align-items:center; }
+.tag0 { display:inline-block; background:#E8F7EE; color:var(--green); border-radius:8px; padding:2px 14px; font:800 30px 'Space Grotesk','Noto Sans SC'; }
+/* 左下目录 */
+#toc { left:48px; top:492px; width:696px; height:408px; padding:26px 30px; }
+#toc .t { font:800 30px 'Noto Sans SC'; margin-bottom:14px; white-space:nowrap; }
+#toc .it { display:flex; align-items:center; gap:12px; font:500 24px/1.42 'Noto Sans SC'; color:#B0B6BF; white-space:nowrap; }
+#toc .it .b { width:6px; height:26px; border-radius:3px; background:transparent; flex:none; }
+#toc .it.done { color:var(--gray); }
+#toc .it.now { color:var(--ink); font-weight:800; }
+#toc .it.now .b { background:var(--orange); }
+/* 出镜位（占位） */
+#cam { z-index:10; }
+#cam .inner { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:.3em; }
+#cam .t1 { font-weight:800; color:#6B7280; font-size:1em; }
+#cam .t2 { font-weight:600; color:#9AA1AC; font-size:.62em; }
+#cam .pid { position:absolute; right:.5em; bottom:.4em; font:800 .6em 'Space Grotesk'; color:#9AA1AC; }
+</style>
+</head>
+<body>
+<div id="stage"></div>
+<div class="card" id="toc"></div>
+<div class="frame" id="cam">
+  <div class="tape l s"></div><div class="tape r s"></div>
+  <div class="inner">
+    <svg viewBox="0 0 100 100" style="width:4.2em;height:4.2em"><circle cx="50" cy="36" r="18" fill="#C9CED6"/><path d="M16 94c0-19 15-31 34-31s34 12 34 31z" fill="#C9CED6"/></svg>
+    <div class="t1">UE 出镜位</div>
+    <div class="t2">自拍之后合成进来</div>
+    <div class="pid" id="campid"></div>
+  </div>
+</div>
+<script src="timeline.js"></script>
+<script src="data.js"></script>
+<script>
+// ======================================================================= 基础
+const TLD = window.TL, D = window.DATA, FPS = TLD.fps;
+const SX = 790, SY = 40, SW = 1502, SB = 900;           // 版式 B 的演示区（下沿 900，下面留给字幕）
+const RX = 1400, RW = 880;                             // 版式 A 的右侧要点区
+const CAM = { A: { x: 120, y: 150, w: 1156, h: 666 }, P: { x: 48, y: 48, w: 696, h: 402 } };
+const MOVE = 0.7, FIN = 0.45, FOUT = 0.3;
+const WH = 'file:///D:/大疆/AI科普/素材/角色/大肥鱼像素素材包/素材/动作帧';
+const SHOW = '../01_作品展示/clips';
+window.__ERR = [];
+
+const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+const easeOut = x => 1 - Math.pow(1 - clamp(x), 3);
+const easeIn = x => Math.pow(clamp(x), 3);
+const easeIO = x => { x = clamp(x); return x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2; };
+const lerp = (a, b, x) => a + (b - a) * x;
+const px = v => v + 'px';
+const pad3 = n => String(n).padStart(3, '0');
+const PARA = {}; TLD.paras.forEach(p => PARA[p.id] = p);
+
+function units(text) {   // 和 build_timeline.py 的 units() 一样
+  let u = 0;
+  for (const m of text.matchAll(/[A-Za-z][A-Za-z\-]*|\d|[\u4e00-\u9fff]|[，、：；]|[。？！]/g)) {
+    const s = m[0];
+    if (/^[A-Za-z]/.test(s)) u += 1.5; else if (/^\d$/.test(s)) u += 1.1;
+    else if ('，、：；'.includes(s)) u += 0.9; else if ('。？！'.includes(s)) u += 1.6; else u += 1;
+  }
+  return u;
+}
+function timer(s) {
+  return {
+    dur: s.end - s.start,
+    p0: pid => PARA[pid].start - s.start,
+    pe: pid => PARA[pid].start - s.start + PARA[pid].speech,
+    at(pid, phrase, off = 0) {
+      const p = PARA[pid], i = p.text.indexOf(phrase);
+      if (i < 0) throw new Error(`「${phrase}」不在 ${pid}`);
+      return p.start - s.start + units(p.text.slice(0, i)) / units(p.text) * p.speech + off;
+    },
+  };
+}
+
+function mk(parent, cls = '', style = {}, html = '', tag = 'div') {
+  const e = document.createElement(tag);
+  if (cls) e.className = cls;
+  for (const [k, v] of Object.entries(style)) if (v !== undefined && v !== null) e.style[k] = typeof v === 'number' && !['opacity', 'zIndex', 'fontWeight', 'lineHeight', 'flex'].includes(k) ? px(v) : v;
+  if (html) e.innerHTML = html;
+  parent.appendChild(e);
+  return e;
+}
+const at = (parent, x, y, w, h, cls = '', style = {}, html = '') => mk(parent, 'abs ' + cls, Object.assign({ left: x, top: y, width: w, height: h }, style), html);
+
+// 出现 / 消失：t0 开始淡入，t1（可选）开始淡出
+function show(el, lt, t0, o = {}) {
+  const d = o.d ?? 0.4, dy = o.dy ?? 18, dx = o.dx ?? 0;
+  const a = easeOut((lt - t0) / d);
+  const b = o.t1 == null ? 1 : 1 - easeIn((lt - o.t1) / (o.d1 ?? 0.3));
+  const v = Math.min(a, b);
+  el.style.opacity = v;
+  el.style.visibility = v < 0.002 ? 'hidden' : 'visible';
+  el.style.transform = `translate(${dx * (1 - a)}px, ${dy * (1 - a)}px)` + (o.scale ? ` scale(${lerp(o.scale, 1, a)})` : '');
+  return v;
+}
+
+const PENDING = new Set();
+function setSrc(img, src) {
+  if (img.dataset.src !== src) { img.dataset.src = src; img.src = src; PENDING.add(img); }
+}
+function image(parent, src, style = {}) { const i = mk(parent, '', style, '', 'img'); setSrc(i, src); return i; }
+async function flush() {
+  const arr = [...PENDING]; PENDING.clear();
+  await Promise.all(arr.map(i => i.decode().catch(() => window.__ERR.push('图片加载失败 ' + i.dataset.src))));
+}
+function seqSrc(dir, n, lt, t0, fps = FPS) {
+  const i = clamp(Math.floor((lt - t0) * fps), 0, n - 1);
+  return `${dir}/f_${pad3(i + 1)}.jpg`;
+}
+// 带胶带的画框，返回 inner
+function frameBox(parent, x, y, w, h, tape = true) {
+  const f = at(parent, x, y, w, h, 'frame');
+  if (tape) { mk(f, 'tape l'); mk(f, 'tape r'); }
+  const inner = mk(f, 'inner');
+  return { f, inner };
+}
+// 顶部标题：chip + 大标题
+function header(root, chip, title) {
+  const h = at(root, SX, SY + 6, SW, 130);
+  mk(h, 'chip', {}, chip);
+  mk(h, 'h1', { marginTop: 14 }, title);
+  return h;
+}
+
+// 像素角色：12 帧呼吸（毫秒）
+const BREATH = [600, 140, 400, 140, 140, 520, 140, 60, 150, 70, 140, 140], BSUM = 2640;
+function breathIdx(ms) { let m = ((ms % BSUM) + BSUM) % BSUM; for (let i = 0; i < 12; i++) { if (m < BREATH[i]) return i; m -= BREATH[i]; } return 11; }
+function sprite(parent, x, y, scale) { return mk(parent, 'sprite', { left: x, top: y, width: 64 * scale, height: 64 * scale }, '', 'img'); }
+function setSprite(img, key, lt) { setSrc(img, `${WH}/${key}/${String(breathIdx(lt * 1000)).padStart(2, '0')}.png`); }
+
+// ======================================================================= 画面
+const S = {};
+
+// ---- S01 开场标题（A）
+S.intro = (root, s) => {
+  const tm = timer(s);
+  const box = at(root, RX, 190, RW, 600);
+  const c = mk(box, 'chip', {}, 'Claude 做视频 · 教程');
+  const t = mk(box, 'big', { marginTop: 30 }, '如何用 Claude<br><span class="mark" id="mk1">低成本</span>地生成视频');
+  const sub = mk(box, '', { marginTop: 34, font: "500 32px/1.6 'Noto Sans SC'", color: 'var(--gray)' }, 'Opus 5.5 · 写代码做视频<br>原理 · 拆解 · 成本');
+  return { update(lt) { show(c, lt, 0.3); show(t, lt, 0.5); show(sub, lt, 1.1); } };
+};
+
+// ---- S02 Opus 5.5 发布：智能指数 + 价格
+S.opus55 = (root, s) => {
+  const tm = timer(s), tB = tm.p0('P02b');
+  const h = header(root, '9 月 22 日', 'Claude Opus 5.5 发布');
+  const chart = at(root, SX, 190, SW, 640);
+  mk(chart, '', { font: "700 30px 'Noto Sans SC'", color: 'var(--ink2)' }, 'Artificial Analysis 智能指数（截至 9 月 28 日）');
+  const rows = [['Claude Opus 5.5', 57.6], ['Claude Fable 5.1', 53.4], ['GPT-6 Astra', 52.7], ['Muse Spark 1.3', 48.1], ['GPT-6 Sol', 47.5], ['Grok 4.7', 46.4], ['MiMo-V2.6-Pro', 46.3]];
+  const bars = rows.map(([name, v], i) => {
+    const y = 70 + i * 72;
+    mk(chart, 'abs', { left: 0, top: y, width: 330, textAlign: 'right', font: `${i ? 600 : 800} 30px 'Noto Sans SC'`, color: i ? 'var(--ink2)' : 'var(--ink)' }, name);
+    const bar = mk(chart, 'abs', { left: 360, top: y + 4, height: 44, width: 0, borderRadius: 8, background: i ? '#C9CED6' : 'var(--orange)' });
+    const val = mk(chart, 'abs', { left: 360, top: y + 2, font: `800 32px 'Space Grotesk'`, color: i ? 'var(--gray)' : 'var(--orange)' }, v.toFixed(1));
+    return { bar, val, v };
+  });
+  const lead = mk(chart, 'abs', { left: 1250, top: 60, font: "800 34px 'Noto Sans SC'", color: 'var(--orange)' }, '领先第二名 4.2 分');
+  const src1 = at(root, SX, 846, SW, 40, 'note', {}, '来源：Artificial Analysis 智能指数 v4.3.2，按模型计，2026-09-28');
+  // 价格
+  const price = at(root, SX, 190, SW, 640);
+  const col = (x, name, val, dim) => {
+    const c = mk(price, 'wcard', { left: x, top: 60, width: 560, height: 330, padding: '34px 40px' });
+    mk(c, '', { font: "700 34px 'Noto Sans SC'", color: dim ? 'var(--gray)' : 'var(--ink)' }, name);
+    mk(c, '', { font: "800 92px/1.3 'Space Grotesk'", color: dim ? '#B0B6BF' : 'var(--orange)', marginTop: 20, textDecoration: dim ? 'line-through' : 'none' }, val);
+    mk(c, '', { font: "500 26px 'Noto Sans SC'", color: 'var(--gray)', marginTop: 10 }, '每百万 token · 输入 / 输出');
+    return c;
+  };
+  const c5 = col(0, 'Claude Opus 5', '$5 / $25', true);
+  const arrow = mk(price, 'abs', { left: 590, top: 170, font: "800 80px 'Noto Sans SC'", color: 'var(--gray2)' }, '→');
+  const c55 = col(700, 'Claude Opus 5.5', '$4 / $20', false);
+  const badge = mk(price, 'abs', { left: 1290, top: 80, width: 200, height: 200, borderRadius: '50%', background: 'var(--orange)', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', font: "800 60px 'Space Grotesk'", transformOrigin: 'center' }, '−20%');
+  const line40 = mk(price, 'abs', { left: 0, top: 440, width: SW, font: "700 40px 'Noto Sans SC'" }, '官方：常见任务整体跑下来，比 Opus 5 省 <span class="mark">40%</span>');
+  const src2 = at(root, SX, 846, SW, 40, 'note', {}, '来源：Anthropic 官方价格页、Opus 5.5 发布页（2026-09-22）');
+  const tBars = tm.at('P02a', '在 Artificial');
+  return {
+    update(lt) {
+      show(h, lt, 0.2);
+      const v1 = show(chart, lt, 0.5, { t1: tB - 0.4 });
+      show(src1, lt, 0.8, { t1: tB - 0.4 });
+      bars.forEach((b, i) => {
+        const g = easeOut((lt - tBars - i * 0.08) / 1.2);
+        b.bar.style.width = px(g * b.v / 60 * 860);
+        b.val.style.left = px(360 + g * b.v / 60 * 860 + 18);
+        b.val.style.opacity = g;
+      });
+      show(lead, lt, tm.at('P02a', '比第二名'), { t1: tB - 0.4 });
+      show(price, lt, tB);
+      show(c5, lt, tB + 0.1); show(arrow, lt, tB + 0.5, { dx: -20, dy: 0 }); show(c55, lt, tB + 0.7);
+      show(badge, lt, tm.at('P02b', '便宜了'), { scale: 0.6 });
+      show(line40, lt, tm.at('P02b', '官方还说'));
+      show(src2, lt, tB + 0.3);
+    },
+  };
+};
+
+// ---- S03 视觉：GPT-6 建模 + Opus 5.5 视觉
+S.vision = (root, s) => {
+  const tm = timer(s), tB = tm.p0('P03b'), tG = tm.at('P03a', 'GPT-6 Astra') - 0.3;
+  const h = header(root, '视觉能力', 'Opus 5.5 的视觉也强了一大截');
+  const fb = frameBox(root, SX + 137, 196, 1228, 703);          // 内框 1200×675，不压标题、不进字幕带
+  const img = image(fb.inner, `media/gpt6/f_001.jpg`);
+  const cap = mk(fb.inner, 'abs', { left: 16, bottom: 14, zIndex: 2 }, '<span class="lab" style="position:static">GPT-6 Astra · 在 Blender 里建模 ｜ 视频来源：待补</span>');
+  const src1 = cap;
+  // Opus 5.5
+  const box = at(root, SX, 190, SW, 680);
+  const card = mk(box, 'wcard', { left: 0, top: 0, width: SW, height: 250, padding: '36px 44px' });
+  mk(card, '', { font: "800 46px/1.3 'Noto Sans SC'" }, 'Opus 5.5：视觉和电脑操作最强的 Opus');
+  mk(card, '', { font: "500 28px 'Noto Sans SC'", color: 'var(--gray)', marginTop: 14 }, 'Anthropic 官方说法（Opus 5.5 发布页）');
+  const tags = ['图表', '截图', '示意图'].map((t, i) => mk(box, 'abs', { left: i * 330, top: 300, width: 300, height: 120, borderRadius: 14, background: 'var(--soft)', display: 'flex', alignItems: 'center', justifyContent: 'center', font: "800 44px 'Noto Sans SC'" }, t));
+  const bench = mk(box, 'abs', { left: 0, top: 470, width: SW, height: 200 });
+  mk(bench, '', { font: "700 28px 'Noto Sans SC'", color: 'var(--ink2)' }, 'OSWorld 2.0（看截图操作电脑）');
+  const b1 = mk(bench, 'abs', { left: 0, top: 56, height: 44, borderRadius: 8, background: 'var(--orange)', width: 0 });
+  const b2 = mk(bench, 'abs', { left: 0, top: 118, height: 44, borderRadius: 8, background: '#C9CED6', width: 0 });
+  const l1 = mk(bench, 'abs', { top: 58, font: "800 32px 'Space Grotesk','Noto Sans SC'", color: 'var(--orange)' }, 'Opus 5.5　81.8%');
+  const l2 = mk(bench, 'abs', { top: 120, font: "800 32px 'Space Grotesk','Noto Sans SC'", color: 'var(--gray)' }, 'Opus 5　74.0%');
+  const src2 = at(root, SX, 884, SW, 30, 'note', {}, '来源：anthropic.com/claude-opus-5-5');
+  const tTags = [tm.at('P03b', '图表'), tm.at('P03b', '截图'), tm.at('P03b', '示意图')];
+  return {
+    update(lt) {
+      show(h, lt, 0.2);
+      show(fb.f, lt, tG, { t1: tB - 0.4, scale: 0.97 });
+      show(cap, lt, tG + 0.2, { t1: tB - 0.4 });
+      show(src1, lt, tG + 0.2, { t1: tB - 0.4 });
+      setSrc(img, seqSrc('media/gpt6', 300, lt, tG + 0.3));
+      show(box, lt, tB);
+      tags.forEach((e, i) => show(e, lt, tTags[i]));
+      show(bench, lt, tB + 1.0);
+      const g = easeOut((lt - tB - 1.3) / 1.2);
+      b1.style.width = px(g * 81.8 / 100 * 1100); b2.style.width = px(g * 74.0 / 100 * 1100);
+      l1.style.left = px(g * 81.8 / 100 * 1100 + 20); l2.style.left = px(g * 74.0 / 100 * 1100 + 20);
+      l1.style.opacity = g; l2.style.opacity = g;
+      show(src2, lt, tB + 0.3);
+    },
+  };
+};
+
+// ---- S04 Claude 不能直接出图，它写代码
+S.noimage = (root, s) => {
+  const tm = timer(s), tQ = tm.at('P04', '那它怎么画画'), tC = tm.at('P04', '它写代码');
+  const h = header(root, '官方文档', 'Claude 只负责看图、理解图');
+  const q = at(root, SX, 200, SW, 330, 'wcard', { padding: '36px 44px' });
+  mk(q, '', { font: "700 30px/1.5 'Noto Sans SC'", color: 'var(--gray)' }, 'Can Claude generate or edit images?');
+  mk(q, '', { font: "600 34px/1.5 'Noto Sans SC'", marginTop: 10 }, '“No, Claude is an image understanding model only. It can interpret and analyze images, but it cannot generate, produce, edit, manipulate, or create images.”');
+  mk(q, '', { font: "500 24px 'Noto Sans SC'", color: 'var(--gray2)', marginTop: 16 }, 'platform.claude.com/docs · Vision · FAQ');
+  const cn = at(root, SX, 560, SW, 60, '', { font: "800 42px 'Noto Sans SC'" }, '→ Claude <span class="mark">不能直接生成图片</span>');
+  const ask = at(root, SX, 660, 700, 80, '', { font: "800 56px 'Noto Sans SC'", color: 'var(--gray)' }, '那它怎么画画？');
+  const ans = at(root, SX, 750, 700, 110, '', { font: "800 80px 'Noto Sans SC'", color: 'var(--orange)' }, '它写代码。');
+  const code = at(root, SX + 760, 630, 742, 260, 'code');
+  const CODE = "LOOK_R = Part('eyes:look_r', [\n  \".OwEEEO....OwEEEO.\",\n  \".OwBBBO....OwBBBO.\",\n  \"..OOO........OOO..\",\n])";
+  return {
+    update(lt) {
+      show(h, lt, 0.2); show(q, lt, 0.6, { t1: tQ - 0.5 }); show(cn, lt, tm.at('P04', '它只负责'), { t1: tQ - 0.5 });
+      // 问答上移到原来引文的位置
+      show(ask, lt, tQ); show(ans, lt, tC, { scale: 0.8 });
+      ask.style.top = px(lt > tQ - 0.5 ? 240 : 660); ans.style.top = px(lt > tQ - 0.5 ? 340 : 750);
+      show(code, lt, tC + 0.2);
+      const k = Math.round(CODE.length * clamp((lt - tC - 0.3) / 2.0));
+      code.innerHTML = CODE.slice(0, k).replace(/</g, '&lt;') + (k < CODE.length ? '<span class="caret"></span>' : '');
+      code.style.top = px(lt > tQ - 0.5 ? 240 : 630);
+    },
+  };
+};
+
+// ---- S05 有人拿它做视频（A）
+S.people = (root, s) => {
+  const tm = timer(s), t6 = tm.p0('P06');
+  const box = at(root, RX, 180, RW, 640);
+  const c = mk(box, 'chip', {}, '开场');
+  const b1 = mk(box, 'bl', { marginTop: 40 }, '<span class="num">1</span><span>画面里每个像素<br>都控制得很好</span>');
+  const b2 = mk(box, 'bl', { marginTop: 34 }, '<span class="num">2</span><span>做完自己截图<br>用视觉能力检查</span>');
+  const wow = at(root, RX + 560, 180, 300, 120, '', { font: "800 90px 'Noto Sans SC'", color: 'var(--orange)', transform: 'rotate(-6deg)', transformOrigin: 'left' }, '哇！');
+  const next = at(root, RX, 220, RW, 400, '', {}, '<div class="chip">作品展示</div><div class="big" style="margin-top:30px">先看几个<br><span class="mark">Claude 做的视频</span> ↓</div>');
+  return {
+    update(lt) {
+      show(box, lt, 0.2, { t1: t6 - 0.4 }); show(c, lt, 0.2);
+      show(b1, lt, tm.at('P05', '发现它')); show(b2, lt, tm.at('P05', '做完之后'));
+      show(wow, lt, tm.at('P05', '大家一看'), { t1: t6 - 0.4, scale: 0.5 });
+      show(next, lt, t6);
+    },
+  };
+};
+
+// ---- S06 作品展示（C）：和 制作/01_作品展示 同一套
+S.showcase = (root, s) => {
+  const P_G = '给我做一个动画像素风 银魂动漫剧情的经典场景，按照顺序讲述大致故事， 包含主要人物 动画好看一点 有趣一点 场景丰富一点 直接给我视频';
+  const P_N = '给我做一个动画像素风 火影忍者疾风传动漫剧情的经典场景，按照顺序讲述大致故事， 包含主要人物 动画好看一点 有趣一点 场景丰富一点 直接给我视频';
+  const ITEMS = [
+    { key: 'gintama', page: 0, t0: 0.5, aspect: 16 / 9, title: '① 银魂 · 像素风', prompt: P_G },
+    { key: 'naruto', page: 0, t0: 6.0, aspect: 16 / 9, title: '② 火影忍者 · 像素风', prompt: P_N },
+    { key: 'jojo', page: 1, t0: 12.0, aspect: 16 / 9, title: '③ JoJo 第三部 · 像素风', sub: '像素风剧情动画' },
+    { key: 'ep04', page: 1, t0: 17.5, aspect: 2340 / 1080, title: '④ 《原LAI如此》第 4 期', sub: '我的 AI 科普系列 · 大模型从夯到拉' },
+  ];
+  const PAGES = [{ start: 0, end: 11.5 }, { start: 11.5, end: 23.0 }], SWAP = 0.5, EDGE = 0.5, INW = 1474, CY = 468.5, PAD = 14;
+  const innerH = a => { let h = Math.round(INW / a); return h + (h % 2); };
+  const card = at(root, 48, 492, 696, 420, 'card', { padding: '30px 34px' });
+  const chip = mk(card, 'chip');
+  const slots = [0, 1].map(() => mk(card, 'abs', { left: 34, right: 34, top: 92 }));
+  const vf = at(root, 790, 40, 1502, 857, 'frame'); mk(vf, 'tape l'); mk(vf, 'tape r');
+  const vin = mk(vf, 'inner');
+  const imgs = [0, 1].map(() => mk(vin, '', {}, '', 'img'));
+  const slotHTML = (it, lt) => {
+    if (it.prompt) {
+      const k = Math.round(it.prompt.length * clamp((lt - (it.t0 - 0.3)) / 1.0));
+      return `<div style="font:800 44px/1.25 'Noto Sans SC'">${it.title}</div><div style="margin-top:22px;font:700 24px 'Noto Sans SC';color:#9AA1AC;letter-spacing:2px">提示词</div><div style="margin-top:10px;font:500 29px/1.62 'Noto Sans SC';color:#374151;background:#fff;border:1px solid #E5E7EB;border-radius:10px;padding:14px 18px;min-height:170px">${it.prompt.slice(0, k)}${k < it.prompt.length ? '<span class="caret" style="width:3px"></span>' : ''}</div>`;
+    }
+    return `<div style="font:800 44px/1.25 'Noto Sans SC'">${it.title}</div><div style="margin-top:18px;font:500 28px/1.6 'Noto Sans SC';color:#6B7280">${it.sub}</div>`;
+  };
+  return {
+    noFade: true,
+    update(lt) {
+      const pi = lt < PAGES[1].start ? 0 : 1, pg = PAGES[pi];
+      const enter = easeOut((lt - pg.start) / EDGE), exit = easeIn((lt - (pg.end - EDGE)) / EDGE);
+      const alpha = Math.min(enter, 1 - exit);
+      for (const e of [card, vf]) { e.style.opacity = alpha; e.style.transform = `translate(${-40 * exit}px, ${(1 - enter) * 24}px)`; }
+      chip.textContent = `作品展示 ${pi + 1} / 2`;
+      const its = ITEMS.filter(it => it.page === pi);
+      const x = easeIO((lt - (its[1].t0 - SWAP)) / SWAP), w = [1 - x, x];
+      const h = innerH(its[0].aspect) * w[0] + innerH(its[1].aspect) * w[1];
+      vf.style.top = px(CY - (h + 2 * PAD) / 2); vf.style.height = px(h + 2 * PAD);
+      its.forEach((it, i) => {
+        imgs[i].style.opacity = w[i];
+        setSrc(imgs[i], seqSrc(`${SHOW}/${it.key}`, 150, lt, it.t0).replace('.jpg', '.jpg'));
+        slots[i].style.opacity = clamp(w[i] * 2 - 1);
+        slots[i].innerHTML = slotHTML(it, lt);
+      });
+    },
+  };
+};
+
+// ---- S07 疑问（A）
+S.question = (root, s) => {
+  const box = at(root, RX, 230, RW, 520);
+  const c = mk(box, 'chip', {}, '原理');
+  const t = mk(box, 'big', { marginTop: 34 }, 'Claude 不是扩散模型<br>这些视频是<br><span class="mark">怎么来的？</span>');
+  return { update(lt) { show(c, lt, 0.2); show(t, lt, 0.4); } };
+};
+
+// ---- S08 扩散模型：噪点一步步去噪
+S.diffusion = async (root, s) => {
+  const tm = timer(s);
+  const h = header(root, '扩散模型', '从一片噪点开始，一步一步去噪');
+  const chips = at(root, SX, 200, SW, 60, '', {}, ['Sora', 'Veo', '可灵'].map(n => `<span class="chip" style="margin-right:16px;border-color:#C9CED6;color:var(--ink2)">${n}</span>`).join(''));
+  const src = new Image(); src.src = 'media/gpt6_still.jpg'; await src.decode();
+  const W = 270, H = 152, alphas = [1, 0.78, 0.55, 0.3, 0];
+  const labels = ['随机噪点', '去噪', '去噪', '去噪', '每一帧的像素'];
+  let seed = 20260928; const rnd = () => (seed = (seed * 1664525 + 1013904223) >>> 0) / 4294967296;
+  const panels = alphas.map((a, i) => {
+    const wrap = at(root, SX + i * 300, 330, W, H + 60);
+    const cv = mk(wrap, '', { width: W, height: H, borderRadius: 10, boxShadow: '0 8px 20px rgba(0,0,0,.12)' }, '', 'canvas');
+    cv.width = W; cv.height = H;
+    // 本地图片会让画布不能读像素（getImageData 报跨域），所以另做一张噪点图，按比例叠在原图上面
+    const g = cv.getContext('2d'); g.drawImage(src, 0, 0, W, H);
+    const nz = document.createElement('canvas'); nz.width = W; nz.height = H;
+    const ng = nz.getContext('2d'), d = ng.createImageData(W, H);
+    for (let p = 0; p < d.data.length; p += 4) { d.data[p] = rnd() * 255; d.data[p + 1] = rnd() * 255; d.data[p + 2] = rnd() * 255; d.data[p + 3] = 255; }
+    ng.putImageData(d, 0, 0);
+    g.globalAlpha = a; g.drawImage(nz, 0, 0); g.globalAlpha = 1;
+    mk(wrap, '', { marginTop: 14, textAlign: 'center', font: `${i === 4 ? 800 : 600} 26px 'Noto Sans SC'`, color: i === 4 ? 'var(--orange)' : 'var(--gray)' }, labels[i]);
+    if (i < 4) mk(root, 'abs', { left: SX + i * 300 + W + 4, top: 330 + H / 2 - 24, font: "800 36px 'Noto Sans SC'", color: 'var(--gray2)' }, '›');
+    return wrap;
+  });
+  const arrows = [...root.querySelectorAll('.abs')].filter(e => e.textContent === '›');
+  const line = at(root, SX, 620, SW, 80, '', { font: "800 46px 'Noto Sans SC'" }, '→ 最后<span class="mark">直接画出每一帧的像素</span>');
+  const t0 = tm.at('P08', '从一片'), t1 = tm.at('P08', '最后');
+  return {
+    update(lt) {
+      show(h, lt, 0.2); show(chips, lt, tm.at('P08', 'Sora'));
+      panels.forEach((p, i) => show(p, lt, t0 + (t1 - t0) * i / 4.5));
+      arrows.forEach((a, i) => show(a, lt, t0 + (t1 - t0) * (i + 0.5) / 4.5, { dy: 0 }));
+      show(line, lt, tm.at('P08', '直接画出'));
+    },
+  };
+};
+
+// ---- S09 大语言模型：一个字一个字写，代码也是文字
+S.llm = (root, s) => {
+  const tm = timer(s);
+  const h = header(root, '大语言模型', '一个字一个字地往外写');
+  const toks = ['写', '一个', '能', '生成', '视频', '的', '程序', '……'];
+  const tokRow = at(root, SX, 210, SW, 90);
+  const tokEls = toks.map(t => mk(tokRow, '', { display: 'inline-block', marginRight: 14, padding: '10px 22px', borderRadius: 12, background: 'var(--soft)', border: '2px solid var(--line)', font: "700 40px 'Noto Sans SC'" }, t));
+  const lab = at(root, SX, 320, SW, 60, '', { font: "800 44px 'Noto Sans SC'" }, '代码也是<span class="mark">文字</span>');
+  const code = at(root, SX, 400, 930, 470, 'code');
+  const CODE = '<div id="title">什么是 Token</div>\n<script>\nfunction renderAt(t) {\n  title.style.opacity = Math.min(1, t / 0.5);\n  bar.style.width = t * 100 + "px";\n}\n<\/script>';   // 写成 <\/script>：页面本身是内联脚本
+  const run = at(root, SX + 980, 520, 520, 240, 'wcard', { padding: '34px 36px' }, `<div style="font:800 40px/1.4 'Noto Sans SC'">写一个程序</div><div style="font:800 40px/1.4 'Noto Sans SC';color:var(--orange);margin-top:10px">▶ 自己跑起来</div>`);
+  const t0 = tm.at('P09', '它只会'), tc = tm.at('P09', '但代码也是文字'), tr = tm.at('P09', '所以 Claude');
+  return {
+    update(lt) {
+      show(h, lt, 0.2);
+      tokEls.forEach((e, i) => show(e, lt, t0 + i * 0.28, { d: 0.25, dy: 10 }));
+      show(lab, lt, tc); show(code, lt, tc + 0.3);
+      const k = Math.round(CODE.length * clamp((lt - tc - 0.5) / 4.0));
+      code.innerHTML = CODE.slice(0, k).replace(/</g, '&lt;') + (k < CODE.length ? '<span class="caret"></span>' : '');
+      show(run, lt, tr, { dx: 30, dy: 0 });
+    },
+  };
+};
+
+// ---- S10 视频 = 一秒 30 张图 + 一条声音
+S.frames = (root, s) => {
+  const tm = timer(s), t30 = tm.at('P10', '一秒'), tS = tm.at('P10', '再加'), t600 = tm.at('P10', '20 秒');
+  const h = header(root, '视频', '一秒 30 张图，再加一条声音');
+  const strip = at(root, SX, 200, SW, 150);
+  const th = [];
+  for (let i = 0; i < 30; i++) {
+    const r = Math.floor(i / 15), c = i % 15;
+    const im = mk(strip, 'abs', { left: c * 99, top: r * 64, width: 92, height: 52, borderRadius: 4, objectFit: 'cover', boxShadow: '0 2px 6px rgba(0,0,0,.15)' }, '', 'img');
+    setSrc(im, `${SHOW}/gintama/f_${pad3(1 + i * 4)}.jpg`); th.push(im);
+  }
+  const l30 = at(root, SX, 350, SW, 60, '', { font: "800 44px 'Noto Sans SC'" }, '1 秒 = <span style="color:var(--orange)">30 张</span>');
+  const wave = at(root, SX, 430, SW, 90);
+  const bars = D.wave.filter((_, i) => i % 3 === 0).slice(0, 120).map((v, i) => mk(wave, 'abs', { left: i * 12.5, top: 45 - (6 + v * 70) / 2, width: 8, height: 6 + v * 70, borderRadius: 4, background: '#93C5FD' }));
+  const lS = at(root, SX + 1520 - 280, 530, 280, 50, '', { font: "700 30px 'Noto Sans SC'", color: 'var(--gray)', textAlign: 'right' }, '＋ 一条声音');
+  const n600 = at(root, SX, 620, 700, 120, '', { font: "800 60px 'Noto Sans SC'" });
+  const grid = at(root, SX + 760, 600, 740, 300);
+  const cells = []; for (let i = 0; i < 600; i++) cells.push(mk(grid, 'abs', { left: (i % 40) * 18.5, top: Math.floor(i / 40) * 18.5, width: 15, height: 15, borderRadius: 3, background: '#E5E7EB' }));
+  return {
+    update(lt) {
+      show(h, lt, 0.2);
+      th.forEach((e, i) => show(e, lt, t30 + i * 0.05, { d: 0.2, dy: 8 }));
+      show(l30, lt, t30 + 0.4);
+      bars.forEach((b, i) => show(b, lt, tS + i * 0.008, { d: 0.2, dy: 0 })); show(lS, lt, tS + 0.4);
+      show(n600, lt, t600); show(grid, lt, t600);
+      const g = easeOut((lt - t600) / 1.6), k = Math.round(600 * g);
+      n600.innerHTML = `20 秒 = <span style="color:var(--orange)">${k}</span> 张`;
+      cells.forEach((c, i) => c.style.background = i < k ? 'var(--orange)' : '#E5E7EB');
+    },
+  };
+};
+
+// ---- S11 renderAt(t)
+S.renderat = (root, s) => {
+  const tm = timer(s), tIn = tm.at('P11', 'Claude 会写'), tSweep = tm.at('P11', '你给它一个时间'), t35 = tm.at('P11', '比如第 3.5 秒'), tSame = tm.at('P11', '同一个时间');
+  const h = header(root, 'renderAt(t)', '每一张图 = 网页在某一刻的截图');
+  const code = at(root, SX, 200, 720, 470, 'code', { fontSize: 27 });
+  code.innerHTML = '<span class="k">function</span> <span class="f">renderAt</span>(t) {\n  <span class="c">// t：第几秒</span>\n  title.style.opacity =\n    Math.min(<span class="n">1</span>, t / <span class="n">0.5</span>);\n  card.style.left =\n    <span class="n">40</span> + t * <span class="n">90</span> + <span class="s">"px"</span>;\n  clock.textContent = t + <span class="s">" s"</span>;\n}';
+  const pv = at(root, SX + 770, 200, 732, 420, 'wcard', { overflow: 'hidden' });
+  mk(pv, '', { height: 44, background: '#F6F7F9', borderBottom: '1px solid var(--line)', padding: '0 18px', display: 'flex', alignItems: 'center', gap: '10px', font: "600 20px 'Noto Sans SC'", color: 'var(--gray)' }, '<span style="width:14px;height:14px;border-radius:50%;background:#FF5F57;display:inline-block"></span><span style="width:14px;height:14px;border-radius:50%;background:#FEBC2E;display:inline-block"></span><span style="width:14px;height:14px;border-radius:50%;background:#28C840;display:inline-block"></span>&nbsp;网页');
+  const pt = mk(pv, 'abs', { left: 40, top: 90, font: "800 52px 'Noto Sans SC'" }, '什么是 Token');
+  const pc = mk(pv, 'abs', { top: 200, width: 150, height: 110, borderRadius: 12, background: 'var(--orange)' });
+  const pk = mk(pv, 'abs', { right: 30, top: 340, font: "800 40px 'Space Grotesk'", color: 'var(--gray)' });
+  const sl = at(root, SX + 770, 660, 732, 110);
+  mk(sl, 'abs', { left: 0, top: 30, width: 732, height: 8, borderRadius: 4, background: 'var(--line)' });
+  for (let i = 0; i <= 5; i++) mk(sl, 'abs', { left: i * 146.4 - 10, top: 56, width: 20, textAlign: 'center', font: "600 22px 'Space Grotesk'", color: 'var(--gray2)' }, String(i));
+  const knob = mk(sl, 'abs', { top: 18, width: 32, height: 32, borderRadius: '50%', background: 'var(--orange)', boxShadow: '0 2px 8px rgba(255,79,26,.4)' });
+  const call = at(root, SX, 700, 720, 80, '', { font: "800 44px 'JetBrains Mono','Noto Sans SC'" });
+  const same = at(root, SX, 790, SW, 80, '', { font: "800 46px 'Noto Sans SC'" }, '同一个 t → <span class="mark">永远是同一帧</span>');
+  const tau = lt => {
+    if (lt < tSweep) return 0;
+    if (lt < tSweep + 3) return 5 * easeIO((lt - tSweep) / 3);
+    return lerp(5, 3.5, easeIO((lt - Math.max(tSweep + 3, t35 - 0.6)) / 0.8));
+  };
+  return {
+    update(lt) {
+      show(h, lt, 0.2); show(code, lt, tIn); show(pv, lt, 0.6); show(sl, lt, tSweep - 0.3);
+      const t = tau(lt);
+      pt.style.opacity = clamp(t / 0.5); pc.style.left = px(40 + t * 90); pk.textContent = t.toFixed(2) + ' s';
+      knob.style.left = px(t / 5 * 732 - 16);
+      show(call, lt, t35); call.innerHTML = `renderAt(<span style="color:var(--orange)">${t.toFixed(1)}</span>)`;
+      show(same, lt, tSame);
+    },
+  };
+};
+
+// ---- S12 截图 + ffmpeg，然后三方分工
+S.capture = (root, s) => {
+  const tm = timer(s), tB = tm.p0('P13'), tCap = tm.at('P12', '从第 0 秒开始'), tF = tm.at('P12', '截完再用');
+  const h = header(root, '截图 + 拼接', '每隔 1/30 秒截一张，再拼成视频');
+  const p1 = at(root, SX, 200, SW, 690);
+  const ruler = mk(p1, 'abs', { left: 0, top: 10, width: SW, height: 70 });
+  mk(ruler, 'abs', { left: 0, top: 30, width: SW, height: 4, background: 'var(--line)' });
+  for (let i = 0; i <= 30; i++) mk(ruler, 'abs', { left: i * 50, top: i % 5 ? 22 : 12, width: 2, height: i % 5 ? 20 : 40, background: '#C9CED6' });
+  const head = mk(ruler, 'abs', { top: 0, width: 4, height: 66, background: 'var(--orange)' });
+  const cnt = mk(p1, 'abs', { left: 0, top: 90, font: "800 40px 'Noto Sans SC'" });
+  const thumbs = []; for (let i = 0; i < 12; i++) { const im = mk(p1, 'abs', { left: i * 125, top: 160, width: 115, height: 65, borderRadius: 4, objectFit: 'cover', boxShadow: '0 2px 6px rgba(0,0,0,.15)' }, '', 'img'); setSrc(im, `${SHOW}/naruto/f_${pad3(1 + i * 6)}.jpg`); thumbs.push(im); }
+  const ff = mk(p1, 'abs', { left: 520, top: 330, width: 420, height: 150, borderRadius: 16, background: 'var(--ink)', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', font: "800 54px 'JetBrains Mono'" }, 'ffmpeg');
+  const inA = mk(p1, 'abs', { left: 60, top: 370, font: "700 32px 'Noto Sans SC'", color: 'var(--gray)' }, '图片 ＋ 声音 →');
+  const out = mk(p1, 'abs', { left: 1000, top: 330, width: 360, height: 150, borderRadius: 16, border: '4px solid var(--orange)', display: 'flex', alignItems: 'center', justifyContent: 'center', font: "800 54px 'Space Grotesk','Noto Sans SC'", color: 'var(--orange)' }, '▶ MP4');
+  const arr = mk(p1, 'abs', { left: 948, top: 370, font: "800 50px 'Noto Sans SC'", color: 'var(--gray2)' }, '→');
+  // 三方分工
+  const roles = [['Claude', '写网页和脚本'], ['浏览器', '把网页画成像素'], ['ffmpeg', '把图片合成视频']].map(([a, b], i) => {
+    const c = at(root, SX + i * 520, 330, 460, 280, 'wcard', { padding: '40px 36px', textAlign: 'center' }, `<div style="font:800 56px 'Space Grotesk','Noto Sans SC'">${a}</div><div style="font:700 36px 'Noto Sans SC';color:var(--gray);margin-top:24px">${b}</div>`);
+    if (i < 2) mk(root, 'abs', { left: SX + i * 520 + 470, top: 440, font: "800 50px 'Noto Sans SC'", color: 'var(--orange)' }, '→');
+    return c;
+  });
+  const roleArrows = [...root.children].filter(e => e.textContent === '→' && e.style.top === '440px');
+  const tR = [tm.at('P13', 'Claude 写'), tm.at('P13', '浏览器'), tm.at('P13', 'ffmpeg 把')];
+  return {
+    update(lt) {
+      show(h, lt, 0.2);
+      show(p1, lt, 0.4, { t1: tB - 0.4 });
+      const k = clamp(Math.floor((lt - tCap) / 0.28), 0, 30);
+      head.style.left = px(k * 50 - 1); head.style.opacity = lt > tCap ? 1 : 0.3;
+      cnt.innerHTML = lt > tCap ? `第 <span style="color:var(--orange)">${Math.max(1, k + 1)}</span> 张` : '';
+      thumbs.forEach((e, i) => show(e, lt, tCap + i * 0.28, { d: 0.2, dy: -20 }));
+      show(inA, lt, tF); show(ff, lt, tF + 0.2, { scale: 0.85 }); show(arr, lt, tF + 0.9, { dx: -20, dy: 0 }); show(out, lt, tF + 1.2, { scale: 0.85 });
+      roles.forEach((c, i) => show(c, lt, tR[i]));
+      roleArrows.forEach((a, i) => show(a, lt, tR[i + 1] - 0.2, { dy: 0, dx: -20 }));
+    },
+  };
+};
+
+// ---- S13 智能体
+S.agent = (root, s) => {
+  const tm = timer(s), tQ = tm.at('P14', '官方的介绍是'), tL = tm.at('P14', '它会自己决定'), tE = tm.at('P14', '程序报错了');
+  const h = header(root, '智能体（Agent）', 'Claude Code 能自己动手跑程序');
+  const q = at(root, SX, 200, SW, 190, 'wcard', { padding: '28px 40px' });
+  mk(q, '', { font: "600 30px/1.5 'Noto Sans SC'", color: 'var(--ink2)' }, '“Claude Code is an agentic coding tool that reads your codebase, edits files, runs commands…”');
+  mk(q, '', { font: "800 36px 'Noto Sans SC'", marginTop: 12 }, '官方介绍：<span class="mark">能读代码、改文件、运行命令</span>');
+  const loop = at(root, SX, 420, 900, 470);
+  const nodes = [['决定下一步', 330, 0], ['调用工具', 620, 300], ['看结果', 40, 300]].map(([t, x, y]) => mk(loop, 'abs', { left: x, top: y, width: 260, height: 110, borderRadius: 16, background: '#fff', border: '3px solid var(--ink)', display: 'flex', alignItems: 'center', justifyContent: 'center', font: "800 36px 'Noto Sans SC'" }, t));
+  const svg = mk(loop, 'abs', { left: 0, top: 0, width: 900, height: 470 }, '<svg width="900" height="470"><defs><marker id="ah" markerWidth="12" markerHeight="12" refX="6" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#9AA1AC"/></marker></defs><path d="M600,70 C760,90 790,210 760,290" fill="none" stroke="#9AA1AC" stroke-width="5" marker-end="url(#ah)"/><path d="M610,360 C500,410 400,410 310,360" fill="none" stroke="#9AA1AC" stroke-width="5" marker-end="url(#ah)"/><path d="M140,290 C120,200 190,90 320,70" fill="none" stroke="#9AA1AC" stroke-width="5" marker-end="url(#ah)"/></svg>');
+  const center = mk(loop, 'abs', { left: 330, top: 180, width: 260, textAlign: 'center', font: "800 32px 'Noto Sans SC'", color: 'var(--orange)' }, '循环到做完');
+  const log = at(root, SX + 960, 430, 542, 440, 'code', { fontSize: 28, lineHeight: 1.9 });
+  const LOG = ['<span style="color:#F87171">✗ 报错：ModuleNotFoundError</span>', '→ 读报错', '→ 装上缺的库，改代码', '→ 再跑一次', '<span style="color:#6FCF97">✓ 成功</span>'];
+  return {
+    update(lt) {
+      show(h, lt, 0.2); show(q, lt, tQ - 0.3);
+      show(loop, lt, tL - 0.3);
+      const ph = lt > tL ? Math.floor((lt - tL) / 1.1) % 3 : -1;
+      nodes.forEach((n, i) => { n.style.background = i === ph ? 'var(--orange)' : '#fff'; n.style.color = i === ph ? '#fff' : 'var(--ink)'; n.style.borderColor = i === ph ? 'var(--orange)' : 'var(--ink)'; });
+      show(center, lt, tL + 1.5);
+      show(log, lt, tE - 0.2, { dx: 30, dy: 0 });
+      const k = clamp(Math.floor((lt - tE) / 0.55) + 1, 0, LOG.length);
+      log.innerHTML = LOG.slice(0, k).join('\n');
+    },
+  };
+};
+
+// ---- S14 结构 vs 质感
+S.structure = (root, s) => {
+  const tm = timer(s), t16 = tm.p0('P16'), t17 = tm.p0('P17'), t18 = tm.p0('P18');
+  const h = header(root, '结构 vs 质感', '代码这条路，凭什么能跟扩散模型比？');
+  const colW = 720;
+  const mkCol = (x, title, items, foot) => {
+    const c = at(root, x, 210, colW, 560, 'wcard', { padding: '34px 40px' });
+    mk(c, '', { font: "800 56px 'Noto Sans SC'" }, title);
+    const its = items.map(t => mk(c, '', { font: "700 38px/1.6 'Noto Sans SC'", color: 'var(--ink2)', marginTop: 8 }, '· ' + t));
+    const f = mk(c, 'abs', { left: 40, right: 40, bottom: 34, font: "700 32px/1.5 'Noto Sans SC'", color: 'var(--gray)' }, foot);
+    return { c, its, f };
+  };
+  const L = mkCol(SX, '结构', ['写什么字', '放在哪', '第几秒出现', '怎么动'], '语言说得清清楚楚<br>→ <b style="color:var(--ink)">语言模型的主场</b>');
+  const R = mkCol(SX + 782, '质感', ['光影', '皮肤', '真实的镜头运动'], '很难用语言说精确<br>→ <b style="color:var(--ink)">扩散模型的强项</b>');
+  const concl = at(root, SX, 800, SW, 80, '', { font: "800 46px 'Noto Sans SC'" }, '讲解类视频 ≈ 几乎全是结构 → <span class="mark">用 Claude 写代码更稳</span>');
+  const tl = ['写什么字', '放在哪', '第几秒出现', '怎么动'].map(p => tm.at('P16', p));
+  const tr = ['光影', '皮肤', '真实的镜头运动'].map(p => tm.at('P17', p));
+  return {
+    update(lt) {
+      show(h, lt, 0.2);
+      show(L.c, lt, t16); L.its.forEach((e, i) => show(e, lt, tl[i], { dy: 8 })); show(L.f, lt, tm.at('P16', '这些用语言'));
+      show(R.c, lt, t17); R.its.forEach((e, i) => show(e, lt, tr[i], { dy: 8 })); show(R.f, lt, tm.at('P17', '这些很难'));
+      const g = easeOut((lt - t18) / 0.5);
+      L.c.style.borderColor = g > 0.5 ? 'var(--orange)' : 'var(--line)'; L.c.style.borderWidth = px(1 + 4 * g);
+      R.c.style.opacity = Math.min(parseFloat(R.c.style.opacity || 1), 1 - 0.5 * g);
+      show(concl, lt, tm.at('P18', '所以'));
+    },
+  };
+};
+
+// ---- S15 拆解总览：第 4 期静帧 + 标注
+S.overview = (root, s) => {
+  const tm = timer(s), t0 = tm.at('P19', '一期完整的视频里');
+  const h = header(root, '拆解', '一期《原LAI如此》里有什么');
+  const fb = frameBox(root, SX, 176, 1502, 708);
+  image(fb.inner, 'media/ep04_still.png');
+  const k = 1474 / 2340, ox = SX + 14, oy = 176 + 14;
+  const marks = [['角色', 70, 684, 374, 1006], ['字幕', 749, 930, 1591, 989], ['目录', 1960, 21, 2299, 161], ['进度条', 0, 1027, 2340, 1074], ['数据卡片', 1457, 187, 2071, 848]].map(([name, x0, y0, x1, y1]) => {
+    const r = at(root, ox + x0 * k - 6, oy + y0 * k - 6, (x1 - x0) * k + 12, (y1 - y0) * k + 12, 'hl');
+    const l = at(root, ox + x0 * k, Math.max(oy + y0 * k - 46, 150), null, null, 'lab', {}, name);
+    return [r, l];
+  });
+  return { update(lt) { show(h, lt, 0.2); show(fb.f, lt, 0.4); marks.forEach(([r, l], i) => { show(r, lt, t0 + i * 0.7, { scale: 1.08, dy: 0 }); show(l, lt, t0 + i * 0.7 + 0.1); }); } };
+};
+
+// ---- S16 台本流程
+S.script = (root, s) => {
+  const tm = timer(s);
+  const h = header(root, '台本', '选题我定，查资料和写稿交给 Claude');
+  const node = (x, y, w, who, what, hot) => at(root, x, y, w, 150, 'wcard', { padding: '22px 28px', borderColor: hot ? 'var(--orange)' : 'var(--line)', borderWidth: hot ? '4px' : '1px' }, `<div style="font:700 26px 'Noto Sans SC';color:var(--gray)">${who}</div><div style="font:800 36px/1.35 'Noto Sans SC';margin-top:6px">${what}</div>`);
+  const arrow = (x, y, t = '→') => at(root, x, y, 60, 60, '', { font: "800 46px 'Noto Sans SC'", color: 'var(--gray2)' }, t);
+  const n1 = node(SX, 210, 380, '我', '定选题', true), a1 = arrow(SX + 395, 250);
+  const n2 = node(SX + 460, 210, 560, 'Claude', '查官方资料<span style="font-size:26px;color:var(--orange)">（记下查询日期）</span>'), a2 = arrow(SX + 1035, 250);
+  const n3 = node(SX + 1100, 210, 402, 'Claude', '写初稿');
+  const a3 = arrow(SX + 1270, 380, '↓');
+  const n4 = node(SX + 380, 460, 540, '子智能体 A', '查口语和结构'), n5 = node(SX + 962, 460, 540, '子智能体 B', '逐条核对事实');
+  const a4 = arrow(SX + 1180, 630, '↓');
+  const n6 = node(SX + 700, 700, 802, '我', '确认了才往下走 ✓', true);
+  const T = ['选题是我定的', 'Claude 先去查', '再写初稿', '派两个子智能体', '一个查口语', '一个逐条核对', '改完再给我看'].map(p => tm.at('P20', p));
+  return {
+    update(lt) {
+      show(h, lt, 0.2);
+      show(n1, lt, T[0]); show(a1, lt, T[1] - 0.2, { dy: 0 }); show(n2, lt, T[1]); show(a2, lt, T[2] - 0.2, { dy: 0 }); show(n3, lt, T[2]);
+      show(a3, lt, T[3] - 0.2); show(n4, lt, T[4]); show(n5, lt, T[5]); show(a4, lt, T[6] - 0.2); show(n6, lt, T[6]);
+    },
+  };
+};
+
+// ---- S17 配音
+S.voice = (root, s) => {
+  const h = header(root, '配音', 'Fish Audio 语音合成');
+  const card = at(root, SX, 230, SW, 560, 'wcard', { padding: '40px 50px' });
+  mk(card, '', { font: "800 64px 'Space Grotesk'" }, 'Fish Audio');
+  mk(card, '', { font: "700 34px 'Noto Sans SC'", color: 'var(--gray)', marginTop: 10 }, '文字 → 语音');
+  const wv = mk(card, 'abs', { left: 50, right: 50, top: 250, height: 260 });
+  const N = 110, bars = []; for (let i = 0; i < N; i++) bars.push(mk(wv, 'abs', { left: i * 12.7, width: 8, borderRadius: 4, background: 'var(--orange)' }));
+  return {
+    update(lt) {
+      show(h, lt, 0.2); show(card, lt, 0.5);
+      const off = Math.floor(lt / D.waveStep);
+      bars.forEach((b, i) => { const v = D.wave[(off + i) % D.wave.length] * easeOut((lt - 0.8) / 0.6); const hh = 8 + v * 230; b.style.height = px(hh); b.style.top = px(130 - hh / 2); });
+    },
+  };
+};
+
+// ---- S18 字幕：逐句时间
+S.subs = (root, s) => {
+  const tm = timer(s), tP = tm.at('P22', '难的是时间'), tCut = tm.at('P22', '切成一句一句');
+  const h = header(root, '字幕', '文字来自台本，时间来自语音识别');
+  const WX = SX, WY = 330, WW = SW, WHh = 170, dur = D.clipDur, xOf = t => WX + t / dur * WW;
+  const wv = at(root, WX, WY, WW, WHh);
+  const step = Math.max(1, Math.floor(D.wave.length / 180));
+  const bars = []; for (let i = 0; i < D.wave.length; i += step) { const v = D.wave[i], hh = 4 + v * 150; bars.push(mk(wv, 'abs', { left: i / D.wave.length * WW, top: (WHh - hh) / 2, width: 5, height: hh, borderRadius: 3, background: '#93C5FD' })); }
+  const blocks = D.lines.map((l, i) => at(root, xOf(l.start) + 4, 220, xOf(l.end) - xOf(l.start) - 8, 90, '', { background: i % 2 ? '#FFF1E8' : '#FFE8DA', border: '2px solid var(--orange)', borderRadius: 10, padding: '8px 14px', font: "700 26px/1.4 'Noto Sans SC'", overflow: 'hidden' }, `${l.text}<div style="font:600 20px 'Space Grotesk';color:var(--gray)">${l.start.toFixed(2)} – ${l.end.toFixed(2)} s</div>`));
+  const cuts = D.lines.slice(1).map(l => at(root, xOf(l.start) - 2, 210, 4, 300, '', { background: 'var(--orange)' }));
+  const head = at(root, WX, 520, 4, 0, '', {});
+  const play = at(root, WX, 210, 4, 300, '', { background: 'var(--ink)' });
+  const sub = at(root, SX, 600, SW, 120, '', { textAlign: 'center', font: "700 52px 'Noto Sans SC'", color: 'var(--ink)', WebkitTextStroke: '10px #fff', paintOrder: 'stroke fill' });
+  const subBg = at(root, SX, 560, SW, 200, 'card', {}, '<div style="position:absolute;left:24px;top:14px;font:700 24px \'Noto Sans SC\';color:var(--gray2)">字幕预览</div>');
+  return {
+    update(lt) {
+      show(h, lt, 0.2); show(wv, lt, 0.5);
+      blocks.forEach((b, i) => show(b, lt, tP + i * 0.5));
+      cuts.forEach((c, i) => show(c, lt, tCut + i * 0.3, { dy: 0 }));
+      const pt = lt > tP ? ((lt - tP) % (dur + 1.0)) : 0;
+      play.style.left = px(xOf(Math.min(pt, dur))); play.style.opacity = lt > tP ? 1 : 0;
+      show(subBg, lt, tP + 0.5);
+      const cur = D.lines.find(l => pt >= l.start && pt < l.end);
+      sub.textContent = lt > tP && cur ? cur.text : ''; sub.style.top = px(620); sub.style.zIndex = 2;
+      sub.style.opacity = subBg.style.opacity;
+    },
+  };
+};
+
+// ---- S19 角色：参考立绘 → 字符摆像素（屏幕录制，按内容变速剪辑）→ 表情 → 放进视频
+S.character = (root, s) => {
+  const tm = timer(s);
+  const h = header(root, '角色', '鲸鱼娘：用代码一格一格摆出来');
+  const stats = at(root, SX + 820, SY + 70, 680, 60, '', { textAlign: 'right', font: "700 30px 'Noto Sans SC'", color: 'var(--gray)' });
+  // 屏幕录制剪辑表：[输出时长, 原片起, 原片止, 镜头 [中心x, 中心y, 放大], 高亮框（原片像素）, 说明]
+  const FULL = [701, 510, 1];
+  const CUTS = [
+    [1.2, 1.3, 2.5, FULL, null, '先看已有的正面走路帧'],
+    [1.6, 2.5, 2.5, FULL, [40, 270, 950, 400], '先看已有的正面走路帧'],
+    [2.4, 12.6, 13.8, [470, 400, 1.8], null, '手臂：一行字符 = 一行像素，一个字母 = 一种颜色'],
+    [1.8, 18.0, 18.9, [450, 380, 1.8], null, '手：手指也是一格一格摆的'],
+    [2.0, 23.6, 24.6, [560, 420, 1.6], null, '眼睛：换几个字母，眼神就变了'],
+    [2.0, 32.6, 33.6, [500, 340, 1.55], null, '整个小人的字符底稿'],
+    [3.2, 36.0, 36.0, FULL, [20, 130, 1390, 500], '自己看图挑毛病：花边像叉子、鱼鳍像“带牙的嘴” → 再改一轮'],
+    [2.4, 38.0, 38.0, FULL, [10, 235, 1390, 312], '预览里有个可疑的小黑框 → 自己放大检查'],
+    [2.4, 38.0, 38.0, FULL, [10, 375, 1390, 452], '结论：不是画错，是标签压在了图上'],
+    [2.0, 40.0, 42.0, FULL, null, '再看走入的时间条'],
+    [2.2, 43.0, 43.0, FULL, [10, 615, 1390, 692], '节奏对了：从左边走进来、转身、开口'],
+  ];
+  let acc = 0; const SEG = CUTS.map(c => { const o = { u0: acc, u1: acc + c[0], s0: c[1], s1: c[2], cam: c[3], hl: c[4], note: c[5] }; acc += c[0]; return o; });
+  const BDUR = acc;
+  const A0 = 0.4, A1 = 6.0, B0 = 6.0, B1 = B0 + BDUR, C0 = B1, C1 = C0 + 4.0, E0 = C1;
+  // A：第 1 版 / 第 6 版对照
+  const fa = frameBox(root, SX + 17, 200, 1468, 580);
+  const r1 = image(fa.inner, 'media/round1.png'), r6 = image(fa.inner, 'media/round6.png');
+  r1.style.objectFit = r6.style.objectFit = 'contain'; fa.inner.style.background = '#F0F0F4';
+  const capA = at(root, SX + 17, 806, 1468, 50, '', { font: "700 30px 'Noto Sans SC'", color: 'var(--gray)' });
+  // B：屏幕录制窗口（1402×1020 → 910×662），说明写在右边
+  const bw = 910, bh = 662, bx = SX, by = 214;
+  const fbx = frameBox(root, bx, by - 14, bw + 28, bh + 28);
+  fbx.inner.style.background = '#111';
+  const sr = mk(fbx.inner, 'abs', { left: 0, top: 0, width: 1402, height: 1020, transformOrigin: '0 0' }, '', 'img');
+  const hlBox = mk(fbx.inner, 'abs', { border: '5px solid var(--orange)', borderRadius: 10, boxShadow: '0 0 0 9999px rgba(0,0,0,.38)' });
+  const capB = mk(fbx.inner, 'abs', { left: 16, top: 14 }, '<span class="lab" style="position:static">Claude Code 画侧面走路（剪辑，变速）</span>');
+  const noteB = at(root, bx + bw + 60, 300, SW - bw - 60, 520, '', { font: "800 40px/1.55 'Noto Sans SC'", color: 'var(--ink)' });
+  // C：表情表  E：日报画面（标签放在画框里，不压标题）
+  const fc = frameBox(root, SX + 117, 206, 1268, 684); image(fc.inner, 'media/expr.webp');
+  mk(fc.inner, 'abs', { left: 16, top: 14 }, '<span class="lab" style="position:static">表情 · 眨眼 · 说话口型</span>');
+  const fe = frameBox(root, SX + 37, 206, 1428, 682); image(fe.inner, 'media/daily.webp');
+  mk(fe.inner, 'abs', { left: 16, bottom: 14 }, '<span class="lab" style="position:static">放进视频：《AI每日日报》</span>');
+  const camAt = u => {
+    const i = Math.max(0, SEG.findIndex(g => u < g.u1)), g = SEG[i === -1 ? SEG.length - 1 : i], p = SEG[i - 1];
+    const x = p ? easeIO((u - g.u0) / 0.35) : 1, a = p ? p.cam : g.cam, b = g.cam;
+    return { g, cam: [lerp(a[0], b[0], x), lerp(a[1], b[1], x), lerp(a[2], b[2], x)] };
+  };
+  return {
+    update(lt) {
+      show(h, lt, 0.2);
+      stats.innerHTML = [lt > tm.at('P23', '一共 21 种颜色') ? '64×64 像素 · <span style="color:var(--orange)">21 种颜色</span>' : '64×64 像素', lt > tm.at('P23', '她的动作帧') ? '动作帧 <span style="color:var(--orange)">1000+</span>' : ''].filter(Boolean).join(' · ');
+      show(stats, lt, 0.8);
+      // A
+      show(fa.f, lt, A0, { t1: A1 - 0.4 }); r6.style.opacity = easeIO((lt - 3.2) / 0.6);
+      show(capA, lt, A0 + 0.3, { t1: A1 - 0.4 });
+      capA.innerHTML = lt < 3.3 ? '第 1 版：参考立绘 ｜ 像素版（放大 8 倍）｜ 山田凉（对比比例）' : '第 6 版：尾巴、眼睛都重画过，<span style="color:var(--orange)">前后改了六版</span>';
+      // B
+      const vB = show(fbx.f, lt, B0, { t1: B1 - 0.4 }); show(noteB, lt, B0 + 0.3, { t1: B1 - 0.4 });
+      if (vB > 0) {
+        const u = clamp(lt - B0, 0, BDUR - 0.001), { g, cam } = camAt(u);
+        const src = lerp(g.s0, g.s1, clamp((u - g.u0) / (g.u1 - g.u0)));
+        setSrc(sr, `media/sr_all/f_${String(clamp(Math.round(src * 30), 0, 1326) + 1).padStart(4, '0')}.jpg`);
+        const base = bw / 1402, sc = base * cam[2];
+        const tx = clamp(bw / 2 - cam[0] * sc, bw - 1402 * sc, 0), ty = clamp(bh / 2 - cam[1] * sc, bh - 1020 * sc, 0);
+        sr.style.transform = `translate(${tx}px, ${ty}px) scale(${sc})`;
+        noteB.textContent = g.note;
+        if (g.hl) {
+          const [x0, y0, x1, y1] = g.hl, a = easeOut((u - g.u0) / 0.25);
+          Object.assign(hlBox.style, { display: 'block', opacity: a, left: px(tx + x0 * sc), top: px(ty + y0 * sc), width: px((x1 - x0) * sc), height: px((y1 - y0) * sc) });
+        } else hlBox.style.display = 'none';
+      }
+      // C、E
+      show(fc.f, lt, C0, { t1: C1 - 0.3 });
+      show(fe.f, lt, E0);
+    },
+  };
+};
+
+// ---- S20 嘴型
+S.mouth = (root, s) => {
+  const tm = timer(s);
+  const h = header(root, '嘴型', '按配音的音量，一帧一帧算');
+  const big = sprite(root, SX + 40, 200, 6);
+  const meter = at(root, SX + 460, 260, 60, 400, '', { background: 'var(--soft)', borderRadius: 12, overflow: 'hidden' });
+  const fill = mk(meter, 'abs', { left: 0, right: 0, bottom: 0, background: 'var(--orange)' });
+  mk(root, 'note', { left: SX + 440, top: 680 }, '音量');
+  const leg = [['没声音', '闭嘴', 0], ['小声', '半张', 1], ['大声', '张开', 2]].map(([a, b, m], i) => {
+    const c = at(root, SX + 620, 210 + i * 225, 880, 200, 'wcard', { padding: '20px 30px' });
+    const sp = sprite(c, 30, 4, 3);
+    mk(c, 'abs', { left: 260, top: 50, font: "800 44px 'Noto Sans SC'" }, `${a} → <span style="color:var(--orange)">${b}</span>`);
+    return { c, sp, m };
+  });
+  const T = [tm.at('P24', '没声音'), tm.at('P24', '小声'), tm.at('P24', '大声')];
+  return {
+    update(lt) {
+      show(h, lt, 0.2);
+      const f = Math.floor(lt * FPS) % D.mouth.length, m = D.mouth[f];
+      setSprite(big, `idle_m${m}`, lt);
+      const wi = Math.floor((f / FPS) / D.waveStep) % D.wave.length;
+      fill.style.height = px(400 * D.wave[wi]);
+      show(big, lt, 0.4); show(meter, lt, 0.6);
+      leg.forEach((L, i) => { show(L.c, lt, T[i] - 0.2); setSprite(L.sp, `idle_m${L.m}`, lt); const on = m === L.m && lt > T[2]; L.c.style.borderColor = on ? 'var(--orange)' : 'var(--line)'; L.c.style.borderWidth = on ? '4px' : '1px'; });
+    },
+  };
+};
+
+// ---- S21 动作两层
+S.actions = (root, s) => {
+  const tm = timer(s);
+  const h = header(root, '动作', '两层：台本里写的 + 程序自动加');
+  const cell = (x, y, label) => { const c = at(root, x, y, 250, 270); const sp = sprite(c, 29, 0, 3); const fx = sprite(c, 29, 0, 3); fx.style.display = 'none'; mk(c, '', { position: 'absolute', top: 200, width: 250, textAlign: 'center', font: "800 30px 'Noto Sans SC'" }, label); return { c, sp, fx }; };
+  const r1 = at(root, SX, 180, SW, 50, '', { font: "800 34px 'Noto Sans SC'" }, '台本里写的 · <span style="color:var(--orange)">一期约 30 个</span>');
+  const A = [['抬手', 'reach'], ['数一二三', 'count'], ['叉腰', 'hip'], ['好耶', 'yay']].map(([l, k], i) => Object.assign(cell(SX + i * 290, 235, l), { k }));
+  const r2 = at(root, SX, 520, SW, 50, '', { font: "800 34px 'Noto Sans SC'" }, '说话时程序自动加 · <span style="color:var(--orange)">一期 80 多个</span>');
+  const B = [['小手势', 'gest'], ['句末点头', 'nod'], ['看向内容', 'look']].map(([l, k], i) => Object.assign(cell(SX + i * 290, 575, l), { k }));
+  const fb = at(root, SX + 960, 620, 540, 200, 'wcard', { padding: '28px 32px', font: "800 36px/1.6 'Noto Sans SC'" }, '放多少？<br><span style="color:var(--orange)">一期一期按我的反馈调出来</span>');
+  const TA = ['抬手', '数一二三', '叉腰', '好耶'].map(p => tm.at('P25', p)), TB = ['小手势', '句末点头', '看向内容'].map(p => tm.at('P25', p));
+  const pose = (o, lt) => {
+    const ms = lt * 1000;
+    if (o.k === 'count') { const n = Math.floor(lt / 1.2) % 3 + 1; setSprite(o.sp, `count${n}_m0`, lt); o.fx.style.display = 'block'; setSrc(o.fx, `${WH}/fx_digit${n}/00.png`); return; }
+    if (o.k === 'yay') return setSprite(o.sp, 'pose_yay', lt);
+    if (o.k === 'gest') return setSprite(o.sp, ['chest_m0', 'hold_m0', 'palm_m0'][Math.floor(lt / 1.4) % 3], lt);
+    if (o.k === 'look') return setSprite(o.sp, 'idle_look_r_m0', lt);
+    if (o.k === 'nod') { const c = ms % 2020; const k = c < 60 ? 'head_nod_m0' : c < 200 ? 'head_nod2_m0' : c < 260 ? 'head_nod_m0' : c < 360 ? 'idle_m0' : c < 420 ? 'head_nod_m0' : c < 560 ? 'head_nod2_m0' : c < 620 ? 'head_nod_m0' : 'idle_m0'; return setSprite(o.sp, k, lt); }
+    setSprite(o.sp, `${o.k}_m0`, lt);
+  };
+  return {
+    update(lt) {
+      show(h, lt, 0.2); show(r1, lt, tm.at('P25', '一层写在台本里')); show(r2, lt, tm.at('P25', '另一层'));
+      A.forEach((o, i) => { show(o.c, lt, TA[i]); pose(o, lt); }); B.forEach((o, i) => { show(o.c, lt, TB[i]); pose(o, lt); });
+      show(fb, lt, tm.at('P25', '动作放多少'));
+    },
+  };
+};
+
+// ---- S22 BGM 和音效
+S.bgm = (root, s) => {
+  const tm = timer(s);
+  const h = header(root, 'BGM 和音效', '全部用 Python 代码合成，没用一个采样');
+  const cards = [['电钢琴', 'FM 合成', '电钢琴'], ['贝斯', '几个谐波叠出来', '贝斯'], ['沙锤和刷子', '滤过波的噪声', '沙锤']].map(([a, b, p], i) => ({ el: at(root, SX, 210 + i * 140, 760, 120, 'wcard', { padding: '20px 30px' }, `<span style="font:800 40px 'Noto Sans SC'">${a}</span><span style="font:700 32px 'Noto Sans SC';color:var(--gray);margin-left:24px">${b}</span>`), t: tm.at('P26', p) }));
+  const style = at(root, SX, 650, 760, 120, 'card', { padding: '18px 30px' }, `<div style="font:800 40px 'Space Grotesk','Noto Sans SC'">80 BPM · F 大调 · lo-fi 轻爵士</div><div style="font:700 28px 'Space Grotesk';color:var(--gray);margin-top:8px">Fmaj9 → Dm9 → Gm9 → C13</div>`);
+  const fa = frameBox(root, SX + 820, 200, 626, 588, false); image(fa.inner, 'media/bgm_analysis.png').style.objectFit = 'contain'; fa.inner.style.background = '#fff';
+  const capA = at(root, SX + 820, 798, 680, 40, 'note', { position: 'absolute' }, '同一首 BGM 的波形和频谱（第 1 期制作时画的检查图）');
+  const eq = at(root, SX + 820, 836, 680, 40, '', { font: "700 26px 'Noto Sans SC'", color: 'var(--orange)' });
+  const da = at(root, SX, 790, 760, 100, '', { font: "800 40px 'Noto Sans SC'" });
+  const tDa = tm.at('P26', '“嗒”'), tDing = tm.at('P26', '“叮”'), tF = tm.at('P26', '都在 F 大调里');
+  return {
+    update(lt) {
+      show(h, lt, 0.2);
+      cards.forEach(c => show(c.el, lt, c.t));
+      show(style, lt, tm.at('P26', '最后做成'));
+      show(fa.f, lt, 0.8); show(capA, lt, 1.0);
+      show(eq, lt, 0.6); const on = lt > 0.6 && lt < tm.dur - 0.9;
+      eq.innerHTML = on ? '♪ 正在播放这首 BGM ' + '▮'.repeat(1 + Math.floor((lt * 4) % 4)) : '';
+      show(da, lt, tDa - 0.1);
+      da.innerHTML = `“嗒”${lt > tDing - 0.1 ? '　“叮”' : ''}${lt > tF ? '　<span style="color:var(--orange);font-size:34px">都在 F 大调里</span>' : ''}`;
+    },
+  };
+};
+
+// ---- S23 混音
+S.mix = (root, s) => {
+  const tm = timer(s), tL = tm.at('P27', '整片的响度');
+  const h = header(root, '混音', '说话时 BGM 自动压低');
+  const lanes = at(root, SX, 210, 1100, 600);
+  const names = ['人声', 'BGM', '音效'];
+  names.forEach((n, i) => { mk(lanes, 'abs', { left: 0, top: i * 200 + 60, font: "800 34px 'Noto Sans SC'" }, n); mk(lanes, 'abs', { left: 120, top: i * 200, width: 960, height: 160, borderRadius: 12, background: 'var(--soft)' }); });
+  const voiceOn = x => (Math.sin(x / 90) > -0.2);   // x：像素位置，有人声的区间
+  const vb = []; for (let x = 0; x < 940; x += 10) { const v = voiceOn(x) ? 0.25 + 0.75 * D.wave[(x * 3) % D.wave.length] : 0.03; vb.push(mk(lanes, 'abs', { left: 130 + x, top: 80 - v * 60, width: 6, height: v * 120, borderRadius: 3, background: '#93C5FD' })); }
+  let path = ''; for (let x = 0; x <= 940; x += 10) path += `${x ? 'L' : 'M'}${130 + x},${voiceOn(x) ? 330 : 250}`;
+  const svg = mk(lanes, 'abs', { left: 0, top: 0, width: 1100, height: 600 }, `<svg width="1100" height="600"><path d="${path}" fill="none" stroke="#FF4F1A" stroke-width="6" stroke-linejoin="round"/></svg>`);
+  const ticks = [150, 420, 760].map(x => mk(lanes, 'abs', { left: 120 + x, top: 430, width: 8, height: 100, borderRadius: 4, background: 'var(--ink2)' }));
+  const head = mk(lanes, 'abs', { top: 0, width: 4, height: 560, background: 'var(--ink)' });
+  const meter = at(root, SX + 1180, 210, 322, 600, 'wcard', { padding: '30px' });
+  mk(meter, '', { font: "700 28px 'Noto Sans SC'", color: 'var(--gray)' }, '整片响度');
+  const lufs = mk(meter, '', { font: "800 72px 'Space Grotesk'", marginTop: 20, color: 'var(--orange)' });
+  mk(meter, '', { font: "700 32px 'Space Grotesk'", color: 'var(--gray)' }, 'LUFS');
+  const same = mk(meter, '', { font: "800 36px/1.4 'Noto Sans SC'", marginTop: 60 }, '每期听起来<br>一样响');
+  return {
+    update(lt) {
+      show(h, lt, 0.2); show(lanes, lt, 0.5); show(meter, lt, tL - 0.3);
+      head.style.left = px(120 + ((lt * 110) % 960));
+      const g = easeOut((lt - tL) / 1.2); lufs.textContent = (lerp(-30, -16, g)).toFixed(0);
+      show(same, lt, tm.at('P27', '每期听起来'));
+    },
+  };
+};
+
+// ---- S24 片头片尾 + 封面
+S.introcover = (root, s) => {
+  const tm = timer(s), tC = tm.at('P28', '封面用模板'), tS = tm.at('P28', '再缩小');
+  const h = header(root, '片头片尾 · 封面', '片头片尾是网页动画，封面用模板');
+  const fp = frameBox(root, SX + 87, 190, 1300 + 28, 600 + 28);
+  const pim = image(fp.inner, 'media/intro/f_001.jpg');
+  const capP = at(root, SX + 87, 150, 600, 40, '', {});
+  const covers = at(root, SX, 190, SW, 700);
+  const c1 = mk(covers, 'frame', { left: 0, top: 0, width: 728, height: 422 }); mk(c1, 'inner', {}, '<img src="media/cover_16x9.png">');
+  const c2 = mk(covers, 'frame', { left: 770, top: 0, width: 557, height: 422 }); mk(c2, 'inner', {}, '<img src="media/cover_4x3.png">');
+  mk(covers, 'abs', { left: 0, top: 440, font: "800 32px 'Space Grotesk','Noto Sans SC'" }, '16:9');
+  mk(covers, 'abs', { left: 770, top: 440, font: "800 32px 'Space Grotesk','Noto Sans SC'" }, '4:3');
+  const small = mk(covers, 'frame', { left: 1080, top: 470, width: 380, height: 230, padding: 8 }); mk(small, 'inner', {}, '<img src="media/cover_preview.png" style="object-fit:contain;background:#fff">');
+  const smallLab = mk(covers, 'abs', { left: 0, top: 520, width: 1040, font: "800 40px/1.4 'Noto Sans SC'" }, '缩小到信息流大小 →<br><span class="mark">字还看得清吗？</span>');
+  [...covers.querySelectorAll('img')].forEach(i => { setSrc(i, i.getAttribute('src')); });
+  const IN = 0.6, INN = 114, OUTN = 144;
+  return {
+    update(lt) {
+      show(h, lt, 0.2);
+      show(fp.f, lt, 0.4, { t1: tC - 0.4 }); show(capP, lt, 0.5, { t1: tC - 0.4 });
+      const k = Math.floor((lt - IN) * FPS);
+      if (k < INN) { setSrc(pim, `media/intro/f_${pad3(clamp(k, 0, INN - 1) + 1)}.jpg`); capP.innerHTML = '<span class="lab" style="position:static">片头（网页动画）</span>'; }
+      else { setSrc(pim, `media/outro/f_${pad3(clamp(k - INN, 0, OUTN - 1) + 1)}.jpg`); capP.innerHTML = '<span class="lab" style="position:static">片尾（网页动画）</span>'; }
+      show(covers, lt, tC); show(c1, lt, tC + 0.1); show(c2, lt, tC + 0.4);
+      show(small, lt, tS, { scale: 0.7 }); show(smallLab, lt, tS + 0.2);
+    },
+  };
+};
+
+// ---- S25 检查
+S.checks = (root, s) => {
+  const tm = timer(s);
+  const h = header(root, '检查', '每一步做完都有检查');
+  const fs = frameBox(root, SX, 210, 800, 510 + 28, true); image(fs.inner, 'media/review_sheet.png').style.objectFit = 'contain'; fs.inner.style.background = '#fff';
+  const capS = at(root, SX, 770, 800, 50, '', { font: "700 30px 'Noto Sans SC'", color: 'var(--gray)' }, '抽帧拼成一张图，Claude 自己看');
+  const items = [['字有没有出画面', '字有没有出画面'], ['有没有压住字幕', '有没有压住字幕'], ['帧数和时长对不对', '帧数和时长对不对']].map(([t, p], i) => ({ el: at(root, SX + 860, 220 + i * 100, 640, 80, '', { font: "800 38px 'Noto Sans SC'" }, `<span style="color:var(--green)">✓</span> ${t}`), t: tm.at('P29', p) }));
+  const px200 = at(root, SX + 860, 560, 642, 250, 'wcard', { padding: '26px 30px', font: "700 32px/1.6 'Noto Sans SC'" }, '改了渲染程序：<br>往期视频抽 <span style="color:var(--orange)">200 个时刻</span><br>逐像素对比 → 差异 <span class="tag0">0</span>');
+  return {
+    update(lt) {
+      show(h, lt, 0.2); show(fs.f, lt, tm.at('P29', 'Claude 会抽帧') - 0.3); show(capS, lt, tm.at('P29', 'Claude 会抽帧'));
+      items.forEach(o => show(o.el, lt, o.t, { dx: 20, dy: 0 }));
+      show(px200, lt, tm.at('P29', '改了渲染程序'));
+    },
+  };
+};
+
+// ---- S26 视频模型价格表
+S.pricetable = (root, s) => {
+  const tm = timer(s);
+  const h = header(root, '成本', '视频模型：按秒收费');
+  const tbl = at(root, SX, 200, SW, 640);
+  const head = mk(tbl, 'row', { height: 70, borderBottom: '3px solid var(--ink)', font: "800 30px 'Noto Sans SC'", color: 'var(--gray)' }, '<div style="width:560px">模型</div><div style="width:470px">1080p 带声音 · 每秒</div><div>生成 6 分钟</div>');
+  const R = [['Google Veo 3.1', '$0.40', '≈ $144', 'Google 的 Veo'], ['字节 Seedance 2.0', '$0.37', '≈ $133', '字节的 Seedance'], ['阿里 万相 3.0', '$0.20', '≈ $72', '阿里的万相'], ['快手 可灵 3.0', '≈ $0.17', '≈ $60', '快手的可灵']].map(([a, b, c, p]) => ({ el: mk(tbl, 'row', { height: 100, borderBottom: '1px solid var(--line)', font: "800 42px 'Space Grotesk','Noto Sans SC'" }, `<div style="width:560px">${a}</div><div style="width:470px">${b}</div><div style="color:var(--orange)">${c}</div>`), t: tm.at('P31', p) }));
+  const sum = at(root, SX, 700, SW, 80, '', { font: "800 46px 'Noto Sans SC'" }, '做一条 6 分钟：<span class="mark">60 ～ 140 多美元</span>');
+  const src = at(root, SX, 846, SW, 40, 'note', {}, '各家官方价目表 · 截至 2026-09-28 · 美元标价（可灵为官方 API 点数折算）');
+  return { update(lt) { show(h, lt, 0.2); show(head, lt, tm.at('P31', '视频模型基本都是') - 0.2); R.forEach(r => show(r.el, lt, r.t, { dx: 30, dy: 0 })); show(sum, lt, tm.at('P31', '做一条 6 分钟')); show(src, lt, tm.at('P31', '视频模型基本都是')); } };
+};
+
+// ---- S27 重新生成
+S.reroll = (root, s) => {
+  const tm = timer(s), tG = tm.at('P32', '几十个短镜头'), tR = tm.at('P32', '不满意的镜头');
+  const h = header(root, '还没算废片', '这是每一秒都一次成功的价格');
+  const tiles = []; for (let i = 0; i < 32; i++) tiles.push(at(root, SX + (i % 8) * 186, 220 + Math.floor(i / 8) * 130, 170, 112, '', { borderRadius: 10, background: 'var(--soft)', border: '2px solid var(--line)', display: 'flex', alignItems: 'center', justifyContent: 'center', font: "700 28px 'Noto Sans SC'", color: 'var(--gray)' }, `镜头 ${i + 1}`));
+  const bad = [2, 5, 9, 12, 13, 18, 22, 27, 30];
+  const tot = at(root, SX, 770, SW, 80, '', { font: "800 46px 'Noto Sans SC'" }, '重新生成 → <span class="mark">还得再付一遍钱</span>');
+  return {
+    update(lt) {
+      show(h, lt, 0.2);
+      tiles.forEach((t, i) => {
+        show(t, lt, tG + i * 0.04, { d: 0.25, dy: 8 });
+        const b = bad.indexOf(i), on = b >= 0 && lt > tR + b * 0.25;
+        t.style.borderColor = on ? 'var(--red)' : 'var(--line)'; t.style.color = on ? 'var(--red)' : 'var(--gray)';
+        t.innerHTML = on ? '✗ 重来 +$' : `镜头 ${i + 1}`;
+      });
+      show(tot, lt, tR + 1.0);
+    },
+  };
+};
+
+// ---- S28 Claude 订阅 + 我的档位（占位）
+S.plans = (root, s) => {
+  const tm = timer(s), t34 = tm.p0('P34');
+  const h = header(root, 'Claude', '订阅制，不按秒收费');
+  const plan = (x, name, price, p) => ({ el: at(root, x, 210, 700, 330, 'wcard', { padding: '36px 44px' }, `<div style="font:800 48px 'Space Grotesk'">${name}</div><div style="font:800 76px 'Space Grotesk','Noto Sans SC';color:var(--orange);margin-top:18px">${price}</div><div style="font:700 30px 'Noto Sans SC';color:var(--gray);margin-top:14px">含 Claude Code · 不按秒收钱</div>`), t: tm.at('P33', p) });
+  const P = [plan(SX, 'Pro', '每月 $20', 'Pro'), plan(SX + 800, 'Max', '每月 $100 起', 'Max')];
+  const src = at(root, SX, 560, SW, 40, 'note', {}, '来源：claude.com/pricing（2026-09-28）');
+  const mine = at(root, SX, 620, SW, 220, '', { border: '4px dashed var(--orange)', borderRadius: 16, padding: '34px 44px', font: "800 44px/1.6 'Noto Sans SC'" }, '我的档位：________　这个月做了 ____ 条视频<div style="font:600 28px \'Noto Sans SC\';color:var(--gray2)">（占位：录制时换成你的截图或数字）</div>');
+  return { update(lt) { show(h, lt, 0.2); P.forEach(o => show(o.el, lt, o.t - 0.2)); show(src, lt, P[0].t); show(mine, lt, t34); } };
+};
+
+// ---- S29 不花钱的部分
+S.free = (root, s) => {
+  const tm = timer(s);
+  const h = header(root, '不花钱的部分', '除了订阅，基本都是 0');
+  const R = [['渲染 · 在自己电脑上跑', '$0', '渲染在自己电脑上跑'], ['浏览器 / Playwright / ffmpeg / 语音识别 · 开源', '$0', '浏览器'], ['不需要显卡', '✓', '也不需要显卡'], ['BGM 和音效 · 代码合成', '$0', 'BGM 和音效是代码合成的'], ['字体 · 开源', '$0', '字体用开源的'], ['配音 · 自己录 $0 ｜ Fish Audio 合成', '≈ $0.09 / 期', '配音自己录'], ['改哪里 · 只重渲那一段', '省时间', '要改哪里']].map(([a, b, p], i) => ({ el: at(root, SX, 200 + i * 94, SW, 84, 'row', { justifyContent: 'space-between', borderBottom: '1px solid var(--line)', font: "700 36px 'Noto Sans SC'" }, `<span>${a}</span><span class="tag0">${b}</span>`), t: tm.at('P35', p) }));
+  return { update(lt) { show(h, lt, 0.2); R.forEach(r => show(r.el, lt, r.t, { dx: 30, dy: 0 })); } };
+};
+
+// ---- S30 实际数字
+S.stats = (root, s) => {
+  const tm = timer(s);
+  const h = header(root, '实际数字', '6 分钟正片，三分钟左右渲完');
+  const stat = (i, big, small, p) => ({ el: at(root, SX + i * 510, 210, 470, 280, 'wcard', { padding: '36px 40px' }, `<div style="font:800 76px 'Space Grotesk','Noto Sans SC';color:var(--orange)">${big}</div><div style="font:700 32px 'Noto Sans SC';color:var(--gray);margin-top:16px">${small}</div>`), t: tm.at('P36', p) });
+  const S3 = [stat(0, '1 万多帧', '6 分钟的正片', '6 分钟'), stat(1, '4 路', '并行渲染', '4 路并行'), stat(2, '≈ 3 分钟', '渲完', '三分钟左右')];
+  const warn = at(root, SX, 560, SW, 260, '', { background: '#FFF4EC', border: '4px solid var(--orange)', borderRadius: 16, padding: '34px 44px', font: "800 44px/1.6 'Noto Sans SC'" }, '⚠ 并行数别开太大<div style="font:700 36px \'Noto Sans SC\';color:var(--ink2)">两个任务各开 10 路 → 32 GB 内存直接吃满</div>');
+  return { update(lt) { show(h, lt, 0.2); S3.forEach(o => show(o.el, lt, o.t)); show(warn, lt, tm.at('P36', '提醒一句')); } };
+};
+
+// ---- S31 怎么选
+S.choose = (root, s) => {
+  const tm = timer(s);
+  const h = header(root, '怎么选', '按你要做的内容来选');
+  const col = (x, a, b, p) => ({ el: at(root, x, 220, 720, 460, 'wcard', { padding: '44px 48px' }, `<div style="font:800 52px 'Noto Sans SC'">${a}</div><div style="font:800 44px/1.5 'Noto Sans SC';color:var(--orange);margin-top:40px">${b}</div>`), t: tm.at('P37', p) });
+  const C = [col(SX, '视频模型', '真实感的画面<div style="font:600 32px \'Noto Sans SC\';color:var(--gray)">人物、实拍感的镜头</div>', '视频模型出的是'), col(SX + 782, 'Claude 写代码', '讲解、动画<div style="font:600 32px \'Noto Sans SC\';color:var(--gray)">文字、图表、像素风</div>', 'Claude 更适合')];
+  return { update(lt) { show(h, lt, 0.2); C.forEach(o => show(o.el, lt, o.t)); } };
+};
+
+// ---- S32 结尾（A）
+S.outro = (root, s) => {
+  const tm = timer(s);
+  const box = at(root, RX, 180, RW, 640);
+  const c = mk(box, 'chip', {}, '结尾');
+  const t1 = mk(box, '', { font: "800 64px 'Noto Sans SC'", marginTop: 30 }, '这期就到这里');
+  const card = mk(box, 'wcard', { position: 'relative', marginTop: 34, padding: '30px 36px' }, `<div style="font:800 40px/1.5 'Noto Sans SC'">提示词 → <span class="mark">简介 ＋ 评论区置顶</span></div><div style="font:700 32px/1.6 'Noto Sans SC';color:var(--gray);margin-top:12px">直接复制去用<br>先从第一段开始，做一条 20 秒的小视频</div>`);
+  const bye = mk(box, '', { font: "800 64px 'Noto Sans SC'", color: 'var(--orange)', marginTop: 34 }, '我们下期见');
+  return { update(lt) { show(c, lt, 0.2); show(t1, lt, 0.3); show(card, lt, tm.p0('P39')); show(bye, lt, tm.p0('P40')); } };
+};
+
+// ======================================================================= 引擎
+const stage = document.getElementById('stage'), tocEl = document.getElementById('toc'), camEl = document.getElementById('cam'), camPid = document.getElementById('campid');
+let cur = null, tocChap = null;
+const sceneIdx = t => { const sc = TLD.scenes; for (let i = sc.length - 1; i >= 0; i--) if (t >= sc[i].start - 1e-6) return i; return 0; };
+const camRect = L => L === 'A' ? CAM.A : CAM.P;
+
+function buildToc(s) {
+  const ch = TLD.chapters[s.chapter];
+  tocEl.innerHTML = `<div class="t">${ch.title}</div>` + ch.items.map((t, i) => `<div class="it" data-i="${i}"><span class="b"></span>${t}</div>`).join('');
+  tocChap = s.chapter;
+}
+
+window.renderAt = async function (t) {
+  const i = sceneIdx(t), s = TLD.scenes[i], prev = TLD.scenes[i - 1], next = TLD.scenes[i + 1];
+  const lt = t - s.start, dur = s.end - s.start;
+  if (!cur || cur.s !== s) {
+    stage.innerHTML = '';
+    const root = mk(stage, 'root');
+    const api = await S[s.type](root, s);
+    cur = { s, root, api };
+  }
+  // 出镜位：版式变化时移动 0.7 秒
+  const a = prev ? camRect(prev.layout) : camRect(s.layout), b = camRect(s.layout), g = easeIO(lt / MOVE);
+  const r = a === b ? b : { x: lerp(a.x, b.x, g), y: lerp(a.y, b.y, g), w: lerp(a.w, b.w, g), h: lerp(a.h, b.h, g) };
+  Object.assign(camEl.style, { left: px(r.x), top: px(r.y), width: px(r.w), height: px(r.h), fontSize: px(r.w / 1156 * 46) });
+  const pNow = s.paras.map(p => PARA[p]).filter(p => t >= p.start - 1e-6).pop();
+  camPid.textContent = pNow ? pNow.id : '';
+  // 左下目录（只在版式 B）
+  if (s.layout === 'B') {
+    if (tocChap !== s.chapter) buildToc(s);
+    const inA = (prev && prev.layout === 'B' && prev.chapter === s.chapter) ? 1 : easeOut((lt - 0.3) / 0.4);
+    const outA = (next && next.layout === 'B' && next.chapter === s.chapter) ? 1 : 1 - easeIn((lt - (dur - 0.3)) / 0.3);
+    tocEl.style.opacity = Math.min(inA, outA);
+    tocEl.querySelectorAll('.it').forEach(e => { const k = +e.dataset.i; e.className = 'it' + (k === s.toc ? ' now' : k < s.toc ? ' done' : ''); });
+  } else tocEl.style.opacity = 0;
+  // 画面内容淡入淡出
+  if (!cur.api.noFade) {
+    const delay = prev && prev.layout !== s.layout ? 0.3 : 0;
+    const ain = easeOut((lt - delay) / FIN), aout = 1 - easeIn((lt - (dur - FOUT)) / FOUT);
+    cur.root.style.opacity = Math.min(ain, aout);
+    cur.root.style.transform = `translateY(${(1 - ain) * 14}px)`;
+  } else { cur.root.style.opacity = 1; cur.root.style.transform = 'none'; }
+  cur.api.update(lt);
+  await flush();
+  return true;
+};
+window.META = { FPS, TOTAL: TLD.total, W: 2340, H: 1080 };
+</script>
+</body>
+</html>

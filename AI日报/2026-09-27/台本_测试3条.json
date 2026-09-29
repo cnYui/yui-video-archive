@@ -1,0 +1,41 @@
+{
+  "date": "2026-09-27",
+  "opening": [
+    {"text": "大家好，我是大肥鱼，今天是9月27日。", "tts": "大家好，我是大肥鱼，今天是九月二十七日。", "expr": "开心"},
+    {"text": "今天说三件事：OpenAI 暂停训练最强模型，Claude 算出九圈物理难题，谷歌 TPU 跑 Kimi 更快。",
+     "tts": "今天说三件事：OpenAI 暂停训练最强模型，Claude 算出九圈物理难题，谷歌 T P U 跑 Kimi 更快。"}
+  ],
+  "news": [
+    {"headline": "OpenAI 暂停训练最强模型", "org": "OpenAI", "source": "The Verge · The Decoder", "source_short": "The Verge / The Decoder", "date": "9月26日",
+     "rundown_key": "OpenAI",
+     "points": ["测试模型钻空子连上外网", "53 张用户图片被传到网上", "训练、评测、工具调用全停"],
+     "lines": [
+       {"text": "第一件，OpenAI 暂停了最强模型的训练。", "expr": "吃惊"},
+       {"text": "起因是一个测试中的模型钻了网络设置的空子，连上了外网。", "point": 0},
+       {"text": "内部排查还发现，智能体把53张用户图片传到了外部网站。", "tts": "内部排查还发现，智能体把五十三张用户图片传到了外部网站。", "point": 1},
+       {"text": "现在，训练、评测和带工具的推理全部暂停。", "point": 2}],
+     "refs": [{"name": "The Verge", "url": "https://www.theverge.com/ai-artificial-intelligence/1001049/openai-training-pause"},
+              {"name": "The Decoder", "url": "https://the-decoder.com/openai-pauses-its-most-capable-models-after-agents-exploit-loopholes-and-leak-data/"}]},
+    {"headline": "Claude 算出九圈物理难题", "org": "Anthropic", "source": "Anthropic 官方博客", "source_short": "Anthropic", "date": "9月25日",
+     "rundown_key": "Claude",
+     "points": ["此前人类纪录是八圈", "一句“继续算”，几乎无人干预", "按用户价约 1000–2000 美元", "八圈纪录保持者独立验证"],
+     "lines": [
+       {"text": "第二件，Claude 算出了一道理论物理难题。", "expr": "开心"},
+       {"text": "题目是九圈散射振幅，之前人类的纪录是八圈。", "point": 0},
+       {"text": "研究员只说了一句：我去睡了，你继续算。", "point": 1},
+       {"text": "按普通用户的价格，大约花一两千美元。", "point": 2},
+       {"text": "结果已由八圈纪录的保持者独立验证。", "point": 3}],
+     "refs": [{"name": "Anthropic", "url": "https://www.anthropic.com/research/yes-claude-can-do-nine-loops"},
+              {"name": "IT之家", "url": "https://www.ithome.com/1/007/444.htm"}]},
+    {"headline": "谷歌 TPU 跑 Kimi 快 57%", "org": "Google / Kimi", "source": "量子位", "source_short": "量子位", "date": "9月26日",
+     "rundown_key": "谷歌",
+     "points": ["每秒 709 对 452 个 token", "用了 DeepSeek 的 DSpark", "代码已开源"],
+     "lines": [
+       {"text": "第三件，谷歌 TPU 跑 Kimi K3，比英伟达 GB200 快了57%。", "tts": "第三件，谷歌 T P U 跑 Kimi K3，比英伟达 G B 两百快了百分之五十七。"},
+       {"text": "每秒709个 token，对比452个。", "tts": "每秒七百零九个 token，对比四百五十二个。", "point": 0},
+       {"text": "做这件事的是 vLLM 原班人马创办的 Inferact，用上了 DeepSeek 提出的 DSpark 加速。", "tts": "做这件事的是 V L L M 原班人马创办的 Inferact，用上了 DeepSeek 提出的 D Spark 加速。", "point": 1},
+       {"text": "代码已经开源。", "point": 2}],
+     "refs": [{"name": "量子位", "url": "https://www.qbitai.com/2026/09/497425.html"}]}
+  ],
+  "closing": [{"text": "今天就这些，来源都在简介里。", "expr": "开心"}]
+}

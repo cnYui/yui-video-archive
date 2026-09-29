@@ -1,0 +1,22 @@
+{
+  "line1": "阿里语音模型",
+  "line2": "降价最高95%",
+  "l1px": 168,
+  "l2px": 236,
+  "maxw": 1320,
+  "textCx": 900,
+  "scale": 9,
+  "frame": [
+    64,
+    64
+  ],
+  "footRow": 62,
+  "fishX": 1074,
+  "foot": 1062,
+  "tag": "",
+  "_pose": "finger_up_m2",
+  "_eyes": "idle_surprised_m0",
+  "_fx": "fx_emph",
+  "_qmark": false,
+  "_place": "right"
+}

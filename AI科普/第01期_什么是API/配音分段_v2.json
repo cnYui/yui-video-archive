@@ -1,0 +1,362 @@
+[
+  {
+    "id": "S01-01",
+    "scene": "S01",
+    "text": "大家好，我是山田凉。今天给大家介绍API。",
+    "tts_text": "大家好，我是山田凉。今天给大家介绍 A P I。",
+    "start": 4.9,
+    "est_seconds": 4.7
+  },
+  {
+    "id": "S02-02",
+    "scene": "S02",
+    "text": "很多App都写着“已接入DeepSeek”，有些AI工具还要你填“API Key”。",
+    "tts_text": "很多 App 都写着，已接入 Deep Seek。有些 A I 工具，还要你填 A P I Key。",
+    "start": 10.0,
+    "est_seconds": 6.3
+  },
+  {
+    "id": "S02-03",
+    "scene": "S02",
+    "text": "你可能会有三个疑问：",
+    "tts_text": "你可能会有三个疑问。",
+    "start": 16.3,
+    "est_seconds": 2.3
+  },
+  {
+    "id": "S02-04",
+    "scene": "S02",
+    "text": "第一，API是什么？",
+    "tts_text": "第一，A P I 是什么？",
+    "start": 18.6,
+    "est_seconds": 2.1
+  },
+  {
+    "id": "S02-05",
+    "scene": "S02",
+    "text": "第二，App上写的“已接入”，接的是什么？",
+    "tts_text": "第二，App 上写的已接入，接的是什么？",
+    "start": 20.7,
+    "est_seconds": 3.5
+  },
+  {
+    "id": "S02-06",
+    "scene": "S02",
+    "text": "第三，API Key是什么，怎么拿到？",
+    "tts_text": "第三，A P I Key 是什么，怎么拿到？",
+    "start": 24.2,
+    "est_seconds": 3.3
+  },
+  {
+    "id": "S02-07",
+    "scene": "S02",
+    "text": "这期视频，就把这三个问题讲清楚。",
+    "tts_text": "这期视频，就把这三个问题讲清楚。",
+    "start": 27.5,
+    "est_seconds": 3.5
+  },
+  {
+    "id": "S03-08",
+    "scene": "S03",
+    "text": "先说第一个问题：API是什么。",
+    "tts_text": "先说第一个问题，A P I 是什么。",
+    "start": 31.6,
+    "est_seconds": 3.3
+  },
+  {
+    "id": "S03-09",
+    "scene": "S03",
+    "text": "API是三个英文单词的缩写：Application Programming Interface。",
+    "tts_text": "A P I，是三个英文单词的缩写。Application，Programming，Interface。",
+    "start": 34.9,
+    "est_seconds": 6.1
+  },
+  {
+    "id": "S03-10",
+    "scene": "S03",
+    "text": "中文叫“应用程序编程接口”。",
+    "tts_text": "中文叫，应用程序编程接口。",
+    "start": 41.0,
+    "est_seconds": 2.8
+  },
+  {
+    "id": "S03-11",
+    "scene": "S03",
+    "text": "这里的接口，指的是程序和程序之间的一套调用规则，跟USB那种插口没关系。",
+    "tts_text": "这里的接口，指的是程序和程序之间的一套调用规则，跟 U S B 那种插口没关系。",
+    "start": 43.8,
+    "est_seconds": 7.9
+  },
+  {
+    "id": "S03-12",
+    "scene": "S03",
+    "text": "它主要规定三件事：",
+    "tts_text": "它主要规定三件事。",
+    "start": 51.7,
+    "est_seconds": 2.1
+  },
+  {
+    "id": "S03-13",
+    "scene": "S03",
+    "text": "能调用哪些功能，请求按什么格式发，结果按什么格式返回。",
+    "tts_text": "能调用哪些功能。请求按什么格式发。结果按什么格式返回。",
+    "start": 53.8,
+    "est_seconds": 6.3
+  },
+  {
+    "id": "S03-14",
+    "scene": "S03",
+    "text": "程序A按规则发出请求，程序B处理完，把结果返回来。这一来一回，就是一次API调用。",
+    "tts_text": "程序 A 按规则发出请求，程序 B 处理完，把结果返回来。这一来一回，就是一次 A P I 调用。",
+    "start": 60.1,
+    "est_seconds": 8.9
+  },
+  {
+    "id": "S03-16",
+    "scene": "S03",
+    "text": "这些规则会写成一份说明书，叫接口文档。开发者照着它写代码，就能调用别人开放出来的功能。",
+    "tts_text": "这些规则会写成一份说明书，叫接口文档。开发者照着它写代码，就能调用别人开放出来的功能。",
+    "start": 69.0,
+    "est_seconds": 9.6
+  },
+  {
+    "id": "S04-17",
+    "scene": "S04",
+    "text": "第二个问题：“已接入DeepSeek”，接的是什么。",
+    "tts_text": "第二个问题，已接入 Deep Seek，接的是什么。",
+    "start": 79.2,
+    "est_seconds": 3.7
+  },
+  {
+    "id": "S04-18",
+    "scene": "S04",
+    "text": "多数情况下，接的是DeepSeek大模型的API。",
+    "tts_text": "多数情况下，接的是 Deep Seek 大模型的 A P I。",
+    "start": 82.9,
+    "est_seconds": 4.2
+  },
+  {
+    "id": "S04-19",
+    "scene": "S04",
+    "text": "你手机上的App负责界面，真正生成回答的大模型，跑在服务器上。",
+    "tts_text": "你手机上的 App 负责界面，真正生成回答的大模型，跑在服务器上。",
+    "start": 87.1,
+    "est_seconds": 6.3
+  },
+  {
+    "id": "S04-20",
+    "scene": "S04",
+    "text": "你在App里提问，App把问题按接口格式发给服务器。",
+    "tts_text": "你在 App 里提问，App 把问题按接口格式，发给服务器。",
+    "start": 93.4,
+    "est_seconds": 4.9
+  },
+  {
+    "id": "S04-21",
+    "scene": "S04",
+    "text": "模型生成回答，再通过API返回，显示在你的屏幕上。",
+    "tts_text": "模型生成回答，再通过 A P I 返回，显示在你的屏幕上。",
+    "start": 98.3,
+    "est_seconds": 5.4
+  },
+  {
+    "id": "S04-22",
+    "scene": "S04",
+    "text": "这台服务器可能是DeepSeek官方的，也可能是云厂商或App厂商自己部署的。",
+    "tts_text": "这台服务器，可能是 Deep Seek 官方的，也可能是云厂商或 App 厂商自己部署的。",
+    "start": 103.7,
+    "est_seconds": 7.0
+  },
+  {
+    "id": "S04-23",
+    "scene": "S04",
+    "text": "所以“已接入”，就是这个App通过API，调用了DeepSeek的模型。",
+    "tts_text": "所以已接入，就是这个 App 通过 A P I，调用了 Deep Seek 的模型。",
+    "start": 110.7,
+    "est_seconds": 5.6
+  },
+  {
+    "id": "S04-24",
+    "scene": "S04",
+    "text": "不过，各家App接的型号、给的额度可能不一样，所以同样是“已接入”，用起来也会有差别。",
+    "tts_text": "不过，各家 App 接的型号，给的额度，可能不一样。所以同样是已接入，用起来也会有差别。",
+    "start": 116.3,
+    "est_seconds": 8.4
+  },
+  {
+    "id": "S05-25",
+    "scene": "S05",
+    "text": "第三个问题：API Key是什么。",
+    "tts_text": "第三个问题，A P I Key 是什么。",
+    "start": 125.3,
+    "est_seconds": 3.0
+  },
+  {
+    "id": "S05-26",
+    "scene": "S05",
+    "text": "API Key就是调用API用的密钥，是一长串字符。比如DeepSeek的Key，以sk开头。",
+    "tts_text": "A P I Key，就是调用 A P I 用的密钥，是一长串字符。比如 Deep Seek 的 Key，以 s k 开头。",
+    "start": 128.3,
+    "est_seconds": 7.9
+  },
+  {
+    "id": "S05-27",
+    "scene": "S05",
+    "text": "调用这类API时，程序每次都要带上这串Key。平台靠它确认三件事：",
+    "tts_text": "调用这类 A P I 时，程序每次都要带上这串 Key。平台靠它确认三件事。",
+    "start": 136.2,
+    "est_seconds": 7.0
+  },
+  {
+    "id": "S05-28",
+    "scene": "S05",
+    "text": "是谁在调用，有没有权限，费用记在谁的账上。",
+    "tts_text": "是谁在调用。有没有权限。费用记在谁的账上。",
+    "start": 143.2,
+    "est_seconds": 4.9
+  },
+  {
+    "id": "S05-29",
+    "scene": "S05",
+    "text": "大模型的API一般按用量收费，钱就从这个Key对应的账户里扣。",
+    "tts_text": "大模型的 A P I，一般按用量收费，钱就从这个 Key 对应的账户里扣。",
+    "start": 148.1,
+    "est_seconds": 6.5
+  },
+  {
+    "id": "S05-30",
+    "scene": "S05",
+    "text": "所以API Key要像密码一样保管：不要发给别人，不要截图发到群里，也不要写进公开的代码。",
+    "tts_text": "所以 A P I Key 要像密码一样保管。不要发给别人，不要截图发到群里，也不要写进公开的代码。",
+    "start": 154.6,
+    "est_seconds": 9.3
+  },
+  {
+    "id": "S05-31",
+    "scene": "S05",
+    "text": "如果怀疑泄露了，马上在平台上删掉这个Key，再新建一个。",
+    "tts_text": "如果怀疑泄露了，马上在平台上删掉这个 Key，再新建一个。",
+    "start": 163.9,
+    "est_seconds": 5.6
+  },
+  {
+    "id": "S06-32",
+    "scene": "S06",
+    "text": "下面说怎么拿到DeepSeek的API Key，一共四步。",
+    "tts_text": "下面说怎么拿到 Deep Seek 的 A P I Key，一共四步。",
+    "start": 170.1,
+    "est_seconds": 4.4
+  },
+  {
+    "id": "S06-33",
+    "scene": "S06",
+    "text": "第一步，打开DeepSeek开放平台，网址是platform.deepseek.com，注册并登录。",
+    "tts_text": "第一步，打开 Deep Seek 开放平台。网址是 platform 点 deepseek 点 com。注册并登录。",
+    "start": 174.5,
+    "est_seconds": 7.3
+  },
+  {
+    "id": "S06-34",
+    "scene": "S06",
+    "text": "注意，它和平时聊天用的DeepSeek网页不是同一个入口。",
+    "tts_text": "注意，它和平时聊天用的 Deep Seek 网页，不是同一个入口。",
+    "start": 181.8,
+    "est_seconds": 5.1
+  },
+  {
+    "id": "S06-35",
+    "scene": "S06",
+    "text": "第二步，在左侧菜单点“API keys”，再点“创建API key”，起一个名字，点创建。",
+    "tts_text": "第二步，在左侧菜单点 A P I keys，再点创建 A P I key。起一个名字，点创建。",
+    "start": 187.9,
+    "est_seconds": 7.2
+  },
+  {
+    "id": "S06-36",
+    "scene": "S06",
+    "text": "第三步，复制这串Key，保存到安全的地方。它只在创建时完整显示一次，之后就看不到完整的Key了。",
+    "tts_text": "第三步，复制这串 Key，保存到安全的地方。它只在创建时完整显示一次，之后就看不到完整的 Key 了。",
+    "start": 196.1,
+    "est_seconds": 9.6
+  },
+  {
+    "id": "S06-37",
+    "scene": "S06",
+    "text": "如果弄丢了，删掉重新创建就行。",
+    "tts_text": "如果弄丢了，删掉重新创建就行。",
+    "start": 205.7,
+    "est_seconds": 3.3
+  },
+  {
+    "id": "S06-38",
+    "scene": "S06",
+    "text": "第四步，充值。充值前要先按页面提示完成实名认证。账户里没余额，调用就会报错，提示余额不足。",
+    "tts_text": "第四步，充值。充值前，要先按页面提示完成实名认证。账户里没余额，调用就会报错，提示余额不足。",
+    "start": 209.0,
+    "est_seconds": 9.8
+  },
+  {
+    "id": "S06-39",
+    "scene": "S06",
+    "text": "自己测试的话，少充一点就够了。价格可以看官网的价格页。",
+    "tts_text": "自己测试的话，少充一点就够了。价格可以看官网的价格页。",
+    "start": 218.8,
+    "est_seconds": 6.1
+  },
+  {
+    "id": "S06-40",
+    "scene": "S06",
+    "text": "拿到Key以后，在支持DeepSeek的工具里填上它。有的工具还要填接口地址和模型名，照着屏幕填就行。",
+    "tts_text": "拿到 Key 以后，在支持 Deep Seek 的工具里填上它。有的工具，还要填接口地址和模型名，照着屏幕填就行。",
+    "start": 225.7,
+    "est_seconds": 9.6
+  },
+  {
+    "id": "S07-41",
+    "scene": "S07",
+    "text": "最后总结一下。",
+    "tts_text": "最后总结一下。",
+    "start": 237.2,
+    "est_seconds": 1.6
+  },
+  {
+    "id": "S07-42",
+    "scene": "S07",
+    "text": "第一，API是程序之间的调用规则，全称应用程序编程接口。",
+    "tts_text": "第一，A P I 是程序之间的调用规则，全称应用程序编程接口。",
+    "start": 238.8,
+    "est_seconds": 6.1
+  },
+  {
+    "id": "S07-43",
+    "scene": "S07",
+    "text": "第二，“已接入DeepSeek”，一般就是App通过API调用了DeepSeek的模型。",
+    "tts_text": "第二，已接入 Deep Seek，一般就是 App 通过 A P I，调用了 Deep Seek 的模型。",
+    "start": 244.9,
+    "est_seconds": 6.1
+  },
+  {
+    "id": "S07-44",
+    "scene": "S07",
+    "text": "第三，API Key是调用API的密钥，用来认身份、算费用，一定要保管好。",
+    "tts_text": "第三，A P I Key 是调用 A P I 的密钥，用来认身份、算费用，一定要保管好。",
+    "start": 251.0,
+    "est_seconds": 7.0
+  },
+  {
+    "id": "S07-45",
+    "scene": "S07",
+    "text": "下期讲token：你问AI一句话，到底花了多少钱。",
+    "tts_text": "下期讲 token。你问 A I 一句话，到底花了多少钱。",
+    "start": 258.0,
+    "est_seconds": 4.9
+  },
+  {
+    "id": "S07-46",
+    "scene": "S07",
+    "text": "我是山田凉，我们下期见。",
+    "tts_text": "我是山田凉，我们下期见。",
+    "start": 262.9,
+    "est_seconds": 2.6
+  }
+]

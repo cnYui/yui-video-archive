@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<!-- 作品展示段（2340×1080，30 fps）。renderAt(t) 画出第 t 秒；同一个 t 永远是同一帧。 -->
+<link rel="stylesheet" href="file:///D:/大疆/AI科普/素材/字体/fonts.css">
+<style>
+:root { --ink:#1B1B1F; --line:#E5E7EB; --soft:#F4F5F7; --orange:#FF4F1A; }
+* { box-sizing:border-box; margin:0; padding:0; }
+html, body { width:2340px; height:1080px; background:#fff; overflow:hidden; font-family:'Noto Sans SC', sans-serif; color:var(--ink); }
+.frame { position:absolute; background:#fff; padding:14px; border:1px solid var(--line); border-radius:10px; box-shadow:0 14px 36px rgba(0,0,0,.14); }
+.frame .inner { position:relative; width:100%; height:100%; border-radius:4px; overflow:hidden; background:#EEF0F3; }
+.tape { position:absolute; width:150px; height:40px; background:rgba(255,214,140,.8); top:-18px; box-shadow:0 1px 2px rgba(0,0,0,.08); z-index:2; }
+.tape.l { left:44px; transform:rotate(-7deg); }
+.tape.r { right:44px; transform:rotate(6deg); }
+.tape.s { width:110px; height:32px; top:-15px; }
+.cam { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px; }
+.cam .t1 { font:800 32px 'Noto Sans SC'; color:#6B7280; }
+#vid img { position:absolute; left:0; top:0; width:100%; height:100%; object-fit:cover; display:block; }
+.card { position:absolute; left:48px; top:492px; width:696px; height:420px; background:var(--soft); border-radius:14px; padding:30px 34px; }
+.chip { display:inline-block; padding:5px 18px; border:3px solid var(--orange); color:var(--orange); border-radius:999px; font:800 26px 'Noto Sans SC'; }
+.slot { position:absolute; left:34px; right:34px; top:92px; }
+.slot .h { font:800 44px/1.25 'Noto Sans SC'; }
+.slot .lab { margin-top:22px; font:700 24px 'Noto Sans SC'; color:#9AA1AC; letter-spacing:2px; }
+.slot .prompt { margin-top:10px; font:500 29px/1.62 'Noto Sans SC'; color:#374151; background:#fff; border:1px solid var(--line); border-radius:10px; padding:14px 18px; min-height:170px; }
+.slot .sub { margin-top:18px; font:500 28px/1.6 'Noto Sans SC'; color:#6B7280; }
+.caret { display:inline-block; width:3px; height:30px; background:var(--orange); vertical-align:-5px; margin-left:2px; }
+</style>
+</head>
+<body>
+
+<!-- 出镜位（占位，之后换成自拍） -->
+<div class="frame" id="cam" style="left:48px; top:48px; width:696px; height:402px;">
+  <div class="tape l s"></div><div class="tape r s"></div>
+  <div class="inner cam">
+    <svg width="110" height="110" viewBox="0 0 100 100"><circle cx="50" cy="36" r="18" fill="#C9CED6"/><path d="M16 94c0-19 15-31 34-31s34 12 34 31z" fill="#C9CED6"/></svg>
+    <div class="t1">UE 出镜位</div>
+  </div>
+</div>
+
+<!-- 左下说明卡：两层文字交叉淡入淡出 -->
+<div class="card" id="card">
+  <span class="chip" id="chip">作品展示 1 / 2</span>
+  <div class="slot" id="slotA"></div>
+  <div class="slot" id="slotB"></div>
+</div>
+
+<!-- 右边的视频画框：两层图片交叉淡入淡出 -->
+<div class="frame" id="vframe">
+  <div class="tape l"></div><div class="tape r"></div>
+  <div class="inner" id="vid"><img id="imgA"><img id="imgB"></div>
+</div>
+
+<script>
+const FPS = 30, TOTAL = 23.0, CLIP_FRAMES = 150, CLIP_DUR = 5.0;
+const INNER_W = 1474, CY = 468.5, FRAME_X = 790, PAD = 14;
+const PAGES = [ { start: 0.0, end: 11.5 }, { start: 11.5, end: 23.0 } ];
+const SWAP = 0.5, EDGE = 0.5, TYPE_DUR = 1.0;
+
+const P_GINTAMA = '给我做一个动画像素风 银魂动漫剧情的经典场景，按照顺序讲述大致故事， 包含主要人物 动画好看一点 有趣一点 场景丰富一点 直接给我视频';
+const P_NARUTO  = '给我做一个动画像素风 火影忍者疾风传动漫剧情的经典场景，按照顺序讲述大致故事， 包含主要人物 动画好看一点 有趣一点 场景丰富一点 直接给我视频';
+
+// t0 = 开始播放的时刻，和 prep.py 的 CLIPS 一致
+const ITEMS = [
+  { key: 'gintama', page: 0, t0: 0.5,  aspect: 16 / 9,       title: '① 银魂 · 像素风',        prompt: P_GINTAMA },
+  { key: 'naruto',  page: 0, t0: 6.0,  aspect: 16 / 9,       title: '② 火影忍者 · 像素风',    prompt: P_NARUTO },
+  { key: 'jojo',    page: 1, t0: 12.0, aspect: 16 / 9,       title: '③ JoJo 第三部 · 像素风', sub: '像素风剧情动画' },
+  { key: 'ep04',    page: 1, t0: 17.5, aspect: 2340 / 1080,  title: '④ 《原LAI如此》第 4 期',  sub: '我的 AI 科普系列 · 大模型从夯到拉' },
+];
+
+const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+const easeOut = x => 1 - Math.pow(1 - clamp(x), 3);
+const easeIn = x => Math.pow(clamp(x), 3);
+const easeInOut = x => { x = clamp(x); return x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2; };
+const innerH = a => { let h = Math.round(INNER_W / a); return h + (h % 2); };
+
+// 某一页里，t 时刻各条目的不透明度：同页两条之间在 [t0 - SWAP, t0] 交叉
+function itemWeights(pi, t) {
+  const its = ITEMS.filter(it => it.page === pi);
+  const second = its[1];
+  const x = easeInOut((t - (second.t0 - SWAP)) / SWAP);
+  return [[its[0], 1 - x], [second, x]];
+}
+
+function frameSrc(it, t) {
+  const n = clamp(Math.floor((t - it.t0) * FPS), 0, CLIP_FRAMES - 1);
+  return `clips/${it.key}/f_${String(n + 1).padStart(3, '0')}.jpg`;
+}
+
+function slotHTML(it, t) {
+  if (it.prompt) {
+    const k = Math.round(it.prompt.length * clamp((t - (it.t0 - 0.3)) / TYPE_DUR));
+    const caret = k < it.prompt.length ? '<span class="caret"></span>' : '';
+    return `<div class="h">${it.title}</div><div class="lab">提示词</div><div class="prompt">${it.prompt.slice(0, k)}${caret}</div>`;
+  }
+  return `<div class="h">${it.title}</div><div class="sub">${it.sub}</div>`;
+}
+
+const $ = id => document.getElementById(id);
+const cache = { imgA: '', imgB: '' };
+
+async function setImg(id, src) {
+  const el = $(id);
+  if (cache[id] !== src) { cache[id] = src; el.src = src; }
+  if (src) await el.decode().catch(() => {});
+}
+
+window.renderAt = async function (t) {
+  const pi = t < PAGES[1].start ? 0 : 1;
+  const pg = PAGES[pi];
+  const enter = pi === 0 && t < EDGE ? easeOut(t / EDGE) : pi === 1 ? easeOut((t - pg.start) / EDGE) : 1;
+  const exit = easeIn((t - (pg.end - EDGE)) / EDGE);
+  const alpha = Math.min(enter, 1 - exit);
+
+  // 页面整体进出：进场从下方 24 px 淡入，出场向左 40 px 淡出
+  const dy = (1 - enter) * 24, dx = -40 * exit;
+  for (const id of ['card', 'vframe']) {
+    $(id).style.opacity = alpha;
+    $(id).style.transform = `translate(${dx}px, ${dy}px)`;
+  }
+  $('chip').textContent = `作品展示 ${pi + 1} / 2`;
+
+  // 两个条目交叉：图片、画框高度、说明文字
+  const [[a, wa], [b, wb]] = itemWeights(pi, t);
+  const h = innerH(a.aspect) * wa + innerH(b.aspect) * wb;
+  const outerH = h + 2 * PAD, outerW = INNER_W + 2 * PAD;
+  const vf = $('vframe');
+  vf.style.left = FRAME_X + 'px';
+  vf.style.top = (CY - outerH / 2) + 'px';
+  vf.style.width = outerW + 'px';
+  vf.style.height = outerH + 'px';
+
+  $('imgA').style.opacity = wa;
+  $('imgB').style.opacity = wb;
+  $('slotA').style.opacity = clamp(wa * 2 - 1);   // 文字先淡出旧的、再淡入新的
+  $('slotB').style.opacity = clamp(wb * 2 - 1);
+  $('slotA').innerHTML = slotHTML(a, t);
+  $('slotB').innerHTML = slotHTML(b, t);
+
+  await Promise.all([setImg('imgA', frameSrc(a, t)), setImg('imgB', frameSrc(b, t))]);
+  return true;
+};
+
+window.META = { FPS, TOTAL, W: 2340, H: 1080 };
+</script>
+</body>
+</html>

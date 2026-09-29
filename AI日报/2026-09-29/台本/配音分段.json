@@ -1,0 +1,466 @@
+[
+  {
+    "id": "S01-01",
+    "scene": "S01",
+    "text": "早上好，我是鲸鱼娘，今天是9月29日。",
+    "tts_text": "早上好，我是鲸鱼娘，今天是九月二十九日。",
+    "est_seconds": 3.5,
+    "start": 0.0
+  },
+  {
+    "id": "S01-02",
+    "scene": "S01",
+    "text": "今天说七件事：Claude Sonnet 5.5 发布，英伟达推出智能体安全平台，华为开源盘古训练代码，千问打通夸克网盘，谷歌要把 Gems 换成 skills，Shopify 让 AI 帮你结账，还有 AMD 收购李飞飞的 World Labs。",
+    "tts_text": "今天说七件事：Claude Sonnet 五点五发布，英伟达推出智能体安全平台，华为开源盘古训练代码，千问打通夸克网盘，谷歌要把 Gems 换成 skills，Shopify 让 A I 帮你结账，还有 A M D 收购李飞飞的 World Labs。",
+    "est_seconds": 14.8,
+    "start": 3.8
+  },
+  {
+    "id": "S02-03",
+    "scene": "S02",
+    "text": "第一件，Anthropic 9 月 28 日发布了 Claude Sonnet 5.5。",
+    "tts_text": "第一件，Anthropic 九月二十八日发布了 Claude Sonnet 五点五。",
+    "est_seconds": 4.4,
+    "start": 18.8
+  },
+  {
+    "id": "S02-04",
+    "scene": "S02",
+    "text": "官方说，它比上一代 Sonnet 5 快 30% 以上，是目前最快的 Sonnet。",
+    "tts_text": "官方说，它比上一代 Sonnet 五快百分之三十以上，是目前最快的 Sonnet。",
+    "est_seconds": 5.3,
+    "start": 23.5
+  },
+  {
+    "id": "S02-05",
+    "scene": "S02",
+    "text": "做大部分工作时，每个任务的花费最多能少 30%。",
+    "tts_text": "做大部分工作时，每个任务的花费最多能少百分之三十。",
+    "est_seconds": 4.6,
+    "start": 29.0
+  },
+  {
+    "id": "S02-06",
+    "scene": "S02",
+    "text": "API 价格和 Sonnet 5 一样：输入每百万 token 2 美元，输出 10 美元。",
+    "tts_text": "A P I 价格和 Sonnet 五一样：输入每百万 token 两美元，输出十美元。",
+    "est_seconds": 5.2,
+    "start": 33.9
+  },
+  {
+    "id": "S02-07",
+    "scene": "S02",
+    "text": "上下文窗口是 1M token，单次最多输出 128K token。",
+    "tts_text": "上下文窗口是一百万 token，单次最多输出十二万八千 token。",
+    "est_seconds": 4.8,
+    "start": 39.3
+  },
+  {
+    "id": "S02-08",
+    "scene": "S02",
+    "text": "在命令行任务测试 Terminal-Bench 4.0 上，它拿到 70.6%，Sonnet 5 只有 10.3%。",
+    "tts_text": "在命令行任务测试 Terminal Bench 四点零上，它拿到百分之七十点六，Sonnet 五只有百分之十点三。",
+    "est_seconds": 7.4,
+    "start": 44.4
+  },
+  {
+    "id": "S02-09",
+    "scene": "S02",
+    "text": "它还加了网络安全防护：高风险的网络安全任务，会明确切回 Sonnet 5 来处理。",
+    "tts_text": "它还加了网络安全防护：高风险的网络安全任务，会明确切回 Sonnet 五来处理。",
+    "est_seconds": 6.1,
+    "start": 52.0
+  },
+  {
+    "id": "S02-10",
+    "scene": "S02",
+    "text": "现在 Claude 的网页、手机和电脑应用都能用，API 和亚马逊、谷歌、微软的云平台也已上线。",
+    "tts_text": "现在 Claude 的网页、手机和电脑应用都能用，A P I 和亚马逊、谷歌、微软的云平台也已上线。",
+    "est_seconds": 7.0,
+    "start": 58.4
+  },
+  {
+    "id": "S02-11",
+    "scene": "S02",
+    "text": "同系列的 Haiku 5.5，官方说会在接下来几周推出。",
+    "tts_text": "同系列的 Haiku 五点五，官方说会在接下来几周推出。",
+    "est_seconds": 4.2,
+    "start": 65.6
+  },
+  {
+    "id": "S03-12",
+    "scene": "S03",
+    "text": "第二件，英伟达 9 月 28 日发布了一个开放的智能体安全平台，专门管住 AI 智能体，不让它越界。",
+    "tts_text": "第二件，英伟达九月二十八日发布了一个开放的智能体安全平台，专门管住 A I 智能体，不让它越界。",
+    "est_seconds": 8.0,
+    "start": 70.5
+  },
+  {
+    "id": "S03-13",
+    "scene": "S03",
+    "text": "它分两层。第一层叫 OpenShell，给智能体划一道运行边界，控制它怎么执行任务。",
+    "tts_text": "它分两层。第一层叫 Open Shell，给智能体划一道运行边界，控制它怎么执行任务。",
+    "est_seconds": 6.3,
+    "start": 78.8
+  },
+  {
+    "id": "S03-14",
+    "scene": "S03",
+    "text": "第二层叫 Sentry，跑在英伟达的 BlueField-4 芯片上，在旁边一直盯着智能体的行为。",
+    "tts_text": "第二层叫 Sentry，跑在英伟达的 BlueField 四芯片上，在旁边一直盯着智能体的行为。",
+    "est_seconds": 6.3,
+    "start": 85.3
+  },
+  {
+    "id": "S03-15",
+    "scene": "S03",
+    "text": "一旦发现智能体想越界，几毫秒内就能把它隔离、停下。",
+    "tts_text": "一旦发现智能体想越界，几毫秒内就能把它隔离、停下。",
+    "est_seconds": 4.4,
+    "start": 91.9
+  },
+  {
+    "id": "S03-16",
+    "scene": "S03",
+    "text": "英伟达说，有 100 多家机构参与，包括 Anthropic、微软、思科和 Hugging Face。",
+    "tts_text": "英伟达说，有一百多家机构参与，包括 Anthropic、微软、思科和 Hugging Face。",
+    "est_seconds": 5.2,
+    "start": 96.5
+  },
+  {
+    "id": "S03-17",
+    "scene": "S03",
+    "text": "Anthropic 同一天发了博客：Claude 的托管智能体 Managed Agents，可以和 OpenShell 配合使用。",
+    "tts_text": "Anthropic 同一天发了博客：Claude 的托管智能体 Managed Agents，可以和 Open Shell 配合使用。",
+    "est_seconds": 6.3,
+    "start": 102.0
+  },
+  {
+    "id": "S03-18",
+    "scene": "S03",
+    "text": "密码和访问密钥放在单独的保险库里，智能体自己看不到。",
+    "tts_text": "密码和访问密钥放在单独的保险库里，智能体自己看不到。",
+    "est_seconds": 4.8,
+    "start": 108.5
+  },
+  {
+    "id": "S03-19",
+    "scene": "S03",
+    "text": "OpenShell 默认拦下一切操作，只有规则允许的才放行，文件、网络和数据都要过规则。",
+    "tts_text": "Open Shell 默认拦下一切操作，只有规则允许的才放行，文件、网络和数据都要过规则。",
+    "est_seconds": 6.5,
+    "start": 113.6
+  },
+  {
+    "id": "S03-20",
+    "scene": "S03",
+    "text": "OpenShell 是开源的，用 Apache 2.0 许可证，放在 GitHub 上。",
+    "tts_text": "Open Shell 是开源的，用 Apache 二点零许可证，放在 GitHub 上。",
+    "est_seconds": 4.2,
+    "start": 120.3
+  },
+  {
+    "id": "S04-21",
+    "scene": "S04",
+    "text": "第三件是国产模型。9 月 28 日，华为宣布，开源盘古 openPangu-2.0 的预训练、SFT 代码和后训练强化学习代码，正式开源上线。",
+    "tts_text": "第三件是国产模型。九月二十八日，华为宣布，开源盘古 open Pangu 二点零的预训练、S F T 代码和后训练强化学习代码，正式开源上线。",
+    "est_seconds": 10.5,
+    "start": 125.3
+  },
+  {
+    "id": "S04-22",
+    "scene": "S04",
+    "text": "SFT 就是监督微调，用来让模型学会按指令回答。",
+    "tts_text": "S F T 就是监督微调，用来让模型学会按指令回答。",
+    "est_seconds": 4.2,
+    "start": 136.1
+  },
+  {
+    "id": "S04-23",
+    "scene": "S04",
+    "text": "开源盘古是华为的开源 AI 模型品牌，主打昇腾原生的训练和推理。",
+    "tts_text": "开源盘古是华为的开源 A I 模型品牌，主打昇腾原生的训练和推理。",
+    "est_seconds": 5.5,
+    "start": 140.5
+  },
+  {
+    "id": "S04-24",
+    "scene": "S04",
+    "text": "代码放在 GitCode 上，分成两个仓库：一个管预训练和监督微调，一个管强化学习。",
+    "tts_text": "代码放在 GitCode 上，分成两个仓库：一个管预训练和监督微调，一个管强化学习。",
+    "est_seconds": 6.1,
+    "start": 146.2
+  },
+  {
+    "id": "S04-25",
+    "scene": "S04",
+    "text": "要注意，这次开放的是训练代码，有报道特别提醒，不代表模型权重也一起开放。",
+    "tts_text": "要注意，这次开放的是训练代码，有报道特别提醒，不代表模型权重也一起开放。",
+    "est_seconds": 6.3,
+    "start": 152.6
+  },
+  {
+    "id": "S04-26",
+    "scene": "S04",
+    "text": "GitCode 在国内可以直接访问，用昇腾训练模型的团队，可以直接拿来参考。",
+    "tts_text": "GitCode 在国内可以直接访问，用昇腾训练模型的团队，可以直接拿来参考。",
+    "est_seconds": 5.7,
+    "start": 159.2
+  },
+  {
+    "id": "S05-27",
+    "scene": "S05",
+    "text": "第四件也是国产。9 月 28 日，阿里的千问 App 宣布和夸克网盘深度打通。",
+    "tts_text": "第四件也是国产。九月二十八日，阿里的千问 App 宣布和夸克网盘深度打通。",
+    "est_seconds": 6.2,
+    "start": 165.6
+  },
+  {
+    "id": "S05-28",
+    "scene": "S05",
+    "text": "用户授权以后，就能在千问的对话里，查询、整理和读取网盘里的资料。",
+    "tts_text": "用户授权以后，就能在千问的对话里，查询、整理和读取网盘里的资料。",
+    "est_seconds": 5.5,
+    "start": 172.0
+  },
+  {
+    "id": "S05-29",
+    "scene": "S05",
+    "text": "用法有两种：在千问首页 @ 夸克网盘，或者在工作助理里，用“夸克网盘管理”这个技能。",
+    "tts_text": "用法有两种：在千问首页艾特夸克网盘，或者在工作助理里，用夸克网盘管理这个技能。",
+    "est_seconds": 6.9,
+    "start": 177.8
+  },
+  {
+    "id": "S05-30",
+    "scene": "S05",
+    "text": "比如不记得文件放在哪儿，直接描述一下要找什么，让千问去找。",
+    "tts_text": "比如不记得文件放在哪儿，直接描述一下要找什么，让千问去找。",
+    "est_seconds": 5.2,
+    "start": 184.9
+  },
+  {
+    "id": "S05-31",
+    "scene": "S05",
+    "text": "也能根据网盘里的课程讲义，做复习计划、生成进度看板。",
+    "tts_text": "也能根据网盘里的课程讲义，做复习计划、生成进度看板。",
+    "est_seconds": 4.6,
+    "start": 190.4
+  },
+  {
+    "id": "S05-32",
+    "scene": "S05",
+    "text": "还能把网盘里的旅行照片，做成纪念海报。",
+    "tts_text": "还能把网盘里的旅行照片，做成纪念海报。",
+    "est_seconds": 3.5,
+    "start": 195.2
+  },
+  {
+    "id": "S05-33",
+    "scene": "S05",
+    "text": "对话里收集的资料和生成的内容，可以上传回网盘，再生成链接分享出去。",
+    "tts_text": "对话里收集的资料和生成的内容，可以上传回网盘，再生成链接分享出去。",
+    "est_seconds": 5.9,
+    "start": 199.0
+  },
+  {
+    "id": "S05-34",
+    "scene": "S05",
+    "text": "这样一来，网盘里的文件就成了千问能直接调用的资料。",
+    "tts_text": "这样一来，网盘里的文件就成了千问能直接调用的资料。",
+    "est_seconds": 4.6,
+    "start": 205.1
+  },
+  {
+    "id": "S06-35",
+    "scene": "S06",
+    "text": "第五件，谷歌要把 Gemini 里的 Gems，换成新的 skills，也就是技能。",
+    "tts_text": "第五件，谷歌要把 Gemini 里的 Gems，换成新的 skills，也就是技能。",
+    "est_seconds": 4.6,
+    "start": 210.5
+  },
+  {
+    "id": "S06-36",
+    "scene": "S06",
+    "text": "Gems 是谷歌 2024 年推出的，官方叫它“定制版的 Gemini”。",
+    "tts_text": "Gems 是谷歌二零二四年推出的，官方叫它定制版的 Gemini。",
+    "est_seconds": 4.4,
+    "start": 215.3
+  },
+  {
+    "id": "S06-37",
+    "scene": "S06",
+    "text": "9to5Google 9 月 27 日报道，Gems 管理页顶部已经出现提示：11 月 17 日开始，Gems 会变成技能。",
+    "tts_text": "九 to 五 Google 九月二十七日报道，Gems 管理页顶部已经出现提示：十一月十七日开始，Gems 会变成技能。",
+    "est_seconds": 7.6,
+    "start": 220.0
+  },
+  {
+    "id": "S06-38",
+    "scene": "S06",
+    "text": "谷歌会自动迁移；在迁移之前，Gems 还能照常用。",
+    "tts_text": "谷歌会自动迁移；在迁移之前，Gems 还能照常用。",
+    "est_seconds": 3.6,
+    "start": 227.8
+  },
+  {
+    "id": "S06-39",
+    "scene": "S06",
+    "text": "技能和 Gems 大体是一回事，都是给 Gemini 写好自定义指令。",
+    "tts_text": "技能和 Gems 大体是一回事，都是给 Gemini 写好自定义指令。",
+    "est_seconds": 4.4,
+    "start": 231.7
+  },
+  {
+    "id": "S06-40",
+    "scene": "S06",
+    "text": "Gems 能多做一步：设定默认工具，比如生成图片或 Canvas，还能加参考文件、用链接分享。",
+    "tts_text": "Gems 能多做一步：设定默认工具，比如生成图片或 Canvas，还能加参考文件、用链接分享。",
+    "est_seconds": 6.5,
+    "start": 236.3
+  },
+  {
+    "id": "S06-41",
+    "scene": "S06",
+    "text": "技能的好处是调用方便：在输入框里打一个斜杠就行。",
+    "tts_text": "技能的好处是调用方便：在输入框里打一个斜杠就行。",
+    "est_seconds": 4.4,
+    "start": 243.1
+  },
+  {
+    "id": "S06-42",
+    "scene": "S06",
+    "text": "一次还能同时用好几个技能，不用再去侧边栏里翻“我的 Gems”。",
+    "tts_text": "一次还能同时用好几个技能，不用再去侧边栏里翻“我的 Gems”。",
+    "est_seconds": 4.8,
+    "start": 247.7
+  },
+  {
+    "id": "S06-43",
+    "scene": "S06",
+    "text": "9to5Google 还提到，这次提示可能推早了，当时“了解更多”的帮助文章和“创建技能”按钮都还打不开。",
+    "tts_text": "九 to 五 Google 还提到，这次提示可能推早了，当时了解更多的帮助文章和创建技能按钮都还打不开。",
+    "est_seconds": 7.8,
+    "start": 252.8
+  },
+  {
+    "id": "S07-44",
+    "scene": "S07",
+    "text": "第六件，电商平台 Shopify 9 月 28 日宣布，浏览器里的 AI 智能体，现在可以在 Shopify 的店里帮你结账了。",
+    "tts_text": "第六件，电商平台 Shopify 九月二十八日宣布，浏览器里的 A I 智能体，现在可以在 Shopify 的店里帮你结账了。",
+    "est_seconds": 8.2,
+    "start": 261.3
+  },
+  {
+    "id": "S07-45",
+    "scene": "S07",
+    "text": "它用的是 WebMCP：智能体不用截图、也不用扒网页，直接调用结账页提供的工具。",
+    "tts_text": "它用的是 Web M C P：智能体不用截图、也不用扒网页，直接调用结账页提供的工具。",
+    "est_seconds": 6.5,
+    "start": 269.8
+  },
+  {
+    "id": "S07-46",
+    "scene": "S07",
+    "text": "官方列了四个工具：回到店铺、读取结账信息、修改结账信息、提交订单。",
+    "tts_text": "官方列了四个工具：回到店铺、读取结账信息、修改结账信息、提交订单。",
+    "est_seconds": 5.5,
+    "start": 276.5
+  },
+  {
+    "id": "S07-47",
+    "scene": "S07",
+    "text": "提交订单要等买家确认；遇到 3D 安全验证这类要本人操作的步骤，会把控制权交还给买家。",
+    "tts_text": "提交订单要等买家确认；遇到三 D 安全验证这类要本人操作的步骤，会把控制权交还给买家。",
+    "est_seconds": 7.4,
+    "start": 282.3
+  },
+  {
+    "id": "S07-48",
+    "scene": "S07",
+    "text": "商家不用做任何配置，符合条件的 Shopify 商家都会陆续开放。",
+    "tts_text": "商家不用做任何配置，符合条件的 Shopify 商家都会陆续开放。",
+    "est_seconds": 4.8,
+    "start": 289.9
+  },
+  {
+    "id": "S07-49",
+    "scene": "S07",
+    "text": "TechCrunch 提到，Muse 和 Instinct 这些智能体，已经和 Shopify 直接合作。",
+    "tts_text": "Tech Crunch 提到，Muse 和 Instinct 这些智能体，已经和 Shopify 直接合作。",
+    "est_seconds": 4.8,
+    "start": 295.0
+  },
+  {
+    "id": "S07-50",
+    "scene": "S07",
+    "text": "TechCrunch 还提到，有些零售商，比如亚马逊，在拦着 AI 智能体下单；Shopify 走的是相反的路。",
+    "tts_text": "Tech Crunch 还提到，有些零售商，比如亚马逊，在拦着 A I 智能体下单；Shopify 走的是相反的路。",
+    "est_seconds": 6.9,
+    "start": 300.0
+  },
+  {
+    "id": "S08-51",
+    "scene": "S08",
+    "text": "最后一件，芯片公司 AMD 9 月 28 日宣布，收购李飞飞的 AI 公司 World Labs。",
+    "tts_text": "最后一件，芯片公司 A M D 九月二十八日宣布，收购李飞飞的 A I 公司 World Labs。",
+    "est_seconds": 6.3,
+    "start": 307.7
+  },
+  {
+    "id": "S08-52",
+    "scene": "S08",
+    "text": "交易金额约 82 亿美元，全部用 AMD 的股票支付。",
+    "tts_text": "交易金额约八十二亿美元，全部用 A M D 的股票支付。",
+    "est_seconds": 4.4,
+    "start": 314.2
+  },
+  {
+    "id": "S08-53",
+    "scene": "S08",
+    "text": "World Labs 做的是空间智能模型：用文字、图片或视频，生成、重建和模拟可以互动的 3D 环境。",
+    "tts_text": "World Labs 做的是空间智能模型：用文字、图片或视频，生成、重建和模拟可以互动的三 D 环境。",
+    "est_seconds": 7.0,
+    "start": 318.9
+  },
+  {
+    "id": "S08-54",
+    "scene": "S08",
+    "text": "它也做机器人学习和仿真的技术。",
+    "tts_text": "它也做机器人学习和仿真的技术。",
+    "est_seconds": 2.9,
+    "start": 326.1
+  },
+  {
+    "id": "S08-55",
+    "scene": "S08",
+    "text": "按新闻稿，李飞飞将出任 AMD 执行副总裁兼首席科学家，向苏姿丰汇报。",
+    "tts_text": "按新闻稿，李飞飞将出任 A M D 执行副总裁兼首席科学家，向苏姿丰汇报。",
+    "est_seconds": 5.9,
+    "start": 329.3
+  },
+  {
+    "id": "S08-56",
+    "scene": "S08",
+    "text": "苏姿丰说，做下一代 AI 的算力平台，需要深入了解模型是怎么演进的。",
+    "tts_text": "苏姿丰说，做下一代 A I 的算力平台，需要深入了解模型是怎么演进的。",
+    "est_seconds": 5.7,
+    "start": 335.4
+  },
+  {
+    "id": "S08-57",
+    "scene": "S08",
+    "text": "交易预计在 2026 年底前完成，还要等监管批准。",
+    "tts_text": "交易预计在二零二六年底前完成，还要等监管批准。",
+    "est_seconds": 4.2,
+    "start": 341.4
+  },
+  {
+    "id": "S09-58",
+    "scene": "S09",
+    "text": "今天就这些，来源都在简介里，我们明天见。",
+    "tts_text": "今天就这些，来源都在简介里，我们明天见。",
+    "est_seconds": 3.5,
+    "start": 346.3
+  }
+]

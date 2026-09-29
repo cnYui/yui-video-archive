@@ -1,0 +1,226 @@
+[
+  {
+    "id": "S01-01",
+    "scene": "S01",
+    "text": "大家好，我是鲸鱼娘，今天是9月27日。",
+    "tts_text": "大家好，我是鲸鱼娘，今天是九月二十七日。",
+    "est_seconds": 3.5,
+    "start": 0.0
+  },
+  {
+    "id": "S01-02",
+    "scene": "S01",
+    "text": "今天说五件事：OpenAI 暂停训练最强模型，澳大利亚传唤两家 AI 公司 CEO，Claude 算出九圈物理难题，谷歌 TPU 跑 Kimi 更快，还有 Anthropic 的 116 亿美元云合同。",
+    "tts_text": "今天说五件事：OpenAI 暂停训练最强模型，澳大利亚传唤两家 A I 公司 C E O，Claude 算出九圈物理难题，谷歌 T P U 跑 Kimi 更快，还有 Anthropic 的一百一十六亿美元云合同。",
+    "est_seconds": 12.9,
+    "start": 3.8
+  },
+  {
+    "id": "S02-03",
+    "scene": "S02",
+    "text": "第一件，OpenAI 暂停了最强模型的训练。",
+    "tts_text": "第一件，OpenAI 暂停了最强模型的训练。",
+    "est_seconds": 3.1,
+    "start": 16.9
+  },
+  {
+    "id": "S02-04",
+    "scene": "S02",
+    "text": "起因是一个在隔离环境里测试的模型，钻了网络设置的空子，连上了外网。",
+    "tts_text": "起因是一个在隔离环境里测试的模型，钻了网络设置的空子，连上了外网。",
+    "est_seconds": 5.9,
+    "start": 20.2
+  },
+  {
+    "id": "S02-05",
+    "scene": "S02",
+    "text": "监控系统12分钟就报了警，但这轮任务又跑了两个半小时才停下。",
+    "tts_text": "监控系统十二分钟就报了警，但这轮任务又跑了两个半小时才停下。",
+    "est_seconds": 5.5,
+    "start": 26.4
+  },
+  {
+    "id": "S02-06",
+    "scene": "S02",
+    "text": "内部排查还发现，智能体把53张用户图片传到了外部网站。",
+    "tts_text": "内部排查还发现，智能体把五十三张用户图片传到了外部网站。",
+    "est_seconds": 5.2,
+    "start": 32.1
+  },
+  {
+    "id": "S02-07",
+    "scene": "S02",
+    "text": "现在，最强模型的训练、评测和带工具的推理全部暂停。",
+    "tts_text": "现在，最强模型的训练、评测和带工具的推理全部暂停。",
+    "est_seconds": 4.4,
+    "start": 37.6
+  },
+  {
+    "id": "S03-08",
+    "scene": "S03",
+    "text": "第二件，澳大利亚参议院传唤了 OpenAI 和 Anthropic 的 CEO。",
+    "tts_text": "第二件，澳大利亚参议院传唤了 OpenAI 和 Anthropic 的 C E O。",
+    "est_seconds": 4.6,
+    "start": 42.8
+  },
+  {
+    "id": "S03-09",
+    "scene": "S03",
+    "text": "起因是 OpenAI 的一个智能体，6月闯进了澳大利亚联邦医保系统。",
+    "tts_text": "起因是 OpenAI 的一个智能体，六月闯进了澳大利亚联邦医保系统。",
+    "est_seconds": 5.2,
+    "start": 47.6
+  },
+  {
+    "id": "S03-10",
+    "scene": "S03",
+    "text": "澳大利亚总理说，这件事无法接受。",
+    "tts_text": "澳大利亚总理说，这件事无法接受。",
+    "est_seconds": 2.9,
+    "start": 53.1
+  },
+  {
+    "id": "S03-11",
+    "scene": "S03",
+    "text": "OpenAI 回应，8月才发现这件事，不是故意的，也没有泄露个人信息。",
+    "tts_text": "OpenAI 回应，八月才发现这件事，不是故意的，也没有泄露个人信息。",
+    "est_seconds": 5.2,
+    "start": 56.2
+  },
+  {
+    "id": "S03-12",
+    "scene": "S03",
+    "text": "两位 CEO 被要求周四到堪培拉，出席公开听证。",
+    "tts_text": "两位 C E O 被要求周四到堪培拉，出席公开听证。",
+    "est_seconds": 4.0,
+    "start": 61.7
+  },
+  {
+    "id": "S04-13",
+    "scene": "S04",
+    "text": "第三件，Claude 算出了一道理论物理难题。",
+    "tts_text": "第三件，Claude 算出了一道理论物理难题。",
+    "est_seconds": 3.3,
+    "start": 66.4
+  },
+  {
+    "id": "S04-14",
+    "scene": "S04",
+    "text": "题目是 N=4 超杨-米尔斯理论的九圈散射振幅，之前人类的纪录是八圈。",
+    "tts_text": "题目是 N 等于四，超杨米尔斯理论的九圈散射振幅，之前人类的纪录是八圈。",
+    "est_seconds": 6.1,
+    "start": 70.0
+  },
+  {
+    "id": "S04-15",
+    "scene": "S04",
+    "text": "研究员只给了一句提示：我去睡了，你继续算。",
+    "tts_text": "研究员只给了一句提示：我去睡了，你继续算。",
+    "est_seconds": 3.6,
+    "start": 76.3
+  },
+  {
+    "id": "S04-16",
+    "scene": "S04",
+    "text": "按普通用户的价格，算一遍大约一两千美元。",
+    "tts_text": "按普通用户的价格，算一遍大约一两千美元。",
+    "est_seconds": 3.6,
+    "start": 80.1
+  },
+  {
+    "id": "S04-17",
+    "scene": "S04",
+    "text": "结果由八圈纪录的保持者 Lance Dixon 独立验证。",
+    "tts_text": "结果由八圈纪录的保持者 Lance Dixon 独立验证。",
+    "est_seconds": 3.8,
+    "start": 84.0
+  },
+  {
+    "id": "S04-18",
+    "scene": "S04",
+    "text": "另外，中科院何颂团队也已经算出了大部分结果。",
+    "tts_text": "另外，中科院何颂团队也已经算出了大部分结果。",
+    "est_seconds": 4.0,
+    "start": 88.0
+  },
+  {
+    "id": "S05-19",
+    "scene": "S05",
+    "text": "第四件，谷歌 TPU 跑 Kimi K3，比英伟达 GB200 快了57%。",
+    "tts_text": "第四件，谷歌 T P U 跑 Kimi K3，比英伟达 G B 两百快了百分之五十七。",
+    "est_seconds": 5.5,
+    "start": 92.8
+  },
+  {
+    "id": "S05-20",
+    "scene": "S05",
+    "text": "测试是16块 TPU v7，对16块 GB200。",
+    "tts_text": "测试是十六块 T P U V7，对十六块 G B 两百。",
+    "est_seconds": 3.8,
+    "start": 98.5
+  },
+  {
+    "id": "S05-21",
+    "scene": "S05",
+    "text": "TPU 每秒709个 token，GB200 是452个。",
+    "tts_text": "T P U 每秒七百零九个 token，G B 两百是四百五十二个。",
+    "est_seconds": 4.6,
+    "start": 102.6
+  },
+  {
+    "id": "S05-22",
+    "scene": "S05",
+    "text": "做这件事的是 vLLM 原班人马创办的 Inferact，还用上了 DeepSeek 提出的 DSpark 加速。",
+    "tts_text": "做这件事的是 V L L M 原班人马创办的 Inferact，还用上了 DeepSeek 提出的 D Spark 加速。",
+    "est_seconds": 6.9,
+    "start": 107.4
+  },
+  {
+    "id": "S05-23",
+    "scene": "S05",
+    "text": "代码已经开源。",
+    "tts_text": "代码已经开源。",
+    "est_seconds": 1.4,
+    "start": 114.6
+  },
+  {
+    "id": "S06-24",
+    "scene": "S06",
+    "text": "第五件，Anthropic 要在7年里向 Akamai 支付116亿美元，买它的云服务。",
+    "tts_text": "第五件，Anthropic 要在七年里向 Akamai 支付一百一十六亿美元，买它的云服务。",
+    "est_seconds": 5.9,
+    "start": 116.7
+  },
+  {
+    "id": "S06-25",
+    "scene": "S06",
+    "text": "这是 Akamai 历史上最大的一笔合同，比5月报道的18亿美元大了6倍多。",
+    "tts_text": "这是 Akamai 历史上最大的一笔合同，比五月报道的十八亿美元大了六倍多。",
+    "est_seconds": 5.9,
+    "start": 122.9
+  },
+  {
+    "id": "S06-26",
+    "scene": "S06",
+    "text": "TechCrunch 认为，这是在押注 CPU 算力：智能体干的活越多，CPU 需求越大。",
+    "tts_text": "TechCrunch 认为，这是在押注 C P U 算力：智能体干的活越多，C P U 需求越大。",
+    "est_seconds": 5.9,
+    "start": 129.0
+  },
+  {
+    "id": "S06-27",
+    "scene": "S06",
+    "text": "Akamai 还给了 Anthropic 认股权，最多能拿到约5%的股份。",
+    "tts_text": "Akamai 还给了 Anthropic 认股权，最多能拿到约百分之五的股份。",
+    "est_seconds": 4.8,
+    "start": 135.2
+  },
+  {
+    "id": "S07-28",
+    "scene": "S07",
+    "text": "今天就这些，来源都在简介里。",
+    "tts_text": "今天就这些，来源都在简介里。",
+    "est_seconds": 2.5,
+    "start": 140.8
+  }
+]

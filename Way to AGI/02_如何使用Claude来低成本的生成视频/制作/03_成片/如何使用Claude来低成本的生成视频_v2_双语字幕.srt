@@ -1,0 +1,655 @@
+﻿1
+00:00:00,000 --> 00:00:01,300
+Hello，大家好，我是悠一。
+Hello everyone, I'm Yui.
+
+2
+00:00:01,300 --> 00:00:03,520
+上个视频被炸得有点眩晕，瘫坐了。
+My last video blew me away so hard I'm still a bit dizzy.
+
+3
+00:00:03,520 --> 00:00:08,927
+这期视频来教大家，如何用 Opus 5.5 上手做第一个视频。
+Today I'll show you how to make your first video with Opus 5.5.
+
+4
+00:00:08,927 --> 00:00:11,940
+Opus 5.5 这个模型，是 9 月 22 号发布的，
+Opus 5.5 was released on September 22,
+
+5
+00:00:11,940 --> 00:00:14,700
+它现在的能力，可以说是最强的。
+and it's arguably the most capable model right now.
+
+6
+00:00:14,700 --> 00:00:19,627
+当时发布之后，它的价格也降了 20%，
+After launch, its price also dropped by 20%,
+
+7
+00:00:19,627 --> 00:00:23,500
+但是所有人都没有想到的是，它的视觉能力那么强。
+but nobody expected its vision to be this strong.
+
+8
+00:00:23,500 --> 00:00:26,120
+因为在 GPT-6 发布的时候，
+Back when GPT-6 came out,
+
+9
+00:00:26,120 --> 00:00:31,673
+GPT-6 能用它的能力去做 3D 建模，是很厉害的模型。
+it could do 3D modeling, which is really impressive.
+
+10
+00:00:31,673 --> 00:00:35,687
+就比如说视频中这样，它建模了一个客厅，还有一个书房，
+Like in this clip: it modeled a living room and a study,
+
+11
+00:00:35,687 --> 00:00:39,873
+然后用户可以跟随镜头自由地穿梭，就像一个游戏。
+and you can follow the camera and move around freely, like a game.
+
+12
+00:00:39,873 --> 00:00:42,767
+但是没有人想到，Opus 5.5 能力也这么强。
+But nobody expected Opus 5.5 to be this capable too.
+
+13
+00:00:42,767 --> 00:00:47,180
+官方的说法是：这是视觉和电脑操作最强的一个模型，
+Officially, it's the strongest model for vision and computer use,
+
+14
+00:00:47,180 --> 00:00:51,200
+它能把图表、截图、示意图看得很仔细。
+reading charts, screenshots and diagrams in fine detail.
+
+15
+00:00:51,200 --> 00:00:56,093
+那很多人就会有一个问题：为什么 Claude 会生成视频呢？
+So a lot of people ask: how can Claude make videos?
+
+16
+00:00:56,093 --> 00:00:58,413
+Claude 本身是多模态的模型，
+Claude itself is a multimodal model,
+
+17
+00:00:58,413 --> 00:01:01,553
+但是它不能生成音频、图片和视频。
+but it can't generate audio, images or video.
+
+18
+00:01:01,553 --> 00:01:02,933
+后来我就问了一下 Claude，
+So I asked Claude,
+
+19
+00:01:02,933 --> 00:01:05,740
+他说每一帧都是他自己画出来的，
+and it said it draws every frame itself,
+
+20
+00:01:05,740 --> 00:01:08,013
+就是每一个像素，都是他自己画出来的。
+every single pixel.
+
+21
+00:01:08,013 --> 00:01:11,060
+就像图中这样，它是一个一个像素，
+Like in this picture, pixel by pixel,
+
+22
+00:01:11,060 --> 00:01:15,113
+用 01 或者 EF 这些之前规定好的颜色画出来的。
+using colors it defined beforehand, like 01 or EF.
+
+23
+00:01:15,113 --> 00:01:16,573
+我觉得真的就很离谱。
+Honestly, it's wild.
+
+24
+00:01:16,573 --> 00:01:20,260
+然后它画完之后，会自己截图，自己用视觉能力去查，
+After drawing, it screenshots its own work and checks it with its own vision,
+
+25
+00:01:20,260 --> 00:01:22,647
+看一下是不是和我要求里的一样。
+to see if it matches what I asked for.
+
+26
+00:01:22,647 --> 00:01:24,220
+下面就是几个例子。
+Here are a few examples.
+
+27
+00:01:24,220 --> 00:01:29,147
+第一个例子，就是我用这一段提示词，让他做一个银魂的动漫，
+The first example: I used this prompt to have it make a Gintama anime,
+
+28
+00:01:29,147 --> 00:01:33,470
+从主剧情那么多集里面，去挑一些经典场景。
+picking classic scenes from the whole main storyline.
+
+29
+00:01:34,687 --> 00:01:37,277
+第二个是火影忍者，他做得也很好。
+The second is Naruto. It did a great job too.
+
+30
+00:01:38,907 --> 00:01:39,800
+第三个是 JoJo 的，
+The third is JoJo.
+
+31
+00:01:39,800 --> 00:01:44,063
+提示词和之前差不多，也是让他做了比较基础的场景。
+Similar prompt, also asking for some basic scenes.
+
+32
+00:01:45,160 --> 00:01:49,340
+然后第四个，就是我之前发布的模型「从夯到拉」的视频，
+The fourth is my earlier video ranking AI models, from god-tier to trash.
+
+33
+00:01:49,340 --> 00:01:52,020
+可以看到这个视频里的内容，
+Look at what's in this video:
+
+34
+00:01:52,020 --> 00:01:56,400
+不管是配音、配色，还是角色说话的嘴巴
+the voice, the colors, even the character's mouth
+
+35
+00:01:56,400 --> 00:01:59,920
+跟着音频一张一合，
+opening and closing with the audio.
+
+36
+00:01:59,920 --> 00:02:02,273
+这些都是他自己去截图、自己去看的。
+It checked all of that itself, by taking screenshots and looking.
+
+37
+00:02:02,273 --> 00:02:03,507
+就很震惊。
+Pretty shocking.
+
+38
+00:02:03,507 --> 00:02:06,587
+那 Claude 不是扩散模型，这些视频是怎么来的呢？
+So if Claude isn't a diffusion model, where do these videos come from?
+
+39
+00:02:06,587 --> 00:02:09,767
+Claude 既然不是扩散模型，是一帧一帧画出来的，
+Since Claude isn't a diffusion model and draws frame by frame,
+
+40
+00:02:09,767 --> 00:02:11,993
+那么扩散模型是怎么做的呢？
+how does a diffusion model work?
+
+41
+00:02:11,993 --> 00:02:14,640
+扩散模型不能很好地生成文字，
+Diffusion models aren't good at generating text,
+
+42
+00:02:14,640 --> 00:02:18,800
+因为它是从一个随机噪点里，把它还原出来一个图像，
+because they restore an image out of random noise,
+
+43
+00:02:18,800 --> 00:02:20,707
+或者说还原出来一个视频。
+or a video.
+
+44
+00:02:20,707 --> 00:02:23,480
+但是大语言模型，是一个字一个字地往外写的。
+But a large language model writes one word at a time.
+
+45
+00:02:23,480 --> 00:02:25,520
+所以，我个人主观来看，
+So, in my personal opinion,
+
+46
+00:02:25,520 --> 00:02:29,607
+扩散模型并不适合做含有文字、或者文字太多的图像，
+diffusion models don't suit images with text, or lots of text.
+
+47
+00:02:29,607 --> 00:02:31,980
+这些确实应该交给大语言模型，
+Those really should go to LLMs,
+
+48
+00:02:31,980 --> 00:02:34,670
+像 Opus 5.5 这样，一个一个地生成。
+like Opus 5.5, generating it piece by piece.
+
+49
+00:02:34,670 --> 00:02:36,247
+这个就很反直觉了：
+Which is really counterintuitive:
+
+50
+00:02:36,247 --> 00:02:38,433
+一个 LLM，让它去做视频。
+an LLM making videos.
+
+51
+00:02:38,433 --> 00:02:41,533
+像我之前说的，它一秒会做 30 张图，
+As I said, it makes 30 images per second,
+
+52
+00:02:41,533 --> 00:02:42,847
+再加一条声音。
+plus an audio track.
+
+53
+00:02:42,847 --> 00:02:44,980
+20 秒，等于画了 600 张图。
+So 20 seconds means 600 drawn images.
+
+54
+00:02:44,980 --> 00:02:47,813
+它会放在一个 HTML 页面里，
+It puts them in an HTML page,
+
+55
+00:02:47,813 --> 00:02:50,340
+每一帧都画出来之后，去进行渲染，
+and once every frame is drawn, it renders them
+
+56
+00:02:50,340 --> 00:02:52,040
+用 ffmpeg。
+with ffmpeg.
+
+57
+00:02:52,040 --> 00:02:55,933
+其实视频说到底，就是很多张图片拼在一起的。
+A video is really just lots of images stitched together.
+
+58
+00:02:55,933 --> 00:02:58,487
+那 Claude 就是从每张图开始画，
+Claude starts by drawing each image,
+
+59
+00:02:58,487 --> 00:03:00,687
+画完之后，把它放在一个浏览器里，
+puts them in a browser once they're drawn,
+
+60
+00:03:00,687 --> 00:03:04,240
+然后用 ffmpeg 把图片合成一段视频，
+turns the images into a video with ffmpeg,
+
+61
+00:03:04,240 --> 00:03:07,080
+然后他再自己去抽帧检查。
+and then samples frames to check it.
+
+62
+00:03:07,080 --> 00:03:11,240
+那为什么我认为，用写代码的模型去做视频更好？
+So why do I think a coding model is better for making videos?
+
+63
+00:03:11,240 --> 00:03:14,200
+是因为这个写代码的 LLM，
+Because a coding LLM
+
+64
+00:03:14,200 --> 00:03:17,520
+它知道写什么字、写在哪、第几秒出现、怎么动，
+knows what text to write, where it goes, when it appears and how it moves.
+
+65
+00:03:17,520 --> 00:03:21,300
+这些东西，语言模型能够精确地定位。
+A language model can pin all of that down precisely.
+
+66
+00:03:21,300 --> 00:03:24,973
+而扩散模型，更适合去做一些 3D 模型的渲染，
+Diffusion models are better for things like 3D rendering,
+
+67
+00:03:24,973 --> 00:03:27,573
+比如说做一些游戏的过场动画，
+such as game cutscenes,
+
+68
+00:03:27,573 --> 00:03:29,327
+或者做一些 AI 短剧。
+or AI short dramas.
+
+69
+00:03:29,327 --> 00:03:31,807
+下面这个例子，就是我做的这个视频，
+This next example is a video I made,
+
+70
+00:03:31,807 --> 00:03:33,920
+我可以给大家分享一下是怎么做的。
+so let me show you how it was made.
+
+71
+00:03:33,920 --> 00:03:36,900
+这个视频里，左下角有角色，
+It has a character in the bottom-left,
+
+72
+00:03:36,900 --> 00:03:40,987
+有出现的手写字体，有目录，有进度条。
+handwritten text appearing, a table of contents, and a progress bar.
+
+73
+00:03:40,987 --> 00:03:44,000
+一开始肯定是让它先写台本，台本写完了之后，
+First it writes the script, and once it's done,
+
+74
+00:03:44,000 --> 00:03:45,387
+我会去进行审核。
+I review it.
+
+75
+00:03:45,387 --> 00:03:48,407
+台本里面会包含什么时候转场，有什么内容，
+The script covers when scenes change, what's on screen,
+
+76
+00:03:48,407 --> 00:03:51,667
+字幕应该说什么，配音应该用什么样的语气。
+what the subtitles say, and what tone the voiceover takes.
+
+77
+00:03:51,667 --> 00:03:53,693
+这些东西我都会帮他设定好。
+I set all of that up for it.
+
+78
+00:03:53,693 --> 00:03:58,187
+然后我会把 AI 配音，或者我自己配音的音频发给他。
+Then I send it the audio, either AI voice or my own recording.
+
+79
+00:03:58,187 --> 00:04:03,053
+发给他之后，他就会根据这个音频的强度去做这个视频，
+It then builds the video around the audio's intensity,
+
+80
+00:04:03,053 --> 00:04:06,387
+把这个音频一帧一帧地，很好地拼接到视频里。
+matching the audio to the video frame by frame.
+
+81
+00:04:06,387 --> 00:04:09,847
+比如说左下角那个角色的动作，它就有很多种，
+Take the character in the bottom-left: it has lots of moves,
+
+82
+00:04:09,847 --> 00:04:12,927
+比如说有数一二三、叉腰、说好耶，
+like counting one-two-three, hands on hips, and cheering 'yay'.
+
+83
+00:04:12,927 --> 00:04:14,687
+一期我会放 30 个左右，
+I use about 30 of those per episode,
+
+84
+00:04:14,687 --> 00:04:19,340
+然后还有一些小手势、句末点头、看向内容，程序都会自动加。
+plus small gestures, nods at sentence ends and glances at the content, added automatically.
+
+85
+00:04:19,340 --> 00:04:22,267
+这些东西全都是 AI 自己做出来的。
+All of this is made by the AI itself.
+
+86
+00:04:22,267 --> 00:04:25,833
+然后 BGM 和音效，都是 Claude 用 Python 代码合成的，
+The BGM and sound effects are synthesized by Claude in Python,
+
+87
+00:04:25,833 --> 00:04:27,180
+就很方便。
+which is really convenient.
+
+88
+00:04:27,180 --> 00:04:29,540
+但是这只是一个最基本的要求，
+But that's just the baseline.
+
+89
+00:04:29,540 --> 00:04:34,133
+如果说各位朋友想去做一些更高质量的，
+If you want higher quality,
+
+90
+00:04:34,133 --> 00:04:36,440
+其实这些配音、音乐都是可以继续找的。
+you can keep looking for better voices and music.
+
+91
+00:04:36,440 --> 00:04:39,147
+所以我做完了之后，Claude 也会去抽帧去看，
+So after I'm done, Claude also samples frames to look,
+
+92
+00:04:39,147 --> 00:04:40,400
+然后去听。
+and listens.
+
+93
+00:04:40,400 --> 00:04:43,547
+然后我们再来看一下，用视频模型去做视频，
+Now let's compare the cost of making videos with a video model
+
+94
+00:04:43,547 --> 00:04:46,860
+和用 LLM 去做视频，它的价格。
+versus with an LLM.
+
+95
+00:04:46,860 --> 00:04:50,260
+现在不用说，肯定是国内的 Seedance 2.5 最好，
+Right now the best is clearly Seedance 2.5 from China,
+
+96
+00:04:50,260 --> 00:04:51,267
+当然它也不便宜。
+but it isn't cheap.
+
+97
+00:04:51,267 --> 00:04:54,540
+Google 的 Veo 3.1，能力没有那么强，
+Google's Veo 3.1 isn't as capable,
+
+98
+00:04:54,540 --> 00:04:55,700
+它依然很贵。
+and it's still expensive.
+
+99
+00:04:55,700 --> 00:04:57,787
+如果同样要做 6 分钟视频的话，
+For the same 6-minute video,
+
+100
+00:04:57,787 --> 00:05:00,433
+文本语言模型毕竟还有编程套餐来写，
+a language model comes with coding plans,
+
+101
+00:05:00,433 --> 00:05:02,693
+那价格真的是会实惠很多。
+so it's far cheaper.
+
+102
+00:05:02,693 --> 00:05:05,033
+一般一个六分钟视频，大概会消耗
+A six-minute video usually uses
+
+103
+00:05:05,033 --> 00:05:09,667
+我一周 20x 额度的 5% 到 10% 左右。
+about 5–10% of my weekly 20x plan quota.
+
+104
+00:05:09,667 --> 00:05:11,867
+而且这些素材都是可以复用的，
+And these assets are reusable:
+
+105
+00:05:11,867 --> 00:05:13,800
+角色的素材生成好了之后，
+once the character assets are made,
+
+106
+00:05:13,800 --> 00:05:15,567
+下一次的视频就不用再生成，
+the next video doesn't need to make them again.
+
+107
+00:05:15,567 --> 00:05:18,133
+所有的内容都可以沉淀下来，变成 skill，
+Everything can be distilled into a skill,
+
+108
+00:05:18,133 --> 00:05:20,133
+就会批量地去出一些视频，
+so you can churn them out in batches.
+
+109
+00:05:20,133 --> 00:05:23,713
+比如说我个人想做的信息聚合：
+For example, the news digest I wanted to make:
+
+110
+00:05:23,713 --> 00:05:27,093
+每日科技新闻的聚合视频，
+a daily tech-news roundup video
+
+111
+00:05:27,093 --> 00:05:29,753
+他就可以每天自动化地去运行。
+that runs automatically every day.
+
+112
+00:05:29,753 --> 00:05:32,153
+然后还说到了角色素材复用的问题，
+About reusing character assets:
+
+113
+00:05:32,153 --> 00:05:35,160
+如果他的模型能力再提升，
+if the models keep improving,
+
+114
+00:05:35,160 --> 00:05:40,613
+能够更精准地画出线条连续的动漫形式，
+drawing anime with smooth, continuous lines more precisely,
+
+115
+00:05:40,613 --> 00:05:43,480
+或者真的能画出真人的风格的话，
+or even realistic human styles,
+
+116
+00:05:43,480 --> 00:05:44,960
+那这些素材都是可以复用的，
+then all these assets are reusable,
+
+117
+00:05:44,960 --> 00:05:47,753
+能复用的素材，它就是有价值的，
+and reusable assets have real value.
+
+118
+00:05:47,753 --> 00:05:48,913
+它就不是抽卡。
+It's not a gacha pull.
+
+119
+00:05:48,913 --> 00:05:53,033
+如果各位又是程序员，又想去尝试做视频的话，
+If you're a programmer who wants to try making videos,
+
+120
+00:05:53,033 --> 00:05:54,933
+我觉得真的是几乎零成本的一个事情。
+I think it costs almost nothing.
+
+121
+00:05:54,933 --> 00:05:57,713
+只要用 Codex 或者 Claude Code 里面的模型，
+The models in Codex or Claude Code
+
+122
+00:05:57,713 --> 00:05:59,053
+我觉得能力都是够的。
+are capable enough, I think.
+
+123
+00:05:59,053 --> 00:06:02,673
+其实现在国内的一些模型，也能去生成视频，
+Some Chinese models can do this too,
+
+124
+00:06:02,673 --> 00:06:04,427
+但是效果并不太好。
+but the results aren't great.
+
+125
+00:06:04,427 --> 00:06:07,860
+渲染视频的话，本地用 CPU 渲染就可以。
+Rendering just runs locally on the CPU.
+
+126
+00:06:07,860 --> 00:06:09,533
+OK，然后我们收个尾。
+OK, let's wrap up.
+
+127
+00:06:09,533 --> 00:06:11,080
+感谢大家这次的收看。
+Thanks for watching.
+
+128
+00:06:11,080 --> 00:06:13,300
+我觉得感兴趣的朋友，都可以去试一试。
+If you're interested, give it a try.
+
+129
+00:06:13,300 --> 00:06:15,947
+然后开头的那两段提示词，我会放在评论区，
+I'll put the two prompts from the beginning in the comments,
+
+130
+00:06:15,947 --> 00:06:17,627
+大家可以去评论区看一下。
+so check them out there.
+
+131
+00:06:17,627 --> 00:06:18,417
+拜拜。
+Bye!
+

@@ -1,0 +1,87 @@
+{
+ "date": "2026-09-28",
+ "script_sha": "7ee6e68d3f75",
+ "passed": true,
+ "checked_at": "2026-09-27 23:28:24",
+ "checks": [
+  {
+   "check": "台本检查",
+   "ok": true,
+   "level": "ok",
+   "detail": "8 条，约 2039 字"
+  },
+  {
+   "check": "成片",
+   "ok": true,
+   "level": "ok",
+   "detail": "D:\\大疆\\AI日报\\2026-09-28\\AI每日日报_0928_成片.mp4"
+  },
+  {
+   "check": "上传版 ≤ 9 MB",
+   "ok": true,
+   "level": "ok",
+   "detail": "8.68 MB"
+  },
+  {
+   "check": "封面",
+   "ok": true,
+   "level": "ok",
+   "detail": "16:9 + 4:3"
+  },
+  {
+   "check": "标题格式",
+   "ok": true,
+   "level": "ok",
+   "detail": "9月28日，鲸鱼娘带你看看AI圈发生了什么？"
+  },
+  {
+   "check": "简介里有全部来源",
+   "ok": true,
+   "level": "ok",
+   "detail": "19 个网址"
+  },
+  {
+   "check": "简介里没有别的网址",
+   "ok": true,
+   "level": "ok",
+   "detail": ""
+  },
+  {
+   "check": "总时长超过 5 分钟（B 站分段章节要求）",
+   "ok": true,
+   "level": "ok",
+   "detail": "354.1 秒"
+  },
+  {
+   "check": "配音识别分 ≥ 0.75",
+   "ok": true,
+   "level": "ok",
+   "detail": "1 批"
+  },
+  {
+   "check": "事实核对（数字、英文名都在原文里）",
+   "ok": true,
+   "level": "ok",
+   "detail": "全部找到"
+  },
+  {
+   "check": "内容安全（色情、暴力、时政、广告、提示词注入、隐藏字符）",
+   "ok": true,
+   "level": "ok",
+   "detail": "没有命中"
+  },
+  {
+   "check": "没有重复最近 7 天播过的原文",
+   "ok": true,
+   "level": "ok",
+   "detail": ""
+  },
+  {
+   "check": "AI 复核（独立子代理，看成品和原文）",
+   "ok": true,
+   "level": "ok",
+   "detail": "通过：提醒：第 2 轮挡发布的问题已修好，我逐项核对过。① 第 7 条截图：新的 news_07.png（snaps.json 里 sha 846a9a459a）只有 The Decoder 的标题、署名（Manuel Uth，Sep 26, 2026）和导语，没有同意框、订阅广告和遮罩；导语里的数字（28%、80%、70%、61%、三分钟）和台本一致，也没有写给 AI 的话；两张旧图已挪进 _旧稿。重渲后的成片和上传版里，第 7 条（4:15–4:54）右栏用的都是这张新图（成片 4:25、4:38、4:50，上传版 4:38 抽帧确认）。② 开头配音：新配音 配音\\raw\\C01_v2.mp3（识别分 0.883）的开头，large-v3-turbo 和 small 两个模型都识别成“早上好”（large-v3-turbo 置信度 0.99 / 1.0），上传版 0:03.5–0:07.5"
+  }
+ ],
+ "hits": []
+}

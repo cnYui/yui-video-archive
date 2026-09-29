@@ -1,0 +1,23 @@
+{
+  "title": "9月28日，鲸鱼娘带你看看AI圈发生了什么？",
+  "video": "D:\\大疆\\AI日报\\2026-09-28\\AI每日日报_0928_上传版.mp4",
+  "video_seconds": 354.07,
+  "cover_16x9": "D:\\大疆\\AI日报\\2026-09-28\\封面\\封面_16x9_1920x1080.png",
+  "cover_4x3": "D:\\大疆\\AI日报\\2026-09-28\\封面\\封面_4x3_1440x1080.png",
+  "partition": "人工智能",
+  "partition_fallback": "科技数码",
+  "tags": [
+    "AI资讯",
+    "人工智能",
+    "大模型",
+    "AI日报",
+    "Anthropic",
+    "MiniMax",
+    "OpenAI",
+    "鲸鱼娘",
+    "大肥鱼"
+  ],
+  "collection": "AI每日日报",
+  "declaration": "含AI生成内容",
+  "description": "AI每日日报 · 9月28日（周一）\n鲸鱼娘带你看看 AI 圈发生了什么。\n\n今日内容\n0:00 开场\n0:29 Anthropic 三类拒答恢复收费\n1:18 MiniMax 编程新模型上线\n1:50 Claude Code 撞上限先收尾\n2:24 Codex 宕机后重置额度\n2:57 阿里语音模型降价最高 95%\n3:36 牛津馆藏进 OpenAI 训练集\n4:15 AI 查宜家装错准确率 80%\n4:54 笔记本硬跑 744B 大模型\n5:43 回顾\n\n来源\n① Anthropic 三类拒答恢复收费：Anthropic 更新日志 https://platform.claude.com/docs/en/release-notes/overview ；Anthropic 拒答计费说明 https://platform.claude.com/docs/en/build-with-claude/refusals-and-fallback ；MIXED https://mixed-news.com/en/anthropic-bills-refused-claude-api-requests-three-categories/\n② MiniMax 编程新模型上线：IT之家 https://www.ithome.com/1/007/530.htm ；MiniMax 官方 https://x.com/MiniMaxAgent/status/2104079819881517400\n③ Claude Code 撞上限先收尾：IT之家 https://www.ithome.com/1/007/369.htm ；Claude 开发者账号 https://x.com/ClaudeDevs/status/2103561342057943314\n④ Codex 宕机后重置额度：OpenAI 状态页 https://status.openai.com/incidents/01M3DCNWMW57HYK8FJ5FBFPA39 ；新智元（新浪转载） https://finance.sina.com.cn/wm/2026-09-26/doc-initcusx7101541.shtml ；Codex 负责人 https://x.com/thsottiaux/status/2103637477760311522\n⑤ 阿里语音模型降价最高 95%：IT之家 https://www.ithome.com/1/006/280.htm ；The Decoder https://the-decoder.com/alibaba-launches-qwen-audio-3-1-with-five-new-models-and-slashes-ai-audio-prices-by-up-to-95-percent/\n⑥ 牛津馆藏进 OpenAI 训练集：The Next Web https://thenextweb.com/news/oxford-bodleian-openai-training-data ；Cherwell https://cherwell.org/2026/09/27/oxford-ai-partnership-uses-bodleian-texts-for-chatgpt/ ；Bodleian 图书馆 https://www.bodleian.ox.ac.uk/services/research-partnerships/digitisation-project\n⑦ AI 查宜家装错准确率 80%：Epoch AI https://epoch.ai/publications/furniture-assembly ；The Decoder https://the-decoder.com/openais-gpt-6-astra-can-now-tell-you-exactly-where-you-screwed-up-your-ikea-shelf/\n⑧ 笔记本硬跑 744B 大模型：量子位 https://www.qbitai.com/2026/09/497624.html ；GitHub https://github.com/JustVugg/colibri\n\n说明\n· 信息截至北京时间 2026-09-27 21:17，以各家官方发布为准。\n· 本期配音由 AI 合成（Fish Audio「苏晓晓」）；内容由 AI 整理，并自动核对来源，如有出入以原文为准。\n· 主播鲸鱼娘（像素素材包「大肥鱼」）是 DeepSeek 的网友拟人同人（原型：上善无形，CC BY-NC-SA 4.0；女仆造型：ZipZipPipe），与 DeepSeek 官方无关。"
+}

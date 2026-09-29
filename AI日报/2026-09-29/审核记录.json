@@ -1,0 +1,121 @@
+{
+ "date": "2026-09-29",
+ "script_sha": "388fe983c8f2",
+ "passed": false,
+ "checked_at": "2026-09-29 08:35:19",
+ "checks": [
+  {
+   "check": "台本检查",
+   "ok": true,
+   "level": "ok",
+   "detail": "7 条，约 2118 字"
+  },
+  {
+   "check": "成片",
+   "ok": true,
+   "level": "ok",
+   "detail": "D:\\大疆\\AI日报\\2026-09-29\\AI每日日报_0929_成片.mp4"
+  },
+  {
+   "check": "上传版 ≤ 9 MB",
+   "ok": true,
+   "level": "ok",
+   "detail": "8.90 MB"
+  },
+  {
+   "check": "封面",
+   "ok": true,
+   "level": "ok",
+   "detail": "16:9 + 4:3"
+  },
+  {
+   "check": "标题格式",
+   "ok": true,
+   "level": "ok",
+   "detail": "9月29日，鲸鱼娘带你看看AI圈发生了什么？"
+  },
+  {
+   "check": "简介里有全部来源",
+   "ok": true,
+   "level": "ok",
+   "detail": "15 个网址"
+  },
+  {
+   "check": "简介里没有别的网址",
+   "ok": true,
+   "level": "ok",
+   "detail": ""
+  },
+  {
+   "check": "简介 ≤ 2000 字",
+   "ok": true,
+   "level": "ok",
+   "detail": "1728 字"
+  },
+  {
+   "check": "总时长超过 5 分钟（B 站分段章节要求）",
+   "ok": true,
+   "level": "ok",
+   "detail": "343.3 秒"
+  },
+  {
+   "check": "配音识别分 ≥ 0.75",
+   "ok": true,
+   "level": "ok",
+   "detail": "1 批"
+  },
+  {
+   "check": "事实核对（数字、英文名都在原文里）",
+   "ok": true,
+   "level": "ok",
+   "detail": "全部找到"
+  },
+  {
+   "check": "内容安全（色情、暴力、时政、广告、提示词注入、隐藏字符）",
+   "ok": true,
+   "level": "ok",
+   "detail": "没有命中"
+  },
+  {
+   "check": "要 AI 复核确认的词",
+   "ok": false,
+   "level": "warn",
+   "detail": "[敏感词（看上下文）] 第 7 条 第 7 句：监管；[敏感词（看上下文）] 第 7 条 第 7 句（配音文本）：监管；[敏感词（看上下文）] 字幕 srt：监管"
+  },
+  {
+   "check": "没有重复最近 7 天播过的原文",
+   "ok": true,
+   "level": "ok",
+   "detail": ""
+  },
+  {
+   "check": "AI 复核（独立子代理，看成品和原文）",
+   "ok": false,
+   "level": "block",
+   "detail": "没有针对当前台本（sha 388fe983c8f2）的通过结论"
+  }
+ ],
+ "hits": [
+  {
+   "level": "review",
+   "cat": "敏感词（看上下文）",
+   "word": "监管",
+   "where": "第 7 条 第 7 句",
+   "context": "预计在 2026 年底前完成，还要等监管批准。"
+  },
+  {
+   "level": "review",
+   "cat": "敏感词（看上下文）",
+   "word": "监管",
+   "where": "第 7 条 第 7 句（配音文本）",
+   "context": "交易预计在二零二六年底前完成，还要等监管批准。"
+  },
+  {
+   "level": "review",
+   "cat": "敏感词（看上下文）",
+   "word": "监管",
+   "where": "字幕 srt",
+   "context": " 2026 年底前完成    还要等监管批准。    今天就这些，来源都在简"
+  }
+ ]
+}

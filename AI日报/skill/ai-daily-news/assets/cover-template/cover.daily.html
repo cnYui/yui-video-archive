@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>AI每日日报 封面</title>
+<link rel="stylesheet" href="{{FONTS_CSS}}">
+<style>
+  /* 1920x1080. 4:3 slot = centre crop x 240..1680, so everything that matters stays inside it. */
+  :root { --navy: #0F1B3D; --paper: #F4F1EA; --ink: #141633; --azure: #3D8BFF; --sky: #97C3F0; --gold: #F3C98C; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1920px; height: 1080px; overflow: hidden; background: var(--navy); font-family: 'Noto Sans SC', sans-serif; }
+  #bg { position: absolute; inset: 0; width: 1920px; height: 1080px; object-fit: cover; image-rendering: pixelated; opacity: .95; }
+  #shade { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(8,14,34,.82) 0%, rgba(8,14,34,.55) 48%, rgba(8,14,34,.05) 78%); }
+  #kick { position: absolute; left: 290px; top: 118px; display: flex; gap: 14px; align-items: center; }
+  #kick .brand { background: var(--azure); color: #fff; font: 800 44px 'Noto Sans SC'; padding: 6px 22px; border-radius: 10px; letter-spacing: .04em; }
+  #kick .wd { color: var(--sky); font: 700 40px 'JetBrains Mono', 'Noto Sans SC'; letter-spacing: .08em; }
+  #date { position: absolute; left: 282px; top: 186px; color: var(--paper); font: 900 250px/1 'Noto Sans SC'; letter-spacing: .01em; white-space: nowrap;
+          text-shadow: 0 10px 0 rgba(0,0,0,.28); }
+  #date .bar { display: inline-block; width: 30px; height: 190px; background: var(--azure); margin-left: 24px; vertical-align: -8px; }
+  #hook { position: absolute; left: 292px; top: 470px; color: var(--gold); font: 900 64px/1.15 'Noto Sans SC'; white-space: nowrap; }
+  #heads { position: absolute; left: 292px; top: 580px; width: 790px; display: flex; flex-direction: column; gap: 18px; }
+  .head { display: flex; align-items: center; gap: 18px; background: var(--paper); color: var(--ink); border-top: 5px solid var(--azure);
+          border-radius: 8px; padding: 14px 24px; box-shadow: 0 10px 26px rgba(0,0,0,.35); font: 900 50px/1.2 'Noto Sans SC'; white-space: nowrap; overflow: hidden; }
+  .head .no { flex: none; width: 58px; height: 58px; border-radius: 8px; background: var(--azure); color: #fff; font: 800 38px/58px 'JetBrains Mono'; text-align: center; }
+  .head .tx { overflow: hidden; text-overflow: ellipsis; }
+  #more { position: absolute; left: 296px; color: rgba(244,241,234,.85); font: 700 34px 'Noto Sans SC'; }
+  #fish { position: absolute; width: 576px; height: 576px; left: 1104px; top: 468px; image-rendering: pixelated; filter: drop-shadow(0 18px 0 rgba(0,0,0,.25)); }
+</style>
+</head>
+<body>
+  <img id="bg" src="{{BG}}" alt="">
+  <div id="shade"></div>
+  <div id="kick"><span class="brand">AI每日日报</span><span class="wd" id="wd"></span></div>
+  <div id="date"><span id="dateTx"></span><span class="bar"></span></div>
+  <div id="hook"></div>
+  <div id="heads"></div>
+  <div id="more"></div>
+  <img id="fish" src="{{SPRITE}}" alt="">
+<script>
+  window.DURATION = 1;
+  const D = Object.assign({ date_label: '9月27日', weekday: '周日', hook: '鲸鱼娘带你看看AI圈', headlines: ['今日要闻一', '今日要闻二'], more: '' }, window.__DATA__ || {});
+  const $ = id => document.getElementById(id);
+  $('wd').textContent = D.weekday || '';
+  $('dateTx').textContent = D.date_label;
+  $('hook').textContent = D.hook;
+  const heads = (D.headlines || []).slice(0, 3);
+  heads.forEach((h, i) => {
+    const el = document.createElement('div'); el.className = 'head';
+    el.innerHTML = `<span class="no">${i + 1}</span><span class="tx"></span>`;
+    el.querySelector('.tx').textContent = h;
+    $('heads').appendChild(el);
+  });
+  function layout() {
+    // shrink the date if a long label would run into the fish; shrink headline text to fit the card
+    const date = $('date');
+    let fs = 250;
+    while (date.offsetWidth > 860 && fs > 150) { fs -= 10; date.style.fontSize = fs + 'px'; }
+    document.querySelectorAll('.head').forEach(el => {
+      let f = 50; el.style.fontSize = f + 'px';
+      const tx = el.querySelector('.tx');
+      while (tx.scrollWidth > tx.clientWidth + 1 && f > 34) { f -= 2; el.style.fontSize = f + 'px'; }
+    });
+    const hb = $('heads').getBoundingClientRect();
+    $('more').style.top = (hb.bottom + 16) + 'px';
+    $('more').textContent = D.more || '';
+  }
+  const decoded = img => img.complete ? Promise.resolve() : new Promise(r => { img.onload = img.onerror = r; });
+  Promise.all([document.fonts.ready, decoded($('bg')), decoded($('fish'))]).then(() => { layout(); window.__READY__ = true; });
+  window.renderAt = () => {};
+</script>
+</body>
+</html>

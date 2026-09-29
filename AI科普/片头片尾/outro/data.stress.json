@@ -1,0 +1,12 @@
+{
+  "items": [
+    { "label": "素材来源", "value": "DeepSeek 开放平台文档 · Anthropic API 文档 · 维基百科" },
+    { "label": "拍摄", "value": "Pocket 4P" },
+    { "label": "剪辑", "value": "ChatCut" },
+    { "label": "视频剪辑模型", "value": "Opus 5.5" },
+    { "label": "配音", "value": "授权 TTS 声音 · 小元" },
+    { "label": "特别致谢", "value": "评论区指出上期错误的 @观众昵称一 和 @观众昵称二" }
+  ],
+  "closing": "感谢大家看到最后",
+  "signature": "UE"
+}

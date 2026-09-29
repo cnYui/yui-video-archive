@@ -1,0 +1,2940 @@
+{
+ "fps": 30,
+ "total": 378.6,
+ "pieces": 120,
+ "segments": [
+  {
+   "clip": "0161",
+   "src_s": 0.533,
+   "src_e": 1.933,
+   "out_s": 0.0,
+   "gap": 0.0
+  },
+  {
+   "clip": "0161",
+   "src_s": 2.2,
+   "src_e": 6.2,
+   "out_s": 1.4,
+   "gap": 0.0
+  },
+  {
+   "clip": "0161",
+   "src_s": 6.567,
+   "src_e": 9.833,
+   "out_s": 5.4,
+   "gap": 0.3
+  },
+  {
+   "clip": "0161",
+   "src_s": 10.3,
+   "src_e": 13.333,
+   "out_s": 8.967,
+   "gap": 0.0
+  },
+  {
+   "clip": "0161",
+   "src_s": 13.7,
+   "src_e": 16.3,
+   "out_s": 12.0,
+   "gap": 0.133
+  },
+  {
+   "clip": "0161",
+   "src_s": 16.833,
+   "src_e": 19.8,
+   "out_s": 14.733,
+   "gap": 0.0
+  },
+  {
+   "clip": "0161",
+   "src_s": 20.233,
+   "src_e": 22.067,
+   "out_s": 17.7,
+   "gap": 0.133
+  },
+  {
+   "clip": "0161",
+   "src_s": 21.9,
+   "src_e": 22.367,
+   "out_s": 19.667,
+   "gap": 0.0
+  },
+  {
+   "clip": "0161",
+   "src_s": 22.667,
+   "src_e": 25.333,
+   "out_s": 20.133,
+   "gap": 0.0
+  },
+  {
+   "clip": "0161",
+   "src_s": 25.767,
+   "src_e": 26.567,
+   "out_s": 22.8,
+   "gap": 0.0
+  },
+  {
+   "clip": "0161",
+   "src_s": 26.9,
+   "src_e": 29.333,
+   "out_s": 23.6,
+   "gap": 0.133
+  },
+  {
+   "clip": "0161",
+   "src_s": 29.167,
+   "src_e": 34.0,
+   "out_s": 26.167,
+   "gap": 0.0
+  },
+  {
+   "clip": "0161",
+   "src_s": 34.767,
+   "src_e": 35.333,
+   "out_s": 31.0,
+   "gap": 0.133
+  },
+  {
+   "clip": "0161",
+   "src_s": 35.167,
+   "src_e": 39.067,
+   "out_s": 31.7,
+   "gap": 0.133
+  },
+  {
+   "clip": "0161",
+   "src_s": 39.867,
+   "src_e": 43.9,
+   "out_s": 35.733,
+   "gap": 0.133
+  },
+  {
+   "clip": "0161",
+   "src_s": 44.367,
+   "src_e": 46.967,
+   "out_s": 39.9,
+   "gap": 0.3
+  },
+  {
+   "clip": "0161",
+   "src_s": 48.533,
+   "src_e": 49.7,
+   "out_s": 42.8,
+   "gap": 0.133
+  },
+  {
+   "clip": "0161",
+   "src_s": 52.367,
+   "src_e": 54.8,
+   "out_s": 44.1,
+   "gap": 0.0
+  },
+  {
+   "clip": "0161",
+   "src_s": 55.3,
+   "src_e": 55.867,
+   "out_s": 46.533,
+   "gap": 0.133
+  },
+  {
+   "clip": "0161",
+   "src_s": 55.733,
+   "src_e": 55.967,
+   "out_s": 47.233,
+   "gap": 0.0
+  },
+  {
+   "clip": "0161",
+   "src_s": 56.233,
+   "src_e": 58.267,
+   "out_s": 47.467,
+   "gap": 0.0
+  },
+  {
+   "clip": "0161",
+   "src_s": 58.7,
+   "src_e": 60.133,
+   "out_s": 49.5,
+   "gap": 0.3
+  },
+  {
+   "clip": "0161",
+   "src_s": 61.233,
+   "src_e": 63.5,
+   "out_s": 51.233,
+   "gap": 0.0
+  },
+  {
+   "clip": "0161",
+   "src_s": 63.867,
+   "src_e": 66.367,
+   "out_s": 53.5,
+   "gap": 0.133
+  },
+  {
+   "clip": "0161",
+   "src_s": 66.2,
+   "src_e": 66.4,
+   "out_s": 56.133,
+   "gap": 0.0
+  },
+  {
+   "clip": "0161",
+   "src_s": 66.7,
+   "src_e": 67.567,
+   "out_s": 56.333,
+   "gap": 0.133
+  },
+  {
+   "clip": "0161",
+   "src_s": 68.267,
+   "src_e": 69.267,
+   "out_s": 57.333,
+   "gap": 0.133
+  },
+  {
+   "clip": "0161",
+   "src_s": 69.133,
+   "src_e": 71.967,
+   "out_s": 58.467,
+   "gap": 0.3
+  },
+  {
+   "clip": "0161",
+   "src_s": 74.067,
+   "src_e": 75.3,
+   "out_s": 61.6,
+   "gap": 0.133
+  },
+  {
+   "clip": "0161",
+   "src_s": 75.133,
+   "src_e": 77.8,
+   "out_s": 62.967,
+   "gap": 0.133
+  },
+  {
+   "clip": "0161",
+   "src_s": 78.467,
+   "src_e": 80.633,
+   "out_s": 65.767,
+   "gap": 0.133
+  },
+  {
+   "clip": "0161",
+   "src_s": 90.233,
+   "src_e": 91.133,
+   "out_s": 68.067,
+   "gap": 0.0
+  },
+  {
+   "clip": "0161",
+   "src_s": 91.533,
+   "src_e": 93.533,
+   "out_s": 68.967,
+   "gap": 0.133
+  },
+  {
+   "clip": "0161",
+   "src_s": 94.5,
+   "src_e": 98.433,
+   "out_s": 71.1,
+   "gap": 0.133
+  },
+  {
+   "clip": "0161",
+   "src_s": 101.133,
+   "src_e": 102.433,
+   "out_s": 75.167,
+   "gap": 0.133
+  },
+  {
+   "clip": "0161",
+   "src_s": 103.467,
+   "src_e": 105.733,
+   "out_s": 76.6,
+   "gap": 0.133
+  },
+  {
+   "clip": "0161",
+   "src_s": 106.3,
+   "src_e": 107.467,
+   "out_s": 79.0,
+   "gap": 0.133
+  },
+  {
+   "clip": "0161",
+   "src_s": 107.3,
+   "src_e": 109.567,
+   "out_s": 80.3,
+   "gap": 0.133
+  },
+  {
+   "clip": "0161",
+   "src_s": 111.433,
+   "src_e": 112.7,
+   "out_s": 82.7,
+   "gap": 0.3
+  },
+  {
+   "clip": "0162",
+   "src_s": 1.567,
+   "src_e": 2.933,
+   "out_s": 84.267,
+   "gap": 0.133
+  },
+  {
+   "clip": "0162",
+   "src_s": 5.2,
+   "src_e": 8.5,
+   "out_s": 85.767,
+   "gap": 0.133
+  },
+  {
+   "clip": "0162",
+   "src_s": 10.533,
+   "src_e": 13.7,
+   "out_s": 89.2,
+   "gap": 0.0
+  },
+  {
+   "clip": "0162",
+   "src_s": 14.167,
+   "src_e": 14.933,
+   "out_s": 92.367,
+   "gap": 0.0
+  },
+  {
+   "clip": "0162",
+   "src_s": 31.933,
+   "src_e": 33.533,
+   "out_s": 93.133,
+   "gap": 0.0,
+   "hold": 27
+  },
+  {
+   "clip": "0162",
+   "src_s": 14.867,
+   "src_e": 17.067,
+   "out_s": 94.733,
+   "gap": 0.0
+  },
+  {
+   "clip": "0162",
+   "src_s": 3.133,
+   "src_e": 5.133,
+   "out_s": 96.933,
+   "gap": 0.0,
+   "hold": 28
+  },
+  {
+   "clip": "0162",
+   "src_s": 16.967,
+   "src_e": 17.933,
+   "out_s": 98.933,
+   "gap": 0.0
+  },
+  {
+   "clip": "0162",
+   "src_s": 18.433,
+   "src_e": 20.667,
+   "out_s": 99.9,
+   "gap": 0.133
+  },
+  {
+   "clip": "0162",
+   "src_s": 21.733,
+   "src_e": 23.167,
+   "out_s": 102.267,
+   "gap": 0.0
+  },
+  {
+   "clip": "0162",
+   "src_s": 23.167,
+   "src_e": 24.667,
+   "out_s": 103.7,
+   "gap": 0.0,
+   "hold": 30
+  },
+  {
+   "clip": "0162",
+   "src_s": 24.7,
+   "src_e": 28.733,
+   "out_s": 105.2,
+   "gap": 0.133
+  },
+  {
+   "clip": "0162",
+   "src_s": 29.367,
+   "src_e": 31.933,
+   "out_s": 109.367,
+   "gap": 0.133
+  },
+  {
+   "clip": "0162",
+   "src_s": 33.667,
+   "src_e": 37.9,
+   "out_s": 112.067,
+   "gap": 0.133
+  },
+  {
+   "clip": "0162",
+   "src_s": 37.733,
+   "src_e": 41.133,
+   "out_s": 116.433,
+   "gap": 0.133
+  },
+  {
+   "clip": "0162",
+   "src_s": 40.967,
+   "src_e": 43.167,
+   "out_s": 119.967,
+   "gap": 0.133
+  },
+  {
+   "clip": "0162",
+   "src_s": 44.967,
+   "src_e": 45.9,
+   "out_s": 122.3,
+   "gap": 0.3
+  },
+  {
+   "clip": "0162",
+   "src_s": 46.167,
+   "src_e": 49.133,
+   "out_s": 123.533,
+   "gap": 0.133
+  },
+  {
+   "clip": "0163",
+   "src_s": 0.467,
+   "src_e": 4.033,
+   "out_s": 126.633,
+   "gap": 0.0
+  },
+  {
+   "clip": "0163",
+   "src_s": 4.333,
+   "src_e": 5.867,
+   "out_s": 130.2,
+   "gap": 0.3
+  },
+  {
+   "clip": "0163",
+   "src_s": 5.8,
+   "src_e": 6.733,
+   "out_s": 132.033,
+   "gap": 0.0
+  },
+  {
+   "clip": "0163",
+   "src_s": 7.133,
+   "src_e": 8.7,
+   "out_s": 132.967,
+   "gap": 0.133
+  },
+  {
+   "clip": "0163",
+   "src_s": 9.667,
+   "src_e": 11.833,
+   "out_s": 134.667,
+   "gap": 0.133
+  },
+  {
+   "clip": "0163",
+   "src_s": 16.033,
+   "src_e": 16.467,
+   "out_s": 136.967,
+   "gap": 0.0
+  },
+  {
+   "clip": "0163",
+   "src_s": 16.9,
+   "src_e": 19.933,
+   "out_s": 137.4,
+   "gap": 0.3
+  },
+  {
+   "clip": "0163",
+   "src_s": 19.767,
+   "src_e": 22.433,
+   "out_s": 140.733,
+   "gap": 0.133
+  },
+  {
+   "clip": "0163",
+   "src_s": 24.933,
+   "src_e": 25.3,
+   "out_s": 143.533,
+   "gap": 0.133
+  },
+  {
+   "clip": "0163",
+   "src_s": 27.333,
+   "src_e": 28.733,
+   "out_s": 144.033,
+   "gap": 0.133
+  },
+  {
+   "clip": "0163",
+   "src_s": 28.567,
+   "src_e": 32.5,
+   "out_s": 145.567,
+   "gap": 0.133
+  },
+  {
+   "clip": "0163",
+   "src_s": 33.667,
+   "src_e": 35.933,
+   "out_s": 149.633,
+   "gap": 0.133
+  },
+  {
+   "clip": "0163",
+   "src_s": 36.633,
+   "src_e": 39.167,
+   "out_s": 152.033,
+   "gap": 0.133
+  },
+  {
+   "clip": "0163",
+   "src_s": 41.4,
+   "src_e": 42.867,
+   "out_s": 154.7,
+   "gap": 0.133
+  },
+  {
+   "clip": "0163",
+   "src_s": 43.533,
+   "src_e": 45.467,
+   "out_s": 156.3,
+   "gap": 0.3
+  },
+  {
+   "clip": "0164",
+   "src_s": 0.0,
+   "src_e": 3.1,
+   "out_s": 158.533,
+   "gap": 0.0
+  },
+  {
+   "clip": "0164",
+   "src_s": 3.567,
+   "src_e": 4.7,
+   "out_s": 161.633,
+   "gap": 0.133
+  },
+  {
+   "clip": "0164",
+   "src_s": 5.133,
+   "src_e": 6.967,
+   "out_s": 162.9,
+   "gap": 0.3
+  },
+  {
+   "clip": "0165",
+   "src_s": 2.633,
+   "src_e": 5.333,
+   "out_s": 165.033,
+   "gap": 0.133
+  },
+  {
+   "clip": "0165",
+   "src_s": 6.733,
+   "src_e": 9.1,
+   "out_s": 167.867,
+   "gap": 0.133
+  },
+  {
+   "clip": "0165",
+   "src_s": 9.467,
+   "src_e": 11.033,
+   "out_s": 170.367,
+   "gap": 0.133
+  },
+  {
+   "clip": "0168",
+   "src_s": 0.467,
+   "src_e": 2.633,
+   "out_s": 172.067,
+   "gap": 0.0
+  },
+  {
+   "clip": "0168",
+   "src_s": 2.9,
+   "src_e": 4.7,
+   "out_s": 174.233,
+   "gap": 0.0
+  },
+  {
+   "clip": "0168",
+   "src_s": 4.967,
+   "src_e": 8.2,
+   "out_s": 176.033,
+   "gap": 0.133
+  },
+  {
+   "clip": "0168",
+   "src_s": 9.433,
+   "src_e": 10.633,
+   "out_s": 179.4,
+   "gap": 0.133
+  },
+  {
+   "clip": "0168",
+   "src_s": 10.567,
+   "src_e": 11.833,
+   "out_s": 180.733,
+   "gap": 0.133
+  },
+  {
+   "clip": "0168",
+   "src_s": 13.433,
+   "src_e": 15.433,
+   "out_s": 182.133,
+   "gap": 0.133
+  },
+  {
+   "clip": "0168",
+   "src_s": 15.367,
+   "src_e": 16.733,
+   "out_s": 184.267,
+   "gap": 0.0
+  },
+  {
+   "clip": "0168",
+   "src_s": 17.267,
+   "src_e": 18.467,
+   "out_s": 185.633,
+   "gap": 0.3
+  },
+  {
+   "clip": "0168",
+   "src_s": 21.833,
+   "src_e": 23.367,
+   "out_s": 187.133,
+   "gap": 0.0
+  },
+  {
+   "clip": "0168",
+   "src_s": 23.767,
+   "src_e": 23.967,
+   "out_s": 188.667,
+   "gap": 0.133
+  },
+  {
+   "clip": "0168",
+   "src_s": 24.333,
+   "src_e": 25.9,
+   "out_s": 189.0,
+   "gap": 0.0
+  },
+  {
+   "clip": "0168",
+   "src_s": 26.467,
+   "src_e": 27.033,
+   "out_s": 190.567,
+   "gap": 0.133
+  },
+  {
+   "clip": "0168",
+   "src_s": 26.867,
+   "src_e": 27.667,
+   "out_s": 191.267,
+   "gap": 0.0
+  },
+  {
+   "clip": "0168",
+   "src_s": 28.267,
+   "src_e": 30.3,
+   "out_s": 192.067,
+   "gap": 0.133
+  },
+  {
+   "clip": "0168",
+   "src_s": 30.133,
+   "src_e": 33.333,
+   "out_s": 194.233,
+   "gap": 0.133
+  },
+  {
+   "clip": "0168",
+   "src_s": 33.167,
+   "src_e": 33.4,
+   "out_s": 197.567,
+   "gap": 0.0
+  },
+  {
+   "clip": "0168",
+   "src_s": 33.667,
+   "src_e": 34.567,
+   "out_s": 197.8,
+   "gap": 0.0
+  },
+  {
+   "clip": "0168",
+   "src_s": 35.133,
+   "src_e": 37.833,
+   "out_s": 198.7,
+   "gap": 0.0
+  },
+  {
+   "clip": "0168",
+   "src_s": 38.267,
+   "src_e": 41.733,
+   "out_s": 201.4,
+   "gap": 0.133
+  },
+  {
+   "clip": "0168",
+   "src_s": 41.567,
+   "src_e": 44.033,
+   "out_s": 205.0,
+   "gap": 0.133
+  },
+  {
+   "clip": "0168",
+   "src_s": 44.967,
+   "src_e": 46.433,
+   "out_s": 207.6,
+   "gap": 0.3
+  },
+  {
+   "clip": "0169",
+   "src_s": 2.1,
+   "src_e": 4.433,
+   "out_s": 209.367,
+   "gap": 0.133
+  },
+  {
+   "clip": "0169",
+   "src_s": 4.367,
+   "src_e": 6.367,
+   "out_s": 211.833,
+   "gap": 0.133
+  },
+  {
+   "clip": "0169",
+   "src_s": 7.767,
+   "src_e": 9.3,
+   "out_s": 213.967,
+   "gap": 0.0
+  },
+  {
+   "clip": "0169",
+   "src_s": 9.833,
+   "src_e": 11.133,
+   "out_s": 215.5,
+   "gap": 0.133
+  },
+  {
+   "clip": "0169",
+   "src_s": 11.633,
+   "src_e": 15.433,
+   "out_s": 216.933,
+   "gap": 0.3
+  },
+  {
+   "clip": "0169",
+   "src_s": 16.467,
+   "src_e": 19.533,
+   "out_s": 221.033,
+   "gap": 0.0
+  },
+  {
+   "clip": "0169",
+   "src_s": 20.133,
+   "src_e": 22.733,
+   "out_s": 224.1,
+   "gap": 0.0
+  },
+  {
+   "clip": "0169",
+   "src_s": 23.2,
+   "src_e": 24.8,
+   "out_s": 226.7,
+   "gap": 0.133
+  },
+  {
+   "clip": "0169",
+   "src_s": 25.767,
+   "src_e": 26.367,
+   "out_s": 228.433,
+   "gap": 0.0
+  },
+  {
+   "clip": "0169",
+   "src_s": 26.7,
+   "src_e": 27.867,
+   "out_s": 229.033,
+   "gap": 0.0
+  },
+  {
+   "clip": "0169",
+   "src_s": 28.7,
+   "src_e": 30.067,
+   "out_s": 230.2,
+   "gap": 0.133
+  },
+  {
+   "clip": "0169",
+   "src_s": 29.933,
+   "src_e": 31.667,
+   "out_s": 231.7,
+   "gap": 0.3
+  },
+  {
+   "clip": "0169",
+   "src_s": 31.5,
+   "src_e": 32.467,
+   "out_s": 233.733,
+   "gap": 0.0
+  },
+  {
+   "clip": "0169",
+   "src_s": 32.967,
+   "src_e": 35.167,
+   "out_s": 234.7,
+   "gap": 0.133
+  },
+  {
+   "clip": "0169",
+   "src_s": 36.067,
+   "src_e": 37.133,
+   "out_s": 237.033,
+   "gap": 0.133
+  },
+  {
+   "clip": "0169",
+   "src_s": 36.967,
+   "src_e": 38.433,
+   "out_s": 238.233,
+   "gap": 0.0
+  },
+  {
+   "clip": "0169",
+   "src_s": 38.7,
+   "src_e": 39.933,
+   "out_s": 239.7,
+   "gap": 0.133
+  },
+  {
+   "clip": "0169",
+   "src_s": 41.833,
+   "src_e": 43.733,
+   "out_s": 241.067,
+   "gap": 0.133
+  },
+  {
+   "clip": "0169",
+   "src_s": 43.567,
+   "src_e": 45.033,
+   "out_s": 243.1,
+   "gap": 0.0
+  },
+  {
+   "clip": "0169",
+   "src_s": 45.367,
+   "src_e": 46.933,
+   "out_s": 244.567,
+   "gap": 0.3
+  },
+  {
+   "clip": "0170",
+   "src_s": 0.567,
+   "src_e": 4.867,
+   "out_s": 246.433,
+   "gap": 0.0
+  },
+  {
+   "clip": "0170",
+   "src_s": 5.533,
+   "src_e": 7.633,
+   "out_s": 250.733,
+   "gap": 0.133
+  },
+  {
+   "clip": "0170",
+   "src_s": 8.0,
+   "src_e": 11.3,
+   "out_s": 252.967,
+   "gap": 0.0
+  },
+  {
+   "clip": "0170",
+   "src_s": 11.667,
+   "src_e": 13.2,
+   "out_s": 256.267,
+   "gap": 0.0
+  },
+  {
+   "clip": "0170",
+   "src_s": 13.667,
+   "src_e": 14.933,
+   "out_s": 257.8,
+   "gap": 0.3
+  },
+  {
+   "clip": "0170",
+   "src_s": 18.067,
+   "src_e": 20.867,
+   "out_s": 259.367,
+   "gap": 0.133
+  },
+  {
+   "clip": "0170",
+   "src_s": 21.433,
+   "src_e": 24.867,
+   "out_s": 262.3,
+   "gap": 0.133
+  },
+  {
+   "clip": "0170",
+   "src_s": 26.333,
+   "src_e": 26.9,
+   "out_s": 265.867,
+   "gap": 0.0
+  },
+  {
+   "clip": "0170",
+   "src_s": 28.1,
+   "src_e": 28.767,
+   "out_s": 266.433,
+   "gap": 0.133
+  },
+  {
+   "clip": "0170",
+   "src_s": 28.633,
+   "src_e": 30.833,
+   "out_s": 267.233,
+   "gap": 0.133
+  },
+  {
+   "clip": "0170",
+   "src_s": 30.667,
+   "src_e": 31.6,
+   "out_s": 269.567,
+   "gap": 0.0
+  },
+  {
+   "clip": "0170",
+   "src_s": 32.067,
+   "src_e": 35.6,
+   "out_s": 270.5,
+   "gap": 0.133
+  },
+  {
+   "clip": "0170",
+   "src_s": 35.433,
+   "src_e": 37.433,
+   "out_s": 274.167,
+   "gap": 0.3
+  },
+  {
+   "clip": "0170",
+   "src_s": 38.967,
+   "src_e": 41.567,
+   "out_s": 276.467,
+   "gap": 0.133
+  },
+  {
+   "clip": "0170",
+   "src_s": 41.433,
+   "src_e": 42.433,
+   "out_s": 279.2,
+   "gap": 0.3
+  },
+  {
+   "clip": "0171",
+   "src_s": 0.0,
+   "src_e": 2.967,
+   "out_s": 280.5,
+   "gap": 0.133
+  },
+  {
+   "clip": "0171",
+   "src_s": 2.833,
+   "src_e": 3.933,
+   "out_s": 283.6,
+   "gap": 0.0
+  },
+  {
+   "clip": "0171",
+   "src_s": 4.3,
+   "src_e": 6.367,
+   "out_s": 284.7,
+   "gap": 0.133
+  },
+  {
+   "clip": "0171",
+   "src_s": 7.8,
+   "src_e": 11.067,
+   "out_s": 286.9,
+   "gap": 0.133
+  },
+  {
+   "clip": "0171",
+   "src_s": 12.0,
+   "src_e": 13.067,
+   "out_s": 290.3,
+   "gap": 0.0
+  },
+  {
+   "clip": "0171",
+   "src_s": 13.467,
+   "src_e": 19.8,
+   "out_s": 291.367,
+   "gap": 0.133
+  },
+  {
+   "clip": "0171",
+   "src_s": 22.767,
+   "src_e": 25.267,
+   "out_s": 297.833,
+   "gap": 0.133
+  },
+  {
+   "clip": "0171",
+   "src_s": 25.933,
+   "src_e": 26.367,
+   "out_s": 300.467,
+   "gap": 0.0
+  },
+  {
+   "clip": "0171",
+   "src_s": 27.333,
+   "src_e": 28.867,
+   "out_s": 300.9,
+   "gap": 0.3
+  },
+  {
+   "clip": "0171",
+   "src_s": 28.7,
+   "src_e": 31.1,
+   "out_s": 302.733,
+   "gap": 0.0
+  },
+  {
+   "clip": "0171",
+   "src_s": 31.433,
+   "src_e": 32.633,
+   "out_s": 305.133,
+   "gap": 0.0
+  },
+  {
+   "clip": "0171",
+   "src_s": 32.9,
+   "src_e": 35.967,
+   "out_s": 306.333,
+   "gap": 0.3
+  },
+  {
+   "clip": "0171",
+   "src_s": 37.533,
+   "src_e": 39.6,
+   "out_s": 309.7,
+   "gap": 0.133
+  },
+  {
+   "clip": "0171",
+   "src_s": 39.433,
+   "src_e": 41.433,
+   "out_s": 311.9,
+   "gap": 0.0
+  },
+  {
+   "clip": "0171",
+   "src_s": 41.833,
+   "src_e": 43.6,
+   "out_s": 313.9,
+   "gap": 0.0
+  },
+  {
+   "clip": "0171",
+   "src_s": 43.967,
+   "src_e": 46.333,
+   "out_s": 315.667,
+   "gap": 0.133
+  },
+  {
+   "clip": "0171",
+   "src_s": 47.333,
+   "src_e": 47.867,
+   "out_s": 318.167,
+   "gap": 0.0
+  },
+  {
+   "clip": "0171",
+   "src_s": 48.333,
+   "src_e": 49.867,
+   "out_s": 318.7,
+   "gap": 0.0
+  },
+  {
+   "clip": "0171",
+   "src_s": 50.133,
+   "src_e": 50.733,
+   "out_s": 320.233,
+   "gap": 0.133
+  },
+  {
+   "clip": "0171",
+   "src_s": 52.067,
+   "src_e": 53.2,
+   "out_s": 320.967,
+   "gap": 0.133
+  },
+  {
+   "clip": "0171",
+   "src_s": 54.167,
+   "src_e": 55.567,
+   "out_s": 322.233,
+   "gap": 0.133
+  },
+  {
+   "clip": "0171",
+   "src_s": 55.433,
+   "src_e": 58.667,
+   "out_s": 323.767,
+   "gap": 0.133
+  },
+  {
+   "clip": "0171",
+   "src_s": 58.5,
+   "src_e": 60.867,
+   "out_s": 327.133,
+   "gap": 0.3
+  },
+  {
+   "clip": "0172",
+   "src_s": 0.767,
+   "src_e": 3.933,
+   "out_s": 329.8,
+   "gap": 0.0
+  },
+  {
+   "clip": "0172",
+   "src_s": 4.367,
+   "src_e": 9.067,
+   "out_s": 332.967,
+   "gap": 0.0
+  },
+  {
+   "clip": "0172",
+   "src_s": 11.533,
+   "src_e": 13.867,
+   "out_s": 337.667,
+   "gap": 0.0
+  },
+  {
+   "clip": "0172",
+   "src_s": 14.367,
+   "src_e": 17.033,
+   "out_s": 340.0,
+   "gap": 0.0
+  },
+  {
+   "clip": "0172",
+   "src_s": 17.467,
+   "src_e": 19.767,
+   "out_s": 342.667,
+   "gap": 0.0
+  },
+  {
+   "clip": "0172",
+   "src_s": 20.067,
+   "src_e": 22.767,
+   "out_s": 344.967,
+   "gap": 0.133
+  },
+  {
+   "clip": "0172",
+   "src_s": 22.667,
+   "src_e": 23.533,
+   "out_s": 347.8,
+   "gap": 0.3
+  },
+  {
+   "clip": "0172",
+   "src_s": 27.033,
+   "src_e": 31.0,
+   "out_s": 348.967,
+   "gap": 0.133
+  },
+  {
+   "clip": "0172",
+   "src_s": 30.833,
+   "src_e": 32.8,
+   "out_s": 353.067,
+   "gap": 0.0
+  },
+  {
+   "clip": "0172",
+   "src_s": 33.167,
+   "src_e": 35.767,
+   "out_s": 355.033,
+   "gap": 0.133
+  },
+  {
+   "clip": "0172",
+   "src_s": 35.633,
+   "src_e": 36.833,
+   "out_s": 357.767,
+   "gap": 0.133
+  },
+  {
+   "clip": "0172",
+   "src_s": 36.667,
+   "src_e": 39.333,
+   "out_s": 359.1,
+   "gap": 0.0
+  },
+  {
+   "clip": "0172",
+   "src_s": 39.633,
+   "src_e": 40.433,
+   "out_s": 361.767,
+   "gap": 0.133
+  },
+  {
+   "clip": "0172",
+   "src_s": 40.267,
+   "src_e": 41.9,
+   "out_s": 362.7,
+   "gap": 0.133
+  },
+  {
+   "clip": "0172",
+   "src_s": 42.8,
+   "src_e": 45.933,
+   "out_s": 364.467,
+   "gap": 0.3
+  },
+  {
+   "clip": "0172",
+   "src_s": 46.7,
+   "src_e": 48.233,
+   "out_s": 367.9,
+   "gap": 0.133
+  },
+  {
+   "clip": "0172",
+   "src_s": 49.733,
+   "src_e": 51.167,
+   "out_s": 369.567,
+   "gap": 0.133
+  },
+  {
+   "clip": "0172",
+   "src_s": 52.033,
+   "src_e": 56.767,
+   "out_s": 371.133,
+   "gap": 0.133
+  },
+  {
+   "clip": "0172",
+   "src_s": 56.633,
+   "src_e": 58.167,
+   "out_s": 376.0,
+   "gap": 0.133
+  },
+  {
+   "clip": "0172",
+   "src_s": 58.8,
+   "src_e": 59.2,
+   "out_s": 377.667,
+   "gap": 0.0
+  },
+  {
+   "clip": "0172",
+   "src_s": 59.2,
+   "src_e": 59.733,
+   "out_s": 378.067,
+   "gap": 0.0,
+   "hold": 130
+  }
+ ],
+ "holds": [
+  {
+   "after": 27,
+   "out_s": 93.133,
+   "out_e": 94.733
+  },
+  {
+   "after": 28,
+   "out_s": 96.933,
+   "out_e": 98.933
+  },
+  {
+   "after": 30,
+   "out_s": 103.7,
+   "out_e": 105.2
+  },
+  {
+   "after": 130,
+   "out_s": 378.067,
+   "out_e": 378.6
+  }
+ ],
+ "silence_cut": 27.67,
+ "cues": [
+  {
+   "pid": "N01",
+   "clip": "0161",
+   "s": 0.58,
+   "e": 1.76,
+   "zh": "Hello，大家好，我是悠一。",
+   "en": "Hello everyone, I'm Yui.",
+   "skip": [],
+   "out_s": 0.047,
+   "out_e": 1.227
+  },
+  {
+   "pid": "N01",
+   "clip": "0161",
+   "s": 2.06,
+   "e": 4.26,
+   "zh": "上个视频被炸得有点眩晕，瘫坐了。",
+   "en": "My last video blew me away so hard I'm still a bit dizzy.",
+   "skip": [],
+   "out_s": 1.4,
+   "out_e": 3.46
+  },
+  {
+   "pid": "N01",
+   "clip": "0161",
+   "s": 4.42,
+   "e": 9.72,
+   "zh": "这期视频来教大家，如何用 Opus 5.5 上手做第一个视频。",
+   "en": "Today I'll show you how to make your first video with Opus 5.5.",
+   "skip": [],
+   "out_s": 3.62,
+   "out_e": 8.553
+  },
+  {
+   "pid": "N02",
+   "clip": "0161",
+   "s": 10.36,
+   "e": 13.26,
+   "zh": "Opus 5.5 这个模型，是 9 月 22 号发布的，",
+   "en": "Opus 5.5 was released on September 22,",
+   "skip": [],
+   "out_s": 9.027,
+   "out_e": 11.927
+  },
+  {
+   "pid": "N02",
+   "clip": "0161",
+   "s": 13.74,
+   "e": 16.2,
+   "zh": "它现在的能力，可以说是最强的。",
+   "en": "and it's arguably the most capable model right now.",
+   "skip": [],
+   "out_s": 12.04,
+   "out_e": 14.5
+  },
+  {
+   "pid": "N02",
+   "clip": "0161",
+   "s": 16.9,
+   "e": 21.96,
+   "zh": "当时发布之后，它的价格也降了 20%，",
+   "en": "After launch, its price also dropped by 20%,",
+   "skip": [],
+   "out_s": 14.8,
+   "out_e": 19.427
+  },
+  {
+   "pid": "N02",
+   "clip": "0161",
+   "s": 21.96,
+   "e": 26.42,
+   "zh": "但是所有人都没有想到的是，它的视觉能力那么强。",
+   "en": "but nobody expected its vision to be this strong.",
+   "skip": [],
+   "out_s": 19.727,
+   "out_e": 23.453
+  },
+  {
+   "pid": "N03",
+   "clip": "0161",
+   "s": 26.82,
+   "e": 29.22,
+   "zh": "因为在 GPT-6 发布的时候，",
+   "en": "Back when GPT-6 came out,",
+   "skip": [],
+   "out_s": 23.6,
+   "out_e": 25.92
+  },
+  {
+   "pid": "N03",
+   "clip": "0161",
+   "s": 29.22,
+   "e": 35.24,
+   "zh": "GPT-6 能用它的能力去做 3D 建模，是很厉害的模型。",
+   "en": "it could do 3D modeling, which is really impressive.",
+   "skip": [],
+   "out_s": 26.22,
+   "out_e": 31.473
+  },
+  {
+   "pid": "N03",
+   "clip": "0161",
+   "s": 35.24,
+   "e": 38.98,
+   "zh": "就比如说视频中这样，它建模了一个客厅，还有一个书房，",
+   "en": "Like in this clip: it modeled a living room and a study,",
+   "skip": [],
+   "out_s": 31.773,
+   "out_e": 35.513
+  },
+  {
+   "pid": "N03",
+   "clip": "0161",
+   "s": 39.92,
+   "e": 43.8,
+   "zh": "然后用户可以跟随镜头自由地穿梭，就像一个游戏。",
+   "en": "and you can follow the camera and move around freely, like a game.",
+   "skip": [],
+   "out_s": 35.787,
+   "out_e": 39.667
+  },
+  {
+   "pid": "N03",
+   "clip": "0161",
+   "s": 44.44,
+   "e": 46.86,
+   "zh": "但是没有人想到，Opus 5.5 能力也这么强。",
+   "en": "But nobody expected Opus 5.5 to be this capable too.",
+   "skip": [],
+   "out_s": 39.973,
+   "out_e": 42.393
+  },
+  {
+   "pid": "N04",
+   "clip": "0161",
+   "s": 48.6,
+   "e": 55.78,
+   "zh": "官方的说法是：这是视觉和电脑操作最强的一个模型，",
+   "en": "Officially, it's the strongest model for vision and computer use,",
+   "skip": [
+    [
+     49.7,
+     52.36
+    ]
+   ],
+   "out_s": 42.867,
+   "out_e": 47.013
+  },
+  {
+   "pid": "N04",
+   "clip": "0161",
+   "s": 55.78,
+   "e": 60.02,
+   "zh": "它能把图表、截图、示意图看得很仔细。",
+   "en": "reading charts, screenshots and diagrams in fine detail.",
+   "skip": [],
+   "out_s": 47.28,
+   "out_e": 50.82
+  },
+  {
+   "pid": "N05",
+   "clip": "0161",
+   "s": 61.3,
+   "e": 66.26,
+   "zh": "那很多人就会有一个问题：为什么 Claude 会生成视频呢？",
+   "en": "So a lot of people ask: how can Claude make videos?",
+   "skip": [],
+   "out_s": 51.3,
+   "out_e": 55.893
+  },
+  {
+   "pid": "N05",
+   "clip": "0161",
+   "s": 66.26,
+   "e": 69.18,
+   "zh": "Claude 本身是多模态的模型，",
+   "en": "Claude itself is a multimodal model,",
+   "skip": [
+    [
+     67.56,
+     68.26
+    ]
+   ],
+   "out_s": 56.193,
+   "out_e": 58.247
+  },
+  {
+   "pid": "N05",
+   "clip": "0161",
+   "s": 69.18,
+   "e": 71.86,
+   "zh": "但是它不能生成音频、图片和视频。",
+   "en": "but it can't generate audio, images or video.",
+   "skip": [],
+   "out_s": 58.513,
+   "out_e": 61.193
+  },
+  {
+   "pid": "N06",
+   "clip": "0161",
+   "s": 74.12,
+   "e": 75.2,
+   "zh": "后来我就问了一下 Claude，",
+   "en": "So I asked Claude,",
+   "skip": [],
+   "out_s": 61.653,
+   "out_e": 62.733
+  },
+  {
+   "pid": "N06",
+   "clip": "0161",
+   "s": 75.2,
+   "e": 77.7,
+   "zh": "他说每一帧都是他自己画出来的，",
+   "en": "and it said it draws every frame itself,",
+   "skip": [],
+   "out_s": 63.033,
+   "out_e": 65.533
+  },
+  {
+   "pid": "N06",
+   "clip": "0161",
+   "s": 78.54,
+   "e": 80.55,
+   "zh": "就是每一个像素，都是他自己画出来的。",
+   "en": "every single pixel.",
+   "skip": [],
+   "out_s": 65.84,
+   "out_e": 67.85
+  },
+  {
+   "pid": "N06",
+   "clip": "0161",
+   "s": 90.28,
+   "e": 93.44,
+   "zh": "就像图中这样，它是一个一个像素，",
+   "en": "Like in this picture, pixel by pixel,",
+   "skip": [],
+   "out_s": 68.113,
+   "out_e": 70.873
+  },
+  {
+   "pid": "N06",
+   "clip": "0161",
+   "s": 94.56,
+   "e": 98.32,
+   "zh": "用 01 或者 EF 这些之前规定好的颜色画出来的。",
+   "en": "using colors it defined beforehand, like 01 or EF.",
+   "skip": [],
+   "out_s": 71.16,
+   "out_e": 74.92
+  },
+  {
+   "pid": "N06",
+   "clip": "0161",
+   "s": 101.18,
+   "e": 102.32,
+   "zh": "我觉得真的就很离谱。",
+   "en": "Honestly, it's wild.",
+   "skip": [],
+   "out_s": 75.213,
+   "out_e": 76.353
+  },
+  {
+   "pid": "N06",
+   "clip": "0161",
+   "s": 103.54,
+   "e": 107.36,
+   "zh": "然后它画完之后，会自己截图，自己用视觉能力去查，",
+   "en": "After drawing, it screenshots its own work and checks it with its own vision,",
+   "skip": [
+    [
+     105.74,
+     106.3
+    ]
+   ],
+   "out_s": 76.673,
+   "out_e": 80.06
+  },
+  {
+   "pid": "N06",
+   "clip": "0161",
+   "s": 107.36,
+   "e": 109.46,
+   "zh": "看一下是不是和我要求里的一样。",
+   "en": "to see if it matches what I asked for.",
+   "skip": [],
+   "out_s": 80.36,
+   "out_e": 82.46
+  },
+  {
+   "pid": "N06",
+   "clip": "0161",
+   "s": 111.48,
+   "e": 112.6,
+   "zh": "下面就是几个例子。",
+   "en": "Here are a few examples.",
+   "skip": [],
+   "out_s": 82.747,
+   "out_e": 83.867
+  },
+  {
+   "pid": "N07",
+   "clip": "0162",
+   "s": 1.62,
+   "e": 8.4,
+   "zh": "第一个例子，就是我用这一段提示词，让他做一个银魂的动漫，",
+   "en": "The first example: I used this prompt to have it make a Gintama anime,",
+   "skip": [
+    [
+     2.95,
+     5.2
+    ]
+   ],
+   "out_s": 84.32,
+   "out_e": 88.967
+  },
+  {
+   "pid": "N07",
+   "clip": "0162",
+   "s": 10.58,
+   "e": 14.82,
+   "zh": "从主剧情那么多集里面，去挑一些经典场景。",
+   "en": "picking classic scenes from the whole main storyline.",
+   "skip": [],
+   "hold": [
+    1.6,
+    "0162",
+    31.95
+   ],
+   "out_s": 89.247,
+   "out_e": 93.02
+  },
+  {
+   "pid": "N07",
+   "clip": "0162",
+   "s": 14.92,
+   "e": 16.96,
+   "zh": "第二个是火影忍者，他做得也很好。",
+   "en": "The second is Naruto. It did a great job too.",
+   "skip": [],
+   "hold": [
+    2.0,
+    "0162",
+    3.15
+   ],
+   "out_s": 94.787,
+   "out_e": 96.827
+  },
+  {
+   "pid": "N07",
+   "clip": "0162",
+   "s": 17.04,
+   "e": 17.88,
+   "zh": "第三个是 JoJo 的，",
+   "en": "The third is JoJo.",
+   "skip": [],
+   "out_s": 99.007,
+   "out_e": 99.847
+  },
+  {
+   "pid": "N07",
+   "clip": "0162",
+   "s": 18.36,
+   "e": 23.08,
+   "zh": "提示词和之前差不多，也是让他做了比较基础的场景。",
+   "en": "Similar prompt, also asking for some basic scenes.",
+   "skip": [
+    [
+     20.66,
+     21.74
+    ]
+   ],
+   "hold": [
+    1.5,
+    "0162",
+    23.18
+   ],
+   "out_s": 99.9,
+   "out_e": 103.613
+  },
+  {
+   "pid": "N07",
+   "clip": "0162",
+   "s": 24.76,
+   "e": 28.64,
+   "zh": "然后第四个，就是我之前发布的模型「从夯到拉」的视频，",
+   "en": "The fourth is my earlier video ranking AI models, from god-tier to trash.",
+   "skip": [],
+   "out_s": 105.26,
+   "out_e": 109.14
+  },
+  {
+   "pid": "N07",
+   "clip": "0162",
+   "s": 29.44,
+   "e": 31.84,
+   "zh": "可以看到这个视频里的内容，",
+   "en": "Look at what's in this video:",
+   "skip": [],
+   "out_s": 109.44,
+   "out_e": 111.84
+  },
+  {
+   "pid": "N07",
+   "clip": "0162",
+   "s": 33.72,
+   "e": 37.8,
+   "zh": "不管是配音、配色，还是角色说话的嘴巴",
+   "en": "the voice, the colors, even the character's mouth",
+   "skip": [],
+   "out_s": 112.12,
+   "out_e": 116.2
+  },
+  {
+   "pid": "N07",
+   "clip": "0162",
+   "s": 37.8,
+   "e": 41.02,
+   "zh": "跟着音频一张一合，",
+   "en": "opening and closing with the audio.",
+   "skip": [],
+   "out_s": 116.5,
+   "out_e": 119.72
+  },
+  {
+   "pid": "N07",
+   "clip": "0162",
+   "s": 41.02,
+   "e": 43.06,
+   "zh": "这些都是他自己去截图、自己去看的。",
+   "en": "It checked all of that itself, by taking screenshots and looking.",
+   "skip": [],
+   "out_s": 120.02,
+   "out_e": 122.06
+  },
+  {
+   "pid": "N07",
+   "clip": "0162",
+   "s": 45.04,
+   "e": 45.8,
+   "zh": "就很震惊。",
+   "en": "Pretty shocking.",
+   "skip": [],
+   "out_s": 122.373,
+   "out_e": 123.133
+  },
+  {
+   "pid": "N08",
+   "clip": "0162",
+   "s": 46.24,
+   "e": 49.04,
+   "zh": "那 Claude 不是扩散模型，这些视频是怎么来的呢？",
+   "en": "So if Claude isn't a diffusion model, where do these videos come from?",
+   "skip": [],
+   "cut": true,
+   "out_s": 123.607,
+   "out_e": 126.407
+  },
+  {
+   "pid": "N08",
+   "clip": "0163",
+   "s": 0.52,
+   "e": 3.54,
+   "zh": "Claude 既然不是扩散模型，是一帧一帧画出来的，",
+   "en": "Since Claude isn't a diffusion model and draws frame by frame,",
+   "skip": [],
+   "out_s": 126.687,
+   "out_e": 129.707
+  },
+  {
+   "pid": "N08",
+   "clip": "0163",
+   "s": 3.7,
+   "e": 5.76,
+   "zh": "那么扩散模型是怎么做的呢？",
+   "en": "how does a diffusion model work?",
+   "skip": [],
+   "out_s": 129.867,
+   "out_e": 131.627
+  },
+  {
+   "pid": "N09",
+   "clip": "0163",
+   "s": 5.86,
+   "e": 8.6,
+   "zh": "扩散模型不能很好地生成文字，",
+   "en": "Diffusion models aren't good at generating text,",
+   "skip": [],
+   "out_s": 132.093,
+   "out_e": 134.433
+  },
+  {
+   "pid": "N09",
+   "clip": "0163",
+   "s": 9.74,
+   "e": 18.16,
+   "zh": "因为它是从一个随机噪点里，把它还原出来一个图像，",
+   "en": "because they restore an image out of random noise,",
+   "skip": [
+    [
+     11.82,
+     16.02
+    ]
+   ],
+   "out_s": 134.74,
+   "out_e": 138.66
+  },
+  {
+   "pid": "N09",
+   "clip": "0163",
+   "s": 18.4,
+   "e": 19.84,
+   "zh": "或者说还原出来一个视频。",
+   "en": "or a video.",
+   "skip": [],
+   "out_s": 138.9,
+   "out_e": 140.34
+  },
+  {
+   "pid": "N10",
+   "clip": "0163",
+   "s": 19.84,
+   "e": 22.34,
+   "zh": "但是大语言模型，是一个字一个字地往外写的。",
+   "en": "But a large language model writes one word at a time.",
+   "skip": [],
+   "out_s": 140.807,
+   "out_e": 143.307
+  },
+  {
+   "pid": "N10",
+   "clip": "0163",
+   "s": 24.98,
+   "e": 28.62,
+   "zh": "所以，我个人主观来看，",
+   "en": "So, in my personal opinion,",
+   "skip": [
+    [
+     25.3,
+     27.32
+    ]
+   ],
+   "out_s": 143.58,
+   "out_e": 145.32
+  },
+  {
+   "pid": "N10",
+   "clip": "0163",
+   "s": 28.62,
+   "e": 32.4,
+   "zh": "扩散模型并不适合做含有文字、或者文字太多的图像，",
+   "en": "diffusion models don't suit images with text, or lots of text.",
+   "skip": [],
+   "out_s": 145.62,
+   "out_e": 149.4
+  },
+  {
+   "pid": "N10",
+   "clip": "0163",
+   "s": 33.74,
+   "e": 35.84,
+   "zh": "这些确实应该交给大语言模型，",
+   "en": "Those really should go to LLMs,",
+   "skip": [],
+   "out_s": 149.707,
+   "out_e": 151.807
+  },
+  {
+   "pid": "N10",
+   "clip": "0163",
+   "s": 36.68,
+   "e": 39.08,
+   "zh": "像 Opus 5.5 这样，一个一个地生成。",
+   "en": "like Opus 5.5, generating it piece by piece.",
+   "skip": [],
+   "out_s": 152.08,
+   "out_e": 154.48
+  },
+  {
+   "pid": "N10",
+   "clip": "0163",
+   "s": 41.47,
+   "e": 42.76,
+   "zh": "这个就很反直觉了：",
+   "en": "Which is really counterintuitive:",
+   "skip": [],
+   "out_s": 154.77,
+   "out_e": 156.06
+  },
+  {
+   "pid": "N10",
+   "clip": "0163",
+   "s": 43.58,
+   "e": 45.38,
+   "zh": "一个 LLM，让它去做视频。",
+   "en": "an LLM making videos.",
+   "skip": [],
+   "out_s": 156.347,
+   "out_e": 158.147
+  },
+  {
+   "pid": "N11",
+   "clip": "0164",
+   "s": 0.0,
+   "e": 2.96,
+   "zh": "像我之前说的，它一秒会做 30 张图，",
+   "en": "As I said, it makes 30 images per second,",
+   "skip": [],
+   "out_s": 158.533,
+   "out_e": 161.493
+  },
+  {
+   "pid": "N11",
+   "clip": "0164",
+   "s": 3.18,
+   "e": 4.6,
+   "zh": "再加一条声音。",
+   "en": "plus an audio track.",
+   "skip": [],
+   "out_s": 161.633,
+   "out_e": 162.667
+  },
+  {
+   "pid": "N11",
+   "clip": "0164",
+   "s": 5.18,
+   "e": 6.88,
+   "zh": "20 秒，等于画了 600 张图。",
+   "en": "So 20 seconds means 600 drawn images.",
+   "skip": [],
+   "out_s": 162.947,
+   "out_e": 164.647
+  },
+  {
+   "pid": "N12",
+   "clip": "0165",
+   "s": 2.68,
+   "e": 5.24,
+   "zh": "它会放在一个 HTML 页面里，",
+   "en": "It puts them in an HTML page,",
+   "skip": [],
+   "out_s": 165.08,
+   "out_e": 167.64
+  },
+  {
+   "pid": "N12",
+   "clip": "0165",
+   "s": 6.78,
+   "e": 9.0,
+   "zh": "每一帧都画出来之后，去进行渲染，",
+   "en": "and once every frame is drawn, it renders them",
+   "skip": [],
+   "out_s": 167.913,
+   "out_e": 170.133
+  },
+  {
+   "pid": "N12",
+   "clip": "0165",
+   "s": 9.54,
+   "e": 10.92,
+   "zh": "用 ffmpeg。",
+   "en": "with ffmpeg.",
+   "skip": [],
+   "out_s": 170.44,
+   "out_e": 171.82
+  },
+  {
+   "pid": "N12",
+   "clip": "0168",
+   "s": 0.54,
+   "e": 4.58,
+   "zh": "其实视频说到底，就是很多张图片拼在一起的。",
+   "en": "A video is really just lots of images stitched together.",
+   "skip": [],
+   "out_s": 172.14,
+   "out_e": 175.913
+  },
+  {
+   "pid": "N12",
+   "clip": "0168",
+   "s": 4.82,
+   "e": 7.24,
+   "zh": "那 Claude 就是从每张图开始画，",
+   "en": "Claude starts by drawing each image,",
+   "skip": [],
+   "out_s": 176.033,
+   "out_e": 178.307
+  },
+  {
+   "pid": "N12",
+   "clip": "0168",
+   "s": 7.52,
+   "e": 10.52,
+   "zh": "画完之后，把它放在一个浏览器里，",
+   "en": "puts them in a browser once they're drawn,",
+   "skip": [
+    [
+     8.2,
+     9.44
+    ]
+   ],
+   "out_s": 178.587,
+   "out_e": 180.487
+  },
+  {
+   "pid": "N12",
+   "clip": "0168",
+   "s": 10.62,
+   "e": 15.32,
+   "zh": "然后用 ffmpeg 把图片合成一段视频，",
+   "en": "turns the images into a video with ffmpeg,",
+   "skip": [
+    [
+     11.84,
+     13.42
+    ]
+   ],
+   "out_s": 180.787,
+   "out_e": 184.02
+  },
+  {
+   "pid": "N12",
+   "clip": "0168",
+   "s": 15.44,
+   "e": 18.38,
+   "zh": "然后他再自己去抽帧检查。",
+   "en": "and then samples frames to check it.",
+   "skip": [],
+   "out_s": 184.34,
+   "out_e": 186.747
+  },
+  {
+   "pid": "N13",
+   "clip": "0168",
+   "s": 21.88,
+   "e": 26.94,
+   "zh": "那为什么我认为，用写代码的模型去做视频更好？",
+   "en": "So why do I think a coding model is better for making videos?",
+   "skip": [
+    [
+     23.98,
+     24.32
+    ]
+   ],
+   "out_s": 187.18,
+   "out_e": 191.04
+  },
+  {
+   "pid": "N13",
+   "clip": "0168",
+   "s": 26.94,
+   "e": 30.2,
+   "zh": "是因为这个写代码的 LLM，",
+   "en": "Because a coding LLM",
+   "skip": [],
+   "out_s": 191.34,
+   "out_e": 194.0
+  },
+  {
+   "pid": "N13",
+   "clip": "0168",
+   "s": 30.2,
+   "e": 33.22,
+   "zh": "它知道写什么字、写在哪、第几秒出现、怎么动，",
+   "en": "knows what text to write, where it goes, when it appears and how it moves.",
+   "skip": [],
+   "out_s": 194.3,
+   "out_e": 197.32
+  },
+  {
+   "pid": "N13",
+   "clip": "0168",
+   "s": 33.22,
+   "e": 37.74,
+   "zh": "这些东西，语言模型能够精确地定位。",
+   "en": "A language model can pin all of that down precisely.",
+   "skip": [],
+   "out_s": 197.62,
+   "out_e": 201.307
+  },
+  {
+   "pid": "N13",
+   "clip": "0168",
+   "s": 38.16,
+   "e": 41.64,
+   "zh": "而扩散模型，更适合去做一些 3D 模型的渲染，",
+   "en": "Diffusion models are better for things like 3D rendering,",
+   "skip": [],
+   "out_s": 201.4,
+   "out_e": 204.773
+  },
+  {
+   "pid": "N13",
+   "clip": "0168",
+   "s": 41.64,
+   "e": 43.94,
+   "zh": "比如说做一些游戏的过场动画，",
+   "en": "such as game cutscenes,",
+   "skip": [],
+   "out_s": 205.073,
+   "out_e": 207.373
+  },
+  {
+   "pid": "N13",
+   "clip": "0168",
+   "s": 45.04,
+   "e": 46.32,
+   "zh": "或者做一些 AI 短剧。",
+   "en": "or AI short dramas.",
+   "skip": [],
+   "out_s": 207.673,
+   "out_e": 208.953
+  },
+  {
+   "pid": "N14",
+   "clip": "0169",
+   "s": 2.16,
+   "e": 4.32,
+   "zh": "下面这个例子，就是我做的这个视频，",
+   "en": "This next example is a video I made,",
+   "skip": [],
+   "out_s": 209.427,
+   "out_e": 211.587
+  },
+  {
+   "pid": "N14",
+   "clip": "0169",
+   "s": 4.44,
+   "e": 6.28,
+   "zh": "我可以给大家分享一下是怎么做的。",
+   "en": "so let me show you how it was made.",
+   "skip": [],
+   "out_s": 211.907,
+   "out_e": 213.747
+  },
+  {
+   "pid": "N14",
+   "clip": "0169",
+   "s": 7.82,
+   "e": 11.02,
+   "zh": "这个视频里，左下角有角色，",
+   "en": "It has a character in the bottom-left,",
+   "skip": [],
+   "out_s": 214.02,
+   "out_e": 216.687
+  },
+  {
+   "pid": "N14",
+   "clip": "0169",
+   "s": 11.7,
+   "e": 15.34,
+   "zh": "有出现的手写字体，有目录，有进度条。",
+   "en": "handwritten text appearing, a table of contents, and a progress bar.",
+   "skip": [],
+   "out_s": 217.0,
+   "out_e": 220.64
+  },
+  {
+   "pid": "N15",
+   "clip": "0169",
+   "s": 16.52,
+   "e": 19.36,
+   "zh": "一开始肯定是让它先写台本，台本写完了之后，",
+   "en": "First it writes the script, and once it's done,",
+   "skip": [],
+   "out_s": 221.087,
+   "out_e": 223.927
+  },
+  {
+   "pid": "N15",
+   "clip": "0169",
+   "s": 19.84,
+   "e": 21.4,
+   "zh": "我会去进行审核。",
+   "en": "I review it.",
+   "skip": [],
+   "out_s": 224.1,
+   "out_e": 225.367
+  },
+  {
+   "pid": "N15",
+   "clip": "0169",
+   "s": 21.52,
+   "e": 24.7,
+   "zh": "台本里面会包含什么时候转场，有什么内容，",
+   "en": "The script covers when scenes change, what's on screen,",
+   "skip": [],
+   "out_s": 225.487,
+   "out_e": 228.2
+  },
+  {
+   "pid": "N15",
+   "clip": "0169",
+   "s": 25.84,
+   "e": 29.98,
+   "zh": "字幕应该说什么，配音应该用什么样的语气。",
+   "en": "what the subtitles say, and what tone the voiceover takes.",
+   "skip": [],
+   "out_s": 228.507,
+   "out_e": 231.48
+  },
+  {
+   "pid": "N15",
+   "clip": "0169",
+   "s": 30.0,
+   "e": 31.56,
+   "zh": "这些东西我都会帮他设定好。",
+   "en": "I set all of that up for it.",
+   "skip": [],
+   "out_s": 231.767,
+   "out_e": 233.327
+  },
+  {
+   "pid": "N16",
+   "clip": "0169",
+   "s": 31.56,
+   "e": 37.02,
+   "zh": "然后我会把 AI 配音，或者我自己配音的音频发给他。",
+   "en": "Then I send it the audio, either AI voice or my own recording.",
+   "skip": [
+    [
+     35.16,
+     36.06
+    ]
+   ],
+   "out_s": 233.793,
+   "out_e": 237.987
+  },
+  {
+   "pid": "N16",
+   "clip": "0169",
+   "s": 37.02,
+   "e": 43.62,
+   "zh": "发给他之后，他就会根据这个音频的强度去做这个视频，",
+   "en": "It then builds the video around the audio's intensity,",
+   "skip": [
+    [
+     39.92,
+     41.84
+    ]
+   ],
+   "out_s": 238.287,
+   "out_e": 242.853
+  },
+  {
+   "pid": "N16",
+   "clip": "0169",
+   "s": 43.62,
+   "e": 46.82,
+   "zh": "把这个音频一帧一帧地，很好地拼接到视频里。",
+   "en": "matching the audio to the video frame by frame.",
+   "skip": [],
+   "out_s": 243.153,
+   "out_e": 246.02
+  },
+  {
+   "pid": "N17",
+   "clip": "0170",
+   "s": 0.62,
+   "e": 3.94,
+   "zh": "比如说左下角那个角色的动作，它就有很多种，",
+   "en": "Take the character in the bottom-left: it has lots of moves,",
+   "skip": [],
+   "out_s": 246.487,
+   "out_e": 249.807
+  },
+  {
+   "pid": "N17",
+   "clip": "0170",
+   "s": 4.08,
+   "e": 7.52,
+   "zh": "比如说有数一二三、叉腰、说好耶，",
+   "en": "like counting one-two-three, hands on hips, and cheering 'yay'.",
+   "skip": [],
+   "out_s": 249.947,
+   "out_e": 252.72
+  },
+  {
+   "pid": "N17",
+   "clip": "0170",
+   "s": 8.06,
+   "e": 9.64,
+   "zh": "一期我会放 30 个左右，",
+   "en": "I use about 30 of those per episode,",
+   "skip": [],
+   "out_s": 253.027,
+   "out_e": 254.607
+  },
+  {
+   "pid": "N17",
+   "clip": "0170",
+   "s": 9.82,
+   "e": 14.82,
+   "zh": "然后还有一些小手势、句末点头、看向内容，程序都会自动加。",
+   "en": "plus small gestures, nods at sentence ends and glances at the content, added automatically.",
+   "skip": [],
+   "out_s": 254.787,
+   "out_e": 258.953
+  },
+  {
+   "pid": "N18",
+   "clip": "0170",
+   "s": 18.14,
+   "e": 20.78,
+   "zh": "这些东西全都是 AI 自己做出来的。",
+   "en": "All of this is made by the AI itself.",
+   "skip": [],
+   "out_s": 259.44,
+   "out_e": 262.08
+  },
+  {
+   "pid": "N18",
+   "clip": "0170",
+   "s": 21.5,
+   "e": 24.76,
+   "zh": "然后 BGM 和音效，都是 Claude 用 Python 代码合成的，",
+   "en": "The BGM and sound effects are synthesized by Claude in Python,",
+   "skip": [],
+   "out_s": 262.367,
+   "out_e": 265.627
+  },
+  {
+   "pid": "N18",
+   "clip": "0170",
+   "s": 26.4,
+   "e": 28.68,
+   "zh": "就很方便。",
+   "en": "which is really convenient.",
+   "skip": [],
+   "out_s": 265.933,
+   "out_e": 267.013
+  },
+  {
+   "pid": "N18",
+   "clip": "0170",
+   "s": 28.68,
+   "e": 30.74,
+   "zh": "但是这只是一个最基本的要求，",
+   "en": "But that's just the baseline.",
+   "skip": [],
+   "out_s": 267.28,
+   "out_e": 269.34
+  },
+  {
+   "pid": "N18",
+   "clip": "0170",
+   "s": 30.74,
+   "e": 35.5,
+   "zh": "如果说各位朋友想去做一些更高质量的，",
+   "en": "If you want higher quality,",
+   "skip": [],
+   "out_s": 269.64,
+   "out_e": 273.933
+  },
+  {
+   "pid": "N18",
+   "clip": "0170",
+   "s": 35.5,
+   "e": 37.34,
+   "zh": "其实这些配音、音乐都是可以继续找的。",
+   "en": "you can keep looking for better voices and music.",
+   "skip": [],
+   "out_s": 274.233,
+   "out_e": 276.073
+  },
+  {
+   "pid": "N19",
+   "clip": "0170",
+   "s": 39.04,
+   "e": 41.48,
+   "zh": "所以我做完了之后，Claude 也会去抽帧去看，",
+   "en": "So after I'm done, Claude also samples frames to look,",
+   "skip": [],
+   "out_s": 276.54,
+   "out_e": 278.98
+  },
+  {
+   "pid": "N19",
+   "clip": "0170",
+   "s": 41.48,
+   "e": 42.34,
+   "zh": "然后去听。",
+   "en": "and listens.",
+   "skip": [],
+   "out_s": 279.247,
+   "out_e": 280.107
+  },
+  {
+   "pid": "N20",
+   "clip": "0171",
+   "s": 0.0,
+   "e": 2.88,
+   "zh": "然后我们再来看一下，用视频模型去做视频，",
+   "en": "Now let's compare the cost of making videos with a video model",
+   "skip": [],
+   "out_s": 280.5,
+   "out_e": 283.38
+  },
+  {
+   "pid": "N20",
+   "clip": "0171",
+   "s": 2.88,
+   "e": 6.26,
+   "zh": "和用 LLM 去做视频，它的价格。",
+   "en": "versus with an LLM.",
+   "skip": [],
+   "out_s": 283.647,
+   "out_e": 286.66
+  },
+  {
+   "pid": "N20",
+   "clip": "0171",
+   "s": 7.86,
+   "e": 10.98,
+   "zh": "现在不用说，肯定是国内的 Seedance 2.5 最好，",
+   "en": "Right now the best is clearly Seedance 2.5 from China,",
+   "skip": [],
+   "out_s": 286.96,
+   "out_e": 290.08
+  },
+  {
+   "pid": "N20",
+   "clip": "0171",
+   "s": 12.06,
+   "e": 12.92,
+   "zh": "当然它也不便宜。",
+   "en": "but it isn't cheap.",
+   "skip": [],
+   "out_s": 290.36,
+   "out_e": 291.22
+  },
+  {
+   "pid": "N20",
+   "clip": "0171",
+   "s": 13.38,
+   "e": 16.56,
+   "zh": "Google 的 Veo 3.1，能力没有那么强，",
+   "en": "Google's Veo 3.1 isn't as capable,",
+   "skip": [],
+   "out_s": 291.367,
+   "out_e": 294.46
+  },
+  {
+   "pid": "N20",
+   "clip": "0171",
+   "s": 16.74,
+   "e": 17.7,
+   "zh": "它依然很贵。",
+   "en": "and it's still expensive.",
+   "skip": [],
+   "out_s": 294.64,
+   "out_e": 295.6
+  },
+  {
+   "pid": "N20",
+   "clip": "0171",
+   "s": 17.9,
+   "e": 19.7,
+   "zh": "如果同样要做 6 分钟视频的话，",
+   "en": "For the same 6-minute video,",
+   "skip": [],
+   "out_s": 295.8,
+   "out_e": 297.6
+  },
+  {
+   "pid": "N20",
+   "clip": "0171",
+   "s": 22.82,
+   "e": 25.18,
+   "zh": "文本语言模型毕竟还有编程套餐来写，",
+   "en": "a language model comes with coding plans,",
+   "skip": [],
+   "out_s": 297.887,
+   "out_e": 300.247
+  },
+  {
+   "pid": "N20",
+   "clip": "0171",
+   "s": 26.0,
+   "e": 28.76,
+   "zh": "那价格真的是会实惠很多。",
+   "en": "so it's far cheaper.",
+   "skip": [],
+   "out_s": 300.533,
+   "out_e": 302.327
+  },
+  {
+   "pid": "N21",
+   "clip": "0171",
+   "s": 28.76,
+   "e": 30.92,
+   "zh": "一般一个六分钟视频，大概会消耗",
+   "en": "A six-minute video usually uses",
+   "skip": [],
+   "out_s": 302.793,
+   "out_e": 304.953
+  },
+  {
+   "pid": "N21",
+   "clip": "0171",
+   "s": 31.34,
+   "e": 35.88,
+   "zh": "我一周 20x 额度的 5% 到 10% 左右。",
+   "en": "about 5–10% of my weekly 20x plan quota.",
+   "skip": [],
+   "out_s": 305.133,
+   "out_e": 309.313
+  },
+  {
+   "pid": "N22",
+   "clip": "0171",
+   "s": 37.6,
+   "e": 39.5,
+   "zh": "而且这些素材都是可以复用的，",
+   "en": "And these assets are reusable:",
+   "skip": [],
+   "out_s": 309.767,
+   "out_e": 311.667
+  },
+  {
+   "pid": "N22",
+   "clip": "0171",
+   "s": 39.5,
+   "e": 41.28,
+   "zh": "角色的素材生成好了之后，",
+   "en": "once the character assets are made,",
+   "skip": [],
+   "out_s": 311.967,
+   "out_e": 313.747
+  },
+  {
+   "pid": "N22",
+   "clip": "0171",
+   "s": 41.72,
+   "e": 43.44,
+   "zh": "下一次的视频就不用再生成，",
+   "en": "the next video doesn't need to make them again.",
+   "skip": [],
+   "out_s": 313.9,
+   "out_e": 315.507
+  },
+  {
+   "pid": "N22",
+   "clip": "0171",
+   "s": 43.9,
+   "e": 46.22,
+   "zh": "所有的内容都可以沉淀下来，变成 skill，",
+   "en": "Everything can be distilled into a skill,",
+   "skip": [],
+   "out_s": 315.667,
+   "out_e": 317.92
+  },
+  {
+   "pid": "N22",
+   "clip": "0171",
+   "s": 47.4,
+   "e": 49.6,
+   "zh": "就会批量地去出一些视频，",
+   "en": "so you can churn them out in batches.",
+   "skip": [],
+   "out_s": 318.233,
+   "out_e": 319.967
+  },
+  {
+   "pid": "N22",
+   "clip": "0171",
+   "s": 50.0,
+   "e": 55.48,
+   "zh": "比如说我个人想做的信息聚合：",
+   "en": "For example, the news digest I wanted to make:",
+   "skip": [
+    [
+     50.72,
+     52.06
+    ],
+    [
+     53.2,
+     54.16
+    ]
+   ],
+   "out_s": 320.233,
+   "out_e": 323.547
+  },
+  {
+   "pid": "N22",
+   "clip": "0171",
+   "s": 55.48,
+   "e": 58.56,
+   "zh": "每日科技新闻的聚合视频，",
+   "en": "a daily tech-news roundup video",
+   "skip": [],
+   "out_s": 323.813,
+   "out_e": 326.893
+  },
+  {
+   "pid": "N22",
+   "clip": "0171",
+   "s": 58.56,
+   "e": 60.78,
+   "zh": "他就可以每天自动化地去运行。",
+   "en": "that runs automatically every day.",
+   "skip": [],
+   "out_s": 327.193,
+   "out_e": 329.413
+  },
+  {
+   "pid": "N23",
+   "clip": "0172",
+   "s": 0.82,
+   "e": 3.02,
+   "zh": "然后还说到了角色素材复用的问题，",
+   "en": "About reusing character assets:",
+   "skip": [],
+   "out_s": 329.853,
+   "out_e": 332.053
+  },
+  {
+   "pid": "N23",
+   "clip": "0172",
+   "s": 3.22,
+   "e": 6.48,
+   "zh": "如果他的模型能力再提升，",
+   "en": "if the models keep improving,",
+   "skip": [],
+   "out_s": 332.253,
+   "out_e": 335.08
+  },
+  {
+   "pid": "N23",
+   "clip": "0172",
+   "s": 6.66,
+   "e": 14.98,
+   "zh": "能够更精准地画出线条连续的动漫形式，",
+   "en": "drawing anime with smooth, continuous lines more precisely,",
+   "skip": [],
+   "out_s": 335.26,
+   "out_e": 340.613
+  },
+  {
+   "pid": "N23",
+   "clip": "0172",
+   "s": 15.08,
+   "e": 18.02,
+   "zh": "或者真的能画出真人的风格的话，",
+   "en": "or even realistic human styles,",
+   "skip": [],
+   "out_s": 340.713,
+   "out_e": 343.22
+  },
+  {
+   "pid": "N23",
+   "clip": "0172",
+   "s": 18.38,
+   "e": 19.68,
+   "zh": "那这些素材都是可以复用的，",
+   "en": "then all these assets are reusable,",
+   "skip": [],
+   "out_s": 343.58,
+   "out_e": 344.88
+  },
+  {
+   "pid": "N23",
+   "clip": "0172",
+   "s": 20.16,
+   "e": 22.66,
+   "zh": "能复用的素材，它就是有价值的，",
+   "en": "and reusable assets have real value.",
+   "skip": [],
+   "out_s": 345.06,
+   "out_e": 347.56
+  },
+  {
+   "pid": "N23",
+   "clip": "0172",
+   "s": 22.72,
+   "e": 23.42,
+   "zh": "它就不是抽卡。",
+   "en": "It's not a gacha pull.",
+   "skip": [],
+   "out_s": 347.853,
+   "out_e": 348.553
+  },
+  {
+   "pid": "N24",
+   "clip": "0172",
+   "s": 27.08,
+   "e": 30.9,
+   "zh": "如果各位又是程序员，又想去尝试做视频的话，",
+   "en": "If you're a programmer who wants to try making videos,",
+   "skip": [],
+   "out_s": 349.013,
+   "out_e": 352.833
+  },
+  {
+   "pid": "N24",
+   "clip": "0172",
+   "s": 30.9,
+   "e": 32.66,
+   "zh": "我觉得真的是几乎零成本的一个事情。",
+   "en": "I think it costs almost nothing.",
+   "skip": [],
+   "out_s": 353.133,
+   "out_e": 354.893
+  },
+  {
+   "pid": "N24",
+   "clip": "0172",
+   "s": 33.02,
+   "e": 35.68,
+   "zh": "只要用 Codex 或者 Claude Code 里面的模型，",
+   "en": "The models in Codex or Claude Code",
+   "skip": [],
+   "out_s": 355.033,
+   "out_e": 357.547
+  },
+  {
+   "pid": "N24",
+   "clip": "0172",
+   "s": 35.68,
+   "e": 36.72,
+   "zh": "我觉得能力都是够的。",
+   "en": "are capable enough, I think.",
+   "skip": [],
+   "out_s": 357.813,
+   "out_e": 358.853
+  },
+  {
+   "pid": "N24",
+   "clip": "0172",
+   "s": 36.72,
+   "e": 40.34,
+   "zh": "其实现在国内的一些模型，也能去生成视频，",
+   "en": "Some Chinese models can do this too,",
+   "skip": [],
+   "out_s": 359.153,
+   "out_e": 362.473
+  },
+  {
+   "pid": "N24",
+   "clip": "0172",
+   "s": 40.34,
+   "e": 41.8,
+   "zh": "但是效果并不太好。",
+   "en": "but the results aren't great.",
+   "skip": [],
+   "out_s": 362.773,
+   "out_e": 364.233
+  },
+  {
+   "pid": "N24",
+   "clip": "0172",
+   "s": 42.86,
+   "e": 45.84,
+   "zh": "渲染视频的话，本地用 CPU 渲染就可以。",
+   "en": "Rendering just runs locally on the CPU.",
+   "skip": [],
+   "out_s": 364.527,
+   "out_e": 367.507
+  },
+  {
+   "pid": "N25",
+   "clip": "0172",
+   "s": 46.76,
+   "e": 48.12,
+   "zh": "OK，然后我们收个尾。",
+   "en": "OK, let's wrap up.",
+   "skip": [],
+   "out_s": 367.96,
+   "out_e": 369.32
+  },
+  {
+   "pid": "N25",
+   "clip": "0172",
+   "s": 49.8,
+   "e": 51.08,
+   "zh": "感谢大家这次的收看。",
+   "en": "Thanks for watching.",
+   "skip": [],
+   "out_s": 369.633,
+   "out_e": 370.913
+  },
+  {
+   "pid": "N25",
+   "clip": "0172",
+   "s": 52.08,
+   "e": 53.96,
+   "zh": "我觉得感兴趣的朋友，都可以去试一试。",
+   "en": "If you're interested, give it a try.",
+   "skip": [],
+   "out_s": 371.18,
+   "out_e": 373.06
+  },
+  {
+   "pid": "N25",
+   "clip": "0172",
+   "s": 54.3,
+   "e": 56.68,
+   "zh": "然后开头的那两段提示词，我会放在评论区，",
+   "en": "I'll put the two prompts from the beginning in the comments,",
+   "skip": [],
+   "out_s": 373.4,
+   "out_e": 375.78
+  },
+  {
+   "pid": "N25",
+   "clip": "0172",
+   "s": 56.68,
+   "e": 58.06,
+   "zh": "大家可以去评论区看一下。",
+   "en": "so check them out there.",
+   "skip": [],
+   "out_s": 376.047,
+   "out_e": 377.427
+  },
+  {
+   "pid": "N25",
+   "clip": "0172",
+   "s": 58.86,
+   "e": 59.1,
+   "zh": "拜拜。",
+   "en": "Bye!",
+   "skip": [],
+   "hold": [
+    0.55,
+    "0172",
+    59.2
+   ],
+   "out_s": 377.727,
+   "out_e": 377.967
+  }
+ ],
+ "paras": [
+  {
+   "pid": "N01",
+   "start": 0.047,
+   "end": 8.553
+  },
+  {
+   "pid": "N02",
+   "start": 9.027,
+   "end": 23.453
+  },
+  {
+   "pid": "N03",
+   "start": 23.6,
+   "end": 42.393
+  },
+  {
+   "pid": "N04",
+   "start": 42.867,
+   "end": 50.82
+  },
+  {
+   "pid": "N05",
+   "start": 51.3,
+   "end": 61.193
+  },
+  {
+   "pid": "N06",
+   "start": 61.653,
+   "end": 83.867
+  },
+  {
+   "pid": "N07",
+   "start": 84.32,
+   "end": 123.133
+  },
+  {
+   "pid": "N08",
+   "start": 123.607,
+   "end": 131.627
+  },
+  {
+   "pid": "N09",
+   "start": 132.093,
+   "end": 140.34
+  },
+  {
+   "pid": "N10",
+   "start": 140.807,
+   "end": 158.147
+  },
+  {
+   "pid": "N11",
+   "start": 158.533,
+   "end": 164.647
+  },
+  {
+   "pid": "N12",
+   "start": 165.08,
+   "end": 186.747
+  },
+  {
+   "pid": "N13",
+   "start": 187.18,
+   "end": 208.953
+  },
+  {
+   "pid": "N14",
+   "start": 209.427,
+   "end": 220.64
+  },
+  {
+   "pid": "N15",
+   "start": 221.087,
+   "end": 233.327
+  },
+  {
+   "pid": "N16",
+   "start": 233.793,
+   "end": 246.02
+  },
+  {
+   "pid": "N17",
+   "start": 246.487,
+   "end": 258.953
+  },
+  {
+   "pid": "N18",
+   "start": 259.44,
+   "end": 276.073
+  },
+  {
+   "pid": "N19",
+   "start": 276.54,
+   "end": 280.107
+  },
+  {
+   "pid": "N20",
+   "start": 280.5,
+   "end": 302.327
+  },
+  {
+   "pid": "N21",
+   "start": 302.793,
+   "end": 309.313
+  },
+  {
+   "pid": "N22",
+   "start": 309.767,
+   "end": 329.413
+  },
+  {
+   "pid": "N23",
+   "start": 329.853,
+   "end": 348.553
+  },
+  {
+   "pid": "N24",
+   "start": 349.013,
+   "end": 367.507
+  },
+  {
+   "pid": "N25",
+   "start": 367.96,
+   "end": 377.967
+  }
+ ]
+}

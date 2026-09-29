@@ -1,0 +1,206 @@
+{
+ "C01": {
+  "file": "C01_v2.mp3",
+  "score": 0.833,
+  "duration": 4.62,
+  "asr": "大家好,我是善天良。今天给大家介绍API。",
+  "alternatives": [
+   {
+    "file": "C01_v1.mp3",
+    "score": 0.833
+   }
+  ]
+ },
+ "C02": {
+  "file": "C02_v2.mp3",
+  "score": 0.979,
+  "duration": 17.84,
+  "asr": "很多app都写着以接入deep seek 有些ai工具 还要你填api key 你可能会有三个疑问第一api是什么 第二app上写的以接入接的是什么 第三api key是什么 怎么拿到这期视频就把这三个问题讲清楚",
+  "alternatives": [
+   {
+    "file": "C02_v1.mp3",
+    "score": 0.942
+   }
+  ]
+ },
+ "C03": {
+  "file": "C03_v1.mp3",
+  "score": 1.0,
+  "duration": 22.47,
+  "asr": "先说第一个问题,API是什么?API是三个英文单词的缩写。Application,Programming,Interface,中文叫应用程序编程接口。这里的接口指的是程序和程序之间的一套调用规则,跟USB那种插口没关系。它主要规定三件事,能调用哪些功能,请求按什么格式发,结果按什么格式返回。",
+  "alternatives": [
+   {
+    "file": "C03_v2.mp3",
+    "score": 0.992
+   }
+  ]
+ },
+ "C04": {
+  "file": "C04_v1.mp3",
+  "score": 0.987,
+  "duration": 16.69,
+  "asr": "程序A,按规则发出请求。程序B处理完,把结果返回来。这一来一回就是一次。API调用。这些规则会写成一份说明书,叫接口文导。开发者照着它写代码,就能调用别人开放出来的功能。",
+  "alternatives": [
+   {
+    "file": "C04_v2.mp3",
+    "score": 0.92
+   }
+  ]
+ },
+ "C05": {
+  "file": "C05_v2.mp3",
+  "score": 0.994,
+  "duration": 26.36,
+  "asr": "第二个问题,已接入DeepSeek,接的是什么?多数情况下接的是DeepSeek,大模型的API。你手机上的APP负责界面,真正生成回答的大模型跑在服务器上。你在APP里提问,APP把问题案接口格式发给服务器。模型生成回答,再通过API返回,显示在你的屏幕上。这台服务器可能是DeepSeek官方的,也可能是云厂商或APP厂商自己部署的。",
+  "alternatives": [
+   {
+    "file": "C05_v1.mp3",
+    "score": 0.871
+   }
+  ]
+ },
+ "C06": {
+  "file": "C06_v2.mp3",
+  "score": 0.97,
+  "duration": 12.04,
+  "asr": "所以以接入,就是这个app通过API调用了deep seek的模型,不过各家app接的型号给的额度可能不一样,所以同样是以接入,用起来也会有差别。",
+  "alternatives": [
+   {
+    "file": "C06_v1.mp3",
+    "score": 0.97
+   }
+  ]
+ },
+ "C07": {
+  "file": "C07_v1.mp3",
+  "score": 0.989,
+  "duration": 24.87,
+  "asr": "第三个问题,API Key是什么?API Key就是调用API用的密钥,是一长串字符,比如DeepSeq的key,以SK开头。调用这类API时,程序每次都要带上这串key。平台靠它确认三件事,是谁在调用有没有权限。费用记在谁的账上。大模型的API,一般按用量收费,钱就从这个key对应的账户里扣。",
+  "alternatives": [
+   {
+    "file": "C07_v2.mp3",
+    "score": 0.966
+   }
+  ]
+ },
+ "C08": {
+  "file": "C08_v2.mp3",
+  "score": 0.985,
+  "duration": 13.4,
+  "asr": "所以 API Key 要像密码一样保管,不要发给别人,不要截图发到群里,也不要写进公开的代码,如果怀疑泄漏了,马上在平台上删掉这个key,再新建一个。",
+  "alternatives": [
+   {
+    "file": "C08_v1.mp3",
+    "score": 0.985
+   }
+  ]
+ },
+ "C09": {
+  "file": "C09_v2.mp3",
+  "score": 0.989,
+  "duration": 26.75,
+  "asr": "再看一下,雕用大模型的API,具体长什么样。不管哪家,都是像一个网址发一个HTTP请求,请求和结果。都用JSON格式写,现在主流的格式有三种。第一种OpenAI的chat completions,地址结尾是chat completions。请求里主要写两样,model是用哪个模型。Messages是对话记录,每条消息都标明角色。System是设定,user是用户,assistant是模型的回复。",
+  "alternatives": [
+   {
+    "file": "C09_v1.mp3",
+    "score": 0.975
+   }
+  ]
+ },
+ "C10": {
+  "file": "C10_v1.mp3",
+  "score": 0.983,
+  "duration": 26.31,
+  "asr": "回答,放在返回结果的choice里。这是用的最广的格式。Deepseq和很多国产模型都兼容它。第二种,OpenAI的responses。地址结尾是responses。这是OpenAI在2025年推出的新接口。官方推荐新项目用它。它用input代替messages设定写在单独的instructions字段里。返回的output是一组条目。除了文字还可以有工具调用的结果。",
+  "alternatives": [
+   {
+    "file": "C10_v2.mp3",
+    "score": 0.966
+   }
+  ]
+ },
+ "C11": {
+  "file": "C11_v2.mp3",
+  "score": 0.891,
+  "duration": 29.0,
+  "asr": "他还能用Previous Response ID。接上一轮对话,不用每次把聊天记录全部重发。第三种,Uncelpic的Messages,也就是Call的接口。地址是VeMessages。它和OpenAI的格式有三点不同。第一,认证。Key放在XAPI Key请求头里,还要带上UncelpicVersion版本号。OpenAI的格式放在Authorization里。第二,请求MaxTokenSpeed填,设定用单读的System自断,不放进Messages。",
+  "alternatives": [
+   {
+    "file": "C11_v1.mp3",
+    "score": 0.824
+   }
+  ]
+ },
+ "C12": {
+  "file": "C12_v1.mp3",
+  "score": 0.957,
+  "duration": 29.62,
+  "asr": "第三,返回。 回答放在content数组里,分成一个个内容快,每块标明类型,比如text是文字,to use是工具调用,另外想让回答一段一段的出来,三种接口,都可以把stream设成 true。服务器会用SSE,也就是服务器推送事件,把结果一段段推过来,clot的推送,按事件来,message start是开始,content block data是一段段文字,message stop是结束。",
+  "alternatives": [
+   {
+    "file": "C12_v2.mp3",
+    "score": 0.949
+   }
+  ]
+ },
+ "C13": {
+  "file": "C13_v2.mp3",
+  "score": 1.0,
+  "duration": 4.94,
+  "asr": "所以在工具里填接口地址时,要先看它用的是哪种格式。",
+  "alternatives": [
+   {
+    "file": "C13_v1.mp3",
+    "score": 1.0
+   }
+  ]
+ },
+ "C14": {
+  "file": "C14_v2.mp3",
+  "score": 0.989,
+  "duration": 27.09,
+  "asr": "下面说怎么拿到DeepSeek的API Key,一共四步。第一步打开DeepSeek开放平台,网址是platform.DeepSeek.com,注册并登录,注意它和平时聊天用的DeepSeek网页,不是同一个入口。第二步,在左侧菜单点API Keys,再点创建API Key,起一个名字,点创建。第三步,复制这创key,保存到安全的地方,它只在创建时完整显示一次,之后就看不到完整的key了。",
+  "alternatives": [
+   {
+    "file": "C14_v1.mp3",
+    "score": 0.948
+   }
+  ]
+ },
+ "C15": {
+  "file": "C15_v1.mp3",
+  "score": 0.939,
+  "duration": 21.76,
+  "asr": "如果弄丢了,删掉重新创建就行。第四步,冲值。冲值前,要先按页面提示完成实名认证。帐户里没余额,调用就会爆错,提示余额不足。自己测试的话,少冲一点就够了。价格可以看官网的价格页。拿到K以后,再支持DeepSeek的工具里填上它。有的工具还要填接口地址和模型名。",
+  "alternatives": [
+   {
+    "file": "C15_v2.mp3",
+    "score": 0.896
+   }
+  ]
+ },
+ "C16": {
+  "file": "C16_v1.mp3",
+  "score": 0.915,
+  "duration": 7.78,
+  "asr": "Deep Seek,两种格式都支持。OpenIG格式和Ansobic格式的地址不一样,照着屏幕填就行。",
+  "alternatives": [
+   {
+    "file": "C16_v2.mp3",
+    "score": 0.867
+   }
+  ]
+ },
+ "C17": {
+  "file": "C17_v1.mp3",
+  "score": 0.95,
+  "duration": 27.64,
+  "asr": "最后总结一下,第一,API是程序之间的调用规则,全程应用程序编程接口。第二,以接入DeepSeq,一般就是App通过API调用了DeepSeq的模型。第三,API Key是调用API的密钥,用来认身份,算费用,一定要保管好。第四,主流的调用格式有三种。chat completions, responses,和cloud messages。我是山田良,我们下期见!",
+  "alternatives": [
+   {
+    "file": "C17_v2.mp3",
+    "score": 0.919
+   }
+  ]
+ }
+}

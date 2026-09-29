@@ -1,0 +1,41 @@
+/* 白板风格（episode.style = "board"；用户 2026-09-28：之后的视频都做成角色在左下角、内容边说边画）。
+ * core.js 在 style = board 时给 <body> 加 class "board"；下面的规则只在 body.board 时生效，默认的深色版不受影响。
+ * 配色：白底、黑色记号笔（#1A1A1A）、鲸鱼娘蓝 #4A88DA（编号、勾、目录高亮）、黄色记号笔 #F5C518（波浪线、圈数字）。 */
+body.board, body.board #stage { background: #FFFFFF; }
+body.board #bg { display: none; }
+body.board #fade { background: #141414; }
+body.board #badge .b2 { color: rgba(26,26,26,.72); }
+body.board #badge .b2 .n { color: #4A88DA; }
+body.board #charShadow { background: radial-gradient(closest-side, rgba(0,0,0,.16), rgba(0,0,0,0)); }
+
+/* 字幕：黑字白边 */
+body.board #subs .stroke { color: #FFFFFF; -webkit-text-stroke: 12px #FFFFFF; }
+body.board #subs .fill { color: #1A1A1A; }
+body.board #subs .fill .t { color: #4A88DA; }
+
+/* 右上目录：白卡片、细边、浅投影（行的颜色由 core.js 按 style 设） */
+body.board #toc { background: rgba(255,255,255,.96); border-top: 3px solid #4A88DA; border-left: 1px solid #E6E6E6;
+  border-right: 1px solid #E6E6E6; border-bottom: 1px solid #E6E6E6; box-shadow: 0 6px 18px rgba(0,0,0,.08); }
+body.board #toc .kick { color: #9AA2B8; }
+body.board #toc .kick b { color: rgba(26,26,26,.72); }
+body.board .tocRow .bar { background: #4A88DA; }
+
+/* 底部进度条 */
+body.board #barShade { background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,.9) 55%, #FFFFFF); }
+body.board .bLab { color: rgba(26,26,26,.5); }
+body.board .bLab.cur { color: #1A1A1A; }
+body.board .bBlk.cur, body.board #barP .bBlk.cur { box-shadow: 0 0 0 2px #FFFFFF; }
+
+/* 白板上的印刷字（少量：小标签、来源、回顾条目） */
+.bKick { position: absolute; font: 700 34px var(--cjk); letter-spacing: .18em; color: #4A88DA; text-align: center; white-space: nowrap; }
+.bSub { position: absolute; font: 500 38px var(--cjk); color: #8A93AD; text-align: center; white-space: nowrap; letter-spacing: .04em; }
+.bSrc { position: absolute; font: 500 30px var(--cjk); color: #8A93AD; text-align: center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.bSrc b { color: #4A88DA; font-weight: 700; }
+.bSrc .d { opacity: .85; }
+.bItem { position: absolute; font: 700 44px var(--cjk); color: #1A1A1A; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+/* 原文截图：像照片一样贴在白板上 */
+.bPhotoWrap { position: absolute; transform-origin: 50% 50%; }
+.bPhoto { position: absolute; background: #FFFFFF; border: 1px solid #E4E4E4;
+  box-shadow: 0 14px 30px rgba(0,0,0,.14), 0 2px 6px rgba(0,0,0,.08); transform-origin: 50% 50%; }
+.bTape { position: absolute; background: rgba(245,215,120,.55); box-shadow: 0 1px 2px rgba(0,0,0,.06); }

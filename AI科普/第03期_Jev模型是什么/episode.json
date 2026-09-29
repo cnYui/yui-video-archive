@@ -1,0 +1,100 @@
+{
+  "number": 3,
+  "title": "Jev模型是什么",
+  "dir_name": "第03期_Jev模型是什么",
+  "presenter": {
+    "id": "whale",
+    "name": "鲸鱼娘",
+    "frames": "角色/大肥鱼像素素材包/素材/动作帧",
+    "voice_id": "e7219cb8cfab46bebba2ee570932b0a6",
+    "voice_page": "https://fish.audio/zh-CN/m/e7219cb8cfab46bebba2ee570932b0a6/",
+    "voice_app": "https://fish.audio/app/text-to-speech/?modelId=e7219cb8cfab46bebba2ee570932b0a6",
+    "voice_name": "苏晓晓"
+  },
+  "canvas": [
+    2340,
+    1080
+  ],
+  "target_minutes": [
+    5,
+    7
+  ],
+  "question_scene": "S02",
+  "questions": [
+    {
+      "text": "Jev是什么",
+      "scenes": [
+        "S03"
+      ]
+    },
+    {
+      "text": "和LLM有什么区别",
+      "scenes": [
+        "S04"
+      ]
+    },
+    {
+      "text": "能取代大模型吗",
+      "scenes": [
+        "S05"
+      ]
+    }
+  ],
+  "chapters": {
+    "S01": "开场",
+    "S02": "三个疑问",
+    "S03": "Jev 是什么",
+    "S04": "和 LLM 的区别",
+    "S05": "能取代大模型吗",
+    "S06": "怎么用上",
+    "S07": "总结"
+  },
+  "backgrounds": {},
+  "bg_color": "#FFFFFF",
+  "_bg_note": "2026-09-28 用户：“背景修改为纯白色，然后发布”。bg_color 有值时 scenes.js 隐藏背景图层、换白底配色（做法同第 4 期）。原来的每章背景图：S01 08_官方主视觉 / S02 02_斑马线_夕阳 / S03 04_桌游_室内 / S04 03_反光镜 / S05 05_街头_REC / S06 01_放学路上_树影 / S07 06_Q版贴纸；想换回就删掉 bg_color、把 backgrounds 写回去，旧版备份在 _旧稿/图片背景版_20260928-133823/",
+  "bg_alpha": 0.22,
+  "bg_blur": 10,
+  "terms": [
+    "Jev",
+    "TypeSafe AI",
+    "System One",
+    "系统一",
+    "系统二",
+    "state",
+    "选择题",
+    "打分题",
+    "是非题",
+    "校准",
+    "分类模型",
+    "大语言模型",
+    "Large Language Model",
+    "零幻觉",
+    "token",
+    "置信度"
+  ],
+  "auto_gestures": true,
+  "intro_tagline": "",
+  "outro_items": [
+    {
+      "label": "配音",
+      "value": "Fish Audio"
+    },
+    {
+      "label": "制作",
+      "value": "Opus 5.5"
+    }
+  ],
+  "outro_closing": "感谢大家看到最后",
+  "_说明": [
+    "presenter：本期讲解员（new_episode.py --presenter ryo|whale 写入，预设在 scripts/epcommon.py PRESENTERS）。name = 开场自称（“大家好，我是{name}”），frames = 角色帧目录（相对 素材/），voice_page / voice_app / voice_name = Fish Audio 音色；换讲解员就把整段换成另一个预设。帧还没画完时，出草稿可以临时把 frames 指到已有的帧目录",
+    "canvas：视频画面尺寸 [宽, 高]，默认 [2340, 1080]（19.5:9，2026-09-27 起每期都用）；没有这一项 = 1920×1080（第 1 期）。scenes.js 仍按 1920×1080 的内容舞台写坐标（舞台在画布里水平居中）；徽标、目录、角色、字幕、进度条、背景由引擎铺满画布。封面不受影响，照旧 16:9 + 4:3。改了要重跑 build_timeline",
+    "questions：右上角「本期目录」，如 {\"text\": \"Token 是什么\", \"scenes\": [\"S03\"]}，scenes 是讲这一题的章节",
+    "chapters：进度条章节名，如 {\"S01\": \"开场\", \"S02\": \"三个疑问\"}（没写的用场景 title）",
+    "backgrounds：每章一张 素材/背景图库 里的文件名，如 {\"S01\": \"01_放学路上_树影.jpg\"}；没写的章节按图库顺序轮换",
+    "terms：字幕里要标橙色的术语（引擎已内置 API、API Key、Token、JSON、HTTP 等），如 [\"Token\", \"上下文窗口\"]",
+    "outro_items / outro_closing：片尾制作清单和感谢语，必须问用户，不许用默认值（assemble.py 为空会报错）",
+    "auto_gestures：角色自动层（说话时小手势、句末点头、看向内容），true 开 / false 关；嫌多写成 {\"gesture\": 0.6}（手势密度倍率），或 {\"nod\": false} / {\"look\": false} 关掉某个通道",
+    "sprites_extra（可选）：新动作帧还没追加进本期讲解员的帧目录（presenter.frames）时出样片用，例如 \"_skilltest/actions_v2/frames_preview\"（相对 SERIES，必须是同一个讲解员的帧）；用户确认、帧追加进帧目录以后删掉",
+    "这个 _说明 字段可以删掉，脚本不读它"
+  ]
+}

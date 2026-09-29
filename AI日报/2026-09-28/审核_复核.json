@@ -1,0 +1,43 @@
+{
+  "verdict": "pass",
+  "script_sha": "7ee6e68d3f75",
+  "issues": [
+    "提醒：第 2 轮挡发布的问题已修好，我逐项核对过。① 第 7 条截图：新的 news_07.png（snaps.json 里 sha 846a9a459a）只有 The Decoder 的标题、署名（Manuel Uth，Sep 26, 2026）和导语，没有同意框、订阅广告和遮罩；导语里的数字（28%、80%、70%、61%、三分钟）和台本一致，也没有写给 AI 的话；两张旧图已挪进 _旧稿。重渲后的成片和上传版里，第 7 条（4:15–4:54）右栏用的都是这张新图（成片 4:25、4:38、4:50，上传版 4:38 抽帧确认）。② 开头配音：新配音 配音\\raw\\C01_v2.mp3（识别分 0.883）的开头，large-v3-turbo 和 small 两个模型都识别成“早上好”（large-v3-turbo 置信度 0.99 / 1.0），上传版 0:03.5–0:07.5 再识别一次也是“早上好”；整段识别文本和台本逐字比对，只有数字写法不同，没有漏句、多句；第 8 条的“DeepSeek V4 Flash”这次也识别对了。③ 重渲结果：成片和上传版都是 354.07 秒（5:54），仍超过 5 分钟；上传版 8.68 MB（≤ 9 MB）；字幕文字和台本逐字一致；章节 txt 和投稿信息.json 简介里的章节时间（0:29、1:18、1:50、2:24、2:57、3:36、4:15、4:54、5:43）和新字幕对得上；简介 19 个网址仍和 refs 一致；封面内容没变。台本没改，sha 仍是 7ee6e68d3f75。",
+    "提醒：第 7 条第 6 句“它也是测过最快的，比之前领先的模型快 2 到 10 倍”紧跟在第 5 句“十个月前最好的模型，只有 28%”后面，“它”听起来像在说十个月前的模型。Epoch AI 原文说的是 GPT-6 Astra “the fastest of any model we evaluated”，建议把“它”改成“GPT-6 Astra”。另外第 7 条第 1 句“第七件轻松一点”和第 8 条第 1 句“最后一件轻松点”前后重复，可以改掉一个。",
+    "提醒：第 5 条第 8 句“除了音频理解模型 ASR-Next 的 API 还没上线，其余几款已经能在千问 AI 平台调用”，说法是对的：千问官方原话经站长之家 9 月 23 日转述是“API 已上架千问 AI 平台，ASR-Next API 即将上线”，第三方插件 tongflow 的 README 现在也写着 ASR-Next has no public API yet。不过 refs 里的 IT之家 和 The Decoder 都没写这一点，来源卡上的“千问”也没有对应链接。以后可以把千问官方或站长之家的链接加进 refs。",
+    "提醒：片尾“本期制作清单”的来源只列到第 3 条（Anthropic 更新日志 · Anthropic 拒答计费说明 · MIXED / IT之家 · MiniMax 官方 · Claude 开发者）。make_episode.py 在第二行后面加的“等”被长度限制截掉了，看起来像是全部来源。简介里 8 条的来源是全的，回顾卡也写了“来源都在简介里”，不影响这期发布。建议改成先截断再加“等”。",
+    "提醒：几处画面小问题，不影响发布。① 第 8 条要点“专家权重放 SSD”挂在第 4 句，但引擎按顺序亮要点，第 4 句时要点卡还没出现，到第 5 句才和“744B GLM 塞进笔记本”一起出来（新成片 5:10 还没有要点卡）；把这两个要点对调顺序就能对上。② 第 6 条 TNW 截图的大标题右边被裁掉（“Oxford let OpenAI train AI mod…”）。③ 制作\\assets\\snaps\\news_04.png 是第一版留下的 Claude Code（IT之家）截图，这期第 4 条没用它（snaps.json 里 4 是失败，新成片 2:24–2:57 是单栏要点卡），建议挪进 _旧稿，免得以后串图。",
+    "提醒：第 1 轮的问题已全部改好。① 重复上一期的“OpenAI 智能体泄露用户图片”整条撤掉了，换成第 7 条宜家测试（上一期没播过）；开场“八件事”清单、封面前三条、简介章节和来源、章节 txt 都已同步；第 4 条原来的“宕机前两个小时 OpenAI 刚发公告……”也删了。重渲后总长 354.07 秒，仍超过 5 分钟。② 千问 API 那句已改成上面第 5 条第 8 句的说法，现用配音 C01_v2.mp3 的识别文本里就是这句新话，没有旧第 1 条的内容。③ 提醒类也改了：Codex 最后一句加了“付费用户”；MiniMax 删了“想试的话……”，签到只说“官方还安排了签到活动”；拒答收费、千问、笔记本几条的要点已挂到对应句子，笔记本要点改成“≤0.1 token”；“牛津论文”改成“牛津馆藏”“馆藏论文”，“数字化旧论文”改成“数字化馆藏文献”。",
+    "提醒：审核记录.json 的 hits 是空的，这次没有 review 级别的词要判断。我另外逐句看了台本、要点、字幕、标题、标签、简介、8 张截图（含重截的 news_07）和封面：没有色情低俗、暴力血腥、时政地缘、军事、歧视，台词和字幕里没有网址，简介只有 refs 的 19 个网址，没有隐藏字符；8 条新闻的来源网页和 GitHub README 里也没发现写给 AI 的指令。第 2 条截图里的“签到双倍积分、免费领 Token”是 IT之家 导语原文，第 8 条截图里的“公众号 QbitAI”是量子位的署名，都在原文标题区，可以接受。事实方面，8 条的数字、公司名、人名、日期都和原文一致；牛津那条注明了是《卫报》报道、内部文件显示，牛津的回应也承认 OpenAI 在用这些材料，不算把传闻当事实；和上一期（9 月 27 日的 5 条）没有重复。"
+  ],
+  "checked": [
+    "https://platform.claude.com/docs/en/release-notes/overview（已打开；2026-09-24 条目：resuming billing for refusals that arrive before any output，bio / frontier_llm / reasoning_extraction，the categories where we measure low volumes of false positives，Mid-stream refusals were already billed，按跑这个请求的模型价格收费，一致）",
+    "https://platform.claude.com/docs/en/build-with-claude/refusals-and-fallback（已打开；目的是 disrupt attempts to circumvent Anthropic's safeguards at scale；cyber、general_harms 不收费；被拒请求照样计入速率限制，一致）",
+    "https://mixed-news.com/en/anthropic-bills-refused-claude-api-requests-three-categories/（已打开；9 月 27 日发布，一致）",
+    "https://www.ithome.com/1/007/530.htm（已打开；2026/9/27 15:32；M3.1-Flash-Preview 上线 MiniMax Code、修 Bug 到完整功能、补齐回归测试、所有用户 Token Plan 额度重置、9 月 28 日至 10 月 7 日签到活动；没提跑分和价格，一致）",
+    "https://x.com/MiniMaxAgent/status/2104079819881517400（打不开，HTTP 402；用 IT之家 核对；按推文 ID 算，发帖时间是北京时间 2026-09-27 13:24）",
+    "https://www.ithome.com/1/007/369.htm（已打开；2026/9/26 15:11；从每周限制里扣“一小段固定时间”收尾，没给具体数字；Pro 每周一次，Max 和 Team Premium 每次撞上 5 小时上限都能用，一致）",
+    "https://x.com/ClaudeDevs/status/2103561342057943314（打不开，HTTP 402；用 IT之家 核对；按推文 ID 算，发帖时间是北京时间 2026-09-26 03:04）",
+    "https://status.openai.com/incidents/01M3DCNWMW57HYK8FJ5FBFPA39（已打开；标注 Full outage；受影响的是 Codex Web、Codex API、CLI、VS Code extension；2026-09-25 22:58–23:54 UTC，即北京时间 9 月 26 日 06:58–07:54，约 56 分钟；有“Login via API key will unblock access”，一致）",
+    "https://finance.sina.com.cn/wm/2026-09-26/doc-initcusx7101541.shtml（已打开；“最高级别的「全面宕机」”“Codex负责人Tibo”，Codex 和 ChatGPT Work 所有付费用户额度重置，一致；它从用户发帖算是 68 分钟，台本按状态页说“将近一个小时”，没问题）",
+    "https://x.com/thsottiaux/status/2103637477760311522（打不开，HTTP 402；用新智元核对；按推文 ID 算，发帖时间是北京时间 2026-09-26 08:07，在恢复之后）",
+    "https://www.ithome.com/1/006/280.htm（已打开；2026/9/23；五款模型；TTS 降约 70%、Realtime 约 85%、ASR 达 95%；ASR 支持 30 种语言和 16 种中文方言，首字响应约 160 毫秒，边说边转写；新增 ASR-Next 能理解情绪和环境声；没提 API 上线情况）",
+    "https://the-decoder.com/alibaba-launches-qwen-audio-3-1-with-five-new-models-and-slashes-ai-audio-prices-by-up-to-95-percent/（已打开；9 月 23 日；五款、降价幅度一致；没提 API 上线情况）",
+    "https://thenextweb.com/news/oxford-bodleian-openai-training-data（已打开；9 月 26 日；《卫报》周六报道；2025 年 3 月宣布时只说扫描稀有文献，It did not say the texts would be used to train AI；到 2025 年 6 月送出 12.5 万张旧博士论文扫描件，19–20 世纪欧美大学；The papers say texts … went into the firm's training data；牛津回应规模小、无版权、非独家；几个月内公开上网，一致）",
+    "https://cherwell.org/2026/09/27/oxford-ai-partnership-uses-bodleian-texts-for-chatgpt/（已打开；9 月 27 日；牛津发言人 modest in scale, out of copyright, not exclusive，几个月内公开上网，一致；文中“3500 多篇 1498–1884 年论文”和官网说法不同，台本没用）",
+    "https://www.bodleian.ox.ac.uk/services/research-partnerships/digitisation-project（已打开；Global Dissertations 是 19–20 世纪欧美博士论文，约 12.5 万张图像，项目 2025 年 2 月开始）",
+    "https://epoch.ai/publications/furniture-assembly（已打开；Sep. 23, 2026；3 件宜家家具、60 张照片，对照说明书 PDF 找错，放大工具加 Python，每张 80 步；GPT-6 Astra 80%、Claude Fable 5.1 70%、Claude Opus 5 61%；2025 年 11 月最佳是 Claude Opus 4.5 的 28%；the fastest of any model we evaluated，比之前领先的模型快 2–10 倍，中位每张 3 分钟，实时反馈还稍慢，一致）",
+    "https://the-decoder.com/openais-gpt-6-astra-can-now-tell-you-exactly-where-you-screwed-up-your-ikea-shelf/（已打开；9 月 26 日；数字一致。截图 news_07.png 就是这个页面：第 2 轮时被 cookie 同意框盖住，已重截，新图干净，见提醒 1）",
+    "https://www.qbitai.com/2026/09/497624.html（已打开；2026-09-26 17:01；Colibrì 纯 C、32k Star、744B、int4 约 372GB、最低 16GB、不需要 GPU、9 个模型家族含 Kimi K3 和 DeepSeek V4 Flash、25GB 笔记本冷缓存 0.05–0.1 token/s、128GB 台式机约 1.8 token/s，一致）",
+    "https://github.com/JustVugg/colibri（已打开；现在 37.9k 星，仍是“3 万多”；各项数据一致；README 里没有提示词注入和可疑网址）",
+    "补充核对 https://www.chinaz.com/ainews/31303.shtml（已打开；2026-09-23 15:28；“API 已上架千问 AI 平台，ASR-Next API 即将上线”）",
+    "补充核对 https://github.com/tong-io/tongflow-api-qwen-audio（已打开；README 写 ASR-Next has no public API yet，插件调用 qwen-audio-3.1-tts-next 等模型）",
+    "补充核对 https://byteiota.com/qwen-audio-31-voice-api-price-cut/（已打开；说 TTS-Next 和 ASR-Next 都 coming soon，和上面两处说法不一致；台本按千问官方说法，可以接受）",
+    "补充核对 https://ai-tldr.dev/releases/alibaba-qwen-audio-3-1/（已打开；只说通过 Alibaba Cloud Model Studio 提供 API，示例用 qwen-audio-3.1-tts-next）",
+    "本地对照：D:\\大疆\\AI日报\\2026-09-27\\台本.json 和 AI每日日报_0927_字幕.srt（上一期 5 条：OpenAI 暂停训练、澳参议院传唤、Claude 九圈、谷歌 TPU 跑 Kimi、Anthropic 与 Akamai），本期 8 条没有重复；aired.jsonl 里也只有这 5 条",
+    "本地对照：D:\\大疆\\AI日报\\2026-09-28\\_旧稿\\台本_复核前_231543.json（sha 3403aeb2d7c9）和现台本逐句比对，确认第 1 轮问题的改动",
+    "本地检查：台本.json 的 sha1 前 12 位复算为 7ee6e68d3f75；重渲后字幕全文和台本 text 仍逐字一致；简介 19 个网址和 refs 完全一致；台本、投稿信息、字幕、章节 txt 没有隐藏字符；state.json 的 render 记录为 354.07 秒、上传版 8682530 字节；章节时间和新字幕对得上",
+    "本地检查：8 张截图（news_01–08，news_07 为重截的新图）和两版封面_预览.png 已逐张查看；第 2 轮旧上传版抽帧 0:12–5:35 共 20 帧；重渲后成片抽帧 2:30、2:45、4:25、4:38、4:50、5:10、5:15、5:46、5:51，上传版抽帧 4:38",
+    "本地检查：现用配音 配音\\raw\\C01_v2.mp3（md5 b8fba617…）的识别文本和台本比对一致；它和上传版的开头另用本机缓存的 faster-whisper large-v3-turbo、small 复听，都是“早上好”；第 2 轮那版 C01_v1.mp3 已挪进 配音\\raw\\_旧稿_开头不清\\"
+  ]
+}

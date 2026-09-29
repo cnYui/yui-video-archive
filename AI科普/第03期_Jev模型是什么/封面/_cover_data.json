@@ -1,0 +1,26 @@
+{
+  "frame": [
+    64,
+    64
+  ],
+  "footRow": 62,
+  "scale": 9,
+  "ryoX": 232,
+  "rx": 790,
+  "rw": 850,
+  "q": {
+    "sx": 40,
+    "sy": -15
+  },
+  "t1": "Jev",
+  "t2": "是什么？",
+  "subHTML": "和 LLM <span class=\"hl\">有什么区别</span><span class=\"o\">？</span>",
+  "bg": {
+    "scale": 1.0,
+    "fx": 0.5,
+    "fy": 0.5,
+    "opacity": 0.36,
+    "blur": 8
+  },
+  "number": 3
+}

@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>原LAI如此 封面（白板版）</title>
+<link rel="stylesheet" href="{{FONTS_CSS}}">
+<style>
+  /* 白板版封面（style: board 的期；2026-09-28 用户：「封面你也要重新生成一下相同的风格」）：白底，标题用这一期视频同一套
+     手写笔画（制作/engine/hand.js + handdata），讲解员在左下角指着标题。make_cover.py 填占位符、传 window.__DATA__ */
+  :root {
+    --ink: #1A1A1A;
+    --orange: #FF4F1A;
+    --pink: #F2A0BD; --yellow: #F6C945; --blue: #4A6FD0; --kred: #E2463F;
+    --cjk: 'Noto Sans SC', sans-serif;
+    --mono: 'JetBrains Mono', 'Noto Sans SC', monospace;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; width: 1920px; height: 1080px; overflow: hidden; background: #FFFFFF; }
+  body { font-family: var(--cjk); -webkit-font-smoothing: antialiased; }
+  #stage { position: absolute; inset: 0; overflow: hidden; background: #FFFFFF; }
+
+  /* 系列名（印刷体，和视频左上角、旧封面票头同一套：橙色方块 + 原LAI如此 + 四色胶囊 + 期号） */
+  #brand { position: absolute; display: flex; align-items: center; gap: 22px; color: var(--ink); }
+  .series { font-weight: 900; letter-spacing: .02em; white-space: nowrap; display: flex; align-items: center; line-height: 1; }
+  .series .sq { display: block; background: var(--orange); }
+  .series .lai { color: var(--orange); }
+  .kb { display: flex; gap: 7px; }
+  .kb i { display: block; border: 2px solid var(--ink); }
+  .epi { font-family: var(--mono); font-weight: 800; letter-spacing: .02em; color: #FFFFFF; background: var(--ink);
+         border-radius: 4px; line-height: 1; }
+
+  #who { position: absolute; image-rendering: pixelated; }
+  #whoShadow { position: absolute; border-radius: 50%;
+               background: radial-gradient(closest-side, rgba(0,0,0,.16), rgba(0,0,0,.07) 55%, rgba(0,0,0,0)); }
+  canvas.px { position: absolute; image-rendering: pixelated; }
+</style>
+</head>
+<body>
+<div id="stage">
+  <div id="brand">
+    <div class="series"><span class="sq"></span>原<span class="lai">LAI</span>如此</div>
+    <span class="kb"><i style="background:var(--pink)"></i><i style="background:var(--yellow)"></i><i style="background:var(--blue)"></i><i style="background:var(--kred)"></i></span>
+    <div class="epi" id="epi">#NN</div>
+  </div>
+  <div id="whoShadow"></div>
+  <img id="who" src="{{SPRITE}}" alt="">
+  <canvas class="px" id="qmark"></canvas>
+</div>
+
+<script>
+// hand.js 要在加载时拿到 ENG（W / H / E / EP / ctx）：给它一个最小的静态外壳，所有笔画直接画完（封面 = 写完那一刻）
+(function () {
+  'use strict';
+  window.DURATION = 1;
+  window.__READY__ = false;
+  const IN = window.__DATA__ || {};
+  const stage = document.getElementById('stage');
+  const lin = u => u;
+  window.ENG = {
+    W: 1920, H: 1080, E: { lin, sine: lin }, EP: { number: IN.number || 0 },
+    ctx: () => ({
+      root: stage, sid: 'cover', S: null,
+      T: (el, init, fx) => ({ to() { if (fx) fx({ k: 1 }); return this; } }),   // Track -> jump to the end state
+      cue: () => {},
+    }),
+  };
+})();
+</script>
+<script src="{{HANDDATA_JS}}"></script>
+<script src="{{HAND_JS}}"></script>
+<script>
+(function () {
+  'use strict';
+  // make_cover.py -> window.__DATA__ = 封面/cover.json（去掉 sprite）+ number；对象参数只覆盖写了的字段
+  //   t1: "Jev"               第一行（本期最核心、观众会搜的词），手写大字，下面一道黄色记号笔波浪线
+  //   t2: "是什么？"           第二行，结尾的 ？/? 用系列橙
+  //   sub: "和 LLM 有什么区别？" 第三行（标题里的第二个疑问），结尾问号橙色；hl = sub 里要划黄线的一段
+  const DEF = {
+    number: 1, t1: 'API', t2: '是什么？', sub: '', hl: '',
+    // 标题块：左边 x、右边界（字太长自动缩小）、在 [btop, bbot] 这段高度里上下居中
+    bx: 860, bxr: 1652, btop: 150, bbot: 846,
+    t1px: 430, t2px: 214, subpx: 84, gap1: 30, gap2: 46,
+    pen: 0.075,                       // 笔宽 / 字号（视频 0.07；封面缩到信息流很小，略粗一点）
+    ul: { on: true, w: 20, gap: 16 }, // t1 下面的黄色波浪线
+    hlW: 11,
+    brand: { x: 272, y: 64, px: 46 },
+    // 讲解员：整数倍最近邻放大，不镜像；whoX = 64 px 帧的左边，foot = 鞋底的屏幕 y（帧的 footRow 行）
+    scale: 9, whoX: 250, foot: 968, footRow: 62, frame: [64, 64],
+    shadow: { x: 10, w: 46, y: -2, h: 7 },
+    // 像素问号（旧封面的系列元素，默认关）：sx / sy = 精灵像素
+    q: { on: false, sx: 40, sy: -15, fill: '#F6C945', outline: '#141414' },
+    // 手画的橙色箭头（从她的手指向标题，默认关）
+    arrow: { on: false, x0: 0, y0: 0, x1: 0, y1: 0, w: 9 },
+  };
+  const IN = window.__DATA__ || {};
+  const D = Object.assign({}, DEF, IN);
+  for (const k of Object.keys(DEF)) {
+    const a = DEF[k], b = IN[k];
+    if (a && b && typeof a === 'object' && typeof b === 'object' && !Array.isArray(a) && !Array.isArray(b)) D[k] = Object.assign({}, a, b);
+  }
+  window.__D__ = D;
+  const $ = id => document.getElementById(id);
+  const px = v => v + 'px';
+  const ACCENT = (ENG.HAND && ENG.HAND.ACCENT) || '#FF4F1A';
+
+  // ---- brand
+  const br = $('brand'), B = D.brand, u = B.px;
+  br.style.left = px(B.x); br.style.top = px(B.y);
+  const se = br.querySelector('.series'); se.style.fontSize = px(u);
+  const sq = se.querySelector('.sq'); sq.style.width = sq.style.height = px(Math.round(u * .52)); sq.style.marginRight = px(Math.round(u * .36));
+  br.querySelectorAll('.kb i').forEach(i => { i.style.width = px(Math.round(u * .8)); i.style.height = px(Math.round(u * .32)); i.style.borderRadius = px(Math.round(u * .16)); });
+  const ep = $('epi'); ep.textContent = '#' + String(D.number).padStart(2, '0');
+  ep.style.fontSize = px(Math.round(u * .88)); ep.style.padding = `${Math.round(u * .18)}px ${Math.round(u * .32)}px ${Math.round(u * .2)}px`;
+
+  // ---- presenter
+  const S = D.scale, FX = D.whoX, FOOT = D.foot, TOP = FOOT - D.footRow * S;
+  const who = $('who');
+  who.style.width = px(D.frame[0] * S); who.style.height = px(D.frame[1] * S);
+  who.style.left = px(FX); who.style.top = px(TOP);
+  const sh = $('whoShadow');
+  sh.style.left = px(FX + D.shadow.x * S); sh.style.width = px(D.shadow.w * S);
+  sh.style.top = px(FOOT + D.shadow.y * S); sh.style.height = px(D.shadow.h * S);
+
+  // ---- pixel "?" (optional)
+  const Q = ['.####.', '##..##', '....##', '...##.', '..##..', '..##..', '......', '..##..', '..##..'];
+  const qc = $('qmark');
+  if (D.q && D.q.on) {
+    const h = Q.length, w = Q[0].length;
+    qc.width = w + 2; qc.height = h + 2;
+    const g = qc.getContext('2d');
+    const on = (x, y) => y >= 0 && y < h && x >= 0 && x < w && Q[y][x] === '#';
+    g.fillStyle = D.q.outline;
+    for (let y = -1; y <= h; y++) for (let x = -1; x <= w; x++) {
+      let n = false;
+      for (let dy = -1; dy <= 1; dy++) for (let dx = -1; dx <= 1; dx++) if (on(x + dx, y + dy)) n = true;
+      if (n) g.fillRect(x + 1, y + 1, 1, 1);
+    }
+    g.fillStyle = D.q.fill;
+    for (let y = 0; y < h; y++) for (let x = 0; x < w; x++) if (on(x, y)) g.fillRect(x + 1, y + 1, 1, 1);
+    qc.style.width = px(qc.width * S); qc.style.height = px(qc.height * S);
+    qc.style.left = px(FX + D.q.sx * S); qc.style.top = px(TOP + D.q.sy * S);
+  } else qc.style.display = 'none';
+
+  // ---- handwritten title block
+  function splitQ(s) { const m = /^(.*?)([？?])$/.exec(s || ''); return m ? [m[1], m[2]] : [s || '', '']; }
+  function fitSize(text, maxPx, avail) { const w1 = ENG.handWidth(text, 1); return w1 > 0 ? Math.min(maxPx, avail / w1) : maxPx; }
+  function layout() {
+    if (!ENG.HAND || !ENG.HAND.ready) throw new Error('handdata.js 没有笔画数据');
+    const c = ENG.ctx({});
+    const avail = D.bxr - D.bx;
+    const lines = [];
+    // one line = body in ink + a trailing ？ in orange; returns {g, box: [x0, y0, x1, y1], item}
+    function line(text, maxPx, key, extra) {
+      const [body, q] = splitQ(text);
+      const size = fitSize(body + q, maxPx, avail);
+      const g = c.handGroup();
+      const pen = D.pen * size;
+      const it = c.hand({ text: body, x: D.bx, y: 0, size, at: 0, pen, parent: g, seed: key + body, cue: false });
+      let box = [it.x0, it.y0, it.x1, it.y1];
+      if (q) {
+        const qi = c.hand({ text: q, x: D.bx + ENG.handWidth(body, size), y: 0, size, at: 0, pen, color: ACCENT, parent: g, seed: key + 'q', cue: false });
+        box = [Math.min(box[0], qi.x0), Math.min(box[1], qi.y0), Math.max(box[2], qi.x1), Math.max(box[3], qi.y1)];
+      }
+      const L = { g, box, item: it, size, body };
+      if (extra) extra(L);
+      lines.push(L);
+      return L;
+    }
+    const l1 = line(D.t1, D.t1px, 't1', L => {
+      if (!D.ul || !D.ul.on) return;
+      const b = L.box, y = b[3] + D.ul.gap;
+      c.handUnderline({ x0: b[0] - 6, x1: b[2] + 10, y, at: 0, dur: 0.4, w: D.ul.w, parent: L.g });
+      L.box = [b[0], b[1], b[2] + 10, y + 10 + D.ul.w / 2];
+    });
+    const l2 = line(D.t2, D.t2px, 't2');
+    let l3 = null;
+    if (D.sub) l3 = line(D.sub, D.subpx, 'sub', L => {
+      if (!D.hl) return;
+      const i0 = [...L.body].join('').indexOf(D.hl);
+      if (i0 < 0) { console.warn('hl 不在 sub 里：' + D.hl); return; }
+      const i = [...L.body.slice(0, i0)].length, b = L.item.box(i, i + [...D.hl].length);
+      if (b) c.handUnderline({ x0: b[0] - 4, x1: b[2] + 6, y: b[3] + 10, at: 0, dur: 0.3, w: D.hlW, parent: L.g });
+    });
+    // stack the lines (their ink boxes) with the gaps and centre the block vertically in [btop, bbot]
+    const gaps = [0, D.gap1, D.gap2];
+    const hs = lines.map(L => L.box[3] - L.box[1]);
+    const total = hs.reduce((a, h) => a + h, 0) + gaps.slice(1, lines.length).reduce((a, g) => a + g, 0);
+    let y = D.btop + Math.max(0, (D.bbot - D.btop - total) / 2);
+    const placed = [];
+    lines.forEach((L, i) => {
+      if (i) y += gaps[i];
+      const dy = y - L.box[1];
+      L.g.setAttribute('transform', `translate(0 ${dy.toFixed(1)})`);
+      placed.push([L.box[0], L.box[1] + dy, L.box[2], L.box[3] + dy]);
+      y += hs[i];
+    });
+    window.__BOXES__ = placed;                       // ink boxes of the three lines (for debugging the layout)
+    if (D.arrow && D.arrow.on) {
+      const A = D.arrow;
+      c.handArrow({ x0: A.x0, y0: A.y0, x1: A.x1, y1: A.y1, at: 0, dur: 0.3, color: ACCENT, w: A.w, cue: false });
+    }
+    if (ENG.handMissing && ENG.handMissing.length) console.error('没有笔画数据：' + ENG.handMissing.join(''));
+  }
+  const decoded = im => (im.decode ? im.decode().catch(() => {}) : Promise.resolve());
+  Promise.all([document.fonts.ready, decoded(who)]).then(() => { layout(); window.__READY__ = true; });
+})();
+</script>
+</body>
+</html>

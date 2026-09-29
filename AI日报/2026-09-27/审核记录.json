@@ -1,0 +1,225 @@
+{
+ "date": "2026-09-27",
+ "script_sha": "557fbb0ee440",
+ "passed": false,
+ "checked_at": "2026-09-27 19:18:37",
+ "checks": [
+  {
+   "check": "台本检查",
+   "ok": false,
+   "level": "block",
+   "detail": "第 1 条 bar_label「」要有，而且 ≤8 字宽（底部进度条的短标签，如“OpenAI 停训”）；第 2 条 bar_label「」要有，而且 ≤8 字宽（底部进度条的短标签，如“OpenAI 停训”）；第 3 条 bar_label「」要有，而且 ≤8 字宽（底部进度条的短标签，如“OpenAI 停训”）；第 4 条 bar_label「」要有，而且 ≤8 字宽（底部进度条的短标签，如“OpenAI 停训”）；第 4 条 要点「16 块 TPU v7 对 16 块 GB200」超过 14 字宽；第 5 条 bar_label「」要有，而且 ≤8 字宽（底部进度条的短标签，如“OpenAI 停训”）"
+  },
+  {
+   "check": "台本提示",
+   "ok": false,
+   "level": "warn",
+   "detail": "只有 5 条：目标 6–8 条（合格的新闻不够时可以少，但正片会不到 5 分钟，加不了 B 站分段章节）；全片约 829 字，按每秒 6.35 字约 2.2 分钟；目标正片 5–6 分钟（约 1850–2200 字）"
+  },
+  {
+   "check": "成片",
+   "ok": true,
+   "level": "ok",
+   "detail": "D:\\大疆\\AI日报\\2026-09-27\\AI每日日报_0927_成片.mp4"
+  },
+  {
+   "check": "上传版 ≤ 9 MB",
+   "ok": true,
+   "level": "ok",
+   "detail": "8.37 MB"
+  },
+  {
+   "check": "封面",
+   "ok": true,
+   "level": "ok",
+   "detail": "16:9 + 4:3"
+  },
+  {
+   "check": "标题格式",
+   "ok": true,
+   "level": "ok",
+   "detail": "9月27日，鲸鱼娘带你看看AI圈发生了什么？"
+  },
+  {
+   "check": "简介里有全部来源",
+   "ok": true,
+   "level": "ok",
+   "detail": "7 个网址"
+  },
+  {
+   "check": "简介里没有别的网址",
+   "ok": true,
+   "level": "ok",
+   "detail": ""
+  },
+  {
+   "check": "总时长超过 5 分钟（B 站分段章节要求）",
+   "ok": false,
+   "level": "warn",
+   "detail": "150.2 秒"
+  },
+  {
+   "check": "配音识别分 ≥ 0.75",
+   "ok": true,
+   "level": "ok",
+   "detail": "7 批"
+  },
+  {
+   "check": "配音识别分 < 0.85（多半是英文名）",
+   "ok": false,
+   "level": "warn",
+   "detail": "{\"C01\": 0.829, \"C05\": 0.767, \"C06\": 0.783}"
+  },
+  {
+   "check": "事实核对（数字、英文名都在原文里）",
+   "ok": true,
+   "level": "ok",
+   "detail": "全部找到"
+  },
+  {
+   "check": "内容安全（色情、暴力、时政、广告、提示词注入、隐藏字符）",
+   "ok": false,
+   "level": "block",
+   "detail": "[来源里有提示词注入] https://the-decoder.com/openai-pauses-its-most-capable-models-after-agents-exploit-loopholes-and-leak-data/：system prompt（…cret scanning. It also ignored both the system prompt and two direct interventions from the r…）；[来源里有提示词注入] https://the-decoder.com/openai-pauses-its-most-capable-models-after-agents-exploit-loopholes-and-leak-data/：system prompt（…says it cut 80 percent of Claude Code's system prompt because Fable 5 models \"want a smaller …）；[来源里有提示词注入] https://the-decoder.com/openai-pauses-its-most-capable-models-after-agents-exploit-loopholes-and-leak-data/：system prompt（… because Fable 5 models \"want a smaller system prompt\" Claude Code and Fable 5 ported the 200…）"
+  },
+  {
+   "check": "要 AI 复核确认的词",
+   "ok": false,
+   "level": "warn",
+   "detail": "[敏感词（看上下文）] 第 2 条 headline：参议院；[敏感词（看上下文）] 第 2 条 要点 2：总理；[敏感词（看上下文）] 第 2 条 要点 3：泄露；[敏感词（看上下文）] 第 2 条 第 1 句：参议院；[敏感词（看上下文）] 第 2 条 第 1 句（配音文本）：参议院；[敏感词（看上下文）] 第 2 条 第 3 句：总理；[敏感词（看上下文）] 第 2 条 第 4 句：泄露；[敏感词（看上下文）] 第 2 条 第 4 句（配音文本）：泄露；[传闻] B 站简介：leak；[敏感词（看上下文）] B 站简介：参议院；[敏感词（看上下文）] B 站简介：参议院；[敏感词（看上下文）] 字幕 srt：参议院；[敏感词（看上下文）] 字幕 srt：总理；[敏感词（看上下文）] 字幕 srt：泄露"
+  },
+  {
+   "check": "没有重复最近 7 天播过的原文",
+   "ok": true,
+   "level": "ok",
+   "detail": ""
+  },
+  {
+   "check": "AI 复核（独立子代理，看成品和原文）",
+   "ok": false,
+   "level": "block",
+   "detail": "没有针对当前台本（sha 557fbb0ee440）的通过结论"
+  }
+ ],
+ "hits": [
+  {
+   "level": "review",
+   "cat": "敏感词（看上下文）",
+   "word": "参议院",
+   "where": "第 2 条 headline",
+   "context": "澳参议院传唤两家 CEO"
+  },
+  {
+   "level": "review",
+   "cat": "敏感词（看上下文）",
+   "word": "总理",
+   "where": "第 2 条 要点 2",
+   "context": "澳总理：无法接受"
+  },
+  {
+   "level": "review",
+   "cat": "敏感词（看上下文）",
+   "word": "泄露",
+   "where": "第 2 条 要点 3",
+   "context": "OpenAI：非故意，没泄露隐私"
+  },
+  {
+   "level": "review",
+   "cat": "敏感词（看上下文）",
+   "word": "参议院",
+   "where": "第 2 条 第 1 句",
+   "context": "第二件，澳大利亚参议院传唤了 OpenAI 和 Anthr"
+  },
+  {
+   "level": "review",
+   "cat": "敏感词（看上下文）",
+   "word": "参议院",
+   "where": "第 2 条 第 1 句（配音文本）",
+   "context": "第二件，澳大利亚参议院传唤了 OpenAI 和 Anthr"
+  },
+  {
+   "level": "review",
+   "cat": "敏感词（看上下文）",
+   "word": "总理",
+   "where": "第 2 条 第 3 句",
+   "context": "澳大利亚总理说，这件事无法接受。"
+  },
+  {
+   "level": "review",
+   "cat": "敏感词（看上下文）",
+   "word": "泄露",
+   "where": "第 2 条 第 4 句",
+   "context": "8月才发现这件事，不是故意的，也没有泄露个人信息。"
+  },
+  {
+   "level": "review",
+   "cat": "敏感词（看上下文）",
+   "word": "泄露",
+   "where": "第 2 条 第 4 句（配音文本）",
+   "context": "八月才发现这件事，不是故意的，也没有泄露个人信息。"
+  },
+  {
+   "level": "review",
+   "cat": "传闻",
+   "word": "leak",
+   "where": "B 站简介",
+   "context": "oit-loopholes-and-leak-data/ 2. 澳参议院传唤两家"
+  },
+  {
+   "level": "review",
+   "cat": "敏感词（看上下文）",
+   "word": "参议院",
+   "where": "B 站简介",
+   "context": "AI 暂停训练最强模型 0:46 澳参议院传唤两家 CEO 1:09 Clau"
+  },
+  {
+   "level": "review",
+   "cat": "敏感词（看上下文）",
+   "word": "参议院",
+   "where": "B 站简介",
+   "context": "nd-leak-data/ 2. 澳参议院传唤两家 CEO：IT之家 http"
+  },
+  {
+   "level": "review",
+   "cat": "敏感词（看上下文）",
+   "word": "参议院",
+   "where": "字幕 srt",
+   "context": "理全部暂停。    第二件，澳大利亚参议院传唤了 OpenAI    和 An"
+  },
+  {
+   "level": "review",
+   "cat": "敏感词（看上下文）",
+   "word": "总理",
+   "where": "字幕 srt",
+   "context": "大利亚联邦医保系统。    澳大利亚总理说，这件事无法接受。    Open"
+  },
+  {
+   "level": "review",
+   "cat": "敏感词（看上下文）",
+   "word": "泄露",
+   "where": "字幕 srt",
+   "context": "发现这件事    不是故意的，也没有泄露个人信息。    两位 CEO 被要"
+  },
+  {
+   "level": "block",
+   "cat": "来源里有提示词注入",
+   "word": "system prompt",
+   "where": "https://the-decoder.com/openai-pauses-its-most-capable-models-after-agents-exploit-loopholes-and-leak-data/",
+   "context": "cret scanning. It also ignored both the system prompt and two direct interventions from the r"
+  },
+  {
+   "level": "block",
+   "cat": "来源里有提示词注入",
+   "word": "system prompt",
+   "where": "https://the-decoder.com/openai-pauses-its-most-capable-models-after-agents-exploit-loopholes-and-leak-data/",
+   "context": "says it cut 80 percent of Claude Code's system prompt because Fable 5 models \"want a smaller "
+  },
+  {
+   "level": "block",
+   "cat": "来源里有提示词注入",
+   "word": "system prompt",
+   "where": "https://the-decoder.com/openai-pauses-its-most-capable-models-after-agents-exploit-loopholes-and-leak-data/",
+   "context": " because Fable 5 models \"want a smaller system prompt\" Claude Code and Fable 5 ported the 200"
+  }
+ ]
+}

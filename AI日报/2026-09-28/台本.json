@@ -1,0 +1,516 @@
+{
+ "date": "2026-09-28",
+ "opening": [
+  {
+   "text": "早上好，我是鲸鱼娘，今天是9月28日。",
+   "tts": "早上好，我是鲸鱼娘，今天是九月二十八日。",
+   "expr": "开心"
+  },
+  {
+   "text": "今天说八件事：Anthropic 恢复三类拒答收费，MiniMax 编程新模型上线，Claude Code 撞上限会先收尾，Codex 宕机后重置额度，阿里语音模型大降价，牛津图书馆的馆藏论文进了 OpenAI 训练集，AI 帮你查宜家家具装错，还有笔记本硬跑七千多亿参数的大模型。",
+   "tts": "今天说八件事：Anthropic 恢复三类拒答收费，MiniMax 编程新模型上线，Claude Code 撞上限会先收尾，Codex 宕机后重置额度，阿里语音模型大降价，牛津图书馆的馆藏论文进了 OpenAI 训练集，A I 帮你查宜家家具装错，还有笔记本硬跑七千多亿参数的大模型。"
+  }
+ ],
+ "news": [
+  {
+   "headline": "Anthropic 三类拒答恢复收费",
+   "bar_label": "拒答收费",
+   "org": "Anthropic",
+   "source": "Anthropic 官方文档",
+   "source_short": "Anthropic",
+   "date": "9月24日",
+   "rundown_key": "拒答收费",
+   "points": [
+    "三类拒答恢复收费",
+    "按正常价格计费",
+    "网安类拒答仍免费",
+    "拒答也占速率限制"
+   ],
+   "lines": [
+    {
+     "text": "第一件，Anthropic 改了 Claude API 的拒答计费。",
+     "tts": "第一件，Anthropic 改了 Claude A P I 的拒答计费。",
+     "expr": "认真"
+    },
+    {
+     "text": "之前，模型一个字还没输出就拒绝回答的请求，是不收钱的。"
+    },
+    {
+     "text": "9 月 24 日起，有三类拒答恢复收费。",
+     "tts": "九月二十四日起，有三类拒答恢复收费。",
+     "point": 0
+    },
+    {
+     "text": "这三类是：生物安全，可能帮别人开发竞争模型，还有要求模型把内部推理过程原样写出来。"
+    },
+    {
+     "text": "官方说，选这三类，是因为它们被误判的情况很少。"
+    },
+    {
+     "text": "收费标准跟正常请求一样，按跑这个请求的模型价格算。",
+     "point": 1
+    },
+    {
+     "text": "官方的说法是，这样做是为了挡住大规模绕过安全限制的尝试。"
+    },
+    {
+     "text": "网络安全类和其他一般有害内容的拒答，还是不收钱。",
+     "point": 2
+    },
+    {
+     "text": "模型输出到一半才拒绝的，本来就一直收费。"
+    },
+    {
+     "text": "另外，被拒的请求照样算进速率限制。",
+     "point": 3
+    },
+    {
+     "text": "用 Claude API 做产品的话，可以查一下自己的请求有没有落在这三类里。",
+     "tts": "用 Claude A P I 做产品的话，可以查一下自己的请求有没有落在这三类里。"
+    }
+   ],
+   "refs": [
+    {
+     "name": "Anthropic 更新日志",
+     "url": "https://platform.claude.com/docs/en/release-notes/overview"
+    },
+    {
+     "name": "Anthropic 拒答计费说明",
+     "url": "https://platform.claude.com/docs/en/build-with-claude/refusals-and-fallback"
+    },
+    {
+     "name": "MIXED",
+     "url": "https://mixed-news.com/en/anthropic-bills-refused-claude-api-requests-three-categories/"
+    }
+   ],
+   "snap_url": "https://platform.claude.com/docs/en/build-with-claude/refusals-and-fallback"
+  },
+  {
+   "headline": "MiniMax 编程新模型上线",
+   "bar_label": "MiniMax 新模型",
+   "org": "MiniMax",
+   "source": "IT之家 · MiniMax 官方",
+   "source_short": "IT之家",
+   "date": "9月27日",
+   "rundown_key": "MiniMax",
+   "points": [
+    "M3.1 Flash 预览版",
+    "主打日常开发",
+    "全员额度重置一次",
+    "另有签到活动"
+   ],
+   "lines": [
+    {
+     "text": "第二件是国产模型。9 月 27 日，MiniMax 发布了新的文本模型 M3.1-Flash-Preview。",
+     "tts": "第二件是国产模型。九月二十七日，MiniMax 发布了新的文本模型 M 三点一 Flash Preview。",
+     "expr": "开心",
+     "point": 0
+    },
+    {
+     "text": "它先上线在自家的 MiniMax Code 平台，主打日常开发。",
+     "point": 1
+    },
+    {
+     "text": "官方说，从修 Bug 到开发完整功能，它都能稳定交付，还会补上回归测试，检查改动会不会影响原有功能。"
+    },
+    {
+     "text": "上线当天，官方给所有用户的 Token Plan 额度重置了一次。",
+     "point": 2
+    },
+    {
+     "text": "9 月 28 日到 10 月 7 日，官方还安排了签到活动。",
+     "tts": "九月二十八日到十月七日，官方还安排了签到活动。",
+     "point": 3
+    },
+    {
+     "text": "不过目前还没看到公开的跑分和价格。"
+    }
+   ],
+   "refs": [
+    {
+     "name": "IT之家",
+     "url": "https://www.ithome.com/1/007/530.htm"
+    },
+    {
+     "name": "MiniMax 官方",
+     "url": "https://x.com/MiniMaxAgent/status/2104079819881517400"
+    }
+   ]
+  },
+  {
+   "headline": "Claude Code 撞上限先收尾",
+   "bar_label": "Claude 收尾",
+   "org": "Anthropic",
+   "source": "IT之家 · Claude 开发者账号",
+   "source_short": "IT之家",
+   "date": "9月26日",
+   "rundown_key": "Claude Code",
+   "points": [
+    "撞 5 小时上限不硬断",
+    "从周额度划一小笔",
+    "Pro 每周一次",
+    "Max 每次都能用"
+   ],
+   "lines": [
+    {
+     "text": "第三件回到 Claude。Claude Code 撞上用量上限，不会再直接断掉了。",
+     "expr": "开心"
+    },
+    {
+     "text": "以前任务做到一半，碰到 5 小时上限，就会在修改过程中停下。",
+     "tts": "以前任务做到一半，碰到五小时上限，就会在修改过程中停下。",
+     "point": 0
+    },
+    {
+     "text": "现在它会从你的每周额度里，划出一小笔固定额度，找个合适的地方收尾。",
+     "point": 1
+    },
+    {
+     "text": "官方没说这笔额度具体有多少。"
+    },
+    {
+     "text": "Pro 用户每周能用一次。",
+     "point": 2
+    },
+    {
+     "text": "Max 和 Team Premium 用户，每次撞上 5 小时上限都能用。",
+     "tts": "Max 和 Team Premium 用户，每次撞上五小时上限都能用。",
+     "point": 3
+    },
+    {
+     "text": "对经常跑长任务的人来说，至少不会再留下一半没改完的代码。"
+    },
+    {
+     "text": "这笔额度只用来收尾，剩下的活，还是得等额度恢复。"
+    }
+   ],
+   "refs": [
+    {
+     "name": "IT之家",
+     "url": "https://www.ithome.com/1/007/369.htm"
+    },
+    {
+     "name": "Claude 开发者账号",
+     "url": "https://x.com/ClaudeDevs/status/2103561342057943314"
+    }
+   ]
+  },
+  {
+   "headline": "Codex 宕机后重置额度",
+   "bar_label": "Codex 宕机",
+   "org": "OpenAI",
+   "source": "OpenAI 状态页 · 新智元",
+   "source_short": "OpenAI",
+   "date": "9月26日",
+   "rundown_key": "Codex",
+   "points": [
+    "全面宕机近一小时",
+    "网页 CLI 插件都挂",
+    "付费用户额度重置",
+    "API key 登录可绕开"
+   ],
+   "lines": [
+    {
+     "text": "第四件，OpenAI 的编程智能体 Codex，北京时间 9 月 26 日早上全面宕机。",
+     "tts": "第四件，OpenAI 的编程智能体 Codex，北京时间九月二十六日早上全面宕机。",
+     "expr": "吃惊"
+    },
+    {
+     "text": "官方状态页的记录，故障持续了将近一个小时。",
+     "point": 0
+    },
+    {
+     "text": "状态页把这次事故定成了全面宕机，是最高一级。"
+    },
+    {
+     "text": "网页版、命令行、VS Code 插件和 API 全都用不了。",
+     "tts": "网页版、命令行、V S Code 插件和 A P I 全都用不了。",
+     "point": 1
+    },
+    {
+     "text": "当时用 API key 登录，可以暂时绕过去。",
+     "tts": "当时用 A P I key 登录，可以暂时绕过去。",
+     "point": 3
+    },
+    {
+     "text": "恢复以后，Codex 负责人宣布，给 Codex 和 ChatGPT Work 的所有付费用户重置额度。",
+     "point": 2
+    },
+    {
+     "text": "如果你是付费用户，那天被打断用掉的额度，已经补回来了。"
+    }
+   ],
+   "refs": [
+    {
+     "name": "OpenAI 状态页",
+     "url": "https://status.openai.com/incidents/01M3DCNWMW57HYK8FJ5FBFPA39"
+    },
+    {
+     "name": "新智元（新浪转载）",
+     "url": "https://finance.sina.com.cn/wm/2026-09-26/doc-initcusx7101541.shtml"
+    },
+    {
+     "name": "Codex 负责人",
+     "url": "https://x.com/thsottiaux/status/2103637477760311522"
+    }
+   ],
+   "snap_url": "https://status.openai.com/incidents/01M3DCNWMW57HYK8FJ5FBFPA39"
+  },
+  {
+   "headline": "阿里语音模型降价最高 95%",
+   "bar_label": "阿里语音降价",
+   "org": "阿里",
+   "source": "IT之家 · 千问",
+   "source_short": "IT之家",
+   "date": "9月23日",
+   "rundown_key": "阿里语音",
+   "points": [
+    "五款语音模型齐发",
+    "识别最高降 95%",
+    "合成和实时也降价",
+    "30 种语言 16 种方言"
+   ],
+   "lines": [
+    {
+     "text": "第五件，阿里的语音模型大降价。",
+     "expr": "吃惊"
+    },
+    {
+     "text": "9 月 23 日，千问发布了 Qwen-Audio-3.1 系列语音模型，一次推出五款。",
+     "tts": "九月二十三日，千问发布了 Qwen Audio 三点一系列语音模型，一次推出五款。",
+     "point": 0
+    },
+    {
+     "text": "新增的两款，一个做音频创作，一个做音频理解，能听出情绪和环境声。"
+    },
+    {
+     "text": "价格全线下调：语音识别最高降 95%。",
+     "tts": "价格全线下调：语音识别最高降百分之九十五。",
+     "point": 1
+    },
+    {
+     "text": "实时语音降约 85%，语音合成降约 70%。",
+     "tts": "实时语音降约百分之八十五，语音合成降约百分之七十。",
+     "point": 2
+    },
+    {
+     "text": "语音识别还支持 30 种语言和 16 种中文方言。",
+     "tts": "语音识别还支持三十种语言和十六种中文方言。",
+     "point": 3
+    },
+    {
+     "text": "语音识别的首字响应大约 160 毫秒，可以边说边出字。",
+     "tts": "语音识别的首字响应大约一百六十毫秒，可以边说边出字。"
+    },
+    {
+     "text": "除了音频理解模型 ASR-Next 的 API 还没上线，其余几款已经能在千问 AI 平台调用。",
+     "tts": "除了音频理解模型 A S R Next 的 A P I 还没上线，其余几款已经能在千问 A I 平台调用。"
+    }
+   ],
+   "refs": [
+    {
+     "name": "IT之家",
+     "url": "https://www.ithome.com/1/006/280.htm"
+    },
+    {
+     "name": "The Decoder",
+     "url": "https://the-decoder.com/alibaba-launches-qwen-audio-3-1-with-five-new-models-and-slashes-ai-audio-prices-by-up-to-95-percent/"
+    }
+   ]
+  },
+  {
+   "headline": "牛津馆藏进 OpenAI 训练集",
+   "bar_label": "牛津馆藏",
+   "org": "OpenAI",
+   "source": "The Next Web · 《卫报》",
+   "source_short": "The Next Web",
+   "date": "9月26日",
+   "rundown_key": "牛津",
+   "points": [
+    "12.5 万张论文扫描件",
+    "进了 OpenAI 训练集",
+    "牛津：无版权非独家",
+    "扫描件将公开上网"
+   ],
+   "lines": [
+    {
+     "text": "第六件，牛津大学图书馆的馆藏论文，进了 OpenAI 的训练数据。",
+     "expr": "吃惊"
+    },
+    {
+     "text": "英国《卫报》9 月 26 日报道，牛津博德利图书馆和 OpenAI 合作扫描旧博士论文。",
+     "tts": "英国《卫报》九月二十六日报道，牛津博德利图书馆和 OpenAI 合作扫描旧博士论文。"
+    },
+    {
+     "text": "到 2025 年 6 月，图书馆已经给了 OpenAI 12.5 万张扫描件，都是 19 到 20 世纪欧美大学的论文。",
+     "tts": "到二零二五年六月，图书馆已经给了 OpenAI 十二点五万张扫描件，都是十九到二十世纪欧美大学的论文。",
+     "point": 0
+    },
+    {
+     "text": "去年双方宣布合作时，说的是数字化馆藏文献，没提会拿来训练。"
+    },
+    {
+     "text": "内部文件显示，这些材料被用来训练 OpenAI 的模型。",
+     "point": 1
+    },
+    {
+     "text": "牛津回应说，材料规模不大、已经没有版权，也不是 OpenAI 独家。",
+     "point": 2
+    },
+    {
+     "text": "图书馆接下来几个月，会把这些扫描件公开放到网上。",
+     "point": 3
+    }
+   ],
+   "refs": [
+    {
+     "name": "The Next Web",
+     "url": "https://thenextweb.com/news/oxford-bodleian-openai-training-data"
+    },
+    {
+     "name": "Cherwell",
+     "url": "https://cherwell.org/2026/09/27/oxford-ai-partnership-uses-bodleian-texts-for-chatgpt/"
+    },
+    {
+     "name": "Bodleian 图书馆",
+     "url": "https://www.bodleian.ox.ac.uk/services/research-partnerships/digitisation-project"
+    }
+   ]
+  },
+  {
+   "headline": "AI 查宜家装错准确率 80%",
+   "bar_label": "宜家找错",
+   "org": "Epoch AI",
+   "source": "Epoch AI · The Decoder",
+   "source_short": "Epoch AI",
+   "date": "9月23日",
+   "rundown_key": "宜家",
+   "points": [
+    "三款家具 60 张照片",
+    "GPT-6 Astra 找对 80%",
+    "十个月前最佳仅 28%",
+    "每张图约 3 分钟"
+   ],
+   "lines": [
+    {
+     "text": "第七件轻松一点：AI 能不能看出宜家家具哪一步装错了？",
+     "expr": "开心"
+    },
+    {
+     "text": "研究机构 Epoch AI 9 月 23 日公布了一个测试，用三款宜家家具的 60 张组装照片，让模型对着说明书找错。",
+     "tts": "研究机构 Epoch A I 九月二十三日公布了一个测试，用三款宜家家具的六十张组装照片，让模型对着说明书找错。",
+     "point": 0
+    },
+    {
+     "text": "模型可以放大看图、用 Python 算，每张图最多走 80 步。",
+     "tts": "模型可以放大看图、用 Python 算，每张图最多走八十步。"
+    },
+    {
+     "text": "结果 GPT-6 Astra 找对了 80%，Claude Fable 5.1 是 70%，Claude Opus 5 是 61%。",
+     "tts": "结果 G P T 六 Astra 找对了百分之八十，Claude Fable 五点一是百分之七十，Claude Opus 五是百分之六十一。",
+     "point": 1
+    },
+    {
+     "text": "十个月前最好的模型，只有 28%。",
+     "tts": "十个月前最好的模型，只有百分之二十八。",
+     "point": 2
+    },
+    {
+     "text": "它也是测过最快的，比之前领先的模型快 2 到 10 倍。",
+     "tts": "它也是测过最快的，比之前领先的模型快二到十倍。"
+    },
+    {
+     "text": "不过 GPT-6 Astra 看一张图要 3 分钟左右，还做不到边装边提醒。",
+     "tts": "不过 G P T 六 Astra 看一张图要三分钟左右，还做不到边装边提醒。",
+     "point": 3
+    }
+   ],
+   "refs": [
+    {
+     "name": "Epoch AI",
+     "url": "https://epoch.ai/publications/furniture-assembly"
+    },
+    {
+     "name": "The Decoder",
+     "url": "https://the-decoder.com/openais-gpt-6-astra-can-now-tell-you-exactly-where-you-screwed-up-your-ikea-shelf/"
+    }
+   ]
+  },
+  {
+   "headline": "笔记本硬跑 744B 大模型",
+   "bar_label": "SSD 跑大模型",
+   "org": "开源社区",
+   "source": "量子位 · GitHub",
+   "source_short": "量子位",
+   "date": "9月26日",
+   "rundown_key": "笔记本",
+   "points": [
+    "744B GLM 塞进笔记本",
+    "专家权重放 SSD",
+    "最低 16GB 内存",
+    "笔记本每秒≤0.1 token"
+   ],
+   "lines": [
+    {
+     "text": "最后一件轻松点：笔记本能不能跑七千多亿参数的大模型？",
+     "expr": "开心"
+    },
+    {
+     "text": "GitHub 上很火的开源项目 Colibrì 做到了，它是纯 C 写的推理引擎。",
+     "tts": "GitHub 上很火的开源项目 Colibri 做到了，它是纯 C 写的推理引擎。"
+    },
+    {
+     "text": "项目在 GitHub 上已经拿到 3 万多星标。",
+     "tts": "项目在 GitHub 上已经拿到三万多星标。"
+    },
+    {
+     "text": "它把每次都要用的部分放在内存里，其余的专家权重放在 SSD 上，要用的时候再读。",
+     "tts": "它把每次都要用的部分放在内存里，其余的专家权重放在 S S D 上，要用的时候再读。",
+     "point": 1
+    },
+    {
+     "text": "这样，总参数 744B 的 GLM-5.2，压到 int4 大约 372GB。",
+     "tts": "这样，总参数七千四百四十亿的 G L M 五点二，压到四比特大约三百七十二 G B。",
+     "point": 0
+    },
+    {
+     "text": "最低 16GB 内存就能跑，不需要显卡。",
+     "tts": "最低十六 G B 内存就能跑，不需要显卡。",
+     "point": 2
+    },
+    {
+     "text": "它现在已经支持 9 个模型家族，包括 Kimi K3 和 DeepSeek V4 Flash。",
+     "tts": "它现在已经支持九个模型家族，包括 Kimi K 三和 DeepSeek V 四 Flash。"
+    },
+    {
+     "text": "代价是速度：在 25GB 内存的笔记本上，每秒只能出 0.05 到 0.1 个 token。",
+     "tts": "代价是速度：在二十五 G B 内存的笔记本上，每秒只能出零点零五到零点一个 token。",
+     "point": 3
+    },
+    {
+     "text": "换成 128GB 内存的台式机，大约每秒 1.8 个。",
+     "tts": "换成一百二十八 G B 内存的台式机，大约每秒一点八个。"
+    },
+    {
+     "text": "所以它更像一次技术验证，想在家用起来，还得等它再快一些。"
+    }
+   ],
+   "refs": [
+    {
+     "name": "量子位",
+     "url": "https://www.qbitai.com/2026/09/497624.html"
+    },
+    {
+     "name": "GitHub",
+     "url": "https://github.com/JustVugg/colibri"
+    }
+   ]
+  }
+ ],
+ "closing": [
+  {
+   "text": "今天就这些，来源都在简介里，我们明天见。",
+   "expr": "开心"
+  }
+ ]
+}

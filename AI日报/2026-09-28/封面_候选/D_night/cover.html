@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>AI每日日报 封面（白底两行）</title>
+<link rel="stylesheet" href="../../../素材/字体/fonts.css">
+<style>
+  /* 1920x1080，纯色底。参考：B 站「通俗解释」的封面——纯白底、两行大字（灰色铺垫 + 彩色钩子）、一个小人在底部。
+     4:3 封面是居中裁切 x 240..1680，所以文字和角色都要落在这个范围里。
+     配色由 window.__DATA__.theme 给（make_cover_white.py 的 THEMES：橙 / 鲸鱼娘蓝 / 深海夜色）。 */
+  :root { --bg: #FFFFFF; --lead: #8C8C8C; --accent: #F5A21D; --list: #5A5A5A; --more: #9A9A9A; --blue: #3D8BFF; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1920px; height: 1080px; overflow: hidden; background: var(--bg); font-family: 'Noto Sans SC', sans-serif; }
+  #text { position: absolute; top: 0; left: 0; width: 1920px; }
+  .l { position: absolute; left: 0; width: 1920px; font-weight: 900; line-height: 1; white-space: nowrap; letter-spacing: -.02em; }
+  .l span.in { display: inline-block; }
+  #l1 { color: var(--lead); }
+  #l2 { color: var(--accent); }
+  #l1 .o { color: var(--accent); }
+  #l2 .g { color: var(--lead); }
+  #glow { position: absolute; border-radius: 50%; display: none; }
+  #fish { position: absolute; image-rendering: pixelated; }
+  #tag { position: absolute; left: 40px; bottom: 34px; color: var(--blue); font: 800 34px/1 'Noto Sans SC'; letter-spacing: .04em; display: none; }
+  /* 其余新闻的小字清单：占角色对面的空白（用户 2026-09-28 要求） */
+  #list { position: absolute; display: none; }
+  #list .h { color: var(--lead); font: 800 36px/1 'Noto Sans SC'; letter-spacing: .06em; margin-bottom: 26px; }
+  #list .h b { color: var(--accent); }
+  #list .it { display: flex; align-items: center; gap: 18px; color: var(--list); font: 700 46px/1.2 'Noto Sans SC'; white-space: nowrap; overflow: hidden; }
+  #list .it + .it { margin-top: 20px; }
+  #list .it i { flex: none; width: 16px; height: 16px; background: var(--accent); border-radius: 3px; }
+  #list .it span { overflow: hidden; text-overflow: ellipsis; }
+  #list .more { color: var(--more); font: 500 34px/1 'Noto Sans SC'; margin-top: 24px; }
+</style>
+</head>
+<body>
+  <div id="text"><div class="l" id="l1"><span class="in"></span></div><div class="l" id="l2"><span class="in"></span></div></div>
+  <div id="glow"></div>
+  <img id="fish" src="sprite.png" alt="">
+  <div id="list"><div class="h"></div><div class="items"></div><div class="more"></div></div>
+  <div id="tag"></div>
+<script>
+(function () {
+  'use strict';
+  window.DURATION = 1;
+  window.__READY__ = false;          // render.py 等 layout 量完真实字体再截图
+  // *文字* 在第 1 行变橙、在第 2 行变灰（参考封面里「投资也有*性价比*？」这种一句里换色）
+  const DEF = {
+    line1: '铺垫一句', line2: '钩子一句？',
+    l1px: 168, l2px: 236, maxw: 1400, top: 62, gap: 6, textCx: 960,
+    sprite: null, scale: 9, frame: [64, 64], footRow: 62, fishX: 672, foot: 1062,
+    tag: '',
+    // others: 其余新闻标题（小字），listX/listW 是清单的左边和宽度，listBottom 是清单底边；空数组 = 不显示
+    others: [], othersHead: '', othersMore: '', listX: 270, listW: 760, listBottom: 1000, listPx: 46,
+    // theme: 覆盖 :root 的颜色变量（bg lead accent list more）；glow = 角色背后的柔光颜色（深色底用，分开描边和底色）
+    theme: {},
+  };
+  const D = Object.assign({}, DEF, window.__DATA__ || {});
+  for (const [k, v] of Object.entries(D.theme || {})) if (k !== 'glow' && v) document.documentElement.style.setProperty('--' + k, v);
+  const $ = id => document.getElementById(id);
+  const px = v => v + 'px';
+  function markup(s, cls) {
+    const parts = String(s).split('*');
+    return parts.map((p, i) => { const t = document.createElement(i % 2 ? 'span' : 'span'); if (i % 2) t.className = cls; t.textContent = p; return t; });
+  }
+  const l1 = $('l1'), l2 = $('l2'), in1 = l1.querySelector('.in'), in2 = l2.querySelector('.in');
+  markup(D.line1, 'o').forEach(n => in1.appendChild(n));
+  markup(D.line2, 'g').forEach(n => in2.appendChild(n));
+  if (!D.line1) l1.style.display = 'none';
+  const fish = $('fish');
+  const S = D.scale;
+  fish.style.width = px(D.frame[0] * S); fish.style.height = px(D.frame[1] * S);
+  fish.style.left = px(D.fishX); fish.style.top = px(D.foot - D.footRow * S);
+  if (D.theme && D.theme.glow) {                       // 以角色身体中心为圆心的柔光
+    const g = $('glow'), cx = D.fishX + D.frame[0] * S / 2, cy = D.foot - D.footRow * S + 34 * S, r = 44 * S;
+    g.style.display = 'block'; g.style.left = px(cx - r); g.style.top = px(cy - r); g.style.width = px(2 * r); g.style.height = px(2 * r);
+    g.style.background = `radial-gradient(closest-side, ${D.theme.glow}, rgba(0,0,0,0))`;
+  }
+  if (D.tag) { $('tag').textContent = D.tag; $('tag').style.display = 'block'; }
+  const list = $('list');
+  if (D.others && D.others.length) {
+    list.style.display = 'block'; list.style.left = px(D.listX); list.style.width = px(D.listW);
+    const h = list.querySelector('.h');
+    if (D.othersHead) { const m = /^(.*?)(\d+)(.*)$/.exec(D.othersHead); h.innerHTML = ''; if (m) { h.append(m[1]); const b = document.createElement('b'); b.textContent = m[2]; h.append(b, m[3]); } else h.textContent = D.othersHead; }
+    else h.style.display = 'none';
+    const box = list.querySelector('.items');
+    D.others.forEach(t => { const it = document.createElement('div'); it.className = 'it'; it.style.fontSize = px(D.listPx);
+      const dot = document.createElement('i'), sp = document.createElement('span'); sp.textContent = t; it.append(dot, sp); box.appendChild(it); });
+    const more = list.querySelector('.more');
+    if (D.othersMore) more.textContent = D.othersMore; else more.style.display = 'none';
+  }
+
+  function fit(line, inner, maxPx) {             // shrink until the line fits maxw
+    let size = maxPx;
+    line.style.fontSize = px(size);
+    while (inner.getBoundingClientRect().width > D.maxw && size > 96) { size -= 4; line.style.fontSize = px(size); }
+    return size;
+  }
+  function place() {
+    // both lines centred on textCx（角色站在一侧时，文字中线往另一边挪一点，画面才平衡）
+    let y = D.top;
+    for (const [line, inner] of [[l1, in1], [l2, in2]]) {
+      if (line.style.display === 'none') continue;
+      const w = inner.getBoundingClientRect().width, h = inner.getBoundingClientRect().height;
+      line.style.top = px(y);
+      inner.style.marginLeft = px(D.textCx - w / 2 - (1920 - 1920) / 2);
+      line.style.textAlign = 'left';
+      y += h + D.gap;
+    }
+    return y;
+  }
+  function layout() {
+    let s1 = D.line1 ? fit(l1, in1, D.l1px) : 0, s2 = fit(l2, in2, D.l2px);
+    let bottom = place();
+    const fishTop = D.foot - D.footRow * S + 4 * S;     // 呆毛以下的发顶（row 4）：文字不压到头发
+    while (bottom > fishTop - 12 && s2 > 120) {         // 文字太高就整体缩一点
+      s2 -= 6; s1 = Math.max(96, s1 - 4);
+      l2.style.fontSize = px(s2); if (D.line1) l1.style.fontSize = px(s1);
+      bottom = place();
+    }
+    if (list.style.display === 'block') {          // 清单贴着 listBottom 往上排；顶到大字就缩字
+      let lp = D.listPx;
+      const items = list.querySelectorAll('.it');
+      const fitList = () => { items.forEach(it => { it.style.fontSize = px(lp); }); list.style.top = px(D.listBottom - list.offsetHeight); return list.offsetTop; };
+      while (fitList() < bottom + 36 && lp > 30) lp -= 2;
+    }
+    window.__LAYOUT__ = { l1px: s1, l2px: s2, bottom, fishTop };
+  }
+  const decoded = img => (img.decode ? img.decode().catch(() => {}) : Promise.resolve());
+  Promise.all([document.fonts.ready, decoded(fish)]).then(() => { layout(); window.__READY__ = true; });
+  window.renderAt = () => {};
+})();
+</script>
+</body>
+</html>

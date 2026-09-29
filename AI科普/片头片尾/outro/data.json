@@ -1,0 +1,9 @@
+{
+  "items": [
+    { "label": "拍摄", "value": "Pocket 4P" },
+    { "label": "剪辑", "value": "ChatCut" },
+    { "label": "视频剪辑模型", "value": "Opus 5.5" }
+  ],
+  "closing": "感谢大家看到最后",
+  "signature": "悠一"
+}

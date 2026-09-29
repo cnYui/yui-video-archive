@@ -1,0 +1,591 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>UE · Intro · Terminal Receipt</title>
+<link rel="stylesheet" href="../fonts/fonts.css">
+<style>
+  /* Palette: paper #EDEAE3 · ink #141414 · signal orange #FF4F1A */
+  html, body { margin: 0; width: 1920px; height: 1080px; overflow: hidden; background: #EDEAE3; }
+  #grain { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; opacity: .55; }
+  #svg { position: absolute; left: 0; top: 0; }
+  /* accent colour goes through a custom property so the inverted copy (inside the
+     selection) can turn the orange parts paper-coloured as well */
+  .acc-s { stroke: var(--acc, #FF4F1A); }
+  .acc-f { fill: var(--acc, #FF4F1A); }
+</style>
+</head>
+<body>
+<canvas id="grain" width="1920" height="1080"></canvas>
+<svg id="svg" width="1920" height="1080" viewBox="-960 -540 1920 1080">
+  <defs>
+    <clipPath id="selClip"><rect id="selClipRect" x="0" y="0" width="0" height="0"/></clipPath>
+  </defs>
+
+  <!-- crop marks on the 5% safe area -->
+  <g id="marks" fill="none" stroke="#141414" stroke-width="2" stroke-linecap="butt" opacity=".42"></g>
+
+  <g id="cam">
+    <g id="inkLayer" stroke="#141414" fill="#141414" stroke-linejoin="miter" stroke-miterlimit="4">
+      <g id="letters">
+        <!-- the orange atom: cursor -> slash -> chip core -> E crossbar / caret.
+             #core sits UNDER the ink strokes (the final crossbar tucks into the E stem without a seam);
+             #coreTop is the same atom drawn OVER the ink while it is docked in the chip wall, so the
+             orange never disappears -->
+        <path id="core" class="acc-s" fill="none" stroke-linecap="butt"/>
+        <path id="s1" fill="none" stroke-linecap="butt"/>
+        <path id="s2" fill="none" stroke-linecap="butt"/>
+        <path id="coreTop" class="acc-s" fill="none" stroke-linecap="butt"/>
+        <text id="nameText" stroke="none" font-family="'Space Grotesk', 'Noto Sans SC'" font-weight="700"></text>
+        <text id="tag" stroke="none" font-family="'Noto Sans SC'" font-weight="500" font-size="44" letter-spacing="3"></text>
+        <rect id="tagCaret" class="acc-f" stroke="none" x="0" y="0" width="0" height="0"/>
+      </g>
+      <g id="pins" fill="none" stroke-linecap="butt"></g>
+    </g>
+    <text id="ai" x="0" y="0" text-anchor="middle" dominant-baseline="central" fill="#141414"
+          font-family="'Space Grotesk'" font-weight="700" font-size="54" letter-spacing="1" opacity="0">AI</text>
+    <!-- select-all highlight + the inverted copy of the letters inside it -->
+    <rect id="sel" fill="#FF4F1A" x="0" y="0" width="0" height="0"/>
+    <use id="inv" href="#letters" stroke="#EDEAE3" fill="#EDEAE3" style="--acc:#EDEAE3"
+         clip-path="url(#selClip)" stroke-linejoin="miter" stroke-miterlimit="4"/>
+  </g>
+
+  <!-- exit: the caret opens into a solid end colour (screen space, outside the camera) -->
+  <g id="iris" opacity="0">
+    <rect id="irisO" fill="#FF4F1A" x="0" y="0" width="0" height="0"/>
+    <rect id="irisI" fill="#141414" x="0" y="0" width="0" height="0"/>
+  </g>
+</svg>
+
+<script>
+(function () {
+  'use strict';
+  /* ------------------------------------------------------------------ data */
+  // default = intro/data.json
+  // 2026-09-29 user: name is 悠一 from now on (was UE); name "UE" still draws the old UE wordmark
+  const RAW = Object.assign({ name: '悠一', tagline: '' }, window.__DATA__ || {});
+  const NAME = String(RAW.name == null ? '' : RAW.name).trim() || '悠一';
+  const TAG = String(RAW.tagline == null ? '' : RAW.tagline).trim();
+  const HEX = /^#(?:[0-9a-fA-F]{3}){1,2}$/;
+  // optional: colour of the final hold frames (default ink, matches the outro background)
+  const END_COLOR = HEX.test(String(RAW.endColor || '').trim()) ? String(RAW.endColor).trim() : '#141414';
+  const IS_UE = NAME.toUpperCase() === 'UE';
+  const HAS_TAG = TAG.length > 0;
+
+  window.DURATION = 3.8;
+  window.__READY__ = false;
+
+  const NS = 'http://www.w3.org/2000/svg';
+  const $ = id => document.getElementById(id);
+
+  /* ----------------------------------------------------------------- canvas */
+  // frame width: window.__CANVAS__ (render.py: the viewport it opened) > data.canvas [W, H] > 1920. Height stays 1080.
+  // 1920 = the original layout, untouched. Wider (e.g. 2340 = 19.5:9): the mark stays centred; paper, grain,
+  // crop marks (5% safe area) and the closing iris span the whole width.
+  const FW = (() => {
+    const pick = v => (Array.isArray(v) && isFinite(+v[0]) ? Math.round(+v[0]) : null);
+    const w = pick(window.__CANVAS__) || pick(RAW.canvas) || 1920;
+    return w >= 1920 && w <= 4096 ? w : 1920;
+  })();
+  if (FW !== 1920) {
+    document.documentElement.style.width = document.body.style.width = FW + 'px';
+    const gc = $('grain'); gc.width = FW; gc.style.width = FW + 'px';
+    const sv = $('svg'); sv.setAttribute('width', FW); sv.setAttribute('viewBox', `${-FW / 2} -540 ${FW} 1080`);
+  }
+
+  /* ------------------------------------------------------ deterministic helpers */
+  function mulberry32(a) { return function () { a |= 0; a = a + 0x6D2B79F5 | 0; let t = Math.imul(a ^ a >>> 15, 1 | a); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
+  const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+  const lerp = (a, b, e) => a + (b - a) * e;
+  const prog = (t, t0, t1) => clamp((t - t0) / (t1 - t0));
+  const E = {
+    outCubic: x => 1 - Math.pow(1 - x, 3),
+    inCubic: x => x * x * x,
+    inOutCubic: x => x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2,
+    inOutQuart: x => x < .5 ? 8 * x * x * x * x : 1 - Math.pow(-2 * x + 2, 4) / 2,
+    inQuart: x => x * x * x * x,
+    outQuart: x => 1 - Math.pow(1 - x, 4),
+    outExpo: x => x >= 1 ? 1 : 1 - Math.pow(2, -10 * x),
+    inOutExpo: x => x <= 0 ? 0 : x >= 1 ? 1 : x < .5 ? Math.pow(2, 20 * x - 10) / 2 : (2 - Math.pow(2, -20 * x + 10)) / 2,
+    outBack: x => { const c1 = 1.9, c3 = c1 + 1; return 1 + c3 * Math.pow(x - 1, 3) + c1 * Math.pow(x - 1, 2); },
+    inOutSine: x => -(Math.cos(Math.PI * x) - 1) / 2,
+  };
+  // morph ease: quick anticipation, decisive snap, long soft landing
+  const morphEase = x => E.inOutQuart(x) * 0.7 + E.inOutExpo(x) * 0.3;
+
+  /* ----------------------------------------------------- paper grain (static) */
+  (function grain() {
+    const cv = $('grain'), cx = cv.getContext('2d');
+    const img = cx.createImageData(FW, 1080), d = img.data, rnd = mulberry32(20260926);
+    for (let i = 0; i < d.length; i += 4) {
+      const v = rnd();
+      d[i] = d[i + 1] = d[i + 2] = v < .5 ? 20 : 255;
+      d[i + 3] = Math.round(Math.abs(v - .5) * 2 * 16);
+    }
+    cx.putImageData(img, 0, 0);
+  })();
+
+  /* ---------------------------------------------------------------- geometry */
+  function arc(cx, cy, r, a0, a1, n) { const p = []; for (let i = 0; i <= n; i++) { const a = a0 + (a1 - a0) * i / n; p.push([cx + r * Math.cos(a), cy + r * Math.sin(a)]); } return p; }
+  function join(...parts) { const out = []; for (const part of parts) for (const q of part) { const l = out[out.length - 1]; if (!l || Math.hypot(l[0] - q[0], l[1] - q[1]) > 1e-6) out.push(q); } return out; }
+  const mirror = pts => pts.map(p => [-p[0], p[1]]);
+  const shift = (pts, dx, dy = 0) => pts.map(p => [p[0] + dx, p[1] + dy]);
+  const rot = (pts, th) => { const c = Math.cos(th), s = Math.sin(th); return pts.map(([x, y]) => [x * c - y * s, x * s + y * c]); };
+  function bboxCenter(P) { let a = 1e9, b = -1e9, c = 1e9, d = -1e9; for (const [x, y] of P) { a = Math.min(a, x); b = Math.max(b, x); c = Math.min(c, y); d = Math.max(d, y); } return [(a + b) / 2, (c + d) / 2]; }
+
+  // corner-preserving correspondence: both shapes are sampled at the union of their own
+  // vertex parameters plus a uniform grid, so every sharp corner survives the morph.
+  function params(pts) {
+    const L = [0];
+    for (let i = 1; i < pts.length; i++) L.push(L[i - 1] + Math.hypot(pts[i][0] - pts[i - 1][0], pts[i][1] - pts[i - 1][1]));
+    const tot = L[L.length - 1] || 1;
+    return { L, tot, u: L.map(v => v / tot) };
+  }
+  function sampleAt(pts, us) {
+    const { L, tot } = params(pts), out = [];
+    let j = 1;
+    for (const u of us) {
+      const s = tot * u;
+      while (j < pts.length - 1 && L[j] < s) j++;
+      const seg = L[j] - L[j - 1] || 1, k = clamp((s - L[j - 1]) / seg);
+      out.push([lerp(pts[j - 1][0], pts[j][0], k), lerp(pts[j - 1][1], pts[j][1], k)]);
+    }
+    return out;
+  }
+  function pair(Pa, Pb, n = 160) {
+    const all = [...params(Pa).u, ...params(Pb).u];
+    for (let i = 0; i <= n; i++) all.push(i / n);
+    all.sort((a, b) => a - b);
+    const us = [];
+    for (const u of all) if (!us.length || u - us[us.length - 1] > 1e-5) us.push(u);
+    return [sampleAt(Pa, us), sampleAt(Pb, us)];
+  }
+  // piece-to-piece correspondence (stroke k of A always lands on stroke k of B), so
+  // corners map onto corners and nothing chamfers mid-morph
+  function pairPieces(A, B, n = 48) {
+    const oa = [], ob = [];
+    for (let k = 0; k < A.length; k++) {
+      const [a, b] = pair(A[k], B[k], n);
+      for (let i = k ? 1 : 0; i < a.length; i++) { oa.push(a[i]); ob.push(b[i]); }
+    }
+    return [oa, ob];
+  }
+  const piecesOf = pts => pts.slice(1).map((p, i) => [pts[i], p]);
+
+  // ">" prompt chevron
+  const chevron = [[-50, -56], [6, 0], [-50, 56]];
+  // "{" brace with a real ~90deg nub (no razor-thin angles -> no miter spikes)
+  function brace(s, a, H) {
+    const d = a * 1.05;
+    return join(arc(s + a, -H + a, a, -Math.PI / 2, -Math.PI, 18), [[s, -d], [s - a, 0], [s, d]], [[s, H - a]], arc(s + a, H - a, a, Math.PI, Math.PI / 2, 18));
+  }
+  const braceL = brace(-150, 38, 165), braceR = mirror(braceL);
+  // "</>"
+  const ltL = [[-128, -116], [-236, 0], [-128, 116]], ltR = mirror(ltL);
+  // chip body halves "[" and "]": the free ends overlap by one stroke width so the
+  // top/bottom edges close before the morph lands (no seam at the centre)
+  const CH = 138, OV = 14, CHIP_SW = 24;
+  const chipL = [[OV, -CH], [-CH, -CH], [-CH, CH], [OV, CH]], chipR = mirror(chipL);
+
+  // UE monoline wordmark (U + E, the chip core becomes the orange E crossbar)
+  const K = 1.1;
+  const CAP = 115 * K, SW = 32 * K;
+  const wU = 176 * K, GAP = 44 * K, wE = 146 * K;
+  const LOCK_W = wU + GAP + wE;
+  const X0 = -LOCK_W / 2, XE = X0 + wU + GAP;
+  const DY = HAS_TAG ? -50 : 0;            // lift the name to make room for a tagline
+  const TOP = -CAP + DY, BOT = CAP + DY;
+  const uPieces = (() => {
+    const l = X0 + SW / 2, r = X0 + wU - SW / 2, R = (r - l) / 2, cy = BOT - SW / 2 - R;
+    return [[[l, TOP], [l, cy]], arc((l + r) / 2, cy, R, Math.PI, 0, 48), [[r, cy], [r, TOP]]];
+  })();
+  const ePieces = (() => {
+    const l = XE + SW / 2, t = TOP + SW / 2, b = BOT - SW / 2, x1 = XE + wE;
+    return [[[x1, t], [l, t]], [[l, t], [l, b]], [[l, b], [x1, b]]];
+  })();
+  const uPts = join(...uPieces), ePts = join(...ePieces);
+
+  // The chip opens in two moves: first the halves slide apart (m = split progress), so their
+  // overlapping top/bottom edges never cross; then each half turns into its letter.
+  // U: the left half swings a quarter turn (counter-clockwise) while it rounds into a U
+  const cLL = bboxCenter(chipL), cU = bboxCenter(uPts);
+  const [UA, UB] = pairPieces(piecesOf(chipL).map(pc => rot(shift(pc, -cLL[0], -cLL[1]), -Math.PI / 2)), uPieces.map(pc => shift(pc, -cU[0], -cU[1])));
+  function morphU(m, my, er, es) {
+    const th = (1 - er) * Math.PI / 2, cx = lerp(cLL[0], cU[0], m), cy = lerp(cLL[1], cU[1], my);
+    return rot(UA.map((a, i) => [lerp(a[0], UB[i][0], es), lerp(a[1], UB[i][1], es)]), th).map(([x, y]) => [x + cx, y + cy]);
+  }
+  // E: the right half turns around (a card flip on its vertical axis) into the E
+  const cRR = bboxCenter(chipR), cE = bboxCenter(ePts);
+  const [EA, EB] = pairPieces(piecesOf(chipR).map(pc => mirror(shift(pc, -cRR[0], -cRR[1]))), ePieces.map(pc => shift(pc, -cE[0], -cE[1])));
+  function morphE(m, my, e) {
+    const s = -Math.cos(Math.PI * e), cx = lerp(cRR[0], cE[0], m), cy = lerp(cRR[1], cE[1], my);
+    return EA.map((a, i) => [s * lerp(a[0], EB[i][0], e) + cx, lerp(a[1], EB[i][1], e) + cy]);
+  }
+  // centre of the flipping wall ("]" right side -> E spine); the core square rides in it
+  function eStemX(m, e) {
+    const s = -Math.cos(Math.PI * e);
+    return lerp(cRR[0], cE[0], m) + s * lerp(-(CH - cRR[0]), (XE + SW / 2) - cE[0], e);
+  }
+  const eStemY = my => lerp(cRR[1], cE[1], my);
+
+  // matched point sets for the symbol steps
+  const M = {
+    m1L: pair(chevron, braceL), m1R: pair(chevron, braceR),
+    m2L: pair(braceL, ltL), m2R: pair(braceR, ltR),
+    m3L: pair(ltL, chipL), m3R: pair(ltR, chipR),
+  };
+
+  // the orange atom as a stroked segment [x0, y0, x1, y1, width]
+  const A = {
+    pre:   [-22, -50, -22, 50, 46],
+    typed: [52, -50, 52, 50, 46],
+    brace: [0, -50, 0, 50, 46],
+    slash: [50, -150, -50, 150, 26],
+    die:   [0, -62, 0, 62, 124],
+    dieH:  [-62, 0, 62, 0, 124],               // same square, horizontal parametrisation
+    sq:    [-CHIP_SW / 2, 0, CHIP_SW / 2, 0, CHIP_SW],             // core shrunk to a wall-sized square
+    dock:  [XE, DY, XE + SW, DY, SW],          // exactly on the E stem
+    bar:   [XE, DY, XE + wE - 20 * K, DY, SW], // E crossbar, grown out of the stem
+  };
+
+  /* ---------------------------------------------------------------- timeline */
+  const T = {
+    pop: [-0.02, 0.10],
+    type: 0.22,          // beat 1: ">"
+    m1: [0.36, 0.64],    // >   -> { }
+    m2: [0.70, 0.96],    // { } -> </>
+    m3: [1.02, 1.30],    // </> -> chip
+    ai: [1.19, 1.27], aiOut: [1.51, 1.57],
+    pinsIn: 1.25, pinsOut: [1.47, 1.57],   // beat 2 ~1.30
+    squash: [1.52, 1.62],                  // core -> small square
+    slide: [1.56, 1.68],                   // square docks into the chip's right wall (stays visible, orange)
+    split: [1.52, 1.76],                   // the two halves slide apart first (gap opens ~1.64)
+    U: [1.62, 1.90],                       // left half swings upright (1.62-1.85) and rounds into the U (1.67-1.90)
+    E: [1.63, 1.90],                       // right wall turns around into the E spine (core rides in it)
+    grow: [1.84, 1.98],                    // beat 3: crossbar shoots out of the spine, UE complete
+    tag: [1.98, 2.34],
+    tagBlink: [2.70, 2.96],
+    sel: [3.10, 3.28],
+    del: [3.29, 3.43],                     // beat 4
+    iris: [3.43, 3.63],                    // then ~9 frames of solid END_COLOR
+  };
+
+  /* ------------------------------------------------------------ static bits */
+  // crop marks on the 5% safe area of the frame (MX = 960 - 96 on 1920; 1170 - 117 on 2340)
+  const MX = FW / 2 - Math.round(FW * 0.05), MY = 540 - 54, ML = 34;
+  const markPaths = [];
+  for (const sx of [-1, 1]) for (const sy of [-1, 1]) {
+    const p = document.createElementNS(NS, 'path');
+    p.setAttribute('d', `M${sx * (MX - ML)} ${sy * MY} L${sx * MX} ${sy * MY} L${sx * MX} ${sy * (MY - ML)}`);
+    p.setAttribute('stroke-dasharray', `${ML * 2} ${ML * 2}`);
+    $('marks').appendChild(p); markPaths.push(p);
+  }
+  // chip pins grow out of the body's outer edge (never float)
+  const PB = CH + CHIP_SW / 2, PL = 42;
+  const pinDefs = [];
+  for (const p of [-78, 0, 78]) pinDefs.push([-PB, p, -PB - PL, p], [PB, p, PB + PL, p], [p, -PB, p, -PB - PL], [p, PB, p, PB + PL]);
+  const pinEls = pinDefs.map(() => { const el = document.createElementNS(NS, 'path'); el.setAttribute('stroke-width', 16); $('pins').appendChild(el); return el; });
+
+  $('irisI').setAttribute('fill', END_COLOR);
+
+  /* ----------------------------------------- layout that needs measured text */
+  const L = {};            // filled in by layout()
+  const tagEl = $('tag'), nameEl = $('nameText');
+  const tagChars = [...TAG], nameChars = [...NAME];
+  const tagSpans = tagChars.map(ch => { const s = document.createElementNS(NS, 'tspan'); s.textContent = ch; tagEl.appendChild(s); return s; });
+  const nameSpans = IS_UE ? [] : nameChars.map(ch => { const s = document.createElementNS(NS, 'tspan'); s.textContent = ch; nameEl.appendChild(s); return s; });
+
+  function layout() {
+    // group box of the name (wordmark or text fallback)
+    if (IS_UE) {
+      L.left = X0; L.right = X0 + LOCK_W; L.top = TOP; L.bot = BOT;
+    } else {
+      // text fallback: Space Grotesk 700 (CJK falls back to Noto Sans SC), typed by an
+      // underscore caret; the name + caret group is sized to the wordmark's footprint
+      let fs = 250;
+      nameEl.setAttribute('font-size', fs);
+      let w = nameEl.getComputedTextLength();
+      const maxW = 860;                                   // local units, name + caret
+      const groupW = (fs0, w0) => w0 + fs0 * 0.62;
+      if (groupW(fs, w) > maxW) { fs = Math.max(70, fs * maxW / groupW(fs, w)); nameEl.setAttribute('font-size', fs.toFixed(2)); w = nameEl.getComputedTextLength(); }
+      const base = DY + fs * 0.38;
+      L.nfs = fs; L.nx = -groupW(fs, w) / 2; L.nbase = base;
+      nameEl.setAttribute('x', L.nx.toFixed(2)); nameEl.setAttribute('y', base.toFixed(2));
+      L.nadv = nameChars.map((_, i) => nameEl.getSubStringLength(0, i + 1));
+      L.left = L.nx; L.right = L.nx + w; L.top = DY - fs * 0.5; L.bot = base + fs * 0.12;
+      L.caretW = fs * 0.5; L.caretH = Math.max(10, fs * 0.08);
+      L.caretY = base + fs * 0.06 + L.caretH / 2;
+    }
+    if (HAS_TAG) {
+      const tagW = tagEl.getComputedTextLength();
+      const nameW = L.right - L.left;
+      L.tagX = tagW <= nameW ? L.left + 2 : -tagW / 2;
+      L.tagY = L.bot + (IS_UE ? 74 : 82);
+      tagEl.setAttribute('x', L.tagX.toFixed(2)); tagEl.setAttribute('y', L.tagY.toFixed(2));
+      tagEl.setAttribute('dominant-baseline', 'central');
+      L.tagAdv = tagChars.map((_, i) => tagEl.getSubStringLength(0, i + 1));
+      L.tagW = tagW;
+    }
+    // selection box
+    const padX = 28, padY = 24;
+    let left = L.left, right = L.right, top = L.top, bot = L.bot;
+    if (!IS_UE) { right = Math.max(right, L.right + L.nfs * 0.08 + L.caretW); bot = Math.max(bot, L.caretY + L.caretH / 2); }
+    if (HAS_TAG) { left = Math.min(left, L.tagX); right = Math.max(right, L.tagX + L.tagW + 8 + 24); bot = L.tagY + 30; }
+    L.sel = { left: left - padX, right: right + padX, top: top - padY, bot: bot + padY };
+    L.caretDelW = 50;
+  }
+
+  /* ----------------------------------------------------------------- drawing */
+  const dStr = pts => 'M' + pts.map(p => p[0].toFixed(2) + ' ' + p[1].toFixed(2)).join('L');
+  const mix = (P, Q, e) => P.map((p, i) => [lerp(p[0], Q[i][0], e), lerp(p[1], Q[i][1], e)]);
+  const mixXY = (P, Q, ex, ey) => P.map((p, i) => [lerp(p[0], Q[i][0], ex), lerp(p[1], Q[i][1], ey)]);
+  const seg = (a, b, e) => a.map((v, i) => lerp(v, b[i], e));
+  const s1 = $('s1'), s2 = $('s2'), core = $('core'), coreTop = $('coreTop');
+  function drawSeg(el, v, op) {
+    if (!v) { el.setAttribute('d', ''); return; }
+    const [x0, y0, x1, y1, w] = v;
+    if (w <= 0.3 || op <= 0.001 || Math.hypot(x1 - x0, y1 - y0) < 0.3) { el.setAttribute('d', ''); return; }
+    el.setAttribute('d', `M${x0.toFixed(2)} ${y0.toFixed(2)}L${x1.toFixed(2)} ${y1.toFixed(2)}`);
+    el.setAttribute('stroke-width', w.toFixed(2));
+    el.setAttribute('opacity', op.toFixed(3));
+  }
+  // the atom is drawn once: over the ink (`over`) until the crossbar grows, then as the crossbar
+  // under the ink (`under`) plus the last bit of the over-ink copy sliding out of the stem
+  function setCore(under, op, over) { drawSeg(core, under, op); drawSeg(coreTop, over, op); }
+
+  // split progress: horizontal first (the halves slide apart on one line, so the overlapping
+  // edges stay level), vertical settling only once the gap is open
+  const splitX = t => E.inOutCubic(prog(t, T.split[0], T.split[1]));
+  const splitY = t => E.inOutCubic(prog(t, T.split[1] - 0.12, T.split[1] + 0.10));
+
+  const BASE = 1.3;
+  let ready = false;
+
+  function renderAt(t) {
+    if (!ready) return;
+    // camera: slow push-in
+    const z = BASE * lerp(0.975, 1.03, E.inOutSine(prog(t, 0, 3.44)));
+    $('cam').setAttribute('transform', `scale(${z.toFixed(5)})`);
+
+    // crop marks
+    const mIn = E.outCubic(prog(t, 0.0, 0.36));
+    markPaths.forEach(p => p.setAttribute('stroke-dashoffset', (ML * 2 * (1 - mIn)).toFixed(2)));
+    $('marks').setAttribute('opacity', (0.42 * (1 - E.inOutCubic(prog(t, 3.36, 3.56)))).toFixed(3));
+
+    /* --- ink strokes S1 / S2 --- */
+    let P1, P2, w1 = 22, w2 = 22, op1 = 1, op2 = 1, pop = 1, tf = '', pinScale = 1;
+    if (t < T.type) {
+      op1 = op2 = 0; P1 = P2 = chevron;
+    } else if (t < T.m1[0]) {
+      P1 = P2 = chevron;
+      pop = lerp(1.18, 1, E.outCubic(prog(t, T.type, T.type + 0.14)));
+      op1 = op2 = prog(t, T.type, T.type + 0.03);
+    } else if (t < T.m2[0]) {
+      const e = morphEase(prog(t, T.m1[0], T.m1[1]));
+      P1 = e >= 1 ? braceL : mix(M.m1L[0], M.m1L[1], e);
+      P2 = e >= 1 ? braceR : mix(M.m1R[0], M.m1R[1], e);
+      w1 = w2 = lerp(22, 24, e);
+    } else if (t < T.m3[0]) {
+      const e = morphEase(prog(t, T.m2[0], T.m2[1]));
+      P1 = e <= 0 ? braceL : e >= 1 ? ltL : mix(M.m2L[0], M.m2L[1], e);
+      P2 = e <= 0 ? braceR : e >= 1 ? ltR : mix(M.m2R[0], M.m2R[1], e);
+      w1 = w2 = lerp(24, 26, e);
+    } else if (IS_UE ? t < T.split[0] : t < 1.50) {
+      // vertical motion leads, so the top/bottom edges are already level when the two halves meet
+      // (no notch at the centre seam)
+      const p = prog(t, T.m3[0], T.m3[1]);
+      const e = morphEase(p), ey = morphEase(clamp(p / 0.72));
+      P1 = e <= 0 ? ltL : e >= 1 ? chipL : mixXY(M.m3L[0], M.m3L[1], e, ey);
+      P2 = e <= 0 ? ltR : e >= 1 ? chipR : mixXY(M.m3R[0], M.m3R[1], e, ey);
+      w1 = w2 = lerp(26, CHIP_SW, e);
+    } else if (IS_UE) {
+      const m = splitX(t), my = splitY(t);
+      // the square bracket swings upright first and only rounds into the U on the way in, so it
+      // never passes through a letter-like "C"
+      const er = morphEase(prog(t, T.U[0], T.U[1] - 0.05));        // rotation
+      const eu = morphEase(prog(t, T.U[0] + 0.05, T.U[1]));        // shape
+      const ee = morphEase(prog(t, T.E[0], T.E[1]));
+      P1 = m <= 0 ? chipL : eu >= 1 && er >= 1 && my >= 1 ? uPts : morphU(m, my, er, eu);
+      P2 = m <= 0 ? chipR : ee >= 1 && my >= 1 ? ePts : morphE(m, my, ee);
+      w1 = lerp(CHIP_SW, SW, eu); w2 = lerp(CHIP_SW, SW, ee);
+    } else {
+      // text fallback: the chip folds back into its core
+      const e = E.inOutCubic(prog(t, 1.50, 1.62));
+      const sc = lerp(1, 0.46, e);
+      P1 = chipL.map(p => [p[0] * sc, p[1] * sc]); P2 = chipR.map(p => [p[0] * sc, p[1] * sc]);
+      w1 = w2 = CHIP_SW * lerp(1, 0.7, e);
+      op1 = op2 = 1 - E.inCubic(prog(t, 1.52, 1.62));
+      pinScale = sc;   // the retracting pins fold in with the body (never float)
+    }
+    if (pop !== 1) tf = `translate(-22 0) scale(${pop.toFixed(4)}) translate(22 0)`;
+    s1.setAttribute('d', op1 > 0.001 ? dStr(P1) : ''); s2.setAttribute('d', op2 > 0.001 ? dStr(P2) : '');
+    s1.setAttribute('stroke-width', w1.toFixed(2)); s2.setAttribute('stroke-width', w2.toFixed(2));
+    s1.setAttribute('opacity', op1.toFixed(3)); s2.setAttribute('opacity', op2.toFixed(3));
+    s1.setAttribute('transform', tf); s2.setAttribute('transform', tf);
+
+    /* --- orange atom --- */
+    let a, aOp = 1, aTop, aUnder = null;
+    if (t < T.type) {
+      const e = E.outBack(prog(t, T.pop[0], T.pop[1]));
+      a = A.pre.slice(); a[1] = -50 * e; a[3] = 50 * e; a[4] = 46 * clamp(0.4 + 0.6 * e, 0, 1.2);
+    } else if (t < T.m1[0]) {
+      a = seg(A.pre, A.typed, E.outExpo(prog(t, T.type, T.type + 0.07)));
+    } else if (t < T.m2[0]) {
+      a = seg(A.typed, A.brace, morphEase(prog(t, T.m1[0], T.m1[1])));
+    } else if (t < T.m3[0]) {
+      a = seg(A.brace, A.slash, morphEase(prog(t, T.m2[0], T.m2[1])));
+    } else if (t < T.squash[0]) {
+      a = seg(A.slash, A.die, morphEase(prog(t, T.m3[0], T.m3[1])));
+    } else if (IS_UE) {
+      // the core shrinks to a wall-sized square and docks INTO the chip's right wall, where it
+      // stays visible as an orange segment; it rides the wall through the flip onto the E stem,
+      // then shoots out of the stem as the crossbar
+      const m = splitX(t), my = splitY(t);
+      const ee = morphEase(prog(t, T.E[0], T.E[1]));
+      const w = lerp(CHIP_SW, SW, ee), sx = eStemX(m, ee), sy = eStemY(my);
+      const inWall = ee >= 1 && my >= 1 ? A.dock.slice() : [sx - w / 2, sy, sx + w / 2, sy, w];
+      if (t < T.grow[0]) {
+        const eq = E.inOutCubic(prog(t, T.squash[0], T.squash[1]));
+        const es = E.inOutCubic(prog(t, T.slide[0], T.slide[1]));
+        a = seg(seg(A.dieH, A.sq, eq), inWall, es);
+      } else {
+        const g = E.outQuart(prog(t, T.grow[0], T.grow[1]));
+        a = aUnder = seg(inWall, A.bar, g);
+        // the over-ink copy slides out of the stem to the right and is gone when the bar is complete;
+        // its right end overlaps the (orange) bar by up to 2px so no seam shows at the stem edge
+        const xL = XE, xR = XE + SW, ext = Math.min(2, (a[2] - xR));
+        aTop = g >= 1 ? null : [lerp(xL, xR + ext, g), DY, xR + ext, DY, SW];
+      }
+    } else {
+      // text fallback: the core becomes an underscore caret at the start of the name, then types it
+      const caret0 = [L.nx, L.caretY, L.nx + L.caretW, L.caretY, L.caretH];
+      const eq = morphEase(prog(t, 1.58, 1.78));
+      a = seg(A.dieH, caret0, eq);
+      const n = nameChars.length, dt = Math.min(0.07, 0.42 / Math.max(1, n)), t0 = 1.80;
+      let adv = 0;
+      for (let i = 0; i < n; i++) {
+        const k = E.outCubic(prog(t, t0 + i * dt, t0 + i * dt + 0.045));
+        adv = lerp(adv, L.nadv[i] + L.nfs * 0.08, k);
+      }
+      a = a.slice(); a[0] += adv; a[2] += adv;
+      const bl = prog(t, T.tagBlink[0] + 0.1, T.tagBlink[1] + 0.1);
+      aOp = 1 - 0.65 * Math.sin(Math.PI * bl);
+    }
+    // the text-fallback caret fades out as the selection arrives; the E crossbar stays (it is part of the name)
+    if (!IS_UE) aOp *= 1 - E.inOutCubic(prog(t, T.sel[0] - 0.06, T.sel[0] + 0.03));
+    if (!IS_UE && t >= 1.50) { aUnder = a; aTop = null; }   // text fallback: under the folding chip
+    setCore(aUnder, aOp, aTop === undefined ? a : aTop);
+
+    // text-fallback name typing
+    if (!IS_UE) {
+      const n = nameChars.length, dt = Math.min(0.07, 0.42 / Math.max(1, n)), t0 = 1.80;
+      nameSpans.forEach((s, i) => s.setAttribute('fill-opacity', E.outCubic(prog(t, t0 + i * dt, t0 + i * dt + 0.03)).toFixed(3)));
+    }
+
+    /* --- AI label on the core --- */
+    const aiE = E.outCubic(prog(t, T.ai[0], T.ai[1]));
+    const aiOp = aiE * (1 - prog(t, T.aiOut[0], T.aiOut[1]));
+    const ai = $('ai');
+    ai.setAttribute('opacity', aiOp.toFixed(3));
+    ai.setAttribute('transform', `scale(${lerp(0.8, 1, aiE).toFixed(4)})`);
+
+    /* --- chip pins: grow from the body edge, retract into it --- */
+    $('pins').setAttribute('transform', pinScale === 1 ? '' : `scale(${pinScale.toFixed(4)})`);
+    pinEls.forEach((el, i) => {
+      const [x0, y0, x1, y1] = pinDefs[i];
+      const st = T.pinsIn + (i % 4) * 0.012 + Math.floor(i / 4) * 0.022;
+      const gin = E.outCubic(prog(t, st, st + 0.13));
+      const gout = E.inCubic(prog(t, T.pinsOut[0] + (i % 4) * 0.008, T.pinsOut[1]));
+      const g = gin * (1 - gout);
+      if (g * PL < 0.75) { el.setAttribute('d', ''); return; }
+      el.setAttribute('d', `M${x0} ${y0}L${lerp(x0, x1, g).toFixed(2)} ${lerp(y0, y1, g).toFixed(2)}`);
+    });
+
+    /* --- tagline: typed with a small block caret --- */
+    const caretEl = $('tagCaret');
+    if (HAS_TAG) {
+      const n = tagChars.length, dt = (T.tag[1] - T.tag[0]) / Math.max(1, n);
+      let adv = 0, shown = 0;
+      tagSpans.forEach((s, i) => {
+        const st = T.tag[0] + dt * i;
+        const k = E.outCubic(prog(t, st, st + 0.04));
+        s.setAttribute('fill-opacity', k.toFixed(3));
+        adv = lerp(adv, L.tagAdv[i], E.outCubic(prog(t, st, st + 0.05)));
+        if (t >= st) shown = 1;
+      });
+      const cOn = prog(t, T.tag[0] - 0.04, T.tag[0]);
+      const bl = prog(t, T.tagBlink[0], T.tagBlink[1]);
+      // fades out as the selection sweeps in (no one-frame disappearance)
+      const cOp = cOn * (1 - 0.7 * Math.sin(Math.PI * bl)) * (1 - E.inOutCubic(prog(t, T.sel[0] - 0.06, T.sel[0] + 0.03)));
+      if (cOp > 0.002) {
+        caretEl.setAttribute('x', (L.tagX + adv + 8).toFixed(2));
+        caretEl.setAttribute('y', (L.tagY - 22).toFixed(2));
+        caretEl.setAttribute('width', 23); caretEl.setAttribute('height', 44);
+        caretEl.setAttribute('opacity', cOp.toFixed(3));
+      } else caretEl.setAttribute('width', 0);
+    }
+
+    /* --- select-all, delete, open into the end colour --- */
+    const S = L.sel;
+    // select-all: a decisive drag from the right (fast start, soft landing) that grows from zero width
+    const selP = prog(t, T.sel[0], T.sel[1]);
+    const selE = 0.35 * E.inOutCubic(selP) + 0.65 * E.outCubic(selP);
+    const delE = E.inOutQuart(prog(t, T.del[0], T.del[1]));
+    const irisP = prog(t, T.iris[0], T.iris[1]);
+    const sel = $('sel'), clipR = $('selClipRect');
+    const ink = $('inkLayer'), inv = $('inv');
+    let x = 0, y = S.top, w = 0, h = S.bot - S.top;
+    if (t >= T.sel[0] && irisP <= 0) {
+      x = lerp(S.right, S.left, selE); w = S.right - x;
+      if (delE > 0) { x = S.left; w = lerp(S.right - S.left, L.caretDelW, delE); }
+      const sq = delE > 0 ? `translate(${S.left.toFixed(2)} 0) scale(${Math.max(1 - delE, 0.0001).toFixed(4)} 1) translate(${(-S.left).toFixed(2)} 0)` : '';
+      ink.setAttribute('transform', sq); inv.setAttribute('transform', sq);
+      ink.setAttribute('opacity', delE >= 1 ? 0 : 1); inv.setAttribute('opacity', delE >= 1 ? 0 : 1);
+    } else if (irisP > 0) {
+      ink.setAttribute('opacity', 0); inv.setAttribute('opacity', 0);
+    } else {
+      ink.setAttribute('transform', ''); inv.setAttribute('transform', '');
+      ink.setAttribute('opacity', 1); inv.setAttribute('opacity', 1);
+    }
+    for (const el of [sel, clipR]) {
+      el.setAttribute('x', x.toFixed(2)); el.setAttribute('y', y.toFixed(2));
+      el.setAttribute('width', Math.max(0, w).toFixed(2)); el.setAttribute('height', Math.max(0, h).toFixed(2));
+    }
+    sel.setAttribute('opacity', irisP > 0 ? 0 : 1);
+
+    // iris: the caret rectangle opens to the frame edges (50 px past them, whatever the frame width); its orange
+    // rim thins as it goes
+    const iris = $('iris');
+    if (irisP > 0) {
+      const e = E.inOutCubic(irisP) * 0.55 + E.inQuart(irisP) * 0.45;
+      const cx0 = S.left * z, cx1 = (S.left + L.caretDelW) * z, cy0 = S.top * z, cy1 = S.bot * z;
+      const XE_ = FW / 2 + 50;
+      const X0s = lerp(cx0, -XE_, e), X1s = lerp(cx1, XE_, e), Y0s = lerp(cy0, -590, e), Y1s = lerp(cy1, 590, e);
+      const rim = lerp((cx1 - cx0) / 2 + 1, 22, E.outCubic(clamp(irisP * 1.25)));
+      const o = $('irisO'), i = $('irisI');
+      o.setAttribute('x', X0s.toFixed(2)); o.setAttribute('y', Y0s.toFixed(2));
+      o.setAttribute('width', (X1s - X0s).toFixed(2)); o.setAttribute('height', (Y1s - Y0s).toFixed(2));
+      const iw = Math.max(0, X1s - X0s - 2 * rim), ih = Math.max(0, Y1s - Y0s - 2 * rim);
+      i.setAttribute('x', (X0s + rim).toFixed(2)); i.setAttribute('y', (Y0s + rim).toFixed(2));
+      i.setAttribute('width', iw.toFixed(2)); i.setAttribute('height', ih.toFixed(2));
+      iris.setAttribute('opacity', 1);
+    } else iris.setAttribute('opacity', 0);
+  }
+  window.renderAt = renderAt;
+
+  /* ------------------------------------------------ boot: fonts, then layout */
+  const loads = [document.fonts.load(`700 60px "Space Grotesk"`, 'AI' + NAME)];
+  if (HAS_TAG || !IS_UE) {
+    loads.push(document.fonts.load(`500 44px "Noto Sans SC"`, TAG || '字'));
+    loads.push(document.fonts.load(`700 60px "Noto Sans SC"`, NAME));
+  }
+  Promise.all(loads).catch(() => {}).then(() => {
+    layout();
+    ready = true;
+    renderAt(0);
+    window.__READY__ = true;
+  });
+})();
+</script>
+</body>
+</html>

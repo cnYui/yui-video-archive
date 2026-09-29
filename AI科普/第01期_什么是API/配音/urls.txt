@@ -1,0 +1,2 @@
+C05 https://platform.r2.fish.audio/tasks/2026-09-26/f2e0a3decf72444c90f9db207128ad85.mp3?cors https://platform.r2.fish.audio/tasks/2026-09-26/df45899139dd42c1b6ce05f1f6e8514c.mp3?cors
+C06 https://platform.r2.fish.audio/tasks/2026-09-26/39b7eb0445f64ae88c466d0376ea6cfe.mp3?cors https://platform.r2.fish.audio/tasks/2026-09-26/635100f1d7224625b6ba9ef673f27001.mp3?cors

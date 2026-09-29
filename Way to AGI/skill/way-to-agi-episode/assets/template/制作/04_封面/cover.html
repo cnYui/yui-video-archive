@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<!-- Way to AGI 封面模板（02 期的三个方案 + 选定版 v4；每期换人像和标题，风格照旧；不用鲸鱼娘）。原注释：教程封面（三选一）：window.__COVER__ = { v: 1|2|3, w: 1920|1440 }，高 1080。人像是用户出镜原片抠出来的（face_cut/，cutout.py）。 -->
+<link rel="stylesheet" href="file:///D:/大疆/AI科普/素材/字体/fonts.css">
+<style>
+:root { --ink:#1B1B1F; --ink2:#374151; --gray:#6B7280; --line:#E5E7EB; --orange:#FF4F1A; --marker:#FFD84D; --green:#16A34A; --red:#DC2626; }
+* { box-sizing:border-box; margin:0; padding:0; }
+html, body { height:1080px; overflow:hidden; background:#fff; font-family:'Noto Sans SC', sans-serif; color:var(--ink); }
+#c { position:relative; height:1080px; overflow:hidden; background:#fff radial-gradient(#E6E9EE 2.2px, transparent 2.4px) 0 0 / 36px 36px; }
+.abs { position:absolute; }
+.blob { position:absolute; border-radius:50%; }
+.person { position:absolute; bottom:0; filter:drop-shadow(0 18px 30px rgba(0,0,0,.20)); }
+.chip { display:inline-block; padding:8px 26px; border:5px solid var(--orange); color:var(--orange); border-radius:999px; font:900 40px 'Noto Sans SC'; white-space:nowrap; background:#fff; }
+.t1 { font-weight:900; line-height:1.12; white-space:nowrap; color:var(--ink); -webkit-text-stroke:0; }
+.mark { background:linear-gradient(transparent 56%, var(--marker) 56%, var(--marker) 94%, transparent 94%); }
+.o { color:var(--orange); }
+.frame { position:absolute; background:#fff; padding:12px; border-radius:10px; box-shadow:0 14px 34px rgba(0,0,0,.2); }
+.frame img { display:block; width:100%; height:100%; object-fit:cover; border-radius:4px; }
+.tape { position:absolute; width:120px; height:34px; background:rgba(255,214,140,.85); top:-16px; left:50%; margin-left:-60px; transform:rotate(-4deg); }
+.sticker { position:absolute; background:#fff; border-radius:18px; box-shadow:0 12px 30px rgba(0,0,0,.16); padding:22px 30px; white-space:nowrap; }
+.sprite { image-rendering:pixelated; }
+.step { display:inline-block; padding:10px 22px; border-radius:14px; background:#fff; border:3px solid var(--ink); font:900 36px 'Noto Sans SC'; box-shadow:0 6px 0 var(--ink); }
+.arr { display:inline-block; font:900 36px 'Noto Sans SC'; color:var(--orange); margin:0 10px; }
+</style>
+</head>
+<body>
+<div id="c"></div>
+<script>
+const C = window.__COVER__ || { v: 1, w: 1920 };
+const W = C.w, H = 1080, WIDE = W >= 1900;
+const root = document.getElementById('c');
+root.style.width = W + 'px'; document.body.style.width = W + 'px';
+const SHOW = '../03_成片/media/show';
+const WH = 'file:///D:/大疆/AI科普/素材/角色/大肥鱼像素素材包/素材/动作帧';
+function el(html, style = {}) { const d = document.createElement('div'); d.className = 'abs'; d.innerHTML = html; Object.assign(d.style, style); root.appendChild(d); return d; }
+function person(file, h, right, ratio) { const img = document.createElement('img'); img.src = `face_cut/${file}_outline.png`; img.className = 'person'; img.style.height = h + 'px'; img.style.right = right + 'px'; root.appendChild(img); return img; }
+function blob(x, y, r, color) { const b = document.createElement('div'); b.className = 'blob'; Object.assign(b.style, { left: (x - r) + 'px', top: (y - r) + 'px', width: 2 * r + 'px', height: 2 * r + 'px', background: color }); root.appendChild(b); return b; }
+function photo(src, x, y, w, h, rot) { const f = document.createElement('div'); f.className = 'frame'; Object.assign(f.style, { left: x + 'px', top: y + 'px', width: w + 'px', height: h + 'px', transform: `rotate(${rot}deg)` }); f.innerHTML = `<div class="tape"></div><img src="${src}">`; root.appendChild(f); return f; }
+// 字太宽就缩：保证标题不压到脸上
+function fit(node, maxW) { let s = parseFloat(getComputedStyle(node).fontSize); while (node.scrollWidth > maxW && s > 40) { s -= 2; node.style.fontSize = s + 'px'; } }
+
+const X0 = WIDE ? 90 : 64;                      // 左边距
+if (C.v === 1) {
+  // ---- 方案 1：挥手 + 几乎零成本
+  blob(WIDE ? 1400 : 1060, 540, WIDE ? 450 : 380, '#FFE3D6');
+  person('wave', WIDE ? 840 : 730, WIDE ? -90 : -200);
+  el(`<span class="chip">Claude Opus 5.5 · 做视频教程</span>`, { left: X0 + 'px', top: '70px' });
+  const a = el(`用 Claude 做视频`, { left: X0 + 'px', top: '176px', font: `900 ${WIDE ? 118 : 96}px 'Noto Sans SC'`, whiteSpace: 'nowrap' });
+  const b = el(`几乎<span class="o mark">零成本</span>`, { left: X0 + 'px', top: WIDE ? '330px' : '308px', font: `900 ${WIDE ? 210 : 170}px/1.1 'Noto Sans SC'`, whiteSpace: 'nowrap' });
+  fit(a, WIDE ? 960 : 640); fit(b, WIDE ? 960 : 600);
+  const s1 = el(`<div class="sticker" style="position:relative;transform:rotate(-3deg)"><div style="font:800 30px 'Noto Sans SC';color:var(--gray)">视频模型 · 做 6 分钟</div><div style="font:900 84px 'Space Grotesk';color:var(--red);text-decoration:line-through;text-decoration-thickness:8px">≈ $205</div></div>`, { left: X0 + 'px', top: WIDE ? '690px' : '650px' });
+  const s2 = el(`<div class="sticker" style="position:relative;transform:rotate(2deg);border:5px solid var(--green)"><div style="font:800 30px 'Noto Sans SC';color:var(--gray)">Claude 写代码 · 同样 6 分钟</div><div style="font:900 64px 'Noto Sans SC';color:var(--green)">一周额度的 5%～10%</div></div>`, { left: (WIDE ? X0 + 380 : X0 + 40) + 'px', top: WIDE ? '740px' : '860px' });
+} else if (C.v === 2) {
+  // ---- 方案 2：惊讶脸 + 不是扩散模型也能做动画
+  blob(WIDE ? 1380 : 1040, 500, WIDE ? 460 : 390, '#FFF0B8');
+  person('wow', WIDE ? 940 : 800, WIDE ? -30 : -150);
+  el(`<span class="chip">Claude 不是扩散模型</span>`, { left: X0 + 'px', top: '70px' });
+  const a = el(`它却能`, { left: X0 + 'px', top: '172px', font: `900 ${WIDE ? 120 : 100}px 'Noto Sans SC'`, whiteSpace: 'nowrap' });
+  const b = el(`做<span class="o mark">动画</span>？`, { left: X0 + 'px', top: WIDE ? '318px' : '290px', font: `900 ${WIDE ? 220 : 180}px/1.1 'Noto Sans SC'`, whiteSpace: 'nowrap' });
+  fit(a, WIDE ? 900 : 640); fit(b, WIDE ? 900 : 640);
+  const pw = WIDE ? 340 : 280, ph = Math.round(pw * 9 / 16);
+  photo(`${SHOW}/gintama/f_0031.jpg`, X0, WIDE ? 640 : 620, pw, ph, -5);
+  photo(`${SHOW}/naruto/f_0068.jpg`, X0 + (WIDE ? 300 : 230), WIDE ? 760 : 740, pw, ph, 3);
+  photo(`${SHOW}/jojo/f_0120.jpg`, X0 + (WIDE ? 610 : 40), WIDE ? 640 : 836, pw, ph, -2);
+  el(`像素风 · 一帧一帧画出来`, { left: X0 + 'px', top: WIDE ? '990px' : '1010px', font: `900 ${WIDE ? 40 : 34}px 'Noto Sans SC'`, color: 'var(--ink2)', display: WIDE ? 'none' : 'block' });
+} else if (C.v === 4) {
+  // ---- 选定（用户 2026-09-28：“用方案三的形象，去除deepseek形象，然后用方案一的标题”）：方案三的人像和蓝底、不要鲸鱼娘、方案一的标题
+  const STEPS = `<span class="step">台本</span><span class="arr">→</span><span class="step">配音</span><span class="arr">→</span><span class="step">画面</span><span class="arr">→</span><span class="step">渲染</span>`;
+  if (WIDE) {
+    blob(1420, 540, 450, '#DDEBFF');
+    person('talk', 860, -110);
+    el(`<span class="chip">Claude Opus 5.5 · 做视频教程</span>`, { left: X0 + 'px', top: '70px' });
+    const a = el(`用 Claude 做视频`, { left: X0 + 'px', top: '176px', font: "900 118px 'Noto Sans SC'", whiteSpace: 'nowrap' });
+    const b = el(`几乎<span class="o mark">零成本</span>`, { left: X0 + 'px', top: '330px', font: "900 210px/1.1 'Noto Sans SC'", whiteSpace: 'nowrap' });
+    fit(a, 960); fit(b, 960);
+    el(STEPS, { left: X0 + 'px', top: '660px', whiteSpace: 'nowrap' });
+  } else {
+    // 4:3（首页推荐）：用户 2026-09-28“上面的封面字可以再大一点，人可以再小一点” → 标题横跨上半部分放大，人缩到右下角
+    blob(1060, 830, 330, '#DDEBFF');
+    person('talk', 540, -40);
+    el(`<span class="chip" style="font-size:44px">Claude Opus 5.5 · 做视频教程</span>`, { left: X0 + 'px', top: '52px' });
+    const a = el(`用 Claude 做视频`, { left: X0 + 'px', top: '150px', font: "900 124px 'Noto Sans SC'", whiteSpace: 'nowrap' });
+    const b = el(`几乎<span class="o mark">零成本</span>`, { left: X0 + 'px', top: '290px', font: "900 216px/1.1 'Noto Sans SC'", whiteSpace: 'nowrap' });
+    fit(a, 1310); fit(b, 1310);
+    el(STEPS, { left: X0 + 'px', top: '700px', whiteSpace: 'nowrap', transform: 'scale(0.95)', transformOrigin: '0 0' });
+  }
+} else {
+  // ---- 方案 3：讲解脸 + 手把手教程
+  blob(WIDE ? 1360 : 1020, 520, WIDE ? 470 : 400, '#DDEBFF');
+  person('talk', WIDE ? 930 : 800, WIDE ? -30 : -150);
+  el(`<span class="chip">从零开始 · 做视频教程</span>`, { left: X0 + 'px', top: '70px' });
+  const a = el(`手把手教你`, { left: X0 + 'px', top: '172px', font: `900 ${WIDE ? 128 : 104}px 'Noto Sans SC'`, whiteSpace: 'nowrap' });
+  const b = el(`用 <span class="o">Claude</span><br><span class="mark">做视频</span>`, { left: X0 + 'px', top: WIDE ? '330px' : '300px', font: `900 ${WIDE ? 150 : 124}px/1.12 'Noto Sans SC'`, whiteSpace: 'nowrap' });
+  fit(a, WIDE ? 900 : 640); fit(b, WIDE ? 900 : 640);
+  // Way to AGI 不用 DeepSeek 形象（鲸鱼娘），02 期这里原来放了她（用户 2026-09-29）
+  el(`<span class="step">台本</span><span class="arr">→</span><span class="step">配音</span><span class="arr">→</span><span class="step">画面</span><span class="arr">→</span><span class="step">渲染</span>`, { left: X0 + 'px', top: WIDE ? '900px' : '930px', whiteSpace: 'nowrap', transform: WIDE ? 'none' : 'scale(0.82)', transformOrigin: '0 0' });
+}
+window.__READY__ = false;
+Promise.all([document.fonts.ready, ...[...document.images].map(i => i.decode().catch(() => { throw new Error('图片加载失败 ' + i.src); }))]).then(() => { window.__READY__ = true; });
+</script>
+</body>
+</html>

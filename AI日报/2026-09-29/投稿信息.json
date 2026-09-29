@@ -1,0 +1,24 @@
+{
+  "title": "9月29日，鲸鱼娘带你看看AI圈发生了什么？",
+  "video": "D:\\大疆\\AI日报\\2026-09-29\\AI每日日报_0929_上传版.mp4",
+  "video_seconds": 343.29,
+  "cover_16x9": "D:\\大疆\\AI日报\\2026-09-29\\封面\\封面_16x9_1920x1080.png",
+  "cover_4x3": "D:\\大疆\\AI日报\\2026-09-29\\封面\\封面_4x3_1440x1080.png",
+  "partition": "人工智能",
+  "partition_fallback": "科技数码",
+  "tags": [
+    "AI资讯",
+    "人工智能",
+    "大模型",
+    "AI日报",
+    "Anthropic",
+    "英伟达",
+    "通义千问",
+    "谷歌",
+    "鲸鱼娘",
+    "大肥鱼"
+  ],
+  "collection": "AI每日日报",
+  "declaration": "含AI生成内容",
+  "description": "AI每日日报 · 9月29日（周二）\n鲸鱼娘带你看看 AI 圈发生了什么。\n\n今日内容\n0:00 开场\n0:23 Claude Sonnet 5.5 发布\n1:12 英伟达推出智能体安全平台\n2:05 华为开源盘古训练代码\n2:45 千问打通夸克网盘\n3:25 Gems 将迁移成 skills\n4:14 Shopify 让 AI 帮你结账\n4:56 AMD 收购 World Labs\n5:32 回顾\n\n来源\n① Claude Sonnet 5.5 发布：Anthropic https://www.anthropic.com/claude-sonnet-5-5 ；Anthropic 文档 https://platform.claude.com/docs/en/models/sonnet-5-5/overview ；TechCrunch https://techcrunch.com/2026/09/28/anthropic-releases-sonnet-5-5-which-it-calls-a-significantly-cheaper-faster-work-partner/\n② 英伟达推出智能体安全平台：英伟达新闻稿 https://nvidianews.nvidia.com/news/open-agent-safety-platform ；Anthropic 博客 https://claude.com/blog/giving-companies-more-control-over-their-ai-agents-with-nvidia\n③ 华为开源盘古训练代码：IT之家 https://www.ithome.com/1/007/740.htm ；GitCode 训练仓库 https://gitcode.com/ascend-tribe/openPangu-2.0-Training ；动点科技 https://cn.technode.com/post/2026-09-28/huawei-openpangu-2-training-code-open-source/\n④ 千问打通夸克网盘：IT之家 https://www.ithome.com/1/007/871.htm ；手机中国 https://internet.cnmo.com/event/819464.html\n⑤ Gems 将迁移成 skills：9to5Google https://9to5google.com/2026/09/27/gemini-gems-skills/\n⑥ Shopify 让 AI 帮你结账：Shopify 更新日志 https://shopify.dev/changelog/posts/webmcp-support-for-checkout ；TechCrunch https://techcrunch.com/2026/09/28/shopify-opens-checkout-to-browser-based-ai-agents/\n⑦ AMD 收购 World Labs：AMD 新闻稿 https://ir.amd.com/news-events/press-releases/detail/1299/amd-to-acquire-world-labs-to-advance-the-future-of-ai-compute ；TechCrunch https://techcrunch.com/2026/09/28/amd-will-acquire-fei-fei-lis-world-labs-for-8-2-billion/\n\n说明\n· 信息截至北京时间 2026-09-29 07:26，以各家官方发布为准。\n· 本期配音由 AI 合成（Fish Audio「苏晓晓」）；内容由 AI 整理，并自动核对来源，如有出入以原文为准。\n· 主播鲸鱼娘（像素素材包「大肥鱼」）是 DeepSeek 的网友拟人同人（原型：上善无形，CC BY-NC-SA 4.0；女仆造型：ZipZipPipe），与 DeepSeek 官方无关。"
+}

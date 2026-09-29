@@ -1,0 +1,524 @@
+﻿1
+00:00:00,000 --> 00:00:01,300
+Hello everyone, I'm Yui.
+
+2
+00:00:01,300 --> 00:00:03,520
+My last video blew me away so hard I'm still a bit dizzy.
+
+3
+00:00:03,520 --> 00:00:08,927
+Today I'll show you how to make your first video with Opus 5.5.
+
+4
+00:00:08,927 --> 00:00:11,940
+Opus 5.5 was released on September 22,
+
+5
+00:00:11,940 --> 00:00:14,700
+and it's arguably the most capable model right now.
+
+6
+00:00:14,700 --> 00:00:19,627
+After launch, its price also dropped by 20%,
+
+7
+00:00:19,627 --> 00:00:23,500
+but nobody expected its vision to be this strong.
+
+8
+00:00:23,500 --> 00:00:26,120
+Back when GPT-6 came out,
+
+9
+00:00:26,120 --> 00:00:31,673
+it could do 3D modeling, which is really impressive.
+
+10
+00:00:31,673 --> 00:00:35,687
+Like in this clip: it modeled a living room and a study,
+
+11
+00:00:35,687 --> 00:00:39,873
+and you can follow the camera and move around freely, like a game.
+
+12
+00:00:39,873 --> 00:00:42,767
+But nobody expected Opus 5.5 to be this capable too.
+
+13
+00:00:42,767 --> 00:00:47,180
+Officially, it's the strongest model for vision and computer use,
+
+14
+00:00:47,180 --> 00:00:51,200
+reading charts, screenshots and diagrams in fine detail.
+
+15
+00:00:51,200 --> 00:00:56,093
+So a lot of people ask: how can Claude make videos?
+
+16
+00:00:56,093 --> 00:00:58,413
+Claude itself is a multimodal model,
+
+17
+00:00:58,413 --> 00:01:01,553
+but it can't generate audio, images or video.
+
+18
+00:01:01,553 --> 00:01:02,933
+So I asked Claude,
+
+19
+00:01:02,933 --> 00:01:05,740
+and it said it draws every frame itself,
+
+20
+00:01:05,740 --> 00:01:08,013
+every single pixel.
+
+21
+00:01:08,013 --> 00:01:11,060
+Like in this picture, pixel by pixel,
+
+22
+00:01:11,060 --> 00:01:15,113
+using colors it defined beforehand, like 01 or EF.
+
+23
+00:01:15,113 --> 00:01:16,573
+Honestly, it's wild.
+
+24
+00:01:16,573 --> 00:01:20,260
+After drawing, it screenshots its own work and checks it with its own vision,
+
+25
+00:01:20,260 --> 00:01:22,647
+to see if it matches what I asked for.
+
+26
+00:01:22,647 --> 00:01:24,220
+Here are a few examples.
+
+27
+00:01:24,220 --> 00:01:29,147
+The first example: I used this prompt to have it make a Gintama anime,
+
+28
+00:01:29,147 --> 00:01:33,470
+picking classic scenes from the whole main storyline.
+
+29
+00:01:34,687 --> 00:01:37,277
+The second is Naruto. It did a great job too.
+
+30
+00:01:38,907 --> 00:01:39,800
+The third is JoJo.
+
+31
+00:01:39,800 --> 00:01:44,063
+Similar prompt, also asking for some basic scenes.
+
+32
+00:01:45,160 --> 00:01:49,340
+The fourth is my earlier video ranking AI models, from god-tier to trash.
+
+33
+00:01:49,340 --> 00:01:52,020
+Look at what's in this video:
+
+34
+00:01:52,020 --> 00:01:56,400
+the voice, the colors, even the character's mouth
+
+35
+00:01:56,400 --> 00:01:59,920
+opening and closing with the audio.
+
+36
+00:01:59,920 --> 00:02:02,273
+It checked all of that itself, by taking screenshots and looking.
+
+37
+00:02:02,273 --> 00:02:03,507
+Pretty shocking.
+
+38
+00:02:03,507 --> 00:02:06,587
+So if Claude isn't a diffusion model, where do these videos come from?
+
+39
+00:02:06,587 --> 00:02:09,767
+Since Claude isn't a diffusion model and draws frame by frame,
+
+40
+00:02:09,767 --> 00:02:11,993
+how does a diffusion model work?
+
+41
+00:02:11,993 --> 00:02:14,640
+Diffusion models aren't good at generating text,
+
+42
+00:02:14,640 --> 00:02:18,800
+because they restore an image out of random noise,
+
+43
+00:02:18,800 --> 00:02:20,707
+or a video.
+
+44
+00:02:20,707 --> 00:02:23,480
+But a large language model writes one word at a time.
+
+45
+00:02:23,480 --> 00:02:25,520
+So, in my personal opinion,
+
+46
+00:02:25,520 --> 00:02:29,607
+diffusion models don't suit images with text, or lots of text.
+
+47
+00:02:29,607 --> 00:02:31,980
+Those really should go to LLMs,
+
+48
+00:02:31,980 --> 00:02:34,670
+like Opus 5.5, generating it piece by piece.
+
+49
+00:02:34,670 --> 00:02:36,247
+Which is really counterintuitive:
+
+50
+00:02:36,247 --> 00:02:38,433
+an LLM making videos.
+
+51
+00:02:38,433 --> 00:02:41,533
+As I said, it makes 30 images per second,
+
+52
+00:02:41,533 --> 00:02:42,847
+plus an audio track.
+
+53
+00:02:42,847 --> 00:02:44,980
+So 20 seconds means 600 drawn images.
+
+54
+00:02:44,980 --> 00:02:47,813
+It puts them in an HTML page,
+
+55
+00:02:47,813 --> 00:02:50,340
+and once every frame is drawn, it renders them
+
+56
+00:02:50,340 --> 00:02:52,040
+with ffmpeg.
+
+57
+00:02:52,040 --> 00:02:55,933
+A video is really just lots of images stitched together.
+
+58
+00:02:55,933 --> 00:02:58,487
+Claude starts by drawing each image,
+
+59
+00:02:58,487 --> 00:03:00,687
+puts them in a browser once they're drawn,
+
+60
+00:03:00,687 --> 00:03:04,240
+turns the images into a video with ffmpeg,
+
+61
+00:03:04,240 --> 00:03:07,080
+and then samples frames to check it.
+
+62
+00:03:07,080 --> 00:03:11,240
+So why do I think a coding model is better for making videos?
+
+63
+00:03:11,240 --> 00:03:14,200
+Because a coding LLM
+
+64
+00:03:14,200 --> 00:03:17,520
+knows what text to write, where it goes, when it appears and how it moves.
+
+65
+00:03:17,520 --> 00:03:21,300
+A language model can pin all of that down precisely.
+
+66
+00:03:21,300 --> 00:03:24,973
+Diffusion models are better for things like 3D rendering,
+
+67
+00:03:24,973 --> 00:03:27,573
+such as game cutscenes,
+
+68
+00:03:27,573 --> 00:03:29,327
+or AI short dramas.
+
+69
+00:03:29,327 --> 00:03:31,807
+This next example is a video I made,
+
+70
+00:03:31,807 --> 00:03:33,920
+so let me show you how it was made.
+
+71
+00:03:33,920 --> 00:03:36,900
+It has a character in the bottom-left,
+
+72
+00:03:36,900 --> 00:03:40,987
+handwritten text appearing, a table of contents, and a progress bar.
+
+73
+00:03:40,987 --> 00:03:44,000
+First it writes the script, and once it's done,
+
+74
+00:03:44,000 --> 00:03:45,387
+I review it.
+
+75
+00:03:45,387 --> 00:03:48,407
+The script covers when scenes change, what's on screen,
+
+76
+00:03:48,407 --> 00:03:51,667
+what the subtitles say, and what tone the voiceover takes.
+
+77
+00:03:51,667 --> 00:03:53,693
+I set all of that up for it.
+
+78
+00:03:53,693 --> 00:03:58,187
+Then I send it the audio, either AI voice or my own recording.
+
+79
+00:03:58,187 --> 00:04:03,053
+It then builds the video around the audio's intensity,
+
+80
+00:04:03,053 --> 00:04:06,387
+matching the audio to the video frame by frame.
+
+81
+00:04:06,387 --> 00:04:09,847
+Take the character in the bottom-left: it has lots of moves,
+
+82
+00:04:09,847 --> 00:04:12,927
+like counting one-two-three, hands on hips, and cheering 'yay'.
+
+83
+00:04:12,927 --> 00:04:14,687
+I use about 30 of those per episode,
+
+84
+00:04:14,687 --> 00:04:19,340
+plus small gestures, nods at sentence ends and glances at the content, added automatically.
+
+85
+00:04:19,340 --> 00:04:22,267
+All of this is made by the AI itself.
+
+86
+00:04:22,267 --> 00:04:25,833
+The BGM and sound effects are synthesized by Claude in Python,
+
+87
+00:04:25,833 --> 00:04:27,180
+which is really convenient.
+
+88
+00:04:27,180 --> 00:04:29,540
+But that's just the baseline.
+
+89
+00:04:29,540 --> 00:04:34,133
+If you want higher quality,
+
+90
+00:04:34,133 --> 00:04:36,440
+you can keep looking for better voices and music.
+
+91
+00:04:36,440 --> 00:04:39,147
+So after I'm done, Claude also samples frames to look,
+
+92
+00:04:39,147 --> 00:04:40,400
+and listens.
+
+93
+00:04:40,400 --> 00:04:43,547
+Now let's compare the cost of making videos with a video model
+
+94
+00:04:43,547 --> 00:04:46,860
+versus with an LLM.
+
+95
+00:04:46,860 --> 00:04:50,260
+Right now the best is clearly Seedance 2.5 from China,
+
+96
+00:04:50,260 --> 00:04:51,267
+but it isn't cheap.
+
+97
+00:04:51,267 --> 00:04:54,540
+Google's Veo 3.1 isn't as capable,
+
+98
+00:04:54,540 --> 00:04:55,700
+and it's still expensive.
+
+99
+00:04:55,700 --> 00:04:57,787
+For the same 6-minute video,
+
+100
+00:04:57,787 --> 00:05:00,433
+a language model comes with coding plans,
+
+101
+00:05:00,433 --> 00:05:02,693
+so it's far cheaper.
+
+102
+00:05:02,693 --> 00:05:05,033
+A six-minute video usually uses
+
+103
+00:05:05,033 --> 00:05:09,667
+about 5–10% of my weekly 20x plan quota.
+
+104
+00:05:09,667 --> 00:05:11,867
+And these assets are reusable:
+
+105
+00:05:11,867 --> 00:05:13,800
+once the character assets are made,
+
+106
+00:05:13,800 --> 00:05:15,567
+the next video doesn't need to make them again.
+
+107
+00:05:15,567 --> 00:05:18,133
+Everything can be distilled into a skill,
+
+108
+00:05:18,133 --> 00:05:20,133
+so you can churn them out in batches.
+
+109
+00:05:20,133 --> 00:05:23,713
+For example, the news digest I wanted to make:
+
+110
+00:05:23,713 --> 00:05:27,093
+a daily tech-news roundup video
+
+111
+00:05:27,093 --> 00:05:29,753
+that runs automatically every day.
+
+112
+00:05:29,753 --> 00:05:32,153
+About reusing character assets:
+
+113
+00:05:32,153 --> 00:05:35,160
+if the models keep improving,
+
+114
+00:05:35,160 --> 00:05:40,613
+drawing anime with smooth, continuous lines more precisely,
+
+115
+00:05:40,613 --> 00:05:43,480
+or even realistic human styles,
+
+116
+00:05:43,480 --> 00:05:44,960
+then all these assets are reusable,
+
+117
+00:05:44,960 --> 00:05:47,753
+and reusable assets have real value.
+
+118
+00:05:47,753 --> 00:05:48,913
+It's not a gacha pull.
+
+119
+00:05:48,913 --> 00:05:53,033
+If you're a programmer who wants to try making videos,
+
+120
+00:05:53,033 --> 00:05:54,933
+I think it costs almost nothing.
+
+121
+00:05:54,933 --> 00:05:57,713
+The models in Codex or Claude Code
+
+122
+00:05:57,713 --> 00:05:59,053
+are capable enough, I think.
+
+123
+00:05:59,053 --> 00:06:02,673
+Some Chinese models can do this too,
+
+124
+00:06:02,673 --> 00:06:04,427
+but the results aren't great.
+
+125
+00:06:04,427 --> 00:06:07,860
+Rendering just runs locally on the CPU.
+
+126
+00:06:07,860 --> 00:06:09,533
+OK, let's wrap up.
+
+127
+00:06:09,533 --> 00:06:11,080
+Thanks for watching.
+
+128
+00:06:11,080 --> 00:06:13,300
+If you're interested, give it a try.
+
+129
+00:06:13,300 --> 00:06:15,947
+I'll put the two prompts from the beginning in the comments,
+
+130
+00:06:15,947 --> 00:06:17,627
+so check them out there.
+
+131
+00:06:17,627 --> 00:06:18,417
+Bye!
+

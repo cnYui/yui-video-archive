@@ -1,0 +1,33 @@
+{
+  "样张1_评ClaudeOpus": {
+    "tocCur": 0,
+    "barCur": 4,
+    "sub": "两个Claude都很强，但用起来贵。都给到：<span class=\"t\">顶级</span>。",
+    "chips": [
+      [1, "GPT-6 Astra", false]
+    ],
+    "card": {
+      "kick": "NO.02 · <b>国外</b> · Anthropic",
+      "name": "Claude Opus 5.5",
+      "sub": "2026-09-22 发布 · 闭源",
+      "score": 57.6,
+      "rank": "全榜 #1 · 用户盲投暂列 #1",
+      "stats": [["输入", "$4", false], ["输出", "$20", false], ["考一次", "$8,708", true], ["Astra 考一次", "$5,324", false]],
+      "pcs": [[true, "分数第一，标价不到 Astra 一半"], [false, "想得多：考一次比 Astra 还贵"], [false, "官方不对中国大陆提供服务"]],
+      "verdict": "顶级",
+      "foot": "分数：AA 智能指数 v4.3.2 · 美元/百万 token · 截至 2026-09-28"
+    }
+  },
+  "样张2_总榜": {
+    "tocCur": 9,
+    "barCur": 7,
+    "sub": "选模型，别只看分数和标价，还要看<span class=\"t\">考一次</span>花多少。",
+    "chips": [
+      [0, "Muse Spark 1.3", false], [0, "GLM-5.3", true], [0, "MiMo-V2.6-Pro", true],
+      [1, "GPT-6 Astra", false], [1, "Claude Opus 5.5", false], [1, "Fable 5.1", false], [1, "Grok 4.7", false], [1, "Qwen3.8 Max", true],
+      [2, "Gemini 3.8 Flash", false], [2, "DeepSeek V4.1", true], [2, "Kimi K3", true], [2, "Step 5 Preview", true], [2, "Jev", false],
+      [3, "豆包 Seed 2.1", true], [3, "混元 Hy4", true], [3, "文心 5.1", true],
+      [4, "Gemini 3.1 Pro", false], [4, "MiniMax M3", true]
+    ]
+  }
+}

@@ -1,0 +1,630 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>UE · Outro · Terminal Receipt</title>
+<link rel="stylesheet" href="../fonts/fonts.css">
+<style>
+  /* Palette: paper #EDEAE3 · ink #141414 · signal orange #FF4F1A */
+  :root {
+    --paper: #EDEAE3;
+    --ink: #141414;
+    --ink2: #57534C;   /* labels, mono small print (one step darker than before for contrast) */
+    --ink3: #A29D93;   /* leader dots, dashed rules */
+    --accent: #FF4F1A;
+    --f: 40px;         /* body size, set by the fitter */
+    --cf: 60px;        /* closing size, set by the fitter */
+  }
+  html, body { margin: 0; width: 1920px; height: 1080px; overflow: hidden; background: #141414; }
+  #bg { position: absolute; inset: 0;
+        background: radial-gradient(ellipse 60% 75% at 50% 45%, #22211F 0%, #171716 55%, #121212 100%); }
+  #bgGrain { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; opacity: .5; }
+  #marks { position: absolute; left: 0; top: 0; }
+
+  #rig { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; transform-origin: 960px 500px; }
+  #receipt { position: absolute; top: -12px; transform-origin: 50% 0; }
+  #paper { position: relative; overflow: hidden; background: var(--paper); height: 0; }
+  #paperGrain { position: absolute; left: 0; top: 0; pointer-events: none; opacity: .9; }
+  #slotShade { position: absolute; left: 0; right: 0; top: 0; height: 70px; pointer-events: none;
+               background: linear-gradient(to bottom, rgba(0,0,0,.22), rgba(0,0,0,0)); }
+  #content { position: relative; box-sizing: border-box; }
+  #curl { position: absolute; inset: 0; pointer-events: none;
+          background: linear-gradient(90deg, rgba(0,0,0,.07), rgba(0,0,0,0) 9%, rgba(0,0,0,0) 91%, rgba(0,0,0,.06)); }
+
+  .blk { position: relative; }
+  .kicker { display: flex; justify-content: space-between; align-items: center;
+            font-family: 'JetBrains Mono', monospace; font-weight: 500; color: var(--ink2);
+            font-size: max(calc(var(--f) * .42), 16px); letter-spacing: .28em; line-height: 1; }
+  .kicker .dot { width: calc(var(--f) * .30); height: calc(var(--f) * .30); background: var(--accent);
+                 display: inline-block; vertical-align: -0.05em; margin-right: .5em; }
+  .title { font-family: 'Noto Sans SC'; font-weight: 900; color: var(--ink);
+           font-size: calc(var(--f) * 1.2); line-height: 1.15; letter-spacing: .04em; white-space: nowrap; }
+  .rule { height: 2px; background-image: repeating-linear-gradient(90deg, var(--ink3) 0 9px, transparent 9px 16px); }
+  .rule.solid { height: 3px; background: var(--ink); }
+  .rule.double { height: 7px; background:
+      linear-gradient(var(--ink), var(--ink)) 0 0 / 100% 3px no-repeat,
+      linear-gradient(var(--ink), var(--ink)) 0 100% / 100% 1.5px no-repeat; }
+
+  .row { display: flex; align-items: flex-start; font-size: var(--f); line-height: 1.36; }
+  .idx { flex: none; font-family: 'JetBrains Mono', monospace; font-weight: 500; color: var(--ink2);
+         font-size: max(calc(var(--f) * .42), 18px); line-height: calc(var(--f) * 1.36); letter-spacing: .04em;
+         width: calc(var(--f) * .92); }
+  .lab { flex: none; white-space: nowrap; color: var(--ink2); font-family: 'Noto Sans SC'; font-weight: 500; }
+  .lead { flex: 1 1 0; min-width: calc(var(--f) * 1.1); height: 1.36em; margin: 0 .38em;
+          background-image: radial-gradient(circle, var(--ink3) 0 1.6px, transparent 2.1px);
+          background-size: calc(var(--f) * .34) 8px; background-repeat: repeat-x; background-position: 0 70%; }
+  .val { flex: 0 1 auto; min-width: 0; text-align: right; color: var(--ink);
+         font-family: 'Space Grotesk', 'Noto Sans SC'; font-weight: 600; letter-spacing: .005em;
+         word-break: keep-all; overflow-wrap: anywhere; text-wrap: balance; }
+  /* rows with a missing field: label only (no leader to nowhere) / value only (left-aligned note) */
+  .row.noval .lead, .row.noval .val { display: none; }
+  .row.nolab .lab, .row.nolab .lead { display: none; }
+  .row.nolab .val { flex: 1 1 auto; text-align: left; }
+  .probe { position: absolute; left: -9999px; top: 0; white-space: nowrap; visibility: hidden; }
+  .total { font-family: 'JetBrains Mono', monospace; font-weight: 500; font-size: calc(var(--f) * .48);
+           letter-spacing: .2em; color: var(--ink); display: flex; justify-content: space-between; line-height: 1; }
+  .total .n { color: var(--accent); font-weight: 700; }
+  .closing { font-family: 'Noto Sans SC'; font-weight: 900; color: var(--ink); text-align: center;
+             font-size: var(--cf); line-height: 1.22; letter-spacing: .06em; white-space: nowrap; }
+  .closing .slot { display: inline-block; width: .42em; height: .8em; margin-left: .16em; vertical-align: -0.06em; }
+  .foot { display: flex; align-items: flex-end; justify-content: space-between; }
+  .code { display: flex; flex-direction: column; gap: calc(var(--f) * .22); }
+  .code .digits { font-family: 'JetBrains Mono', monospace; font-size: max(calc(var(--f) * .36), 16px);
+                  letter-spacing: .32em; color: var(--ink2); line-height: 1; white-space: nowrap; }
+  .sealSlot { flex: none; }
+
+  #cursor { position: absolute; left: 0; top: 0; background: var(--accent); width: 0; height: 0; }
+  #seal { position: absolute; left: 0; top: 0; transform-origin: 50% 50%; mix-blend-mode: multiply; }
+  #burst { position: absolute; left: 0; top: 0; overflow: visible; }
+</style>
+</head>
+<body>
+<div id="bg"></div>
+<canvas id="bgGrain" width="1920" height="1080"></canvas>
+<svg id="marks" width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" stroke="#EDEAE3" stroke-width="2"></svg>
+<div id="rig">
+  <div id="receipt">
+    <div id="paper">
+      <canvas id="paperGrain"></canvas>
+      <div id="content"><div id="cursor"></div></div>
+      <div id="curl"></div>
+      <div id="slotShade"></div>
+      <!-- impact ticks live on the paper, so the torn edge clips them -->
+      <svg id="burst" width="10" height="10"></svg>
+    </div>
+    <svg id="seal" width="10" height="10"></svg>
+  </div>
+</div>
+
+<script>
+(function () {
+  'use strict';
+  /* ------------------------------------------------------------------ data */
+  // default = outro/data.json
+  const DEFAULT = {
+    items: [
+      { label: '拍摄', value: 'Pocket 4P' },
+      { label: '剪辑', value: 'ChatCut' },
+      { label: '视频剪辑模型', value: 'Opus 5.5' },
+    ],
+    closing: '感谢大家看到最后',
+    signature: '悠一',   // 2026-09-29 user: 悠一 from now on (was UE); signature "UE" still draws the old UE seal
+  };
+  const D = Object.assign({}, DEFAULT, window.__DATA__ || {});
+  const norm = arr => (Array.isArray(arr) ? arr : [])
+    .map(it => ({ label: String((it && it.label) ?? '').trim(), value: String((it && it.value) ?? '').trim() }))
+    .filter(it => it.label || it.value);                 // a row with neither field is dropped
+  let ITEMS = norm(D.items);
+  if (!ITEMS.length) ITEMS = norm(DEFAULT.items);
+  if (ITEMS.length > 8) { console.warn(`outro: ${ITEMS.length} items given, only the first 8 are shown`); ITEMS = ITEMS.slice(0, 8); }
+  const TITLE = String(D.title || '本期制作清单').trim();          // optional
+  const CLOSING = String(D.closing || '').trim() || DEFAULT.closing;
+  const SIG = String(D.signature || DEFAULT.signature).trim() || DEFAULT.signature;
+
+  window.DURATION = 4.8;
+  window.__READY__ = false;
+
+  const $ = id => document.getElementById(id);
+  const NS = 'http://www.w3.org/2000/svg';
+
+  /* ----------------------------------------------------------------- canvas */
+  // frame width: window.__CANVAS__ (render.py: the viewport it opened) > data.canvas [W, H] > 1920. Height stays 1080.
+  // 1920 = the original layout, untouched. Wider (e.g. 2340 = 19.5:9): the receipt stays centred; the ink background
+  // (#bg follows the viewport), grain and crop marks (5% safe area) span the whole width.
+  const FW = (() => {
+    const pick = v => (Array.isArray(v) && isFinite(+v[0]) ? Math.round(+v[0]) : null);
+    const w = pick(window.__CANVAS__) || pick(D.canvas) || 1920;
+    return w >= 1920 && w <= 4096 ? w : 1920;
+  })();
+  if (FW !== 1920) {
+    document.documentElement.style.width = document.body.style.width = FW + 'px';
+    const gc = $('bgGrain'); gc.width = FW; gc.style.width = FW + 'px';
+    const mk = $('marks'); mk.setAttribute('width', FW); mk.setAttribute('viewBox', `0 0 ${FW} 1080`);
+    const rig = $('rig'); rig.style.width = FW + 'px'; rig.style.transformOrigin = `${FW / 2}px 500px`;
+  }
+  const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+  const lerp = (a, b, e) => a + (b - a) * e;
+  const prog = (t, t0, t1) => clamp((t - t0) / (t1 - t0));
+  const E = {
+    outCubic: x => 1 - Math.pow(1 - x, 3),
+    outQuart: x => 1 - Math.pow(1 - x, 4),
+    inOutCubic: x => x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2,
+    inOutSine: x => -(Math.cos(Math.PI * x) - 1) / 2,
+    outBack: x => { const c1 = 1.6, c3 = c1 + 1; return 1 + c3 * Math.pow(x - 1, 3) + c1 * Math.pow(x - 1, 2); },
+  };
+  function mulberry32(a) { return function () { a |= 0; a = a + 0x6D2B79F5 | 0; let t = Math.imul(a ^ a >>> 15, 1 | a); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
+  function hash(str) { let h = 2166136261; for (const c of str) { h ^= c.codePointAt(0); h = Math.imul(h, 16777619); } return h >>> 0; }
+  function node(tag, cls, text) { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+
+  /* ------------------------------------------ static textures (seeded, never animate) */
+  (function bgGrain() {
+    const cv = $('bgGrain'), cx = cv.getContext('2d', { willReadFrequently: true }), img = cx.createImageData(FW, 1080), d = img.data, rnd = mulberry32(4242);
+    for (let i = 0; i < d.length; i += 4) { const v = rnd(); d[i] = d[i + 1] = d[i + 2] = v < .5 ? 0 : 255; d[i + 3] = Math.round(Math.abs(v - .5) * 2 * 7); }
+    cx.putImageData(img, 0, 0);
+  })();
+  // crop marks (same system as the intro: the 5% safe area of the frame, 96 px on 1920, 117 px on 2340)
+  (function marks() {
+    const X0 = Math.round(FW * 0.05), Y0 = 54, X1 = FW - X0, Y1 = 1080 - 54, Lm = 34, g = $('marks');
+    g.setAttribute('stroke-opacity', '.28');   // per-stroke alpha, no group opacity layer
+    [`M${X0 + Lm} ${Y0}L${X0} ${Y0}L${X0} ${Y0 + Lm}`, `M${X1 - Lm} ${Y0}L${X1} ${Y0}L${X1} ${Y0 + Lm}`,
+     `M${X0 + Lm} ${Y1}L${X0} ${Y1}L${X0} ${Y1 - Lm}`, `M${X1 - Lm} ${Y1}L${X1} ${Y1}L${X1} ${Y1 - Lm}`].forEach(s => {
+      const p = document.createElementNS(NS, 'path'); p.setAttribute('d', s); p.setAttribute('stroke-dasharray', `${2 * Lm} ${2 * Lm}`); p.classList.add('mk'); g.appendChild(p);
+    });
+  })();
+
+  /* --------------------------------------------------------- receipt DOM */
+  const content = $('content'), cursorEl = $('cursor');
+  const blocks = [];
+  function blk(kind, child) {
+    const el = document.createElement('div');
+    el.className = 'blk b-' + kind;      // prefixed: must not collide with inner classes (e.g. .foot)
+    if (child) el.appendChild(child);
+    content.insertBefore(el, cursorEl);
+    blocks.push({ el, kind });
+    return el;
+  }
+  const kicker = node('div', 'kicker');
+  const kl = node('span'); kl.appendChild(node('span', 'dot')); kl.appendChild(document.createTextNode('CREDITS'));
+  kicker.appendChild(kl); kicker.appendChild(node('span', null, 'RECEIPT'));
+  blk('k', kicker);
+  blk('t', node('div', 'title', TITLE));
+  blk('r1', node('div', 'rule solid'));
+  ITEMS.forEach((it, i) => {
+    const row = node('div', 'row' + (it.value ? '' : ' noval') + (it.label ? '' : ' nolab'));
+    row.appendChild(node('span', 'idx', String(i + 1).padStart(2, '0')));
+    row.appendChild(node('span', 'lab', it.label));
+    row.appendChild(node('span', 'lead'));
+    // glue @handles / #tags to the word that follows (word joiner) so they never split
+    const v = node('span', 'val', it.value.replace(/([@#＠])\s*/g, '$1⁠'));
+    v.dataset.raw = v.textContent; row.appendChild(v);
+    blk('item', row);
+  });
+  blk('r2', node('div', 'rule'));
+  const total = node('div', 'total');
+  total.appendChild(node('span', null, 'ITEMS'));
+  total.appendChild(node('span', 'n', String(ITEMS.length).padStart(2, '0')));
+  blk('sum', total);
+  blk('r3', node('div', 'rule double'));
+  const closingEl = node('div', 'closing');
+  blk('close', closingEl);
+  const foot = node('div', 'foot');
+  const code = node('div', 'code');
+  const bar = document.createElementNS(NS, 'svg');
+  bar.style.overflow = 'visible';   // no viewport clip exactly on the first bar's edge
+  code.appendChild(bar);
+  const digitsStr = String(hash(ITEMS.map(i => i.label + i.value).join('|') + CLOSING)).padStart(10, '0').slice(0, 10);
+  code.appendChild(node('div', 'digits', `${SIG} ${digitsStr.slice(0, 4)} ${digitsStr.slice(4)}`));
+  foot.appendChild(code);
+  const sealSlot = node('div', 'sealSlot'); foot.appendChild(sealSlot);
+  blk('foot', foot);
+
+  /* ----------------------------------------- closing line: one line, or two balanced lines */
+  const cprobe = node('span', 'closing probe'); document.body.appendChild(cprobe);
+  function w100(str) { cprobe.style.fontSize = '100px'; cprobe.textContent = str; return cprobe.getBoundingClientRect().width / 100; }
+  const SLOT_EM = 0.58;
+  let CL = null;   // precomputed closing options (font-independent, in em)
+  function prepClosing() {
+    const chars = [...CLOSING];
+    const one = w100(CLOSING);
+    const punct = /[，,、。．.!！?？;；:：·・\s]/;
+    const noStart = /[，,、。．.!！?？;；:：·・）)》」』”’〉】\]]/;   // never begin a line with these
+    const noEnd = /[（(《「『“‘〈【\[]/;                             // never end a line with these
+    let best = null, bestPunct = null;
+    for (let i = 1; i < chars.length; i++) {
+      const a = chars.slice(0, i).join('').trim(), b = chars.slice(i).join('').trim();
+      if (!a || !b) continue;
+      if (noStart.test(b[0]) || noEnd.test(a[a.length - 1])) continue;
+      if (/[A-Za-z0-9]/.test(chars[i - 1]) && /[A-Za-z0-9]/.test(chars[i])) continue;  // not inside a latin word
+      const wa = w100(a), wb = w100(b) + SLOT_EM, score = Math.max(wa, wb);
+      const cand = { a, b, wa, wb, score };
+      if (!best || score < best.score) best = cand;
+      if (punct.test(chars[i - 1]) && (!bestPunct || score < bestPunct.score)) bestPunct = cand;
+    }
+    // prefer breaking right after punctuation unless it is badly unbalanced
+    const two = bestPunct && best && bestPunct.score <= best.score * 1.25 ? bestPunct : best;
+    CL = { one: one + SLOT_EM, two };
+  }
+  function layoutClosing(f, cw) {
+    // returns true when the closing fits the rules at this body size
+    let cf = Math.min(1.5 * f, cw / CL.one);
+    let lines = null;
+    if (cf >= 1.2 * f) lines = [CLOSING];
+    else if (CL.two) {
+      cf = Math.min(1.4 * f, cw / Math.max(CL.two.wa, CL.two.wb));
+      if (cf >= 1.05 * f) lines = [CL.two.a, CL.two.b];
+    }
+    if (!lines) { cf = Math.max(12, cw / CL.one); lines = [CLOSING]; }
+    cf = Math.floor(cf);
+    document.documentElement.style.setProperty('--cf', cf + 'px');
+    closingEl.textContent = '';
+    // one span per character, so the line can be typed character by character
+    lines.forEach((ln, i) => { if (i) closingEl.appendChild(document.createElement('br')); for (const ch of ln) closingEl.appendChild(node('span', 'ch', ch)); });
+    closingEl.appendChild(node('span', 'slot'));
+    return (lines.length === 1 ? cf >= 1.2 * f : cf >= 1.05 * f);
+  }
+
+  /* ----------------------------------------------------- the UE mark (same geometry as the intro wordmark) */
+  function ueMark(scale, color) {
+    // intro geometry: cap 230 (±115), stroke 32; U w176, gap 44, E w146 -> 366 wide
+    const g = document.createElementNS(NS, 'g');
+    g.setAttribute('transform', `scale(${scale})`);
+    g.setAttribute('fill', 'none'); g.setAttribute('stroke', color); g.setAttribute('stroke-width', 32);
+    g.setAttribute('stroke-linejoin', 'miter');
+    const x0 = -183, sw = 32, T = -115, B = 115;
+    const l = x0 + sw / 2, r = x0 + 176 - sw / 2, R = (r - l) / 2, cy = B - sw / 2 - R;
+    const u = document.createElementNS(NS, 'path');
+    u.setAttribute('d', `M${l} ${T}L${l} ${cy}A${R} ${R} 0 0 0 ${r} ${cy}L${r} ${T}`);
+    const xE = x0 + 176 + 44;
+    const e = document.createElementNS(NS, 'path');
+    e.setAttribute('d', `M${xE + 146} ${T + sw / 2}L${xE + sw / 2} ${T + sw / 2}L${xE + sw / 2} ${B - sw / 2}L${xE + 146} ${B - sw / 2}M${xE + sw / 2} 0L${xE + 146 - 18} 0`);
+    g.append(u, e);
+    return g;
+  }
+
+  /* -------------------------------------------------------------- layout (adaptive) */
+  const receipt = $('receipt'), paper = $('paper');
+  const TOP_OFFSET = 12;            // receipt top sits 12px above the frame edge (it comes out of the "printer")
+  const BOTTOM_LIMIT = 1080 - 70;   // paper incl. torn edge ends above this (keeps a calm band of ink below)
+  const TEXT_LIMIT = 1080 - 66;     // last printed text stays inside the 5% safe area even while the camera drifts
+  const TARGET_BOTTOM = 972;        // short lists: spend spare height on air so the receipt is not top-heavy
+  const TOOTH_W = 18, TOOTH_H = 11;
+  let L = null;
+
+  const probe = node('span', 'val probe'); document.body.appendChild(probe);
+  function reflowValues(f) {
+    // a value that needs two lines breaks at its own separators ("A · B · C"), never on a dangling dot
+    const lh = f * 1.36;
+    content.querySelectorAll('.val').forEach(v => {
+      const raw = v.dataset.raw;
+      v.textContent = raw;
+      if (v.offsetHeight <= lh * 1.4) return;
+      const parts = raw.split(/(\s*[·•|｜/]\s*|[、，,]\s*)/);
+      if (parts.length < 3) return;
+      const maxW = v.clientWidth + 0.5;
+      probe.style.fontSize = f + 'px';
+      const wid = str => { probe.textContent = str.trim(); return probe.offsetWidth; };
+      // "、，,/" stay at the end of the first line (a URL keeps its slash); "·|•" are dropped at the break
+      const keepSep = sep => /[、，,/]/.test(sep);
+      // best balanced two-line split at one of the value's own separators
+      let lines = null, bestScore = Infinity;
+      for (let i = 1; i < parts.length; i += 2) {
+        const a = parts.slice(0, i).join('') + (keepSep(parts[i]) ? parts[i].trim() : '');
+        const b = parts.slice(i + 1).join('');
+        if (!a.trim() || !b.trim()) continue;
+        const wa = wid(a), wb = wid(b);
+        if (wa > maxW || wb > maxW) continue;
+        const score = Math.max(wa, wb);
+        if (score < bestScore) { bestScore = score; lines = [a, b]; }
+      }
+      if (!lines) {
+        // needs more than two lines: greedy fill (the fitter will then pick a smaller size)
+        lines = []; let cur = parts[0];
+        for (let i = 1; i < parts.length; i += 2) {
+          const sep = parts[i], seg = parts[i + 1] || '';
+          if (wid(cur + sep + seg) <= maxW) cur = cur + sep + seg;
+          else { lines.push(keepSep(sep) ? cur + sep.trim() : cur); cur = seg; }
+        }
+        lines.push(cur);
+      }
+      v.textContent = '';
+      lines.forEach((ln, i) => { if (i) v.appendChild(document.createElement('br')); v.appendChild(document.createTextNode(ln.trim())); });
+    });
+  }
+
+  function applyLayout(W, f, s = 1) {
+    document.documentElement.style.setProperty('--f', f + 'px');
+    const padX = Math.round(f * 1.45);
+    receipt.style.width = W + 'px';
+    receipt.style.left = Math.round(FW / 2 - W / 2) + 'px';        // centred on the frame (W = receipt width)
+    paper.style.width = W + 'px';
+    content.style.width = W + 'px';
+    content.style.padding = `${Math.round(TOP_OFFSET + 62 + f * 0.2)}px ${padX}px ${Math.round(f * 0.95)}px`;
+    const cw = W - 2 * padX;
+    const closeOK = layoutClosing(f, cw);
+    // vertical rhythm (multiples of the body size; s opens it up for short lists)
+    const gap = { k: 0, t: f * .40, r1: f * .58, item0: f * .66, item: f * .46, r2: f * .66, sum: f * .52,
+                  r3: f * .52, close: f * .66, foot: f * .74 };
+    let first = true;
+    for (const b of blocks) {
+      let m = gap[b.kind] || 0;
+      if (b.kind === 'item') { m = first ? gap.item0 : gap.item; first = false; }
+      b.el.style.marginTop = Math.round(m * s) + 'px';
+    }
+    // barcode + seal slot
+    const sealS = Math.round(f * 3.7);
+    const bw = Math.round(Math.min(cw - sealS - f * 0.9, cw * 0.64)), bh = Math.round(f * 1.6);
+    bar.setAttribute('width', bw); bar.setAttribute('height', bh); bar.setAttribute('viewBox', `0 0 ${bw} ${bh}`);
+    while (bar.firstChild) bar.removeChild(bar.firstChild);
+    const rnd = mulberry32(hash(digitsStr));
+    let x = 0, k = 0; const unit = Math.max(2, Math.round(f * 0.085));
+    while (x < bw) {
+      const w = unit * (1 + Math.floor(rnd() * 3));
+      if (k % 2 === 0 && x + w <= bw) { const r = document.createElementNS(NS, 'rect'); r.setAttribute('x', x); r.setAttribute('y', 0); r.setAttribute('width', w); r.setAttribute('height', bh); r.setAttribute('fill', '#141414'); bar.appendChild(r); }
+      x += w; k++;
+    }
+    sealSlot.style.width = sealS + 'px'; sealSlot.style.height = Math.round(sealS * 0.84) + 'px';
+    reflowValues(f);
+    return { W, f, padX, cw, sealS, s, closeOK };
+  }
+
+  function measure(f) {
+    const h = content.offsetHeight + TOOTH_H;
+    let maxLines = 1; const lh = f * 1.36;
+    content.querySelectorAll('.val').forEach(v => { maxLines = Math.max(maxLines, Math.round(v.offsetHeight / lh)); });
+    const footEl = blocks[blocks.length - 1].el;
+    const textBottom = footEl.offsetTop + footEl.offsetHeight - TOP_OFFSET;
+    const title = content.querySelector('.title');
+    const titleOK = title.scrollWidth <= title.clientWidth + 1;
+    return { h, maxLines, textBottom, titleOK };
+  }
+
+  function fit() {
+    prepClosing();
+    let chosen = null, lay = null;
+    outer:
+    for (let f = 48; f >= 20; f--) {
+      const wMin = Math.max(700, Math.ceil(f * 16.5 / 20) * 20);
+      for (let W = wMin; W <= 1100; W += 20) {
+        lay = applyLayout(W, f, 1);
+        if (!lay.closeOK) continue;
+        const m = measure(f);
+        if (!m.titleOK || m.maxLines > 2) continue;
+        if (m.h - TOP_OFFSET > BOTTOM_LIMIT || m.textBottom > TEXT_LIMIT) continue;
+        chosen = { W, f }; break outer;
+      }
+    }
+    if (!chosen) chosen = { W: 1100, f: 20 };
+    // spend leftover height on air (receipts are long and calm)
+    let lo = 1, hi = 1.9;
+    for (let k = 0; k < 14; k++) {
+      const mid = (lo + hi) / 2;
+      applyLayout(chosen.W, chosen.f, mid);
+      const m = measure(chosen.f);
+      if (m.h - TOP_OFFSET <= TARGET_BOTTOM && m.textBottom <= TEXT_LIMIT) lo = mid; else hi = mid;
+    }
+    L = applyLayout(chosen.W, chosen.f, lo);
+    L.blocks = blocks.map(b => ({ top: b.el.offsetTop, bottom: b.el.offsetTop + b.el.offsetHeight, el: b.el, kind: b.kind }));
+    L.height = content.offsetHeight + TOOTH_H;
+
+    // paper grain (static)
+    const cv = $('paperGrain'); cv.width = chosen.W; cv.height = Math.ceil(L.height);
+    cv.style.width = chosen.W + 'px'; cv.style.height = Math.ceil(L.height) + 'px';
+    const cx = cv.getContext('2d', { willReadFrequently: true }), img = cx.createImageData(cv.width, cv.height), d = img.data, rnd = mulberry32(77);
+    for (let i = 0; i < d.length; i += 4) { const v = rnd(); d[i] = d[i + 1] = d[i + 2] = v < .5 ? 60 : 255; d[i + 3] = Math.round(Math.abs(v - .5) * 2 * 18); }
+    cx.putImageData(img, 0, 0);
+    // torn zig-zag bottom edge
+    const n = Math.round(chosen.W / TOOTH_W), tw = chosen.W / n;
+    const pts = ['0 0', '100% 0', `100% calc(100% - ${TOOTH_H}px)`];
+    for (let i = n; i >= 0; i--) pts.push(`${(i * tw).toFixed(2)}px calc(100% - ${i % 2 ? 0 : TOOTH_H}px)`);
+    pts.push(`0 calc(100% - ${TOOTH_H}px)`);
+    paper.style.clipPath = `polygon(${pts.join(',')})`;
+
+    // closing geometry for the typing cursor (relative to #content): one cell per character
+    const cRect = content.getBoundingClientRect();
+    const slot = closingEl.querySelector('.slot');
+    const sr = slot.getBoundingClientRect();
+    L.chEls = [...closingEl.querySelectorAll('.ch')];
+    const cr = L.chEls.map(e => e.getBoundingClientRect());
+    const lastTop = cr.length ? cr[cr.length - 1].top : sr.top;
+    const gapX = cr.length ? sr.left - cr[cr.length - 1].right : 0;   // the slot's margin
+    L.cur = {
+      w: sr.width, h: sr.height,
+      // cursor cell after k typed characters (k = 0 .. n)
+      cells: [cr.length ? { x: cr[0].left - cRect.left, y: sr.top - cRect.top + (cr[0].top - lastTop) } : null]
+        .concat(cr.map(r => ({ x: r.right + gapX - cRect.left, y: sr.top - cRect.top + (r.top - lastTop) })))
+        .filter(Boolean),
+    };
+    L.cur.cells[L.cur.cells.length - 1] = { x: sr.left - cRect.left, y: sr.top - cRect.top };
+
+    // seal
+    const seal = $('seal'), S = L.sealS;
+    seal.setAttribute('width', S); seal.setAttribute('height', S);
+    seal.setAttribute('viewBox', `${-S / 2} ${-S / 2} ${S} ${S}`);
+    seal.innerHTML = `
+      <defs>
+        <filter id="stampTex" x="-10%" y="-10%" width="120%" height="120%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="7" result="n"/>
+          <feColorMatrix in="n" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -15 10.9" result="a"/>
+          <feComposite in="SourceGraphic" in2="a" operator="in" result="speck"/>
+          <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="1" seed="3" result="w"/>
+          <feDisplacementMap in="speck" in2="w" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
+        </filter>
+      </defs>`;
+    const gSeal = document.createElementNS(NS, 'g');
+    gSeal.setAttribute('filter', 'url(#stampTex)');
+    const s2 = S * 0.88;
+    const sq = document.createElementNS(NS, 'rect');
+    sq.setAttribute('x', -s2 / 2); sq.setAttribute('y', -s2 / 2); sq.setAttribute('width', s2); sq.setAttribute('height', s2);
+    sq.setAttribute('fill', '#FF4F1A');
+    gSeal.appendChild(sq);
+    const inset = s2 * 0.075, fr = document.createElementNS(NS, 'rect');
+    fr.setAttribute('x', -s2 / 2 + inset); fr.setAttribute('y', -s2 / 2 + inset);
+    fr.setAttribute('width', s2 - 2 * inset); fr.setAttribute('height', s2 - 2 * inset);
+    fr.setAttribute('fill', 'none'); fr.setAttribute('stroke', '#EDEAE3'); fr.setAttribute('stroke-width', Math.max(2, s2 * 0.022));
+    gSeal.appendChild(fr);
+    if (SIG.toUpperCase() === 'UE') {
+      gSeal.appendChild(ueMark(s2 * 0.60 / 366, '#EDEAE3'));
+    } else {
+      // signature fallback: set in type, fitted to the seal
+      const tx = document.createElementNS(NS, 'text');
+      tx.textContent = SIG;
+      tx.setAttribute('text-anchor', 'middle'); tx.setAttribute('dominant-baseline', 'central');
+      tx.setAttribute('fill', '#EDEAE3');
+      tx.setAttribute('font-family', "'Space Grotesk', 'Noto Sans SC'"); tx.setAttribute('font-weight', '700');
+      seal.appendChild(tx);
+      let fs = s2 * 0.42; tx.setAttribute('font-size', fs);
+      const tw0 = tx.getComputedTextLength(); const maxw = s2 * 0.70;
+      if (tw0 > maxw) { fs *= maxw / tw0; tx.setAttribute('font-size', fs.toFixed(2)); }
+      seal.removeChild(tx); gSeal.appendChild(tx);
+    }
+    seal.appendChild(gSeal);
+    const footB = L.blocks.find(b => b.kind === 'foot');
+    L.sealX = L.padX + sealSlot.offsetLeft + sealSlot.offsetWidth / 2;
+    L.sealY = footB.top + sealSlot.offsetTop + sealSlot.offsetHeight / 2;
+    seal.style.left = (L.sealX - S / 2) + 'px'; seal.style.top = (L.sealY - S / 2) + 'px';
+    // impact ticks around the seal (drawn in the seal's rotated frame)
+    const burst = $('burst'), B = S * 2.2;
+    burst.setAttribute('width', B); burst.setAttribute('height', B);
+    burst.setAttribute('viewBox', `${-B / 2} ${-B / 2} ${B} ${B}`);
+    burst.style.left = (L.sealX - B / 2) + 'px'; burst.style.top = (L.sealY - B / 2) + 'px';
+    L.ticks = [];
+    for (const [sx, sy] of [[-1, -1], [1, -1], [1, 1], [-1, 1]]) for (const da of [-0.26, 0.26]) {
+      const ang = Math.atan2(sy, sx) + da;
+      const p = document.createElementNS(NS, 'path');
+      p.setAttribute('stroke', '#FF4F1A'); p.setAttribute('stroke-width', Math.max(3, L.f * 0.09).toFixed(2)); p.setAttribute('fill', 'none');
+      burst.appendChild(p); L.ticks.push({ p, ang });
+    }
+  }
+
+  /* ---------------------------------------------------------------- timeline */
+  let TL = null;
+  function buildTimeline() {
+    const n = ITEMS.length;
+    const sp = clamp(1.0 / n, 0.17, 0.28);
+    const g = n >= 3 ? 1 : n === 2 ? 1.2 : 1.45;   // calmer pacing for short lists
+    const tl = {};
+    // the kicker is already printing on frame 0 (its wipe started "before" the clip), so the
+    // outro never opens on an empty black frame
+    tl.k = -0.06; tl.t = 0.06; tl.r1 = 0.20;
+    tl.items = ITEMS.map((_, i) => 0.30 + i * sp);
+    const last = tl.items[n - 1];
+    tl.r2 = last + 0.20 * g; tl.sum = tl.r2 + 0.08 * g; tl.r3 = tl.sum + 0.16 * g;
+    tl.close = tl.r3 + 0.10 * g;             // beat 2: the thank-you line is typed, one character at a time
+    const nc = L.chEls.length, dt = clamp(0.30 / Math.max(1, nc), 0.026, 0.05);
+    tl.chars = L.chEls.map((_, i) => tl.close + 0.06 + i * dt);
+    tl.typed = (nc ? tl.chars[nc - 1] : tl.close) + 0.02;
+    tl.foot = Math.max(tl.close + 0.36, tl.typed + 0.06);
+    tl.seal = tl.foot + 0.24;               // beat 3: stamp
+    tl.impact = tl.seal + 0.092;            // scale first reaches 1.0 on the outBack curve
+    // idle beats: the cursor after the closing blinks softly, then stays on
+    tl.blinks = [];
+    for (let b = tl.seal + 0.75; b + 0.3 <= 4.05; b += 0.6) tl.blinks.push(b);
+    let ii = 0;
+    tl.reveal = L.blocks.map(b => b.kind === 'item' ? tl.items[ii++] : tl[b.kind]);
+    TL = tl;
+  }
+
+  // paper length at time t: a stepped, eased feed that stays just ahead of the print line.
+  // At t=0 a tongue of paper is already out, so the first frame is never empty.
+  function paperLength(t) {
+    const bl = L.blocks, rv = TL.reveal, lead = L.f * 0.55;
+    let len = lerp(TOP_OFFSET + 20, TOP_OFFSET + 58, E.outCubic(prog(t, 0, 0.12)));
+    for (let i = 0; i < bl.length; i++) {
+      const target = i === bl.length - 1 ? L.height : bl[i].bottom + lead + TOOTH_H;
+      const t0 = rv[i] - 0.07, dur = bl[i].kind === 'close' ? 0.24 : 0.16;
+      const e = E.outQuart(prog(t, t0, t0 + dur));
+      if (e > 0) len = Math.max(len, lerp(len, target, e));
+    }
+    return Math.min(len, L.height);
+  }
+
+  function renderAt(t) {
+    if (!L || !TL) return;
+    // crop marks
+    const mk = E.outCubic(prog(t, 0.0, 0.45));
+    document.querySelectorAll('#marks .mk').forEach(p => p.setAttribute('stroke-dashoffset', (68 * (1 - mk)).toFixed(2)));
+
+    // camera: slow settle, fully at rest from 4.25s (last ~0.55s is a true freeze)
+    const z = lerp(1.03, 1.0, E.inOutSine(prog(t, 0, 4.25)));
+    $('rig').style.transform = `scale(${z.toFixed(5)})`;
+
+    // stamp impact: the receipt dips a few px and recovers
+    const ip = prog(t, TL.impact, TL.impact + 0.26);
+    const bump = ip > 0 && ip < 1 ? Math.sin(Math.PI * ip) * (1 - ip) : 0;
+    receipt.style.transform = bump ? `translateY(${(4.5 * bump).toFixed(3)}px) scale(${(1 + 0.004 * bump).toFixed(5)}, ${(1 - 0.006 * bump).toFixed(5)})` : '';
+
+    // paper feed
+    paper.style.height = paperLength(t).toFixed(2) + 'px';
+
+    // print each block: a left-to-right wipe that follows the feed
+    L.blocks.forEach((b, i) => {
+      const r = TL.reveal[i], el = b.el;
+      if (b.kind === 'close') {
+        // typed: each character lands in its own cell (a one-frame soft pop), never half a glyph
+        L.chEls.forEach((c, k) => { const o = clamp((t - TL.chars[k]) / 0.02); c.style.opacity = o >= 1 ? '' : o.toFixed(3); });
+      } else {
+        const dur = b.kind.startsWith('r') ? 0.20 : 0.16;
+        const p = E.outCubic(prog(t, r, r + dur));
+        // once printed, the block carries no clip / opacity at all (same layer state whatever the seek history)
+        // the wipe's fixed left edge sits well outside the block, never on a glyph / bar edge
+        el.style.clipPath = p >= 1 ? '' : `inset(-30% ${(100 - 100 * p).toFixed(2)}% -30% -40px)`;
+        el.style.opacity = p >= 1 ? '' : clamp(p * 3).toFixed(3);
+      }
+    });
+
+    // typing cursor: rides the closing's print edge, rests after the last character, blinks softly
+    const rc = TL.close;
+    if (t < rc - 0.02) { cursorEl.style.width = '0px'; }
+    else {
+      // the cursor jumps one cell to the right as each character lands
+      let k = 0; while (k < TL.chars.length && t >= TL.chars[k]) k++;
+      const cell = L.cur.cells[Math.min(k, L.cur.cells.length - 1)];
+      const cx = cell.x, cy = cell.y;
+      let op = clamp((t - (rc - 0.02)) / 0.05);
+      for (const b of TL.blinks) op *= 1 - 0.72 * Math.sin(Math.PI * prog(t, b, b + 0.3));
+      cursorEl.style.width = L.cur.w.toFixed(2) + 'px'; cursorEl.style.height = L.cur.h.toFixed(2) + 'px';
+      cursorEl.style.transform = `translate(${cx.toFixed(2)}px, ${cy.toFixed(2)}px)`;
+      cursorEl.style.opacity = op.toFixed(3);
+    }
+
+    // seal stamp
+    const seal = $('seal');
+    const ps = prog(t, TL.seal, TL.seal + 0.24);
+    let rot = -7;
+    if (ps <= 0) seal.style.opacity = 0;
+    else {
+      const e = E.outBack(ps);
+      const sc = lerp(1.9, 1, e); rot = lerp(-18, -7, E.outCubic(ps));
+      seal.style.opacity = ps >= 0.25 ? '' : clamp(ps * 4).toFixed(3);
+      seal.style.transform = `rotate(${rot.toFixed(3)}deg) scale(${sc.toFixed(4)})`;
+    }
+    // impact ticks
+    const tp = prog(t, TL.impact - 0.01, TL.impact + 0.22);
+    L.ticks.forEach(({ p, ang }) => {
+      if (tp <= 0 || tp >= 1) { p.setAttribute('d', ''); return; }
+      const S = L.sealS, a = ang + rot * Math.PI / 180;
+      const r0 = lerp(S * 0.60, S * 0.72, E.outCubic(tp)), r1 = lerp(S * 0.64, S * 0.84, E.outCubic(clamp(tp * 1.4)));
+      p.setAttribute('d', `M${(Math.cos(a) * r0).toFixed(2)} ${(Math.sin(a) * r0).toFixed(2)}L${(Math.cos(a) * r1).toFixed(2)} ${(Math.sin(a) * r1).toFixed(2)}`);
+      p.setAttribute('opacity', (1 - E.outCubic(tp)).toFixed(3));
+    });
+  }
+  window.renderAt = renderAt;
+
+  /* ----------------------------------------------- boot: wait for fonts, then lay out */
+  const sample = TITLE + CLOSING + SIG + ITEMS.map(i => i.label + i.value).join('') + 'CREDITSRECEIPTITEMS0123456789';
+  Promise.all([
+    document.fonts.load(`900 40px "Noto Sans SC"`, sample),
+    document.fonts.load(`500 40px "Noto Sans SC"`, sample),
+    document.fonts.load(`600 40px "Space Grotesk"`, sample),
+    document.fonts.load(`700 40px "Space Grotesk"`, sample),
+    document.fonts.load(`500 20px "JetBrains Mono"`, sample),
+  ]).catch(() => {}).then(() => {
+    fit();
+    buildTimeline();
+    renderAt(0);
+    window.__READY__ = true;
+  });
+})();
+</script>
+</body>
+</html>

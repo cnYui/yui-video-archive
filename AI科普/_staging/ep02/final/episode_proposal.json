@@ -1,0 +1,77 @@
+{
+  "number": 2,
+  "title": "从学会说人话到AGI",
+  "dir_name": "第02期_从学会说人话到AGI",
+  "target_minutes": [
+    5,
+    7
+  ],
+  "question_scene": "S02",
+  "questions": [
+    {
+      "text": "AI只是文字接龙吗",
+      "scenes": [
+        "S03"
+      ]
+    },
+    {
+      "text": "AI怎么一步步变强",
+      "scenes": [
+        "S04",
+        "S05",
+        "S06"
+      ]
+    },
+    {
+      "text": "AGI是什么，实现了吗",
+      "scenes": [
+        "S07",
+        "S08"
+      ]
+    }
+  ],
+  "chapters": {
+    "S01": "开场",
+    "S02": "三个疑问",
+    "S03": "学会接龙",
+    "S04": "学会对话",
+    "S05": "学会思考",
+    "S06": "学会做事",
+    "S07": "AGI 到了吗",
+    "S08": "还差什么",
+    "S09": "总结"
+  },
+  "backgrounds": {
+    "S01": "08_官方主视觉.jpg",
+    "S02": "06_Q版贴纸.jpg",
+    "S03": "01_放学路上_树影.jpg",
+    "S04": "04_桌游_室内.webp",
+    "S05": "03_反光镜.webp",
+    "S06": "05_街头_REC.jpg",
+    "S07": "02_斑马线_夕阳.jpg",
+    "S08": "01_放学路上_树影.jpg",
+    "S09": "07_Q版演奏_第01期用过.jpg"
+  },
+  "bg_alpha": 0.22,
+  "bg_blur": 10,
+  "outro_items": [
+    {
+      "label": "配音",
+      "value": "Fish Audio"
+    },
+    {
+      "label": "制作",
+      "value": "Opus 5.5"
+    }
+  ],
+  "outro_closing": "感谢大家看到最后",
+  "presenter": {
+    "id": "whale",
+    "name": "鲸鱼娘",
+    "frames": "角色/大肥鱼像素素材包/素材/动作帧",
+    "voice_page": "https://fish.audio/zh-CN/m/e7219cb8cfab46bebba2ee570932b0a6/",
+    "voice_app": "https://fish.audio/app/text-to-speech/?modelId=e7219cb8cfab46bebba2ee570932b0a6",
+    "voice_name": "苏晓晓"
+  },
+  "auto_gestures": true
+}

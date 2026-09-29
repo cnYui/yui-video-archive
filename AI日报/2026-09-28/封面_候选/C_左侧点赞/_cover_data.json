@@ -1,0 +1,22 @@
+{
+  "line1": "7440亿参数大模型",
+  "line2": "笔记本也能跑？",
+  "l1px": 168,
+  "l2px": 236,
+  "maxw": 1320,
+  "textCx": 1020,
+  "scale": 9,
+  "frame": [
+    64,
+    64
+  ],
+  "footRow": 62,
+  "fishX": 270,
+  "foot": 1062,
+  "tag": "",
+  "_pose": "thumb_m0",
+  "_eyes": "idle_happy_m0",
+  "_fx": "fx_glint",
+  "_qmark": false,
+  "_place": "left"
+}

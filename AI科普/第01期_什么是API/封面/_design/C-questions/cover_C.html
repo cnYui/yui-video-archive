@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>原LAI如此 #01 封面 C</title>
+<link rel="stylesheet" href="../../../制作/fonts/fonts.css">
+<style>
+  :root{
+    --paper:#EDEAE3; --ink:#141414; --orange:#FF4F1A; --navy:#1B2340; --grey:#6E6A63;
+    --pink:#F2A0BD; --yellow:#F6C945; --blue:#4A6FD0; --red:#E2463F;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{width:1920px;height:1080px;overflow:hidden;background:#12172A}
+  body{position:relative;font-family:'Noto Sans SC';color:var(--paper)}
+
+  /* ---------- background ---------- */
+  .bg{position:absolute;inset:-40px;background:url('../../../制作/assets/bg/bg2.png') center/cover no-repeat;
+      filter:blur(8px) brightness(.66) saturate(.95)}
+  .tint{position:absolute;inset:0;background:var(--navy);opacity:.5}
+  .shade{position:absolute;inset:0;
+    background:
+      radial-gradient(ellipse 75% 70% at 50% 45%, rgba(0,0,0,0) 40%, rgba(0,0,0,.55) 100%),
+      linear-gradient(90deg, rgba(10,12,24,.35) 0%, rgba(10,12,24,0) 45%);}
+
+  /* ---------- series tag ---------- */
+  .series{position:absolute;left:296px;top:76px;display:flex;align-items:center;gap:18px;
+    font:700 48px/1 'Noto Sans SC';letter-spacing:.02em}
+  .series .lai{color:var(--orange)}
+  .series .ep{font:700 42px/1 'JetBrains Mono';color:var(--ink);background:var(--paper);padding:6px 12px 5px;border-radius:4px}
+  .band{display:flex;gap:6px;margin-right:4px}
+  .band i{display:block;width:14px;height:30px;border-radius:3px}
+
+  /* ---------- title ---------- */
+  .title{position:absolute;left:282px;top:122px;font:900 270px/1 'Noto Sans SC';letter-spacing:-.01em;
+    white-space:nowrap;text-shadow:0 8px 0 rgba(0,0,0,.35)}
+  .title .q{color:var(--orange)}
+
+  /* ---------- question cards ---------- */
+  .list{position:absolute;left:660px;top:452px;width:1300px;display:flex;flex-direction:column;gap:22px}
+  .card{position:relative;height:132px;background:var(--paper);color:var(--ink);border-top:4px solid var(--orange);
+    border-radius:4px 0 0 4px;display:flex;align-items:center;padding:0 20px;box-shadow:0 10px 24px rgba(0,0,0,.35)}
+  .num{flex:none;width:86px;height:86px;background:var(--orange);color:#fff;border-radius:4px;
+    display:flex;align-items:center;justify-content:center;font:800 58px/1 'JetBrains Mono';margin-right:22px}
+  .txt{font:900 66px/1 'Noto Sans SC';white-space:nowrap;letter-spacing:-.02em}
+  .txt .lat{font-family:'Noto Sans SC'}
+  .txt .qm{font-family:'Space Grotesk';font-weight:700}
+  .mark{background:linear-gradient(180deg,transparent 60%,var(--yellow) 60%,var(--yellow) 90%,transparent 90%);padding:0 4px;margin:0 -4px}
+  .tagq{position:absolute;left:1070px;top:14px;font:500 20px/1 'JetBrains Mono';letter-spacing:.2em;color:var(--grey)}
+
+  /* ---------- character ---------- */
+  .ryo{position:absolute;left:180px;top:442px;width:576px;height:576px;
+    image-rendering:pixelated;image-rendering:crisp-edges}
+  .ryo-shadow{position:absolute;left:268px;top:986px;width:400px;height:26px;border-radius:50%;
+    background:rgba(0,0,0,.45);filter:blur(6px)}
+</style>
+</head>
+<body>
+  <div class="bg"></div>
+  <div class="tint"></div>
+  <div class="shade"></div>
+
+  <div class="series">
+    <div class="band"><i style="background:var(--pink)"></i><i style="background:var(--yellow)"></i><i style="background:var(--blue)"></i><i style="background:var(--red)"></i></div>
+    <span>原<span class="lai">LAI</span>如此</span><span class="ep">#01</span>
+  </div>
+
+  <div class="title">API <span class="q">三问</span></div>
+
+  <div class="list">
+    <div class="card"><div class="num">1</div><div class="txt">API 是什么？</div><div class="tagq">Q.01</div></div>
+    <div class="card"><div class="num">2</div><div class="txt"><span class="mark"><span class="qm">“</span>已接入<span style="display:inline-block;width:12px"></span>DeepSeek<span class="qm">”</span></span>接了啥？</div><div class="tagq">Q.02</div></div>
+    <div class="card"><div class="num">3</div><div class="txt">API Key 怎么拿？</div><div class="tagq">Q.03</div></div>
+  </div>
+
+  <div class="ryo-shadow"></div>
+  <img class="ryo" src="../../../制作/assets/sprites/reach_m2/00.png" alt="">
+
+<script>
+  window.DURATION = 1;
+</script>
+</body>
+</html>

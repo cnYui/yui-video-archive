@@ -1,0 +1,42 @@
+{
+  "line1": "Claude Sonnet 5.5",
+  "line2": "快三成还更省？",
+  "l1px": 168,
+  "l2px": 236,
+  "maxw": 1320,
+  "textCx": 900,
+  "scale": 9,
+  "frame": [
+    64,
+    64
+  ],
+  "footRow": 62,
+  "fishX": 1074,
+  "foot": 1062,
+  "tag": "",
+  "theme": {
+    "bg": "#FFFFFF",
+    "lead": "#8A93AD",
+    "accent": "#4A88DA",
+    "list": "#4D5670",
+    "more": "#9AA2B8"
+  },
+  "_theme": "blue",
+  "_pose": "thumb_m0",
+  "_eyes": "idle_happy_m0",
+  "_fx": "fx_glint",
+  "_qmark": false,
+  "_place": "right",
+  "others": [
+    "英伟达推出智能体安全平台",
+    "华为开源盘古训练代码",
+    "千问打通夸克网盘",
+    "Gems 将迁移成 skills",
+    "Shopify 让 AI 帮你结账"
+  ],
+  "othersHead": "今天还有 6 条",
+  "othersMore": "……共 7 条",
+  "listX": 270,
+  "listW": 770,
+  "listBottom": 1000
+}

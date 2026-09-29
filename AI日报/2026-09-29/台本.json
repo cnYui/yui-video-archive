@@ -1,0 +1,189 @@
+{
+ "date": "2026-09-29",
+ "opening": [
+  {"text": "早上好，我是鲸鱼娘，今天是9月29日。", "tts": "早上好，我是鲸鱼娘，今天是九月二十九日。", "expr": "开心"},
+  {"text": "今天说七件事：Claude Sonnet 5.5 发布，英伟达推出智能体安全平台，华为开源盘古训练代码，千问打通夸克网盘，谷歌要把 Gems 换成 skills，Shopify 让 AI 帮你结账，还有 AMD 收购李飞飞的 World Labs。",
+   "tts": "今天说七件事：Claude Sonnet 五点五发布，英伟达推出智能体安全平台，华为开源盘古训练代码，千问打通夸克网盘，谷歌要把 Gems 换成 skills，Shopify 让 A I 帮你结账，还有 A M D 收购李飞飞的 World Labs。"}
+ ],
+ "news": [
+  {
+   "headline": "Claude Sonnet 5.5 发布",
+   "bar_label": "Sonnet 5.5",
+   "org": "Anthropic",
+   "source": "Anthropic 官方 · TechCrunch",
+   "source_short": "Anthropic",
+   "date": "9月28日",
+   "rundown_key": "Sonnet 5.5",
+   "points": ["速度快三成以上", "多数任务最多省 30%", "API 单价不变", "上下文 1M token"],
+   "lines": [
+    {"text": "第一件，Anthropic 9 月 28 日发布了 Claude Sonnet 5.5。", "tts": "第一件，Anthropic 九月二十八日发布了 Claude Sonnet 五点五。", "expr": "开心"},
+    {"text": "官方说，它比上一代 Sonnet 5 快 30% 以上，是目前最快的 Sonnet。", "tts": "官方说，它比上一代 Sonnet 五快百分之三十以上，是目前最快的 Sonnet。", "point": 0},
+    {"text": "做大部分工作时，每个任务的花费最多能少 30%。", "tts": "做大部分工作时，每个任务的花费最多能少百分之三十。", "point": 1},
+    {"text": "API 价格和 Sonnet 5 一样：输入每百万 token 2 美元，输出 10 美元。", "tts": "A P I 价格和 Sonnet 五一样：输入每百万 token 两美元，输出十美元。", "point": 2},
+    {"text": "上下文窗口是 1M token，单次最多输出 128K token。", "tts": "上下文窗口是一百万 token，单次最多输出十二万八千 token。", "point": 3},
+    {"text": "在命令行任务测试 Terminal-Bench 4.0 上，它拿到 70.6%，Sonnet 5 只有 10.3%。", "tts": "在命令行任务测试 Terminal Bench 四点零上，它拿到百分之七十点六，Sonnet 五只有百分之十点三。"},
+    {"text": "它还加了网络安全防护：高风险的网络安全任务，会明确切回 Sonnet 5 来处理。", "tts": "它还加了网络安全防护：高风险的网络安全任务，会明确切回 Sonnet 五来处理。"},
+    {"text": "现在 Claude 的网页、手机和电脑应用都能用，API 和亚马逊、谷歌、微软的云平台也已上线。", "tts": "现在 Claude 的网页、手机和电脑应用都能用，A P I 和亚马逊、谷歌、微软的云平台也已上线。"},
+    {"text": "同系列的 Haiku 5.5，官方说会在接下来几周推出。", "tts": "同系列的 Haiku 五点五，官方说会在接下来几周推出。"}
+   ],
+   "refs": [
+    {"name": "Anthropic", "url": "https://www.anthropic.com/claude-sonnet-5-5"},
+    {"name": "Anthropic 文档", "url": "https://platform.claude.com/docs/en/models/sonnet-5-5/overview"},
+    {"name": "TechCrunch", "url": "https://techcrunch.com/2026/09/28/anthropic-releases-sonnet-5-5-which-it-calls-a-significantly-cheaper-faster-work-partner/"}
+   ],
+   "snap_url": "https://techcrunch.com/2026/09/28/anthropic-releases-sonnet-5-5-which-it-calls-a-significantly-cheaper-faster-work-partner/"
+  },
+  {
+   "headline": "英伟达推出智能体安全平台",
+   "bar_label": "智能体安全",
+   "org": "NVIDIA / Anthropic",
+   "source": "英伟达官方 · Anthropic 官方博客",
+   "source_short": "英伟达",
+   "date": "9月28日",
+   "rundown_key": "英伟达",
+   "points": ["OpenShell 管住权限", "Sentry 毫秒级隔离", "100 多家机构参与", "Claude 托管智能体接入"],
+   "lines": [
+    {"text": "第二件，英伟达 9 月 28 日发布了一个开放的智能体安全平台，专门管住 AI 智能体，不让它越界。", "tts": "第二件，英伟达九月二十八日发布了一个开放的智能体安全平台，专门管住 A I 智能体，不让它越界。", "expr": "认真"},
+    {"text": "它分两层。第一层叫 OpenShell，给智能体划一道运行边界，控制它怎么执行任务。", "tts": "它分两层。第一层叫 Open Shell，给智能体划一道运行边界，控制它怎么执行任务。", "point": 0},
+    {"text": "第二层叫 Sentry，跑在英伟达的 BlueField-4 芯片上，在旁边一直盯着智能体的行为。", "tts": "第二层叫 Sentry，跑在英伟达的 BlueField 四芯片上，在旁边一直盯着智能体的行为。"},
+    {"text": "一旦发现智能体想越界，几毫秒内就能把它隔离、停下。", "point": 1},
+    {"text": "英伟达说，有 100 多家机构参与，包括 Anthropic、微软、思科和 Hugging Face。", "tts": "英伟达说，有一百多家机构参与，包括 Anthropic、微软、思科和 Hugging Face。", "point": 2},
+    {"text": "Anthropic 同一天发了博客：Claude 的托管智能体 Managed Agents，可以和 OpenShell 配合使用。", "tts": "Anthropic 同一天发了博客：Claude 的托管智能体 Managed Agents，可以和 Open Shell 配合使用。", "point": 3},
+    {"text": "密码和访问密钥放在单独的保险库里，智能体自己看不到。"},
+    {"text": "OpenShell 默认拦下一切操作，只有规则允许的才放行，文件、网络和数据都要过规则。", "tts": "Open Shell 默认拦下一切操作，只有规则允许的才放行，文件、网络和数据都要过规则。"},
+    {"text": "OpenShell 是开源的，用 Apache 2.0 许可证，放在 GitHub 上。", "tts": "Open Shell 是开源的，用 Apache 二点零许可证，放在 GitHub 上。"}
+   ],
+   "refs": [
+    {"name": "英伟达新闻稿", "url": "https://nvidianews.nvidia.com/news/open-agent-safety-platform"},
+    {"name": "Anthropic 博客", "url": "https://claude.com/blog/giving-companies-more-control-over-their-ai-agents-with-nvidia"}
+   ],
+   "snap_url": "https://nvidianews.nvidia.com/news/open-agent-safety-platform"
+  },
+  {
+   "headline": "华为开源盘古训练代码",
+   "bar_label": "盘古开源",
+   "org": "华为",
+   "source": "IT之家 · GitCode",
+   "source_short": "IT之家",
+   "date": "9月28日",
+   "rundown_key": "盘古",
+   "points": ["预训练和微调代码", "强化学习代码", "面向昇腾芯片", "不代表开放权重"],
+   "lines": [
+    {"text": "第三件是国产模型。9 月 28 日，华为宣布，开源盘古 openPangu-2.0 的预训练、SFT 代码和后训练强化学习代码，正式开源上线。", "tts": "第三件是国产模型。九月二十八日，华为宣布，开源盘古 open Pangu 二点零的预训练、S F T 代码和后训练强化学习代码，正式开源上线。", "expr": "认真", "point": 0},
+    {"text": "SFT 就是监督微调，用来让模型学会按指令回答。", "tts": "S F T 就是监督微调，用来让模型学会按指令回答。"},
+    {"text": "开源盘古是华为的开源 AI 模型品牌，主打昇腾原生的训练和推理。", "tts": "开源盘古是华为的开源 A I 模型品牌，主打昇腾原生的训练和推理。", "point": 2},
+    {"text": "代码放在 GitCode 上，分成两个仓库：一个管预训练和监督微调，一个管强化学习。", "point": 1},
+    {"text": "要注意，这次开放的是训练代码，有报道特别提醒，不代表模型权重也一起开放。", "point": 3},
+    {"text": "GitCode 在国内可以直接访问，用昇腾训练模型的团队，可以直接拿来参考。"}
+   ],
+   "refs": [
+    {"name": "IT之家", "url": "https://www.ithome.com/1/007/740.htm"},
+    {"name": "GitCode 训练仓库", "url": "https://gitcode.com/ascend-tribe/openPangu-2.0-Training"},
+    {"name": "动点科技", "url": "https://cn.technode.com/post/2026-09-28/huawei-openpangu-2-training-code-open-source/"}
+   ],
+   "snap_url": "https://www.ithome.com/1/007/740.htm"
+  },
+  {
+   "headline": "千问打通夸克网盘",
+   "bar_label": "千问网盘",
+   "org": "Qwen",
+   "source": "IT之家 · 手机中国",
+   "source_short": "IT之家",
+   "date": "9月28日",
+   "rundown_key": "夸克网盘",
+   "points": ["授权后读取网盘", "说一句就能找文件", "复习计划和纪念海报", "内容能存回网盘"],
+   "lines": [
+    {"text": "第四件也是国产。9 月 28 日，阿里的千问 App 宣布和夸克网盘深度打通。", "tts": "第四件也是国产。九月二十八日，阿里的千问 App 宣布和夸克网盘深度打通。", "expr": "开心"},
+    {"text": "用户授权以后，就能在千问的对话里，查询、整理和读取网盘里的资料。", "point": 0},
+    {"text": "用法有两种：在千问首页 @ 夸克网盘，或者在工作助理里，用“夸克网盘管理”这个技能。", "tts": "用法有两种：在千问首页艾特夸克网盘，或者在工作助理里，用夸克网盘管理这个技能。"},
+    {"text": "比如不记得文件放在哪儿，直接描述一下要找什么，让千问去找。", "point": 1},
+    {"text": "也能根据网盘里的课程讲义，做复习计划、生成进度看板。", "point": 2},
+    {"text": "还能把网盘里的旅行照片，做成纪念海报。"},
+    {"text": "对话里收集的资料和生成的内容，可以上传回网盘，再生成链接分享出去。", "point": 3},
+    {"text": "这样一来，网盘里的文件就成了千问能直接调用的资料。"}
+   ],
+   "refs": [
+    {"name": "IT之家", "url": "https://www.ithome.com/1/007/871.htm"},
+    {"name": "手机中国", "url": "https://internet.cnmo.com/event/819464.html"}
+   ],
+   "snap_url": "https://www.ithome.com/1/007/871.htm"
+  },
+  {
+   "headline": "Gems 将迁移成 skills",
+   "bar_label": "Gems 迁移",
+   "org": "Google",
+   "source": "9to5Google",
+   "source_short": "9to5Google",
+   "date": "9月27日",
+   "rundown_key": "Gems",
+   "points": ["11 月 17 日开始迁移", "谷歌自动迁移", "打斜杠就能调用", "能同时用好几个"],
+   "lines": [
+    {"text": "第五件，谷歌要把 Gemini 里的 Gems，换成新的 skills，也就是技能。", "expr": "认真"},
+    {"text": "Gems 是谷歌 2024 年推出的，官方叫它“定制版的 Gemini”。", "tts": "Gems 是谷歌二零二四年推出的，官方叫它定制版的 Gemini。"},
+    {"text": "9to5Google 9 月 27 日报道，Gems 管理页顶部已经出现提示：11 月 17 日开始，Gems 会变成技能。", "tts": "九 to 五 Google 九月二十七日报道，Gems 管理页顶部已经出现提示：十一月十七日开始，Gems 会变成技能。", "point": 0},
+    {"text": "谷歌会自动迁移；在迁移之前，Gems 还能照常用。", "point": 1},
+    {"text": "技能和 Gems 大体是一回事，都是给 Gemini 写好自定义指令。"},
+    {"text": "Gems 能多做一步：设定默认工具，比如生成图片或 Canvas，还能加参考文件、用链接分享。"},
+    {"text": "技能的好处是调用方便：在输入框里打一个斜杠就行。", "point": 2},
+    {"text": "一次还能同时用好几个技能，不用再去侧边栏里翻“我的 Gems”。", "point": 3},
+    {"text": "9to5Google 还提到，这次提示可能推早了，当时“了解更多”的帮助文章和“创建技能”按钮都还打不开。", "tts": "九 to 五 Google 还提到，这次提示可能推早了，当时了解更多的帮助文章和创建技能按钮都还打不开。"}
+   ],
+   "refs": [
+    {"name": "9to5Google", "url": "https://9to5google.com/2026/09/27/gemini-gems-skills/"}
+   ],
+   "snap_url": "https://9to5google.com/2026/09/27/gemini-gems-skills/"
+  },
+  {
+   "headline": "Shopify 让 AI 帮你结账",
+   "bar_label": "AI 结账",
+   "org": "Shopify",
+   "source": "Shopify 官方 · TechCrunch",
+   "source_short": "Shopify",
+   "date": "9月28日",
+   "rundown_key": "Shopify",
+   "points": ["浏览器智能体能结账", "不靠截图扒网页", "买家确认才下单", "商家不用配置"],
+   "lines": [
+    {"text": "第六件，电商平台 Shopify 9 月 28 日宣布，浏览器里的 AI 智能体，现在可以在 Shopify 的店里帮你结账了。", "tts": "第六件，电商平台 Shopify 九月二十八日宣布，浏览器里的 A I 智能体，现在可以在 Shopify 的店里帮你结账了。", "expr": "吃惊", "point": 0},
+    {"text": "它用的是 WebMCP：智能体不用截图、也不用扒网页，直接调用结账页提供的工具。", "tts": "它用的是 Web M C P：智能体不用截图、也不用扒网页，直接调用结账页提供的工具。", "point": 1},
+    {"text": "官方列了四个工具：回到店铺、读取结账信息、修改结账信息、提交订单。"},
+    {"text": "提交订单要等买家确认；遇到 3D 安全验证这类要本人操作的步骤，会把控制权交还给买家。", "tts": "提交订单要等买家确认；遇到三 D 安全验证这类要本人操作的步骤，会把控制权交还给买家。", "point": 2},
+    {"text": "商家不用做任何配置，符合条件的 Shopify 商家都会陆续开放。", "point": 3},
+    {"text": "TechCrunch 提到，Muse 和 Instinct 这些智能体，已经和 Shopify 直接合作。", "tts": "Tech Crunch 提到，Muse 和 Instinct 这些智能体，已经和 Shopify 直接合作。"},
+    {"text": "TechCrunch 还提到，有些零售商，比如亚马逊，在拦着 AI 智能体下单；Shopify 走的是相反的路。", "tts": "Tech Crunch 还提到，有些零售商，比如亚马逊，在拦着 A I 智能体下单；Shopify 走的是相反的路。"}
+   ],
+   "refs": [
+    {"name": "Shopify 更新日志", "url": "https://shopify.dev/changelog/posts/webmcp-support-for-checkout"},
+    {"name": "TechCrunch", "url": "https://techcrunch.com/2026/09/28/shopify-opens-checkout-to-browser-based-ai-agents/"}
+   ],
+   "snap_url": "https://shopify.dev/changelog/posts/webmcp-support-for-checkout"
+  },
+  {
+   "headline": "AMD 收购 World Labs",
+   "bar_label": "AMD 收购",
+   "org": "AMD",
+   "source": "AMD 官方 · TechCrunch",
+   "source_short": "AMD",
+   "date": "9月28日",
+   "rundown_key": "AMD",
+   "points": ["约 82 亿美元", "全部用股票支付", "李飞飞任首席科学家", "预计年底前完成"],
+   "lines": [
+    {"text": "最后一件，芯片公司 AMD 9 月 28 日宣布，收购李飞飞的 AI 公司 World Labs。", "tts": "最后一件，芯片公司 A M D 九月二十八日宣布，收购李飞飞的 A I 公司 World Labs。", "expr": "吃惊"},
+    {"text": "交易金额约 82 亿美元，全部用 AMD 的股票支付。", "tts": "交易金额约八十二亿美元，全部用 A M D 的股票支付。", "point": 0},
+    {"text": "World Labs 做的是空间智能模型：用文字、图片或视频，生成、重建和模拟可以互动的 3D 环境。", "tts": "World Labs 做的是空间智能模型：用文字、图片或视频，生成、重建和模拟可以互动的三 D 环境。", "point": 1},
+    {"text": "它也做机器人学习和仿真的技术。"},
+    {"text": "按新闻稿，李飞飞将出任 AMD 执行副总裁兼首席科学家，向苏姿丰汇报。", "tts": "按新闻稿，李飞飞将出任 A M D 执行副总裁兼首席科学家，向苏姿丰汇报。", "point": 2},
+    {"text": "苏姿丰说，做下一代 AI 的算力平台，需要深入了解模型是怎么演进的。", "tts": "苏姿丰说，做下一代 A I 的算力平台，需要深入了解模型是怎么演进的。"},
+    {"text": "交易预计在 2026 年底前完成，还要等监管批准。", "tts": "交易预计在二零二六年底前完成，还要等监管批准。", "point": 3}
+   ],
+   "refs": [
+    {"name": "AMD 新闻稿", "url": "https://ir.amd.com/news-events/press-releases/detail/1299/amd-to-acquire-world-labs-to-advance-the-future-of-ai-compute"},
+    {"name": "TechCrunch", "url": "https://techcrunch.com/2026/09/28/amd-will-acquire-fei-fei-lis-world-labs-for-8-2-billion/"}
+   ],
+   "snap_url": "https://techcrunch.com/2026/09/28/amd-will-acquire-fei-fei-lis-world-labs-for-8-2-billion/"
+  }
+ ],
+ "closing": [
+  {"text": "今天就这些，来源都在简介里，我们明天见。", "expr": "开心"}
+ ],
+ "cover": {"item": 1, "line1": "Claude Sonnet 5.5", "line2": "快三成还更省？", "mood": "开心"}
+}

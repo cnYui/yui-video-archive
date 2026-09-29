@@ -1,0 +1,26 @@
+{
+  "frame": [
+    64,
+    64
+  ],
+  "footRow": 62,
+  "scale": 9,
+  "ryoX": 232,
+  "rx": 790,
+  "rw": 850,
+  "q": {
+    "sx": 40,
+    "sy": -15
+  },
+  "t1": "AGI",
+  "t2": "到了吗？",
+  "subHTML": "<span class=\"qm o1\">“</span>AI 不就是文字接龙<span class=\"qm c\">”</span> <span class=\"hl\">对了一半</span>",
+  "bg": {
+    "scale": 1.0,
+    "fx": 0.5,
+    "fy": 0.5,
+    "opacity": 0.36,
+    "blur": 8
+  },
+  "number": 2
+}

@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>AI每日日报 — 正片画面</title>
+<!--
+  《原LAI如此》正片画面引擎（模板：skill/yuanlai-ruci-episode/assets/engine-template/）。在 制作/ 下：
+    python engine/sync_assets.py                                   # 生成 assets.js + assets.css（字体/角色帧/背景的相对路径 + 检查缺素材）
+    python render.py engine/index.html --data timeline.json --stills 12,40 --stills-dir build/stills   # 抽帧检查
+    python render.py engine/index.html --data timeline.json -o build/main.mp4 --fps 30
+  文件：core.js（全局层 + 时间轴工具，通用）、components.js（可复用画面组件，通用）、scenes.js（每期新写，起点是 scenes.template.js）。
+  所有时刻由 __DATA__（timeline.json）驱动，不写死秒数。
+-->
+<link rel="stylesheet" href="assets.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<script src="assets.js"></script>
+<script src="core.js"></script>
+<script src="components.js"></script>
+<script src="scenes.js"></script>
+<script>ENG.boot();</script>
+</body>
+</html>

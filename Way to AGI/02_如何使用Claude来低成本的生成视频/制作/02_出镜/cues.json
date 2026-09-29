@@ -1,0 +1,1271 @@
+[
+ {
+  "pid": "N01",
+  "clip": "0161",
+  "s": 0.58,
+  "e": 1.76,
+  "zh": "Hello，大家好，我是悠一。",
+  "en": "Hello everyone, I'm Yui.",
+  "skip": []
+ },
+ {
+  "pid": "N01",
+  "clip": "0161",
+  "s": 2.06,
+  "e": 4.26,
+  "zh": "上个视频被炸得有点眩晕，瘫坐了。",
+  "en": "My last video blew me away so hard I'm still a bit dizzy.",
+  "skip": []
+ },
+ {
+  "pid": "N01",
+  "clip": "0161",
+  "s": 4.42,
+  "e": 9.72,
+  "zh": "这期视频来教大家，如何用 Opus 5.5 上手做第一个视频。",
+  "en": "Today I'll show you how to make your first video with Opus 5.5.",
+  "skip": []
+ },
+ {
+  "pid": "N02",
+  "clip": "0161",
+  "s": 10.36,
+  "e": 13.26,
+  "zh": "Opus 5.5 这个模型，是 9 月 22 号发布的，",
+  "en": "Opus 5.5 was released on September 22,",
+  "skip": []
+ },
+ {
+  "pid": "N02",
+  "clip": "0161",
+  "s": 13.74,
+  "e": 16.2,
+  "zh": "它现在的能力，可以说是最强的。",
+  "en": "and it's arguably the most capable model right now.",
+  "skip": []
+ },
+ {
+  "pid": "N02",
+  "clip": "0161",
+  "s": 16.9,
+  "e": 21.96,
+  "zh": "当时发布之后，它的价格也降了 20%，",
+  "en": "After launch, its price also dropped by 20%,",
+  "skip": []
+ },
+ {
+  "pid": "N02",
+  "clip": "0161",
+  "s": 21.96,
+  "e": 26.42,
+  "zh": "但是所有人都没有想到的是，它的视觉能力那么强。",
+  "en": "but nobody expected its vision to be this strong.",
+  "skip": []
+ },
+ {
+  "pid": "N03",
+  "clip": "0161",
+  "s": 26.82,
+  "e": 29.22,
+  "zh": "因为在 GPT-6 发布的时候，",
+  "en": "Back when GPT-6 came out,",
+  "skip": []
+ },
+ {
+  "pid": "N03",
+  "clip": "0161",
+  "s": 29.22,
+  "e": 35.24,
+  "zh": "GPT-6 能用它的能力去做 3D 建模，是很厉害的模型。",
+  "en": "it could do 3D modeling, which is really impressive.",
+  "skip": []
+ },
+ {
+  "pid": "N03",
+  "clip": "0161",
+  "s": 35.24,
+  "e": 38.98,
+  "zh": "就比如说视频中这样，它建模了一个客厅，还有一个书房，",
+  "en": "Like in this clip: it modeled a living room and a study,",
+  "skip": []
+ },
+ {
+  "pid": "N03",
+  "clip": "0161",
+  "s": 39.92,
+  "e": 43.8,
+  "zh": "然后用户可以跟随镜头自由地穿梭，就像一个游戏。",
+  "en": "and you can follow the camera and move around freely, like a game.",
+  "skip": []
+ },
+ {
+  "pid": "N03",
+  "clip": "0161",
+  "s": 44.44,
+  "e": 46.86,
+  "zh": "但是没有人想到，Opus 5.5 能力也这么强。",
+  "en": "But nobody expected Opus 5.5 to be this capable too.",
+  "skip": []
+ },
+ {
+  "pid": "N04",
+  "clip": "0161",
+  "s": 48.6,
+  "e": 55.78,
+  "zh": "官方的说法是：这是视觉和电脑操作最强的一个模型，",
+  "en": "Officially, it's the strongest model for vision and computer use,",
+  "skip": [
+   [
+    49.7,
+    52.36
+   ]
+  ]
+ },
+ {
+  "pid": "N04",
+  "clip": "0161",
+  "s": 55.78,
+  "e": 60.02,
+  "zh": "它能把图表、截图、示意图看得很仔细。",
+  "en": "reading charts, screenshots and diagrams in fine detail.",
+  "skip": []
+ },
+ {
+  "pid": "N05",
+  "clip": "0161",
+  "s": 61.3,
+  "e": 66.26,
+  "zh": "那很多人就会有一个问题：为什么 Claude 会生成视频呢？",
+  "en": "So a lot of people ask: how can Claude make videos?",
+  "skip": []
+ },
+ {
+  "pid": "N05",
+  "clip": "0161",
+  "s": 66.26,
+  "e": 69.18,
+  "zh": "Claude 本身是多模态的模型，",
+  "en": "Claude itself is a multimodal model,",
+  "skip": [
+   [
+    67.56,
+    68.26
+   ]
+  ]
+ },
+ {
+  "pid": "N05",
+  "clip": "0161",
+  "s": 69.18,
+  "e": 71.86,
+  "zh": "但是它不能生成音频、图片和视频。",
+  "en": "but it can't generate audio, images or video.",
+  "skip": []
+ },
+ {
+  "pid": "N06",
+  "clip": "0161",
+  "s": 74.12,
+  "e": 75.2,
+  "zh": "后来我就问了一下 Claude，",
+  "en": "So I asked Claude,",
+  "skip": []
+ },
+ {
+  "pid": "N06",
+  "clip": "0161",
+  "s": 75.2,
+  "e": 77.7,
+  "zh": "他说每一帧都是他自己画出来的，",
+  "en": "and it said it draws every frame itself,",
+  "skip": []
+ },
+ {
+  "pid": "N06",
+  "clip": "0161",
+  "s": 78.54,
+  "e": 80.55,
+  "zh": "就是每一个像素，都是他自己画出来的。",
+  "en": "every single pixel.",
+  "skip": []
+ },
+ {
+  "pid": "N06",
+  "clip": "0161",
+  "s": 90.28,
+  "e": 93.44,
+  "zh": "就像图中这样，它是一个一个像素，",
+  "en": "Like in this picture, pixel by pixel,",
+  "skip": []
+ },
+ {
+  "pid": "N06",
+  "clip": "0161",
+  "s": 94.56,
+  "e": 98.32,
+  "zh": "用 01 或者 EF 这些之前规定好的颜色画出来的。",
+  "en": "using colors it defined beforehand, like 01 or EF.",
+  "skip": []
+ },
+ {
+  "pid": "N06",
+  "clip": "0161",
+  "s": 101.18,
+  "e": 102.32,
+  "zh": "我觉得真的就很离谱。",
+  "en": "Honestly, it's wild.",
+  "skip": []
+ },
+ {
+  "pid": "N06",
+  "clip": "0161",
+  "s": 103.54,
+  "e": 107.36,
+  "zh": "然后它画完之后，会自己截图，自己用视觉能力去查，",
+  "en": "After drawing, it screenshots its own work and checks it with its own vision,",
+  "skip": [
+   [
+    105.74,
+    106.3
+   ]
+  ]
+ },
+ {
+  "pid": "N06",
+  "clip": "0161",
+  "s": 107.36,
+  "e": 109.46,
+  "zh": "看一下是不是和我要求里的一样。",
+  "en": "to see if it matches what I asked for.",
+  "skip": []
+ },
+ {
+  "pid": "N06",
+  "clip": "0161",
+  "s": 111.48,
+  "e": 112.6,
+  "zh": "下面就是几个例子。",
+  "en": "Here are a few examples.",
+  "skip": []
+ },
+ {
+  "pid": "N07",
+  "clip": "0162",
+  "s": 1.62,
+  "e": 8.4,
+  "zh": "第一个例子，就是我用这一段提示词，让他做一个银魂的动漫，",
+  "en": "The first example: I used this prompt to have it make a Gintama anime,",
+  "skip": [
+   [
+    2.95,
+    5.2
+   ]
+  ]
+ },
+ {
+  "pid": "N07",
+  "clip": "0162",
+  "s": 10.58,
+  "e": 14.82,
+  "zh": "从主剧情那么多集里面，去挑一些经典场景。",
+  "en": "picking classic scenes from the whole main storyline.",
+  "skip": [],
+  "hold": [
+   1.6,
+   "0162",
+   31.95
+  ]
+ },
+ {
+  "pid": "N07",
+  "clip": "0162",
+  "s": 14.92,
+  "e": 16.96,
+  "zh": "第二个是火影忍者，他做得也很好。",
+  "en": "The second is Naruto. It did a great job too.",
+  "skip": [],
+  "hold": [
+   2.0,
+   "0162",
+   3.15
+  ]
+ },
+ {
+  "pid": "N07",
+  "clip": "0162",
+  "s": 17.04,
+  "e": 17.88,
+  "zh": "第三个是 JoJo 的，",
+  "en": "The third is JoJo.",
+  "skip": []
+ },
+ {
+  "pid": "N07",
+  "clip": "0162",
+  "s": 18.36,
+  "e": 23.08,
+  "zh": "提示词和之前差不多，也是让他做了比较基础的场景。",
+  "en": "Similar prompt, also asking for some basic scenes.",
+  "skip": [
+   [
+    20.66,
+    21.74
+   ]
+  ],
+  "hold": [
+   1.5,
+   "0162",
+   23.18
+  ]
+ },
+ {
+  "pid": "N07",
+  "clip": "0162",
+  "s": 24.76,
+  "e": 28.64,
+  "zh": "然后第四个，就是我之前发布的模型「从夯到拉」的视频，",
+  "en": "The fourth is my earlier video ranking AI models, from god-tier to trash.",
+  "skip": []
+ },
+ {
+  "pid": "N07",
+  "clip": "0162",
+  "s": 29.44,
+  "e": 31.84,
+  "zh": "可以看到这个视频里的内容，",
+  "en": "Look at what's in this video:",
+  "skip": []
+ },
+ {
+  "pid": "N07",
+  "clip": "0162",
+  "s": 33.72,
+  "e": 37.8,
+  "zh": "不管是配音、配色，还是角色说话的嘴巴",
+  "en": "the voice, the colors, even the character's mouth",
+  "skip": []
+ },
+ {
+  "pid": "N07",
+  "clip": "0162",
+  "s": 37.8,
+  "e": 41.02,
+  "zh": "跟着音频一张一合，",
+  "en": "opening and closing with the audio.",
+  "skip": []
+ },
+ {
+  "pid": "N07",
+  "clip": "0162",
+  "s": 41.02,
+  "e": 43.06,
+  "zh": "这些都是他自己去截图、自己去看的。",
+  "en": "It checked all of that itself, by taking screenshots and looking.",
+  "skip": []
+ },
+ {
+  "pid": "N07",
+  "clip": "0162",
+  "s": 45.04,
+  "e": 45.8,
+  "zh": "就很震惊。",
+  "en": "Pretty shocking.",
+  "skip": []
+ },
+ {
+  "pid": "N08",
+  "clip": "0162",
+  "s": 46.24,
+  "e": 49.04,
+  "zh": "那 Claude 不是扩散模型，这些视频是怎么来的呢？",
+  "en": "So if Claude isn't a diffusion model, where do these videos come from?",
+  "skip": [],
+  "cut": true
+ },
+ {
+  "pid": "N08",
+  "clip": "0163",
+  "s": 0.52,
+  "e": 3.54,
+  "zh": "Claude 既然不是扩散模型，是一帧一帧画出来的，",
+  "en": "Since Claude isn't a diffusion model and draws frame by frame,",
+  "skip": []
+ },
+ {
+  "pid": "N08",
+  "clip": "0163",
+  "s": 3.7,
+  "e": 5.76,
+  "zh": "那么扩散模型是怎么做的呢？",
+  "en": "how does a diffusion model work?",
+  "skip": []
+ },
+ {
+  "pid": "N09",
+  "clip": "0163",
+  "s": 5.86,
+  "e": 8.6,
+  "zh": "扩散模型不能很好地生成文字，",
+  "en": "Diffusion models aren't good at generating text,",
+  "skip": []
+ },
+ {
+  "pid": "N09",
+  "clip": "0163",
+  "s": 9.74,
+  "e": 18.16,
+  "zh": "因为它是从一个随机噪点里，把它还原出来一个图像，",
+  "en": "because they restore an image out of random noise,",
+  "skip": [
+   [
+    11.82,
+    16.02
+   ]
+  ]
+ },
+ {
+  "pid": "N09",
+  "clip": "0163",
+  "s": 18.4,
+  "e": 19.84,
+  "zh": "或者说还原出来一个视频。",
+  "en": "or a video.",
+  "skip": []
+ },
+ {
+  "pid": "N10",
+  "clip": "0163",
+  "s": 19.84,
+  "e": 22.34,
+  "zh": "但是大语言模型，是一个字一个字地往外写的。",
+  "en": "But a large language model writes one word at a time.",
+  "skip": []
+ },
+ {
+  "pid": "N10",
+  "clip": "0163",
+  "s": 24.98,
+  "e": 28.62,
+  "zh": "所以，我个人主观来看，",
+  "en": "So, in my personal opinion,",
+  "skip": [
+   [
+    25.3,
+    27.32
+   ]
+  ]
+ },
+ {
+  "pid": "N10",
+  "clip": "0163",
+  "s": 28.62,
+  "e": 32.4,
+  "zh": "扩散模型并不适合做含有文字、或者文字太多的图像，",
+  "en": "diffusion models don't suit images with text, or lots of text.",
+  "skip": []
+ },
+ {
+  "pid": "N10",
+  "clip": "0163",
+  "s": 33.74,
+  "e": 35.84,
+  "zh": "这些确实应该交给大语言模型，",
+  "en": "Those really should go to LLMs,",
+  "skip": []
+ },
+ {
+  "pid": "N10",
+  "clip": "0163",
+  "s": 36.68,
+  "e": 39.08,
+  "zh": "像 Opus 5.5 这样，一个一个地生成。",
+  "en": "like Opus 5.5, generating it piece by piece.",
+  "skip": []
+ },
+ {
+  "pid": "N10",
+  "clip": "0163",
+  "s": 41.47,
+  "e": 42.76,
+  "zh": "这个就很反直觉了：",
+  "en": "Which is really counterintuitive:",
+  "skip": []
+ },
+ {
+  "pid": "N10",
+  "clip": "0163",
+  "s": 43.58,
+  "e": 45.38,
+  "zh": "一个 LLM，让它去做视频。",
+  "en": "an LLM making videos.",
+  "skip": []
+ },
+ {
+  "pid": "N11",
+  "clip": "0164",
+  "s": 0.0,
+  "e": 2.96,
+  "zh": "像我之前说的，它一秒会做 30 张图，",
+  "en": "As I said, it makes 30 images per second,",
+  "skip": []
+ },
+ {
+  "pid": "N11",
+  "clip": "0164",
+  "s": 3.18,
+  "e": 4.6,
+  "zh": "再加一条声音。",
+  "en": "plus an audio track.",
+  "skip": []
+ },
+ {
+  "pid": "N11",
+  "clip": "0164",
+  "s": 5.18,
+  "e": 6.88,
+  "zh": "20 秒，等于画了 600 张图。",
+  "en": "So 20 seconds means 600 drawn images.",
+  "skip": []
+ },
+ {
+  "pid": "N12",
+  "clip": "0165",
+  "s": 2.68,
+  "e": 5.24,
+  "zh": "它会放在一个 HTML 页面里，",
+  "en": "It puts them in an HTML page,",
+  "skip": []
+ },
+ {
+  "pid": "N12",
+  "clip": "0165",
+  "s": 6.78,
+  "e": 9.0,
+  "zh": "每一帧都画出来之后，去进行渲染，",
+  "en": "and once every frame is drawn, it renders them",
+  "skip": []
+ },
+ {
+  "pid": "N12",
+  "clip": "0165",
+  "s": 9.54,
+  "e": 10.92,
+  "zh": "用 ffmpeg。",
+  "en": "with ffmpeg.",
+  "skip": []
+ },
+ {
+  "pid": "N12",
+  "clip": "0168",
+  "s": 0.54,
+  "e": 4.58,
+  "zh": "其实视频说到底，就是很多张图片拼在一起的。",
+  "en": "A video is really just lots of images stitched together.",
+  "skip": []
+ },
+ {
+  "pid": "N12",
+  "clip": "0168",
+  "s": 4.82,
+  "e": 7.24,
+  "zh": "那 Claude 就是从每张图开始画，",
+  "en": "Claude starts by drawing each image,",
+  "skip": []
+ },
+ {
+  "pid": "N12",
+  "clip": "0168",
+  "s": 7.52,
+  "e": 10.52,
+  "zh": "画完之后，把它放在一个浏览器里，",
+  "en": "puts them in a browser once they're drawn,",
+  "skip": [
+   [
+    8.2,
+    9.44
+   ]
+  ]
+ },
+ {
+  "pid": "N12",
+  "clip": "0168",
+  "s": 10.62,
+  "e": 15.32,
+  "zh": "然后用 ffmpeg 把图片合成一段视频，",
+  "en": "turns the images into a video with ffmpeg,",
+  "skip": [
+   [
+    11.84,
+    13.42
+   ]
+  ]
+ },
+ {
+  "pid": "N12",
+  "clip": "0168",
+  "s": 15.44,
+  "e": 18.38,
+  "zh": "然后他再自己去抽帧检查。",
+  "en": "and then samples frames to check it.",
+  "skip": []
+ },
+ {
+  "pid": "N13",
+  "clip": "0168",
+  "s": 21.88,
+  "e": 26.94,
+  "zh": "那为什么我认为，用写代码的模型去做视频更好？",
+  "en": "So why do I think a coding model is better for making videos?",
+  "skip": [
+   [
+    23.98,
+    24.32
+   ]
+  ]
+ },
+ {
+  "pid": "N13",
+  "clip": "0168",
+  "s": 26.94,
+  "e": 30.2,
+  "zh": "是因为这个写代码的 LLM，",
+  "en": "Because a coding LLM",
+  "skip": []
+ },
+ {
+  "pid": "N13",
+  "clip": "0168",
+  "s": 30.2,
+  "e": 33.22,
+  "zh": "它知道写什么字、写在哪、第几秒出现、怎么动，",
+  "en": "knows what text to write, where it goes, when it appears and how it moves.",
+  "skip": []
+ },
+ {
+  "pid": "N13",
+  "clip": "0168",
+  "s": 33.22,
+  "e": 37.74,
+  "zh": "这些东西，语言模型能够精确地定位。",
+  "en": "A language model can pin all of that down precisely.",
+  "skip": []
+ },
+ {
+  "pid": "N13",
+  "clip": "0168",
+  "s": 38.16,
+  "e": 41.64,
+  "zh": "而扩散模型，更适合去做一些 3D 模型的渲染，",
+  "en": "Diffusion models are better for things like 3D rendering,",
+  "skip": []
+ },
+ {
+  "pid": "N13",
+  "clip": "0168",
+  "s": 41.64,
+  "e": 43.94,
+  "zh": "比如说做一些游戏的过场动画，",
+  "en": "such as game cutscenes,",
+  "skip": []
+ },
+ {
+  "pid": "N13",
+  "clip": "0168",
+  "s": 45.04,
+  "e": 46.32,
+  "zh": "或者做一些 AI 短剧。",
+  "en": "or AI short dramas.",
+  "skip": []
+ },
+ {
+  "pid": "N14",
+  "clip": "0169",
+  "s": 2.16,
+  "e": 4.32,
+  "zh": "下面这个例子，就是我做的这个视频，",
+  "en": "This next example is a video I made,",
+  "skip": []
+ },
+ {
+  "pid": "N14",
+  "clip": "0169",
+  "s": 4.44,
+  "e": 6.28,
+  "zh": "我可以给大家分享一下是怎么做的。",
+  "en": "so let me show you how it was made.",
+  "skip": []
+ },
+ {
+  "pid": "N14",
+  "clip": "0169",
+  "s": 7.82,
+  "e": 11.02,
+  "zh": "这个视频里，左下角有角色，",
+  "en": "It has a character in the bottom-left,",
+  "skip": []
+ },
+ {
+  "pid": "N14",
+  "clip": "0169",
+  "s": 11.7,
+  "e": 15.34,
+  "zh": "有出现的手写字体，有目录，有进度条。",
+  "en": "handwritten text appearing, a table of contents, and a progress bar.",
+  "skip": []
+ },
+ {
+  "pid": "N15",
+  "clip": "0169",
+  "s": 16.52,
+  "e": 19.36,
+  "zh": "一开始肯定是让它先写台本，台本写完了之后，",
+  "en": "First it writes the script, and once it's done,",
+  "skip": []
+ },
+ {
+  "pid": "N15",
+  "clip": "0169",
+  "s": 19.84,
+  "e": 21.4,
+  "zh": "我会去进行审核。",
+  "en": "I review it.",
+  "skip": []
+ },
+ {
+  "pid": "N15",
+  "clip": "0169",
+  "s": 21.52,
+  "e": 24.7,
+  "zh": "台本里面会包含什么时候转场，有什么内容，",
+  "en": "The script covers when scenes change, what's on screen,",
+  "skip": []
+ },
+ {
+  "pid": "N15",
+  "clip": "0169",
+  "s": 25.84,
+  "e": 29.98,
+  "zh": "字幕应该说什么，配音应该用什么样的语气。",
+  "en": "what the subtitles say, and what tone the voiceover takes.",
+  "skip": []
+ },
+ {
+  "pid": "N15",
+  "clip": "0169",
+  "s": 30.0,
+  "e": 31.56,
+  "zh": "这些东西我都会帮他设定好。",
+  "en": "I set all of that up for it.",
+  "skip": []
+ },
+ {
+  "pid": "N16",
+  "clip": "0169",
+  "s": 31.56,
+  "e": 37.02,
+  "zh": "然后我会把 AI 配音，或者我自己配音的音频发给他。",
+  "en": "Then I send it the audio, either AI voice or my own recording.",
+  "skip": [
+   [
+    35.16,
+    36.06
+   ]
+  ]
+ },
+ {
+  "pid": "N16",
+  "clip": "0169",
+  "s": 37.02,
+  "e": 43.62,
+  "zh": "发给他之后，他就会根据这个音频的强度去做这个视频，",
+  "en": "It then builds the video around the audio's intensity,",
+  "skip": [
+   [
+    39.92,
+    41.84
+   ]
+  ]
+ },
+ {
+  "pid": "N16",
+  "clip": "0169",
+  "s": 43.62,
+  "e": 46.82,
+  "zh": "把这个音频一帧一帧地，很好地拼接到视频里。",
+  "en": "matching the audio to the video frame by frame.",
+  "skip": []
+ },
+ {
+  "pid": "N17",
+  "clip": "0170",
+  "s": 0.62,
+  "e": 3.94,
+  "zh": "比如说左下角那个角色的动作，它就有很多种，",
+  "en": "Take the character in the bottom-left: it has lots of moves,",
+  "skip": []
+ },
+ {
+  "pid": "N17",
+  "clip": "0170",
+  "s": 4.08,
+  "e": 7.52,
+  "zh": "比如说有数一二三、叉腰、说好耶，",
+  "en": "like counting one-two-three, hands on hips, and cheering 'yay'.",
+  "skip": []
+ },
+ {
+  "pid": "N17",
+  "clip": "0170",
+  "s": 8.06,
+  "e": 9.64,
+  "zh": "一期我会放 30 个左右，",
+  "en": "I use about 30 of those per episode,",
+  "skip": []
+ },
+ {
+  "pid": "N17",
+  "clip": "0170",
+  "s": 9.82,
+  "e": 14.82,
+  "zh": "然后还有一些小手势、句末点头、看向内容，程序都会自动加。",
+  "en": "plus small gestures, nods at sentence ends and glances at the content, added automatically.",
+  "skip": []
+ },
+ {
+  "pid": "N18",
+  "clip": "0170",
+  "s": 18.14,
+  "e": 20.78,
+  "zh": "这些东西全都是 AI 自己做出来的。",
+  "en": "All of this is made by the AI itself.",
+  "skip": []
+ },
+ {
+  "pid": "N18",
+  "clip": "0170",
+  "s": 21.5,
+  "e": 24.76,
+  "zh": "然后 BGM 和音效，都是 Claude 用 Python 代码合成的，",
+  "en": "The BGM and sound effects are synthesized by Claude in Python,",
+  "skip": []
+ },
+ {
+  "pid": "N18",
+  "clip": "0170",
+  "s": 26.4,
+  "e": 28.68,
+  "zh": "就很方便。",
+  "en": "which is really convenient.",
+  "skip": []
+ },
+ {
+  "pid": "N18",
+  "clip": "0170",
+  "s": 28.68,
+  "e": 30.74,
+  "zh": "但是这只是一个最基本的要求，",
+  "en": "But that's just the baseline.",
+  "skip": []
+ },
+ {
+  "pid": "N18",
+  "clip": "0170",
+  "s": 30.74,
+  "e": 35.5,
+  "zh": "如果说各位朋友想去做一些更高质量的，",
+  "en": "If you want higher quality,",
+  "skip": []
+ },
+ {
+  "pid": "N18",
+  "clip": "0170",
+  "s": 35.5,
+  "e": 37.34,
+  "zh": "其实这些配音、音乐都是可以继续找的。",
+  "en": "you can keep looking for better voices and music.",
+  "skip": []
+ },
+ {
+  "pid": "N19",
+  "clip": "0170",
+  "s": 39.04,
+  "e": 41.48,
+  "zh": "所以我做完了之后，Claude 也会去抽帧去看，",
+  "en": "So after I'm done, Claude also samples frames to look,",
+  "skip": []
+ },
+ {
+  "pid": "N19",
+  "clip": "0170",
+  "s": 41.48,
+  "e": 42.34,
+  "zh": "然后去听。",
+  "en": "and listens.",
+  "skip": []
+ },
+ {
+  "pid": "N20",
+  "clip": "0171",
+  "s": 0.0,
+  "e": 2.88,
+  "zh": "然后我们再来看一下，用视频模型去做视频，",
+  "en": "Now let's compare the cost of making videos with a video model",
+  "skip": []
+ },
+ {
+  "pid": "N20",
+  "clip": "0171",
+  "s": 2.88,
+  "e": 6.26,
+  "zh": "和用 LLM 去做视频，它的价格。",
+  "en": "versus with an LLM.",
+  "skip": []
+ },
+ {
+  "pid": "N20",
+  "clip": "0171",
+  "s": 7.86,
+  "e": 10.98,
+  "zh": "现在不用说，肯定是国内的 Seedance 2.5 最好，",
+  "en": "Right now the best is clearly Seedance 2.5 from China,",
+  "skip": []
+ },
+ {
+  "pid": "N20",
+  "clip": "0171",
+  "s": 12.06,
+  "e": 12.92,
+  "zh": "当然它也不便宜。",
+  "en": "but it isn't cheap.",
+  "skip": []
+ },
+ {
+  "pid": "N20",
+  "clip": "0171",
+  "s": 13.38,
+  "e": 16.56,
+  "zh": "Google 的 Veo 3.1，能力没有那么强，",
+  "en": "Google's Veo 3.1 isn't as capable,",
+  "skip": []
+ },
+ {
+  "pid": "N20",
+  "clip": "0171",
+  "s": 16.74,
+  "e": 17.7,
+  "zh": "它依然很贵。",
+  "en": "and it's still expensive.",
+  "skip": []
+ },
+ {
+  "pid": "N20",
+  "clip": "0171",
+  "s": 17.9,
+  "e": 19.7,
+  "zh": "如果同样要做 6 分钟视频的话，",
+  "en": "For the same 6-minute video,",
+  "skip": []
+ },
+ {
+  "pid": "N20",
+  "clip": "0171",
+  "s": 22.82,
+  "e": 25.18,
+  "zh": "文本语言模型毕竟还有编程套餐来写，",
+  "en": "a language model comes with coding plans,",
+  "skip": []
+ },
+ {
+  "pid": "N20",
+  "clip": "0171",
+  "s": 26.0,
+  "e": 28.76,
+  "zh": "那价格真的是会实惠很多。",
+  "en": "so it's far cheaper.",
+  "skip": []
+ },
+ {
+  "pid": "N21",
+  "clip": "0171",
+  "s": 28.76,
+  "e": 30.92,
+  "zh": "一般一个六分钟视频，大概会消耗",
+  "en": "A six-minute video usually uses",
+  "skip": []
+ },
+ {
+  "pid": "N21",
+  "clip": "0171",
+  "s": 31.34,
+  "e": 35.88,
+  "zh": "我一周 20x 额度的 5% 到 10% 左右。",
+  "en": "about 5–10% of my weekly 20x plan quota.",
+  "skip": []
+ },
+ {
+  "pid": "N22",
+  "clip": "0171",
+  "s": 37.6,
+  "e": 39.5,
+  "zh": "而且这些素材都是可以复用的，",
+  "en": "And these assets are reusable:",
+  "skip": []
+ },
+ {
+  "pid": "N22",
+  "clip": "0171",
+  "s": 39.5,
+  "e": 41.28,
+  "zh": "角色的素材生成好了之后，",
+  "en": "once the character assets are made,",
+  "skip": []
+ },
+ {
+  "pid": "N22",
+  "clip": "0171",
+  "s": 41.72,
+  "e": 43.44,
+  "zh": "下一次的视频就不用再生成，",
+  "en": "the next video doesn't need to make them again.",
+  "skip": []
+ },
+ {
+  "pid": "N22",
+  "clip": "0171",
+  "s": 43.9,
+  "e": 46.22,
+  "zh": "所有的内容都可以沉淀下来，变成 skill，",
+  "en": "Everything can be distilled into a skill,",
+  "skip": []
+ },
+ {
+  "pid": "N22",
+  "clip": "0171",
+  "s": 47.4,
+  "e": 49.6,
+  "zh": "就会批量地去出一些视频，",
+  "en": "so you can churn them out in batches.",
+  "skip": []
+ },
+ {
+  "pid": "N22",
+  "clip": "0171",
+  "s": 50.0,
+  "e": 55.48,
+  "zh": "比如说我个人想做的信息聚合：",
+  "en": "For example, the news digest I wanted to make:",
+  "skip": [
+   [
+    50.72,
+    52.06
+   ],
+   [
+    53.2,
+    54.16
+   ]
+  ]
+ },
+ {
+  "pid": "N22",
+  "clip": "0171",
+  "s": 55.48,
+  "e": 58.56,
+  "zh": "每日科技新闻的聚合视频，",
+  "en": "a daily tech-news roundup video",
+  "skip": []
+ },
+ {
+  "pid": "N22",
+  "clip": "0171",
+  "s": 58.56,
+  "e": 60.78,
+  "zh": "他就可以每天自动化地去运行。",
+  "en": "that runs automatically every day.",
+  "skip": []
+ },
+ {
+  "pid": "N23",
+  "clip": "0172",
+  "s": 0.82,
+  "e": 3.02,
+  "zh": "然后还说到了角色素材复用的问题，",
+  "en": "About reusing character assets:",
+  "skip": []
+ },
+ {
+  "pid": "N23",
+  "clip": "0172",
+  "s": 3.22,
+  "e": 6.48,
+  "zh": "如果他的模型能力再提升，",
+  "en": "if the models keep improving,",
+  "skip": []
+ },
+ {
+  "pid": "N23",
+  "clip": "0172",
+  "s": 6.66,
+  "e": 14.98,
+  "zh": "能够更精准地画出线条连续的动漫形式，",
+  "en": "drawing anime with smooth, continuous lines more precisely,",
+  "skip": []
+ },
+ {
+  "pid": "N23",
+  "clip": "0172",
+  "s": 15.08,
+  "e": 18.02,
+  "zh": "或者真的能画出真人的风格的话，",
+  "en": "or even realistic human styles,",
+  "skip": []
+ },
+ {
+  "pid": "N23",
+  "clip": "0172",
+  "s": 18.38,
+  "e": 19.68,
+  "zh": "那这些素材都是可以复用的，",
+  "en": "then all these assets are reusable,",
+  "skip": []
+ },
+ {
+  "pid": "N23",
+  "clip": "0172",
+  "s": 20.16,
+  "e": 22.66,
+  "zh": "能复用的素材，它就是有价值的，",
+  "en": "and reusable assets have real value.",
+  "skip": []
+ },
+ {
+  "pid": "N23",
+  "clip": "0172",
+  "s": 22.72,
+  "e": 23.42,
+  "zh": "它就不是抽卡。",
+  "en": "It's not a gacha pull.",
+  "skip": []
+ },
+ {
+  "pid": "N24",
+  "clip": "0172",
+  "s": 27.08,
+  "e": 30.9,
+  "zh": "如果各位又是程序员，又想去尝试做视频的话，",
+  "en": "If you're a programmer who wants to try making videos,",
+  "skip": []
+ },
+ {
+  "pid": "N24",
+  "clip": "0172",
+  "s": 30.9,
+  "e": 32.66,
+  "zh": "我觉得真的是几乎零成本的一个事情。",
+  "en": "I think it costs almost nothing.",
+  "skip": []
+ },
+ {
+  "pid": "N24",
+  "clip": "0172",
+  "s": 33.02,
+  "e": 35.68,
+  "zh": "只要用 Codex 或者 Claude Code 里面的模型，",
+  "en": "The models in Codex or Claude Code",
+  "skip": []
+ },
+ {
+  "pid": "N24",
+  "clip": "0172",
+  "s": 35.68,
+  "e": 36.72,
+  "zh": "我觉得能力都是够的。",
+  "en": "are capable enough, I think.",
+  "skip": []
+ },
+ {
+  "pid": "N24",
+  "clip": "0172",
+  "s": 36.72,
+  "e": 40.34,
+  "zh": "其实现在国内的一些模型，也能去生成视频，",
+  "en": "Some Chinese models can do this too,",
+  "skip": []
+ },
+ {
+  "pid": "N24",
+  "clip": "0172",
+  "s": 40.34,
+  "e": 41.8,
+  "zh": "但是效果并不太好。",
+  "en": "but the results aren't great.",
+  "skip": []
+ },
+ {
+  "pid": "N24",
+  "clip": "0172",
+  "s": 42.86,
+  "e": 45.84,
+  "zh": "渲染视频的话，本地用 CPU 渲染就可以。",
+  "en": "Rendering just runs locally on the CPU.",
+  "skip": []
+ },
+ {
+  "pid": "N25",
+  "clip": "0172",
+  "s": 46.76,
+  "e": 48.12,
+  "zh": "OK，然后我们收个尾。",
+  "en": "OK, let's wrap up.",
+  "skip": []
+ },
+ {
+  "pid": "N25",
+  "clip": "0172",
+  "s": 49.8,
+  "e": 51.08,
+  "zh": "感谢大家这次的收看。",
+  "en": "Thanks for watching.",
+  "skip": []
+ },
+ {
+  "pid": "N25",
+  "clip": "0172",
+  "s": 52.08,
+  "e": 53.96,
+  "zh": "我觉得感兴趣的朋友，都可以去试一试。",
+  "en": "If you're interested, give it a try.",
+  "skip": []
+ },
+ {
+  "pid": "N25",
+  "clip": "0172",
+  "s": 54.3,
+  "e": 56.68,
+  "zh": "然后开头的那两段提示词，我会放在评论区，",
+  "en": "I'll put the two prompts from the beginning in the comments,",
+  "skip": []
+ },
+ {
+  "pid": "N25",
+  "clip": "0172",
+  "s": 56.68,
+  "e": 58.06,
+  "zh": "大家可以去评论区看一下。",
+  "en": "so check them out there.",
+  "skip": []
+ },
+ {
+  "pid": "N25",
+  "clip": "0172",
+  "s": 58.86,
+  "e": 59.1,
+  "zh": "拜拜。",
+  "en": "Bye!",
+  "skip": [],
+  "hold": [
+   0.55,
+   "0172",
+   59.2
+  ]
+ }
+]

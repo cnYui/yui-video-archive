@@ -1,0 +1,14 @@
+{
+  "t1": "Jev",
+  "t2": "是什么？",
+  "subHTML": "和 LLM <span class=\"hl\">有什么区别</span><span class=\"o\">？</span>",
+  "bg_file": "04_桌游_室内.webp",
+  "sprite": "reach_m2/00.png",
+  "bg": {
+    "scale": 1.0,
+    "fx": 0.5,
+    "fy": 0.5,
+    "opacity": 0.36,
+    "blur": 8
+  }
+}

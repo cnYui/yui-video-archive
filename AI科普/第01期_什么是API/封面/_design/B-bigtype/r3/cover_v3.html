@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>Cover B Bigtype</title>
+<link rel="stylesheet" href="../../../制作/fonts/fonts.css">
+<style>
+  :root {
+    --paper: #EDEAE3; --ink: #141414; --orange: #FF4F1A; --grey: #6E6A63;
+    --pink: #F2A0BD; --yellow: #F6C945; --blue: #4A6FD0; --red: #E2463F;
+    --S: 15px; /* sprite pixel scale */
+  }
+  html, body { margin: 0; padding: 0; }
+  body { width: 1920px; height: 1080px; overflow: hidden; background: var(--ink); position: relative;
+         font-family: 'Noto Sans SC', sans-serif; color: var(--paper); }
+  .panel { position: absolute; left: 1120px; top: 0; width: 800px; height: 1080px; background: var(--orange); }
+
+  .tag { position: absolute; left: 300px; top: 118px; display: flex; align-items: center; gap: 22px;
+         font-weight: 800; font-size: 46px; letter-spacing: 0.02em; line-height: 1; }
+  .tag .lai { color: var(--orange); }
+  .tag .no { font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 40px; color: var(--paper); opacity: .9; }
+  .bars { display: flex; gap: 6px; }
+  .bars i { display: block; width: 34px; height: 12px; }
+
+  .h1 { position: absolute; left: 288px; top: 190px; font-weight: 900; line-height: .9; letter-spacing: -0.02em; }
+  .h1 .api { display: block; font-size: 450px; color: var(--paper); }
+  .h1 .q { display: block; font-size: 200px; color: var(--orange); margin-top: 10px; letter-spacing: 0; }
+
+  .sub { position: absolute; left: 300px; top: 858px; font-size: 40px; font-weight: 700; line-height: 1;
+         color: var(--ink); background: var(--paper); padding: 13px 22px 15px 10px;
+         border-top: 6px solid var(--orange); }
+  .sub b { color: var(--orange); font-weight: 900; }
+  .sub .cq { margin-right: -0.42em; }
+
+  .ryo { position: absolute; image-rendering: pixelated;
+         width: calc(64 * var(--S)); height: calc(64 * var(--S));
+         filter: drop-shadow(var(--S) 0 0 var(--paper)) drop-shadow(calc(-1 * var(--S)) 0 0 var(--paper))
+                 drop-shadow(0 var(--S) 0 var(--paper)) drop-shadow(0 calc(-1 * var(--S)) 0 var(--paper)); }
+  canvas.px { position: absolute; image-rendering: pixelated; }
+</style>
+</head>
+<body>
+  <div class="panel"></div>
+
+  <div class="tag"><span>原<span class="lai">LAI</span>如此</span><span class="no">#01</span>
+    <span class="bars"><i style="background:var(--pink)"></i><i style="background:var(--yellow)"></i><i style="background:var(--blue)"></i><i style="background:var(--red)"></i></span></div>
+
+  <div class="h1"><span class="api">API</span><span class="q">是什么？</span></div>
+
+  <div class="sub"><b>“</b>已接入 DeepSeek<b class="cq">”</b>接的是什么？</div>
+
+  <img class="ryo" id="ryo" src="assets/pose_07_huh.png" style="left:820px; top:380px">
+
+  <canvas class="px" id="q1"></canvas>
+  <canvas class="px" id="q2"></canvas>
+  <canvas class="px" id="q3"></canvas>
+
+<script>
+  window.DURATION = 1;
+  // pixel "?" glyph (1 = fill); drawn at 1x with a 1px outline, then scaled by integer factor
+  const QB = [
+    ".#####.",
+    "##...##",
+    "##...##",
+    ".....##",
+    "....##.",
+    "...##..",
+    "..##...",
+    "..##...",
+    ".......",
+    "..##...",
+    "..##...",
+  ];
+  const QS = [
+    ".###.",
+    "##.##",
+    "...##",
+    "..##.",
+    "..#..",
+    ".....",
+    "..#..",
+  ];
+  function pixelQ(id, Q, fill, outline, scale, x, y) {
+    const h = Q.length, w = Q[0].length;
+    const c = document.getElementById(id);
+    c.width = w + 2; c.height = h + 2;
+    const g = c.getContext('2d');
+    const on = (r, k) => r >= 0 && r < h && k >= 0 && k < w && Q[r][k] === '#';
+    g.fillStyle = outline;
+    for (let r = -1; r <= h; r++) for (let k = -1; k <= w; k++) {
+      if (on(r, k)) continue;
+      let n = false;
+      for (let dr = -1; dr <= 1; dr++) for (let dk = -1; dk <= 1; dk++) if (on(r + dr, k + dk)) n = true;
+      if (n) g.fillRect(k + 1, r + 1, 1, 1);
+    }
+    g.fillStyle = fill;
+    for (let r = 0; r < h; r++) for (let k = 0; k < w; k++) if (on(r, k)) g.fillRect(k + 1, r + 1, 1, 1);
+    c.style.width = (c.width * scale) + 'px'; c.style.height = (c.height * scale) + 'px';
+    c.style.left = x + 'px'; c.style.top = y + 'px';
+  }
+  // all pixel art shares the sprite's 15px grid
+  pixelQ('q1', QB, '#EDEAE3', '#141414', 15, 1185, 165);
+  pixelQ('q2', QS, '#F6C945', '#141414', 15, 1440, 110);
+  pixelQ('q3', QS, '#4A6FD0', '#141414', 15, 1535, 290);
+</script>
+</body>
+</html>

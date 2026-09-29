@@ -1,0 +1,435 @@
+{
+  "number": 928,
+  "title": "9月28日，鲸鱼娘带你看看AI圈发生了什么？",
+  "dir_name": "AI每日日报_0928",
+  "date": "2026-09-28",
+  "date_label": "9月28日",
+  "weekday": "周一",
+  "subtitle": "鲸鱼娘带你看看 AI 圈发生了什么",
+  "target_minutes": [
+    5,
+    6
+  ],
+  "question_scene": "S01",
+  "questions": [
+    {
+      "text": "Anthropic 三类拒答恢复收费",
+      "scenes": [
+        "S02"
+      ]
+    },
+    {
+      "text": "MiniMax 编程新模型上线",
+      "scenes": [
+        "S03"
+      ]
+    },
+    {
+      "text": "Claude Code 撞上限先收尾",
+      "scenes": [
+        "S04"
+      ]
+    },
+    {
+      "text": "Codex 宕机后重置额度",
+      "scenes": [
+        "S05"
+      ]
+    },
+    {
+      "text": "阿里语音模型降价最高 95%",
+      "scenes": [
+        "S06"
+      ]
+    },
+    {
+      "text": "牛津馆藏进 OpenAI 训练集",
+      "scenes": [
+        "S07"
+      ]
+    },
+    {
+      "text": "AI 查宜家装错准确率 80%",
+      "scenes": [
+        "S08"
+      ]
+    },
+    {
+      "text": "笔记本硬跑 744B 大模型",
+      "scenes": [
+        "S09"
+      ]
+    }
+  ],
+  "chapters": {
+    "S01": "开场",
+    "S02": "Anthropic 三类拒答恢复收费",
+    "S03": "MiniMax 编程新模型上线",
+    "S04": "Claude Code 撞上限先收尾",
+    "S05": "Codex 宕机后重置额度",
+    "S06": "阿里语音模型降价最高 95%",
+    "S07": "牛津馆藏进 OpenAI 训练集",
+    "S08": "AI 查宜家装错准确率 80%",
+    "S09": "笔记本硬跑 744B 大模型",
+    "S10": "回顾"
+  },
+  "bar_labels": {
+    "S01": "开场",
+    "S02": "拒答收费",
+    "S03": "MiniMax 新模型",
+    "S04": "Claude 收尾",
+    "S05": "Codex 宕机",
+    "S06": "阿里语音降价",
+    "S07": "牛津馆藏",
+    "S08": "宜家找错",
+    "S09": "SSD 跑大模型",
+    "S10": "回顾"
+  },
+  "backgrounds": {
+    "S01": "01_深海气泡.png",
+    "S02": "02_星点.png",
+    "S03": "03_波纹.png",
+    "S04": "01_深海气泡.png",
+    "S05": "02_星点.png",
+    "S06": "03_波纹.png",
+    "S07": "01_深海气泡.png",
+    "S08": "02_星点.png",
+    "S09": "03_波纹.png",
+    "S10": "01_深海气泡.png"
+  },
+  "bg_alpha": 0.9,
+  "bg_blur": 0,
+  "intro_tagline": "",
+  "outro_items": [
+    {
+      "label": "新闻来源",
+      "value": "Anthropic 更新日志 · Anthropic 拒答计费说明 · MIXED"
+    },
+    {
+      "label": "来源（续）",
+      "value": "IT之家 · MiniMax 官方 · Claude 开发者"
+    },
+    {
+      "label": "形象",
+      "value": "大肥鱼同人 · 上善无形 / ZipZipPipe"
+    },
+    {
+      "label": "视频制作模型",
+      "value": "Opus 5.5"
+    }
+  ],
+  "outro_closing": "感谢大家看到最后",
+  "auto_gestures": false,
+  "presenter": {
+    "id": "whale",
+    "frames": "角色/动作帧"
+  },
+  "badge_html": "AI每日日报<span class=\"n\">09.28</span>",
+  "toc_kicker_html": "<b>今日要闻</b>TODAY",
+  "bar_colors": [
+    "#97C3F0",
+    "#F3C98C",
+    "#4A88DA",
+    "#C6E6FB"
+  ],
+  "news": [
+    {
+      "headline": "Anthropic 三类拒答恢复收费",
+      "org": "Anthropic",
+      "source": "Anthropic 官方文档",
+      "source_short": "Anthropic",
+      "date": "9月24日",
+      "points": [
+        "三类拒答恢复收费",
+        "按正常价格计费",
+        "网安类拒答仍免费",
+        "拒答也占速率限制"
+      ],
+      "rundown_key": "拒答收费",
+      "line_points": [
+        null,
+        null,
+        0,
+        null,
+        null,
+        1,
+        null,
+        2,
+        null,
+        3,
+        null
+      ],
+      "refs": [
+        {
+          "name": "Anthropic 更新日志",
+          "url": "https://platform.claude.com/docs/en/release-notes/overview"
+        },
+        {
+          "name": "Anthropic 拒答计费说明",
+          "url": "https://platform.claude.com/docs/en/build-with-claude/refusals-and-fallback"
+        },
+        {
+          "name": "MIXED",
+          "url": "https://mixed-news.com/en/anthropic-bills-refused-claude-api-requests-three-categories/"
+        }
+      ],
+      "snap": "../assets/snaps/news_01.png",
+      "snap_src": "platform.claude.com"
+    },
+    {
+      "headline": "MiniMax 编程新模型上线",
+      "org": "MiniMax",
+      "source": "IT之家 · MiniMax 官方",
+      "source_short": "IT之家",
+      "date": "9月27日",
+      "points": [
+        "M3.1 Flash 预览版",
+        "主打日常开发",
+        "全员额度重置一次",
+        "另有签到活动"
+      ],
+      "rundown_key": "MiniMax",
+      "line_points": [
+        0,
+        1,
+        null,
+        2,
+        3,
+        null
+      ],
+      "refs": [
+        {
+          "name": "IT之家",
+          "url": "https://www.ithome.com/1/007/530.htm"
+        },
+        {
+          "name": "MiniMax 官方",
+          "url": "https://x.com/MiniMaxAgent/status/2104079819881517400"
+        }
+      ],
+      "snap": "../assets/snaps/news_02.png",
+      "snap_src": "ithome.com"
+    },
+    {
+      "headline": "Claude Code 撞上限先收尾",
+      "org": "Anthropic",
+      "source": "IT之家 · Claude 开发者账号",
+      "source_short": "IT之家",
+      "date": "9月26日",
+      "points": [
+        "撞 5 小时上限不硬断",
+        "从周额度划一小笔",
+        "Pro 每周一次",
+        "Max 每次都能用"
+      ],
+      "rundown_key": "Claude Code",
+      "line_points": [
+        null,
+        0,
+        1,
+        null,
+        2,
+        3,
+        null,
+        null
+      ],
+      "refs": [
+        {
+          "name": "IT之家",
+          "url": "https://www.ithome.com/1/007/369.htm"
+        },
+        {
+          "name": "Claude 开发者账号",
+          "url": "https://x.com/ClaudeDevs/status/2103561342057943314"
+        }
+      ],
+      "snap": "../assets/snaps/news_03.png",
+      "snap_src": "ithome.com"
+    },
+    {
+      "headline": "Codex 宕机后重置额度",
+      "org": "OpenAI",
+      "source": "OpenAI 状态页 · 新智元",
+      "source_short": "OpenAI",
+      "date": "9月26日",
+      "points": [
+        "全面宕机近一小时",
+        "网页 CLI 插件都挂",
+        "付费用户额度重置",
+        "API key 登录可绕开"
+      ],
+      "rundown_key": "Codex",
+      "line_points": [
+        null,
+        0,
+        null,
+        1,
+        3,
+        2,
+        null
+      ],
+      "refs": [
+        {
+          "name": "OpenAI 状态页",
+          "url": "https://status.openai.com/incidents/01M3DCNWMW57HYK8FJ5FBFPA39"
+        },
+        {
+          "name": "新智元（新浪转载）",
+          "url": "https://finance.sina.com.cn/wm/2026-09-26/doc-initcusx7101541.shtml"
+        },
+        {
+          "name": "Codex 负责人",
+          "url": "https://x.com/thsottiaux/status/2103637477760311522"
+        }
+      ]
+    },
+    {
+      "headline": "阿里语音模型降价最高 95%",
+      "org": "阿里",
+      "source": "IT之家 · 千问",
+      "source_short": "IT之家",
+      "date": "9月23日",
+      "points": [
+        "五款语音模型齐发",
+        "识别最高降 95%",
+        "合成和实时也降价",
+        "30 种语言 16 种方言"
+      ],
+      "rundown_key": "阿里语音",
+      "line_points": [
+        null,
+        0,
+        null,
+        1,
+        2,
+        3,
+        null,
+        null
+      ],
+      "refs": [
+        {
+          "name": "IT之家",
+          "url": "https://www.ithome.com/1/006/280.htm"
+        },
+        {
+          "name": "The Decoder",
+          "url": "https://the-decoder.com/alibaba-launches-qwen-audio-3-1-with-five-new-models-and-slashes-ai-audio-prices-by-up-to-95-percent/"
+        }
+      ],
+      "snap": "../assets/snaps/news_05.png",
+      "snap_src": "ithome.com"
+    },
+    {
+      "headline": "牛津馆藏进 OpenAI 训练集",
+      "org": "OpenAI",
+      "source": "The Next Web · 《卫报》",
+      "source_short": "The Next Web",
+      "date": "9月26日",
+      "points": [
+        "12.5 万张论文扫描件",
+        "进了 OpenAI 训练集",
+        "牛津：无版权非独家",
+        "扫描件将公开上网"
+      ],
+      "rundown_key": "牛津",
+      "line_points": [
+        null,
+        null,
+        0,
+        null,
+        1,
+        2,
+        3
+      ],
+      "refs": [
+        {
+          "name": "The Next Web",
+          "url": "https://thenextweb.com/news/oxford-bodleian-openai-training-data"
+        },
+        {
+          "name": "Cherwell",
+          "url": "https://cherwell.org/2026/09/27/oxford-ai-partnership-uses-bodleian-texts-for-chatgpt/"
+        },
+        {
+          "name": "Bodleian 图书馆",
+          "url": "https://www.bodleian.ox.ac.uk/services/research-partnerships/digitisation-project"
+        }
+      ],
+      "snap": "../assets/snaps/news_06.png",
+      "snap_src": "thenextweb.com"
+    },
+    {
+      "headline": "AI 查宜家装错准确率 80%",
+      "org": "Epoch AI",
+      "source": "Epoch AI · The Decoder",
+      "source_short": "Epoch AI",
+      "date": "9月23日",
+      "points": [
+        "三款家具 60 张照片",
+        "GPT-6 Astra 找对 80%",
+        "十个月前最佳仅 28%",
+        "每张图约 3 分钟"
+      ],
+      "rundown_key": "宜家",
+      "line_points": [
+        null,
+        0,
+        null,
+        1,
+        2,
+        null,
+        3
+      ],
+      "refs": [
+        {
+          "name": "Epoch AI",
+          "url": "https://epoch.ai/publications/furniture-assembly"
+        },
+        {
+          "name": "The Decoder",
+          "url": "https://the-decoder.com/openais-gpt-6-astra-can-now-tell-you-exactly-where-you-screwed-up-your-ikea-shelf/"
+        }
+      ],
+      "snap": "../assets/snaps/news_07.png",
+      "snap_src": "the-decoder.com"
+    },
+    {
+      "headline": "笔记本硬跑 744B 大模型",
+      "org": "开源社区",
+      "source": "量子位 · GitHub",
+      "source_short": "量子位",
+      "date": "9月26日",
+      "points": [
+        "744B GLM 塞进笔记本",
+        "专家权重放 SSD",
+        "最低 16GB 内存",
+        "笔记本每秒≤0.1 token"
+      ],
+      "rundown_key": "笔记本",
+      "line_points": [
+        null,
+        null,
+        null,
+        1,
+        0,
+        2,
+        null,
+        3,
+        null,
+        null
+      ],
+      "refs": [
+        {
+          "name": "量子位",
+          "url": "https://www.qbitai.com/2026/09/497624.html"
+        },
+        {
+          "name": "GitHub",
+          "url": "https://github.com/JustVugg/colibri"
+        }
+      ],
+      "snap": "../assets/snaps/news_08.png",
+      "snap_src": "qbitai.com"
+    }
+  ]
+}

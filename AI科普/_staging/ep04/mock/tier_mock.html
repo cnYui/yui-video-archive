@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>第03期 画面样张</title>
+<link rel="stylesheet" href="../../../素材/字体/fonts.css">
+<style>
+:root {
+  --paper: #EDEAE3; --paper2: #E2DED5; --ink: #141414; --orange: #FF4F1A; --red: #D8342A; --grey: #6E6A63; --grey2: #9A958C;
+  --rule: #B9B3A8; --navy: #1B2340; --green: #A7D38E; --pink: #F2A0BD; --yellow: #F6C945; --blue: #4A6FD0; --kred: #E2463F;
+  --cjk: 'Noto Sans SC', sans-serif; --mono: 'JetBrains Mono', 'Noto Sans SC', monospace; --fun: 'KuaiLe Han', 'ZCOOL KuaiLe', 'Noto Sans SC', sans-serif;
+  --t1: #E2463F; --t2: #FF7A2F; --t3: #F6C945; --t4: #8FB3E8; --t5: #8A857C;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 2340px; height: 1080px; overflow: hidden; background: var(--navy); font-family: var(--cjk); color: var(--paper); }
+.abs { position: absolute; }
+#bg { position: absolute; inset: -30px; background: url('../../../素材/背景图库/04_桌游_室内.webp') center/cover; opacity: .22; filter: blur(10px); }
+#vig { position: absolute; inset: 0; background: radial-gradient(ellipse at center, rgba(0,0,0,0) 55%, rgba(0,0,0,.15)); }
+#stage { position: absolute; left: 210px; top: 0; width: 1920px; height: 1080px; }
+/* global layer mock */
+#badge { position: absolute; left: 40px; top: 30px; font: 700 24px var(--cjk); color: rgba(237,234,227,.8); }
+#badge .n { font-family: var(--mono); color: var(--orange); margin-left: 6px; }
+#toc { position: absolute; left: 1960px; top: 20px; width: 340px; height: 142px; background: rgba(20,20,20,.74); border-top: 2px solid var(--orange); }
+#toc .kick { position: absolute; left: 16px; top: 10px; font: 500 14px var(--mono); letter-spacing: .24em; color: var(--grey2); }
+#toc .kick b { font: 500 15px var(--cjk); letter-spacing: .12em; color: rgba(237,234,227,.72); margin-right: 10px; }
+.tocRow { position: absolute; left: 10px; width: 320px; height: 32px; padding-left: 44px; font: 500 19px var(--cjk); line-height: 32px; color: rgba(237,234,227,.5); white-space: nowrap; }
+.tocRow .num { position: absolute; left: 12px; top: 5px; width: 22px; height: 22px; border-radius: 50%; text-align: center; font: 700 14px var(--mono); line-height: 22px; color: var(--ink); background: rgba(237,234,227,.5); }
+.tocRow.cur { color: var(--paper); transform: scale(1.04); transform-origin: 0 50%; }
+.tocRow.cur .num { background: var(--orange); color: var(--paper); }
+.tocRow.cur::before { content: ''; position: absolute; left: 0; top: 3px; width: 4px; height: 26px; background: var(--orange); }
+#char { position: absolute; left: 50px; top: 685px; width: 320px; height: 320px; image-rendering: pixelated; }
+#subs { position: absolute; left: 0; top: 934px; width: 2340px; text-align: center; font: 700 46px var(--cjk); line-height: 1; }
+#subs .st { position: absolute; left: 0; width: 2340px; color: var(--ink); -webkit-text-stroke: 10px var(--ink); }
+#subs .fi { position: absolute; left: 0; width: 2340px; color: var(--paper); }
+#subs .t { color: var(--orange); }
+#barShade { position: absolute; left: 0; top: 1000px; width: 2340px; height: 80px; background: linear-gradient(to bottom, rgba(10,12,22,0), rgba(10,12,22,.62) 55%, rgba(10,12,22,.78)); }
+.bBlk { position: absolute; top: 1055px; height: 18px; border: 2px solid var(--ink); border-radius: 9px; }
+.bLab { position: absolute; top: 1026px; height: 20px; font: 16px var(--fun); color: rgba(237,234,227,.72); text-align: center; white-space: nowrap; }
+
+/* ---- tier board (stage coords) ---- */
+#board { position: absolute; left: 440px; top: 150px; width: 760px; }
+#board .bk { position: absolute; left: 0; top: -44px; font: 600 18px var(--mono); letter-spacing: .26em; color: var(--orange); white-space: nowrap; }
+#board .bk b { font: 700 20px var(--cjk); letter-spacing: .08em; color: var(--paper); margin-left: 12px; }
+.row { position: absolute; left: 0; width: 760px; height: 128px; }
+.row .lab { position: absolute; left: 0; top: 0; width: 132px; height: 128px; display: flex; align-items: center; justify-content: center;
+  font: 400 40px var(--fun); color: var(--ink); border-radius: 6px 0 0 6px; letter-spacing: .02em; }
+.row .lab.sm { font-size: 34px; }
+.row .body { position: absolute; left: 136px; top: 0; right: 0; height: 128px; background: rgba(20,20,20,.62); border-radius: 0 6px 6px 0;
+  border: 1.5px solid rgba(237,234,227,.14); }
+.chip2 { position: absolute; height: 50px; padding: 0 12px 0 19px; border-radius: 6px; background: var(--paper); color: var(--ink); white-space: nowrap;
+  font: 700 20px var(--cjk); line-height: 50px; box-shadow: 0 5px 12px rgba(0,0,0,.3); }
+.chip2::before { content: ''; position: absolute; left: 7px; top: 12px; width: 5px; height: 26px; border-radius: 3px; background: var(--c); }
+.chip2.ghost { background: transparent; color: rgba(237,234,227,.35); border: 2px dashed rgba(237,234,227,.3); box-shadow: none; }
+.legend { position: absolute; left: 136px; top: 668px; font: 500 18px var(--cjk); color: rgba(237,234,227,.72); white-space: nowrap; }
+.legend i { display: inline-block; width: 5px; height: 20px; border-radius: 3px; vertical-align: -3px; margin: 0 8px 0 18px; }
+
+/* ---- model card (stage coords) ---- */
+.mcard { position: absolute; left: 1250px; top: 200px; width: 610px; height: 660px; background: var(--paper); color: var(--ink);
+  border-top: 2px solid var(--orange); border-radius: 3px; box-shadow: 0 12px 30px rgba(0,0,0,.34), 0 2px 6px rgba(0,0,0,.2); }
+.mcard .kick { position: absolute; left: 36px; top: 26px; font: 500 16px var(--mono); letter-spacing: .22em; color: var(--grey); white-space: nowrap; }
+.mcard .kick b { font: 700 17px var(--cjk); letter-spacing: .06em; color: var(--ink); }
+.mcard .nm { position: absolute; left: 34px; top: 58px; font: 900 56px var(--cjk); line-height: 1.1; white-space: nowrap; letter-spacing: .01em; }
+.mcard .sub { position: absolute; left: 36px; top: 132px; font: 500 21px var(--cjk); color: var(--grey); white-space: nowrap; }
+.mcard .dash { position: absolute; left: 36px; right: 36px; height: 2px; background-image: repeating-linear-gradient(90deg, var(--rule) 0 9px, transparent 9px 16px); }
+.mcard .fl { position: absolute; left: 36px; font: 700 20px var(--cjk); color: var(--grey); letter-spacing: .06em; white-space: nowrap; }
+.mcard .fl small { font: 500 15px var(--mono); letter-spacing: .08em; margin-left: 10px; color: var(--grey2); }
+.mcard .big { position: absolute; left: 36px; font: 800 64px var(--mono); line-height: 1; color: var(--ink); white-space: nowrap; }
+.mcard .big small { font: 600 26px var(--mono); color: var(--grey); margin-left: 6px; }
+.meter { position: absolute; left: 190px; width: 380px; height: 20px; border-radius: 10px; background: #D5D0C6; overflow: hidden; }
+.meter i { position: absolute; left: 0; top: 0; bottom: 0; background: var(--ink); border-radius: 10px; }
+.meter .rk { position: absolute; top: -1px; width: 2px; height: 22px; background: var(--orange); }
+.price { position: absolute; left: 36px; font: 700 34px var(--mono); white-space: nowrap; color: var(--ink); }
+.price span { font: 500 20px var(--cjk); color: var(--grey); margin: 0 8px 0 0; }
+.price em { font-style: normal; color: var(--grey2); margin: 0 18px; }
+.pc { position: absolute; left: 36px; font: 700 26px var(--cjk); white-space: nowrap; }
+.rkl { position: absolute; left: 200px; font: 600 18px var(--cjk); color: var(--grey); white-space: nowrap; }
+.stat { position: absolute; width: 260px; height: 50px; white-space: nowrap; }
+.stat span { font: 500 19px var(--cjk); color: var(--grey); margin-right: 12px; }
+.stat b { font: 800 32px var(--mono); color: var(--ink); }
+.stat.hot b { color: var(--orange); }
+.pc b { display: inline-block; width: 34px; height: 34px; border-radius: 50%; margin-right: 14px; text-align: center; font: 800 22px var(--mono); line-height: 34px; vertical-align: 2px; color: var(--paper); }
+.pc b.y { background: var(--ink); }
+.pc b.n { background: var(--red); }
+.stamp { position: absolute; right: 30px; top: 190px; width: 150px; height: 150px; border-radius: 50%; border: 6px solid var(--c); color: var(--c);
+  display: flex; align-items: center; justify-content: center; font: 400 52px var(--fun); transform: rotate(-12deg); background: rgba(237,234,227,.4); }
+.stamp::after { content: ''; position: absolute; inset: 6px; border-radius: 50%; border: 2px solid var(--c); }
+.shiyi { position: absolute; font: 500 15px var(--cjk); letter-spacing: .1em; color: var(--grey2); white-space: nowrap; }
+</style>
+</head>
+<body>
+<div id="bg"></div><div id="vig"></div>
+<div id="stage"></div>
+<div id="badge">原LAI如此<span class="n">#04</span></div>
+<div id="toc"><div class="kick"><b>本期目录</b>CONTENTS</div></div>
+<img id="char" src="../../../素材/角色/大肥鱼像素素材包/素材/动作帧/reach_m1/00.png">
+<div id="subs"></div>
+<div id="barShade"></div>
+<script>
+const MOCK = window.MOCK || {};
+const $ = (tag, cls, parent, html) => { const e = document.createElement(tag); if (cls) e.className = cls; if (html != null) e.innerHTML = html; (parent || document.body).appendChild(e); return e; };
+const stage = document.getElementById('stage');
+// TOC
+const toc = document.getElementById('toc');
+(MOCK.toc || ['国外几家谁最强', '国产模型追到哪了', '九月新面孔排第几']).forEach((q, i) => {
+  const r = $('div', 'tocRow' + (i === (MOCK.tocCur ?? 0) ? ' cur' : ''), toc, `<span class="num">${i + 1}</span><span class="txt">${q}</span>`);
+  r.style.top = (38 + i * 33) + 'px';
+});
+// tier board
+const TIERS = [['夯', '--t1'], ['顶级', '--t2'], ['人上人', '--t3'], ['NPC', '--t4'], ['拉完了', '--t5']];
+const board = $('div', '', stage); board.id = 'board';
+$('div', 'bk', board, 'TIER LIST<b>2026 下半年 · 大模型从夯到拉</b>');
+const rows = TIERS.map(([n, c], i) => {
+  const r = $('div', 'row', board); r.style.top = (i * 134) + 'px';
+  const lab = $('div', 'lab' + (n.length > 2 ? ' sm' : ''), r, n); lab.style.background = `var(${c})`;
+  if (i === 4) lab.style.color = 'var(--paper)';
+  return $('div', 'body', r);
+});
+const legend = $('div', 'legend', board, '<i style="background:var(--blue)"></i>国外<i style="background:var(--kred)"></i>国产');
+legend.style.top = (5 * 134 + 4) + 'px';
+(MOCK.chips || []).forEach(([tier, name, cn, ghost]) => {
+  const body = rows[tier];
+  const ch = $('div', 'chip2' + (ghost ? ' ghost' : ''), body, name);
+  ch.style.setProperty('--c', cn ? 'var(--kred)' : 'var(--blue)');
+  const w = ch.offsetWidth, W = body.clientWidth - 12;
+  body._x = body._x ?? 10; body._y = body._y ?? 9;
+  if (body._x + w > W) { body._x = 10; body._y += 58; }
+  ch.style.left = body._x + 'px'; ch.style.top = body._y + 'px';
+  body._x += w + 10;
+});
+// model card
+const m = MOCK.card;
+if (m) {
+  const c = $('div', 'mcard', stage);
+  $('div', 'kick', c, m.kick);
+  const nm = $('div', 'nm', c, m.name);
+  const fit = 540 / Math.max(540, nm.scrollWidth); if (fit < 1) nm.style.fontSize = (56 * fit).toFixed(1) + 'px';
+  $('div', 'sub', c, m.sub);
+  let y = 176; let d = $('div', 'dash', c); d.style.top = y + 'px';
+  let e = $('div', 'fl', c, '智能指数<small>满分 100</small>'); e.style.top = (y + 20) + 'px';
+  e = $('div', 'big', c, `${m.score}`); e.style.top = (y + 54) + 'px';
+  const mt = $('div', 'meter', c); mt.style.top = (y + 76) + 'px'; mt.style.left = '200px'; mt.style.width = '200px';
+  const fi = $('i', '', mt); fi.style.width = m.score + '%';
+  const rk = $('div', 'rkl', c, m.rank || ''); rk.style.top = (y + 104) + 'px';
+  y = 318; d = $('div', 'dash', c); d.style.top = y + 'px';
+  (m.stats || []).forEach(([lab, val, hot], i) => {
+    const b = $('div', 'stat' + (hot ? ' hot' : ''), c, `<span>${lab}</span><b>${val}</b>`);
+    b.style.left = (36 + (i % 2) * 272) + 'px'; b.style.top = (y + 16 + Math.floor(i / 2) * 58) + 'px';
+  });
+  y = 452; d = $('div', 'dash', c); d.style.top = y + 'px';
+  (m.pcs || []).forEach(([ok, t], i) => { const pc = $('div', 'pc', c, `<b class="${ok ? 'y' : 'n'}">${ok ? '✓' : '✗'}</b>${t}`); pc.style.top = (y + 20 + i * 50) + 'px'; });
+  if (m.verdict) { const st = $('div', 'stamp', c, m.verdict); st.style.setProperty('--c', `var(${TIERS.find(t => t[0] === m.verdict)[1]})`); if (m.verdict.length > 2) st.style.fontSize = '38px'; }
+  const sy = $('div', 'shiyi', c, m.foot || ''); sy.style.left = '36px'; sy.style.bottom = '14px';
+}
+// subtitles
+const subs = document.getElementById('subs');
+const sub = MOCK.sub || '';
+$('div', 'st', subs, sub.replace(/<[^>]+>/g, ''));
+$('div', 'fi', subs, sub);
+// progress bar (mock proportions)
+const cols = ['#F2A0BD', '#F6C945', '#4A6FD0', '#E2463F'];
+const chaps = MOCK.bar || [['开场', .03], ['三个疑问', .06], ['先定规则', .12], ['国外几家', .27], ['国产八家', .3], ['九月新面孔', .16], ['总结', .06]];
+let x = 20; const W = 2300;
+chaps.forEach(([n, f], i) => {
+  const w = W * f - 6;
+  const b = $('div', 'bBlk'); b.style.left = x + 'px'; b.style.width = w + 'px'; b.style.background = cols[i % 4];
+  if (i < (MOCK.barCur ?? 3)) b.style.opacity = 1; else b.style.opacity = .45;
+  const l = $('div', 'bLab', null, n); l.style.left = x + 'px'; l.style.width = w + 'px';
+  x += W * f;
+});
+</script>
+</body>
+</html>

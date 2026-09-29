@@ -1,0 +1,42 @@
+{
+  "line1": "Claude 拒绝回答",
+  "line2": "也要收钱了？",
+  "l1px": 168,
+  "l2px": 236,
+  "maxw": 1320,
+  "textCx": 900,
+  "scale": 9,
+  "frame": [
+    64,
+    64
+  ],
+  "footRow": 62,
+  "fishX": 1074,
+  "foot": 1062,
+  "tag": "",
+  "theme": {
+    "bg": "#FFFFFF",
+    "lead": "#8C8C8C",
+    "accent": "#F5A21D",
+    "list": "#5A5A5A",
+    "more": "#9A9A9A"
+  },
+  "_theme": "orange",
+  "_pose": "finger_up_m2",
+  "_eyes": "idle_surprised_m0",
+  "_fx": "fx_emph",
+  "_qmark": false,
+  "_place": "right",
+  "others": [
+    "MiniMax 编程新模型上线",
+    "Claude Code 撞上限先收尾",
+    "Codex 宕机后重置额度",
+    "阿里语音模型降价最高 95%",
+    "牛津馆藏进 OpenAI 训练集"
+  ],
+  "othersHead": "今天还有 7 条",
+  "othersMore": "……共 8 条",
+  "listX": 270,
+  "listW": 770,
+  "listBottom": 1000
+}

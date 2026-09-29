@@ -1,0 +1,30 @@
+[
+ {
+  "key": "gintama",
+  "frames": 150,
+  "size": "1474x830",
+  "src_lufs": -14.8,
+  "gain_db": -3.2
+ },
+ {
+  "key": "naruto",
+  "frames": 150,
+  "size": "1474x830",
+  "src_lufs": -14.1,
+  "gain_db": -3.9
+ },
+ {
+  "key": "jojo",
+  "frames": 150,
+  "size": "1474x830",
+  "src_lufs": -15.0,
+  "gain_db": -3.0
+ },
+ {
+  "key": "ep04",
+  "frames": 150,
+  "size": "1474x680",
+  "src_lufs": -16.6,
+  "gain_db": -1.4
+ }
+]

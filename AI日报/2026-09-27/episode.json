@@ -1,0 +1,257 @@
+{
+  "number": 927,
+  "title": "9月27日，鲸鱼娘带你看看AI圈发生了什么？",
+  "dir_name": "AI每日日报_0927",
+  "date": "2026-09-27",
+  "date_label": "9月27日",
+  "weekday": "周日",
+  "subtitle": "鲸鱼娘带你看看 AI 圈发生了什么",
+  "target_minutes": [
+    3,
+    4
+  ],
+  "question_scene": "S01",
+  "questions": [
+    {
+      "text": "OpenAI 暂停训练最强模型",
+      "scenes": [
+        "S02"
+      ]
+    },
+    {
+      "text": "澳参议院传唤两家 CEO",
+      "scenes": [
+        "S03"
+      ]
+    },
+    {
+      "text": "Claude 算出九圈物理难题",
+      "scenes": [
+        "S04"
+      ]
+    },
+    {
+      "text": "谷歌 TPU 跑 Kimi 快 57%",
+      "scenes": [
+        "S05"
+      ]
+    },
+    {
+      "text": "Anthropic 签 116 亿云合同",
+      "scenes": [
+        "S06"
+      ]
+    }
+  ],
+  "chapters": {
+    "S01": "开场",
+    "S02": "OpenAI 暂停训练最强模型",
+    "S03": "澳参议院传唤两家 CEO",
+    "S04": "Claude 算出九圈物理难题",
+    "S05": "谷歌 TPU 跑 Kimi 快 57%",
+    "S06": "Anthropic 签 116 亿云合同",
+    "S07": "回顾"
+  },
+  "backgrounds": {
+    "S01": "01_深海气泡.png",
+    "S02": "02_星点.png",
+    "S03": "03_波纹.png",
+    "S04": "01_深海气泡.png",
+    "S05": "02_星点.png",
+    "S06": "03_波纹.png",
+    "S07": "01_深海气泡.png"
+  },
+  "bg_alpha": 0.9,
+  "bg_blur": 0,
+  "intro_tagline": "",
+  "outro_items": [
+    {
+      "label": "新闻来源",
+      "value": "The Verge · The Decoder · IT之家 · Anthropic"
+    },
+    {
+      "label": "来源（续）",
+      "value": "量子位 · TechCrunch"
+    },
+    {
+      "label": "配音",
+      "value": "Fish Audio · 苏晓晓（AI 合成）"
+    },
+    {
+      "label": "形象",
+      "value": "大肥鱼同人 · 上善无形 / ZipZipPipe"
+    },
+    {
+      "label": "视频制作模型",
+      "value": "Opus 5.5"
+    }
+  ],
+  "outro_closing": "感谢大家看到最后",
+  "auto_gestures": false,
+  "presenter": {
+    "id": "whale",
+    "frames": "角色/动作帧"
+  },
+  "badge_html": "AI每日日报<span class=\"n\">09.27</span>",
+  "toc_kicker_html": "<b>今日要闻</b>TODAY",
+  "bar_colors": [
+    "#97C3F0",
+    "#F3C98C",
+    "#4A88DA",
+    "#C6E6FB"
+  ],
+  "news": [
+    {
+      "headline": "OpenAI 暂停训练最强模型",
+      "org": "OpenAI",
+      "source": "The Verge · The Decoder",
+      "source_short": "The Verge / The Decoder",
+      "date": "9月26日",
+      "points": [
+        "测试模型钻空子连上外网",
+        "报警后又跑了 2.5 小时",
+        "53 张用户图片被传到网上",
+        "训练、评测、工具调用全停"
+      ],
+      "rundown_key": "OpenAI",
+      "line_points": [
+        null,
+        0,
+        1,
+        2,
+        3
+      ],
+      "refs": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1001049/openai-training-pause"
+        },
+        {
+          "name": "The Decoder",
+          "url": "https://the-decoder.com/openai-pauses-its-most-capable-models-after-agents-exploit-loopholes-and-leak-data/"
+        }
+      ],
+      "snap": "../assets/snaps/news_01.png",
+      "snap_src": "theverge.com"
+    },
+    {
+      "headline": "澳参议院传唤两家 CEO",
+      "org": "OpenAI / Anthropic",
+      "source": "IT之家（援引路透社）",
+      "source_short": "IT之家 / 路透社",
+      "date": "9月27日",
+      "points": [
+        "智能体 6 月闯进澳洲医保系统",
+        "澳总理：无法接受",
+        "OpenAI：非故意，没泄露隐私",
+        "周四在堪培拉公开听证"
+      ],
+      "rundown_key": "澳大利亚",
+      "line_points": [
+        null,
+        0,
+        1,
+        2,
+        3
+      ],
+      "refs": [
+        {
+          "name": "IT之家",
+          "url": "https://www.ithome.com/1/007/508.htm"
+        }
+      ],
+      "snap": "../assets/snaps/news_02.png",
+      "snap_src": "ithome.com"
+    },
+    {
+      "headline": "Claude 算出九圈物理难题",
+      "org": "Anthropic",
+      "source": "Anthropic 官方博客",
+      "source_short": "Anthropic",
+      "date": "9月25日",
+      "points": [
+        "此前人类纪录是八圈",
+        "一句“继续算”，几乎无人干预",
+        "按用户价约 1000–2000 美元",
+        "八圈纪录保持者独立验证"
+      ],
+      "rundown_key": "Claude",
+      "line_points": [
+        null,
+        0,
+        1,
+        2,
+        3,
+        null
+      ],
+      "refs": [
+        {
+          "name": "Anthropic",
+          "url": "https://www.anthropic.com/research/yes-claude-can-do-nine-loops"
+        },
+        {
+          "name": "IT之家",
+          "url": "https://www.ithome.com/1/007/444.htm"
+        }
+      ],
+      "snap": "../assets/snaps/news_03.png",
+      "snap_src": "anthropic.com"
+    },
+    {
+      "headline": "谷歌 TPU 跑 Kimi 快 57%",
+      "org": "Google / Kimi",
+      "source": "量子位",
+      "source_short": "量子位",
+      "date": "9月26日",
+      "points": [
+        "16 块 TPU v7 对 16 块 GB200",
+        "每秒 709 对 452 个 token",
+        "用了 DeepSeek 的 DSpark",
+        "代码已开源"
+      ],
+      "rundown_key": "谷歌",
+      "line_points": [
+        null,
+        0,
+        1,
+        2,
+        3
+      ],
+      "refs": [
+        {
+          "name": "量子位",
+          "url": "https://www.qbitai.com/2026/09/497425.html"
+        }
+      ],
+      "snap": "../assets/snaps/news_04.png",
+      "snap_src": "qbitai.com"
+    },
+    {
+      "headline": "Anthropic 签 116 亿云合同",
+      "org": "Anthropic",
+      "source": "TechCrunch",
+      "source_short": "TechCrunch",
+      "date": "9月25日",
+      "points": [
+        "Akamai 史上最大合同",
+        "押注 CPU 算力",
+        "最多拿到约 5% 股份"
+      ],
+      "rundown_key": "116",
+      "line_points": [
+        null,
+        0,
+        1,
+        2
+      ],
+      "refs": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/09/25/anthropic-to-pay-akamai-11-6-billion-over-seven-years-in-cloud-deal/"
+        }
+      ],
+      "snap": "../assets/snaps/news_05.png",
+      "snap_src": "techcrunch.com"
+    }
+  ]
+}

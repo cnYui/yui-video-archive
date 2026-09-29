@@ -1,0 +1,31 @@
+/* 白板版（episode.json "style": "board"；用户 2026-09-28：「原LAI如此也用手写白板，字提前一秒出现，字幕也同步放大」）。
+ * core.js 在 style = board 时给 <body> 加 class "board"（同时还有 solid / light：白底和浅色主题在 style.css 末尾）。
+ * 下面的规则只在 body.board 时生效，别的期不受影响。做法同《AI每日日报》的 board.css（它的强调色是鲸鱼娘蓝，这里是系列橙）。
+ * 配色：白底、墨黑记号笔 #1A1A1A（hand.js）、系列橙 #FF4F1A（编号、勾、小横、小字标签）、黄色记号笔 #F5C518（波浪线、圈）。 */
+body.board #charShadow { background: radial-gradient(closest-side, rgba(0,0,0,.16), rgba(0,0,0,0)); }
+
+/* 字幕：56 px 墨黑字白边（字号和单行宽度由 core.js 定：ENG.SUB），术语橙色 */
+body.board #subs { top: 918px; height: 72px; }
+body.board #subs .stroke { color: #FFFFFF; -webkit-text-stroke: 12px #FFFFFF; }
+body.board #subs .fill { color: #1A1A1A; }
+body.board #subs .fill .t { color: var(--orange); }
+
+/* 右上目录：白卡片、细边、浅投影、顶部橙线（行的颜色由 core.js 按 style 设） */
+body.board #toc { background: rgba(255,255,255,.96); border-top: 3px solid var(--orange); border-left: 1px solid #E6E6E6;
+  border-right: 1px solid #E6E6E6; border-bottom: 1px solid #E6E6E6; box-shadow: 0 6px 18px rgba(0,0,0,.08); }
+body.board #toc .kick { color: #9AA2B8; }
+body.board #toc .kick b { color: rgba(26,26,26,.72); }
+
+/* 底部进度条：上方一层白色渐变，手写的字不会和进度条挤在一起 */
+body.board #barShade { display: block; background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,.9) 55%, #FFFFFF); }
+body.board .bBlk.cur, body.board #barP .bBlk.cur { box-shadow: 0 0 0 2px #FFFFFF; }
+
+/* 白板上的印刷小字（board.js）：小标签、灰色副标题、补充说明、落款 */
+.bKick { position: absolute; font: 700 26px var(--cjk); letter-spacing: .2em; color: var(--orange); text-align: center; white-space: nowrap; }
+.bSub { position: absolute; font: 500 36px var(--cjk); color: #7E7A72; text-align: center; white-space: nowrap; letter-spacing: .03em; }
+.bNote { position: absolute; font: 500 26px var(--cjk); color: #6E6A63; white-space: nowrap; }
+.bSign { position: absolute; font: 700 28px var(--cjk); color: #4A4741; text-align: right; white-space: nowrap; }
+
+/* 贴在白板上的卡片、截图、示意窗口：投影浅一点，c.tape() 贴两条胶带 */
+body.board .card, body.board .code, body.board .win { box-shadow: 0 10px 24px rgba(0,0,0,.12), 0 2px 6px rgba(0,0,0,.08); }
+.tape { position: absolute; background: rgba(245,215,120,.55); box-shadow: 0 1px 2px rgba(0,0,0,.06); pointer-events: none; z-index: 2; }

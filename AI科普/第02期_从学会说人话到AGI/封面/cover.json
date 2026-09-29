@@ -1,0 +1,14 @@
+{
+  "t1": "AGI",
+  "t2": "到了吗？",
+  "subHTML": "<span class=\"qm o1\">“</span>AI 不就是文字接龙<span class=\"qm c\">”</span> <span class=\"hl\">对了一半</span>",
+  "bg_file": "08_官方主视觉.jpg",
+  "sprite": "reach_m2/00.png",
+  "bg": {
+    "scale": 1.0,
+    "fx": 0.5,
+    "fy": 0.5,
+    "opacity": 0.36,
+    "blur": 8
+  }
+}
