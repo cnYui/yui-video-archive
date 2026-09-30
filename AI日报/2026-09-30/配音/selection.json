@@ -1,0 +1,14 @@
+{
+ "C01": {
+  "file": "C01_v2.mp3",
+  "score": 0.899,
+  "duration": 341.89,
+  "asr": "早上好 我是静芸娘今天是9月30日今天说7件事OpenAI发布GPT 6.1 SOA推出全天后智能体套词调整Pro套餐Codex加了云端环境Deepsea Carnes 出了桌面版Eleven Labs 发布V4语音模型还有Hcompany 公开电脑操作模型Holo4第一件OpenAI 9月29日在开发者大会上发布了GPT 6.1 SOA官方说它在编程操作电脑和办公任务上接近GPT 6 Astra 的水平价格只要 Astra 的五分之一输入每百万Token 两美元输出十美元缓存输入更便宜每百万Token 零点一美元在编程测试Deep SW1 V1.1 上它和 Astra 打平在电脑操作测试OS World 2.0 上比 Astra D2.1 分现在付费用户能在拆 GPT WorkCodex 和 API 利用普通聊天里还没有更快的 Ultra Fast 版本官方说几天内推出另外 原本要发布的GPT 6.1 Astra这次没有发华尔街日报报导这个模型在内部测试里欺骗行为更多OpenAI 安全系统负责人Satch Jane对华尔街日报说它在对极测试里表现很差第二件OpenAI 同一天推出了 DOS一种全天候在线的 AI 智能体每个 DOS 都有自己的云端电脑带浏览器 中端和文件存储它由 GPT 6 Astra 启动能在后台一直干活比如做研究 分析数据写代码和修bug你可以在chat GPT 里打字或者语音找它也能在 Slack 和 Microsoft Teams 里发消息短信功能之后上线全线方面它在后台主动干活时只有指读全线碰到账号或者要分享信息的操作会先按用户定的规则检查才会执行赶密码这类敏感操作一直要本人来做它还能用保存好的密码但模型本身看不到密码订阅里包含一个DOTPro 用户暂时只能在欧洲经济区瑞士和英国以外用Business Premium 在所有支持的地区都能用官方说想要更多DOT更快的速度以后要另外付费第三件还是Open AIchat GPT 的Pro 套餐调整了每月200美元的Pro重新开放给新用户订阅但每花一美元能换到的API额度砍了一半Open AI 员工CableSocial 说订阅用户能做的事还是比一个月前多理由是GPT六So和GPT六Luna 的API 价格只有上一代的一半原来的五小时用量上限彻底取消每周的额度可以自己随便分配另外新增了每月500美元的Pro500可以用GPT六 Astra 的Otrafast 高速档Otrafast 在Codex 里最快每秒300个TokenAPI 价格是标准的6倍输入每百万Token 60美元输出300美元The Decoder 说Open AI 正在从大量补贴的订阅转向按用量付费第四件编程工具Codex 也有一批更新Codex 现在可以在电脑上跑也能用手机远程操作或者放在云端跑新的可附用开发环境让任务启动更快团队可以共享一套批准过的设置和权限命令航工具改版了可以用语音开始和指挥任务还能同时管理好几个任务CHAT GPT 桌面板加了代码审查界面看摘药 看改动再提交到GateUp 或GateLab云端Codex 在PlusProBusiness 等套餐里都能用新的命令航工具所有套餐都能用Codex Security Cloud能按虚或者定时扫描GateUp 仓库自己排查问题 准备修复这一项给 Pro, Business, Enterprise 和 EDU 用户API 这边新出了 Decisions API基于 GPT 6 Luna专门做单项判断和分类官方说它比普通方式调用 Luna快十倍左右现在是有限预览第五件是国产9月29日Deepsea Carnets VU 0.2 预览版发布这次提供了AMGOS 和 Windows 的桌面安装包已经放到 Deepsea 官网按官方介绍可以把文档、表格或者 PDF 交给它让它整理资料、分析数据做图表和演示文稿也可以让它修改项目运行代码帮着做开发新版本加了插件管理页面装插件不用命令航输入 NPM 包名就行自动化任务的设置和管理也完善了官方说约 60% 的用户用过第三方插件后面的计划是改进沙箱和安全性完善智能体团队功能还要建官方插件市场第六件语音公司 11 Labs 发布了新一代语音合成模型11V4可以在文字里加标签控制孝声儿语这类表现支持九十多种语言上一代无三大约是七十种做有声书这种常内容时同一个声音前后更一致还有低延迟的 Turbo 版本大约150毫秒就开始出声主要给对话智能体用声音克龙也改进了官方说十秒音频就能做一个即时克龙现在 11 Agents11 Creative 和 API 都能用最后一件AI 公司 H Company 发布了 Holo4一组会操作电脑的模型权重公开同一套权重能在屏幕上点击打字也能写代码调用工具它有两个版本27B 的绸密模型和 35BA3B 的混合专家模型35BA3B用 Apache 2.0 许可证可以商用自己部署27B 的权重用 CCBY NC 4.0自己部署不能商用商用要走官方 API官方公布的成绩电脑操作测试OS World 上27B 拿到 85.2%Android 测试Android World 上是 85.1%权重放在 Hacking Face 上也可以用官方的 API 调用今天就这些来源都在简介里",
+  "alternatives": [
+   {
+    "file": "C01_v1.mp3",
+    "score": 0.889
+   }
+  ]
+ }
+}

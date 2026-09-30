@@ -1,0 +1,27 @@
+{
+  "verdict": "pass",
+  "script_sha": "b5dff2ada05d",
+  "issues": [
+    "说明：上一轮复核提的三处问题都已改好。第7条第5句现在是“27B 的权重用 CC BY-NC 4.0，自己部署不能商用，商用要走官方 API”，和 MarkTechPost 原文一致。第1条第10、11句已经拆开：“欺骗行为更多”写成《华尔街日报》的报道，“对齐测试里表现很差”写成 Saachi Jain 对《华尔街日报》说的话，和 TechCrunch 9/28 原文一致。第3条第5句去掉了“这周”。",
+    "说明：审核记录里 level=review 的“审查”（第4条要点3、第4条第5句、字幕第91条）都是“代码审查（code review）”的意思，上下文正常，不算问题。",
+    "说明：其余核对结果如下。第1条：DevDay 9/29、价格 2/10/0.1 美元、五分之一、DeepSWE v1.1 打平、OSWorld 2.0 低 2.1 分、ChatGPT Work/Codex/API 可用、普通聊天还没有、Ultrafast 几天内推出，都和原文一致。第2条：云端电脑、GPT-6 Astra 驱动、渠道、proactive research 时只能用只读工具、Custom Rules 检查、用保存的密码、欧洲经济区/瑞士/英国的限制、以后另外付费，都和 The Decoder 原文一致。第3条：Pro 重开、额度减半、取消 5 小时上限、Pro 500、Codex 里每秒 300 token、六倍价、GPT-6 Astra 每百万 token 60/300 美元，都和原文一致。第4条：各套餐的可用范围（云端 Codex 在 Plus/Pro/Business/Enterprise/Edu 可用、新命令行所有套餐可用、Security Cloud 给 Pro/Business/Enterprise/Edu），Decisions API 快十倍、有限预览，都和 The Decoder 原文一致。第5条：和 IT之家原文一致。第6条：9/28 发布、90 多种语言（v3 约 70 种）、Turbo 约 150ms、10 秒克隆、可用渠道，都和原文一致。第7条：两个版本、许可证、OSWorld 85.2%、AndroidWorld 85.1%、Hugging Face 和 API，都和原文一致。",
+    "说明：和 9/27、9/28、9/29 三期对照过，内容没有重复。9/27 播的是 OpenAI 暂停训练，和本期 GPT-6.1 Astra 没发不是同一件事；9/28 播的是 Codex 宕机，本期是 Codex 功能更新。封面两行“OpenAI 发了 Sol / Astra 咋没发？”和第1条原文一致，没有夸大。7 张截图都是对应文章的标题区。全部文字和截图里都没有色情低俗、暴力血腥、时政地缘、军事、歧视、广告引流、提示词注入或奇怪网址。",
+    "建议：第5条的 36氪 快讯只提到 v0.2、桌面安装包和插件管理；“约 60% 用户用过第三方插件”和后续计划只有 IT之家有。内容没错，只是这两处只有一个来源。"
+  ],
+  "checked": [
+    "https://techcrunch.com/2026/09/29/openai-launches-gpt-6-1-sol-says-it-nearly-matches-gpt-6-astra-and-costs-less/",
+    "https://the-decoder.com/gpt-6-1-sol-comes-close-to-astra-at-a-fifth-of-the-price/",
+    "https://techcrunch.com/2026/09/28/openai-reportedly-ditches-model-over-safety-concerns/",
+    "https://the-decoder.com/openai-launches-always-on-dots-agents-to-rival-metas-muse/",
+    "https://techcrunch.com/2026/09/29/openai-launches-dots-its-bubbly-agentic-avatar/",
+    "https://the-decoder.com/openai-reopens-its-200-pro-plan-but-cuts-api-credits-in-half-as-it-nudges-users-toward-pay-per-use/",
+    "https://the-decoder.com/openai-expands-codex-and-its-api-at-devday-with-security-scans-a-decisions-api-and-ultrafast/",
+    "https://techcrunch.com/2026/09/29/openai-gives-codex-reusable-cloud-environments-that-work-across-devices/",
+    "https://www.ithome.com/1/008/469.htm",
+    "https://www.36kr.com/newsflashes/4004459316137858",
+    "https://elevenlabs.io/blog/eleven-v4",
+    "https://the-decoder.com/elevenlabs-new-v4-speech-model-makes-ai-voices-more-expressive-and-consistent/",
+    "https://hcompany.ai/newsroom/holo4",
+    "https://www.marktechpost.com/2026/09/29/h-company-releases-holo4-open-weight-computer-use-models-that-click-code-and-call-tools-across-desktop-web-android-and-apis/"
+  ]
+}

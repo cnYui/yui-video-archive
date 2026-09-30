@@ -1,0 +1,127 @@
+{
+ "date": "2026-09-30",
+ "script_sha": "b5dff2ada05d",
+ "passed": true,
+ "checked_at": "2026-09-30 04:30:44",
+ "checks": [
+  {
+   "check": "台本检查",
+   "ok": true,
+   "level": "ok",
+   "detail": "7 条，约 2269 字"
+  },
+  {
+   "check": "台本提示",
+   "ok": false,
+   "level": "warn",
+   "detail": "全片约 2269 字，按每秒 6.35 字约 6.0 分钟；目标正片 5–6 分钟（约 2000–2250 字）"
+  },
+  {
+   "check": "成片",
+   "ok": true,
+   "level": "ok",
+   "detail": "D:\\大疆\\AI日报\\2026-09-30\\AI每日日报_0930_成片.mp4"
+  },
+  {
+   "check": "上传版 ≤ 9 MB",
+   "ok": true,
+   "level": "ok",
+   "detail": "8.98 MB"
+  },
+  {
+   "check": "封面",
+   "ok": true,
+   "level": "ok",
+   "detail": "16:9 + 4:3"
+  },
+  {
+   "check": "标题格式",
+   "ok": true,
+   "level": "ok",
+   "detail": "9月30日，鲸鱼娘带你看看AI圈发生了什么？"
+  },
+  {
+   "check": "简介里有全部来源",
+   "ok": true,
+   "level": "ok",
+   "detail": "15 个网址"
+  },
+  {
+   "check": "简介里没有别的网址",
+   "ok": true,
+   "level": "ok",
+   "detail": ""
+  },
+  {
+   "check": "简介 ≤ 2000 字",
+   "ok": true,
+   "level": "ok",
+   "detail": "1909 字"
+  },
+  {
+   "check": "总时长超过 5 分钟（B 站分段章节要求）",
+   "ok": true,
+   "level": "ok",
+   "detail": "363.3 秒"
+  },
+  {
+   "check": "配音识别分 ≥ 0.75",
+   "ok": true,
+   "level": "ok",
+   "detail": "1 批"
+  },
+  {
+   "check": "事实核对（数字、英文名都在原文里）",
+   "ok": true,
+   "level": "ok",
+   "detail": "全部找到"
+  },
+  {
+   "check": "内容安全（色情、暴力、时政、广告、提示词注入、隐藏字符）",
+   "ok": true,
+   "level": "ok",
+   "detail": "没有命中"
+  },
+  {
+   "check": "要 AI 复核确认的词",
+   "ok": false,
+   "level": "warn",
+   "detail": "[敏感词（看上下文）] 第 4 条 要点 3：审查；[敏感词（看上下文）] 第 4 条 第 5 句：审查；[敏感词（看上下文）] 字幕 srt：审查"
+  },
+  {
+   "check": "没有重复最近 7 天播过的原文",
+   "ok": true,
+   "level": "ok",
+   "detail": ""
+  },
+  {
+   "check": "AI 复核（独立子代理，看成品和原文）",
+   "ok": true,
+   "level": "ok",
+   "detail": "通过：说明：上一轮复核提的三处问题都已改好。第7条第5句现在是“27B 的权重用 CC BY-NC 4.0，自己部署不能商用，商用要走官方 API”，和 MarkTechPost 原文一致。第1条第10、11句已经拆开：“欺骗行为更多”写成《华尔街日报》的报道，“对齐测试里表现很差”写成 Saachi Jain 对《华尔街日报》说的话，和 TechCrunch 9/28 原文一致。第3条第5句去掉了“这周”。；说明：审核记录里 level=review 的“审查”（第4条要点3、第4条第5句、字幕第91条）都是“代码审查（code review）”的意思，上下文正常，不算问题。；说明：其余核对结果如下。第1条：DevDay 9/29、价格 2/10/0.1 美元、五分之一、DeepSWE v1.1 打平、OSWorld 2.0 低 2.1 分、ChatGPT Work/Codex/API 可用"
+  }
+ ],
+ "hits": [
+  {
+   "level": "review",
+   "cat": "敏感词（看上下文）",
+   "word": "审查",
+   "where": "第 4 条 要点 3",
+   "context": "桌面版看代码审查"
+  },
+  {
+   "level": "review",
+   "cat": "敏感词（看上下文）",
+   "word": "审查",
+   "where": "第 4 条 第 5 句",
+   "context": "ChatGPT 桌面版加了代码审查界面：看摘要、看改动，再提交到 Gi"
+  },
+  {
+   "level": "review",
+   "cat": "敏感词（看上下文）",
+   "word": "审查",
+   "where": "字幕 srt",
+   "context": "   ChatGPT 桌面版加了代码审查界面    看摘要、看改动    再"
+  }
+ ]
+}

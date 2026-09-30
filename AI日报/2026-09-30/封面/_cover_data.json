@@ -1,0 +1,42 @@
+{
+  "line1": "OpenAI 发了 Sol",
+  "line2": "Astra 咋没发？",
+  "l1px": 168,
+  "l2px": 236,
+  "maxw": 1320,
+  "textCx": 900,
+  "scale": 9,
+  "frame": [
+    64,
+    64
+  ],
+  "footRow": 62,
+  "fishX": 1074,
+  "foot": 1062,
+  "tag": "",
+  "theme": {
+    "bg": "#FFFFFF",
+    "lead": "#8A93AD",
+    "accent": "#4A88DA",
+    "list": "#4D5670",
+    "more": "#9AA2B8"
+  },
+  "_theme": "blue",
+  "_pose": "think_m0",
+  "_eyes": "idle_look_ur_m0",
+  "_fx": "",
+  "_qmark": true,
+  "_place": "right",
+  "others": [
+    "OpenAI 推出智能体 Dots",
+    "ChatGPT Pro 套餐调整",
+    "Codex 加了云端环境",
+    "DeepSeek Harness 出桌面版",
+    "ElevenLabs 发布 v4 语音"
+  ],
+  "othersHead": "今天还有 6 条",
+  "othersMore": "……共 7 条",
+  "listX": 270,
+  "listW": 770,
+  "listBottom": 1000
+}
