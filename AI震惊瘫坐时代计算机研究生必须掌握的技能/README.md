@@ -4,8 +4,8 @@
 
 | 期 | 目录 | 标题 | 状态 |
 |---|---|---|---|
-| 01 | `01_别再用VSCode了\` | 震惊瘫坐时代计算机同学必须掌握的AI基础功（一）（封面：求求别再用VSCode） | B 站 BV14zao6REeR（2026-09-30）；YouTube 进行中；字幕待拆短 |
+| 01 | `01_别再用VSCode了\` | 震惊瘫坐时代计算机同学必须掌握的AI基础功（一）（封面：求求别再用VSCode） | 已发布（2026-09-30）：B 站 BV14zao6REeR、YouTube 0zfFPuBQRoc；GitHub `cs-grad-ai-01`；字幕待拆短 |
 
-B 站合集：「AI时代计算机专业研究生如何用AI」（2026-09-30 新建）。本地目录名暂时没改。
+B 站合集 / YouTube 播放列表：「AI时代计算机专业研究生如何用AI」（2026-09-30 新建）。本地目录名暂时没改。技能：`skill\cs-grad-ai-episode\`。
 
 系列大纲草案：`docs/ai/context/20260929-115628-cs-grad-skills-series-plan-screen-zoom_CN.md`。
