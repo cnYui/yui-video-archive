@@ -103,9 +103,11 @@ function units(text) {   // 和 build_timeline.py 的 units() 一样
   }
   return u;
 }
-// 第 i 句字幕里第 k 个字在第几秒说出来（按逐词识别的对照表插值）
+// 全角括号里是没说出口的注释（规范见技能 references/subtitles.md）：对齐说话时间时不算
+const spoken = s => s.replace(/（[^（）]*）/g, '');
+// 第 i 句字幕里第 k 个字（k 是 spoken(zh) 里的位置）在第几秒说出来（按逐词识别的对照表插值）
 function cueT(i, k) {
-  const c = CUE[i], f = units(c.zh.slice(0, k)) / Math.max(units(c.zh), 1e-6), m = c.map;
+  const c = CUE[i], z = spoken(c.zh), f = units(z.slice(0, k)) / Math.max(units(z), 1e-6), m = c.map;
   for (let j = 1; j < m.length; j++) if (f <= m[j][0] + 1e-9) { const a = m[j - 1], b = m[j]; return a[1] + (b[1] - a[1]) * (b[0] > a[0] ? (f - a[0]) / (b[0] - a[0]) : 0); }
   return c.e;
 }
@@ -116,7 +118,7 @@ function timer(s) {
     c1: i => CUE[i].e - s.start,
     // 这个画面里第一次说到 phrase 的时刻（画面内的秒数）；from = 从第几句开始找
     at(phrase, off = 0, from = s.cue0) {
-      for (let i = from; i <= s.cue1; i++) { const k = CUE[i].zh.indexOf(phrase); if (k >= 0) return cueT(i, k) - s.start + off; }
+      for (let i = from; i <= s.cue1; i++) { const k = spoken(CUE[i].zh).indexOf(phrase); if (k >= 0) return cueT(i, k) - s.start + off; }
       throw new Error(`「${phrase}」不在 ${s.id} ${s.type}`);
     },
   };

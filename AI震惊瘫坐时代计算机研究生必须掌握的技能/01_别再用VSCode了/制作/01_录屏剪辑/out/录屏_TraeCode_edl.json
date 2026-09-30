@@ -1,0 +1,25 @@
+{
+ "source": "D:\\大疆\\.claude\\worktrees\\ai-era-cs-grad-skills-1a823b\\AI震惊瘫坐时代计算机研究生必须掌握的技能\\01_别再用VSCode了\\素材\\录屏_TraeCode.mp4",
+ "fps": 30,
+ "srcDuration": 21.4,
+ "newDuration": 21.4,
+ "keptSourceSeconds": 21.4,
+ "segments": [
+  [
+   0.0,
+   21.4,
+   1.0,
+   0.0,
+   21.4
+  ]
+ ],
+ "rules": {
+  "staticMin": 0.5,
+  "staticKeep": 0.15,
+  "cursorMin": 1.0,
+  "cursorSpeed": 2.5,
+  "manualCut": [],
+  "manualFast": []
+ },
+ "motion10fps": "AAAAcccccccAAAAAAAAAAAAAAAcAAAAAAAAAccccAAAAAAAAAAAAAAAAAAAcccAAAAAAAAAAAAAccAcccccccccAAAAAAcAAAAAAAAAAAccAAAAAAAAAAAAAAAAAAAcccccccAAAAAAAAAAAAAAAAAAAAAAAAcccccccAAAccccccAAAccAAAAcccAcccccccAAAAAAAAAAAAAAAAAAAAA"
+}
