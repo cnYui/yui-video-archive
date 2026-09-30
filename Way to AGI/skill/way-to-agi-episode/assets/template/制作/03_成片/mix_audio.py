@@ -86,11 +86,17 @@ def units(text):
     return u
 
 
+def spoken(zh):
+    """全角括号里是没说出口的注释，对齐说话时间时不算（和页面里的 spoken() 一样）。"""
+    return re.sub(r"（[^（）]*）", "", zh)
+
+
 def phrase_time(i, phrase):
     """第 i 句字幕里说到 phrase 的时刻（和页面里的 cueT 一样）。"""
     c = TL["cues"][i]
-    k = c["zh"].index(phrase)
-    f = units(c["zh"][:k]) / units(c["zh"])
+    z = spoken(c["zh"])
+    k = z.index(phrase)
+    f = units(z[:k]) / units(z)
     m = c["map"]
     for j in range(1, len(m)):
         if f <= m[j][0] + 1e-9:

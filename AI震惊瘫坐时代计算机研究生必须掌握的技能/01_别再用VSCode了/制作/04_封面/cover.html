@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<!-- 第 1 期封面（三选一）：window.__COVER__ = { v: 1|2|3|4, w: 1920|1440 }，高 1080。
+     用户 2026-09-30：封面要有“我的形象”（开头双手拜佛那一下）和“求求别再用VSCode”。人像由 cutout.py 从 4K 原片抠出（face_cut/）。
+     三个方案版式一样，只换人像帧：1 闭眼合十 2.7 s / 2 睁眼合十 2.5 s / 3 脸全露 3.0 s。4 = 选定版（选好后改 PICKED）。
+     VS Code 图标按官方原样放，不在图标上加东西。 -->
+<link rel="stylesheet" href="file:///D:/大疆/AI科普/素材/字体/fonts.css">
+<style>
+:root { --ink:#1B1B1F; --gray:#6B7280; --orange:#FF4F1A; --marker:#FFD84D; }
+* { box-sizing:border-box; margin:0; padding:0; }
+html, body { height:1080px; overflow:hidden; background:#fff; font-family:'Noto Sans SC', sans-serif; color:var(--ink); }
+#c { position:relative; height:1080px; overflow:hidden; background:#fff radial-gradient(#E6E9EE 2.2px, transparent 2.4px) 0 0 / 36px 36px; }
+.abs { position:absolute; white-space:nowrap; }
+.blob { position:absolute; border-radius:50%; }
+.person { position:absolute; bottom:0; filter:drop-shadow(0 18px 30px rgba(0,0,0,.20)); }
+.chip { display:inline-block; padding:8px 26px; border:5px solid var(--orange); color:var(--orange); border-radius:999px; font:900 40px 'Noto Sans SC'; background:#fff; }
+.mark { background:linear-gradient(transparent 58%, var(--marker) 58%, var(--marker) 92%, transparent 92%); }
+.o { color:var(--orange); }
+.row { display:flex; align-items:center; gap:28px; }
+.row img { display:block; filter:drop-shadow(0 8px 16px rgba(0,0,0,.18)); }
+</style>
+</head>
+<body>
+<div id="c"></div>
+<script>
+const C = window.__COVER__ || { v: 1, w: 1920 };
+const W = C.w, H = 1080, WIDE = W >= 1900;
+const PICKED = 'pray_c';                                   // 选定版用哪张人像（用户 2026-09-30 选方案 3 露脸合十）
+const FACE = { 1: 'pray_a', 2: 'pray_b', 3: 'pray_c', 4: PICKED }[C.v];
+const ICON = '../../素材/图标/vscode_code-stable.png';
+const root = document.getElementById('c');
+root.style.width = W + 'px'; document.body.style.width = W + 'px';
+function el(html, style = {}) { const d = document.createElement('div'); d.className = 'abs'; d.innerHTML = html; Object.assign(d.style, style); root.appendChild(d); return d; }
+function person(file, h, right) { const img = document.createElement('img'); img.src = `face_cut/${file}_outline.png`; img.className = 'person'; img.style.height = h + 'px'; img.style.right = right + 'px'; root.appendChild(img); return img; }
+function blob(x, y, r, color) { const b = document.createElement('div'); b.className = 'blob'; Object.assign(b.style, { left: (x - r) + 'px', top: (y - r) + 'px', width: 2 * r + 'px', height: 2 * r + 'px', background: color }); root.appendChild(b); return b; }
+// 字太宽就缩：保证标题不压到脸上
+function fit(node, maxW) { let s = parseFloat(getComputedStyle(node).fontSize); while (node.scrollWidth > maxW && s > 40) { s -= 2; node.style.fontSize = s + 'px'; } }
+
+const X0 = WIDE ? 90 : 64;
+if (WIDE) {
+  blob(1470, 560, 450, '#DDEBFF');
+  person(FACE, 930, -110);
+  el(`<span class="chip">计算机专业 · AI 基础功</span>`, { left: X0 + 'px', top: '80px' });
+  const a = el(`求求别再用`, { left: X0 + 'px', top: '196px', font: "900 176px/1.1 'Noto Sans SC'" });
+  const b = el(`<div class="row"><span class="o mark">VSCode</span><img src="${ICON}" style="width:148px;height:148px"></div>`, { left: X0 + 'px', top: '410px', font: "900 214px/1.1 'Noto Sans SC'" });
+  fit(a, 1000); fit(b, 960);                              // 第一版图标压到头发：人右移 70 px，图标缩到 148
+} else {
+  // 4:3（首页推荐）：照第 02 期的反馈，标题横跨上半部分放大，人缩到右下角（第一版 560 高时图标压到头，缩到 480）
+  blob(1130, 900, 290, '#DDEBFF');
+  person(FACE, 480, -40);
+  el(`<span class="chip" style="font-size:44px">计算机专业 · AI 基础功</span>`, { left: X0 + 'px', top: '52px' });
+  const a = el(`求求别再用`, { left: X0 + 'px', top: '150px', font: "900 206px/1.1 'Noto Sans SC'" });
+  const b = el(`<div class="row"><span class="o mark">VSCode</span><img src="${ICON}" style="width:136px;height:136px"></div>`, { left: X0 + 'px', top: '384px', font: "900 200px/1.1 'Noto Sans SC'" });
+  fit(a, 1310); fit(b, 940);
+}
+window.__READY__ = false;
+Promise.all([document.fonts.ready, ...[...document.images].map(i => i.decode().catch(() => { throw new Error('图片加载失败 ' + i.src); }))]).then(() => { window.__READY__ = true; });
+</script>
+</body>
+</html>

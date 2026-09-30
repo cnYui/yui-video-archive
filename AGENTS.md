@@ -33,31 +33,37 @@ D:\大疆\                         （git 仓库，remote origin = cnYui/yui-vid
 │  ├─ 运行记录.md                 每天一行
 │  ├─ _测试_*\  _试跑_API\  _test_0927\   测试
 │  └─ _旧稿\
-└─ Way to AGI\                    悠一出镜（B 站 + YouTube）
+├─ Way to AGI\                    悠一出镜（B 站 + YouTube）
    ├─ skill\way-to-agi-episode\   技能
    ├─ README.md
    └─ NN_<标题>\                  02_如何使用Claude来低成本的生成视频\（素材\、版式小样\、制作\00_整片…04_封面）；#01 本地没有工程文件
+└─ AI震惊瘫坐时代计算机研究生必须掌握的技能\   悠一出镜（B 站 + YouTube）
+   ├─ skill\cs-grad-ai-episode\   技能（`C:\Users\yui\.claude\skills\cs-grad-ai-episode` 是指向它的目录联接）
+   ├─ README.md
+   └─ NN_<标题>\                  01_别再用VSCode了\（素材\、制作\02_出镜 + 00_整片 + 04_封面）
 ```
 
-- 三个技能在 `C:\Users\yui\.claude\skills\` 里都是指向上面 `skill\` 的目录联接。
+- 四个技能在 `C:\Users\yui\.claude\skills\` 里都是指向上面 `skill\` 的目录联接。
 - 不要的文件挪进所在目录的 `_旧稿\`：用户的 dcg 钩子会拦截删除。
 - 2026-09-27 之前的记录里写的 `片头片尾/`、`第01期_什么是API/` 现在都在 `AI科普/` 下；`角色素材/…` 现在是 `AI科普/素材/角色/…`；`教程_Claude做视频/` 现在是 `Way to AGI/02_如何使用Claude来低成本的生成视频/`。
 
-## 三个合集和发布平台（2026-09-29 用户定）
+## 四个合集和发布平台（2026-09-29 用户定）
 
 | 合集 | 内容 | 发布平台 | 本地目录 |
 |---|---|---|---|
 | Way to AGI | 悠一出镜 | B 站合集「Way to AGI」+ YouTube 播放列表「Way to AGI」 | `Way to AGI/` |
+| AI时代计算机专业研究生如何用AI | 悠一出镜 + 录屏，给做科研、写代码的计算机同学 | B 站合集 + YouTube 播放列表，都叫「AI时代计算机专业研究生如何用AI」（2026-09-30 建） | `AI震惊瘫坐时代计算机研究生必须掌握的技能/`（目录名暂没改） |
 | 原LAI如此 | 像素讲解员的 AI 科普 | 只发 B 站（合集「原LAI如此」），不上传 YouTube | `AI科普/` |
 | AI每日日报（每日新闻） | 鲸鱼娘播 AI 新闻 | 只发 B 站（合集「AI每日日报」），不上传 YouTube | `AI日报/` |
 
 - DeepSeek 形象（鲸鱼娘 / 大肥鱼素材包）只用在原LAI如此和每日新闻里；Way to AGI 的封面、角色不用它。
-- **片头片尾三个合集共用**：模板是 `AI科普/片头片尾`，从 2026-09-29 起每期都用。
+- **片头片尾所有合集共用**：模板是 `AI科普/片头片尾`，从 2026-09-29 起每期都用。
   - 片头 3.8 s，打出“悠一”；片尾 4.8 s，是制作清单 + “悠一”印章。
   - 原LAI如此用 `assemble.py`，日报用 `assemble_wide.py`，两者读同一个 data.json；Way to AGI 用 `add_to_video.py` 加在正片两头。
   - 片尾清单每期问用户。
   - 记录：`docs/ai/context/20260929-084038-rename-ue-to-yui_CN.md`。
 - Way to AGI 技能：`Way to AGI/skill/way-to-agi-episode/`，按第 02 期整理。
+- CS 研究生技能：`AI震惊瘫坐时代计算机研究生必须掌握的技能/skill/cs-grad-ai-episode/`（2026-09-30 建），参照 Way to AGI 流程，加录屏演示区（`00_整片\` 统一渲染）。
   - 流程：剪口播（02_出镜）→ 画面（03_成片）→ 片头片尾 → 封面（04_封面）→ B 站 + YouTube 投稿。
   - 正片不再画片尾；SRT 和简介里的章节时间要加上片头的 3.8 s。
   - 记录：`docs/ai/context/20260929-095852-collections-youtube-way-to-agi-skill_CN.md`。
@@ -262,6 +268,7 @@ D:\大疆\                         （git 仓库，remote origin = cnYui/yui-vid
 | 02 | 如何使用Claude来低成本的生成视频 | B 站 BV1s2aV6cELo（2026-09-28）；YouTube https://youtu.be/EDWhMPfmZcE （标题「用Claude Opus来低成本的生成视频！」，2026-09-29） | 用户出镜 + 中英字幕；YouTube 自定义缩略图**待用户手动传**（`封面_选定_16x9.png`）；记录 `20260928-184726-claude-video-tutorial-production_CN.md` |
 
 - 名字统一写“悠一”（英文 Yui），开场白也是。
+- 字幕规范（2026-09-29 用户要求并入 ChatCut 的字幕精修技能）：去口癖、术语表、括号注释、中英翻译、终检，见技能 `references/subtitles.md`。字幕和成片里听到的一致；括号注释只放没说出口的话，页面 `cueT` / `tm.at()` 和 `mix_audio.py` 对齐说话时间时会跳过它。对照和验证见 `docs/ai/context/20260929-185438-zh-caption-polish-merge_CN.md`。改动在工作树分支里，合并回主目录 `D:\大疆` 后技能才生效。
 - 坑：
   - `-c copy` 拼接的出镜视频时间戳有空档，按时间抽帧会多出帧，口型越往后越慢：拼接时用 `setpts=N/30/TB` 重编码，抽帧加 `-fps_mode passthrough`。
   - 原片是 HLG 10-bit（BT.2020），直接转 8-bit 的肤色最自然，zscale 的两种转换一个偏暗一个过曝。
@@ -292,3 +299,38 @@ D:\大疆\                         （git 仓库，remote origin = cnYui/yui-vid
 - B 站旧稿清理：170 个候选里已设成“仅自己可见” 7 个，改第 8 个时触发 412 风控，剩 163 个没改。删稿永久不可恢复，只由用户本人操作（清单在 `docs/ai/context/20260927-103216-bilibili-cleanup_CN.md`，不进公开仓库）。
 - 是否引入 biliup 自动投稿。
 - Way to AGI 02：YouTube 缩略图由用户手动传。
+- 新系列《AI震惊瘫坐时代计算机研究生必须掌握的技能》：7 集大纲是草案；**2026-09-29 用户定**：第 1 期属于这个新合集；发 YouTube（按 Way to AGI 惯例 B 站也发，按“B 站 + YouTube”记，待用户纠正）；制作用 Way to AGI 那套“悠一出镜 + 录屏”流程。合集在 B 站 / YouTube 上的名字、本地目录名还没定。见 `docs/ai/context/20260929-115628-cs-grad-skills-series-plan-screen-zoom_CN.md`。
+  - 录屏工具定 **OpenScreen**（2026-09-29 用户定，用户已自己装了 Microsoft Store 版 1.13.0）。用法、按钮分工、命令行路径见 `docs/ai/context/20260929-131432-openscreen-decision-and-usage_CN.md`；实测和 `--auto-zoom` 的 bug 与绕法见 `docs/ai/context/20260929-125117-screen-zoom-tools-trial_CN.md`。
+  - Recordly 弃用（没装进系统，只剩临时目录里的文件；本机 MP4 / GIF 导出都失败）。
+  - **OpenScreen 录制条**：写着源名（默认“屏幕”）的按钮是**选源**，最右边的圆点才是**录制**；“使用系统光标”别点（会关掉自动放大）。驱动别人的录屏软件前先读源码确认按钮含义，只驱动“窗口”源，别给它录整屏的机会。
+  - 待用户：执行删除命令，清掉临时目录里的 `recordly`、`src-recordly`、`rec-data`、`edge-profile`（我这边的递归删除被安全钩子拦下）；要不要把 OpenScreen 的测试脚本整理进仓库 / 做成技能；要不要给作者报 `--auto-zoom` 的 bug（发 issue 要用户同意）。
+  - 第 1 期口述稿（“整个软件的变化”）已联网核对，时间线、逐条核对、整理后的论证链和稿子顺序见 `docs/ai/context/20260929-191823-ep1-evolution-factcheck_CN.md`。要点：Copilot 2021 年就进了 VS Code，早于 ChatGPT；Claude Code（2025-02）早于 Codex CLI（2025-04）；Trae 2025-01 才发布，Claude 是 2025-11 下线的，不是 2024 年底；“Copilot / Windsurf / Trae / Cursor 还困在侧边栏”已过时（Cursor 2.0、Copilot App、Devin Desktop、TraeCode 都转向了以智能体为中心的桌面界面），论点要改成“工作台的中心从编辑器换成了智能体”。
+  - 第 1 期台本 v1（修正后的时间线，以它为准；证据链补充，含 OpenClaw、MCP、computer use、METR、harness engineering、PaperBench 等；改好的口播稿，约 13–15 分钟）见 `docs/ai/context/20260929-193326-ep1-script-v1-timeline-evidence_CN.md`。9 处待用户确认（个人换工具的先后、SOLO 内测、下期预告要不要破例等）写在文末。
+    - 同日晚按用户要求改成论文式引用：句子后面的 `[n]` 对应稿子末尾「证据」里的同号条目（69 条，按首次出现排号），稿子开头有注解说明；`[n]` 录音不念、字幕不带。
+    - 同日晚第三次（用户审过全文后）：结构改成第一章讲时间线（第 0–6 段）、第二章录屏演示 Claude Code 桌面版（第 7 段）；删了插曲和原第 8 段。开头加了 IDE / CLI 介绍，第二章加了“善用 HTML 可视化”。证据按首次出现重排为 59 条。
+    - **待办**：第 4 段（loop）用户要求“所有操作都用代码写演示来模拟”，不用真录屏；做画面时按“写测试 → 失败 → 改代码 → 通过 → 浏览器自动点一遍 → 查数据库”准备，待用户确认顺序。时间线画面要带各家 App 的图标。
+    - **坑：产品功能和限制、调查数字要读一手来源，不能用第三方汇总。** 这次按官方原文更正了三处：Claude in Chrome 的限制（官方没说禁止付款，只说责任在用户）、Stack Overflow 调查（66% 是“差一点就对”，45% 是“调 AI 代码更费时间”，之前记反）、SWE-bench Verified（OpenAI 2026-02-23 说已被污染，不再用来比代码能力）。
+  - 第 1 期整片 v1（2026-09-29 晚，无字幕、出镜占位；用户：“你先做，然后我配音和视频，之后你再微调”）见 `docs/ai/context/20260929-224430-ep1-v1-video-build_CN.md`。期目录在**工作树**里：`AI震惊瘫坐时代计算机研究生必须掌握的技能/01_别再用VSCode了/`（会话钩子不让从工作树往主目录写文件）。**清理工作树之前，先把整个期目录挪回主目录**：素材、帧、成片不进 git，会跟着工作树一起删掉。
+    - 用户：两段录屏“有一些气口和停顿需要你剪掉”→ `制作/01_录屏剪辑/cut_pauses.py` 按画面判断（静止 ≥0.5 s 只留头尾各 0.15 s；只有鼠标在动 ≥1 s 放 2.5 倍），顺便抹掉 OpenScreen 摄像头画中画留下的右下角黑框（录的时候摄像头没画面）。以后用 OpenScreen 录屏，导出前把摄像头关掉。
+    - 用户：“你也要预留出我露脸视频的位置”→ 每个画面都留出镜框（A 大框 / B 左上角），录屏只放右边演示区，不压出镜框。
+    - 图标只用本机装着的 App 自带的图（Claude、Codex 包里的 OpenAI 标、Trae、TRAE SOLO、WorkBuddy、Chrome），其他先画字母占位；去官网下载官方图标要用户同意。
+    - **2026-09-30 换成白板手写版**（用户：“这里的视频我也想使用手写版本的。手写版本会有相比于音频提前一些时间出现”）：
+      - 手写层从原LAI如此引擎移植（`hand.js`，笔画数据用 `hand_glyphs.py` 生成 `handdata.js`）；
+      - 画面比声音早 1 秒（`LEAD`），翻页用 `flipOf`；
+      - 卡片版挪进 `制作/00_整片/_旧/卡片版_20260929/`。
+    - 图标：查过各家商标规定（多数字面上要审批）。用户：“科普视频没事的，你下载图片就行，用来介绍的”“都下载”。已从官网下载 15 个到 `素材/图标/`（清单见制作记录），页面里原样显示。Meta 用站点图标（品牌包要勾同意条款，没替用户勾）。简介里建议加一句商标说明。
+      - VS Code 规范：不许在图标上加东西，名字写 “VS Code”（不是 “VSCode”）。
+  - 第 1 期（2026-09-29 用户定题）：名字《AI时代 计算机研究生必须掌握之一》，封面出现“别再用VSCode了”，内容对比 VSCode / Trae / Codex / Claude Code，论证 Codex / Claude Code 更适合做研究。我的建议（待用户确认）：立论收窄成“做研究的主工作台该是终端 + 智能体，编辑器退成查看器”，因为 VS Code 的 Copilot Agent 模式和 Trae SOLO 都已能自主跑命令，“编辑器只会补全”的论据过时了；用同一个研究任务、尽量同一个模型换外壳来实测；要列出对方赢的地方（Trae 国内直连 / 免费、VS Code 看 diff 和调试）；结尾预告第 2 集（国产模型）。**用户不同意“同一模型换外壳”的测试设计**，说要自己看台本再答复：先别设计具体任务和评分表，等用户的意见。录屏怎么嵌进现有的 HTML 逐帧渲染（有没有视频层）还没查，台本定了再看。
+  - **这台机器上做浏览器自动化别用 Edge**：它会用 Windows 里登录的微软账号自动登录临时配置目录并开启同步。改用 Playwright 自带的 Chromium。
+  - **2026-09-30 真人口播接入进行中**：9 段 DJI 素材已完成逐词 ASR，待按实际口播重建 cue、重排第二章、接回白板整片；当前进度和待办见 `docs/ai/context/20260930-143949-ep1-user-footage-edit-progress_CN.md`。
+  - **2026-09-30 第 1 期已发布**：
+    - B 站 **BV14zao6REeR**、YouTube https://youtu.be/0zfFPuBQRoc ；
+    - 标题「震惊瘫坐时代计算机同学必须掌握的AI基础功（一）」（用户定）；
+    - B 站合集和 YouTube 播放列表都叫「AI时代计算机专业研究生如何用AI」（2026-09-30 新建）；本地目录名暂时没改。
+  - 成片：`01_别再用VSCode了/01_别再用VSCode了_成片.mp4`，711.62 s，带悠一片头片尾，没带字幕。片尾清单在 `制作/00_整片/outro.json`；封面用方案 3（开头合十，`制作/04_封面/封面_选定_*.png`）。
+  - 坑：
+    - `整片_双语字幕_v2_出镜版.mp4` 的字幕整体晚 3.8 s，不能用；
+    - 字幕条是段落级的（57 条里 52 条超过 28 字），要传字幕得先拆短；
+    - YouTube 自定义缩略图要用户先验证手机号。
+  - 原记录 `20260930-130829-…` 和第五期选题记录重名，已改名为 `20260930-185300-ep1-v2-layout-fix-burn-srt_CN.md`。
+  - 过程见 `docs/ai/context/20260930-192227-ep1-intro-outro_CN.md`。
