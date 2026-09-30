@@ -12,9 +12,11 @@ from pathlib import Path
 from faster_whisper import WhisperModel
 
 HERE = Path(__file__).resolve().parent
-PROMPT = ("嗯，那个，就是说，呃，我们今天讲 Claude Opus 5.5。Anthropic，Artificial Analysis，GPT-6 Astra，Blender，"
-          "Claude Code，Agent，renderAt，ffmpeg，Playwright，Fish Audio，LUFS，BGM，Sora，Veo，可灵，Seedance，万相，"
-          "鲸鱼娘，原LAI如此，token，扩散模型。")
+PROMPT = ("嗯，那个，就是说，呃，我们今天讲 VS Code、Copilot、Cursor、Trae、Claude Code、Codex、WorkBuddy。"
+          "IDE，CLI，SSH，Agent，GitHub，ChatGPT，Stack Overflow，CSDN，Windsurf，SOLO，PRD，Kiro，"
+          "Anthropic，OpenAI，Google，Gemini CLI，MCP，Playwright，OSWorld，GPT-5.4，Meta，CloudBase，"
+          "METR，Karpathy，vibe coding，OpenClaw，Cowork，Telegram，WhatsApp，WorkBuddy，TRAE Work，豆包 Work，"
+          "Routines，computer use，Claude in Chrome，GPT-6 Astra，Blender，Unity，悠一。")
 
 
 def main():

@@ -1,6 +1,6 @@
 ---
 name: way-to-agi-episode
-description: 制作悠一出镜的「Way to AGI」合集视频（B 站 + YouTube 两个平台都发）的完整流程：用户自己录口播（DJI Pocket 4P，SD 卡）→ ASR 逐词识别 → 手写中英字幕条、剪掉口癖和重录 → 出镜画面和口播逐帧对齐 → HTML 逐帧渲染演示画面（出镜画框 + 目录 + 中英字幕）→ 混音 → 4 路渲染正片 → 加悠一片头片尾（三个合集共用的模板）→ 露脸封面三选一 → 用 Chrome 插件填 B 站投稿页和 YouTube Studio。用户提到“Way to AGI”“露脸视频”“出镜视频”“我录好口播了”“把我的口播剪一下加字幕”，或者要给这个合集做封面、投稿、传 YouTube 时，都用这个技能。
+description: 制作悠一出镜的「Way to AGI」合集视频（B 站 + YouTube 两个平台都发）的完整流程：用户自己录口播（DJI Pocket 4P，SD 卡）→ ASR 逐词识别 → 手写并精修中英字幕条（去口癖、术语统一、括号注释）、剪掉口癖和重录 → 出镜画面和口播逐帧对齐 → HTML 逐帧渲染演示画面（出镜画框 + 目录 + 中英字幕）→ 混音 → 4 路渲染正片 → 加悠一片头片尾（三个合集共用的模板）→ 露脸封面三选一 → 用 Chrome 插件填 B 站投稿页和 YouTube Studio。用户提到“Way to AGI”“露脸视频”“出镜视频”“我录好口播了”“把我的口播剪一下加字幕”，或者要给这个合集做封面、投稿、传 YouTube 时，都用这个技能。
 ---
 
 # 《Way to AGI》单期制作（悠一出镜）
@@ -25,7 +25,7 @@ description: 制作悠一出镜的「Way to AGI」合集视频（B 站 + YouTube
 ## 开工前
 
 1. 读 `D:\大疆\AGENTS.md`（尤其「2026-09-29 三个合集和发布平台」和 Way to AGI 相关几节）和 `docs\ai\context\` 里最新的几份记录。
-2. 读 `references/pipeline.md`（每一步的做法和参数）。投稿前读 `references/publish.md`。出问题先查 `references/lessons.md`。
+2. 读 `references/pipeline.md`（每一步的做法和参数）。写字幕前读 `references/subtitles.md`（字幕规范）。投稿前读 `references/publish.md`。出问题先查 `references/lessons.md`。
 3. 同一时间只跑一个渲染，4 路并行（用户 2026-09-28 定的统一标准）；开渲前先看有没有别的渲染在跑。
 
 ## 流程（✋ = 停下来等用户确认）
@@ -41,13 +41,17 @@ description: 制作悠一出镜的「Way to AGI」合集视频（B 站 + YouTube
 `制作\02_出镜\`：`ingest.py audio` / `ingest.py proxy <编号…>`（抽音频、转 1280×720 代理，原片不动）→ `asr.py`（large-v3-turbo，提示词里故意带口癖，口癖才会被写出来）。
 
 ### 3. 字幕条 ✋
-`show_asr.py <编号> -w` 看逐词时间，手写 `make_cues.py`：中文按实际说的整理、去口癖和说错重来的半句，英文逐句翻译。名字一律“悠一 / Yui”。听不准的词、删掉的内容（说错的数字、不准确的说法）列出来告诉用户。
+`show_asr.py <编号> -w` 看逐词时间，手写 `make_cues.py`：中文按实际说的整理、去口癖和说错重来的半句，英文逐句翻译。名字一律“悠一 / Yui”。
+- **写之前先列术语表**（本期的专有名词和写法，拿不准的先问用户，例如 VSCode / VS Code），同时放进 `asr.py` 的 `PROMPT` 和 `make_cues.py` 顶部。
+- 规范全在 `references/subtitles.md`：去口癖、术语和常见误识别、碎片条、括号注释（观众听不懂的引用和术语，全角括号、12 字内、约每分钟一条）、中英翻译要求、终检。
+- 听不准的词、删掉的内容（说错的数字、不准确的说法）、加了哪些注释，列出来告诉用户。
 
 ### 4. 剪口播
 `build_edit.py`（口播和出镜画面在同一帧上切）→ `qa_asr.py` 再识别一遍，查剪辑点漏掉的口癖、切掉的半个字，改 `make_cues.py` 重跑。作品展示这类段落，在念完后用 `hold` 留 1.5–2 s 让片段原声出来。
+剪完、渲染前按 `subtitles.md` 的「终检」过一遍字幕，用表格（时间 + 改后的字幕）把改动给用户看。
 
 ### 5. 画面
-`制作\03_成片\`：`build_timeline.py`（按字幕条排画面，SCENES 每期重写）→ `prep_media.py cam`（出镜逐帧）+ 本期演示素材 → 写 `index.html` 的画面（02 期的画面是例子，按本期口播重写；说到哪个词就出哪样东西，用 `tm.at("词")`）→ `render_all.py --stills …` 抽帧自查。
+`制作\03_成片\`：`build_timeline.py`（按字幕条排画面，SCENES 每期重写）→ `prep_media.py cam`（出镜逐帧）+ 本期演示素材 → 写 `index.html` 的画面（02 期的画面是例子，按本期口播重写；说到哪个词就出哪样东西，用 `tm.at("词")`）→ `render_all.py --stills …` 抽帧自查。我们自己排的中文文字层（标题卡、章节名、要点、标签）配英文小字，见 `subtitles.md`。
 
 ### 6. 混音、正片
 `mix_audio.py`（口播 −16 LUFS，系列 BGM 很轻地垫着，作品原声有人声时压低、停顿时抬起）→ `render_all.py`（4 路）→ `<NN_标题>_正片.mp4`（不含片头片尾）→ `export_srt.py`（双语 / 中文 / 英文 SRT，时间已加上片头 3.8 s）。
@@ -77,6 +81,7 @@ description: 制作悠一出镜的「Way to AGI」合集视频（B 站 + YouTube
 - 版面：白底；出镜像画框一样框在画面里，不全屏（大框在左 = A；缩到左上角 + 左下目录 = B；作品展示 = C），主体放演示；字幕中英双语、按画面居中；只用 OFL 字体。
 - 事实（价格、分数、发布时间）查官方来源，画面上写来源和截止日期；拿不准的说法告诉用户。
 - 剪辑：说错的地方删掉而不是配字幕纠正；删改了什么都告诉用户。
+- 字幕：和成片里听到的一致；括号注释只放没说出口的话（对齐说话时间的脚本会跳过它）；规范见 `references/subtitles.md`。
 
 ## 安全与合规
 
@@ -89,6 +94,7 @@ description: 制作悠一出镜的「Way to AGI」合集视频（B 站 + YouTube
 | 文件 | 什么时候读 |
 |---|---|
 | `references/pipeline.md` | 每一步的具体做法、参数、页面结构 |
+| `references/subtitles.md` | 写字幕前、交字幕给用户看前：去口癖、术语、括号注释、双语翻译、终检 |
 | `references/publish.md` | 填 B 站投稿页、YouTube Studio |
 | `references/lessons.md` | 遇到报错或怪现象时 |
 | `scripts/new_episode.py` | 建新一期目录 |
