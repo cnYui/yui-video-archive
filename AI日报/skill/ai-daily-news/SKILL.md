@@ -145,7 +145,7 @@ description: 全自动做一期并定时发布 B 站《AI每日日报》（主�
 1. `tabs_context_mcp` → 新标签页打开 `https://member.bilibili.com/platform/upload/video/frame`。页面有 3 个视频 `input[type=file]`，用第一个（`bcc-upload-wrapper` 里）：`file_upload` 传 `<dir_name>_上传版.mp4`（≤9 MB）。表单在选了视频后才出现。B 站不收 H.265 时：`D render --skip-main --x264` 重做上传版再传。
 2. 标题：默认是文件名，点进去 `ctrl+a` → `Delete` → 输入。
 3. 标签：先点 × 删掉 B 站自动加的（从右往左），再逐个输入 + `Return`，共 10 个。
-4. 封面：点“添加封面”→ 弹窗里“上传封面”旁边的 `image/png, image/jpeg` 输入框传 `封面\封面_16x9_1920x1080.png`；4:3 自动居中裁，看一眼，点“完成”。
+4. 封面：点“添加封面”→ 弹窗（2026-10 起分成「首页推荐封面（4:3）」「个人空间封面（16:9）」两个位）。**先勾上「双比例同步改动」**（`label.sync-checkbox`，默认没勾；不勾只会换当前选中的 4:3 位，16:9 位保持 B 站自动截的首帧，个人空间和稿件列表里就显示成默认首帧——2026-10-01 就这样漏过）→ 再在“上传封面”旁边的 `image/png, image/jpeg` 输入框传 `封面\封面_16x9_1920x1080.png` → 核对两个位的预览都是新封面（弹窗里的 `canvas` 采样，蓝色像素占比 >5%；或截图）→ 点“完成”（文字为“完成”的 `div.button.submit`，用 JS `click()`；弹窗比窗口高，“完成”常在视口外，`find` 找不到）。
 5. 创作声明「含AI生成内容」；分区「人工智能」（下拉只有一级；填完标签再看一次有没有被改）。
 6. 简介（2026-09-28 实测）：页面上有两个 Quill 编辑器，简介是 `data-placeholder` 以“填写更全面”开头的那个 `.ql-editor`。用 `javascript_tool`：`ed.closest('.ql-container').__quill.setText(简介, 'user')`（`简介` 用 `投稿信息.json` 的 description 原样拼成 JS 字符串）。核对：字数显示 `N/2000`；`getText()` 去掉末尾换行后算 SHA-256，和本地 description 的 SHA-256 一致（返回 `true/false`，别直接返回哈希，会被插件拦）。不要逐行 `type`：慢，而且 Quill 会把行首“1. ”变列表。**来源那一段必须保留**；`daily.py` 超 2000 字会先去掉“今日内容”时间表，gate 也会挡超长的简介。
 7. 合集：“加入合集”下拉（`find` 找“请选择合集”）→ 选「AI每日日报」。“此稿件不生成更新推送”不勾。
@@ -155,10 +155,10 @@ description: 全自动做一期并定时发布 B 站《AI每日日报》（主�
    - 时间：点开时间下拉 → 两列 `.time-picker-panel-select-wrp`（第一列小时 00–23，第二列分钟 00/05/…/55）→ 第一列点“06”、第二列点“00”（`.time-picker-panel-select-item`）→ 点一下“定时发布”标题收起。
    - 核对：从 `.time-container` 往上找 Vue 组件 `TimeRelease`，`__vue__.$props.dtime`（Unix 秒）要等于这天北京 06:00 = 前一天 UTC 22:00（2026-09-28 → 1790546400）。
    - 这个账号定时范围是 5 分钟后到 15 天内；已经过了北京 05:55 就不开定时，直接投稿。
-9. 等上传、转码完成，截图核对整页，点页面最底部的「立即投稿」（开了定时也是这个按钮），**只点一次**。成功页“稿件投递成功”→“查看进度”，地址栏 `bvid=BV…` 就是 BV 号 → `D published --bv BV1…`。关掉自己开的标签页。
+9. 等上传、转码完成，截图核对整页，点页面最底部的「立即投稿」（开了定时也是这个按钮），**只点一次**。成功页“稿件投递成功”→“查看进度”，地址栏 `bvid=BV…` 就是 BV 号 → `D published --bv BV1…`。关掉自己开的标签页前，**先核对线上封面两个比例都换了**（2026-10-01 加）：在插件标签页里 `fetch('https://member.bilibili.com/x/vupre/web/archive/view?topic_grey=1&bvid=<BV>', {credentials: 'include'})`，取 `data.archive.cover`（16:9）和 `cover43`（4:3），各用 `<img crossOrigin="anonymous">` + `canvas` 采样，**两张的蓝色像素占比都要 >5%**（设计好的封面约 11–14%；B 站自动截的首帧是米白底加一小块橙色，0%）。只返回尺寸和百分比，别返回网址。有一张没换上：按下面“换已发布稿件的封面”补做，别等用户发现。
 - `javascript_tool` 的返回值里有 HTML、图片网址或长的十六进制串会被插件拦下（“Cookie/query string data”“Base64 encoded data”）：只返回自己拼的短文本、布尔值，或截图、缩放看。
 - 投稿页的截图坐标和页面坐标对不上（页面 CSS 宽约 1670，截图 1456），按截图坐标点常常点偏：用 `find` 拿 `ref` 点，或 `javascript_tool` 里 `element.click()`。
-- 换已发布稿件的封面（2026-09-28 实测，9/27、9/28 换新版封面时用过；只在用户要求时做）：打开 `https://member.bilibili.com/platform/upload/video/frame?type=edit&bvid=<BV>` → 封面上悬停出现「封面设置」（`.cover-module-main .edit-text`），点开 → 封面制作弹窗里 `image/png, image/jpeg` 的输入框 `file_upload` 新的 16:9 封面 → 看一眼 4:3、16:9 两个裁切 →「完成」→ 核对标题、标签、简介（Quill `getText()` 的长度 / 哈希）、合集都没变 → 底部「立即投稿」（`.submit-add`）点一次 →“稿件投递成功”。修改要重新过审，稿件管理列表里马上显示新封面。旧封面文件挪进 `封面\_旧稿_*\`。
+- 换已发布稿件的封面（2026-09-28 实测，9/27、9/28 换新版封面时用过；只在用户要求时做）：打开 `https://member.bilibili.com/platform/upload/video/frame?type=edit&bvid=<BV>` → 封面上悬停出现「封面设置」（`.cover-module-main .edit-text`），点开 → 封面制作弹窗里**先勾「双比例同步改动」**，再在 `image/png, image/jpeg` 的输入框 `file_upload` 新的 16:9 封面 → 看一眼 4:3、16:9 两个预览（`canvas` 采样，见第 8 步第 4 条）→「完成」→ 核对标题、标签、简介（Quill `getText()` 的长度 / 哈希）、合集都没变 → 底部「立即投稿」（`.submit-add`）点一次 →“稿件投递成功”→ 用上面的接口核对 `cover` 和 `cover43` 都换了。2026-10-01 实测：已公开的稿件改封面后状态仍是“开放浏览”（没有重新审核），公开接口的 `pic` 马上就是新图；手机 App 可能要下拉刷新。旧封面文件挪进 `封面\_旧稿_*\`。
 
 ### 9. 通知和记录
 - `PushNotification`（一行）：“9月28日 AI日报已定时 06:00：BV1…，7 条，5:32”；没发就写原因。
@@ -210,6 +210,8 @@ B 站要求稿件已过审、公开，且总时长超过 5 分钟，最多 10 �
 | 白板版串讲清单写到最后一条时，右上目录淡入和清单右栏叠在一起 | 白板版的 `scenes.board.js` 把 `ENG.tocInTime` 改成第一条新闻开始时（目录那时才出现）；最后几条的笔速上限放宽，赶在开场结束前写完 |
 | 白板版引擎加了 `handdata.js`、`hand.js`、`board.css`，深色版的期也要有这几个文件（缺文件 = 页面加载失败 = render 退出码 2） | `make_episode.py` 总是复制 `hand.js`、`board.css`，深色版写一个 `window.__HAND__ = null;` 的 `handdata.js`；深色版 11 个时刻和改之前逐像素一致 |
 | 并行渲染时个别图片偶发加载失败（`Failed to load resource: net::ERR_FAILED`），以前 render 直接报页面错误停下，这天就断了（《原LAI如此》第 2 期 10 路里 9 路报过） | 2026-09-28 移植了《原LAI如此》的修法：引擎 `loadImg` 失败重试 5 次（`?r=N`）；`render_wide.py` 按文件地址核对，救回来的只打一行提示，重试完还失败才算页面错误（带文件地址）；`render_parallel_wide.py` 各路错开 0.7 s 启动。真报了“image failed …”就是素材缺失，查文件，别反复重跑 |
+| 10/1：投稿后封面在个人空间和稿件列表里是默认首帧（米白底 + 一小块橙色），但编辑页里的封面看着正常；routine 记录里写了“封面已上传，点完成” | B 站的封面弹窗现在分「首页推荐 4:3」和「个人空间 16:9」两个位，「双比例同步改动」默认没勾，上传只进了 4:3 位；接口里 `archive.cover`（16:9）还是自动首帧、`cover43` 才是新封面。勾上「双比例同步改动」再传；投稿后用接口核对两个封面（第 8 步第 9 条）。编辑页只显示 4:3，不能拿它判断封面换没换 |
+| 封面弹窗里截图反复超时（`Page.captureScreenshot timed out`）、截图内容错位 | 弹窗很吃页面，别靠截图：用 `javascript_tool` 读 DOM / 画布，点击用 `element.click()`；视口（`innerWidth`）比截图坐标系大约 1.37 倍 |
 | 标签“Claude”加不上 | 话题专用词；`daily.py` 已换成 Anthropic |
 | 创作声明里找不到“使用人工智能合成技术” | 选项现在叫「含AI生成内容」 |
 | 8 条时回顾卡超出屏幕、目录挡住回顾卡 | 6 条以上回顾卡分两栏；回顾场目录淡出 |
