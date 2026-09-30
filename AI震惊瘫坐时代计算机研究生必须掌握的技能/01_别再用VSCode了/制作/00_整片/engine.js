@@ -39,7 +39,7 @@ window.renderAt = async function (t) {
     tocEl.querySelectorAll('.it').forEach(e => { const k = +e.dataset.i; e.className = 'it' + (k === s.toc ? ' now' : (s.toc === -1 || k < s.toc) ? ' done' : ''); });
   } else tocEl.style.opacity = 0;
   // 画面内容淡入淡出
-  const delay = prev && prev.layout !== s.layout ? 0.3 : 0;
+  const delay = prev && prev.layout !== s.layout ? MOVE : 0;
   const ain = easeOut((lt - delay) / FIN), aout = 1 - easeIn((lt - (dur - FOUT)) / FOUT);
   cur.root.style.opacity = Math.min(ain, aout);
   cur.root.style.transform = `translateY(${(1 - ain) * 14}px)`;
