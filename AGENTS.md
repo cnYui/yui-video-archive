@@ -16,6 +16,7 @@ D:\大疆\                         （git 仓库，remote origin = cnYui/yui-vid
 ├─ AGENTS.md  CLAUDE.md（导入 AGENTS.md）  README.md（三个合集对照表）  .gitignore（白名单）
 ├─ docs\ai\context\              每次任务的记录
 ├─ 真人素材\                      日常 vlog、露营等原始拍摄素材（图片素材\ 视频素材\ 音乐素材\，约 19 GB），和 AI 视频无关：只读，不改名、不移动、不删，不进 git
+├─ 声音克隆素材\                  Fish Audio 专业声音克隆（PVC）的训练素材（2026-09-30）：上传用\（21 段 wav，用户的声音，不进 git）、build_clips.py、README.md；记录 20260930-211203-fish-pvc-voice-clips_CN.md
 ├─ AI科普\                        《原LAI如此》（目录没改成合集名，原因见下一节）
 │  ├─ skill\yuanlai-ruci-episode\  技能：SKILL.md、references\、scripts\、assets\engine-template\、assets\cover-template\
 │  ├─ 素材\                       字体\（OFL）；角色\：山田凉像素素材包\（原始包，只读）、山田凉像素素材包_v2\、大肥鱼像素素材包\、动作帧\（引擎用，只追加）、动作生成器\；背景图库\（编号续上，原图不改）；音频\（系列 BGM、音效）；手写\ → 联接 AI日报\素材\手写
@@ -334,3 +335,9 @@ D:\大疆\                         （git 仓库，remote origin = cnYui/yui-vid
     - YouTube 自定义缩略图要用户先验证手机号。
   - 原记录 `20260930-130829-…` 和第五期选题记录重名，已改名为 `20260930-185300-ep1-v2-layout-fix-burn-srt_CN.md`。
   - 过程见 `docs/ai/context/20260930-192227-ep1-intro-outro_CN.md`。
+- Fish Audio 专业声音克隆（2026-09-30 用户：“按页面的要求，把我之前做的视频切分一下，特别是真人出镜说话的那段，我来上传”）：真人口播已切成 21 段 wav（17.9 分钟，规格取自 Fish 官方博客 2026-06-15），在 `声音克隆素材/上传用/`，说明见 `声音克隆素材/README.md`，记录 `docs/ai/context/20260930-211203-fish-pvc-voice-clips_CN.md`。
+  - 等用户：**自己上传**（用户 2026-09-30：“你把文件路径给我，我来上传”）→ 看页面对每段通过 / 被拒的标注 → 被拒的把理由发给我再处理 → **用户本人**现场朗读做声音验证 → 训练。
+  - 页面现行要求已用 Chrome 插件核对，和官方博客一致（MP3 / WAV / FLAC，每段 < 1 分钟，建议 12–15 段 × 45–60 秒，总长 10–180 分钟）。
+  - 用户说“用浏览器插件，不要用内置浏览器”：内置浏览器没有用户的登录态；Chrome 插件是登录的，能读页面，但它的 `file_upload` 在 Fish 的 PVC 页会卡死（页面不发上传请求），所以上传不能交给我。
+  - 做完的克隆目前不能删除，槽位从开始就占用。
+  - `build_clips.py` 的口播来源之一在工作树里（第 1 期 `narration.wav`）：清理工作树前先把期目录挪回主目录，再改脚本里的 `SOURCES`。
