@@ -10,8 +10,9 @@ Writes (never deletes; replaced files go to SERIES/_旧稿/):
 Then run build_script.py / chunk_voice.py / … with --series D:/大疆/AI日报 (daily.py does all of this).
 
 台本.json (written by Claude during the run; see SKILL.md):
-  {date: "2026-09-27", opening: [{text, tts?, expr?}], news: [{headline, org, source, source_short?, date, points[],
-   rundown_key?, lines: [{text, tts?, point?, expr?}], refs: [{name, url}]}], closing: [{text, tts?, expr?}]}
+  {date: "2026-09-27", opening: [{text, en, tts?, expr?, cuts?}], news: [{headline, org, source, source_short?, date, points[],
+   rundown_key?, lines: [{text, en, tts?, point?, expr?, cuts?}], refs: [{name, url}]}], closing: [{text, en, tts?, expr?, cuts?}]}
+  en = 这句的英文字幕（2026-10-02 起中英双语，项目统一标准；拆条和检查见 bilingual_subs.py）
 """
 import argparse
 import json
@@ -133,6 +134,12 @@ def validate(sc):
         need(cv.get("mood", "吃惊") in ("吃惊", "开心", "疑问", "认真"), "cover.mood 只能是 吃惊 / 开心 / 疑问 / 认真")
         if re.search(r"\d+\s*月\s*\d+\s*日|周[一二三四五六日天]", (cv.get("line1") or "") + (cv.get("line2") or "")):
             errs.append("封面文案里不写日期（用户 2026-09-28：和标题重复）")
+    # 中英双语字幕（用户 2026-10-02：“改成双语，按统一标准来”）：每句要有 en，拆出来的每条中文 ≤ 约 28 字、英文 ≤ 约 90 字符
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    from bilingual_subs import check as check_bilingual
+    e2, w2 = check_bilingual(sc)
+    errs += e2
+    warns += w2
     if (sc.get("style") or STYLE_DEFAULT) == "board" and re.fullmatch(r"\d{4}-\d{2}-\d{2}", sc.get("date", "")):
         sys.path.insert(0, str(Path(__file__).resolve().parent))
         from hand_glyphs import collect
@@ -234,7 +241,8 @@ def main():
         scenes.append(dict(id=ids[i + 1], title=n["headline"], rows=rows))
         news_ep.append({k: n.get(k) for k in ("headline", "org", "source", "source_short", "date", "points", "rundown_key") if n.get(k)}
                        | {"line_points": [ln.get("point") for ln in n["lines"]], "refs": n.get("refs") or []})
-    closing = [row(ln, "今日回顾卡") for ln in sc.get("closing") or [{"text": "来源都在简介里。"}]]
+    from bilingual_subs import DEFAULT_CLOSING
+    closing = [row(ln, "今日回顾卡") for ln in sc.get("closing") or DEFAULT_CLOSING]
     closing.append(("gap", 2.0, "今日回顾卡停留（结尾那句太短，不停一下卡片看不清）"))
     scenes.append(dict(id=ids[-1], title="回顾", rows=closing))
 

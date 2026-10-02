@@ -314,7 +314,7 @@
     return s0 ? Math.max(0, s0.start - 0.4) : 1e9;
   };
 
-  let stage, subsBox, subStroke, subFill, charCv, charCtx, charShadow, barP, pickEl, barTag, fadeEl, bgLayer;
+  let stage, subsBox, subStroke, subFill, subEnStroke, subEnFill, charCv, charCtx, charShadow, barP, pickEl, barTag, fadeEl, bgLayer;
 
   // ---------------------------------------------------------------- loading
   // Every frame of every anim is preloaded (鲸鱼娘: 115 anims, ~1300 PNGs). With 10 Chromium workers loading at once
@@ -1119,6 +1119,14 @@
   const SUB_FS = BOARD ? 56 : 44;
   const SUB_MAXW = BOARD ? Math.min(1500, CW - 800) : 1240;
   ENG.SUB = { fs: SUB_FS, maxw: SUB_MAXW, top: BOARD ? 918 : 934, h: BOARD ? 72 : 60 };   // #subs box (style.css / board.css)
+  // 中英双语（episode.json "bilingual"，用户 2026-10-02：“原LAI如此也改成双语”；build_timeline 用 bilingual.py 把拆好的条写进
+  // segments[].subs = zh / en / a / b（显示区间）），有 subs 就按项目统一标准画：中文 52 px / 800 一行 + 英文 30 px / 600 一行，
+  // 字幕带从 y 900 起（标准是 922，底部有进度条，英文行要让开它的标签），一行最宽 1560 px（2340 宽时 x 390..1950，
+  // 讲解员在 x ≤ 380；更窄的画布 CW − 780）。样式在 style.css / board.css 的 #subs.bi
+  const BI = SEGS.some(sg => sg.subs && sg.subs.length);
+  const BI_ZH = 52, BI_EN = 30, BI_MAXW = Math.min(1560, CW - 780);
+  if (BI) ENG.SUB = { fs: BI_ZH, maxw: BI_MAXW, top: 900, h: 130, bilingual: true };
+  ENG.subOverflow = [];    // 双语字幕里按标准字号放不下 BI_MAXW 的条（check_layout.py 会报）
   const SUBS = [];
   let subIdx = -2, TERMS = [];
   // orange subtitle terms (ENG.TERMS + episode.terms), marked longest first and never overlapping a term already
@@ -1150,6 +1158,7 @@
     subsBox = el('div', '', stage); subsBox.id = 'subs';
     subStroke = el('div', 's stroke', subsBox); subFill = el('div', 's fill', subsBox);
     TERMS = [...new Set([...(ENG.TERMS || []), ...(EP.terms || [])])].filter(Boolean).map(String).sort((a, b) => b.length - a.length);
+    if (BI) return buildSubsBi();
     const probe = el('span', '', stage); css(probe, { position: 'absolute', left: -9999, top: 0, whiteSpace: 'nowrap', font: `700 ${SUB_FS}px "Noto Sans SC"`, letterSpacing: '.02em' });
     for (const sg of SEGS) {
       let cur = null;
@@ -1172,6 +1181,27 @@
     }
     probe.remove();
   }
+  function buildSubsBi() {
+    subsBox.classList.add('bi');
+    subEnStroke = el('div', 's en stroke', subsBox); subEnFill = el('div', 's en fill', subsBox);
+    for (const sg of SEGS) for (const x of sg.subs || []) SUBS.push({ text: x.zh, en: x.en, start: +x.a, end: +x.b });
+    SUBS.sort((a, b) => a.start - b.start);
+    const probe = el('span', '', stage); css(probe, { position: 'absolute', left: -9999, top: 0, whiteSpace: 'nowrap' });
+    const width = (txt, font) => { probe.style.font = font; probe.textContent = txt; return probe.offsetWidth; };
+    for (const s of SUBS) {
+      // 标准是放不下就拆条（build_timeline 已经拆过）；万一还宽，缩字号兜底并记下来
+      const wz = width(s.text, `800 ${BI_ZH}px "Noto Sans SC"`), we = width(s.en, `600 ${BI_EN}px "Noto Sans SC"`);
+      s.fs = wz > BI_MAXW ? Math.floor(BI_ZH * BI_MAXW / wz) : BI_ZH;
+      s.efs = we > BI_MAXW ? Math.floor(BI_EN * BI_MAXW / we) : BI_EN;
+      if (wz > BI_MAXW || we > BI_MAXW) {
+        ENG.subOverflow.push({ t: +s.start.toFixed(2), zh: s.text, en: s.en, wz, we });
+        console.warn(`bilingual subtitle wider than ${BI_MAXW}px: ${s.text} / ${s.en}`);
+      }
+      s.html = subHTML(s.text);
+      s.ehtml = esc(s.en);
+    }
+    probe.remove();
+  }
   /** subtitle markup: orange terms + optically hung edge punctuation. Full-width 。，”？ etc. carry their ink in one
    *  half of the em box, so a line ending in 。 looked ~14 px left of centre; a negative margin on that glyph
    *  (style.css .hr / .hr2 / .hl) centres the visible ink on x = 960 instead of the layout box. */
@@ -1190,8 +1220,14 @@
     if (k >= 0 && t >= SUBS[k].end) k = -1;
     if (k !== subIdx) {
       subIdx = k;
-      if (k < 0) { subStroke.innerHTML = ''; subFill.innerHTML = ''; }
-      else {
+      if (k < 0) { subStroke.innerHTML = ''; subFill.innerHTML = ''; if (BI) { subEnStroke.innerHTML = ''; subEnFill.innerHTML = ''; } }
+      else if (BI) {
+        const s = SUBS[k];
+        subStroke.innerHTML = subFill.innerHTML = s.html;
+        subEnStroke.innerHTML = subEnFill.innerHTML = s.ehtml;
+        subStroke.style.fontSize = subFill.style.fontSize = s.fs + 'px';
+        subEnStroke.style.fontSize = subEnFill.style.fontSize = s.efs + 'px';
+      } else {
         const s = SUBS[k];
         subStroke.innerHTML = s.html; subFill.innerHTML = s.html;
         const fs = s.fs + 'px', top = ((SUB_FS - s.fs) * 0.94) + 'px';
@@ -1274,7 +1310,8 @@
       chap.forEach((ch, i) => { const on = i === k; ch.bu.classList.toggle('cur', on); ch.bp.classList.toggle('cur', on); ch.lab.classList.toggle('cur', on); });
       curChap = k;
       const ch = chap[k];
-      if (ch && ch.abbrev) { barTag.textContent = ch.full; barTag.style.left = Math.max(8, ch.x0) + 'px'; barTag.style.visibility = ''; }
+      // 双语时英文行占了 barTag 的位置（y 988–1018），不显示
+      if (ch && ch.abbrev && !BI) { barTag.textContent = ch.full; barTag.style.left = Math.max(8, ch.x0) + 'px'; barTag.style.visibility = ''; }
       else barTag.style.visibility = 'hidden';
     }
   }

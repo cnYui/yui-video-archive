@@ -7,7 +7,8 @@ At the end it prints the character's actions: explicit ones from the timeline an
 Whiteboard episodes (episode.json "style": "board", hand.js): the ink of every handwritten item (<g data-hand>, SVG, which
 the text checks cannot see) is checked against the same zones and the canvas ("intrudes subtitle: hand:一、Jev 是什么");
 writing still going on when its scene fades (ENG.handLate) and characters without stroke data (ENG.handMissing) count as
-issues. The subtitle band follows ENG.SUB (board: 56 px, up to 1500 px wide, from y 906).
+issues. The subtitle band follows ENG.SUB (board: 56 px, up to 1500 px wide, from y 906; 中英双语 (episode.json
+"bilingual"): 52 + 30 px, up to 1560 px wide, from y 888); a bilingual cue wider than that is a "sub-wide" issue.
 Also (2026-09-28, after the episode-3 whiteboard test), for every episode: contents overlapping each other ("overlap:
 A × B": handwriting, the board's printed notes, cards / code / windows / nodes / chips / tokens; an element inside
 another is not an overlap), c.P phrases not found in their segment ("phrase-miss"); on the board: handwriting erased
@@ -241,6 +242,11 @@ def main():
             total += 1
         if hand["missing"]:
             print("hand-missing: 没有笔画数据、写出来会留空的字：" + "".join(hand["missing"]))
+            total += 1
+        sw = pg.evaluate("() => ({ wide: ENG.subOverflow || [], maxw: (ENG.SUB || {}).maxw })")
+        for x in sw["wide"]:                                        # 中英双语字幕（2026-10-02 起）按标准字号放不下的条
+            print(f"sub-wide: {x['t']} s「{x['zh']}」/「{x['en']}」{x['wz']} / {x['we']} px，上限 {sw['maxw']}"
+                  "（script_data.py 那一行的 dict 里写 cuts，或把句子写短）")
             total += 1
         print("issues:", total, "console errors:", errs,
               f"(+ {expected} expected: question cards flying into the TOC)" if expected else "")

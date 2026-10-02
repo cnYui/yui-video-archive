@@ -13,7 +13,8 @@ The character is 鲸鱼娘's 64x64 frame `pose` (a key of 素材/角色/动作�
 eyes rectangle taken from `eyes` (e.g. idle_surprised_m0 / idle_happy_m0 / idle_look_r_m0: the pack keeps hands out of that
 rectangle, so any expression fits any pose), `fx` overlay frames (fx_emph "!", fx_think, fx_glint, fx_listen …) and an
 optional orange pixel "?" (--qmark) drawn on the same grid. She is scaled by an integer, never mirrored.
-Writes to --out (default <期目录>/封面/): 封面_16x9_1920x1080.png, 封面_4x3_1440x1080.png (centre crop x 240..1680),
+Writes to --out (default <期目录>/封面/): 封面_16x9_1920x1080.png, 封面_4x3_1440x1080.png (centre crop x 240..1680;
+the two big lines stay ≥ 60 px inside it, checked after rendering),
 封面_预览.png (feed-size board, from 《原LAI如此》 make_cover), cover.html, _cover_data.json, sprite.png.
 """
 import argparse
@@ -63,6 +64,10 @@ POSES = {
              dict(pose="chest_m0", eyes="idle_determined_m0")],
 }
 DEFAULT_THEME = "blue"          # 用户 2026-09-28 选定：D 版（角色右下、左边小字清单）+ 鲸鱼娘蓝
+# 4:3 封面 = 16:9 的居中裁切 x 240..1680；大字和清单在 4:3 里左右各留 SAFE_MARGIN（2026-10-02 用户要求修：
+# 以前文字中线 900、最宽 1320，长标题的左边正好压在裁切线上，4:3 版大字离左边只有 3–12 px）
+CROP43 = (240, 1680)
+SAFE_MARGIN = 60
 
 
 def pose_for(mood, date):
@@ -116,6 +121,16 @@ def place_x(place, scale, frame_w=64):
     if place == "left":
         return 270                                  # 4:3 裁切从 x 240 起
     return 1680 - frame_w * scale - 30              # right: 尾巴尖也留在 4:3 里
+
+
+def ink_margins(im, bg, rows):
+    """left / right distance (px) from the image edges to the first non-background pixel in rows [y0, y1)"""
+    r0, g0, b0 = (int(bg.lstrip("#")[i:i + 2], 16) for i in (0, 2, 4))
+    px = im.convert("RGB").load()
+    w = im.width
+    cols = [x for x in range(w) if any(abs(px[x, y][0] - r0) + abs(px[x, y][1] - g0) + abs(px[x, y][2] - b0) > 60
+                                       for y in range(rows[0], rows[1], 2))]
+    return (cols[0], w - 1 - cols[-1]) if cols else (w, w)
 
 
 def main():
@@ -181,7 +196,8 @@ def main():
     sprite.save(sprite_png)
     fw, fh = anims["frame_w"], anims["frame_h"]
     data = {"line1": args.line1, "line2": args.line2, "l1px": args.l1px, "l2px": args.l2px,
-            "maxw": args.maxw or (1400 if args.place == "center" else 1320),
+            "maxw": min(args.maxw or (1400 if args.place == "center" else 1320), CROP43[1] - CROP43[0] - 2 * SAFE_MARGIN),
+            "safe": [CROP43[0] + SAFE_MARGIN, CROP43[1] - SAFE_MARGIN],
             "textCx": args.text_cx or {"center": 960, "right": 900, "left": 1020}[args.place],
             "scale": args.scale, "frame": [fw, fh], "footRow": anims["anchor"]["foot_y"],
             "fishX": place_x(args.place, args.scale, fw), "foot": args.foot, "tag": args.tag, "theme": theme,
@@ -194,8 +210,9 @@ def main():
         shown = rest[: args.others_max]
         data.update({"others": shown, "othersHead": args.others_head.format(n=len(rest)),
                      "othersMore": f"……共 {len(heads)} 条" if len(rest) > len(shown) else "",
-                     # 清单放在角色对面：角色在右 → 清单 x 270..1040；角色在左 → 清单 x 880..1650（都在 4:3 裁切内）
-                     "listX": 270 if args.place == "right" else 880, "listW": 770, "listBottom": 1000})
+                     # 清单放在角色对面：角色在右 → 清单 x 300..1040；角色在左 → 清单 x 880..1620（4:3 里两边各留 60 px）
+                     "listX": CROP43[0] + SAFE_MARGIN if args.place == "right" else 880,
+                     "listW": 740, "listBottom": 1000})
     html = out / "cover.html"
     page = TEMPLATE.read_text(encoding="utf-8")
     page = page.replace("{{FONTS_CSS}}", rel(SERIES / "素材" / "字体" / "fonts.css", out)).replace("{{SPRITE}}", "sprite.png")
@@ -217,8 +234,12 @@ def main():
     assert src.size == (1920, 1080), src.size
     p169, p43, pprev = out / "封面_16x9_1920x1080.png", out / "封面_4x3_1440x1080.png", out / "封面_预览.png"
     src.save(p169, optimize=True)
-    crop = src.crop((240, 0, 1680, 1080))
+    crop = src.crop((CROP43[0], 0, CROP43[1], 1080))
     crop.save(p43, optimize=True)
+    margins = ink_margins(crop, theme["bg"], rows=(0, 500))      # y < 500 只有两行大字（角色的头顶在 y 504 以下）
+    print(f"4:3 大字左右边距：{margins[0]} / {margins[1]} px")
+    if min(margins) < SAFE_MARGIN - 8:
+        sys.exit(f"4:3 封面大字离边太近（{margins} px，要 ≥ {SAFE_MARGIN - 8}）：看 cover.html 的 safe / maxw")
     sys.path.insert(0, str(YUANLAI_SCRIPTS))
     import make_cover as yl                                   # 《原LAI如此》 helpers: feed thumbnails + preview board
     yl.preview_board(SERIES, src, crop, pprev, yl.video_length_label(ep, ep_json))

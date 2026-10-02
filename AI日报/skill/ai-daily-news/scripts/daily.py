@@ -8,7 +8,7 @@
     python daily.py webvoice --task <编号> [--task <编号2>] [--date ...] [--probe]   网页版音频 → 配音/raw/C01_vN.mp3（登记文字、记用量）
     python daily.py tts    [--date ...] --api [--takes 1] [--model s1]   Fish Audio API 配音（停用：只在用户点名时加 --api 用）
     python daily.py voice  [--date ...] [--hist urls_hist.txt]   选版本 + 按句切开、对齐字幕
-    python daily.py render [--date ...] [--skip-main]           时间轴 → 混音 → 成片 → 封面 → 上传版（≤9 MB）→ 核对 → 审稿单、投稿信息
+    python daily.py render [--date ...] [--skip-main]           时间轴 → 混音 → 中英双语字幕 → 成片 → 封面 → 上传版（≤9 MB）→ 核对 → 审稿单、投稿信息
         ✋ 用户看 审稿单.md 和成片，回复“发”；Claude 用 Chrome 插件填 B 站投稿页，收到“发”才点「立即投稿」
     python daily.py published --bv BV1xxxxxxxxx [--date ...]   记 BV 号，写进已播清单（下次选题去重用）
     python daily.py status [--date ...]
@@ -268,6 +268,7 @@ def encode_upload(src, dst, logdir, codec="hevc"):
 NUM = re.compile(r"\d+(?:\.\d+)?")
 LATIN = re.compile(r"[A-Za-z][A-Za-z0-9.\-]*\d[A-Za-z0-9.\-]*|[A-Z][A-Za-z]{2,}")
 COMMON = {"AI", "CEO", "API", "The", "App", "OpenAI", "Anthropic", "Google"}
+MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 
 
 def page_text(url):
@@ -285,6 +286,22 @@ def page_text(url):
         return False, f"{type(e).__name__}: {str(e)[:60]}"
 
 
+def num_alts(txt):
+    """Other spellings of the numbers in a Chinese line that an English source may use instead."""
+    alt = {}
+    # “116亿” = 11.6 billion, “18亿” = 1.8 billion, “3万” = 30,000 / 30K: accept the English forms too
+    for num, unit in re.findall(r"(\d+(?:\.\d+)?)\s*(亿|万)", txt):
+        v = float(num) / 10 if unit == "亿" else float(num) * 10
+        s = f"{v:g}"
+        alt[num] = [s, s + "k"] if unit == "万" else [s]
+    # “9 月” = September / Sep（英文原文只写月份名，没有数字 9；2026-10-01 DeepMind 博客）
+    for num in re.findall(r"(?<![\d.])(\d{1,2})\s*月", txt):
+        if 1 <= int(num) <= 12:
+            name = MONTHS[int(num) - 1]
+            alt.setdefault(num, []).extend([name, name[:3] + " "])
+    return alt
+
+
 def fact_check(sc):
     """For every line: numbers and latin names that do not appear in any of its item's source pages."""
     cache, out = {}, []
@@ -300,12 +317,7 @@ def fact_check(sc):
         for ln in n["lines"]:
             txt = ln["text"]
             toks = [t for t in dict.fromkeys(NUM.findall(txt) + LATIN.findall(txt)) if t not in COMMON]
-            # “116亿” = 11.6 billion, “18亿” = 1.8 billion, “3万” = 30,000 / 30K: accept the English forms too
-            alt = {}
-            for num, unit in re.findall(r"(\d+(?:\.\d+)?)\s*(亿|万)", txt):
-                v = float(num) / 10 if unit == "亿" else float(num) * 10
-                s = f"{v:g}"
-                alt[num] = [s, s + "k"] if unit == "万" else [s]
+            alt = num_alts(txt)
             def found(t):
                 return t.lower() in corpus or any(a.lower() in corpus for a in alt.get(t, []))
             missing = [t for t in toks if not found(t)] if corpus else toks
@@ -402,6 +414,8 @@ def cmd_render(a):
     st = load_state(ep)
     run([sys.executable, YL / "build_timeline.py", ep, "--series", SERIES])
     run([sys.executable, YL / "mix_audio.py", ep, "--series", SERIES])
+    # 中英双语字幕（用户 2026-10-02，项目统一标准）：台本每句的 text + en 拆条、按配音对齐的时间写进 timeline.json 的 segments[].subs
+    run([sys.executable, SK / "bilingual_subs.py", ep])
     # 2340x1080（iPhone 全面屏 19.5:9）：本技能自己的宽屏拼接脚本（《原LAI如此》的 assemble.py 是 1920x1080，不动它）
     run([sys.executable, SK / "assemble_wide.py", ep, "--series", SERIES, "--workers", str(a.workers)] + (["--skip-main"] if a.skip_main else []))
     run([sys.executable, SK / "make_cover_white.py", ep, "--from-script"])   # 2026-09-28 起：白底两行大字 + 鲸鱼娘右下 + 其余新闻小字（旧版 make_cover.py 留着不用）
@@ -449,7 +463,7 @@ def cmd_gate(a):
     sc = load_json(ep / "台本.json") or {}
     info = load_json(ep / "投稿信息.json") or {}
     name = ep_json.get("dir_name", "")
-    final, upload, srt = ep / f"{name}_成片.mp4", ep / f"{name}_上传版.mp4", ep / f"{name}_字幕.srt"
+    final, upload, srt = ep / f"{name}_成片.mp4", ep / f"{name}_上传版.mp4", ep / f"{name}_双语字幕.srt"
     checks = []
 
     def add(check, ok, detail="", level="block"):
@@ -463,6 +477,11 @@ def cmd_gate(a):
     add("上传版 ≤ 9 MB", upload.exists() and upload.stat().st_size <= UPLOAD_LIMIT,
         f"{upload.stat().st_size / 1e6:.2f} MB" if upload.exists() else "没有上传版")
     add("封面", all((ep / "封面" / f).exists() for f in ("封面_16x9_1920x1080.png", "封面_4x3_1440x1080.png")), "16:9 + 4:3")
+    tl = load_json(ep / "制作" / "timeline.json", {}) or {}
+    n_sub = sum(len(s.get("subs") or []) for s in tl.get("segments") or [])
+    srts = [ep / f"{name}_{k}.srt" for k in ("双语字幕", "中文字幕", "英文字幕")]
+    add("中英双语字幕（画面 + 三份 SRT）", n_sub and all(s.get("subs") for s in tl.get("segments") or []) and all(p.exists() for p in srts),
+        f"{n_sub} 条" if n_sub else "时间轴里没有 subs：render 里的 bilingual_subs.py 没跑")
     d = datetime.fromisoformat(sc.get("date") or "2000-01-01")
     want_title = f"{d.month}月{d.day}日，鲸鱼娘带你看看AI圈发生了什么？"
     add("标题格式", info.get("title") == want_title, info.get("title", "没有 投稿信息.json"))
@@ -498,8 +517,7 @@ def cmd_gate(a):
         for ln in n.get("lines") or []:
             txt = ln["text"]
             toks = [t for t in dict.fromkeys(NUM.findall(txt) + LATIN.findall(txt)) if t not in COMMON]
-            alt = {num: [f"{float(num) / 10 if unit == '亿' else float(num) * 10:g}"]
-                   for num, unit in re.findall(r"(\d+(?:\.\d+)?)\s*(亿|万)", txt)}
+            alt = num_alts(txt)
             bad = [t for t in toks if t.lower() not in corpus and not any(x.lower() in corpus for x in alt.get(t, []))]
             if bad:
                 fc.append(f"第 {i} 条「{txt[:24]}」原文里没找到：{'、'.join(bad)}")

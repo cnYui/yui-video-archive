@@ -50,7 +50,7 @@ python scripts/assemble.py <期目录>          # 默认 4 路并行（2026-09-2
 - 片头片尾从 `SERIES\片头片尾\` 的 HTML 以 30 fps 重新渲染，**按 canvas 原生渲染**（data 里写 `"canvas": [2340, 1080]`，`render.py` 按它开视口）：名字（悠一）/ 小票居中，底色、纹理、四角裁切标、片头收尾的整屏墨黑铺满全宽，不是把 1920 的画面补边或拉伸。片尾清单用 `episode.json` 的 `outro_items` / `outro_closing`，为空时脚本报错——**去问用户**，不要自己填。
 - 正片：先自动跑一遍 `engine\sync_assets.py --series`（`--no-sync` 跳过），再 `render_parallel.py` 4 路并行（2026-09-28 用户定：所有渲染统一 4 路并行；JPEG q95 截图 → x264 CRF 16；视口 = canvas）。某一路浏览器卡住（截图 / 打开页面 30 s 超时）会自动重启并从卡住的那一帧接着渲染。各路相隔 0.7 s 启动（`--stagger`）；引擎预加载角色帧时偶发的加载失败由引擎自己重试，救回来的只打印一行 `image loads failed and were retried by the engine … all recovered`，不算报错。
 - 三段统一编码后拼接，混入 `mix.wav`（AAC 192k），`+faststart`。
-- 输出（期目录下）：`第NN期_<题目>_成片.mp4`、`_字幕.srt`（画面已烧录，这份给 B 站外挂字幕）、`_章节.txt`（B 站分段章节）。
+- 输出（期目录下）：`第NN期_<题目>_成片.mp4`、字幕（画面已烧录；SRT 给 B 站外挂字幕或存档）、`_章节.txt`（B 站分段章节）。中英双语的期（2026-10-02 起）出三份：`_双语字幕.srt`（每条中文一行、英文一行）、`_中文字幕.srt`、`_英文字幕.srt`，时间 = 画面上的显示区间（`segments[].subs` 的 a / b）；单语的旧期照旧一份 `_字幕.srt`。
 - 脚本自带的检查（不通过就停下，不会留下一个短了的成片）：episode.json 的 canvas 和时间轴里的一致（不一致 = 改了 canvas 没重跑 build_timeline）；片头、正片、片尾和成片的尺寸都等于 canvas；正片帧数 = round(main_duration × 30)；拼接后和成片时长与 `total_duration` 相差 ≤0.1 s；页面报错（JS 异常、console.error、字体加载失败、引擎重试后仍没加载成功的文件——报错里写出文件地址）→ 停下并提示先修 scenes.js。`--skip-main` 时如果时间轴在上次渲染后变了（帧数或尺寸对不上），也会被拦下。
 
 ## 5. 交付前检查
@@ -59,7 +59,7 @@ python scripts/assemble.py <期目录>          # 默认 4 路并行（2026-09-2
 - 抽帧（片头、每章开头和中段、章节切换处、片尾）拼成联系表用 Read 看：
   - 画面是 canvas 的宽度（2340）：内容舞台居中，徽标、讲解员贴画布左边，目录贴画布右边，进度条全宽，背景铺满，两边没有空白或黑边；片头片尾也是全宽、构图居中；
   - 左上只有「原LAI如此 #NN」；右上目录状态对（补充章节期间不高亮，讲完打勾）；
-  - 字幕按画布整体居中、不压角色、不压进度条；
+  - 字幕按画布整体居中、不压角色、不压进度条；双语的期中英两行都在，英文行不压进度条的标签，中英说的是同一件事；
   - 背景按章节切换，够淡，内容清楚；
   - 角色动作出现在该出现的地方，没有镜像、没有跳帧；
   - 进度条章节名和时间正确。
@@ -73,6 +73,7 @@ python scripts/assemble.py <期目录>          # 默认 4 路并行（2026-09-2
 |---|---|
 | 某句配音 | 重生成那一批 → `select_takes.py` → `segment_audio.py` → `build_timeline.py` → `mix_audio.py` → `assemble.py` |
 | 字幕文字（配音不变） | 改 `script_data.py` 字幕原文 → `build_script.py` → `build_timeline.py` → `mix_audio.py` → `assemble.py` |
+| 只改英文字幕（`dict(en=…, cuts=…)`） | `build_script.py`（看 `台本\双语字幕.md`）→ `build_timeline.py`（口型、混音不变，它会提示 mix.wav 仍然有效）→ `assemble.py`（字幕烧在画面里，不能 `--skip-main`） |
 | 画面（scenes.js、背景、动作） | `build_timeline.py`（动作、背景在 timeline 里时）→ `mix_audio.py` → `sync_assets.py` → `assemble.py` |
 | 讲解员的帧还没画完，先出草稿 | `sync_assets.py --frames <已有的帧目录> --allow-missing` → `assemble.py --no-sync`（帧画完后去掉这两个参数重跑 `assemble.py`） |
 | 技能的引擎模板更新了（新规则、修复） | `new_episode.py --update-engine <期目录>`（scenes.js 不动）→ `build_timeline.py` → `mix_audio.py` → `sync_assets.py` → `check_layout.py` → `assemble.py` |

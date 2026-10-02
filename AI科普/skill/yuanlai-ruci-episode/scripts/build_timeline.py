@@ -30,6 +30,12 @@ actions also wait 0.25 s after it (she stops before she waves). 【动作：开�
 an explicit @) only takes its 2 s at that place. Afterwards the big actions
 (epcommon.BIG_WORDS) are checked for the >= 15 s spacing on the real times. The auto layer (small gestures, nods, looks)
 is NOT written here: the engine plans it itself from episode.auto_gestures (copied into timeline.episode).
+
+中英双语字幕（episode.json "bilingual": true；用户 2026-10-02：“原LAI如此也改成双语”，项目统一标准，见 bilingual.py）：
+every say row must carry its English (script_data.py: ("say", 字幕, TTS, 画面说明, dict(en="…", cuts=[…]))); each segment
+then gets `subs` = [{zh, en, s, e, a, b}] split by the standard (中文 ≤ 约 28 字 / 英文 ≤ 约 90 字符 a cue, both edges
+timed on the aligned lines below, shown 0.1 s before to 0.45 s after) — the engine draws these instead of `lines`
+and assemble.py writes the 双语 / 中文 / 英文 SRTs from them. Missing or too-long English stops the script.
 """
 import argparse
 import copy
@@ -449,6 +455,32 @@ def check_big_spacing(all_actions, warns):
 
 
 # ---------------------------------------------------------------- main
+def bilingual_subs(ep, segments, warns):
+    """episode.json "bilingual": true -> segments[].subs by the project's bilingual standard (bilingual.py); returns the cue count"""
+    if not ep.get("bilingual"):
+        if any(s.get("en") for s in segments):
+            warns.append("台本写了英文（en），但 episode.json 没有 \"bilingual\": true：这期按单语字幕出")
+        return 0
+    import bilingual as BL
+    errs = []
+    for s in segments:
+        e, w = BL.check_pair(s["id"], s["text"], s.get("en"), s.get("cuts"))
+        errs += e
+        warns += w
+    if errs:
+        sys.exit("中英双语字幕要改（script_data.py 那一行的 dict(en=…, cuts=…)）：\n" + "\n".join("  ✗ " + e for e in errs))
+    subs, fallback = [], []
+    for s in segments:
+        s["subs"], aligned = BL.seg_subs(s, s["en"], s.get("cuts"))
+        if not aligned:
+            fallback.append(s["id"])
+        subs += s["subs"]
+    BL.set_windows(subs)
+    if fallback:
+        warns.append(f"这几段的逐字时间对不上，双语字幕按字数比例分时间：{' '.join(fallback)}")
+    return len(subs)
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     C.add_common(ap)
@@ -486,12 +518,17 @@ def main():
             s = dict(id=sid, scene=sc["id"], start=round(t, 3), end=round(t + dur, 3), text=r["text"], tts=r["tts"],
                      visual=r["visual"], pose="reach" if any(a["name"] == "reach" for a in acts) else "idle",
                      lines=lines, measured=sid in durations, actions=[])
+            if r.get("en"):
+                s["en"] = r["en"]
+                if r.get("cuts"):
+                    s["cuts"] = r["cuts"]
             segments.append(s)
             pending.append((s, acts, lines, sid))
             t += dur + C.SEG_GAP
         scenes.append(dict(id=sc["id"], title=sc["title"], start=round(start, 3), end=round(t, 3), notes=sc["char"]))
     main_dur = round(t, 3)
     total = round(intro + main_dur + outro, 3)
+    n_bi = bilingual_subs(ep, segments, warns)
 
     # actions (after all times are known)
     for row, acts, lines, where in pending:
@@ -590,6 +627,7 @@ def main():
     lo, hi = ep.get("target_minutes", [5, 7])
     print(f"main={main_dur:.1f}s total={total:.1f}s ({C.mmss(total)}) segments={len(segments)} measured={measured} "
           f"gaps={len(gaps)} actions={n_act} {kinds} auto_gestures={auto_txt} "
+          + (f"bilingual_subs={n_bi} " if n_bi else "") +
           f"canvas={canvas[0]}x{canvas[1]}{'' if 'canvas' in ep else ' (episode.json 没写 canvas，按默认)'}")
     if not lo * 60 <= total <= hi * 60:
         warns.append(f"总长 {C.mmss(total)} 不在目标 {lo}–{hi} 分钟内")

@@ -324,9 +324,13 @@ def normalise_row(row, where):
     """Return ('say', text, tts, visual) or ('gap', seconds, visual).
 
     Accepts the contract forms ("say", text, tts, visual) / ("gap", sec, visual), plus the older
-    episode-1 form ("say", id, text, tts, visual) (the id is ignored: ids are generated)."""
+    episode-1 form ("say", id, text, tts, visual) (the id is ignored: ids are generated).
+    A say row may end with a dict of extras (中英双语字幕，2026-10-02 起): ("say", text, tts, visual, dict(en=…, cuts=…));
+    row_extra(row) returns it."""
     if not row:
         sys.exit(f"{where}: 空行")
+    if row[0] == "say" and isinstance(row[-1], dict):
+        row = tuple(row[:-1])
     kind = row[0]
     if kind == "gap":
         if len(row) not in (2, 3):
@@ -348,8 +352,14 @@ def normalise_row(row, where):
     sys.exit(f"{where}: 行类型必须是 \"say\" 或 \"gap\"：{row!r}")
 
 
+def row_extra(row):
+    """the trailing dict of a say row ({} if none): en = 英文字幕，cuts = 中英拆条的手动断点"""
+    return row[-1] if row and row[0] == "say" and isinstance(row[-1], dict) else {}
+
+
 def walk_script(scenes):
-    """Main-body scenes with normalised rows and generated segment ids (S03-12 = scene-global index)."""
+    """Main-body scenes with normalised rows and generated segment ids (S03-12 = scene-global index).
+    Say rows carry `en` / `cuts` from their extras dict when the script has them (双语字幕)."""
     out, n, seen = [], 0, set()
     for sc in scenes:
         if is_bookend(sc):
@@ -363,7 +373,9 @@ def walk_script(scenes):
             r = normalise_row(row, f"{sid} 第 {i + 1} 行")
             if r[0] == "say":
                 n += 1
-                rows.append(dict(kind="say", id=f"{sid}-{n:02d}", text=r[1], tts=r[2], visual=r[3]))
+                ex = row_extra(row)
+                rows.append(dict(kind="say", id=f"{sid}-{n:02d}", text=r[1], tts=r[2], visual=r[3],
+                                 en=str(ex.get("en") or "").strip(), cuts=ex.get("cuts")))
             else:
                 rows.append(dict(kind="gap", dur=r[1], visual=r[2]))
         out.append(dict(id=sid, title=sc.get("title", sid), char=sc.get("char", ""), bg_note=sc.get("bg", ""),
