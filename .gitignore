@@ -88,6 +88,14 @@ items.jsonl
 # 5) 单独排除的记录
 # B 站旧稿清理清单：里面是用户设成“仅自己可见”的稿件，不公开
 /docs/ai/context/20260927-103216-bilibili-cleanup_CN.md
+# 含个人信息的记录 / 数据（2026-10-10 收分支时扫出来的）：账号邮箱、所在城市、观众昵称和评论原话，不公开
+/docs/ai/context/20260929-173338-bilibili-comment-reply_CN.md
+/docs/ai/context/20261001-122000-ai-practice-ep01-workbuddy-miniprogram_CN.md
+/docs/ai/context/20261004-214700-claude-cost-short-video-approval_CN.md
+/docs/ai/context/20261008-140000-douyin-gintama-comment-replies_CN.md
+# AI实操 第 1 期打码用的录屏 OCR 结果（整屏文字，含账号邮箱），和注释里写着邮箱的 OCR 脚本
+/AI实操/01_从0到1用WorkBuddy上线一个微信小程序/制作/00_整片/privacy/
+/AI实操/01_从0到1用WorkBuddy上线一个微信小程序/制作/00_整片/privacy_ocr.py
 
 # OpenAI《The dots demo, take two》中文同传（2026-10-02）：原片的英文逐字稿、整篇译稿和由它们派生的句子表、配音文本、识别结果、时间轴，
 # 都是别人视频全文的转写 / 翻译，不公开（脚本、投稿信息、片尾清单照收）
