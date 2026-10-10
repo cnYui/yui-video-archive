@@ -1,0 +1,76 @@
+{
+  "platform": "B站（合集「Claude Code相关」，id 9223239；投稿页里要自己点开“加入合集”下拉选，别凭印象）",
+  "status": "已投稿：BV1PdHh6QE72（2026-10-03 09:42 北京时间（10:42 东京），投稿后状态“审核中 / 复核中”，时长 125 s；用户自己在页面里改了标题并点的“立即投稿”）",
+  "title": "一个视频了解 Claude Code 新插件 You should know：Agent Loop 开发里，它替你盯着、帮你复盘",
+  "title_note": "用户 2026-10-03：“标题为：YouShouldKnow 新插件帮你在Agent Loop开发中复盘，或者你想一个新的标题”，随后补一句“比如一个视频了解Claude新插件”。我写成上面这句：保留“Agent Loop”和“复盘”，加“盯着”（官方文档 watches your back 的说法；官方说它是 Claude 干长活时在旁边看着并留便条，不是事后复盘），开头用“一个视频了解”。投稿页上用户若手改标题，以页面为准。 投稿时用户在页面里自己手改了标题（我读到的变化：先把“新插件 You should know”改成“新插件：You should know：”，再变成“新插件功能：/YouShouldKnow：”，最后线上是下面这句，带一个多余的“：/”和两个空格，像输入法 / 语音输入的残留）。线上标题：一个视频了解Claude Code 新插件：/YouShouldKnow  Agent Loop 开发里，它替你盯着、帮你复盘；要不要去编辑页改干净由用户定。",
+  "cover_text": "别漏看重点 / Claude 新插件",
+  "video": "YouShouldKnow插件_成片.mp4",
+  "video_note": "含悠一片头 4.8 s + 正片 111.2 s + 片尾 9.0 s；2340×1080；正片版本 制作/00_整片/整片_v1.mp4；字幕是中英双语烧进画面，另有三份 SRT（时间含片头）",
+  "cover_16x9": "制作/04_封面/封面_选定_16x9.png（= 封面_A_16x9.png，用户选定）",
+  "cover_4x3": "制作/04_封面/封面_选定_4x3.png（= 封面_A_4x3.png）",
+  "cover_note": "claude-code-cover 技能的版式：品牌色背景 + 官方像素宇航员（只用官方原帧 float2 / float3 / stand，没自己画新动作）+ 两行字。A = night + float2（别漏看重点 / Claude 新插件）；B = orange + float3（You should know / 官方新插件）；C = ivory + stand（它替你盯着 / Claude 的输出）。第一版我擅自换成了自己画的原创小机器人，用户说“太丑了，而且不是 claude 的形象”，已改回官方宇航员；原创版留在 制作/04_封面/_旧稿_原创角色/。 用户 2026-10-03 发来封面图说“用这个封面”= 候选 A。上传用的是 2026-10-03 定下的做法：关掉“双比例同步改动”，点“个人空间封面（16:9）”标题传 16:9、点“首页推荐封面（4:3）”标题传 4:3，各传各的再点“完成”；线上两张是 1920×1080 和 1440×1080，不是同一张图。",
+  "category": "人工智能",
+  "declaration": "含AI生成内容",
+  "tags": [
+    "claude",
+    "Claude Code",
+    "Anthropic",
+    "AI编程",
+    "插件",
+    "人工智能",
+    "AI工具",
+    "编程",
+    "大模型",
+    "AI Agent"
+  ],
+  "tags_backup": [
+    "ClaudeDevs",
+    "AI Agent",
+    "效率工具",
+    "模组"
+  ],
+  "tags_note": "线上实际用的 10 个标签：“新功能”加进去后被静默丢掉了（和 gpt-6-astra 同一类情况），换成 AI Agent（正好呼应标题里的 Agent Loop）；B 站自动加的“短片 / 原创 / AE”删掉了（svg.close 派发 click，一次删一个，循环）。",
+  "chapters": [
+    [
+      "00:00",
+      "开场：一份看起来很完美的总结"
+    ],
+    [
+      "00:18",
+      "新插件 You should know 是什么"
+    ],
+    [
+      "00:29",
+      "官方演示：提醒、详情、带回主会话"
+    ],
+    [
+      "01:05",
+      "原理：旁路智能体"
+    ],
+    [
+      "01:13",
+      "官方文档：内置模组表、默认关闭、怎么开关"
+    ],
+    [
+      "01:39",
+      "更新日志：哪个版本加的、有什么前提"
+    ],
+    [
+      "01:45",
+      "官方没写的地方"
+    ]
+  ],
+  "chapters_note": "时间 = 正片时间 + 片头 4.8 s（取整到秒）；正片重渲或片头长度变了要重跑 make_submission.py。",
+  "desc": "Claude Code 新增了一个内置插件 You should know（在 /plugin 里叫 cc-plugin-you-should-know）：Claude 做较长任务时，有一个旁路智能体（side agent）在旁边替你盯着，发现你可能漏掉的事，就在输入框上方给你留一条便条。这期用官方演示视频把它的流程过一遍，再讲官方写明的开关和前提。\n\n本期内容\n00:00 开场：一份看起来很完美的总结\n00:18 新插件 You should know 是什么\n00:29 官方演示：提醒、详情、带回主会话\n01:05 原理：旁路智能体\n01:13 官方文档：内置模组表、默认关闭、怎么开关\n01:39 更新日志：哪个版本加的、有什么前提\n01:45 官方没写的地方\n\n要点（都来自官方推文、文档和更新日志）\n· 官方推文：新增插件 You should know，扫描 Claude 的输出，把你可能漏掉的重要信息挑出来；启用命令 /plugin enable cc-plugin-you-should-know@builtin。\n· 官方回复：它是一个 mod（模组），靠派出一个 sideagent 观察 Claude 的输出。\n· 官方文档（Mods 概览的内置模组表）：现在共 6 个内置模组，它是其中之一；默认关闭；在 /plugin → Installed → Show disabled 里能看到（如果你的组织可用）；在 /plugin 里 Disable 关闭；内置模组不能更新、不能卸载。\n· 更新日志：2.1.287 加入（括号里的前提：第一方会话、遥测开着）；2.1.288 把便条的措辞改成按谁负责某个决定，分别用 we / the main agent / you。\n· 官方演示：Claude 修结账超时，加了自动重试；总结之后插件弹出提醒——这个重试可能让顾客被扣两次钱；按 1 看详情（解法是幂等键），按 2 把这条提醒当作旁路智能体的备注带回主会话，Claude 看完改成每笔付款只生成一次随机键。\n\n几处要说明\n· 官方没写：它用哪个模型、多久提醒一次、会不会误报、扫描哪些内容、会不会多花额度；它的源码也没有公开（mods/ 目录里没有它）。我没有实测，以上只来自官方推文、文档和更新日志。\n· 画面里的 Glossed over 是官方演示视频自带的标注，不是插件界面。\n· 第 1 期讲过的“模组默认开着”指模组这个功能；这个内置插件默认是关的，要自己开。\n· 有用户在官方仓库反馈：按提示开启时提示 Plugin is not installed in this project（issue #99071，10 月 3 日还没解决），这是用户反馈，不是官方结论。\n\n资料来源（2026 年 10 月 3 日读的官方页面）\n· @ClaudeDevs 推文（新增 You should know，带演示视频）：https://x.com/ClaudeDevs/status/2106118517447876618\n· @ClaudeDevs 回复（它是个 mod，派出 sideagent 观察）：https://x.com/ClaudeDevs/status/2106118519368888562\n· 官方文档 · Mods 概览 · 内置模组表：https://code.claude.com/docs/en/plugins/mods/overview#mods-built-into-claude-code\n· 官方更新日志（2.1.287、2.1.288）：https://code.claude.com/docs/en/changelog\n· 模组入门教程（claude.dev，推文里链的那篇）：https://claude.dev/blog/getting-started-with-claude-code-mods/\n\n补充说明\n· 画面里的官方演示视频、推文和文档页面来自 @ClaudeDevs（X 平台）和 Anthropic 官方网站，仅作介绍和评论引用，版权归原作者；\n· 封面里的像素宇航员取自 claude.dev 官方页面，版权归 Anthropic；\n· 功能、版本号会变，以官方文档为准；\n· 配音：曼波声线（AI 生成）；剪辑：Claude Code（Sonnet 5.5）。",
+  "youtube": "未定",
+  "todo_after_publish": [
+    "过审后用 api.bilibili.com/x/web-interface/view 的 ugc_season 核对是否在「Claude Code相关」合集里（表单里选了，但公开接口现在还是 -404）。",
+    "线上标题带“：/”和两个空格（用户手改的），问用户要不要改干净。",
+    "GitHub release（tag 建议 claude-code-03）要等用户定了提交 git 的事再做；README 的“视频存档”表已加这一期。",
+    "耳朵没听过的 6 句配音（N01 / N12 / N15 / N18 / N20 / N21，机器识别分低）：成片已按这版发布，要换只能在编辑页「更换视频」（用户自己选文件、重新过审）。",
+    "官方页面会变：这个插件的前提（第一方会话、遥测开着、组织可用）、版本号、官方仓库 issue #99071 的状态，都可能过期；简介里的“10 月 3 日读的”按这个日期算。"
+  ],
+  "bvid": "BV1PdHh6QE72",
+  "season": "Claude Code相关（表单里选了；公开接口 x/web-interface/view 还是 -404，过审后要用 ugc_season 再核对）",
+  "title_online": "一个视频了解Claude Code 新插件：/YouShouldKnow  Agent Loop 开发里，它替你盯着、帮你复盘"
+}

@@ -1,0 +1,9 @@
+{
+  "_说明": "第 3 期三个封面候选的清单（用户选了 A）。重出：python D:\\大疆\\Claude Code相关\\skill\\claude-code-cover\\scripts\\make_candidates.py 封面候选.json --out .",
+  "title": "一个视频了解 Claude Code 新插件 You should know：Agent Loop 开发里，它替你盯着、帮你复盘",
+  "candidates": [
+    {"name": "A", "line1": "别漏看重点", "line2": "Claude 新插件", "scheme": "night", "pose": "float2"},
+    {"name": "B", "line1": "You should know", "line2": "官方新插件", "scheme": "orange", "pose": "float3"},
+    {"name": "C", "line1": "它替你盯着", "line2": "Claude 的输出", "scheme": "ivory", "pose": "stand"}
+  ]
+}

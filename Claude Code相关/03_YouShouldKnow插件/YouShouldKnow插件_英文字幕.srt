@@ -1,0 +1,123 @@
+1
+00:00:05,000 --> 00:00:08,880
+You ask Claude to change some code, and at the end it hands you a summary.
+
+2
+00:00:09,300 --> 00:00:13,210
+The summary reads smoothly, and every line looks like good news.
+
+3
+00:00:14,600 --> 00:00:17,120
+But one line got quietly glossed over.
+
+4
+00:00:17,700 --> 00:00:19,992
+Claude Code just added a built-in
+
+5
+00:00:20,012 --> 00:00:23,180
+plugin called You should know.
+
+6
+00:00:23,200 --> 00:00:25,867
+The official post says it scans Claude's output
+
+7
+00:00:25,887 --> 00:00:29,540
+for important information you might miss, to keep you in the loop.
+
+8
+00:00:29,560 --> 00:00:33,970
+Back to the demo. As soon as the summary ends, a note pops up above the prompt.
+
+9
+00:00:33,990 --> 00:00:38,180
+It warns that the automatic retry just added could charge a customer twice.
+
+10
+00:00:38,430 --> 00:00:41,169
+Press 1 for details: a timeout does not mean no charge.
+
+11
+00:00:41,189 --> 00:00:44,620
+Sometimes only the reply got lost, and a retry charges again.
+
+12
+00:00:44,640 --> 00:00:48,860
+The usual fix is an idempotency key: one unique ID per payment.
+
+13
+00:00:49,010 --> 00:00:53,950
+Press 2, and the note goes back to the main session, labeled as offered by a side agent.
+
+14
+00:00:53,970 --> 00:00:57,010
+You ask a quick follow-up: does the key ever expire?
+
+15
+00:00:57,160 --> 00:01:00,480
+Claude replies that the side agent is right, and fixes it right away.
+
+16
+00:01:00,500 --> 00:01:04,860
+Done: each payment gets one random key, sent with every retry.
+
+17
+00:01:05,010 --> 00:01:08,220
+How does it work? The official team explained in the next post.
+
+18
+00:01:08,240 --> 00:01:10,760
+It's a mod that spins off a side agent
+
+19
+00:01:10,780 --> 00:01:13,240
+to observe Claude's output.
+
+20
+00:01:13,390 --> 00:01:15,348
+Mods were covered in episode one.
+
+21
+00:01:15,368 --> 00:01:19,320
+The docs' built-in mods table now includes this one, six in total.
+
+22
+00:01:19,340 --> 00:01:23,611
+The docs say that while Claude works on longer tasks,
+
+23
+00:01:23,631 --> 00:01:27,070
+a side agent watches your back and leaves a note above the prompt.
+
+24
+00:01:27,090 --> 00:01:28,667
+Note that it is disabled by default,
+
+25
+00:01:28,687 --> 00:01:31,460
+and your organization has to make it available.
+
+26
+00:01:31,480 --> 00:01:34,020
+To turn it on, type the command the docs give.
+
+27
+00:01:34,040 --> 00:01:39,060
+To turn it off, disable it in /plugin. Built-in mods can't be uninstalled.
+
+28
+00:01:39,210 --> 00:01:42,093
+The changelog says it arrived in 2.1.287,
+
+29
+00:01:42,113 --> 00:01:45,380
+for first-party sessions with telemetry on.
+
+30
+00:01:45,530 --> 00:01:48,850
+How often it speaks up, and whether it ever misfires, the official docs don't say.
+
+31
+00:01:48,870 --> 00:01:54,610
+However polished a summary is, something may go unsaid. A second pair of eyes helps.

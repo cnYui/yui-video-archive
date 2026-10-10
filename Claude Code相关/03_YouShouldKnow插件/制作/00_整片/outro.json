@@ -1,0 +1,18 @@
+{
+  "references_title": "参考文献",
+  "references": [
+    "@ClaudeDevs，新增插件 You should know（附演示视频），X，2026-10",
+    "@ClaudeDevs，回复：它是个 mod，派出 sideagent 观察 Claude 的输出，X，2026-10",
+    "Anthropic，Claude Code 文档 · Mods 概览 · 内置模组表，code.claude.com/docs",
+    "Anthropic，Claude Code 更新日志 2.1.287 / 2.1.288，code.claude.com/docs/en/changelog",
+    "Addy Osmani，Getting started with Claude Code mods，claude.dev/blog，2026-10"
+  ],
+  "thanks_title": "致谢",
+  "thanks": [
+    {"label": "演示画面", "value": "@ClaudeDevs · X（官方）"},
+    {"label": "配音", "value": "曼波声线（AI 生成）"},
+    {"label": "剪辑", "value": "Claude Code（Sonnet 5.5）"}
+  ],
+  "closing": "感谢观看，我们下期再见",
+  "signature": "悠一"
+}

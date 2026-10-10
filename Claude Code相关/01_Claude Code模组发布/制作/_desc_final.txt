@@ -1,0 +1,38 @@
+Claude 官方开发者账号 @ClaudeDevs 这几天连发了好几条新东西。这期一个视频讲完：Claude Code 现在能装“模组”了，再加 claude.dev 新主页、Sonnet 5.5，以及 claude-api 技能里的两个评测命令。
+
+本期内容
+00:00 能装模组了
+00:17 模组怎么写、怎么装
+00:51 示例 1：Token Weather（上下文天气预报）
+01:21 示例 2：Blast Radius（拦住危险命令）
+01:51 示例 3：Replay Theater（回放每一处修改）
+02:07 装之前要知道：模组不在沙盒里
+02:42 顺带 1：claude.dev 新主页
+03:01 顺带 2：Sonnet 5.5
+03:29 顺带 3：评测命令 build-eval / hillclimb
+03:50 想玩模组，三步
+
+模组（mods）要点
+· 模组是装在插件里的小程序（JavaScript / TypeScript），能改 Claude Code 的行为和界面，也能换上自己写的功能；几行 TypeScript 就能写，或者让 Claude Code 帮你写。
+· 需要 Claude Code 2.1.287 或更高版本，默认开启；命令行版和桌面版的 Code 标签页都能用；用 /plugin 安装。
+· 官方示例：Token Weather（输入框上方显示上下文用了多少）、Blast Radius（拦住 rm -rf 这类命令，先列出会动哪些文件）、Replay Theater（回放这一轮的每一处修改）。
+· 注意：模组不在沙盒里，权限和 Claude Code 一样大，只装信得过的人写的；装之前可以先跑 claude plugin validate，看它挂了哪些事件、会调用什么。
+
+顺带三件事
+· claude.dev：官方给用 Claude 做东西的开发者开的新主页。
+· Sonnet 5.5：5.5 家族的第二个模型（前面是 Opus 5.5），比 Sonnet 5 快 30% 以上，单价没变，大多数任务最多便宜 30%；Claude Code 里用 /model sonnet 切换，默认模型仍是 Opus 5.5。
+· 评测：claude-api 技能新增 /claude-api build-eval 和 /claude-api hillclimb。
+
+资料来源（2026 年 10 月 2 日读的官方页面）
+· @ClaudeDevs 帖子串（Claude Code 模组）：https://x.com/ClaudeDevs/status/2105721434807083061
+· @ClaudeDevs 帖子（claude.dev 新主页）：https://x.com/ClaudeDevs/status/2105391694741119047
+· 模组入门教程（claude.dev）：https://claude.dev/blog/getting-started-with-claude-code-mods/
+· Mods 官方文档：https://code.claude.com/docs/en/plugins/mods/overview
+· Sonnet 5.5 使用指南：https://claude.dev/blog/building-with-claude-sonnet-5-5/
+· 评测与 hillclimb：https://claude.dev/blog/automating-eval-design-and-hillclimbing/
+
+补充说明
+· 画面里的官方演示视频来自 @ClaudeDevs（X 平台），仅作介绍和评论引用，版权归原作者；
+· 封面背景取自 claude.dev 官方教程页底部的太空插画，版权归 Anthropic；
+· 功能、版本号和价格会变，以官方文档为准；
+· 配音：曼波声线（AI 生成）；剪辑：Claude Code（Sonnet 5.5）。

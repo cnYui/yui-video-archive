@@ -1,0 +1,9 @@
+{
+  "_说明": "封面候选清单：把 TODO 换成本期的短钩子（line1 / line2 各 ≤ 12 个汉字宽，第 2 行用强调色；不要小字），title 填视频标题（用来查封面字和标题有没有重复）。三个候选要有差别：背景方案 × 动作 × 钩子字都不一样。出图：python D:\\大疆\\Claude Code相关\\skill\\claude-code-cover\\scripts\\make_candidates.py 封面候选.json --out .   动作和参数见 claude-code-cover 的 SKILL.md。",
+  "title": "TODO 视频标题（写详细，不和封面字是同一句）",
+  "candidates": [
+    {"name": "A", "line1": "TODO 钩子一", "line2": "TODO 第二行", "scheme": "night", "pose": "float2"},
+    {"name": "B", "line1": "TODO 钩子二", "line2": "TODO 第二行", "scheme": "orange", "pose": "float3"},
+    {"name": "C", "line1": "TODO 钩子三", "line2": "TODO 第二行", "scheme": "ivory", "pose": "stand"}
+  ]
+}

@@ -1,0 +1,219 @@
+{
+  "layout": "single",
+  "plan": [
+    {
+      "id": "P1",
+      "type": "card",
+      "kind": "page",
+      "overlay": "page",
+      "name": "官方推文",
+      "dur": 3.0,
+      "lines": [
+        {
+          "id": "N01",
+          "a": 0.2
+        },
+        {
+          "id": "N02",
+          "a": 0.0
+        },
+        {
+          "id": "N03",
+          "a": 0.0
+        }
+      ]
+    },
+    {
+      "id": "P2",
+      "type": "card",
+      "kind": "page",
+      "overlay": "page",
+      "name": "版本要求",
+      "dur": 1.5,
+      "lines": [
+        {
+          "id": "N04",
+          "a": 0.15
+        }
+      ]
+    },
+    {
+      "id": "P3",
+      "type": "card",
+      "kind": "page",
+      "overlay": "page",
+      "name": "内置模组",
+      "dur": 3.0,
+      "lines": [
+        {
+          "id": "N05",
+          "a": 0.15
+        }
+      ]
+    },
+    {
+      "id": "C1",
+      "type": "clip",
+      "kind": "demo",
+      "overlay": "clip",
+      "name": "Token Weather",
+      "credit": "@ClaudeDevs · X",
+      "ranges": [
+        {
+          "src": "tw",
+          "in": 2.0,
+          "out": 6.0,
+          "crop": [
+            0,
+            0.6,
+            0.4,
+            1.0
+          ]
+        },
+        {
+          "src": "tw",
+          "in": 6.0,
+          "out": 19.8,
+          "speed": 2.5,
+          "crop": [
+            0,
+            0.6,
+            0.4,
+            1.0
+          ]
+        },
+        {
+          "src": "tw",
+          "in": 19.8,
+          "out": 22.8,
+          "crop": [
+            0,
+            0.6,
+            0.4,
+            1.0
+          ]
+        }
+      ],
+      "lines": [
+        {
+          "id": "N06",
+          "a": 0.3
+        },
+        {
+          "id": "N07",
+          "a": 4.3
+        },
+        {
+          "id": "N08",
+          "a": 9.9
+        }
+      ]
+    },
+    {
+      "id": "C2",
+      "type": "clip",
+      "kind": "demo",
+      "overlay": "clip",
+      "name": "Blast Radius",
+      "credit": "@ClaudeDevs · X",
+      "ranges": [
+        {
+          "src": "mm",
+          "in": 30.9,
+          "out": 33.9,
+          "crop": [
+            0.12,
+            0.04,
+            0.88,
+            0.8
+          ]
+        },
+        {
+          "src": "mm",
+          "in": 33.9,
+          "hold": 2.8,
+          "crop": [
+            0.12,
+            0.04,
+            0.88,
+            0.8
+          ]
+        },
+        {
+          "src": "mm",
+          "in": 35.2,
+          "out": 37.6
+        }
+      ],
+      "lines": [
+        {
+          "id": "N09",
+          "a": 0.2
+        },
+        {
+          "id": "N10",
+          "a": 5.8
+        }
+      ]
+    },
+    {
+      "id": "C3",
+      "type": "clip",
+      "kind": "demo",
+      "overlay": "clip",
+      "name": "Replay Theater",
+      "credit": "@ClaudeDevs · X",
+      "ranges": [
+        {
+          "src": "mm",
+          "in": 54.3,
+          "out": 56.2
+        },
+        {
+          "src": "mm",
+          "in": 57.2,
+          "out": 58.9
+        },
+        {
+          "src": "mm",
+          "in": 59.4,
+          "out": 61.0
+        }
+      ],
+      "lines": [
+        {
+          "id": "N11",
+          "a": 0.2
+        }
+      ]
+    },
+    {
+      "id": "P4",
+      "type": "card",
+      "kind": "page",
+      "overlay": "page",
+      "name": "不在沙盒里",
+      "dur": 3.0,
+      "lines": [
+        {
+          "id": "N12",
+          "a": 0.15
+        }
+      ]
+    },
+    {
+      "id": "P5",
+      "type": "card",
+      "kind": "page",
+      "overlay": "page",
+      "name": "只装信得过的",
+      "dur": 1.5,
+      "lines": [
+        {
+          "id": "N13",
+          "a": 0.15
+        }
+      ]
+    }
+  ]
+}

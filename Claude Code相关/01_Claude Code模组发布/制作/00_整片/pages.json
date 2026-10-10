@@ -1,0 +1,671 @@
+{
+ "T_intro": {
+  "src": "pages/T_intro.png",
+  "w": 1600,
+  "h": 1240,
+  "url": "https://claude.dev/blog/getting-started-with-claude-code-mods/",
+  "marks": {
+   "settings": [
+    [
+     1158,
+     86,
+     137,
+     46
+    ]
+   ],
+   "permission rules": [
+    [
+     72,
+     147,
+     278,
+     46
+    ]
+   ],
+   "slash commands": [
+    [
+     366,
+     147,
+     280,
+     46
+    ]
+   ],
+   "skills": [
+    [
+     662,
+     147,
+     84,
+     46
+    ]
+   ],
+   "a status line": [
+    [
+     825,
+     147,
+     201,
+     46
+    ]
+   ],
+   "Mods go further": [
+    [
+     1042,
+     147,
+     271,
+     46
+    ]
+   ]
+  },
+  "bg": "#FAF9F5"
+ },
+ "T_how": {
+  "src": "pages/T_how.png",
+  "w": 1600,
+  "h": 1800,
+  "url": "https://claude.dev/blog/getting-started-with-claude-code-mods/",
+  "marks": {
+   "register(on, options)": [
+    [
+     470,
+     367,
+     397,
+     40
+    ]
+   ],
+   "on(\"tool.call\"": [
+    [
+     74,
+     704,
+     1316,
+     348
+    ]
+   ],
+   "Hooks form a chain": [
+    [
+     72,
+     1124,
+     321,
+     46
+    ]
+   ]
+  },
+  "bg": "#FAF9F5"
+ },
+ "T_shortcut": {
+  "src": "pages/T_shortcut.png",
+  "w": 1600,
+  "h": 1520,
+  "url": "https://claude.dev/blog/getting-started-with-claude-code-mods/",
+  "marks": {
+   "describe the one you want and let it do the work": [
+    [
+     72,
+     214,
+     808,
+     46
+    ]
+   ],
+   "Make me a Claude Code mod called token-weather": [
+    [
+     106,
+     505,
+     745,
+     32
+    ]
+   ]
+  },
+  "bg": "#FAF9F5"
+ },
+ "T_validate": {
+  "src": "pages/T_validate.png",
+  "w": 1600,
+  "h": 1640,
+  "url": "https://claude.dev/blog/getting-started-with-claude-code-mods/",
+  "marks": {
+   "claude plugin validate": [
+    [
+     82,
+     157,
+     416,
+     40
+    ]
+   ],
+   "hooks:": [
+    [
+     495,
+     538,
+     97,
+     32
+    ]
+   ],
+   "calls:": [
+    [
+     1222,
+     214,
+     85,
+     46
+    ]
+   ],
+   "Validation passed": [
+    [
+     138,
+     727,
+     275,
+     32
+    ]
+   ]
+  },
+  "bg": "#FAF9F5"
+ },
+ "T_share": {
+  "src": "pages/T_share.png",
+  "w": 1600,
+  "h": 1520,
+  "url": "https://claude.dev/blog/getting-started-with-claude-code-mods/",
+  "marks": {
+   "/plugin marketplace add": [
+    [
+     106,
+     588,
+     373,
+     32
+    ]
+   ],
+   "/plugin install": [
+    [
+     106,
+     635,
+     243,
+     32
+    ]
+   ],
+   "/reload-plugins": [
+    [
+     106,
+     682,
+     243,
+     32
+    ]
+   ],
+   "only install from people you trust": [
+    [
+     1198,
+     1039,
+     180,
+     46
+    ],
+    [
+     72,
+     1100,
+     366,
+     46
+    ]
+   ],
+   "The Claude directory accepts plugins that include mods": [
+    [
+     72,
+     1190,
+     939,
+     46
+    ]
+   ]
+  },
+  "bg": "#FAF9F5"
+ },
+ "D_install": {
+  "src": "pages/D_install.png",
+  "w": 1600,
+  "h": 1280,
+  "url": "https://code.claude.com/docs/en/plugins/mods/overview",
+  "marks": {
+   "A mod installs as a plugin, from a marketplace": [
+    [
+     40,
+     384,
+     678,
+     40
+    ]
+   ],
+   "/plugin install token-chart@your-org": [
+    [
+     567,
+     542,
+     611,
+     32
+    ]
+   ]
+  },
+  "bg": "#FFFFFF"
+ },
+ "D_where": {
+  "src": "pages/D_where.png",
+  "w": 1600,
+  "h": 840,
+  "url": "https://code.claude.com/docs/en/plugins/mods/overview",
+  "marks": {
+   "Mods work in the Claude Code CLI and in the Code tab of the Claude Desktop app": [
+    [
+     40,
+     128,
+     1228,
+     40
+    ]
+   ]
+  },
+  "bg": "#FFFFFF"
+ },
+ "D_turn": {
+  "src": "pages/D_turn.png",
+  "w": 1600,
+  "h": 1800,
+  "url": "https://code.claude.com/docs/en/plugins/mods/overview",
+  "marks": {
+   "Mods require Claude Code v2.1.287 or later": [
+    [
+     40,
+     168,
+     638,
+     40
+    ]
+   ],
+   "on by default": [
+    [
+     868,
+     168,
+     196,
+     40
+    ]
+   ],
+   "One mod: disable or uninstall its plugin from the Installed tab in /plugin": [
+    [
+     40,
+     464,
+     1520,
+     56
+    ]
+   ],
+   "--safe-mode": [
+    [
+     1039,
+     550,
+     187,
+     32
+    ]
+   ]
+  },
+  "bg": "#FFFFFF"
+ },
+ "D_builtin": {
+  "src": "pages/D_builtin.png",
+  "w": 1600,
+  "h": 2040,
+  "url": "https://code.claude.com/docs/en/plugins/mods/overview",
+  "marks": {
+   "cc-plugin-agents-md": [
+    [
+     56,
+     635,
+     247,
+     28
+    ],
+    [
+     56,
+     675,
+     29,
+     28
+    ]
+   ],
+   "cc-plugin-diff": [
+    [
+     56,
+     789,
+     204,
+     28
+    ]
+   ]
+  },
+  "bg": "#FFFFFF"
+ },
+ "D_reach": {
+  "src": "pages/D_reach.png",
+  "w": 1600,
+  "h": 1760,
+  "url": "https://code.claude.com/docs/en/plugins/mods/overview",
+  "marks": {
+   "A mod runs with your permissions": [
+    [
+     40,
+     152,
+     508,
+     40
+    ]
+   ],
+   "Act on your machine as you: read and write files": [
+    [
+     40,
+     296,
+     1520,
+     112
+    ]
+   ],
+   "Read your secrets: environment variables": [
+    [
+     40,
+     424,
+     1520,
+     112
+    ]
+   ],
+   "Mods aren": [
+    [
+     40,
+     928,
+     159,
+     40
+    ]
+   ]
+  },
+  "bg": "#FFFFFF"
+ },
+ "D_trust": {
+  "src": "pages/D_trust.png",
+  "w": 1600,
+  "h": 600,
+  "url": "https://code.claude.com/docs/en/plugins/mods/overview",
+  "marks": {},
+  "bg": "#FFFFFF"
+ },
+ "S_hero": {
+  "src": "pages/S_hero.png",
+  "w": 1600,
+  "h": 430,
+  "url": "https://claude.dev/blog/building-with-claude-sonnet-5-5/",
+  "bg": "#FAF9F5",
+  "marks": {
+   "second model in the Claude 5.5 family": [
+    [
+     484,
+     86,
+     634,
+     46
+    ]
+   ],
+   "smarter, more efficient and 30% faster": [
+    [
+     741,
+     147,
+     543,
+     46
+    ],
+    [
+     72,
+     208,
+     97,
+     46
+    ]
+   ],
+   "The per-token price is unchanged": [
+    [
+     185,
+     208,
+     564,
+     46
+    ]
+   ],
+   "costs up to 30% less for most work": [
+    [
+     857,
+     270,
+     495,
+     46
+    ],
+    [
+     72,
+     331,
+     85,
+     46
+    ]
+   ]
+  }
+ },
+ "S_choose": {
+  "src": "pages/S_choose.png",
+  "w": 1600,
+  "h": 1560,
+  "url": "https://claude.dev/blog/building-with-claude-sonnet-5-5/",
+  "marks": {
+   "Opus 5.5 is built for complex work": [
+    [
+     476,
+     126,
+     567,
+     46
+    ]
+   ],
+   "well-scoped everyday tasks like fixing bugs and quickly iterating on features": [
+    [
+     563,
+     187,
+     797,
+     46
+    ],
+    [
+     72,
+     248,
+     475,
+     46
+    ]
+   ]
+  },
+  "bg": "#FAF9F5"
+ },
+ "S_cc": {
+  "src": "pages/S_cc.png",
+  "w": 1600,
+  "h": 1120,
+  "url": "https://claude.dev/blog/building-with-claude-sonnet-5-5/",
+  "marks": {
+   "the sonnet alias resolves to Sonnet 5.5": [
+    [
+     72,
+     160,
+     1320,
+     367
+    ]
+   ],
+   "The default model stays Opus 5.5": [
+    [
+     72,
+     160,
+     1320,
+     367
+    ]
+   ],
+   "/model sonnet": [
+    [
+     82,
+     476,
+     246,
+     40
+    ]
+   ]
+  },
+  "bg": "#FAF9F5"
+ },
+ "E_intro": {
+  "src": "pages/E_intro.png",
+  "w": 1600,
+  "h": 1120,
+  "url": "https://claude.dev/blog/automating-eval-design-and-hillclimbing/",
+  "marks": {
+   "claude-api skill": [
+    [
+     1115,
+     208,
+     250,
+     46
+    ]
+   ],
+   "/claude-api build-eval": [
+    [
+     522,
+     302,
+     416,
+     40
+    ]
+   ],
+   "/claude-api hillclimb": [
+    [
+     591,
+     363,
+     397,
+     40
+    ]
+   ],
+   "held-out set of examples": [
+    [
+     910,
+     420,
+     417,
+     46
+    ]
+   ]
+  },
+  "bg": "#FAF9F5"
+ },
+ "E_fig8": {
+  "src": "pages/E_fig8.png",
+  "w": 1600,
+  "h": 3000,
+  "url": "https://claude.dev/blog/automating-eval-design-and-hillclimbing/",
+  "bg": "#FAF9F5",
+  "marks": {
+   "customer support benchmark": [
+    [
+     857,
+     46,
+     503,
+     46
+    ]
+   ],
+   "#sel:figure.art-fig": [
+    [
+     72,
+     1017,
+     1320,
+     1058
+    ]
+   ],
+   "at about one fifth of the cost": [
+    [
+     762,
+     2328,
+     484,
+     46
+    ]
+   ]
+  }
+ },
+ "H_top": {
+  "src": "pages/H_top.png",
+  "w": 1600,
+  "h": 2360,
+  "url": "https://claude.dev/",
+  "marks": {
+   "Getting started with Claude Code mods": [
+    [
+     72,
+     557,
+     672,
+     46
+    ]
+   ],
+   "Automating eval design and hillclimbing with Claude": [
+    [
+     72,
+     749,
+     876,
+     46
+    ]
+   ],
+   "Building with Claude Sonnet 5.5": [
+    [
+     72,
+     940,
+     532,
+     46
+    ]
+   ],
+   "Sharing tips, tricks, and POVs": [
+    [
+     72,
+     109,
+     492,
+     46
+    ]
+   ],
+   "ENGINEERING": [
+    [
+     290,
+     315,
+     178,
+     32
+    ]
+   ],
+   "PLAYBOOKS": [
+    [
+     504,
+     315,
+     146,
+     32
+    ]
+   ],
+   "TUTORIALS": [
+    [
+     819,
+     315,
+     146,
+     32
+    ]
+   ]
+  },
+  "bg": "#FAF9F5"
+ },
+ "T_safety": {
+  "src": "pages/T_safety.png",
+  "w": 1600,
+  "h": 1280,
+  "url": "https://claude.dev/blog/getting-started-with-claude-code-mods/",
+  "marks": {
+   "safety net, not a permission system": [
+    [
+     157,
+     606,
+     594,
+     46
+    ]
+   ],
+   "get past it": [
+    [
+     599,
+     667,
+     169,
+     46
+    ]
+   ],
+   "Use permission rules for a hard block": [
+    [
+     784,
+     667,
+     521,
+     46
+    ],
+    [
+     72,
+     728,
+     93,
+     46
+    ]
+   ]
+  },
+  "bg": "#FAF9F5"
+ }
+}

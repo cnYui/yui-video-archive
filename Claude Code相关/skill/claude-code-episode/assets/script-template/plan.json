@@ -1,0 +1,14 @@
+{
+  "plan": [
+    {"id": "H0", "type": "clip", "kind": "demo", "overlay": "clip", "chapter": -1, "name": "开场", "credit": "@ClaudeDevs · X（官方演示）",
+     "ranges": [{"src": "d1", "in": 0.0, "out": 12.0}],
+     "lines": [{"id": "N01", "a": 0.3}, {"id": "N02", "a": 5.0}]},
+
+    {"id": "X1", "type": "card", "kind": "page", "overlay": "page", "chapter": 0, "name": "官方推文", "dur": 6.0,
+     "lines": [{"id": "N03", "a": 0.3}]},
+
+    {"id": "D1", "type": "clip", "kind": "demo", "overlay": "clip", "chapter": 1, "name": "演示", "credit": "@ClaudeDevs · X（官方演示）",
+     "ranges": [{"src": "d1", "in": 12.0, "out": 16.0}, {"src": "d1", "in": 16.0, "hold": 3.0}],
+     "lines": [{"id": "N04", "a": 0.2}]}
+  ]
+}

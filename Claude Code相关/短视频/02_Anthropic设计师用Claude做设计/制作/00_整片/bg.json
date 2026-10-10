@@ -1,0 +1,9 @@
+{
+ "file": "pattern_orange.png",
+ "how": "随机（技能 short-video 的规矩：每条随机挑一张）",
+ "lib": [
+  "pattern_color.png",
+  "pattern_ink.png",
+  "pattern_orange.png"
+ ]
+}

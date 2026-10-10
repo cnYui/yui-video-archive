@@ -1,0 +1,119 @@
+{
+  "_说明": "交付包阶段先写 titles（3 个候选 × 4 个平台 = 3×4）和各平台默认项；用户回“封面 X 标题 Y 同意”后，把选中的那条标题写进各平台字段（bilibili.title / douyin.title / xiaohongshu.title / weixin_channels.short_title），approval 记下选择和时间。scripts/check_titles.py 按各平台要求核对字数：B 站标题 ≤ 80 / 抖音 ≤ 30（话题 ≤ 5）/ 小红书 ≤ 20 / 视频号短标题 6–16；放不下的完整标题放抖音描述、小红书正文、视频号描述的第一行。三个标题角度要真有区别（事实陈述 / 数字悬念 / 泼冷水），不和封面大字同一句。",
+  "slug": "Claude模组",
+  "video": "D:\\大疆\\Claude Code相关\\短视频\\03_Claude模组\\Claude模组_成片.mp4（用户拖进各平台上传区；不压缩、不绕 10 MB；发布前先 cover_frame0.py 把选定封面放进第 0 帧）",
+  "duration_s": 53.1,
+  "approval": {
+    "status": "approved",
+    "cover": "A",
+    "title": 1,
+    "approved_at": "2026-10-04 约 20:20（日本时间）",
+    "note": "用户：用封面A，标题为 1，你来发；只发抖音 / 小红书 / 视频号，不发 B 站"
+  },
+  "titles": [
+    {
+      "id": 1,
+      "angle": "事实陈述（官方发布 + 能做什么）",
+      "recommend": true,
+      "bilibili": "Claude Code 官方发布模组：改它的行为和界面，几行 TypeScript 就能写，三个官方示例一次看完",
+      "douyin": "Claude Code 官方发布模组：改行为、改界面、写功能",
+      "xiaohongshu": "Claude Code 官方发布模组功能",
+      "weixin_channels": "Claude Code 模组发布"
+    },
+    {
+      "id": 2,
+      "angle": "数字悬念（80 行 / 三个示例）",
+      "bilibili": "官方三个 Claude Code 模组示例：第一个才 80 行代码，另外两个能拦住危险命令、回放每一处改动",
+      "douyin": "官方三个模组示例：第一个才 80 行，另两个拦删除、回放改动",
+      "xiaohongshu": "官方模组示例：第一个才80行",
+      "weixin_channels": "官方模组示例，第一个才80行"
+    },
+    {
+      "id": 3,
+      "angle": "泼冷水（不在沙盒里）",
+      "bilibili": "Claude Code 模组好玩，但要先知道：不在沙盒里，权限和 Claude Code 一样大，只装信得过的人写的",
+      "douyin": "Claude Code 模组好玩，但不在沙盒里，权限一样大",
+      "xiaohongshu": "Claude 模组好玩，但没有沙盒",
+      "weixin_channels": "装 Claude 模组前先看"
+    }
+  ],
+  "covers": {
+    "3x4": "制作/04_封面/封面_选定_3x4.png",
+    "16x9": "制作/04_封面/封面_选定_16x9.png",
+    "4x3": "制作/04_封面/封面_选定_4x3.png"
+  },
+  "source": {
+    "original_post": "https://x.com/ClaudeDevs/status/2105721434807083061（2026-10-02，@ClaudeDevs 主帖 You can now mod Claude Code）",
+    "original_author": "@ClaudeDevs（Anthropic 官方开发者账号）",
+    "project_or_site": "claude.dev 模组教程；code.claude.com/docs/en/plugins/mods/overview"
+  },
+  "bilibili": {
+    "title": "（本条不发 B 站：用户 2026-10-04 点名“发除了 b 站的其他三个平台”；长视频版已在 B 站 BV1Zoa16CEeU）",
+    "desc": "",
+    "declaration": "含AI生成内容",
+    "category": "人工智能（tid 231）",
+    "tags": [],
+    "collection": null,
+    "repost_source": "",
+    "cover": "两个位各传各的（双比例同步改动不勾）：16:9 → 个人空间封面，4:3 → 首页推荐封面",
+    "published": "不发"
+  },
+  "douyin": {
+    "title": "Claude Code 官方发布模组：改行为、改界面、写功能",
+    "desc": "Claude Code 官方发布模组：改它的行为和界面，几行 TypeScript 就能写，三个官方示例一次看完\n来源：@ClaudeDevs（X，2026-10-02）、claude.dev 模组教程、Claude Code 官方文档；画面来自官方，配音为 AI 生成。\n三个官方示例：Token Weather（输入框上方的上下文天气预报，整个模组约 80 行代码）、Blast Radius（Claude 要删文件夹时先拦住，列出会动哪些文件）、Replay Theater（一轮改完，按 R 键一处一处回放）。\n写法：几行 TypeScript，或让 Claude Code 帮着写；安装：输入 /plugin；需要 Claude Code 2.1.287 或更高版本。\n提醒：模组不在沙盒里，权限和 Claude Code 一样大，只装信得过的人写的。\n#ClaudeCode #Claude #AI编程 #Anthropic #模组",
+    "topics": [
+      "ClaudeCode",
+      "Claude",
+      "AI编程",
+      "Anthropic",
+      "模组"
+    ],
+    "declaration": "内容由AI生成",
+    "collection": "Claude Code相关（抖音已有，审核中；发布后在合集页添加作品）",
+    "cover": "竖封面 3:4 = 封面_选定_3x4.png；横封面 4:3 = 封面_选定_4x3.png",
+    "published": null
+  },
+  "xiaohongshu": {
+    "title": "Claude Code 官方发布模组功能",
+    "desc": "Claude Code 官方发布模组：改它的行为和界面，几行 TypeScript 就能写，三个官方示例一次看完\n来源：@ClaudeDevs（X，2026-10-02）、claude.dev 模组教程、Claude Code 官方文档；画面来自官方，配音为 AI 生成。\n三个官方示例：Token Weather（输入框上方的上下文天气预报，整个模组约 80 行代码）、Blast Radius（Claude 要删文件夹时先拦住，列出会动哪些文件）、Replay Theater（一轮改完，按 R 键一处一处回放）。\n写法：几行 TypeScript，或让 Claude Code 帮着写；安装：输入 /plugin；需要 Claude Code 2.1.287 或更高版本。\n提醒：模组不在沙盒里，权限和 Claude Code 一样大，只装信得过的人写的。\n#ClaudeCode #Claude #AI编程 #Anthropic #模组 #AI工具 #程序员 #编程 #人工智能 #效率工具",
+    "topics": [
+      "ClaudeCode",
+      "Claude",
+      "AI编程",
+      "Anthropic",
+      "模组",
+      "AI工具",
+      "程序员",
+      "编程",
+      "人工智能",
+      "效率工具"
+    ],
+    "declaration": "笔记含AI合成内容",
+    "cover": "3:4 = 封面_选定_3x4.png",
+    "published": null,
+    "collection": "Claude Code相关（小红书已建，加入合集）",
+    "original_declaration": "关闭原创声明（二次剪辑 + 官方素材）"
+  },
+  "weixin_channels": {
+    "short_title": "Claude Code 模组发布",
+    "desc": "Claude Code 官方发布模组：改它的行为和界面，几行 TypeScript 就能写，三个官方示例一次看完\n来源：@ClaudeDevs（X，2026-10-02）、claude.dev 模组教程、Claude Code 官方文档；画面来自官方，配音为 AI 生成。\n三个官方示例：Token Weather（输入框上方的上下文天气预报，整个模组约 80 行代码）、Blast Radius（Claude 要删文件夹时先拦住，列出会动哪些文件）、Replay Theater（一轮改完，按 R 键一处一处回放）。\n写法：几行 TypeScript，或让 Claude Code 帮着写；安装：输入 /plugin；需要 Claude Code 2.1.287 或更高版本。\n提醒：模组不在沙盒里，权限和 Claude Code 一样大，只装信得过的人写的。\n#ClaudeCode #Claude #AI编程 #Anthropic #模组 #AI工具 #程序员 #编程 #人工智能 #效率工具",
+    "topics": [
+      "ClaudeCode",
+      "Claude",
+      "AI编程",
+      "Anthropic",
+      "模组",
+      "AI工具",
+      "程序员",
+      "编程",
+      "人工智能",
+      "效率工具"
+    ],
+    "declaration": "视频标注：含AI生成内容",
+    "location": "不显示位置",
+    "collection": "ClaudeCode（视频号已建，标题 ≤ 10 字不可改）",
+    "cover": "成片第 0 帧 = 选定的封面（cover_frame0.py）；编辑封面选第 0 帧，3:4 裁剪框对到画面 y 450–1890（居中）",
+    "published": null
+  },
+  "published": {}
+}

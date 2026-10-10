@@ -1,0 +1,134 @@
+{
+  "dsf": 6,
+  "scene_anchor": [
+    4347,
+    2391
+  ],
+  "scene_size": [
+    8550,
+    4056
+  ],
+  "poses": [
+    {
+      "window": [
+        4007,
+        2061,
+        4687,
+        2651
+      ],
+      "centroid": [
+        4347,
+        2391
+      ],
+      "anchor": [
+        340,
+        330
+      ],
+      "body_bbox": [
+        140,
+        204,
+        527,
+        478
+      ],
+      "main_bbox": [
+        140,
+        124,
+        527,
+        478
+      ],
+      "file": "astronaut_f0.png",
+      "source": "s6_0.png"
+    },
+    {
+      "window": [
+        4048,
+        2038,
+        4728,
+        2628
+      ],
+      "centroid": [
+        4388,
+        2368
+      ],
+      "anchor": [
+        340,
+        330
+      ],
+      "body_bbox": [
+        138,
+        213,
+        525,
+        468
+      ],
+      "main_bbox": [
+        138,
+        99,
+        525,
+        468
+      ],
+      "file": "astronaut_f1.png",
+      "source": "s6_1.png"
+    },
+    {
+      "window": [
+        4073,
+        2051,
+        4753,
+        2641
+      ],
+      "centroid": [
+        4413,
+        2381
+      ],
+      "anchor": [
+        340,
+        330
+      ],
+      "body_bbox": [
+        137,
+        212,
+        524,
+        470
+      ],
+      "main_bbox": [
+        137,
+        98,
+        524,
+        470
+      ],
+      "file": "astronaut_f2.png",
+      "source": "s6_2.png"
+    },
+    {
+      "window": [
+        4058,
+        1958,
+        4738,
+        2548
+      ],
+      "centroid": [
+        4398,
+        2288
+      ],
+      "anchor": [
+        340,
+        330
+      ],
+      "body_bbox": [
+        137,
+        214,
+        524,
+        473
+      ],
+      "main_bbox": [
+        137,
+        134,
+        524,
+        473
+      ],
+      "file": "astronaut_f3.png",
+      "source": "s6_3.png"
+    }
+  ],
+  "note": "window/anchor/body_bbox/main_bbox 都是 6 倍像素；anchor = 宇航员重心在 astronaut_f*.png 里的位置；scene_anchor = 重心在 scene_clean.png 里的位置"
+}
