@@ -1,0 +1,111 @@
+1
+00:00:00,000 --> 00:00:02,014
+Claude Code works in three steps: gather context,
+
+2
+00:00:02,034 --> 00:00:04,230
+take action, verify the result.
+
+3
+00:00:04,250 --> 00:00:06,403
+Lesson one of the official intro course,
+
+4
+00:00:06,423 --> 00:00:08,740
+published in May, taught by Lewis Menelaws.
+
+5
+00:00:08,760 --> 00:00:10,497
+The big difference from a chat window:
+
+6
+00:00:10,517 --> 00:00:12,580
+it can work on your files and terminal directly.
+
+7
+00:00:12,600 --> 00:00:13,942
+A chat window hands you code to copy
+
+8
+00:00:13,962 --> 00:00:16,520
+and paste. Claude Code goes in and edits it itself.
+
+9
+00:00:16,540 --> 00:00:19,261
+How? It gathers context, then acts by editing files
+
+10
+00:00:19,281 --> 00:00:22,220
+and running commands, then verifies the result.
+
+11
+00:00:22,240 --> 00:00:24,360
+If it falls short, it loops back
+
+12
+00:00:24,380 --> 00:00:26,350
+and tries again until the result checks out.
+
+13
+00:00:26,370 --> 00:00:29,058
+Ask it to fix failing tests: it runs them, reads the errors,
+
+14
+00:00:29,078 --> 00:00:32,140
+finds the files, edits, and runs them again.
+
+15
+00:00:32,160 --> 00:00:33,708
+At any point, you can add context,
+
+16
+00:00:33,728 --> 00:00:35,630
+interrupt, or steer it.
+
+17
+00:00:35,650 --> 00:00:38,254
+Made a mistake? Press Esc twice and your files roll back,
+
+18
+00:00:38,274 --> 00:00:40,940
+though changes to remote systems can't be undone.
+
+19
+00:00:40,960 --> 00:00:42,810
+Four things hold it up: the loop itself,
+
+20
+00:00:42,830 --> 00:00:45,880
+the context window, tools, and permissions.
+
+21
+00:00:45,900 --> 00:00:48,275
+The window compacts itself when it fills up, Claude decides
+
+22
+00:00:48,295 --> 00:00:50,771
+when to call tools, and you set the permissions.
+
+23
+00:00:50,791 --> 00:00:52,162
+It runs in your terminal,
+
+24
+00:00:52,182 --> 00:00:54,571
+as an editor plugin, in the desktop app, and on the web.
+
+25
+00:00:54,591 --> 00:00:57,150
+The official course itself warns: it can misread your intent,
+
+26
+00:00:57,170 --> 00:00:59,241
+introduce bugs, and over-engineer things.
+
+27
+00:00:59,261 --> 00:01:01,363
+A chat window delivers answers; an agent delivers results.
+
+28
+00:01:01,383 --> 00:01:03,891
+Whether they're right is still on you to verify.

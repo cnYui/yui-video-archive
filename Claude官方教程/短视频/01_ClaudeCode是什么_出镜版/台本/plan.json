@@ -1,0 +1,1947 @@
+{
+ "layout": "faceb",
+ "faceph": false,
+ "plan": [
+  {
+   "id": "S01",
+   "name": "开场",
+   "mode": "one",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "credit": "官方课 · Claude Code 101",
+   "ranges": [
+    {
+     "src": "c1",
+     "in": 7.6,
+     "out": 11.3,
+     "mute": true,
+     "speed": 0.915
+    },
+    {
+     "src": "c1",
+     "in": 14.0,
+     "out": 16.5,
+     "mute": true,
+     "speed": 0.915
+    },
+    {
+     "src": "c1",
+     "in": 39.5,
+     "out": 44.494,
+     "mute": true,
+     "speed": 0.915
+    },
+    {
+     "src": "c1",
+     "in": 119.8,
+     "out": 124.5,
+     "mute": true,
+     "speed": 0.915
+    }
+   ],
+   "lines": [
+    {
+     "id": "T01",
+     "a": 0.103
+    },
+    {
+     "id": "T02",
+     "a": 1.277
+    },
+    {
+     "id": "T03",
+     "a": 5.0
+    },
+    {
+     "id": "T04",
+     "a": 9.37
+    },
+    {
+     "id": "T05",
+     "a": 13.53
+    }
+   ]
+  },
+  {
+   "id": "S02",
+   "name": "官网 → Claude Academy（悠一的录屏）",
+   "mode": "one",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "credit": "悠一 · 录屏",
+   "ranges": [
+    {
+     "src": "rec",
+     "in": 0.8,
+     "out": 4.125,
+     "mute": true,
+     "crop": [
+      0.0,
+      0.025,
+      1.0,
+      0.974
+     ]
+    },
+    {
+     "src": "rec",
+     "in": 4.2,
+     "out": 12.8,
+     "mute": true,
+     "speed": 1.8,
+     "crop": [
+      0.0,
+      0.025,
+      1.0,
+      0.974
+     ]
+    }
+   ],
+   "lines": [
+    {
+     "id": "T06",
+     "a": 0.363
+    },
+    {
+     "id": "T07",
+     "a": 4.663
+    }
+   ]
+  },
+  {
+   "id": "S03",
+   "name": "Claude Code 和 Cowork（桌面应用的三个标签）",
+   "mode": "one",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "credit": "官方课 · 安装",
+   "ranges": [
+    {
+     "src": "c3",
+     "in": 117.0,
+     "out": 119.4,
+     "mute": true,
+     "speed": 0.97
+    },
+    {
+     "src": "c3",
+     "in": 122.3,
+     "out": 126.5,
+     "mute": true,
+     "speed": 0.97
+    }
+   ],
+   "lines": [
+    {
+     "id": "T08",
+     "a": 0.93
+    },
+    {
+     "id": "T09",
+     "a": 1.66
+    },
+    {
+     "id": "T10",
+     "a": 5.587
+    }
+   ]
+  },
+  {
+   "id": "S04",
+   "name": "聊天窗口：只能回答，不能改文件",
+   "mode": "two",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "credit": "官方课 · Claude Code 101",
+   "ranges": [
+    {
+     "src": "c3",
+     "in": 115.0,
+     "out": 119.3,
+     "mute": true
+    },
+    {
+     "src": "c3",
+     "in": 118.9,
+     "hold": 5.411
+    },
+    {
+     "src": "c1",
+     "in": 50.0,
+     "out": 51.3,
+     "mute": true
+    },
+    {
+     "src": "c1",
+     "in": 51.3,
+     "hold": 5.612
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "c1",
+     "in": 47.0,
+     "out": 49.4,
+     "mute": true
+    },
+    {
+     "src": "c1",
+     "in": 49.3,
+     "hold": 14.223
+    }
+   ],
+   "lines": [
+    {
+     "id": "T11",
+     "a": 0.47
+    },
+    {
+     "id": "T12",
+     "a": 4.51
+    },
+    {
+     "id": "T13",
+     "a": 10.563
+    },
+    {
+     "id": "T14",
+     "a": 14.453
+    }
+   ]
+  },
+  {
+   "id": "S05",
+   "name": "把手伸进电脑：创建、修改、删除",
+   "mode": "big",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "credit": "官方课 · Claude Code 101",
+   "ranges": [
+    {
+     "src": "c1",
+     "in": 39.5,
+     "out": 45.395,
+     "mute": true,
+     "speed": 0.983,
+     "crop": [
+      0.095,
+      0.07,
+      0.508,
+      0.93
+     ]
+    },
+    {
+     "src": "c1",
+     "in": 84.4,
+     "out": 89.0,
+     "mute": true,
+     "speed": 0.983,
+     "crop": [
+      0.095,
+      0.07,
+      0.508,
+      0.93
+     ]
+    }
+   ],
+   "lines": [
+    {
+     "id": "T15",
+     "a": 0.23
+    },
+    {
+     "id": "T16",
+     "a": 6.387
+    }
+   ]
+  },
+  {
+   "id": "S06",
+   "name": "Claude Code 是官方做的 AI 助手",
+   "mode": "two",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "credit": "官方课 · Claude Code 101",
+   "ranges": [
+    {
+     "src": "c4",
+     "in": 81.0,
+     "out": 86.6,
+     "mute": true,
+     "speed": 0.752
+    },
+    {
+     "src": "c4",
+     "in": 86.55,
+     "hold": 1.163
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "c4",
+     "in": 89.0,
+     "out": 96.0,
+     "mute": true,
+     "speed": 0.813
+    }
+   ],
+   "lines": [
+    {
+     "id": "T17",
+     "a": 0.353
+    },
+    {
+     "id": "T18",
+     "a": 2.967
+    },
+    {
+     "id": "T19",
+     "a": 6.053
+    }
+   ]
+  },
+  {
+   "id": "S07",
+   "name": "顾问 vs 助手",
+   "mode": "big",
+   "type": "card",
+   "kind": "card",
+   "overlay": "card",
+   "dur": 0.5,
+   "lines": [
+    {
+     "id": "T20",
+     "a": 0.233
+    },
+    {
+     "id": "T21",
+     "a": 6.69
+    },
+    {
+     "id": "T22",
+     "a": 10.157
+    },
+    {
+     "id": "T23",
+     "a": 13.743
+    },
+    {
+     "id": "T24",
+     "a": 19.66
+    }
+   ]
+  },
+  {
+   "id": "S08a",
+   "name": "活动范围：这个文件夹",
+   "mode": "one",
+   "type": "card",
+   "kind": "card",
+   "overlay": "card",
+   "dur": 0.5,
+   "lines": [
+    {
+     "id": "T25",
+     "a": 0.08
+    }
+   ]
+  },
+  {
+   "id": "S08b",
+   "name": "碰别的地方要经过你的同意",
+   "mode": "one",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "credit": "官方课 · Claude Code 101",
+   "ranges": [
+    {
+     "src": "c1",
+     "in": 133.3,
+     "out": 136.4,
+     "mute": true,
+     "speed": 0.787
+    }
+   ],
+   "lines": [
+    {
+     "id": "T26",
+     "a": 0.27
+    }
+   ]
+  },
+  {
+   "id": "S09",
+   "name": "在终端里输入 claude",
+   "mode": "one",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "credit": "官方课 · 安装",
+   "ranges": [
+    {
+     "src": "c3",
+     "in": 38.0,
+     "out": 44.773,
+     "mute": true
+    }
+   ],
+   "lines": [
+    {
+     "id": "T27",
+     "a": 0.376
+    },
+    {
+     "id": "T28",
+     "a": 3.106
+    }
+   ]
+  },
+  {
+   "id": "S10",
+   "name": "终端：只能敲命令的窗口",
+   "mode": "two",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "credit": "官方课 · 安装",
+   "ranges": [
+    {
+     "src": "c3",
+     "in": 18.4,
+     "out": 25.3,
+     "mute": true,
+     "speed": 0.752
+    },
+    {
+     "src": "c3",
+     "in": 25.25,
+     "hold": 0.621
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "c3",
+     "in": 28.0,
+     "out": 33.5,
+     "mute": true,
+     "speed": 0.868
+    },
+    {
+     "src": "c3",
+     "in": 38.0,
+     "out": 41.0,
+     "mute": true,
+     "speed": 0.868
+    }
+   ],
+   "lines": [
+    {
+     "id": "T29",
+     "a": 0.443
+    },
+    {
+     "id": "T30",
+     "a": 5.477
+    }
+   ]
+  },
+  {
+   "id": "S11",
+   "name": "用自然语言跟它沟通",
+   "mode": "two",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "credit": "官方课 · Claude Code 101",
+   "ranges": [
+    {
+     "src": "c4",
+     "in": 88.9,
+     "out": 94.5,
+     "mute": true,
+     "speed": 0.877
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "c4",
+     "in": 95.0,
+     "out": 101.0,
+     "mute": true,
+     "speed": 0.94
+    }
+   ],
+   "lines": [
+    {
+     "id": "T31",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "S12",
+   "name": "智能体 AI Agent",
+   "mode": "two",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "credit": "官方课 · Claude Code 101",
+   "ranges": [
+    {
+     "src": "c1",
+     "in": 71.2,
+     "out": 78.4,
+     "mute": true,
+     "speed": 0.752
+    },
+    {
+     "src": "c1",
+     "in": 78.35,
+     "hold": 0.766
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "c1",
+     "in": 63.0,
+     "out": 69.2,
+     "mute": true,
+     "speed": 0.793
+    },
+    {
+     "src": "c1",
+     "in": 119.8,
+     "out": 121.8,
+     "mute": true,
+     "speed": 0.793
+    }
+   ],
+   "lines": [
+    {
+     "id": "T32",
+     "a": 0.31
+    },
+    {
+     "id": "T33",
+     "a": 7.79
+    }
+   ]
+  },
+  {
+   "id": "S13",
+   "name": "不只是写代码：写文档、跑程序、搜文件、查资料",
+   "mode": "two",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "credit": "官方课 · Claude Code 101",
+   "ranges": [
+    {
+     "src": "c2",
+     "in": 124.5,
+     "out": 133.597,
+     "mute": true,
+     "speed": 0.856
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "c2",
+     "in": 97.9,
+     "out": 107.199,
+     "mute": true,
+     "speed": 0.875
+    }
+   ],
+   "lines": [
+    {
+     "id": "T34",
+     "a": 0.33
+    },
+    {
+     "id": "T35",
+     "a": 3.87
+    },
+    {
+     "id": "T36",
+     "a": 8.084
+    }
+   ]
+  },
+  {
+   "id": "S14a",
+   "name": "能干什么 ①：读项目",
+   "mode": "two",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "credit": "官方课 · Claude Code 101",
+   "ranges": [
+    {
+     "src": "c4",
+     "in": 44.0,
+     "out": 52.0,
+     "mute": true,
+     "speed": 0.971
+    },
+    {
+     "src": "c4",
+     "in": 53.0,
+     "out": 61.0,
+     "mute": true,
+     "speed": 0.971
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "c6",
+     "in": 20.2,
+     "out": 27.5,
+     "mute": true,
+     "speed": 0.807
+    },
+    {
+     "src": "c4",
+     "in": 62.0,
+     "out": 68.0,
+     "mute": true,
+     "speed": 0.807
+    }
+   ],
+   "lines": [
+    {
+     "id": "T37",
+     "a": 0.453
+    },
+    {
+     "id": "T38",
+     "a": 4.407
+    },
+    {
+     "id": "T39",
+     "a": 6.653
+    },
+    {
+     "id": "T40",
+     "a": 10.923
+    }
+   ]
+  },
+  {
+   "id": "S14b",
+   "name": "能干什么 ②：改代码",
+   "mode": "two",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "credit": "官方课 · Claude Code 101",
+   "ranges": [
+    {
+     "src": "c1",
+     "in": 7.6,
+     "out": 11.3,
+     "mute": true,
+     "speed": 0.972
+    },
+    {
+     "src": "c1",
+     "in": 158.9,
+     "out": 162.9,
+     "mute": true,
+     "speed": 0.972
+    },
+    {
+     "src": "c4",
+     "in": 104.5,
+     "out": 110.5,
+     "mute": true,
+     "speed": 0.972
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "c4",
+     "in": 73.5,
+     "out": 75.8,
+     "mute": true,
+     "speed": 0.837
+    },
+    {
+     "src": "c4",
+     "in": 92.0,
+     "out": 98.0,
+     "mute": true,
+     "speed": 0.837
+    },
+    {
+     "src": "c4",
+     "in": 117.1,
+     "out": 119.4,
+     "mute": true,
+     "speed": 0.837
+    },
+    {
+     "src": "c4",
+     "in": 122.5,
+     "out": 123.7,
+     "mute": true,
+     "speed": 0.837
+    }
+   ],
+   "lines": [
+    {
+     "id": "T41",
+     "a": 0.4
+    },
+    {
+     "id": "T42",
+     "a": 1.913
+    },
+    {
+     "id": "T43",
+     "a": 6.943
+    }
+   ]
+  },
+  {
+   "id": "S14c",
+   "name": "能干什么 ③：跑命令",
+   "mode": "two",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "credit": "官方课 · Claude Code 101",
+   "ranges": [
+    {
+     "src": "c1",
+     "in": 84.4,
+     "out": 89.0,
+     "mute": true,
+     "speed": 0.865
+    },
+    {
+     "src": "c1",
+     "in": 132.3,
+     "out": 136.4,
+     "mute": true,
+     "speed": 0.865
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "c4",
+     "in": 105.0,
+     "out": 110.497,
+     "mute": true,
+     "speed": 0.884
+    },
+    {
+     "src": "c4",
+     "in": 112.5,
+     "out": 115.898,
+     "mute": true,
+     "speed": 0.884
+    }
+   ],
+   "lines": [
+    {
+     "id": "T44",
+     "a": 0.33
+    },
+    {
+     "id": "T45",
+     "a": 7.643
+    }
+   ]
+  },
+  {
+   "id": "S14d",
+   "name": "能干什么 ④：上网查资料（新闻聚合）",
+   "mode": "big",
+   "type": "card",
+   "kind": "card",
+   "overlay": "card",
+   "dur": 0.5,
+   "lines": [
+    {
+     "id": "T46",
+     "a": 0.52
+    },
+    {
+     "id": "T47",
+     "a": 5.54
+    }
+   ]
+  },
+  {
+   "id": "S14e",
+   "name": "不用一件件指挥：告诉它目标",
+   "mode": "two",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "credit": "官方课 · Claude Code 101",
+   "ranges": [
+    {
+     "src": "c4",
+     "in": 22.4,
+     "out": 30.399,
+     "mute": true,
+     "speed": 0.908
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "c4",
+     "in": 89.0,
+     "out": 96.497,
+     "mute": true,
+     "speed": 0.851
+    }
+   ],
+   "lines": [
+    {
+     "id": "T48",
+     "a": 0.2
+    }
+   ]
+  },
+  {
+   "id": "S15",
+   "name": "一个循环的概念",
+   "mode": "two",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "credit": "官方课 · Claude Code 101",
+   "ranges": [
+    {
+     "src": "c2",
+     "in": 17.3,
+     "out": 22.75,
+     "mute": true
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "c1",
+     "in": 63.3,
+     "out": 68.75,
+     "mute": true
+    }
+   ],
+   "lines": [
+    {
+     "id": "T49",
+     "a": 0.37
+    },
+    {
+     "id": "T50",
+     "a": 3.65
+    }
+   ]
+  },
+  {
+   "id": "S16",
+   "name": "agent loop = 代理循环",
+   "mode": "two",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "credit": "官方课 · Claude Code 101",
+   "ranges": [
+    {
+     "src": "c2",
+     "in": 30.4,
+     "out": 33.4,
+     "mute": true,
+     "speed": 0.944
+    },
+    {
+     "src": "c2",
+     "in": 37.7,
+     "out": 45.0,
+     "mute": true,
+     "speed": 0.944
+    },
+    {
+     "src": "c2",
+     "in": 48.7,
+     "out": 52.5,
+     "mute": true,
+     "speed": 0.944
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "c1",
+     "in": 63.3,
+     "out": 69.2,
+     "mute": true,
+     "speed": 0.877
+    },
+    {
+     "src": "c1",
+     "in": 71.2,
+     "out": 78.4,
+     "mute": true,
+     "speed": 0.877
+    }
+   ],
+   "lines": [
+    {
+     "id": "T51",
+     "a": 0.434
+    },
+    {
+     "id": "T52",
+     "a": 3.654
+    },
+    {
+     "id": "T53",
+     "a": 12.3
+    }
+   ]
+  },
+  {
+   "id": "S17",
+   "name": "例子：登录页点了没反应（循环图 ①）",
+   "mode": "big",
+   "type": "card",
+   "kind": "card",
+   "overlay": "card",
+   "dur": 0.5,
+   "lines": [
+    {
+     "id": "T54",
+     "a": 0.2
+    },
+    {
+     "id": "T55",
+     "a": 8.807
+    },
+    {
+     "id": "T56",
+     "a": 12.787
+    },
+    {
+     "id": "T57",
+     "a": 16.767
+    },
+    {
+     "id": "T58",
+     "a": 20.51
+    }
+   ]
+  },
+  {
+   "id": "S18",
+   "name": "找代码 → 读报错 → 改 → 跑",
+   "mode": "two",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "credit": "官方课 · Claude Code 101",
+   "ranges": [
+    {
+     "src": "c1",
+     "in": 149.6,
+     "out": 155.8,
+     "mute": true,
+     "speed": 0.752
+    },
+    {
+     "src": "c1",
+     "in": 132.5,
+     "out": 136.4,
+     "mute": true,
+     "speed": 0.752
+    },
+    {
+     "src": "c1",
+     "in": 136.35,
+     "hold": 0.156
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "c1",
+     "in": 119.8,
+     "out": 124.498,
+     "mute": true,
+     "speed": 0.883
+    },
+    {
+     "src": "c1",
+     "in": 159.0,
+     "out": 162.9,
+     "mute": true,
+     "speed": 0.883
+    },
+    {
+     "src": "c4",
+     "in": 112.5,
+     "out": 115.899,
+     "mute": true,
+     "speed": 0.883
+    }
+   ],
+   "lines": [
+    {
+     "id": "T59",
+     "a": 0.197
+    },
+    {
+     "id": "T60",
+     "a": 10.137
+    }
+   ]
+  },
+  {
+   "id": "S19",
+   "name": "修好了就达成目标，没修好再转一圈（循环图 ②）",
+   "mode": "big",
+   "type": "card",
+   "kind": "card",
+   "overlay": "card",
+   "dur": 0.5,
+   "lines": [
+    {
+     "id": "T61",
+     "a": 0.27
+    },
+    {
+     "id": "T62",
+     "a": 3.77
+    },
+    {
+     "id": "T63",
+     "a": 10.99
+    }
+   ]
+  },
+  {
+   "id": "S20",
+   "name": "转半圈 vs 连着做几十步",
+   "mode": "big",
+   "type": "card",
+   "kind": "card",
+   "overlay": "card",
+   "dur": 0.5,
+   "lines": [
+    {
+     "id": "T64",
+     "a": 0.25
+    },
+    {
+     "id": "T65",
+     "a": 3.51
+    },
+    {
+     "id": "T66",
+     "a": 7.57
+    },
+    {
+     "id": "T67",
+     "a": 13.827
+    }
+   ]
+  },
+  {
+   "id": "S21",
+   "name": "你也在圈里：Esc / 打字回车",
+   "mode": "big",
+   "type": "card",
+   "kind": "card",
+   "overlay": "card",
+   "dur": 0.5,
+   "lines": [
+    {
+     "id": "T68",
+     "a": 0.253
+    },
+    {
+     "id": "T69",
+     "a": 7.443
+    },
+    {
+     "id": "T70",
+     "a": 9.623
+    },
+    {
+     "id": "T71",
+     "a": 18.113
+    }
+   ]
+  },
+  {
+   "id": "S22",
+   "name": "四个点：大脑 双手 记忆 钥匙",
+   "mode": "big",
+   "type": "card",
+   "kind": "card",
+   "overlay": "card",
+   "dur": 0.5,
+   "lines": [
+    {
+     "id": "T72",
+     "a": 0.533
+    },
+    {
+     "id": "T73",
+     "a": 5.47
+    },
+    {
+     "id": "T74",
+     "a": 7.23
+    }
+   ]
+  },
+  {
+   "id": "S23",
+   "name": "大脑在云端 / 双手是工具",
+   "mode": "big",
+   "type": "card",
+   "kind": "card",
+   "overlay": "card",
+   "dur": 0.5,
+   "lines": [
+    {
+     "id": "T75",
+     "a": 0.306
+    },
+    {
+     "id": "T76",
+     "a": 3.246
+    },
+    {
+     "id": "T77",
+     "a": 5.586
+    },
+    {
+     "id": "T78",
+     "a": 10.016
+    },
+    {
+     "id": "T79",
+     "a": 13.306
+    },
+    {
+     "id": "T80",
+     "a": 16.99
+    }
+   ]
+  },
+  {
+   "id": "S24",
+   "name": "大脑和双手怎么配合（一来一回）",
+   "mode": "big",
+   "type": "card",
+   "kind": "card",
+   "overlay": "card",
+   "dur": 0.5,
+   "lines": [
+    {
+     "id": "T81",
+     "a": 0.446
+    },
+    {
+     "id": "T82",
+     "a": 5.846
+    },
+    {
+     "id": "T83",
+     "a": 9.386
+    },
+    {
+     "id": "T84",
+     "a": 20.366
+    },
+    {
+     "id": "T85",
+     "a": 25.306
+    },
+    {
+     "id": "T86",
+     "a": 27.986
+    },
+    {
+     "id": "T87",
+     "a": 35.396
+    }
+   ]
+  },
+  {
+   "id": "S25",
+   "name": "记忆 = 上下文窗口",
+   "mode": "two",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "credit": "官方课 · 上下文管理",
+   "ranges": [
+    {
+     "src": "c6",
+     "in": 29.6,
+     "out": 34.0,
+     "mute": true
+    },
+    {
+     "src": "c6",
+     "in": 34.0,
+     "hold": 4.41
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "c6",
+     "in": 13.1,
+     "out": 15.7,
+     "mute": true
+    },
+    {
+     "src": "c6",
+     "in": 15.6,
+     "hold": 6.21
+    }
+   ],
+   "lines": [
+    {
+     "id": "T88",
+     "a": 0.34
+    },
+    {
+     "id": "T89",
+     "a": 3.64
+    }
+   ]
+  },
+  {
+   "id": "S26",
+   "name": "满了自动压缩，旧细节会丢",
+   "mode": "two",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "credit": "官方课 · 上下文管理",
+   "ranges": [
+    {
+     "src": "c6",
+     "in": 43.2,
+     "out": 46.031,
+     "mute": true
+    },
+    {
+     "src": "c6",
+     "in": 46.4,
+     "out": 52.258,
+     "mute": true
+    },
+    {
+     "src": "c6",
+     "in": 65.5,
+     "out": 70.87,
+     "mute": true
+    },
+    {
+     "src": "c1",
+     "in": 112.5,
+     "out": 115.917,
+     "mute": true
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "c6",
+     "in": 102.9,
+     "out": 108.2,
+     "mute": true,
+     "speed": 0.752
+    },
+    {
+     "src": "c6",
+     "in": 176.9,
+     "out": 183.8,
+     "mute": true,
+     "speed": 0.752
+    },
+    {
+     "src": "c6",
+     "in": 183.75,
+     "hold": 1.254
+    }
+   ],
+   "lines": [
+    {
+     "id": "T90",
+     "a": 0.27
+    },
+    {
+     "id": "T91",
+     "a": 5.5
+    },
+    {
+     "id": "T92",
+     "a": 9.87
+    }
+   ]
+  },
+  {
+   "id": "S27",
+   "name": "新开一场对话，记忆是空的",
+   "mode": "two",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "credit": "官方课 · 上下文管理",
+   "ranges": [
+    {
+     "src": "c6",
+     "in": 113.1,
+     "out": 117.246,
+     "mute": true
+    },
+    {
+     "src": "c6",
+     "in": 190.5,
+     "out": 195.384,
+     "mute": true
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "c6",
+     "in": 121.3,
+     "out": 125.292,
+     "mute": true
+    },
+    {
+     "src": "c6",
+     "in": 102.9,
+     "out": 107.938,
+     "mute": true
+    }
+   ],
+   "lines": [
+    {
+     "id": "T93",
+     "a": 0.353
+    },
+    {
+     "id": "T94",
+     "a": 5.25
+    }
+   ]
+  },
+  {
+   "id": "S28",
+   "name": "每次要遵守的规则：写进 CLAUDE.md",
+   "mode": "two",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "credit": "官方课 · CLAUDE.md",
+   "ranges": [
+    {
+     "src": "c8",
+     "in": 59.0,
+     "out": 68.496,
+     "mute": true,
+     "speed": 0.993
+    },
+    {
+     "src": "c8",
+     "in": 70.0,
+     "out": 75.498,
+     "mute": true,
+     "speed": 0.993
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "c8",
+     "in": 84.2,
+     "out": 90.8,
+     "mute": true,
+     "speed": 0.752
+    },
+    {
+     "src": "c8",
+     "in": 98.6,
+     "out": 101.0,
+     "mute": true,
+     "speed": 0.752
+    },
+    {
+     "src": "c8",
+     "in": 100.95,
+     "hold": 3.132
+    }
+   ],
+   "lines": [
+    {
+     "id": "T95",
+     "a": 0.407
+    },
+    {
+     "id": "T96",
+     "a": 5.86
+    },
+    {
+     "id": "T97",
+     "a": 11.58
+    }
+   ]
+  },
+  {
+   "id": "S29",
+   "name": "钥匙：权限（五种模式）",
+   "mode": "two",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "credit": "官方课 · 权限模式",
+   "ranges": [
+    {
+     "src": "p4",
+     "in": 25.6,
+     "out": 27.0,
+     "mute": true
+    },
+    {
+     "src": "p4",
+     "in": 26.9,
+     "hold": 7.987
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "perm",
+     "in": 4.2,
+     "out": 5.15,
+     "mute": true,
+     "speed": 0.6,
+     "crop": [
+      0.16,
+      0.12,
+      0.98,
+      0.83
+     ]
+    },
+    {
+     "src": "perm",
+     "in": 5.3,
+     "hold": 7.804,
+     "crop": [
+      0.16,
+      0.12,
+      0.98,
+      0.83
+     ]
+    }
+   ],
+   "lines": [
+    {
+     "id": "T98",
+     "a": 0.287
+    },
+    {
+     "id": "T99",
+     "a": 2.7
+    },
+    {
+     "id": "T100",
+     "a": 7.847
+    }
+   ]
+  },
+  {
+   "id": "S30",
+   "name": "手动档：每步先问你",
+   "mode": "two",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "credit": "官方课 · 权限模式",
+   "ranges": [
+    {
+     "src": "p4",
+     "in": 26.7,
+     "out": 29.9,
+     "mute": true,
+     "speed": 0.752
+    },
+    {
+     "src": "p4",
+     "in": 29.85,
+     "hold": 1.031
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "c1",
+     "in": 133.0,
+     "out": 136.4,
+     "mute": true,
+     "speed": 0.752
+    },
+    {
+     "src": "c1",
+     "in": 136.35,
+     "hold": 0.765
+    }
+   ],
+   "lines": [
+    {
+     "id": "T101",
+     "a": 0.38
+    }
+   ]
+  },
+  {
+   "id": "S31",
+   "name": "接受编辑档：改文件不问",
+   "mode": "two",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "credit": "官方课 · 权限模式",
+   "ranges": [
+    {
+     "src": "p4",
+     "in": 30.4,
+     "out": 36.4,
+     "mute": true,
+     "speed": 0.752
+    },
+    {
+     "src": "p4",
+     "in": 36.35,
+     "hold": 1.588
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "c1",
+     "in": 159.0,
+     "out": 162.694,
+     "mute": true
+    },
+    {
+     "src": "c4",
+     "in": 83.0,
+     "out": 86.41,
+     "mute": true
+    },
+    {
+     "src": "c4",
+     "in": 88.9,
+     "out": 91.363,
+     "mute": true
+    }
+   ],
+   "lines": [
+    {
+     "id": "T102",
+     "a": 0.274
+    },
+    {
+     "id": "T103",
+     "a": 4.52
+    },
+    {
+     "id": "T104",
+     "a": 8.427
+    }
+   ]
+  },
+  {
+   "id": "S32",
+   "name": "计划档：只研究，不碰代码",
+   "mode": "two",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "credit": "官方课 · 权限模式",
+   "ranges": [
+    {
+     "src": "p4",
+     "in": 37.4,
+     "out": 40.5,
+     "mute": true,
+     "speed": 0.812
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "c4",
+     "in": 104.5,
+     "out": 108.32,
+     "mute": true
+    }
+   ],
+   "lines": [
+    {
+     "id": "T105",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "S33",
+   "name": "自动档：后台有安全检查",
+   "mode": "two",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "credit": "官方课 · 权限模式",
+   "ranges": [
+    {
+     "src": "p4",
+     "in": 69.6,
+     "out": 73.8,
+     "mute": true,
+     "speed": 0.752
+    },
+    {
+     "src": "p4",
+     "in": 73.75,
+     "hold": 0.895
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "p4",
+     "in": 82.5,
+     "out": 87.0,
+     "mute": true,
+     "speed": 0.752
+    },
+    {
+     "src": "p4",
+     "in": 86.95,
+     "hold": 0.496
+    }
+   ],
+   "lines": [
+    {
+     "id": "T106",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "S34",
+   "name": "全部放开：不建议新手开",
+   "mode": "two",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "credit": "官方课 · 权限模式",
+   "ranges": [
+    {
+     "src": "p4",
+     "in": 53.2,
+     "out": 59.6,
+     "mute": true,
+     "speed": 0.752
+    },
+    {
+     "src": "p4",
+     "in": 59.55,
+     "hold": 0.932
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "perm",
+     "in": 5.6,
+     "out": 7.41,
+     "mute": true,
+     "speed": 0.7,
+     "crop": [
+      0.15,
+      0.0,
+      0.98,
+      0.72
+     ]
+    },
+    {
+     "src": "perm",
+     "in": 7.4,
+     "hold": 6.857,
+     "crop": [
+      0.15,
+      0.0,
+      0.98,
+      0.72
+     ]
+    }
+   ],
+   "lines": [
+    {
+     "id": "T107",
+     "a": 0.283
+    },
+    {
+     "id": "T108",
+     "a": 8.063
+    }
+   ]
+  },
+  {
+   "id": "S35",
+   "name": "四个零件合起来 = 本地的智能体",
+   "mode": "big",
+   "type": "card",
+   "kind": "card",
+   "overlay": "card",
+   "dur": 0.5,
+   "lines": [
+    {
+     "id": "T109",
+     "a": 0.45
+    },
+    {
+     "id": "T110",
+     "a": 5.81
+    }
+   ]
+  },
+  {
+   "id": "S36",
+   "name": "泼冷水：幻觉、概率模型、可能有 bug",
+   "mode": "big",
+   "type": "card",
+   "kind": "card",
+   "overlay": "card",
+   "dur": 0.5,
+   "lines": [
+    {
+     "id": "T111",
+     "a": 0.316
+    },
+    {
+     "id": "T112",
+     "a": 4.306
+    },
+    {
+     "id": "T113",
+     "a": 6.566
+    },
+    {
+     "id": "T114",
+     "a": 12.85
+    }
+   ]
+  },
+  {
+   "id": "S37",
+   "name": "还是有风险：权限别开最大",
+   "mode": "two",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "credit": "官方课 · 权限模式",
+   "ranges": [
+    {
+     "src": "p4",
+     "in": 78.3,
+     "out": 87.0,
+     "mute": true,
+     "speed": 0.752
+    },
+    {
+     "src": "p4",
+     "in": 86.95,
+     "hold": 0.051
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "p4",
+     "in": 53.5,
+     "out": 57.5,
+     "mute": true
+    },
+    {
+     "src": "perm",
+     "in": 7.4,
+     "hold": 7.62,
+     "crop": [
+      0.15,
+      0.0,
+      0.98,
+      0.72
+     ]
+    }
+   ],
+   "lines": [
+    {
+     "id": "T115",
+     "a": 0.23
+    },
+    {
+     "id": "T116",
+     "a": 6.35
+    }
+   ]
+  },
+  {
+   "id": "S38",
+   "name": "怎么用上它：终端 / 编辑器插件 / 桌面应用 / 网页版",
+   "mode": "one",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "credit": "官方课 · 安装",
+   "ranges": [
+    {
+     "src": "c3",
+     "in": 18.4,
+     "out": 23.0,
+     "mute": true
+    },
+    {
+     "src": "c3",
+     "in": 39.0,
+     "out": 42.4,
+     "mute": true
+    },
+    {
+     "src": "c3",
+     "in": 48.0,
+     "out": 50.3,
+     "mute": true
+    },
+    {
+     "src": "c3",
+     "in": 69.0,
+     "out": 72.7,
+     "mute": true
+    },
+    {
+     "src": "c3",
+     "in": 122.3,
+     "out": 124.3,
+     "mute": true
+    },
+    {
+     "src": "c3",
+     "in": 141.0,
+     "out": 142.04,
+     "mute": true
+    }
+   ],
+   "lines": [
+    {
+     "id": "T117",
+     "a": 0.426
+    },
+    {
+     "id": "T118",
+     "a": 2.71
+    },
+    {
+     "id": "T119",
+     "a": 10.31
+    }
+   ]
+  },
+  {
+   "id": "S39a",
+   "name": "两点建议 ①：先看状态栏",
+   "mode": "one",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "credit": "官方课 · Claude Code 101",
+   "ranges": [
+    {
+     "src": "c4",
+     "in": 92.0,
+     "out": 97.5,
+     "mute": true,
+     "speed": 0.978
+    },
+    {
+     "src": "c4",
+     "in": 98.0,
+     "out": 101.8,
+     "mute": true,
+     "speed": 0.978
+    }
+   ],
+   "lines": [
+    {
+     "id": "T120",
+     "a": 0.97
+    },
+    {
+     "id": "T121",
+     "a": 4.316
+    }
+   ]
+  },
+  {
+   "id": "S39b",
+   "name": "两点建议 ②：先问问题，再让它改东西",
+   "mode": "one",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "credit": "官方课 · Claude Code 101",
+   "ranges": [
+    {
+     "src": "c4",
+     "in": 89.0,
+     "out": 92.6,
+     "mute": true
+    },
+    {
+     "src": "c1",
+     "in": 39.5,
+     "out": 45.0,
+     "mute": true
+    },
+    {
+     "src": "c4",
+     "in": 117.1,
+     "out": 119.4,
+     "mute": true
+    },
+    {
+     "src": "c4",
+     "in": 122.5,
+     "out": 123.7,
+     "mute": true
+    },
+    {
+     "src": "c4",
+     "in": 123.6,
+     "hold": 4.553
+    }
+   ],
+   "lines": [
+    {
+     "id": "T122",
+     "a": 0.42
+    },
+    {
+     "id": "T123",
+     "a": 11.98
+    },
+    {
+     "id": "T124",
+     "a": 16.023
+    }
+   ]
+  }
+ ]
+}

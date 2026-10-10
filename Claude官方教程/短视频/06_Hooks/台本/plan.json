@@ -1,0 +1,369 @@
+{
+ "layout": "dual",
+ "plan": [
+  {
+   "id": "S1",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "通常 vs 一定",
+   "credit": "官方教程 第6期",
+   "ranges": [
+    {
+     "src": "a",
+     "in": 76.87,
+     "out": 85.45,
+     "mute": true
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "a",
+     "in": 4.65,
+     "out": 11.005,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 73.45,
+     "out": 75.675,
+     "mute": true
+    }
+   ],
+   "lines": [
+    {
+     "id": "N01",
+     "a": 0.0
+    },
+    {
+     "id": "N02",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "S2",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "事件在循环里的位置",
+   "credit": "官方教程 第6期",
+   "ranges": [
+    {
+     "src": "a",
+     "in": 16.65,
+     "out": 19.577,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 42.4,
+     "out": 52.202,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 52.9,
+     "out": 57.5,
+     "mute": true,
+     "speed": 0.8
+    },
+    {
+     "src": "a",
+     "in": 57.45,
+     "hold": 0.241
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "a",
+     "in": 20.15,
+     "out": 20.968,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 21.65,
+     "out": 23.928,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 24.9,
+     "out": 27.387,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 28.4,
+     "out": 30.47,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 31.4,
+     "out": 33.053,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 33.9,
+     "out": 34.509,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 35.15,
+     "out": 36.385,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 37.15,
+     "out": 39.011,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 39.9,
+     "out": 41.553,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 122.9,
+     "out": 126.0,
+     "mute": true,
+     "speed": 0.8
+    },
+    {
+     "src": "a",
+     "in": 125.9,
+     "hold": 0.181
+    }
+   ],
+   "lines": [
+    {
+     "id": "N03",
+     "a": 0.0
+    },
+    {
+     "id": "N04",
+     "a": 0.0
+    },
+    {
+     "id": "N05",
+     "a": 0.0
+    },
+    {
+     "id": "N06",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "S3",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "PreToolUse 三种决定",
+   "credit": "官方教程 第6期",
+   "ranges": [
+    {
+     "src": "a",
+     "in": 68.4,
+     "out": 73.11,
+     "mute": true
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "a",
+     "in": 59.65,
+     "out": 64.36,
+     "mute": true
+    }
+   ],
+   "lines": [
+    {
+     "id": "N07",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "S4",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "退出码",
+   "credit": "官方教程 第6期",
+   "ranges": [
+    {
+     "src": "a",
+     "in": 109.4,
+     "out": 114.32,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 120.6,
+     "out": 122.5,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 122.45,
+     "hold": 6.36
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "a",
+     "in": 93.0,
+     "out": 97.9,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 101.0,
+     "out": 106.0,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 114.5,
+     "out": 117.74,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 117.69,
+     "hold": 0.04
+    }
+   ],
+   "lines": [
+    {
+     "id": "N08",
+     "a": 0.0
+    },
+    {
+     "id": "N09",
+     "a": 0.0
+    },
+    {
+     "id": "N13",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "S5",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "不拦，改写",
+   "credit": "官方教程 第6期",
+   "ranges": [
+    {
+     "src": "a",
+     "in": 151.45,
+     "out": 156.43,
+     "mute": true
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "a",
+     "in": 145.65,
+     "out": 150.63,
+     "mute": true
+    }
+   ],
+   "lines": [
+    {
+     "id": "N10",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "S6",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "压缩后恢复",
+   "credit": "官方教程 第6期",
+   "ranges": [
+    {
+     "src": "a",
+     "in": 165.2,
+     "out": 169.3,
+     "mute": true
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "a",
+     "in": 136.15,
+     "out": 138.582,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 182.89,
+     "out": 184.558,
+     "mute": true
+    }
+   ],
+   "lines": [
+    {
+     "id": "N11",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "S7",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "收尾",
+   "credit": "官方教程 第6期",
+   "ranges": [
+    {
+     "src": "a",
+     "in": 177.68,
+     "out": 178.611,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 195.15,
+     "out": 199.049,
+     "mute": true
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "a",
+     "in": 169.52,
+     "out": 172.786,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 191.05,
+     "out": 192.614,
+     "mute": true
+    }
+   ],
+   "lines": [
+    {
+     "id": "N12",
+     "a": 0.0
+    }
+   ]
+  }
+ ]
+}

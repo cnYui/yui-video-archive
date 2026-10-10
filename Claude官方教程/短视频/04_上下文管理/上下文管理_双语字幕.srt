@@ -1,0 +1,144 @@
+1
+00:00:00,000 --> 00:00:02,509
+目标明确的活，提示写得越含糊，
+When the goal is clear, the vaguer your prompt,
+
+2
+00:00:02,529 --> 00:00:04,570
+Claude 越费上下文。
+the more context Claude burns.
+
+3
+00:00:04,590 --> 00:00:06,836
+Anthropic 官方入门课专门有一课，
+Anthropic's intro course has a whole lesson
+
+4
+00:00:06,856 --> 00:00:08,570
+讲怎么管这块“记忆”。
+on managing this memory.
+
+5
+00:00:08,590 --> 00:00:09,404
+上下文窗口，
+The context window
+
+6
+00:00:09,424 --> 00:00:11,640
+是 Claude 这次会话的工作记忆。
+is Claude's working memory for the session.
+
+7
+00:00:11,660 --> 00:00:13,275
+你的提示、读过的文件、
+Your prompts, the files it has read,
+
+8
+00:00:13,295 --> 00:00:15,311
+命令的输出，全都占位。
+command outputs: all of it takes up space.
+
+9
+00:00:15,331 --> 00:00:17,068
+装满了会自动压缩：
+When it fills up, Claude Code compacts automatically:
+
+10
+00:00:17,088 --> 00:00:19,020
+先清掉旧的工具输出，
+it clears old tool output first,
+
+11
+00:00:19,040 --> 00:00:20,761
+不够再总结对话。
+then summarizes the conversation.
+
+12
+00:00:20,781 --> 00:00:23,862
+代价是，早期的详细指令可能丢。
+The catch: detailed instructions from early on may be lost.
+
+13
+00:00:23,882 --> 00:00:27,104
+三个命令：/compact 压成摘要，
+Three commands: /compact summarizes and carries on,
+
+14
+00:00:27,124 --> 00:00:28,978
+/clear 清空对话，
+/clear empties the conversation,
+
+15
+00:00:28,998 --> 00:00:31,042
+/context 看占用。
+/context shows what takes the most space.
+
+16
+00:00:31,062 --> 00:00:33,429
+同一个功能做到快满，用 /compact。
+Use /compact when a feature runs you near the limit.
+
+17
+00:00:33,449 --> 00:00:35,112
+开新功能，用 /clear。
+Use /clear when you start a new one.
+
+18
+00:00:35,132 --> 00:00:37,185
+同一个问题纠正两次还不对，
+Corrected the same issue twice and it's still wrong?
+
+19
+00:00:37,205 --> 00:00:38,322
+就清空重来。
+Clear and start over.
+
+20
+00:00:38,342 --> 00:00:39,864
+小问题想问一句，
+For a quick side question, use /btw.
+
+21
+00:00:39,884 --> 00:00:42,623
+用 /btw，答案不占上下文。
+The answer never enters the conversation.
+
+22
+00:00:42,643 --> 00:00:44,144
+要跨会话记住的事，
+For anything to remember across sessions,
+
+23
+00:00:44,164 --> 00:00:46,374
+写进 CLAUDE.md：压缩之后，
+put it in CLAUDE.md. After a compact,
+
+24
+00:00:46,394 --> 00:00:48,633
+它会从磁盘重新读一遍。
+it's re-read from disk.
+
+25
+00:00:48,653 --> 00:00:50,893
+还有个反直觉的：目标明确的活，
+One counterintuitive tip: when the goal is clear,
+
+26
+00:00:50,913 --> 00:00:53,183
+提示写得越具体，越省上下文。
+the more specific the prompt, the less context it uses.
+
+27
+00:00:53,203 --> 00:00:55,795
+含糊的提示看着短，它却得自己到处翻
+A vague prompt looks short, but Claude has to explore
+
+28
+00:00:55,815 --> 00:00:58,193
+代码、自己推理，反而更费。
+and reason on its own, which costs more.
+
+29
+00:00:58,213 --> 00:01:00,663
+上下文是预算，不是仓库。
+Context is a budget, not a warehouse.

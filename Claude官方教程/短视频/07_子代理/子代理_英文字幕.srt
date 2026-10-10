@@ -1,0 +1,111 @@
+1
+00:00:00,000 --> 00:00:02,119
+Ask one question and Claude reads a pile of files,
+
+2
+00:00:02,139 --> 00:00:04,220
+and your main context fills up.
+
+3
+00:00:04,240 --> 00:00:05,431
+Subagents are the fix:
+
+4
+00:00:05,451 --> 00:00:07,549
+they work in their own context window
+
+5
+00:00:07,569 --> 00:00:09,160
+and hand back only a summary.
+
+6
+00:00:09,180 --> 00:00:11,866
+Ask where the app handles refunds,
+
+7
+00:00:11,886 --> 00:00:14,670
+and Claude sends an Explore subagent to dig through the code.
+
+8
+00:00:14,690 --> 00:00:16,527
+The digging stays with the subagent.
+
+9
+00:00:16,547 --> 00:00:18,100
+Your main conversation gets just the conclusion.
+
+10
+00:00:18,120 --> 00:00:19,664
+In Anthropic's illustration, the subagent
+
+11
+00:00:19,684 --> 00:00:22,040
+reads over 6,000 tokens and sends back only about 400.
+
+12
+00:00:22,060 --> 00:00:23,380
+Claude Code ships with built-in subagents:
+
+13
+00:00:23,400 --> 00:00:25,056
+Explore searches code read-only,
+
+14
+00:00:25,076 --> 00:00:26,870
+Plan researches in plan mode.
+
+15
+00:00:26,890 --> 00:00:28,972
+Want your own? The easy way is to ask Claude:
+
+16
+00:00:28,992 --> 00:00:30,770
+build me a subagent.
+
+17
+00:00:30,790 --> 00:00:32,973
+The /agents creation wizard shown in the course has been
+
+18
+00:00:32,993 --> 00:00:35,050
+removed in newer versions, so don't go looking for it.
+
+19
+00:00:35,070 --> 00:00:38,125
+A good description tells Claude when to call it,
+
+20
+00:00:38,145 --> 00:00:41,160
+and an @ mention guarantees it runs.
+
+21
+00:00:41,180 --> 00:00:43,522
+A subagent is a Markdown file with YAML frontmatter,
+
+22
+00:00:43,542 --> 00:00:46,150
+and only the name and description are required.
+
+23
+00:00:46,170 --> 00:00:47,335
+Add one memory line
+
+24
+00:00:47,355 --> 00:00:50,070
+and it can remember things across conversations.
+
+25
+00:00:50,090 --> 00:00:52,667
+You can also preload skills: list them in the skills field,
+
+26
+00:00:52,687 --> 00:00:55,380
+and the whole skill is injected into its context.
+
+27
+00:00:55,400 --> 00:00:57,275
+Subagents spend usage of their own, so they aren't free.
+
+28
+00:00:57,295 --> 00:01:00,530
+Outsource the heavy lifting; take only the conclusion.

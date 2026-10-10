@@ -1,0 +1,365 @@
+{
+ "layout": "dual",
+ "plan": [
+  {
+   "id": "S1",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "上下文被占满",
+   "credit": "官方教程 第7期",
+   "ranges": [
+    {
+     "src": "a",
+     "in": 35.4,
+     "out": 40.535,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 40.83,
+     "out": 42.947,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 53.64,
+     "out": 55.668,
+     "mute": true
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "a",
+     "in": 43.2,
+     "out": 52.48,
+     "mute": true
+    }
+   ],
+   "lines": [
+    {
+     "id": "N01",
+     "a": 0.0
+    },
+    {
+     "id": "N02",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "S2",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "退款例子",
+   "credit": "官方教程 第7期",
+   "ranges": [
+    {
+     "src": "a",
+     "in": 4.15,
+     "out": 6.808,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 11.96,
+     "out": 14.363,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 25.65,
+     "out": 27.987,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 32.65,
+     "out": 34.584,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 74.65,
+     "out": 78.197,
+     "mute": true
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "a",
+     "in": 7.9,
+     "out": 11.538,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 15.4,
+     "out": 24.642,
+     "mute": true
+    }
+   ],
+   "lines": [
+    {
+     "id": "N03",
+     "a": 0.0
+    },
+    {
+     "id": "N04",
+     "a": 0.0
+    },
+    {
+     "id": "N13",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "S3",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "内置子代理",
+   "credit": "官方教程 第7期",
+   "ranges": [
+    {
+     "src": "a",
+     "in": 116.9,
+     "out": 118.568,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 121.66,
+     "out": 122.595,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 123.15,
+     "out": 125.377,
+     "mute": true
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "a",
+     "in": 125.7,
+     "out": 127.194,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 127.66,
+     "out": 130.996,
+     "mute": true
+    }
+   ],
+   "lines": [
+    {
+     "id": "N05",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "S4",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "自己做一个",
+   "credit": "官方教程 第7期",
+   "ranges": [
+    {
+     "src": "a",
+     "in": 92.96,
+     "out": 96.425,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 96.76,
+     "out": 107.585,
+     "mute": true
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "a",
+     "in": 79.2,
+     "out": 91.617,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 108.4,
+     "out": 110.273,
+     "mute": true
+    }
+   ],
+   "lines": [
+    {
+     "id": "N06",
+     "a": 0.0
+    },
+    {
+     "id": "N07",
+     "a": 0.0
+    },
+    {
+     "id": "N08",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "S5",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "Markdown + 记忆 + 技能",
+   "credit": "官方教程 第7期",
+   "ranges": [
+    {
+     "src": "a",
+     "in": 110.54,
+     "out": 116.38,
+     "mute": true,
+     "speed": 0.981
+    },
+    {
+     "src": "a",
+     "in": 139.22,
+     "out": 143.98,
+     "mute": true,
+     "speed": 0.981
+    },
+    {
+     "src": "a",
+     "in": 144.22,
+     "out": 147.63,
+     "mute": true
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "a",
+     "in": 55.79,
+     "out": 57.718,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 60.3,
+     "out": 62.228,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 64.81,
+     "out": 66.738,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 69.32,
+     "out": 71.248,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 131.75,
+     "out": 132.34,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 133.34,
+     "out": 134.765,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 136.84,
+     "out": 137.776,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 148.15,
+     "out": 149.064,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 150.48,
+     "out": 151.857,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 154.15,
+     "out": 155.414,
+     "mute": true
+    }
+   ],
+   "lines": [
+    {
+     "id": "N09",
+     "a": 0.0
+    },
+    {
+     "id": "N10",
+     "a": 0.0
+    },
+    {
+     "id": "N11",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "S6",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "收尾",
+   "credit": "官方教程 第7期",
+   "ranges": [
+    {
+     "src": "a",
+     "in": 159.96,
+     "out": 161.036,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 164.4,
+     "out": 168.304,
+     "mute": true
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "a",
+     "in": 157.28,
+     "out": 159.76,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 161.28,
+     "out": 163.78,
+     "mute": true
+    }
+   ],
+   "lines": [
+    {
+     "id": "N12",
+     "a": 0.0
+    }
+   ]
+  }
+ ]
+}

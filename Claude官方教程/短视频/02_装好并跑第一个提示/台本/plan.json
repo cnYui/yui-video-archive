@@ -1,0 +1,417 @@
+{
+ "layout": "dual",
+ "plan": [
+  {
+   "id": "S1",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "一条命令装好",
+   "credit": "官方教程 第2期",
+   "ranges": [
+    {
+     "src": "a",
+     "in": 5.15,
+     "out": 9.609,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 13.4,
+     "out": 15.221,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 15.47,
+     "out": 18.008,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 25.6,
+     "out": 27.362,
+     "mute": true
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "a",
+     "in": 18.26,
+     "out": 23.972,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 27.61,
+     "out": 32.478,
+     "mute": true
+    }
+   ],
+   "lines": [
+    {
+     "id": "N01",
+     "a": 0.0
+    },
+    {
+     "id": "N02",
+     "a": 0.0
+    },
+    {
+     "id": "N13",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "S2",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "不自动更新 + 首次登录",
+   "credit": "官方教程 第2期",
+   "ranges": [
+    {
+     "src": "a",
+     "in": 34.0,
+     "out": 37.48,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 55.52,
+     "out": 56.395,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 56.63,
+     "out": 60.856,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 63.9,
+     "out": 64.855,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 89.5,
+     "out": 90.126,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 92.65,
+     "out": 93.634,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 112.4,
+     "out": 114.15,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 135.15,
+     "out": 136.92,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 154.15,
+     "out": 155.651,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 159.91,
+     "out": 161.113,
+     "mute": true
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "a",
+     "in": 37.74,
+     "out": 55.11,
+     "mute": true
+    }
+   ],
+   "lines": [
+    {
+     "id": "N03",
+     "a": 0.0
+    },
+    {
+     "id": "N14",
+     "a": 0.0
+    },
+    {
+     "id": "N04",
+     "a": 0.0
+    },
+    {
+     "id": "N05",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "S3",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "启动目录",
+   "credit": "官方教程 第2期",
+   "ranges": [
+    {
+     "src": "a",
+     "in": 142.94,
+     "out": 143.861,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 147.9,
+     "out": 150.154,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 150.44,
+     "out": 152.214,
+     "mute": true
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "a",
+     "in": 137.17,
+     "out": 142.12,
+     "mute": true
+    }
+   ],
+   "lines": [
+    {
+     "id": "N06",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "S4",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "别的入口",
+   "credit": "官方教程 第2期",
+   "ranges": [
+    {
+     "src": "a",
+     "in": 65.3,
+     "out": 69.032,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 98.9,
+     "out": 102.218,
+     "mute": true
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "a",
+     "in": 114.5,
+     "out": 118.232,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 122.0,
+     "out": 125.318,
+     "mute": true
+    }
+   ],
+   "lines": [
+    {
+     "id": "N07",
+     "a": 0.0
+    },
+    {
+     "id": "N08",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "S5",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "计划模式",
+   "credit": "官方教程 第2期",
+   "ranges": [
+    {
+     "src": "b",
+     "in": 16.7,
+     "out": 22.034,
+     "mute": true
+    },
+    {
+     "src": "b",
+     "in": 36.1,
+     "out": 38.372,
+     "mute": true
+    },
+    {
+     "src": "b",
+     "in": 41.4,
+     "out": 42.289,
+     "mute": true
+    },
+    {
+     "src": "b",
+     "in": 76.9,
+     "out": 80.555,
+     "mute": true
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "b",
+     "in": 124.7,
+     "out": 129.6,
+     "mute": true,
+     "speed": 0.815
+    },
+    {
+     "src": "b",
+     "in": 42.6,
+     "out": 47.6,
+     "mute": true,
+     "speed": 0.815
+    }
+   ],
+   "lines": [
+    {
+     "id": "N09",
+     "a": 0.0
+    },
+    {
+     "id": "N10",
+     "a": 0.0
+    },
+    {
+     "id": "N15",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "S6",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "官方示例",
+   "credit": "官方教程 第2期",
+   "ranges": [
+    {
+     "src": "b",
+     "in": 102.1,
+     "out": 103.672,
+     "mute": true
+    },
+    {
+     "src": "b",
+     "in": 110.9,
+     "out": 111.976,
+     "mute": true
+    },
+    {
+     "src": "b",
+     "in": 116.2,
+     "out": 116.779,
+     "mute": true
+    },
+    {
+     "src": "b",
+     "in": 119.7,
+     "out": 121.769,
+     "mute": true
+    },
+    {
+     "src": "b",
+     "in": 71.1,
+     "out": 72.093,
+     "mute": true
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "b",
+     "in": 88.8,
+     "out": 93.22,
+     "mute": true
+    },
+    {
+     "src": "b",
+     "in": 117.2,
+     "out": 119.07,
+     "mute": true
+    }
+   ],
+   "lines": [
+    {
+     "id": "N11",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "S7",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "收尾",
+   "credit": "官方教程 第2期",
+   "ranges": [
+    {
+     "src": "b",
+     "in": 134.1,
+     "out": 136.81,
+     "mute": true
+    },
+    {
+     "src": "b",
+     "in": 140.7,
+     "out": 142.02,
+     "mute": true
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "b",
+     "in": 131.4,
+     "out": 133.415,
+     "mute": true
+    },
+    {
+     "src": "b",
+     "in": 138.2,
+     "out": 140.215,
+     "mute": true
+    }
+   ],
+   "lines": [
+    {
+     "id": "N12",
+     "a": 0.0
+    }
+   ]
+  }
+ ]
+}

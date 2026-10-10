@@ -1,0 +1,1119 @@
+1
+00:00:00,003 --> 00:00:01,157
+Hi, everyone.
+
+2
+00:00:01,177 --> 00:00:03,288
+In this series, I'll take you from zero
+
+3
+00:00:03,308 --> 00:00:04,880
+to getting started with Claude Code.
+
+4
+00:00:04,900 --> 00:00:06,953
+I'm sure those of you who clicked
+
+5
+00:00:06,973 --> 00:00:09,250
+in already have some experience using AI,
+
+6
+00:00:09,270 --> 00:00:11,419
+and this video will walk you through
+
+7
+00:00:11,439 --> 00:00:13,410
+how to use AI, systematically.
+
+8
+00:00:13,430 --> 00:00:15,799
+AI is a tool, and you can only use a tool well
+
+9
+00:00:15,819 --> 00:00:17,613
+once you know how to use it.
+
+10
+00:00:17,633 --> 00:00:19,286
+All the material here comes
+
+11
+00:00:19,306 --> 00:00:21,913
+from the free resources on Anthropic's website,
+
+12
+00:00:21,933 --> 00:00:23,361
+and you can find the original
+
+13
+00:00:23,381 --> 00:00:25,923
+content the way you see on screen.
+
+14
+00:00:26,303 --> 00:00:27,013
+Alright, let's begin.
+
+15
+00:00:27,033 --> 00:00:27,769
+First concept:
+
+16
+00:00:27,789 --> 00:00:29,645
+Claude Code and Claude Cowork.
+
+17
+00:00:29,665 --> 00:00:30,940
+From here on I'll just call them Claude.
+
+18
+00:00:30,960 --> 00:00:32,630
+What's the difference between these two?
+
+19
+00:00:32,650 --> 00:00:34,436
+The Claude in the web
+
+20
+00:00:34,456 --> 00:00:36,670
+chat window is a chatbox.
+
+21
+00:00:36,690 --> 00:00:37,808
+It can answer questions,
+
+22
+00:00:37,828 --> 00:00:40,084
+but it can't modify the files on your computer.
+
+23
+00:00:40,104 --> 00:00:42,723
+It can't reach its hands into your machine.
+
+24
+00:00:42,743 --> 00:00:44,008
+After it writes code,
+
+25
+00:00:44,028 --> 00:00:46,613
+I have to copy, paste and run it myself.
+
+26
+00:00:46,633 --> 00:00:47,562
+If the code has an error,
+
+27
+00:00:47,582 --> 00:00:49,013
+I have to paste it back and ask again.
+
+28
+00:00:49,033 --> 00:00:51,021
+That's what AI looked like a few years ago.
+
+29
+00:00:51,041 --> 00:00:52,915
+Claude Code puts
+
+30
+00:00:52,935 --> 00:00:55,170
+that hand into my computer's operating system.
+
+31
+00:00:55,190 --> 00:00:56,918
+It can create, modify
+
+32
+00:00:56,938 --> 00:00:59,813
+and delete anything on the whole computer, any file.
+
+33
+00:00:59,833 --> 00:01:02,427
+So what is Claude Code?
+
+34
+00:01:02,447 --> 00:01:04,205
+Claude Code is an AI assistant
+
+35
+00:01:04,225 --> 00:01:05,513
+made by Anthropic.
+
+36
+00:01:05,533 --> 00:01:08,303
+It works on your computer and does the work itself.
+
+37
+00:01:08,323 --> 00:01:09,929
+Take an example:
+
+38
+00:01:09,949 --> 00:01:12,694
+a chat window is like hiring a consultant
+
+39
+00:01:12,714 --> 00:01:14,760
+who gives me advice over the phone.
+
+40
+00:01:14,780 --> 00:01:16,782
+It answers the questions I ask,
+
+41
+00:01:16,802 --> 00:01:18,227
+but I have to paste things in.
+
+42
+00:01:18,247 --> 00:01:19,403
+If there's an error,
+
+43
+00:01:19,423 --> 00:01:21,813
+I have to paste it into that window and ask.
+
+44
+00:01:21,833 --> 00:01:23,188
+Claude Code is like hiring
+
+45
+00:01:23,208 --> 00:01:25,574
+an assistant, a colleague,
+
+46
+00:01:25,594 --> 00:01:27,730
+who sits right at your computer
+
+47
+00:01:27,750 --> 00:01:30,131
+and finds code in your project files, edits code,
+
+48
+00:01:30,151 --> 00:01:32,532
+runs commands, searches the whole project,
+
+49
+00:01:32,552 --> 00:01:34,213
+creates and deletes files.
+
+50
+00:01:34,233 --> 00:01:35,423
+By default it only works
+
+51
+00:01:35,443 --> 00:01:38,287
+inside this folder and its subfolders.
+
+52
+00:01:38,307 --> 00:01:40,361
+If it wants to touch anywhere else,
+
+53
+00:01:40,381 --> 00:01:42,333
+it needs your permission.
+
+54
+00:01:42,353 --> 00:01:45,063
+So how do I start Claude?
+
+55
+00:01:45,083 --> 00:01:47,398
+You type the claude command in a terminal,
+
+56
+00:01:47,418 --> 00:01:49,173
+and it starts.
+
+57
+00:01:49,193 --> 00:01:50,236
+What's a terminal?
+
+58
+00:01:50,256 --> 00:01:52,362
+It's the window where you can only type commands,
+
+59
+00:01:52,382 --> 00:01:54,207
+the one with black text on a white background.
+
+60
+00:01:54,227 --> 00:01:56,367
+Some of you may find that unfamiliar,
+
+61
+00:01:56,387 --> 00:01:58,527
+maybe even a bit off-putting,
+
+62
+00:01:58,547 --> 00:02:00,374
+but don't worry.
+
+63
+00:02:00,394 --> 00:02:02,912
+Once you've typed the claude command,
+
+64
+00:02:02,932 --> 00:02:05,223
+you just talk to it in plain language.
+
+65
+00:02:05,243 --> 00:02:07,393
+Software that can see its environment,
+
+66
+00:02:07,413 --> 00:02:09,562
+take action and reach a goal step by step
+
+67
+00:02:09,582 --> 00:02:12,703
+is called an agent in the industry. In English, an AI Agent.
+
+68
+00:02:12,723 --> 00:02:13,513
+Claude Code
+
+69
+00:02:13,533 --> 00:02:15,584
+is a typical agent framework.
+
+70
+00:02:15,604 --> 00:02:16,937
+It has "Code" in the name,
+
+71
+00:02:16,957 --> 00:02:19,124
+but it isn't only for writing code.
+
+72
+00:02:19,144 --> 00:02:21,016
+It can write documents, run programs,
+
+73
+00:02:21,036 --> 00:02:23,338
+search files, look things up, all of it.
+
+74
+00:02:23,358 --> 00:02:26,334
+So its real skill is doing the work for you.
+
+75
+00:02:26,354 --> 00:02:28,488
+OK, now that we know what it is,
+
+76
+00:02:28,508 --> 00:02:30,288
+what can it actually do?
+
+77
+00:02:30,308 --> 00:02:32,534
+First, it can read a project.
+
+78
+00:02:32,554 --> 00:02:33,664
+For example,
+
+79
+00:02:33,684 --> 00:02:34,920
+ask it what this project does.
+
+80
+00:02:34,940 --> 00:02:36,804
+It goes through the files itself and explains it to you.
+
+81
+00:02:36,824 --> 00:02:38,941
+You can also ask for more detail,
+
+82
+00:02:38,961 --> 00:02:40,224
+or a shorter version,
+
+83
+00:02:40,244 --> 00:02:42,761
+or an explanation in plain language.
+
+84
+00:02:42,781 --> 00:02:44,274
+Second, it edits code.
+
+85
+00:02:44,294 --> 00:02:46,524
+The user states the effect and requirements they want,
+
+86
+00:02:46,544 --> 00:02:49,304
+say, a really cool web page,
+
+87
+00:02:49,324 --> 00:02:51,892
+and it takes your request as its goal,
+
+88
+00:02:51,912 --> 00:02:53,718
+finds animation libraries online by itself,
+
+89
+00:02:53,738 --> 00:02:55,240
+finds the local files itself,
+
+90
+00:02:55,260 --> 00:02:56,788
+and gives you the finished edit.
+
+91
+00:02:56,808 --> 00:02:59,406
+Third, it runs commands: install a program,
+
+92
+00:02:59,426 --> 00:03:01,408
+uninstall one, run a program,
+
+93
+00:03:01,428 --> 00:03:04,101
+run a check, whatever result you want to see.
+
+94
+00:03:04,121 --> 00:03:07,041
+It runs those commands and then gives you the answer.
+
+95
+00:03:07,061 --> 00:03:08,940
+Fourth, it looks things up online.
+
+96
+00:03:08,960 --> 00:03:12,061
+For example, I make news-roundup content,
+
+97
+00:03:12,081 --> 00:03:14,482
+and it searches the news at a set time every day,
+
+98
+00:03:14,502 --> 00:03:15,621
+organizes it,
+
+99
+00:03:15,641 --> 00:03:17,814
+and creates a new document for me to read.
+
+100
+00:03:17,834 --> 00:03:20,397
+You don't need to direct these one by one.
+
+101
+00:03:20,417 --> 00:03:22,291
+Write it up in advance,
+
+102
+00:03:22,311 --> 00:03:24,185
+tell it the goal and what to do first and next,
+
+103
+00:03:24,205 --> 00:03:26,794
+and it does it by itself.
+
+104
+00:03:26,814 --> 00:03:30,074
+So how does it do its work?
+
+105
+00:03:30,094 --> 00:03:32,308
+This is where a loop comes in.
+
+106
+00:03:32,328 --> 00:03:35,528
+This multi-round process is called the agent loop.
+
+107
+00:03:35,548 --> 00:03:38,281
+It takes your request, your prompt,
+
+108
+00:03:38,301 --> 00:03:40,424
+as the goal it must complete,
+
+109
+00:03:40,444 --> 00:03:42,745
+then goes through several rounds of thinking
+
+110
+00:03:42,765 --> 00:03:44,174
+and acting to reach it.
+
+111
+00:03:44,194 --> 00:03:47,014
+That's what people call the agentic loop.
+
+112
+00:03:47,034 --> 00:03:49,470
+Let's take an example. Say you tell it:
+
+113
+00:03:49,490 --> 00:03:50,699
+I built a web page,
+
+114
+00:03:50,719 --> 00:03:53,155
+the login page doesn't respond when I click,
+
+115
+00:03:53,175 --> 00:03:55,621
+please fix it, and you send that.
+
+116
+00:03:55,641 --> 00:03:57,424
+When Claude receives your request,
+
+117
+00:03:57,444 --> 00:03:59,601
+it lists it as a goal it must complete.
+
+118
+00:03:59,621 --> 00:04:01,275
+Then Claude uses the command line,
+
+119
+00:04:01,295 --> 00:04:03,581
+which is its tool, to look at the code files.
+
+120
+00:04:03,601 --> 00:04:05,246
+You don't need to worry about any of this;
+
+121
+00:04:05,266 --> 00:04:07,324
+it's just for understanding.
+
+122
+00:04:07,344 --> 00:04:09,314
+Claude does these things by itself;
+
+123
+00:04:09,334 --> 00:04:11,531
+we only need to understand them.
+
+124
+00:04:11,551 --> 00:04:13,183
+Claude uses its commands
+
+125
+00:04:13,203 --> 00:04:15,100
+to look at the code files,
+
+126
+00:04:15,120 --> 00:04:17,888
+finds the code related to the login page,
+
+127
+00:04:17,908 --> 00:04:21,421
+reads the error, and then goes to edit it.
+
+128
+00:04:21,491 --> 00:04:23,127
+It works out where the problem is,
+
+129
+00:04:23,147 --> 00:04:25,191
+edits the file, and then runs it.
+
+130
+00:04:25,211 --> 00:04:26,691
+After running it, it checks whether it's fixed.
+
+131
+00:04:26,711 --> 00:04:28,691
+If it is, it has reached the goal.
+
+132
+00:04:28,711 --> 00:04:31,335
+If it isn't, go back to step one,
+
+133
+00:04:31,355 --> 00:04:32,987
+edit the code again, go around once more,
+
+134
+00:04:33,007 --> 00:04:35,911
+and keep going until the goal is met.
+
+135
+00:04:35,931 --> 00:04:38,020
+These three steps aren't a rigid assembly line;
+
+136
+00:04:38,040 --> 00:04:39,324
+they blend together.
+
+137
+00:04:39,344 --> 00:04:41,032
+Sometimes you ask one question
+
+138
+00:04:41,052 --> 00:04:42,584
+and it only needs half a loop.
+
+139
+00:04:42,604 --> 00:04:44,140
+If it finishes a task in one step,
+
+140
+00:04:44,160 --> 00:04:46,644
+there's no loop at all.
+
+141
+00:04:46,664 --> 00:04:48,690
+If a problem is harder,
+
+142
+00:04:48,710 --> 00:04:50,906
+it usually edits over and over and runs
+
+143
+00:04:50,926 --> 00:04:52,901
+commands over and over.
+
+144
+00:04:52,921 --> 00:04:54,271
+It can chain dozens of steps,
+
+145
+00:04:54,291 --> 00:04:56,504
+correcting itself as it goes.
+
+146
+00:04:56,524 --> 00:04:57,783
+One more key point:
+
+147
+00:04:57,803 --> 00:05:00,199
+if you see it getting something wrong,
+
+148
+00:05:00,219 --> 00:05:01,621
+or you have a new idea,
+
+149
+00:05:01,641 --> 00:05:03,694
+you can interrupt it at any time.
+
+150
+00:05:03,714 --> 00:05:05,874
+Press ESC to make it stop.
+
+151
+00:05:05,894 --> 00:05:08,328
+Or if you want to add something
+
+152
+00:05:08,348 --> 00:05:11,109
+of your own into its loop,
+
+153
+00:05:11,129 --> 00:05:12,745
+type it out and press Enter
+
+154
+00:05:12,765 --> 00:05:14,364
+to send it.
+
+155
+00:05:14,384 --> 00:05:16,911
+When it finishes the batch it's working on,
+
+156
+00:05:16,931 --> 00:05:19,991
+it reads what you wrote and adjusts.
+
+157
+00:05:20,011 --> 00:05:21,846
+Fourth point: how
+
+158
+00:05:21,866 --> 00:05:24,928
+does this loop actually run?
+
+159
+00:05:24,948 --> 00:05:26,688
+That brings us to four things.
+
+160
+00:05:26,708 --> 00:05:28,947
+First, the brain. Second, the hands.
+
+161
+00:05:28,967 --> 00:05:31,814
+Third, its memory. Fourth, the key.
+
+162
+00:05:31,834 --> 00:05:32,780
+Start with the brain:
+
+163
+00:05:32,800 --> 00:05:34,754
+its brain is the Claude model.
+
+164
+00:05:34,774 --> 00:05:37,094
+The Claude model isn't local; it's in the cloud.
+
+165
+00:05:37,114 --> 00:05:39,228
+The model understands what you say,
+
+166
+00:05:39,248 --> 00:05:41,524
+reads code, and decides what to do next,
+
+167
+00:05:41,544 --> 00:05:42,844
+but it can't carry out these tasks
+
+168
+00:05:42,864 --> 00:05:44,734
+or run these commands locally.
+
+169
+00:05:44,834 --> 00:05:46,664
+Its hands, meaning its tools,
+
+170
+00:05:46,684 --> 00:05:48,498
+are what run those commands.
+
+171
+00:05:48,518 --> 00:05:50,485
+The hands don't know what to run,
+
+172
+00:05:50,505 --> 00:05:51,905
+so the brain tells the hands
+
+173
+00:05:51,925 --> 00:05:54,176
+which commands to execute,
+
+174
+00:05:54,196 --> 00:05:56,184
+and only then can it change local content.
+
+175
+00:05:56,204 --> 00:05:58,376
+Say you have some code locally
+
+176
+00:05:58,396 --> 00:06:01,584
+and you ask it to fix something.
+
+177
+00:06:01,604 --> 00:06:02,700
+Your prompt is sent
+
+178
+00:06:02,720 --> 00:06:05,124
+to the Claude model in the cloud.
+
+179
+00:06:05,144 --> 00:06:06,731
+The model says: I need to find
+
+180
+00:06:06,751 --> 00:06:09,639
+which files this bug is in.
+
+181
+00:06:09,659 --> 00:06:11,333
+It sends that to your machine,
+
+182
+00:06:11,353 --> 00:06:13,574
+so Claude Code uses tools
+
+183
+00:06:13,594 --> 00:06:16,104
+to look at the code containing the bug.
+
+184
+00:06:16,124 --> 00:06:18,469
+Then your request plus that code goes back
+
+185
+00:06:18,489 --> 00:06:21,044
+to the Claude model, the brain.
+
+186
+00:06:21,064 --> 00:06:23,724
+After the brain decides how to change the code,
+
+187
+00:06:23,744 --> 00:06:25,970
+the local side calls the tools,
+
+188
+00:06:25,990 --> 00:06:27,513
+edits the code and runs it. If it passes,
+
+189
+00:06:27,533 --> 00:06:29,338
+that's sent back to the brain,
+
+190
+00:06:29,358 --> 00:06:31,134
+which says: OK, the task is done.
+
+191
+00:06:31,154 --> 00:06:32,950
+It sends the completed result back
+
+192
+00:06:32,970 --> 00:06:33,728
+to your machine,
+
+193
+00:06:33,748 --> 00:06:36,144
+and that's how you see the outcome.
+
+194
+00:06:36,164 --> 00:06:37,644
+The third thing is memory,
+
+195
+00:06:37,664 --> 00:06:39,444
+formally called the context window.
+
+196
+00:06:39,464 --> 00:06:41,760
+The prompts you wrote, the files it read,
+
+197
+00:06:41,780 --> 00:06:43,412
+and the results of the commands it ran
+
+198
+00:06:43,432 --> 00:06:44,884
+are all in its memory.
+
+199
+00:06:44,904 --> 00:06:47,387
+But a model's memory is limited,
+
+200
+00:06:47,407 --> 00:06:50,114
+just like storage, and when it fills up,
+
+201
+00:06:50,134 --> 00:06:52,012
+the model automatically compresses,
+
+202
+00:06:52,032 --> 00:06:54,484
+and automatically clears out old commands.
+
+203
+00:06:54,504 --> 00:06:56,174
+The cost is that details
+
+204
+00:06:56,194 --> 00:06:57,865
+you gave long ago are gone.
+
+205
+00:06:57,885 --> 00:07:00,062
+For instance, what you sent at the very beginning,
+
+206
+00:07:00,082 --> 00:07:02,444
+it may no longer know.
+
+207
+00:07:02,464 --> 00:07:04,048
+And every time you open
+
+208
+00:07:04,068 --> 00:07:05,518
+a new conversation,
+
+209
+00:07:05,538 --> 00:07:07,291
+its memory is empty;
+
+210
+00:07:07,361 --> 00:07:09,813
+it won't carry over the chat from another window;
+
+211
+00:07:09,833 --> 00:07:11,528
+they're all independent.
+
+212
+00:07:11,548 --> 00:07:13,071
+If you want it to follow
+
+213
+00:07:13,091 --> 00:07:14,474
+a rule every time,
+
+214
+00:07:14,494 --> 00:07:16,981
+write it into a file called CLAUDE.md.
+
+215
+00:07:17,001 --> 00:07:19,247
+Every time it starts a new session,
+
+216
+00:07:19,267 --> 00:07:21,066
+a new conversation,
+
+217
+00:07:21,086 --> 00:07:22,701
+it reads that file first.
+
+218
+00:07:22,721 --> 00:07:24,732
+That file is important; a later video
+
+219
+00:07:24,752 --> 00:07:26,508
+will cover it in detail.
+
+220
+00:07:26,528 --> 00:07:28,921
+The fourth is the key, which means permissions.
+
+221
+00:07:28,941 --> 00:07:30,360
+When Claude Code wants
+
+222
+00:07:30,380 --> 00:07:32,135
+to change your local files,
+
+223
+00:07:32,155 --> 00:07:34,068
+you can set permissions:
+
+224
+00:07:34,088 --> 00:07:35,988
+what it may change and what it may not.
+
+225
+00:07:36,008 --> 00:07:38,266
+For example, there's manual mode,
+
+226
+00:07:38,286 --> 00:07:41,169
+where it asks you first whenever it changes a file.
+
+227
+00:07:41,189 --> 00:07:42,613
+Then there's accept-edits mode,
+
+228
+00:07:42,633 --> 00:07:45,415
+where it edits files in the project folder without asking you,
+
+229
+00:07:45,435 --> 00:07:46,697
+and doesn't ask about common file operations
+
+230
+00:07:46,717 --> 00:07:49,322
+like creating a folder, moving, or deleting either;
+
+231
+00:07:49,342 --> 00:07:50,462
+other commands it still asks about.
+
+232
+00:07:50,482 --> 00:07:51,851
+Plan mode only works out a plan
+
+233
+00:07:51,871 --> 00:07:54,282
+and doesn't touch your code.
+
+234
+00:07:54,302 --> 00:07:56,559
+Auto lets it go ahead on its own,
+
+235
+00:07:56,579 --> 00:07:58,485
+with a safety check in the background
+
+236
+00:07:58,505 --> 00:08:01,045
+that blocks dangerous operations like deletions.
+
+237
+00:08:01,065 --> 00:08:03,174
+And there's a mode
+
+238
+00:08:03,194 --> 00:08:05,728
+that turns off all of that asking,
+
+239
+00:08:05,748 --> 00:08:08,825
+which means everything is allowed,
+
+240
+00:08:08,845 --> 00:08:10,655
+but I don't recommend beginners turn it on.
+
+241
+00:08:10,675 --> 00:08:13,064
+With these four things, the brain,
+
+242
+00:08:13,084 --> 00:08:16,015
+the hands, the memory and the permission key,
+
+243
+00:08:16,035 --> 00:08:18,687
+it becomes a local agent
+
+244
+00:08:18,707 --> 00:08:20,189
+that can complete your task
+
+245
+00:08:20,209 --> 00:08:22,175
+the way you ask.
+
+246
+00:08:22,195 --> 00:08:24,712
+We've covered the good side,
+
+247
+00:08:24,732 --> 00:08:26,165
+so what's the bad side?
+
+248
+00:08:26,185 --> 00:08:28,425
+This is a bit of a cold shower.
+
+249
+00:08:28,445 --> 00:08:31,239
+It can hallucinate, it's a probabilistic model,
+
+250
+00:08:31,259 --> 00:08:34,709
+and it can have bugs.
+
+251
+00:08:34,729 --> 00:08:36,260
+As models get stronger there
+
+252
+00:08:36,280 --> 00:08:38,769
+are fewer and fewer bugs, but still,
+
+253
+00:08:38,789 --> 00:08:39,834
+on social media,
+
+254
+00:08:39,854 --> 00:08:41,609
+sometimes a friend posts something
+
+255
+00:08:41,629 --> 00:08:42,792
+like: oh no,
+
+256
+00:08:42,812 --> 00:08:44,889
+it deleted one of my files.
+
+257
+00:08:44,909 --> 00:08:46,598
+So there's still some risk.
+
+258
+00:08:46,618 --> 00:08:48,450
+Be careful with permission commands day to day,
+
+259
+00:08:48,470 --> 00:08:50,585
+and don't turn it all the way up.
+
+260
+00:08:50,605 --> 00:08:52,869
+Finally, how do you get to use it?
+
+261
+00:08:52,889 --> 00:08:54,058
+I mentioned one way already:
+
+262
+00:08:54,078 --> 00:08:55,010
+use it in the terminal.
+
+263
+00:08:55,030 --> 00:08:57,006
+Type the claude command and press Enter;
+
+264
+00:08:57,026 --> 00:08:58,314
+it installs and starts,
+
+265
+00:08:58,334 --> 00:09:00,469
+then you log into your account and you can use it.
+
+266
+00:09:00,489 --> 00:09:02,152
+It also has a plugin
+
+267
+00:09:02,172 --> 00:09:04,222
+for your code editor,
+
+268
+00:09:04,242 --> 00:09:05,646
+a desktop app,
+
+269
+00:09:05,666 --> 00:09:07,769
+and a web version.
+
+270
+00:09:08,189 --> 00:09:10,047
+OK, that's it for this beginner's
+
+271
+00:09:10,067 --> 00:09:11,515
+video on Claude.
+
+272
+00:09:11,535 --> 00:09:14,365
+I have two suggestions. First, when you use it,
+
+273
+00:09:14,385 --> 00:09:17,132
+check the status bar first and confirm its permission mode.
+
+274
+00:09:17,152 --> 00:09:18,680
+Second, try asking
+
+275
+00:09:18,700 --> 00:09:20,745
+it questions first,
+
+276
+00:09:20,765 --> 00:09:23,325
+like what this project does
+
+277
+00:09:23,345 --> 00:09:25,562
+or what a concept means,
+
+278
+00:09:25,582 --> 00:09:28,692
+and only then dig in and have it change things.
+
+279
+00:09:28,712 --> 00:09:32,692
+You'll get the hang of it as you go; learn while you use it.
+
+280
+00:09:32,755 --> 00:09:34,435
+Alright, see you in the next one.

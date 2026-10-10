@@ -1,0 +1,628 @@
+{
+  "thumbs": {
+    "1": {
+      "src": "g3",
+      "t": 1.5
+    },
+    "2": {
+      "src": "p2",
+      "t": 4.0
+    },
+    "3": {
+      "src": "e1",
+      "t": 10.0
+    }
+  },
+  "card_imgs": {
+    "clearwater": {
+      "src": "e1",
+      "t": 10.0,
+      "w": 1100
+    }
+  },
+  "plan": [
+    {
+      "id": "T0",
+      "type": "clip",
+      "kind": "montage",
+      "overlay": "title",
+      "chapter": -1,
+      "name": "开场",
+      "ranges": [
+        {
+          "src": "g3",
+          "in": 0.5,
+          "out": 2.1
+        },
+        {
+          "src": "g4",
+          "in": 8.5,
+          "out": 10.1
+        },
+        {
+          "src": "p3",
+          "in": 0.8,
+          "out": 2.4
+        },
+        {
+          "src": "e1",
+          "in": 8.0,
+          "out": 9.6
+        }
+      ],
+      "lines": [
+        {
+          "id": "N01",
+          "a": 0.4
+        },
+        {
+          "id": "N02",
+          "a": 2.1
+        }
+      ]
+    },
+    {
+      "id": "O1",
+      "type": "clip",
+      "chapter": -1,
+      "name": "DevDay 2026",
+      "tag": "OpenAI 官方",
+      "credit": "OpenAI DevDay 2026 主题演讲（官方）",
+      "ranges": [
+        {
+          "src": "k1",
+          "in": 1198.6,
+          "out": 1205.6,
+          "gain_db": -10
+        }
+      ],
+      "ui": {
+        "cap": "br"
+      },
+      "caps": [
+        {
+          "a": 0.3,
+          "b": 6.6,
+          "zh": "GPT-6.1 Sol：接近旗舰，价格 1/5",
+          "sub": "OpenAI 开发者大会 · 官方发布会"
+        }
+      ],
+      "lines": [
+        {
+          "id": "N03",
+          "a": 0.3
+        },
+        {
+          "id": "N04",
+          "a": 3.8
+        }
+      ]
+    },
+    {
+      "id": "O2",
+      "type": "clip",
+      "chapter": -1,
+      "name": "DevDay 2026",
+      "tag": "OpenAI 官方",
+      "credit": "OpenAI DevDay 2026 主题演讲（官方）",
+      "ranges": [
+        {
+          "src": "k1",
+          "in": 1207.2,
+          "out": 1213.0,
+          "crop": [
+            0.51,
+            0.23,
+            0.97,
+            0.69
+          ],
+          "gain_db": -10
+        }
+      ],
+      "ui": {
+        "cap": "tl2"
+      },
+      "caps": [
+        {
+          "a": 0.3,
+          "b": 5.4,
+          "zh": "Sol：输入 $2 · 输出 $10",
+          "sub": "Astra：输入 $10 · 输出 $50 · 每百万 token（官方价格页）"
+        }
+      ],
+      "lines": [
+        {
+          "id": "N05",
+          "a": 0.4
+        }
+      ]
+    },
+    {
+      "id": "O3",
+      "type": "clip",
+      "chapter": -1,
+      "name": "DevDay 2026",
+      "tag": "OpenAI 官方",
+      "credit": "OpenAI DevDay 2026 主题演讲（官方）",
+      "ranges": [
+        {
+          "src": "k1",
+          "in": 1271.0,
+          "out": 1279.0,
+          "gain_db": -10
+        }
+      ],
+      "ui": {
+        "cap": "br"
+      },
+      "caps": [
+        {
+          "a": 0.3,
+          "b": 7.6,
+          "zh": "左：Ultrafast · 右：普通版",
+          "sub": "同一个提示：造火箭 · Ultrafast 目前先用在 Astra 上"
+        }
+      ],
+      "lines": [
+        {
+          "id": "N06",
+          "a": 0.3
+        },
+        {
+          "id": "N07",
+          "a": 2.6
+        }
+      ]
+    },
+    {
+      "id": "S1",
+      "type": "clip",
+      "chapter": 0,
+      "name": "LUMENFALL · 3D 游戏",
+      "tag": "Sol vs Astra",
+      "credit": "@higgsfield_ai · X · 模型名为发布者所标",
+      "ranges": [
+        {
+          "src": "g1",
+          "in": 2.0,
+          "out": 8.5
+        },
+        {
+          "src": "g1",
+          "in": 13.0,
+          "out": 17.5
+        },
+        {
+          "src": "g1",
+          "in": 44.5,
+          "out": 49.5
+        },
+        {
+          "src": "g1",
+          "in": 53.0,
+          "out": 58.5
+        }
+      ],
+      "ui": {
+        "stack": true,
+        "nt": "tl",
+        "cr": "br",
+        "cap": "bl"
+      },
+      "caps": [
+        {
+          "a": 0.4,
+          "b": 5.6,
+          "zh": "同一个任务：3D 游戏原型",
+          "sub": "上：GPT-6.1 Sol · 下：GPT-6 Astra"
+        },
+        {
+          "a": 8.2,
+          "b": 14.5,
+          "zh": "Higgsfield：Sol 快 4 倍 · 成本 1/5",
+          "sub": "出自 Higgsfield 自己的帖子，官方没有这个数据"
+        }
+      ],
+      "lines": [
+        {
+          "id": "N08",
+          "a": 0.3
+        },
+        {
+          "id": "N09",
+          "a": 3.6
+        },
+        {
+          "id": "N10",
+          "a": 8.0
+        }
+      ]
+    },
+    {
+      "id": "S2",
+      "type": "clip",
+      "chapter": 0,
+      "name": "THE COLOSSEUM",
+      "tag": "4 个模型",
+      "credit": "@LuminaBench · X · 模型名为发布者所标",
+      "ranges": [
+        {
+          "src": "g2",
+          "in": 0.0,
+          "out": 12.7
+        }
+      ],
+      "ui": {
+        "nt": "none",
+        "cr": "none",
+        "cap": "bl"
+      },
+      "caps": [
+        {
+          "a": 0.3,
+          "b": 6.0,
+          "zh": "同一个提示词：3D 斗兽场",
+          "sub": "画面：@LuminaBench · X · 模型名为发布者所标"
+        },
+        {
+          "a": 6.6,
+          "b": 12.2,
+          "zh": "发帖的人：Astra Pro 和 Sol 很像",
+          "sub": "画面：@LuminaBench · X"
+        }
+      ],
+      "lines": [
+        {
+          "id": "N11",
+          "a": 0.5
+        },
+        {
+          "id": "N12",
+          "a": 7.0
+        }
+      ]
+    },
+    {
+      "id": "S3",
+      "type": "clip",
+      "chapter": 0,
+      "name": "AEGEAN",
+      "tag": "Astra",
+      "credit": "@chetanankola · X · 模型名为发布者所标",
+      "ranges": [
+        {
+          "src": "g3",
+          "in": 0.0,
+          "out": 4.5
+        },
+        {
+          "src": "g3",
+          "in": 7.5,
+          "out": 11.5
+        },
+        {
+          "src": "g3",
+          "in": 17.5,
+          "out": 21.0
+        },
+        {
+          "src": "g3",
+          "in": 26.5,
+          "out": 30.0
+        }
+      ],
+      "ui": {
+        "cap": "br"
+      },
+      "caps": [
+        {
+          "a": 0.4,
+          "b": 7.0,
+          "zh": "全是代码 · Three.js",
+          "sub": "原帖写作 GPT 6.1 Astra，官方没有这个模型"
+        }
+      ],
+      "lines": [
+        {
+          "id": "N13",
+          "a": 0.5
+        }
+      ]
+    },
+    {
+      "id": "S4",
+      "type": "clip",
+      "chapter": 0,
+      "name": "AROUND THE BEND",
+      "tag": "Sol",
+      "credit": "@ishuagra02 · X · 模型名为发布者所标",
+      "ranges": [
+        {
+          "src": "g4",
+          "in": 0.0,
+          "out": 7.0
+        },
+        {
+          "src": "g4",
+          "in": 8.0,
+          "out": 13.5
+        },
+        {
+          "src": "g4",
+          "in": 21.5,
+          "out": 26.5
+        }
+      ],
+      "caps": [
+        {
+          "a": 0.4,
+          "b": 6.5,
+          "zh": "Sol · 3D 秋天",
+          "sub": "沿着铁轨，落叶一路飘"
+        },
+        {
+          "a": 7.6,
+          "b": 15.0,
+          "zh": "发帖人的说法：API 成本 $1.50",
+          "sub": "设计约 Opus 的 80% · 成本约 4% · 均无法核实"
+        }
+      ],
+      "lines": [
+        {
+          "id": "N14",
+          "a": 0.5
+        },
+        {
+          "id": "N15",
+          "a": 7.4
+        },
+        {
+          "id": "N16",
+          "a": 10.0
+        }
+      ]
+    },
+    {
+      "id": "S5",
+      "type": "clip",
+      "chapter": 1,
+      "name": "KIWI JELLY",
+      "tag": "Sol Max vs Astra Max",
+      "credit": "@abhinavflac · X · 模型名为发布者所标",
+      "ranges": [
+        {
+          "src": "p1",
+          "in": 0.0,
+          "out": 9.0
+        },
+        {
+          "src": "p1",
+          "in": 17.0,
+          "out": 25.0
+        }
+      ],
+      "ui": {
+        "stack": true,
+        "nt": "tl",
+        "cr": "br",
+        "cap": "bl"
+      },
+      "caps": [
+        {
+          "a": 0.4,
+          "b": 6.5,
+          "zh": "同一个任务：猕猴桃果冻",
+          "sub": "上：Sol Max · 下：Astra Max"
+        },
+        {
+          "a": 9.6,
+          "b": 16.0,
+          "zh": "发帖的人：Sol 更省钱 · Astra 物理更完美"
+        }
+      ],
+      "lines": [
+        {
+          "id": "N17",
+          "a": 0.4
+        },
+        {
+          "id": "N18",
+          "a": 9.5
+        }
+      ]
+    },
+    {
+      "id": "S6",
+      "type": "clip",
+      "chapter": 1,
+      "name": "HUMAN ATLAS",
+      "tag": "Astra",
+      "credit": "@R_ChajX 转发 · 原作者 @ashebytes · X",
+      "ranges": [
+        {
+          "src": "p2",
+          "in": 0.0,
+          "out": 6.0
+        },
+        {
+          "src": "p2",
+          "in": 9.5,
+          "out": 15.5
+        },
+        {
+          "src": "p2",
+          "in": 24.0,
+          "out": 34.0
+        }
+      ],
+      "caps": [
+        {
+          "a": 0.4,
+          "b": 6.0,
+          "zh": "Human Atlas · 原作者 Ashe",
+          "sub": "2,234 个部件 · 数据来自开源的 BodyParts3D"
+        },
+        {
+          "a": 6.4,
+          "b": 12.0,
+          "zh": "每一块都能点开看说明"
+        }
+      ],
+      "lines": [
+        {
+          "id": "N19",
+          "a": 0.4
+        }
+      ]
+    },
+    {
+      "id": "S7a",
+      "type": "clip",
+      "chapter": 1,
+      "name": "Magnific 宣传片",
+      "tag": "dots",
+      "credit": "@magnific · X",
+      "ranges": [
+        {
+          "src": "m1",
+          "in": 0.0,
+          "out": 9.0
+        }
+      ],
+      "caps": [
+        {
+          "a": 0.5,
+          "b": 6.5,
+          "zh": "dots：ChatGPT 里由 GPT-6 Astra 驱动的常开智能体",
+          "sub": "官方：有自己的云端电脑，你不在时也继续干活 · 画面来自 @magnific"
+        }
+      ],
+      "lines": [
+        {
+          "id": "N20",
+          "a": 0.4
+        }
+      ]
+    },
+    {
+      "id": "S7b",
+      "type": "clip",
+      "chapter": 1,
+      "name": "高斯泼溅 · dots",
+      "tag": "新模型",
+      "credit": "@abstrakt314 · X · 模型名为发布者所标",
+      "ranges": [
+        {
+          "src": "p3",
+          "in": 0.0,
+          "out": 11.4
+        }
+      ],
+      "ui": {
+        "stack": true,
+        "nt": "tl",
+        "cr": "br",
+        "cap": "bl"
+      },
+      "caps": [
+        {
+          "a": 0.5,
+          "b": 5.2,
+          "zh": "三维高斯泼溅 · dots",
+          "sub": "Blender MCP + LichtFeld Studio"
+        },
+        {
+          "a": 5.6,
+          "b": 11.0,
+          "zh": "原帖写作 GPT 6.1 Astra",
+          "sub": "官方没有这个模型"
+        }
+      ],
+      "lines": [
+        {
+          "id": "N21",
+          "a": 0.5
+        }
+      ]
+    },
+    {
+      "id": "S8",
+      "type": "clip",
+      "chapter": 2,
+      "name": "CLEARWATER",
+      "tag": "Sol + Astra Max",
+      "credit": "@SamGCoder · X · 模型名为发布者所标",
+      "ranges": [
+        {
+          "src": "e1",
+          "in": 0.0,
+          "out": 10.0
+        },
+        {
+          "src": "e1",
+          "in": 15.0,
+          "out": 23.0
+        },
+        {
+          "src": "e1",
+          "in": 64.0,
+          "out": 72.0
+        },
+        {
+          "src": "e1",
+          "in": 162.0,
+          "out": 171.0
+        }
+      ],
+      "caps": [
+        {
+          "a": 0.4,
+          "b": 6.5,
+          "zh": "1:1 的地球",
+          "sub": "从太空，一路降到海面"
+        },
+        {
+          "a": 11.2,
+          "b": 19.0,
+          "zh": "项目：Sol · 地球：Astra Max",
+          "sub": "发布者 @SamGCoder 的说法 · Max = 官方推理强度最高档"
+        },
+        {
+          "a": 28.2,
+          "b": 34.5,
+          "zh": "这个页面，你也能玩",
+          "sub": "samg-coder.github.io/ClearWater6.1"
+        }
+      ],
+      "lines": [
+        {
+          "id": "N22",
+          "a": 0.5
+        },
+        {
+          "id": "N23",
+          "a": 3.0
+        },
+        {
+          "id": "N24",
+          "a": 11.0
+        }
+      ]
+    },
+    {
+      "id": "E1",
+      "type": "card",
+      "kind": "outro",
+      "overlay": "outro",
+      "chapter": 3,
+      "name": "Clearwater · 链接",
+      "dur": 8.5,
+      "lines": [
+        {
+          "id": "N25",
+          "a": 0.6
+        }
+      ]
+    }
+  ]
+}

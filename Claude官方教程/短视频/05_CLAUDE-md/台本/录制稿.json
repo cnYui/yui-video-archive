@@ -1,0 +1,83 @@
+{
+ "slug": "CLAUDE-md",
+ "title": "Claude官方教程 第5期｜CLAUDE.md：给 Claude 写一份入职手册",
+ "kicker": "<b>Claude官方教程</b> 第5期",
+ "hook": [
+  "每次开机都像",
+  "第一天上班"
+ ],
+ "lines": [
+  {
+   "id": "N01",
+   "zh": "Claude Code 每开一个新会话，上下文都是全新的，像第一天上班。",
+   "say": "Claude Code 每开一个新会话，上下文都是全新的，像第一天上班。",
+   "en": "Every new Claude Code session starts with a fresh context, like day one on the job."
+  },
+  {
+   "id": "N02",
+   "zh": "官方课说：没有 CLAUDE.md，结构、依赖、功能都得重新摸。",
+   "say": "官方课说：没有 Claude 点 md，结构、依赖、功能都得重新摸。",
+   "en": "The course says that without CLAUDE.md, it re-explores your structure, dependencies and finished features."
+  },
+  {
+   "id": "N03",
+   "zh": "解法是项目根目录的一个 Markdown 文件，每次开会话，它都会自动读。",
+   "say": "解法是项目根目录的一个 Markdown 文件，每次开会话，它都会自动读。",
+   "en": "The fix is a Markdown file in your project root, read automatically at the start of every session."
+  },
+  {
+   "id": "N04",
+   "zh": "官方的比喻：给代码库写的入职手册。",
+   "say": "官方的比喻：给代码库写的入职手册。",
+   "en": "Anthropic's analogy: an onboarding script for your codebase."
+  },
+  {
+   "id": "N05",
+   "zh": "写什么？常用命令、代码风格，这些读代码也猜不到的规矩，每份别超过两百行。",
+   "say": "写什么？常用命令、代码风格，这些读代码也猜不到的规矩，每份别超过两百行。",
+   "en": "What goes in? Commands and style rules it can't guess from the code, and keep each file under 200 lines."
+  },
+  {
+   "id": "N06",
+   "zh": "项目级的进版本库，全队共享；用户级的放你的配置文件夹，只给你自己。",
+   "say": "项目级的进版本库，全队共享；用户级的放你的配置文件夹，只给你自己。",
+   "en": "The project file goes into version control for the team; the user file lives in your config folder, just for you."
+  },
+  {
+   "id": "N07",
+   "zh": "几份是叠加着一起读，不是谁覆盖谁。",
+   "say": "几份是叠加着一起读，不是谁覆盖谁。",
+   "en": "They stack when read; one doesn't override another."
+  },
+  {
+   "id": "N08",
+   "zh": "同一个错纠正第二遍，就写下来，比如“别用 API 路由”。",
+   "say": "同一个错纠正第二遍，就写下来，比如“别用 API 路由”。",
+   "en": "Correct the same mistake twice and it's time to write it down, like use server actions instead of API routes."
+  },
+  {
+   "id": "N09",
+   "zh": "想进文件，要明说“加到 CLAUDE.md”；只说“记住”，进的是自动记忆。",
+   "say": "想进文件，要明说“加到 Claude 点 md”；只说“记住”，进的是自动记忆。",
+   "en": "To get it into the file, say add this to CLAUDE.md. Just saying remember saves it to Claude's own memory."
+  },
+  {
+   "id": "N10",
+   "zh": "项目文档用 @ 加路径引用，不过引用的内容照样一启动就全载入，不省上下文。",
+   "say": "项目文档用艾特加路径引用，不过引用的内容照样一启动就全载入，不省上下文。",
+   "en": "Reference project docs with @ and a path, though they still load in full at launch and don't save context."
+  },
+  {
+   "id": "N11",
+   "zh": "官方课还建议：一开始先别写，看它总在哪被纠偏，再用 /init 生成。",
+   "say": "官方课还建议：一开始先别写，看它总在哪被纠偏，再用斜杠 init 生成。",
+   "en": "The course also suggests starting without one, seeing where you keep correcting it, then running /init."
+  },
+  {
+   "id": "N12",
+   "zh": "但它是上下文，不是强制配置。必须照做的硬规矩，交给 hook。",
+   "say": "但它是上下文，不是强制配置。必须照做的硬规矩，交给 hook。",
+   "en": "But it's context, not enforced configuration. Rules that must always hold belong in a hook."
+  }
+ ]
+}

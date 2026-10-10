@@ -1,0 +1,194 @@
+{
+  "title": "GPT-6.1 Sol / GPT-6 Astra：网友晒出的 9 个作品",
+  "sub": "9 个作品 · 模型名为发布者所标",
+  "titleCard": {
+    "kick": "OPENAI 新模型 · 网友实测",
+    "a": "GPT-6 Astra ×",
+    "b": "GPT-6.1 Sol",
+    "chips": [
+      "OpenAI 新模型",
+      "网友实测",
+      "9 个作品"
+    ]
+  },
+  "outroCard": {
+    "kick": "CLEARWATER",
+    "title": "整个地球，你也能玩",
+    "img": "clearwater",
+    "imgCap": "页面：CLEARWATER · Follow the light.",
+    "qrCap": "扫码，或在浏览器里打开链接",
+    "url": "samg-coder.github.io/ClearWater6.1",
+    "fine": "页面由他人发布，内容未经验证 · 画面：@SamGCoder · X",
+    "sources": "本期画面来自 X：@higgsfield_ai　@LuminaBench　@chetanankola　@ishuagra02　@abhinavflac　@R_ChajX（转发 @ashebytes 的 Human Atlas）　@abstrakt314　@magnific　@SamGCoder，以及 OpenAI DevDay 2026 主题演讲（官方）"
+  },
+  "chapters": [
+    {
+      "name": "3D 游戏与场景",
+      "tag": "4 个作品",
+      "thumb": "thumb/1.jpg"
+    },
+    {
+      "name": "物理与细节",
+      "tag": "3 个作品",
+      "thumb": "thumb/2.jpg"
+    },
+    {
+      "name": "整个地球",
+      "tag": "1 个作品",
+      "thumb": "thumb/3.jpg"
+    }
+  ],
+  "lines": [
+    {
+      "id": "N01",
+      "zh": "GPT-6.1 Sol。",
+      "say": "GPT 六点一 Sol。",
+      "en": "GPT-6.1 Sol."
+    },
+    {
+      "id": "N02",
+      "zh": "网友已经拿它做出了这些。",
+      "say": "网友已经拿它，做出了这些。",
+      "en": "Netizens have already built these with it."
+    },
+    {
+      "id": "N03",
+      "zh": "OpenAI 开发者大会，发布了 GPT-6.1 Sol。",
+      "say": "OpenAI 开发者大会，发布了 GPT 六点一 Sol。",
+      "en": "At OpenAI's developer conference, GPT-6.1 Sol was released."
+    },
+    {
+      "id": "N04",
+      "zh": "接近旗舰 Astra，价格只有五分之一。",
+      "say": "接近旗舰 Astra，价格只有五分之一。",
+      "en": "Near-flagship Astra performance, at one fifth of the price."
+    },
+    {
+      "id": "N05",
+      "zh": "每百万 token，输入 2 美元，输出 10 美元。",
+      "say": "每百万 token，输入两美元，输出十美元。",
+      "en": "Per million tokens: $2 for input, $10 for output."
+    },
+    {
+      "id": "N06",
+      "zh": "还有 Ultrafast，最高 8 倍速度。",
+      "say": "还有 Ultrafast，最高八倍速度。",
+      "en": "Plus Ultrafast: up to 8x the speed."
+    },
+    {
+      "id": "N07",
+      "zh": "同一个提示造火箭，左边已经起飞。",
+      "say": "同一个提示造火箭，左边已经起飞。",
+      "en": "Same prompt, one rocket build: the left side has already lifted off."
+    },
+    {
+      "id": "N08",
+      "zh": "同一个任务：做一个 3D 游戏原型。",
+      "say": "同一个任务：做一个三 D 游戏原型。",
+      "en": "Same task: build a 3D game prototype."
+    },
+    {
+      "id": "N09",
+      "zh": "上面是 Sol，下面是 Astra。",
+      "say": "上面是 Sol，下面是 Astra。",
+      "en": "Sol on top, Astra below."
+    },
+    {
+      "id": "N10",
+      "zh": "Higgsfield 说，Sol 快 4 倍，成本五分之一。",
+      "say": "Higgsfield 说，Sol 快四倍，成本五分之一。",
+      "en": "Higgsfield says Sol is 4x faster, at one fifth of the cost."
+    },
+    {
+      "id": "N11",
+      "zh": "四个模型，同一个提示词，做斗兽场。",
+      "say": "四个模型，同一个提示词，做斗兽场。",
+      "en": "Four models, one prompt: build the Colosseum."
+    },
+    {
+      "id": "N12",
+      "zh": "发帖的人说，Astra Pro 和 Sol 感觉很像。",
+      "say": "发帖的人说，Astra Pro 和 Sol 感觉很像。",
+      "en": "The poster says Astra Pro and Sol feel very similar."
+    },
+    {
+      "id": "N13",
+      "zh": "发帖的人说，这个爱琴海是 Astra 写的。",
+      "say": "发帖的人说，这个爱琴海是 Astra 写的。",
+      "en": "The poster says Astra wrote this Aegean scene."
+    },
+    {
+      "id": "N14",
+      "zh": "Sol 做的秋天。",
+      "say": "Sol 做的秋天。",
+      "en": "Autumn, made by Sol."
+    },
+    {
+      "id": "N15",
+      "zh": "发帖的人说，API 只花 1.5 美元。",
+      "say": "发帖的人说，API 只花一点五美元。",
+      "en": "The poster says the API cost just $1.50."
+    },
+    {
+      "id": "N16",
+      "zh": "他说，设计水平是 Opus 的八成，成本 4%。",
+      "say": "他说，设计水平是 Opus 的八成，成本百分之四。",
+      "en": "He says the design is 80% of Opus, at 4% of the cost."
+    },
+    {
+      "id": "N17",
+      "zh": "再看物理：猕猴桃果冻。",
+      "say": "再看物理：猕猴桃果冻。",
+      "en": "Now physics: a slice of kiwi jelly."
+    },
+    {
+      "id": "N18",
+      "zh": "发帖的人说：Sol 更省钱，Astra 的果冻物理更完美。",
+      "say": "发帖的人说：Sol 更省钱，Astra 的果冻物理更完美。",
+      "en": "The poster says: Sol saves more money, Astra's jelly physics is better."
+    },
+    {
+      "id": "N19",
+      "zh": "开发者 Ashe 用 Astra 做的人体图谱，2,234 个部件。",
+      "say": "开发者 Ashe 用 Astra 做的人体图谱，两千二百三十四个部件。",
+      "en": "A human atlas by developer Ashe, built with Astra: 2,234 parts."
+    },
+    {
+      "id": "N20",
+      "zh": "这是 dots，OpenAI 这次发布的常开智能体。",
+      "say": "这是 dots，OpenAI 这次发布的常开智能体。",
+      "en": "This is dots, the always-on agent OpenAI just released."
+    },
+    {
+      "id": "N21",
+      "zh": "让新模型用 Blender MCP，重建一只 dots。",
+      "say": "让新模型用 Blender MCP，重建一只 dots。",
+      "en": "The new model rebuilds a dots character through Blender MCP."
+    },
+    {
+      "id": "N22",
+      "zh": "最后，一比一的地球。",
+      "say": "最后，一比一的地球。",
+      "en": "Last one: the Earth at 1:1 scale."
+    },
+    {
+      "id": "N23",
+      "zh": "从太空，一路降到海面。",
+      "say": "从太空，一路降到海面。",
+      "en": "From space, all the way down to the sea."
+    },
+    {
+      "id": "N24",
+      "zh": "发帖的人说：项目是 Sol 搭的，地球是 Astra Max 做的。",
+      "say": "发帖的人说：项目是 Sol 搭的，地球是 Astra Max 做的。",
+      "en": "The poster says: Sol built the project, Astra Max made the Earth."
+    },
+    {
+      "id": "N25",
+      "zh": "链接在这里，扫码就能玩。",
+      "say": "链接在这里，扫码就能玩。",
+      "en": "The link is right here. Scan it to play."
+    }
+  ],
+  "slug": "GPT模型效果展示"
+}

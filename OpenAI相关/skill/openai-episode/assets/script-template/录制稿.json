@@ -1,0 +1,25 @@
+{
+  "slug": "短名（成片 / 字幕文件名前缀，例：GPT模型效果展示）",
+  "title": "本期内部标题（不是 B 站标题）",
+  "sub": "N 个作品 · 模型名为发布者所标",
+  "titleCard": {"kick": "OPENAI 新模型 · 网友实测", "a": "第一行（白，≤ 11 个英文字符宽）", "b": "第二行（OpenAI 蓝，最大）", "chips": ["OpenAI 新模型", "网友实测", "N 个作品"]},
+  "outroCard": {
+    "kick": "页面名（大写英文）",
+    "title": "一句话，你也能玩",
+    "img": "card_imgs 里的名字",
+    "imgCap": "页面：名字 · 副标题",
+    "qrCap": "扫码，或在浏览器里打开链接",
+    "url": "域名/路径（不带 https://）",
+    "fine": "页面由他人发布，内容未经验证 · 画面：@账号 · X",
+    "sources": "本期画面来自 X：@账号一　@账号二　…，以及 OpenAI DevDay 2026 主题演讲（官方）"
+  },
+  "chapters": [
+    {"name": "≤ 7 个字", "tag": "N 个作品", "thumb": "thumb/1.jpg"},
+    {"name": "≤ 7 个字", "tag": "N 个作品", "thumb": "thumb/2.jpg"},
+    {"name": "≤ 7 个字", "tag": "N 个作品", "thumb": "thumb/3.jpg"}
+  ],
+  "lines": [
+    {"id": "N01", "zh": "中文字幕（一句话，口语，短）", "say": "念的字（数字写汉字：两美元；@ 写艾特；3D 写“三 D”）", "en": "English subtitle: spoken, concise, ≤ 90 characters, official names kept."},
+    {"id": "N02", "zh": "…", "say": "…", "en": "…"}
+  ]
+}

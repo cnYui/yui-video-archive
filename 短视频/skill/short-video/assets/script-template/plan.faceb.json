@@ -1,0 +1,14 @@
+{
+  "layout": "faceb",
+  "_说明": "出镜多窗版式（faceb）的占位 plan：真正的 plan.json 由 scripts/gen_ep.py 从 台本/script_data.py 生成（会覆盖这个文件）。每个场景 mode = one 单窗 / two 双窗上下叠（才写 ranges2）/ big 大窗；card 场景画在 制作/00_整片/scenes_ep.js。",
+  "plan": [
+    {"id": "S1", "type": "clip", "kind": "demo", "overlay": "clip", "name": "开场（单窗）", "mode": "one", "credit": "来源 · 平台",
+     "ranges": [{"src": "d1", "in": 3.0, "out": 9.0, "mute": true}],
+     "lines": [{"id": "N01", "a": 0.0}, {"id": "N02", "a": 3.2}]},
+
+    {"id": "S2", "type": "clip", "kind": "demo", "overlay": "clip", "name": "对照（双窗）", "mode": "two", "credit": "来源 · 平台",
+     "ranges":  [{"src": "d1", "in": 20.0, "out": 26.0, "mute": true}],
+     "ranges2": [{"src": "d1", "in": 60.0, "out": 66.0, "mute": true}],
+     "lines": [{"id": "N03", "a": 0.1}, {"id": "N04", "a": 4.0}]}
+  ]
+}

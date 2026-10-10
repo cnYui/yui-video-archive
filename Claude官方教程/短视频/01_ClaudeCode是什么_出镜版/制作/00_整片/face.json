@@ -1,0 +1,10 @@
+{
+  "_说明": "悠一的真口播：src = build_talk.py 剪好的方形人像 talk_face.mp4（17230 帧 = talk.wav 的 574.33 s，音画帧对帧一致），start 0；镜像（mirror true）；方形已经裁过，这里不再裁（side 1.0）。",
+  "src": "D:/大疆/Claude官方教程/短视频/01_ClaudeCode是什么_出镜版/制作/01_口播/talk_face.mp4",
+  "start": 0.0,
+  "duration": null,
+  "mirror": true,
+  "crop": {"cx": 0.5, "cy": 0.5, "side": 1.0},
+  "size": 360,
+  "sticker": "悠一 出镜"
+}

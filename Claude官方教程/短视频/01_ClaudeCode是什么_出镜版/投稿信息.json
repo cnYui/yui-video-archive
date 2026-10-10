@@ -1,0 +1,144 @@
+{
+  "_说明": "悠一出镜版（他自己的原声 + 镜像小窗）。交付包阶段先写 titles（3 个候选 × 3 个平台）和各平台默认项；他回“封面 X 标题 Y 同意”（或已经说“做完发三个平台”并只差拖视频）后，把选中的那条写进各平台字段，approval 记下选择和时间。scripts/check_titles.py 按各平台要求核对字数。2026-10-06 起视频号不发；小红书“原创声明”选开（用户 2026-10-06 定）。声明：本人原声 + 脸，不选“含 AI 生成内容”。",
+  "slug": "ClaudeCode是什么_出镜版",
+  "video": "D:\\大疆\\Claude官方教程\\短视频\\01_ClaudeCode是什么_出镜版\\ClaudeCode是什么_出镜版_成片.mp4",
+  "duration_s": 574.3,
+  "approval": {
+    "status": "approved",
+    "cover": "B",
+    "title": "1（推荐；用户没另选，按推荐）",
+    "approved_at": "2026-10-06 17:37（日本时间）",
+    "note": "用户 2026-10-06 说“你做完之后，发三个平台”：成片做完后只差他把视频拖进各平台上传区；标题 / 封面按推荐候选（A / 1）填，他另有选择就换。；10/06 17:2x 用户看第一版后：①成片顶上那行改成“怎么干活，一个视频讲清楚”（重渲）；②封面改成“一个视频入门 / Claude Code” + Claude 八爪鱼形象（旧的人脸 / 循环图 / 确认框三个作废）；17:37 用户：“用封面B，然后请你发布三个平台”（封面 B = 深色终端底 + 八爪鱼 + > claude）= 发布授权；视频仍由他拖进上传区"
+  },
+  "titles": [
+    {
+      "id": 1,
+      "angle": "事实陈述（主体 + 动作）",
+      "recommend": true,
+      "bilibili": "Claude官方教程 第1期｜Claude Code 是什么、怎么工作，一个视频讲清楚",
+      "douyin": "Claude官方教程 第1期｜Claude Code 是什么",
+      "xiaohongshu": "官方教程第1期｜Claude Code"
+    },
+    {
+      "id": 2,
+      "angle": "反常识（不只是聊天框）",
+      "bilibili": "Claude官方教程 第1期｜Claude Code 不只是聊天框：能读项目、改代码、跑命令，它到底怎么干活",
+      "douyin": "Claude官方教程 第1期｜不只是聊天框",
+      "xiaohongshu": "官方教程第1期｜不只是聊天框"
+    },
+    {
+      "id": 3,
+      "angle": "泼冷水（风险 / 权限）",
+      "bilibili": "Claude官方教程 第1期｜Claude Code 会误删文件吗？先搞懂它怎么干活，再决定权限开多大",
+      "douyin": "Claude官方教程 第1期｜会误删文件吗",
+      "xiaohongshu": "官方教程第1期｜会误删文件吗"
+    }
+  ],
+  "covers": {
+    "3x4": "制作/04_封面/封面_选定_3x4.png",
+    "16x9": "制作/04_封面/封面_选定_16x9.png",
+    "4x3": "制作/04_封面/封面_选定_4x3.png"
+  },
+  "source": {
+    "original_post": "",
+    "original_author": "Anthropic / Claude Academy（官方课程画面）",
+    "project_or_site": "https://academy.claude.com/courses/claude-code-101/what-is-claude-code"
+  },
+  "bilibili": {
+    "title": "Claude官方教程 第1期｜Claude Code 是什么、怎么工作，一个视频讲清楚",
+    "desc": "Claude官方教程 第1期｜Claude Code 是什么、怎么工作，一个视频讲清楚\n画面来自 Anthropic 官方 YouTube 频道（Claude）与 Claude Academy（academy.claude.com：Claude Code 101、Claude Code in Action）的官方课程，版权归 Anthropic 所有；本期为悠一的中文真人讲解 + 中英双语字幕。\n这期讲什么：\n1. 聊天窗口和 Claude Code 差在哪：一个只能回答，一个能直接动你电脑里的文件\n2. 它能干什么：读项目、改代码、跑命令、上网查资料\n3. 它怎么干活：代理循环（找线索 → 动手 → 验结果，没做好再来一圈），你随时能打断\n4. 四个零件：大脑（Claude 模型）、双手（工具）、记忆（上下文窗口）、钥匙（权限）\n5. 泼冷水：会有幻觉、可能有 bug，权限别开最大\n6. 怎么用上它：终端、代码编辑器插件、桌面应用、网页版\n官方课时页：https://academy.claude.com/courses/claude-code-101/what-is-claude-code",
+    "declaration": "个人观点，仅供参考（本人原声 + 出镜；不选含 AI 生成内容）",
+    "category": "人工智能（tid 231）",
+    "tags": [
+      "claude code",
+      "claude",
+      "AI编程",
+      "AI智能体",
+      "AI教程",
+      "Anthropic",
+      "入门教程",
+      "人工智能",
+      "编程",
+      "代理循环"
+    ],
+    "collection": "Claude官方教程（若 B 站有这个合集就选；没有就不选）",
+    "repost_source": "",
+    "cover": "两个位各传各的（双比例同步改动不勾）：16:9 → 个人空间封面，4:3 → 首页推荐封面",
+    "published": "2026-10-06 18:2x（日本时间）"
+  },
+  "douyin": {
+    "title": "Claude官方教程 第1期｜Claude Code 是什么",
+    "desc": "Claude官方教程 第1期｜Claude Code 是什么、怎么工作，一个视频讲清楚\n官方课程画面来自 Anthropic 官方 YouTube 频道与 Claude Academy（academy.claude.com），版权归 Anthropic 所有；本期为中文真人讲解 + 双语字幕。\n聊天窗口只能回答，Claude Code 能直接动你电脑里的文件：读项目、改代码、跑命令，一圈圈循环直到做好。",
+    "topics": [
+      "ClaudeCode",
+      "AI编程",
+      "Claude入门",
+      "AI智能体",
+      "AI教程"
+    ],
+    "declaration": "内容为个人观点或见解",
+    "collection": null,
+    "cover": "竖封面 3:4 = 封面_选定_3x4.png；横封面 4:3 = 封面_选定_4x3.png",
+    "published": "2026-10-06 18:20（日本时间）"
+  },
+  "xiaohongshu": {
+    "title": "官方教程第1期｜Claude Code",
+    "desc": "Claude官方教程 第1期｜Claude Code 是什么、怎么工作，一个视频讲清楚\n官方课程画面来自 Anthropic 官方 YouTube 频道与 Claude Academy（academy.claude.com），版权归 Anthropic 所有；本期为中文真人讲解 + 双语字幕。\n这期讲：\n· 聊天窗口 vs Claude Code：能回答 vs 能动手\n· 它能干什么：读项目、改代码、跑命令、上网查资料\n· 代理循环：找线索 → 动手 → 验结果，没做好再来一圈\n· 四个零件：大脑、双手、记忆、钥匙（权限）\n· 泼冷水：会有幻觉、可能有 bug，权限别开最大",
+    "topics": [
+      "ClaudeCode",
+      "Claude",
+      "AI编程",
+      "AI智能体",
+      "AI入门",
+      "AI教程",
+      "Anthropic",
+      "程序员",
+      "代理循环",
+      "效率工具"
+    ],
+    "declaration": "内容来源声明：自主拍摄",
+    "original_declaration": "开（用户 2026-10-06 定；弹出《原创声明须知》时的“同意”要他本人在聊天里给）",
+    "cover": "3:4 = 封面_选定_3x4.png",
+    "published": "2026-10-06 17:09（北京时间 = 日本 18:09；用户在我填 B 站时自己点的发布）"
+  },
+  "published": {
+    "bilibili": {
+      "bvid": "BV15NpF6JEvy",
+      "time": "2026-10-06 18:2x（日本时间）",
+      "state": "审核中（state -1）",
+      "title": "Claude官方教程 第1期｜Claude Code 是什么、怎么工作，一个视频讲清楚",
+      "tid": 231,
+      "tags": 10,
+      "desc_len": 503,
+      "cover": "cover 1920×1080 / cover43 1440×1080（接口核对）",
+      "declaration": "个人观点，仅供参考",
+      "collection": "没选（B 站没有“Claude官方教程”合集）"
+    },
+    "douyin": {
+      "time": "2026-10-06 18:20（日本时间）",
+      "state": "审核中",
+      "title": "Claude官方教程 第1期｜Claude Code 是什么",
+      "duration": "09:34",
+      "topics": [
+        "ClaudeCode",
+        "AI编程",
+        "Claude入门",
+        "AI智能体",
+        "AI教程"
+      ],
+      "declaration": "内容为个人观点或见解",
+      "cover": "竖 3:4 + 横 4:3，封面检测通过",
+      "collection": "没选"
+    },
+    "xiaohongshu": {
+      "time": "2026-10-06 17:09（北京时间 = 日本 18:09；用户在我填 B 站时自己点的发布）",
+      "state": "审核中（原创声明更新后仍在审核中）",
+      "title": "官方教程第1期｜Claude Code",
+      "duration": "09:34",
+      "topics": 10,
+      "declaration": "内容来源声明：自主拍摄",
+      "original_declaration": "已开（2026-10-06 晚，用户在聊天里说“小红书原创声明 要开”：我在笔记管理 → 编辑里把开关关一下再打开、勾选《原创声明须知》并点“声明原创”，点“发布”后页面显示“更新成功”；笔记仍是审核中。注意：编辑页的开关对发布时是关的笔记也显示“开”，读回不算数，以“更新成功”为准）",
+      "collection": "没选"
+    }
+  }
+}

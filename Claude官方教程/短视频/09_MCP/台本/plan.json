@@ -1,0 +1,385 @@
+{
+ "layout": "dual",
+ "plan": [
+  {
+   "id": "S1",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "外部上下文",
+   "credit": "官方教程 第9期",
+   "ranges": [
+    {
+     "src": "a",
+     "in": 3.9,
+     "out": 6.518,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 12.3,
+     "out": 16.025,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 20.85,
+     "out": 24.836,
+     "mute": true
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "a",
+     "in": 6.91,
+     "out": 8.366,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 8.9,
+     "out": 12.03,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 16.68,
+     "out": 20.572,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 25.52,
+     "out": 27.372,
+     "mute": true
+    }
+   ],
+   "lines": [
+    {
+     "id": "N01",
+     "a": 0.0
+    },
+    {
+     "id": "N02",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "S2",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "Linear + Context7",
+   "credit": "官方教程 第9期",
+   "ranges": [
+    {
+     "src": "a",
+     "in": 36.65,
+     "out": 39.009,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 48.75,
+     "out": 51.225,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 51.55,
+     "out": 56.075,
+     "mute": true
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "a",
+     "in": 39.33,
+     "out": 47.664,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 56.47,
+     "out": 57.496,
+     "mute": true
+    }
+   ],
+   "lines": [
+    {
+     "id": "N03",
+     "a": 0.0
+    },
+    {
+     "id": "N04",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "S3",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "添加服务器",
+   "credit": "官方教程 第9期",
+   "ranges": [
+    {
+     "src": "a",
+     "in": 75.15,
+     "out": 77.13,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 83.2,
+     "out": 86.19,
+     "mute": true
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "a",
+     "in": 77.41,
+     "out": 82.38,
+     "mute": true
+    }
+   ],
+   "lines": [
+    {
+     "id": "N05",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "S4",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "/mcp 管理",
+   "credit": "官方教程 第9期",
+   "ranges": [
+    {
+     "src": "a",
+     "in": 93.38,
+     "out": 94.862,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 102.23,
+     "out": 103.114,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 103.65,
+     "out": 105.044,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 125.65,
+     "out": 127.27,
+     "mute": true
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "a",
+     "in": 95.13,
+     "out": 100.51,
+     "mute": true
+    }
+   ],
+   "lines": [
+    {
+     "id": "N06",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "S5",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "三档范围",
+   "credit": "官方教程 第9期",
+   "ranges": [
+    {
+     "src": "a",
+     "in": 31.61,
+     "out": 33.117,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 61.47,
+     "out": 63.839,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 177.0,
+     "out": 183.393,
+     "mute": true,
+     "speed": 0.9
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "a",
+     "in": 107.3,
+     "out": 109.1,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 109.0,
+     "hold": 1.5
+    },
+    {
+     "src": "a",
+     "in": 109.6,
+     "out": 111.46,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 114.5,
+     "out": 120.32,
+     "mute": true
+    }
+   ],
+   "lines": [
+    {
+     "id": "N07",
+     "a": 0.0
+    },
+    {
+     "id": "N08",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "S6",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "上下文代价",
+   "credit": "官方教程 第9期",
+   "ranges": [
+    {
+     "src": "a",
+     "in": 129.62,
+     "out": 133.743,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 134.05,
+     "out": 136.107,
+     "mute": true
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "a",
+     "in": 127.54,
+     "out": 129.291,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 136.38,
+     "out": 140.809,
+     "mute": true
+    }
+   ],
+   "lines": [
+    {
+     "id": "N09",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "S7",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "命令行 / 技能 / 按需加载 + 收尾",
+   "credit": "官方教程 第9期",
+   "ranges": [
+    {
+     "src": "a",
+     "in": 144.51,
+     "out": 151.77,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 157.44,
+     "out": 159.853,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 168.06,
+     "out": 170.245,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 170.5,
+     "out": 172.327,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 175.96,
+     "out": 176.774,
+     "mute": true
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "a",
+     "in": 152.06,
+     "out": 156.681,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 160.11,
+     "out": 167.167,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 172.58,
+     "out": 175.403,
+     "mute": true
+    }
+   ],
+   "lines": [
+    {
+     "id": "N10",
+     "a": 0.0
+    },
+    {
+     "id": "N11",
+     "a": 0.0
+    },
+    {
+     "id": "N12",
+     "a": 0.0
+    }
+   ]
+  }
+ ]
+}

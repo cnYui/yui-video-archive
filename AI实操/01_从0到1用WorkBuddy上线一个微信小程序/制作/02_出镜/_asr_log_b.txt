@@ -1,0 +1,6 @@
+R1046: 198.8s audio, 67 segs, 117s
+R1041: 187.1s audio, 32 segs, 164s
+R1029: 99.6s audio, 18 segs, 62s
+0162: 186.7s audio, 63 segs, 115s
+0155: 153.3s audio, 41 segs, 85s
+0156: 97.4s audio, 26 segs, 85s

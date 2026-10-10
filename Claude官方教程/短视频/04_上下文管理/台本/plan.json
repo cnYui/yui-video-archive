@@ -1,0 +1,365 @@
+{
+ "layout": "dual",
+ "plan": [
+  {
+   "id": "S1",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "钩子",
+   "credit": "官方教程 第4期",
+   "ranges": [
+    {
+     "src": "a",
+     "in": 16.01,
+     "out": 19.858,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 25.67,
+     "out": 26.512,
+     "mute": true
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "a",
+     "in": 20.18,
+     "out": 24.87,
+     "mute": true
+    }
+   ],
+   "lines": [
+    {
+     "id": "N01",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "S2",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "上下文窗口",
+   "credit": "官方教程 第4期",
+   "ranges": [
+    {
+     "src": "a",
+     "in": 4.4,
+     "out": 8.187,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 26.63,
+     "out": 27.502,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 27.77,
+     "out": 29.232,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 34.28,
+     "out": 36.314,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 100.02,
+     "out": 102.606,
+     "mute": true
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "a",
+     "in": 8.54,
+     "out": 12.524,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 13.05,
+     "out": 15.588,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 29.52,
+     "out": 33.738,
+     "mute": true
+    }
+   ],
+   "lines": [
+    {
+     "id": "N02",
+     "a": 0.0
+    },
+    {
+     "id": "N03",
+     "a": 0.0
+    },
+    {
+     "id": "N04",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "S3",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "自动压缩",
+   "credit": "官方教程 第4期",
+   "ranges": [
+    {
+     "src": "a",
+     "in": 40.15,
+     "out": 42.419,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 52.76,
+     "out": 55.52,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 108.48,
+     "out": 112.002,
+     "mute": true
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "a",
+     "in": 43.16,
+     "out": 45.907,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 46.33,
+     "out": 52.133,
+     "mute": true
+    }
+   ],
+   "lines": [
+    {
+     "id": "N05",
+     "a": 0.0
+    },
+    {
+     "id": "N06",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "S4",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "三个命令",
+   "credit": "官方教程 第4期",
+   "ranges": [
+    {
+     "src": "a",
+     "in": 58.65,
+     "out": 60.719,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 72.03,
+     "out": 75.641,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 75.9,
+     "out": 81.719,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 81.99,
+     "out": 83.661,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 93.78,
+     "out": 96.118,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 96.65,
+     "out": 99.903,
+     "mute": true
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "a",
+     "in": 60.97,
+     "out": 70.824,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 83.91,
+     "out": 92.816,
+     "mute": true
+    }
+   ],
+   "lines": [
+    {
+     "id": "N07",
+     "a": 0.0
+    },
+    {
+     "id": "N08",
+     "a": 0.0
+    },
+    {
+     "id": "N13",
+     "a": 0.0
+    },
+    {
+     "id": "N14",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "S5",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "CLAUDE.md",
+   "credit": "官方教程 第4期",
+   "ranges": [
+    {
+     "src": "a",
+     "in": 117.86,
+     "out": 120.741,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 151.35,
+     "out": 154.479,
+     "mute": true
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "a",
+     "in": 121.12,
+     "out": 125.556,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 154.73,
+     "out": 156.304,
+     "mute": true
+    }
+   ],
+   "lines": [
+    {
+     "id": "N09",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "S6",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "越具体越省",
+   "credit": "官方教程 第4期",
+   "ranges": [
+    {
+     "src": "a",
+     "in": 128.65,
+     "out": 130.462,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 136.26,
+     "out": 144.008,
+     "mute": true
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "a",
+     "in": 130.96,
+     "out": 136.02,
+     "mute": true,
+     "speed": 0.992
+    },
+    {
+     "src": "a",
+     "in": 145.35,
+     "out": 149.77,
+     "mute": true,
+     "speed": 0.992
+    }
+   ],
+   "lines": [
+    {
+     "id": "N10",
+     "a": 0.0
+    },
+    {
+     "id": "N11",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "S7",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "收尾",
+   "credit": "官方教程 第4期",
+   "ranges": [
+    {
+     "src": "a",
+     "in": 200.99,
+     "out": 203.29,
+     "mute": true
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "a",
+     "in": 198.36,
+     "out": 200.66,
+     "mute": true
+    }
+   ],
+   "lines": [
+    {
+     "id": "N12",
+     "a": 0.0
+    }
+   ]
+  }
+ ]
+}

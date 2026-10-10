@@ -1,0 +1,95 @@
+{
+ "slug": "权限模式与自动模式",
+ "title": "Claude官方教程 第10期｜权限模式：什么时候可以放手，交给自动模式",
+ "kicker": "<b>Claude官方教程</b> 第10期",
+ "hook": [
+  "六种权限模式",
+  "你想放手到哪一步"
+ ],
+ "lines": [
+  {
+   "id": "N01",
+   "zh": "Claude Code 有六种权限模式，从事事问你，到完全放手。",
+   "say": "Claude Code 有六种权限模式，从事事问你，到完全放手。",
+   "en": "Claude Code has six permission modes, from asking about everything to letting go entirely."
+  },
+  {
+   "id": "N02",
+   "zh": "手动：只读不用问，其余先问你。接受编辑：改文件和常见文件命令，也不问。",
+   "say": "手动：只读不用问，其余先问你。接受编辑：改文件和常见文件命令，也不问。",
+   "en": "Manual reads freely and asks about everything else. Accept edits also skips the prompt for file edits and common file commands."
+  },
+  {
+   "id": "N03",
+   "zh": "计划：只研究、只提方案，不改你的源码。",
+   "say": "计划：只研究、只提方案，不改你的源码。",
+   "en": "Plan researches and proposes, without editing your source."
+  },
+  {
+   "id": "N04",
+   "zh": "自动：多数直接放行，命令、联网这类，交给另一个分类器模型先审。",
+   "say": "自动：多数直接放行，命令、联网这类，交给另一个分类器模型先审。",
+   "en": "Auto lets most things through, and a separate classifier model reviews commands, network calls and the like first."
+  },
+  {
+   "id": "N05",
+   "zh": "不再询问：只放行预先批准的，其余直接拒绝，适合 CI 无人值守。",
+   "say": "不再询问：只放行预先批准的，其余直接拒绝，适合 CI 无人值守。",
+   "en": "Don't ask allows only pre-approved tools and denies the rest, which suits CI where no one is there to confirm."
+  },
+  {
+   "id": "N06",
+   "zh": "绕过权限：跳过所有检查，只能放在隔离的容器或虚拟机里。",
+   "say": "绕过权限：跳过所有检查，只能放在隔离的容器或虚拟机里。",
+   "en": "Bypass permissions skips every check, and belongs only inside an isolated container or VM."
+  },
+  {
+   "id": "N07",
+   "zh": "日常按 Shift+Tab，在前四种间轮着切，状态栏随时显示当前模式。",
+   "say": "日常按 Shift 加 Tab，在前四种间轮着切，状态栏随时显示当前模式。",
+   "en": "Day to day, Shift+Tab cycles the first four modes, and the status bar always shows where you are."
+  },
+  {
+   "id": "N08",
+   "zh": "自动模式拦强制推送、生产部署、把下载的代码直接丢进 shell。",
+   "say": "自动模式拦强制推送、生产部署、把下载的代码直接丢进 shell。",
+   "en": "Auto mode blocks force pushes, production deploys, and piping downloaded code straight into a shell."
+  },
+  {
+   "id": "N14",
+   "zh": "想看最新的拦截名单，命令行跑 claude auto-mode defaults。",
+   "say": "想看最新的拦截名单，命令行跑 claude auto-mode defaults。",
+   "en": "To see the current block list, run claude auto-mode defaults from the command line."
+  },
+  {
+   "id": "N13",
+   "zh": "连续被拦三次，自动模式就会暂停，回到弹窗询问。",
+   "say": "连续被拦三次，自动模式就会暂停，回到弹窗询问。",
+   "en": "After three blocks in a row, auto mode pauses and goes back to asking you."
+  },
+  {
+   "id": "N09",
+   "zh": "新版本里，终端新会话默认就是自动模式，先看状态栏。",
+   "say": "新版本里，终端新会话默认就是自动模式，先看状态栏。",
+   "en": "In newer versions, new terminal sessions start in auto mode by default, so check the status bar first."
+  },
+  {
+   "id": "N10",
+   "zh": "分类器管意图，不管对错：认证写坏了，它照样放行。",
+   "say": "分类器管意图，不管对错：认证写坏了，它照样放行。",
+   "en": "The classifier checks intent, not correctness: break authentication and it still waves it through."
+  },
+  {
+   "id": "N11",
+   "zh": "所以要搭一个跑测试的 Stop 钩子：一个管动手前，一个管收工后。",
+   "say": "所以要搭一个跑测试的 Stop 钩子：一个管动手前，一个管收工后。",
+   "en": "So pair it with a Stop hook that runs your tests: one guards intent before, the other correctness after."
+  },
+  {
+   "id": "N12",
+   "zh": "放手可以，但要有人验收。",
+   "say": "放手可以，但要有人验收。",
+   "en": "Letting go is fine, but keep something checking the result."
+  }
+ ]
+}

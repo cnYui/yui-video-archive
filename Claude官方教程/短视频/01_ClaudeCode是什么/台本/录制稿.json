@@ -1,0 +1,95 @@
+{
+ "slug": "ClaudeCode是什么",
+ "title": "Claude官方教程 第1期｜Claude Code 是什么、怎么工作",
+ "kicker": "<b>Claude官方教程</b> 第1期",
+ "hook": [
+  "不是聊天框",
+  "会自己验收的代理"
+ ],
+ "lines": [
+  {
+   "id": "N01",
+   "zh": "Claude Code 干活，就三步：找线索，动手，验结果。",
+   "say": "Claude Code 干活，就三步：找线索，动手，验结果。",
+   "en": "Claude Code works in three steps: gather context, take action, verify the result."
+  },
+  {
+   "id": "N02",
+   "zh": "官方入门课第一课，五月发布，出镜的是 Lewis Menelaws。",
+   "say": "官方入门课第一课，五月发布，出镜的是 Lewis Menelaws。",
+   "en": "Lesson one of the official intro course, published in May, taught by Lewis Menelaws."
+  },
+  {
+   "id": "N03",
+   "zh": "它和聊天窗口最大的差别，是能直接动你的文件和终端。",
+   "say": "它和聊天窗口最大的差别，是能直接动你的文件和终端。",
+   "en": "The big difference from a chat window: it can work on your files and terminal directly."
+  },
+  {
+   "id": "N04",
+   "zh": "聊天框给你一段代码，你得自己复制粘贴。它自己进去改。",
+   "say": "聊天框给你一段代码，你得自己复制粘贴。它自己进去改。",
+   "en": "A chat window hands you code to copy and paste. Claude Code goes in and edits it itself."
+  },
+  {
+   "id": "N05",
+   "zh": "怎么改？先收集上下文，再动手改文件、跑命令，最后验证结果。",
+   "say": "怎么改？先收集上下文，再动手改文件、跑命令，最后验证结果。",
+   "en": "How? It gathers context, then acts by editing files and running commands, then verifies the result."
+  },
+  {
+   "id": "N06",
+   "zh": "没达标，就回到第一步重来，一直循环到能验证为止。",
+   "say": "没达标，就回到第一步重来，一直循环到能验证为止。",
+   "en": "If it falls short, it loops back and tries again until the result checks out."
+  },
+  {
+   "id": "N13",
+   "zh": "比如让它修失败的测试：先跑，读报错，找文件，改，再跑一遍。",
+   "say": "比如让它修失败的测试：先跑，读报错，找文件，改，再跑一遍。",
+   "en": "Ask it to fix failing tests: it runs them, reads the errors, finds the files, edits, and runs them again."
+  },
+  {
+   "id": "N07",
+   "zh": "整个过程里，你随时能插话、打断、纠偏。",
+   "say": "整个过程里，你随时能插话、打断、纠偏。",
+   "en": "At any point, you can add context, interrupt, or steer it."
+  },
+  {
+   "id": "N14",
+   "zh": "改错了？按两下 Esc，文件能回到改之前；远端的改动撤不回。",
+   "say": "改错了？按两下 Esc，文件能回到改之前；远端的改动撤不回。",
+   "en": "Made a mistake? Press Esc twice and your files roll back, though changes to remote systems can't be undone."
+  },
+  {
+   "id": "N08",
+   "zh": "撑起这个循环的有四样：循环本身、上下文窗口、工具、权限。",
+   "say": "撑起这个循环的有四样：循环本身、上下文窗口、工具、权限。",
+   "en": "Four things hold it up: the loop itself, the context window, tools, and permissions."
+  },
+  {
+   "id": "N09",
+   "zh": "窗口满了会自动压缩，什么时候调用工具由它判断，权限由你来定。",
+   "say": "窗口满了会自动压缩，什么时候调用工具由它判断，权限由你来定。",
+   "en": "The window compacts itself when it fills up, Claude decides when to call tools, and you set the permissions."
+  },
+  {
+   "id": "N10",
+   "zh": "终端、编辑器插件、桌面应用、网页版，都能用。",
+   "say": "终端、编辑器插件、桌面应用、网页版，都能用。",
+   "en": "It runs in your terminal, as an editor plugin, in the desktop app, and on the web."
+  },
+  {
+   "id": "N11",
+   "zh": "官方课自己也提醒：它可能理解错、写出 bug、把事情做过头。",
+   "say": "官方课自己也提醒：它可能理解错、写出 bug、把事情做过头。",
+   "en": "The official course itself warns: it can misread your intent, introduce bugs, and over-engineer things."
+  },
+  {
+   "id": "N12",
+   "zh": "聊天框交答案，代理交结果。结果对不对，还得你来验。",
+   "say": "聊天框交答案，代理交结果。结果对不对，还得你来验。",
+   "en": "A chat window delivers answers; an agent delivers results. Whether they're right is still on you to verify."
+  }
+ ]
+}

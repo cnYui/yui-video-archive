@@ -1,0 +1,10 @@
+{
+  "_说明": "出镜小窗配置（放到 <本条>/制作/00_整片/face.json；scripts/compose_face.py 读）。src = 用户自己录的口播原片（DJI 4K 也行，直接解码）；start = 原片从第几秒起（= 配音 tts_narration.wav 的起点）；crop 的 cx / cy / side 都是占原片高度的比例（cx 占宽度比例），裁一块正方形（脸 + 肩膀），要看过 3 个不同时刻的帧再调；size = 单框版居中那一档的边长（360）；场景里写 \"face\": \"center|bl|tl|tr|hide\" 覆盖默认位置（单框默认居中，双框默认缩成 240 放下框左下角）。",
+  "src": "H:/DCIM/DJI_001/<原片>.MP4",
+  "start": 0.20,
+  "duration": null,
+  "mirror": true,
+  "crop": {"cx": 0.515, "cy": 0.449, "side": 0.787},
+  "size": 360,
+  "sticker": "悠一 出镜"
+}

@@ -1,0 +1,134 @@
+1
+00:00:00,000 --> 00:00:02,261
+很多上下文，其实不在代码库里：
+A lot of your context lives outside your codebase:
+
+2
+00:00:02,281 --> 00:00:04,980
+在数据库、协作软件、公开仓库里。
+in databases, productivity apps, public repos.
+
+3
+00:00:05,000 --> 00:00:07,105
+MCP，模型上下文协议，就是
+MCP, the Model Context Protocol,
+
+4
+00:00:07,125 --> 00:00:10,210
+把外部工具接进 Claude Code 的桥。
+is the bridge that connects those tools to Claude Code.
+
+5
+00:00:10,230 --> 00:00:12,178
+团队用 Linear 管项目？
+If your team tracks work in Linear, add
+
+6
+00:00:12,198 --> 00:00:15,340
+加个 MCP 服务器，就能直接读工单。
+a Linear MCP server and Claude can read the issues itself.
+
+7
+00:00:15,360 --> 00:00:16,944
+要查依赖的最新文档，
+Need up-to-date docs for a dependency?
+
+8
+00:00:16,964 --> 00:00:19,570
+有 Context7 这类文档服务器。
+A docs server like Context7 can provide them.
+
+9
+00:00:19,590 --> 00:00:21,789
+用 claude mcp add 添加，
+Add a server with claude mcp add. The two common types:
+
+10
+00:00:21,809 --> 00:00:24,540
+常用 HTTP 和 stdio 两种。
+HTTP for remote services, stdio for local processes.
+
+11
+00:00:24,560 --> 00:00:27,051
+会话里敲 /mcp，能看连接状态，
+Inside a session, /mcp shows what's connected and lets
+
+12
+00:00:27,071 --> 00:00:29,920
+不用的直接关掉，配置不会丢。
+you disable what you don't need, keeping its config.
+
+13
+00:00:29,940 --> 00:00:31,414
+范围有三档：本地，
+There are three scopes:
+
+14
+00:00:31,434 --> 00:00:33,240
+只有你、只在这个项目；
+local, just you in this project;
+
+15
+00:00:33,260 --> 00:00:35,080
+用户，你的所有项目。
+user, across all your projects.
+
+16
+00:00:35,100 --> 00:00:36,266
+第三档是项目：
+The third is project:
+
+17
+00:00:36,286 --> 00:00:38,637
+写进 .mcp.json 提交进版本库，
+a .mcp.json checked into version control,
+
+18
+00:00:38,657 --> 00:00:40,900
+全队拿到同一套服务器。
+so everyone gets the same servers.
+
+19
+00:00:40,920 --> 00:00:43,148
+要记住代价：每个服务器的工具
+Mind the cost: each server's tool names
+
+20
+00:00:43,168 --> 00:00:45,396
+名和说明，每个会话都要载入，
+and instructions load every session
+
+21
+00:00:45,416 --> 00:00:47,080
+会占一点上下文。
+and take a little context.
+
+22
+00:00:47,100 --> 00:00:49,956
+有现成命令行的，比如 gh、aws，
+If a CLI exists, like gh or aws, it's more context-efficient.
+
+23
+00:00:49,976 --> 00:00:53,290
+更省；技能管怎么用，和 MCP 互补。
+Skills teach how to use tools, and complement MCP.
+
+24
+00:00:53,310 --> 00:00:55,568
+默认只先放工具名，用到才加载。
+By default only tool names load first, and the rest on demand.
+
+25
+00:00:55,588 --> 00:00:58,330
+用第三方中转的，默认可能是关着的。
+Behind a third-party gateway, that default may be off.
+
+26
+00:00:58,350 --> 00:01:00,230
+多接一个，就多占一点上下文，
+Every server you add costs a little context.
+
+27
+00:01:00,250 --> 00:01:01,750
+不用的，关掉。
+Disable the ones you don't use.

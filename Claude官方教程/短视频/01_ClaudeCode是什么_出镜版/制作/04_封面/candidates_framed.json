@@ -1,0 +1,59 @@
+{
+ "candidates": [
+  {
+   "id": "A",
+   "note": "官方米色底 + 一只大的 Claude 像素八爪鱼；大字“一个视频入门 / Claude Code”",
+   "recommend": true,
+   "video": "D:/大疆/Claude官方教程/短视频/01_ClaudeCode是什么_出镜版/制作/04_封面/_src/M_A.png",
+   "t": 0.0,
+   "crop": [
+    0,
+    0,
+    1,
+    1
+   ],
+   "big": [
+    "一个视频入门",
+    "Claude Code"
+   ],
+   "accent_line": 1,
+   "sticker": "官方教程 第1期"
+  },
+  {
+   "id": "B",
+   "note": "深色终端底 + 八爪鱼 + “> claude”提示符；同一句大字",
+   "video": "D:/大疆/Claude官方教程/短视频/01_ClaudeCode是什么_出镜版/制作/04_封面/_src/M_B.png",
+   "t": 0.0,
+   "crop": [
+    0,
+    0,
+    1,
+    1
+   ],
+   "big": [
+    "一个视频入门",
+    "Claude Code"
+   ],
+   "accent_line": 1,
+   "sticker": "官方教程 第1期"
+  },
+  {
+   "id": "C",
+   "note": "淡黄底 + 一大三小八爪鱼（官方动画里的“一队 agent”）；同一句大字",
+   "video": "D:/大疆/Claude官方教程/短视频/01_ClaudeCode是什么_出镜版/制作/04_封面/_src/M_C.png",
+   "t": 0.0,
+   "crop": [
+    0,
+    0,
+    1,
+    1
+   ],
+   "big": [
+    "一个视频入门",
+    "Claude Code"
+   ],
+   "accent_line": 1,
+   "sticker": "官方教程 第1期"
+  }
+ ]
+}

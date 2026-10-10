@@ -1,0 +1,332 @@
+{
+ "layout": "dual",
+ "plan": [
+  {
+   "id": "S1",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "六种模式",
+   "credit": "官方教程 第10期",
+   "ranges": [
+    {
+     "src": "a",
+     "in": 6.15,
+     "out": 10.15,
+     "mute": true
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "a",
+     "in": 4.65,
+     "out": 5.768,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 10.72,
+     "out": 13.602,
+     "mute": true
+    }
+   ],
+   "lines": [
+    {
+     "id": "N01",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "S2",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "手动 + 接受编辑 + 计划",
+   "credit": "官方教程 第10期",
+   "ranges": [
+    {
+     "src": "a",
+     "in": 14.07,
+     "out": 20.7,
+     "mute": true,
+     "speed": 0.75
+    },
+    {
+     "src": "a",
+     "in": 20.6,
+     "hold": 0.34
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "a",
+     "in": 24.5,
+     "out": 26.95,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 30.2,
+     "out": 33.6,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 37.2,
+     "out": 39.6,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 39.4,
+     "hold": 0.93
+    }
+   ],
+   "lines": [
+    {
+     "id": "N02",
+     "a": 0.0
+    },
+    {
+     "id": "N03",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "S3",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "自动",
+   "credit": "官方教程 第10期",
+   "ranges": [
+    {
+     "src": "a",
+     "in": 38.9,
+     "hold": 5.47
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "a",
+     "in": 68.4,
+     "out": 73.87,
+     "mute": true
+    }
+   ],
+   "lines": [
+    {
+     "id": "N04",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "S4",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "不再询问 + 绕过权限",
+   "credit": "官方教程 第10期",
+   "ranges": [
+    {
+     "src": "a",
+     "in": 120.0,
+     "out": 125.2,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 58.0,
+     "out": 62.8,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 62.75,
+     "hold": 0.1
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "a",
+     "in": 45.7,
+     "out": 51.0,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 52.7,
+     "out": 57.5,
+     "mute": true
+    }
+   ],
+   "lines": [
+    {
+     "id": "N05",
+     "a": 0.0
+    },
+    {
+     "id": "N06",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "S5",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "Shift+Tab 轮着切",
+   "credit": "官方教程 第10期",
+   "ranges": [
+    {
+     "src": "a",
+     "in": 139.0,
+     "hold": 1.91
+    },
+    {
+     "src": "a",
+     "in": 141.0,
+     "out": 144.6,
+     "mute": true
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "a",
+     "in": 145.15,
+     "out": 150.66,
+     "mute": true
+    }
+   ],
+   "lines": [
+    {
+     "id": "N07",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "S6",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "拦什么、新版本默认自动",
+   "credit": "官方教程 第10期",
+   "ranges": [
+    {
+     "src": "a",
+     "in": 78.2,
+     "out": 87.6,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 87.5,
+     "hold": 2.7
+    },
+    {
+     "src": "a",
+     "in": 151.57,
+     "out": 154.6,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 154.5,
+     "hold": 1.31
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "a",
+     "in": 88.65,
+     "out": 105.09,
+     "mute": true
+    }
+   ],
+   "lines": [
+    {
+     "id": "N08",
+     "a": 0.0
+    },
+    {
+     "id": "N14",
+     "a": 0.0
+    },
+    {
+     "id": "N13",
+     "a": 0.0
+    },
+    {
+     "id": "N09",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "S7",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "分类器不管对错 + 收尾",
+   "credit": "官方教程 第10期",
+   "ranges": [
+    {
+     "src": "a",
+     "in": 109.6,
+     "out": 115.911,
+     "mute": true,
+     "speed": 0.75
+    },
+    {
+     "src": "a",
+     "in": 116.7,
+     "hold": 3.306
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "a",
+     "in": 74.0,
+     "out": 77.8,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 105.2,
+     "out": 108.1,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 130.82,
+     "out": 133.7,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 133.6,
+     "hold": 2.14
+    }
+   ],
+   "lines": [
+    {
+     "id": "N10",
+     "a": 0.0
+    },
+    {
+     "id": "N11",
+     "a": 0.0
+    },
+    {
+     "id": "N12",
+     "a": 0.0
+    }
+   ]
+  }
+ ]
+}

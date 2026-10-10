@@ -1,0 +1,117 @@
+<!-- OpenAI相关 视频引擎模板（从《GPT-6.1 Sol / GPT-6 Astra 模型效果展示》整理，字幕改成项目的中英双语标准）：2340×1080，30 fps，白底。renderAt(t) 画出第 t 秒（同一个 t 永远是同一帧）。
+     数据：timeline.js（build_timeline.py）、frames.js（prep_frames.py）。
+     版式：全程画外音、不放出镜框；左栏“本期素材”（≤ 3 条，缩略图 + 名字）；右边演示区 1504×859（内容按 1474×829 写，不缩放；为了让出 y 922 以下的字幕带）放素材画面或卡片；
+     字幕按项目的中英双语标准（Way to AGI/skill/way-to-agi-episode/references/subtitles.md）：y 922 以下，中文一行 52 px + 英文一行 30 px，居中。强调色 OpenAI 蓝 #0285FF。
+     脚本：scenes.js（叠加层、卡片）→ engine.js（renderAt）。 -->
+<link rel="stylesheet" href="file:///D:/大疆/AI科普/素材/字体/fonts.css">
+<style>
+:root { --ink:#1B1B1F; --ink2:#374151; --gray:#6B7280; --gray2:#9AA1AC; --line:#E5E7EB; --soft:#F4F5F7; --accent:#0285FF; --marker:#FFD84D; --green:#16A34A; --blue:#2563EB; --red:#E11D48; }
+* { box-sizing:border-box; margin:0; padding:0; }
+html, body { width:2340px; height:1080px; background:#fff url(bg.png) 0 0/2340px 1080px no-repeat; overflow:hidden; font-family:'Noto Sans SC', sans-serif; color:var(--ink); }
+.abs { position:absolute; }
+.frame { position:absolute; background:#fff; padding:14px; border:1px solid var(--line); border-radius:10px; box-shadow:0 14px 36px rgba(0,0,0,.14); }
+.frame .inner { position:relative; width:100%; height:100%; border-radius:4px; overflow:hidden; background:#EEF0F3; }
+.tape { position:absolute; width:150px; height:40px; background:rgba(255,214,140,.8); top:-18px; box-shadow:0 1px 2px rgba(0,0,0,.08); z-index:3; }
+.tape.l { left:44px; transform:rotate(-7deg); } .tape.r { right:44px; transform:rotate(6deg); }
+.chip { display:inline-block; padding:5px 18px; border:3px solid var(--accent); color:var(--accent); border-radius:999px; font:800 26px 'Noto Sans SC'; white-space:nowrap; }
+.chip.fill { background:var(--accent); color:#fff; }
+.mark { background:linear-gradient(transparent 58%, var(--marker) 58%, var(--marker) 92%, transparent 92%); }
+
+/* 左栏：本期素材 */
+#toc { position:absolute; left:118px; top:470px; transform:translateY(-50%); width:560px; padding:26px 30px 18px; background:rgba(255,255,255,.96); border-top:3px solid var(--accent); border-left:1px solid #E6E6E6; border-right:1px solid #E6E6E6; border-bottom:1px solid #E6E6E6; box-shadow:0 6px 18px rgba(0,0,0,.08); }
+#toc .t { font:800 34px 'Noto Sans SC'; margin-bottom:14px; white-space:nowrap; }
+#toc .t span { display:block; font:600 22px 'Noto Sans SC'; color:var(--gray2); margin:6px 0 0 0; }
+#toc .it { display:flex; align-items:center; gap:18px; padding:9px 0; border-top:1px solid #EEF0F3; }
+#toc .it .th { flex:none; position:relative; width:176px; height:99px; border-radius:8px; overflow:hidden; background:#E5E7EB; opacity:.5; filter:grayscale(.75); }
+#toc .it .th img { display:block; width:100%; height:100%; object-fit:cover; }
+#toc .it .tx { min-width:0; }
+#toc .it .n { font:700 20px 'Space Grotesk'; color:var(--gray2); white-space:nowrap; letter-spacing:.04em; }
+#toc .it .nm { font:700 26px/1.3 'Noto Sans SC'; color:#9AA1AC; margin-top:4px; }
+#toc .it.done .th { opacity:.85; filter:grayscale(.35); }
+#toc .it.done .nm { color:var(--gray); }
+#toc .it.now .th { opacity:1; filter:none; outline:5px solid var(--accent); outline-offset:-1px; }
+#toc .it.now .n { color:var(--accent); }
+#toc .it.now .nm { color:var(--ink); font-weight:800; }
+
+/* 演示区 */
+#demo { left:718px; top:40px; width:1504px; height:859px; }          /* 下沿 899 ≤ 字幕带 922 − 10 */
+#demoin { position:absolute; left:0; top:0; width:1474px; height:829px; }
+#cardbg { position:absolute; inset:0; background:linear-gradient(160deg, #F6F7F9 0%, #E7EBF0 100%); }
+#scrimg { position:absolute; left:0; top:0; width:100%; height:100%; display:block; visibility:hidden; background:#000; }
+#ovB { position:absolute; inset:0; }
+.nametag { position:absolute; left:22px; top:20px; display:flex; align-items:stretch; border-radius:12px; overflow:hidden; box-shadow:0 8px 20px rgba(0,0,0,.28); z-index:5; }
+.nametag .m { background:var(--accent); color:#fff; font:800 28px 'Noto Sans SC'; padding:8px 20px; white-space:nowrap; }
+.nametag .e { background:rgba(17,17,17,.88); color:#fff; font:700 24px 'Space Grotesk'; padding:8px 20px; white-space:nowrap; letter-spacing:.04em; display:flex; align-items:center; }
+.credit { position:absolute; right:22px; top:20px; background:rgba(17,17,17,.86); color:#fff; font:700 26px 'Noto Sans SC'; padding:8px 20px; border-radius:12px; white-space:nowrap; z-index:5; }
+.cappill { position:absolute; left:22px; bottom:22px; background:rgba(255,255,255,.95); border-left:8px solid var(--accent); border-radius:12px; box-shadow:0 8px 20px rgba(0,0,0,.28); padding:8px 24px 9px 20px; z-index:5; }
+.cappill b { display:block; font:800 32px/1.3 'Noto Sans SC'; color:var(--ink); white-space:nowrap; }
+.cappill small { display:block; font:600 22px/1.35 'Noto Sans SC'; color:var(--gray); white-space:nowrap; }
+
+
+/* 近似方形素材（Higgsfield、猕猴桃、dots）：标签竖排，放进两侧的模糊边里；落在素材上的位置按 ui 调（nt / cr / cap） */
+.nametag.stack { flex-direction:column; align-items:flex-start; max-width:290px; }
+.nametag.stack .m { font-size:26px; padding:8px 18px; white-space:normal; }
+.nametag.stack .e { font-size:22px; padding:8px 18px; white-space:normal; }
+.credit.stack { max-width:290px; white-space:normal; text-align:right; font-size:22px; line-height:1.3; padding:7px 16px; }
+.credit.br { top:auto; bottom:22px; }
+.cappill.br { left:auto; right:22px; border-left:none; border-right:8px solid var(--accent); padding:8px 20px 9px 24px; text-align:right; }
+.cappill.tl { bottom:auto; top:20px; }
+.cappill.tl2 { bottom:auto; top:86px; max-width:540px; }
+.cappill.tl2 b, .cappill.tl2 small { white-space:normal; }          /* 作品名标签下面（价格表这类左上角有空白的画面） */
+.cappill.stack { max-width:290px; padding:7px 16px 8px 14px; }
+.cappill.stack b { white-space:normal; font-size:27px; line-height:1.3; }
+.cappill.stack small { white-space:normal; font-size:20px; }
+.credits { position:absolute; left:60px; right:60px; text-align:center; font:600 22px/1.5 'Noto Sans SC'; color:var(--gray2); }
+
+/* 开场标题（盖在快剪上） */
+.dim { position:absolute; inset:0; background:radial-gradient(ellipse at 50% 52%, rgba(8,10,14,.46), rgba(8,10,14,.78)); }
+.ttl { position:absolute; left:0; right:0; text-align:center; color:#fff; white-space:nowrap; }
+.ttl .k { font:700 26px 'Noto Sans SC'; letter-spacing:.34em; color:#9CCBFF; }
+.ttl .a { font:800 118px/1.1 'Noto Sans SC'; letter-spacing:.01em; text-shadow:0 6px 30px rgba(0,0,0,.45); }
+.ttl .b { font:900 206px/1.04 'Noto Sans SC'; color:#2E9BFF; letter-spacing:-.01em; text-shadow:0 8px 40px rgba(0,0,0,.5); }
+.ttl .chip { color:#fff; border-color:rgba(255,255,255,.88); background:rgba(255,255,255,.12); font-size:30px; }
+.ttl .chip.fill { background:var(--accent); border-color:var(--accent); }
+
+/* 收尾卡片 */
+.kick { font:700 26px 'Noto Sans SC'; letter-spacing:.2em; color:var(--accent); white-space:nowrap; }
+.h1 { font:800 60px/1.25 'Noto Sans SC'; white-space:nowrap; }
+.h2 { font:800 46px/1.3 'Noto Sans SC'; white-space:nowrap; }
+.cap { position:absolute; font:700 28px/1.45 'Noto Sans SC'; color:var(--gray); }
+.photo { position:absolute; background:#fff; padding:9px; border-radius:6px; box-shadow:0 16px 34px rgba(0,0,0,.26), 0 0 0 2px rgba(0,0,0,.07); }
+.photo img { display:block; width:100%; height:auto; }
+.qrtile { position:absolute; background:#fff; border-radius:22px; padding:24px; border:3px solid var(--line); box-shadow:0 14px 36px rgba(0,0,0,.16); }
+.qrtile img { display:block; width:100%; height:100%; image-rendering:pixelated; }
+.urlpill { position:absolute; left:0; right:0; margin:0 auto; width:max-content; background:var(--ink); color:#fff; font:800 40px 'Space Grotesk'; letter-spacing:.01em; border-radius:18px; padding:14px 34px; white-space:nowrap; box-shadow:0 10px 26px rgba(0,0,0,.25); }
+
+/* 官方现状卡片：已公布 / 未公布 / 传闻 */
+.frow { position:absolute; display:flex; align-items:center; gap:28px; background:#fff; border:3px solid var(--line); border-radius:20px; box-shadow:0 10px 24px rgba(0,0,0,.08); padding:0 36px 0 30px; }
+.frow .fl { flex:none; width:150px; text-align:center; font:800 34px 'Noto Sans SC'; color:#fff; background:var(--ink); border-radius:14px; padding:10px 0; }
+.frow.ok { border-color:#BBF7D0; } .frow.ok .fl { background:var(--green); }
+.frow.no { border-color:#FECDD3; } .frow.no .fl { background:var(--red); }
+.frow.rumor { border-color:#FED7AA; } .frow.rumor .fl { background:var(--accent); }
+.frow .fv { font:800 37px/1.38 'Noto Sans SC'; color:var(--ink); }
+.frow .fv small { display:block; font:600 24px/1.4 'Noto Sans SC'; color:var(--gray); margin-top:4px; }
+
+/* 字幕：项目的中英双语标准（模板 Way to AGI/…/03_成片/index.html 的 #subs / #subZh / #subEn）：y 922 起，中文一行 + 英文一行，居中 */
+#subs { position:absolute; left:0; top:922px; width:2340px; height:130px; z-index:30; pointer-events:none; }
+#subZh { position:absolute; left:0; right:0; top:0; text-align:center; font:800 52px/66px 'Noto Sans SC'; color:var(--ink); -webkit-text-stroke:10px #fff; paint-order:stroke fill; white-space:nowrap; }
+#subEn { position:absolute; left:0; right:0; top:70px; text-align:center; font:600 30px/40px 'Noto Sans SC'; color:#4B5563; -webkit-text-stroke:6px #fff; paint-order:stroke fill; white-space:nowrap; }
+#subZh .w { display:inline-block; font:800 .62em 'Noto Sans SC'; background:var(--accent); color:#fff; -webkit-text-stroke:0; padding:0 .45em; border-radius:.3em; margin-right:.5em; vertical-align:.12em; line-height:1.5; }
+</style>
+</head>
+<body>
+<div class="frame" id="demo"><div class="tape l"></div><div class="tape r"></div>
+  <div class="inner"><div id="demoin">
+    <div id="cardbg"></div>
+    <img id="scrimg">
+    <div id="ovB"></div>
+  </div></div>
+</div>
+<div id="toc"></div>
+<div id="subs"><div id="subZh"></div><div id="subEn"></div></div>
+<script src="timeline.js"></script>
+<script src="frames.js"></script>
+<script src="scenes.js"></script>
+<script src="engine.js"></script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+1
+00:00:00,000 --> 00:00:01,813
+Claude Code has six permission modes,
+
+2
+00:00:01,833 --> 00:00:03,880
+from asking about everything to letting go entirely.
+
+3
+00:00:03,900 --> 00:00:05,341
+Manual reads freely and asks about everything else.
+
+4
+00:00:05,361 --> 00:00:07,126
+Accept edits also skips the prompt
+
+5
+00:00:07,146 --> 00:00:09,740
+for file edits and common file commands.
+
+6
+00:00:09,760 --> 00:00:11,584
+Plan researches and proposes,
+
+7
+00:00:11,604 --> 00:00:13,060
+without editing your source.
+
+8
+00:00:13,080 --> 00:00:14,695
+Auto lets most things through,
+
+9
+00:00:14,715 --> 00:00:16,004
+and a separate classifier model reviews commands,
+
+10
+00:00:16,024 --> 00:00:18,530
+network calls and the like first.
+
+11
+00:00:18,550 --> 00:00:20,957
+Don't ask allows only pre-approved tools and denies the rest,
+
+12
+00:00:20,977 --> 00:00:23,870
+which suits CI where no one is there to confirm.
+
+13
+00:00:23,890 --> 00:00:25,808
+Bypass permissions skips every check,
+
+14
+00:00:25,828 --> 00:00:28,630
+and belongs only inside an isolated container or VM.
+
+15
+00:00:28,650 --> 00:00:31,352
+Day to day, Shift+Tab cycles the first four modes,
+
+16
+00:00:31,372 --> 00:00:34,140
+and the status bar always shows where you are.
+
+17
+00:00:34,160 --> 00:00:36,351
+Auto mode blocks force pushes, production deploys,
+
+18
+00:00:36,371 --> 00:00:38,580
+and piping downloaded code straight into a shell.
+
+19
+00:00:38,600 --> 00:00:40,404
+To see the current block list,
+
+20
+00:00:40,424 --> 00:00:42,650
+run claude auto-mode defaults from the command line.
+
+21
+00:00:42,670 --> 00:00:43,691
+After three blocks in a row,
+
+22
+00:00:43,711 --> 00:00:46,250
+auto mode pauses and goes back to asking you.
+
+23
+00:00:46,270 --> 00:00:48,136
+In newer versions, new terminal sessions start
+
+24
+00:00:48,156 --> 00:00:50,580
+in auto mode by default, so check the status bar first.
+
+25
+00:00:50,600 --> 00:00:52,700
+The classifier checks intent, not correctness:
+
+26
+00:00:52,720 --> 00:00:55,000
+break authentication and it still waves it through.
+
+27
+00:00:55,020 --> 00:00:57,472
+So pair it with a Stop hook that runs your tests:
+
+28
+00:00:57,492 --> 00:00:59,850
+one guards intent before, the other correctness after.
+
+29
+00:00:59,870 --> 00:01:02,470
+Letting go is fine, but keep something checking the result.

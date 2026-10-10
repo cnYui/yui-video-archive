@@ -1,0 +1,1 @@
+2:N03   # win get 读成 Wing 盖，改成 Windows 的包管理器

@@ -1,0 +1,111 @@
+1
+00:00:00,000 --> 00:00:02,147
+Tell Claude in a prompt to always format after editing,
+
+2
+00:00:02,167 --> 00:00:03,760
+and it usually will.
+
+3
+00:00:03,780 --> 00:00:05,144
+Usually isn't always.
+
+4
+00:00:05,164 --> 00:00:06,676
+The whole pitch of hooks:
+
+5
+00:00:06,696 --> 00:00:08,460
+Claude can't skip it.
+
+6
+00:00:08,480 --> 00:00:10,176
+Anthropic lists more than thirty hook events,
+
+7
+00:00:10,196 --> 00:00:11,280
+and you'll reach for just a handful.
+
+8
+00:00:11,300 --> 00:00:13,610
+PreToolUse fires before a tool call,
+
+9
+00:00:13,630 --> 00:00:15,640
+so it can stop something before it happens.
+
+10
+00:00:15,660 --> 00:00:18,840
+PostToolUse fires after a successful call,
+
+11
+00:00:18,860 --> 00:00:21,670
+which is where auto-formatting and linting go.
+
+12
+00:00:21,690 --> 00:00:23,728
+Stop fires when Claude wants to wrap up.
+
+13
+00:00:23,748 --> 00:00:25,424
+It's how you say: no,
+
+14
+00:00:25,444 --> 00:00:27,180
+you're not done yet.
+
+15
+00:00:27,200 --> 00:00:29,476
+A PreToolUse hook can return three decisions:
+
+16
+00:00:29,496 --> 00:00:31,890
+allow, deny, or ask you.
+
+17
+00:00:31,910 --> 00:00:34,041
+Hooks that skip JSON use exit codes: 2 blocks,
+
+18
+00:00:34,061 --> 00:00:36,810
+0 means no objection, and anything else doesn't block.
+
+19
+00:00:36,830 --> 00:00:39,761
+The classic trap: exit code 1 feels like an error,
+
+20
+00:00:39,781 --> 00:00:41,830
+but it doesn't block. The command still runs.
+
+21
+00:00:41,850 --> 00:00:42,934
+Even with permissions bypassed,
+
+22
+00:00:42,954 --> 00:00:45,070
+a hook's deny still blocks the call.
+
+23
+00:00:45,090 --> 00:00:46,869
+Another move: don't block, rewrite. Swap
+
+24
+00:00:46,889 --> 00:00:50,050
+a secret in the command for a placeholder, then let it run.
+
+25
+00:00:50,070 --> 00:00:52,508
+To restore context after a compact, don't use PostCompact.
+
+26
+00:00:52,528 --> 00:00:54,150
+Use SessionStart with the compact matcher.
+
+27
+00:00:54,170 --> 00:00:56,438
+A prompt is a request. A hook is a rule.
+
+28
+00:00:56,458 --> 00:00:59,150
+Just don't mistype the path, or it fails silently.

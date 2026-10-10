@@ -1,0 +1,107 @@
+1
+00:00:00,000 --> 00:00:02,261
+A lot of your context lives outside your codebase:
+
+2
+00:00:02,281 --> 00:00:04,980
+in databases, productivity apps, public repos.
+
+3
+00:00:05,000 --> 00:00:07,105
+MCP, the Model Context Protocol,
+
+4
+00:00:07,125 --> 00:00:10,210
+is the bridge that connects those tools to Claude Code.
+
+5
+00:00:10,230 --> 00:00:12,178
+If your team tracks work in Linear, add
+
+6
+00:00:12,198 --> 00:00:15,340
+a Linear MCP server and Claude can read the issues itself.
+
+7
+00:00:15,360 --> 00:00:16,944
+Need up-to-date docs for a dependency?
+
+8
+00:00:16,964 --> 00:00:19,570
+A docs server like Context7 can provide them.
+
+9
+00:00:19,590 --> 00:00:21,789
+Add a server with claude mcp add. The two common types:
+
+10
+00:00:21,809 --> 00:00:24,540
+HTTP for remote services, stdio for local processes.
+
+11
+00:00:24,560 --> 00:00:27,051
+Inside a session, /mcp shows what's connected and lets
+
+12
+00:00:27,071 --> 00:00:29,920
+you disable what you don't need, keeping its config.
+
+13
+00:00:29,940 --> 00:00:31,414
+There are three scopes:
+
+14
+00:00:31,434 --> 00:00:33,240
+local, just you in this project;
+
+15
+00:00:33,260 --> 00:00:35,080
+user, across all your projects.
+
+16
+00:00:35,100 --> 00:00:36,266
+The third is project:
+
+17
+00:00:36,286 --> 00:00:38,637
+a .mcp.json checked into version control,
+
+18
+00:00:38,657 --> 00:00:40,900
+so everyone gets the same servers.
+
+19
+00:00:40,920 --> 00:00:43,148
+Mind the cost: each server's tool names
+
+20
+00:00:43,168 --> 00:00:45,396
+and instructions load every session
+
+21
+00:00:45,416 --> 00:00:47,080
+and take a little context.
+
+22
+00:00:47,100 --> 00:00:49,956
+If a CLI exists, like gh or aws, it's more context-efficient.
+
+23
+00:00:49,976 --> 00:00:53,290
+Skills teach how to use tools, and complement MCP.
+
+24
+00:00:53,310 --> 00:00:55,568
+By default only tool names load first, and the rest on demand.
+
+25
+00:00:55,588 --> 00:00:58,330
+Behind a third-party gateway, that default may be off.
+
+26
+00:00:58,350 --> 00:01:00,230
+Every server you add costs a little context.
+
+27
+00:01:00,250 --> 00:01:01,750
+Disable the ones you don't use.
