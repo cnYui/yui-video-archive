@@ -1,0 +1,18 @@
+{
+  "references_title": "参考文献",
+  "references": [
+    "Matt Pocock，LIVE: Poteto (creator of pstack) on shipping 1,000's of PR's a month at SpaceX，YouTube 直播，2026-10-02",
+    "Lauren Tan (@poteto)，here's how i shipped 2,500 PRs last month to production（演讲视频），X，2026-09-21",
+    "宝玉 (@dotey)，对这场直播的中文总结与点评，X，2026-10-04",
+    "Lauren Tan，pstack 与官方指南 Run work while you sleep，github.com/cursor/plugins（MIT）"
+  ],
+  "thanks_title": "致谢",
+  "thanks": [
+    {"label": "画面", "value": "Matt Pocock · Lauren Tan"},
+    {"label": "长文", "value": "宝玉 @dotey"},
+    {"label": "配音", "value": "温柔男生声线（AI 生成）"},
+    {"label": "剪辑", "value": "Claude Code（Sonnet 5.5）"}
+  ],
+  "closing": "感谢观看，我们下期再见",
+  "signature": "悠一"
+}

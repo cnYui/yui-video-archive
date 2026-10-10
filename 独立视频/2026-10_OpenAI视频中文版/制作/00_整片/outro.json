@@ -1,0 +1,10 @@
+{
+  "items": [
+    { "label": "原片", "value": "OpenAI 官方 YouTube · DevDay 2026" },
+    { "label": "配音", "value": "曼波声线" },
+    { "label": "翻译与剪辑", "value": "Claude Code" },
+    { "label": "视频剪辑模型", "value": "Sonnet 5.5" }
+  ],
+  "closing": "感谢大家看到最后",
+  "signature": "悠一"
+}

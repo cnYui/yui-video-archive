@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<!-- 《26年10月两种方式订阅安全正版Codex/Claude教程！（非中转非代充）》整片：2340×1080，30 fps，白底。
+     renderAt(t) 画出第 t 秒（同一个 t 永远是同一帧）。数据：timeline.js（build_timeline.py）、frames.js（prep_frames.py）。
+     版式沿用《AI时代计算机专业研究生如何用AI》第 1 期 / 《从0到1用WorkBuddy上线一个微信小程序》：
+       A = 出镜大框在左、右边写要点（开场、结尾）；
+       B = 演示段（画外音）：不要出镜框（用户 2026-10-01），左栏是目录，右边演示区放大到 1636×920（内容按 1474×829 写，整体 scale），字幕在 y 966 以下。
+     v1 还没有出镜：出镜框里是占位卡（段号 + 提词）；演示①是录屏时的口播，出镜框换成“画外音”卡。
+     脚本：scenes.js（要点、截图、提示）→ engine.js（renderAt）。 -->
+<link rel="stylesheet" href="file:///D:/大疆/AI科普/素材/字体/fonts.css">
+<style>
+:root { --ink:#1B1B1F; --ink2:#374151; --gray:#6B7280; --gray2:#9AA1AC; --line:#E5E7EB; --soft:#F4F5F7; --orange:#FF4F1A; --marker:#FFD84D; --green:#16A34A; --apple:#0A84FF; --red:#E11D48; }
+* { box-sizing:border-box; margin:0; padding:0; }
+html, body { width:2340px; height:1080px; background:#fff; overflow:hidden; font-family:'Noto Sans SC', sans-serif; color:var(--ink); }
+.abs { position:absolute; }
+.frame { position:absolute; background:#fff; padding:14px; border:1px solid var(--line); border-radius:10px; box-shadow:0 14px 36px rgba(0,0,0,.14); }
+.frame .inner { position:relative; width:100%; height:100%; border-radius:4px; overflow:hidden; background:#EEF0F3; }
+.tape { position:absolute; width:150px; height:40px; background:rgba(255,214,140,.8); top:-18px; box-shadow:0 1px 2px rgba(0,0,0,.08); z-index:3; }
+.tape.l { left:44px; transform:rotate(-7deg); } .tape.r { right:44px; transform:rotate(6deg); }
+.tape.s { width:110px; height:32px; top:-15px; }
+.chip { display:inline-block; padding:5px 18px; border:3px solid var(--orange); color:var(--orange); border-radius:999px; font:800 26px 'Noto Sans SC'; white-space:nowrap; }
+.chip.fill { background:var(--orange); color:#fff; }
+.chip.ink { border-color:var(--ink); color:var(--ink); }
+.mark { background:linear-gradient(transparent 58%, var(--marker) 58%, var(--marker) 92%, transparent 92%); }
+
+/* 出镜框 */
+#cam { z-index:10; }
+#cam .inner { background:#DDE1E6; }
+#camimg { position:absolute; left:0; top:0; width:100%; height:100%; object-fit:cover; display:block; visibility:hidden; }
+#cam .nametag { position:absolute; left:.9em; bottom:.9em; z-index:4; background:var(--ink); color:#fff; font:800 .8em 'Noto Sans SC'; padding:.2em .7em; border-radius:.3em; opacity:0; white-space:nowrap; }
+#cam .nametag span { font:700 .8em 'Space Grotesk'; color:var(--marker); margin-left:.35em; }
+/* 出镜占位（还没录）：段号 + 提词 */
+#camph { position:absolute; inset:0; background:repeating-linear-gradient(135deg, #30353D 0 22px, #2C3138 22px 44px); color:#fff; overflow:hidden; }
+#camph .tag { position:absolute; left:.7em; top:.6em; font:800 .52em 'Noto Sans SC'; background:var(--marker); color:var(--ink); padding:.12em .55em; border-radius:.25em; white-space:nowrap; }
+#camph .id { position:absolute; right:.8em; top:.6em; font:700 .62em 'Space Grotesk'; color:var(--marker); }
+#camph .txt { position:absolute; left:8%; right:8%; top:50%; transform:translateY(-50%); text-align:center; font:700 .78em/1.5 'Noto Sans SC'; }
+#camph .nx { position:absolute; left:8%; right:8%; bottom:.9em; text-align:center; font:500 .46em/1.4 'Noto Sans SC'; color:#AEB4BD; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+#camph .pb { position:absolute; left:0; bottom:0; height:.12em; background:var(--orange); }
+/* 画外音卡 */
+#vo { position:absolute; inset:0; opacity:0; background:#2B2F36; overflow:hidden; }
+#vo .lab { position:absolute; left:0; right:0; top:30%; text-align:center; color:#fff; font:800 .9em 'Noto Sans SC'; letter-spacing:.06em; white-space:nowrap; }
+#vo .lab small { display:block; margin-top:.35em; font:600 .5em 'Noto Sans SC'; color:#D1D5DB; letter-spacing:.02em; }
+#vo .bars { position:absolute; left:50%; bottom:16%; height:1.4em; transform:translateX(-50%); display:flex; align-items:center; gap:.16em; }
+#vo .bars i { display:block; width:.18em; border-radius:.09em; background:var(--marker); height:.2em; }
+
+/* 目录 */
+#toc { position:absolute; left:40px; top:226px; width:560px; height:532px; padding:30px 32px; background:rgba(255,255,255,.96); border-top:3px solid var(--orange); border-left:1px solid #E6E6E6; border-right:1px solid #E6E6E6; border-bottom:1px solid #E6E6E6; box-shadow:0 6px 18px rgba(0,0,0,.08); }
+#toc .t { font:800 34px 'Noto Sans SC'; margin-bottom:22px; white-space:nowrap; }
+#toc .t span { display:block; font:600 22px 'Noto Sans SC'; color:var(--gray2); margin:6px 0 0 0; }
+#toc .it { display:flex; align-items:center; gap:12px; font:500 28px/2.0 'Noto Sans SC'; color:#B0B6BF; white-space:nowrap; }
+#toc .it .b { width:6px; height:26px; border-radius:3px; background:transparent; flex:none; }
+#toc .it .n { font:700 22px 'Space Grotesk'; width:24px; flex:none; }
+#toc .it.done { color:var(--gray); }
+#toc .it.now { color:var(--ink); font-weight:800; }
+#toc .it.now .b { background:var(--orange); }
+
+/* 演示区 */
+#demo { left:636px; top:18px; width:1664px; height:948px; }
+#demoin { position:absolute; left:0; top:0; width:1474px; height:829px; transform-origin:0 0; transform:scale(1.10990); }
+#scrimg { position:absolute; left:0; top:0; width:100%; height:100%; display:block; }
+#stst { position:absolute; inset:0; background:transparent; overflow:hidden; visibility:hidden; }
+#stst img { position:absolute; left:0; top:0; transform-origin:0 0; opacity:0; }
+#phst { position:absolute; inset:0; visibility:hidden; background:linear-gradient(160deg, #F6F7F9 0%, #E7EBF0 100%); }
+#ntst { position:absolute; inset:0; visibility:hidden; background:linear-gradient(160deg, #FFFBEB 0%, #FDF2D0 100%); }
+.warn { position:absolute; left:137px; top:96px; width:1200px; padding:44px 56px; border-radius:26px; background:#fff; border:4px solid #F2C94C; box-shadow:0 18px 40px rgba(120,90,0,.14); }
+.warn .tt { font:800 60px 'Noto Sans SC'; color:#7A5B00; white-space:nowrap; }
+.warn .ln { display:flex; gap:20px; align-items:flex-start; font:700 42px/1.45 'Noto Sans SC'; color:var(--ink); margin-top:26px; }
+.warn .ln i { flex:none; width:18px; height:18px; border-radius:50%; background:#E6A700; margin-top:22px; }
+.warn .ln small { display:block; font:600 26px/1.4 'Noto Sans SC'; color:var(--gray); margin-top:4px; }
+.src { position:absolute; left:137px; top:700px; width:1200px; font:600 22px/1.5 'Noto Sans SC'; color:#8A7A4A; }
+#phone { position:absolute; left:160px; top:28px; width:373px; height:774px; border-radius:58px; background:#16181C; padding:14px; box-shadow:0 24px 50px rgba(0,0,0,.28); }
+#phone .scr { position:relative; width:100%; height:100%; border-radius:46px; overflow:hidden; background:#fff; }
+#phimg, #iapimg { position:absolute; left:0; top:0; width:100%; height:100%; object-fit:cover; }
+#iapimg { object-fit:contain; background:#9a9a9a; opacity:0; }
+#ovB { position:absolute; inset:0; }
+.dim { position:absolute; inset:0; background:rgba(17,17,17,.45); }
+.shot { position:absolute; background:#fff; padding:12px; border-radius:12px; box-shadow:0 18px 48px rgba(0,0,0,.25); }
+.shot img { display:block; width:100%; height:100%; border-radius:6px; }
+.hl { position:absolute; border:5px solid var(--orange); border-radius:10px; box-shadow:0 0 0 6px rgba(255,79,26,.18); }
+.badge { position:absolute; right:22px; top:20px; background:rgba(17,17,17,.84); color:#fff; font:800 34px 'Noto Sans SC'; padding:8px 22px; border-radius:12px; white-space:nowrap; }
+.chapchip { position:absolute; left:22px; top:20px; background:var(--orange); color:#fff; font:800 30px 'Noto Sans SC'; padding:8px 22px; border-radius:12px; white-space:nowrap; box-shadow:0 8px 20px rgba(0,0,0,.25); }
+.chapchip span { font:700 24px 'Space Grotesk'; opacity:.85; margin-right:12px; }
+.pill { position:absolute; background:rgba(17,17,17,.86); color:#fff; font:700 30px 'Noto Sans SC'; padding:12px 24px; border-radius:14px; white-space:nowrap; box-shadow:0 10px 26px rgba(0,0,0,.25); }
+.pill b { color:#FDBA74; }
+.pill.warn { background:#FFF7D6; color:#7A5B00; border:3px solid #F2C94C; }
+.step { position:absolute; display:flex; gap:22px; align-items:flex-start; width:800px; padding:24px 28px; border-radius:18px; background:#fff; border:3px solid var(--line); box-shadow:0 10px 24px rgba(0,0,0,.07); }
+.step .no { flex:none; width:58px; height:58px; border-radius:50%; background:#E5E7EB; color:var(--gray); display:flex; align-items:center; justify-content:center; font:800 32px 'Space Grotesk'; }
+.step .tt { font:800 38px/1.3 'Noto Sans SC'; }
+.step .dd { font:600 27px/1.45 'Noto Sans SC'; color:var(--gray); margin-top:6px; }
+.step.on { border-color:var(--apple); }
+.step.on .no { background:var(--apple); color:#fff; }
+.step.done .no { background:#93C5FD; color:#fff; }
+.note { position:absolute; width:800px; padding:22px 28px; border-radius:18px; background:#FFF7D6; border:3px solid #F2C94C; font:700 30px/1.5 'Noto Sans SC'; color:#5C4500; }
+.note b { color:#B45309; }
+
+/* 版式 A 右侧要点 */
+#ovA { position:absolute; left:1400px; top:150px; width:880px; height:666px; }
+.pa { position:absolute; inset:0; }
+.kick { font:700 26px 'Noto Sans SC'; letter-spacing:.2em; color:var(--orange); white-space:nowrap; }
+.big { font:800 92px/1.15 'Noto Sans SC'; white-space:nowrap; }
+.h1 { font:800 60px/1.25 'Noto Sans SC'; white-space:nowrap; }
+.h2 { font:800 46px/1.3 'Noto Sans SC'; white-space:nowrap; }
+.li { display:flex; align-items:flex-start; gap:18px; font:700 36px/1.45 'Noto Sans SC'; color:var(--ink2); }
+.li .no { flex:none; width:50px; height:50px; border-radius:50%; background:var(--ink); color:#fff; display:flex; align-items:center; justify-content:center; font:800 28px 'Space Grotesk'; margin-top:2px; }
+.li small { display:block; font:600 26px/1.4 'Noto Sans SC'; color:var(--gray); }
+.card2 { border-radius:18px; background:#fff; border:2px solid var(--line); box-shadow:0 10px 26px rgba(0,0,0,.08); padding:26px 30px; }
+.card2 .tt { font:800 40px 'Noto Sans SC'; white-space:nowrap; }
+.card2 .dd { font:600 28px/1.5 'Noto Sans SC'; color:var(--gray); margin-top:8px; }
+.card2.bad { border-color:#FECACA; background:#FFF5F5; }
+.card2.bad .tt { color:#B91C1C; }
+.card2.ok { border-color:#BFDBFE; background:#F3F8FF; }
+.node { position:absolute; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; border-radius:16px; background:#fff; border:4px solid var(--ink); font:800 30px/1.25 'Noto Sans SC'; box-shadow:0 6px 0 rgba(0,0,0,.08); }
+.node.mid { border-color:#E11D48; background:#FFF1F2; color:#9F1239; }
+.arrow { position:absolute; height:8px; background:#9AA1AC; border-radius:4px; transform-origin:0 50%; }
+.arrow::after { content:''; position:absolute; right:-6px; top:50%; width:0; height:0; border-left:26px solid #9AA1AC; border-top:16px solid transparent; border-bottom:16px solid transparent; transform:translate(16px,-50%); }
+.opt { position:absolute; width:880px; height:250px; border-radius:22px; border:4px solid var(--ink); background:#fff; padding:30px 36px; box-shadow:0 8px 0 rgba(0,0,0,.08); }
+.opt .k { font:800 30px 'Space Grotesk'; color:var(--orange); }
+.opt .tt { font:800 54px/1.3 'Noto Sans SC'; white-space:nowrap; }
+.opt .dd { font:600 30px 'Noto Sans SC'; color:var(--gray); margin-top:6px; white-space:nowrap; }
+.img { position:absolute; display:block; border-radius:10px; box-shadow:0 14px 34px rgba(0,0,0,.18); background:#fff; }
+.cap { position:absolute; font:700 26px/1.45 'Noto Sans SC'; color:var(--gray); }
+
+/* 字幕 */
+#subs { position:absolute; left:0; top:966px; width:2340px; height:110px; z-index:30; pointer-events:none; }
+#subZh { position:absolute; left:0; right:0; top:10px; text-align:center; font:800 52px/66px 'Noto Sans SC'; color:var(--ink); -webkit-text-stroke:10px #fff; paint-order:stroke fill; white-space:nowrap; }
+#subZh.todo { color:#8B93A0; }
+#subZh.todo::before { content:'待录｜'; color:#C0C6CF; font-weight:700; }
+</style>
+</head>
+<body>
+<div class="frame" id="demo"><div class="tape l"></div><div class="tape r"></div>
+  <div class="inner"><div id="demoin">
+    <img id="scrimg">
+    <div id="stst"></div>
+    <div id="ntst"></div>
+    <div id="phst"><div id="phone"><div class="scr"><img id="phimg"><img id="iapimg" src="media/iap.jpg"></div></div></div>
+    <div id="ovB"></div>
+  </div></div>
+</div>
+<div id="toc"></div>
+<div id="ovA"></div>
+<div class="frame" id="cam">
+  <div class="tape l s"></div><div class="tape r s"></div>
+  <div class="inner">
+    <img id="camimg">
+    <div id="camph"><div class="tag">出镜占位 · 待录</div><div class="id" id="phid"></div><div class="txt" id="phtxt"></div><div class="nx" id="phnx"></div><div class="pb" id="phpb"></div></div>
+    <div id="vo"><div class="lab" id="volab"></div><div class="bars" id="vobars"></div></div>
+  </div>
+  <div class="nametag" id="nametag">悠一<span>Yui</span></div>
+</div>
+<div id="subs"><div id="subZh"></div></div>
+<script src="timeline.js"></script>
+<script src="frames.js"></script>
+<script src="scenes.js"></script>
+<script src="engine.js"></script>
+</body>
+</html>

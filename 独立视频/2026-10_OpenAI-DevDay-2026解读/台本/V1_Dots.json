@@ -1,0 +1,42 @@
+{
+  "id": "V1",
+  "no": 1,
+  "batch": "A",
+  "title": "OpenAI发布Dots，电影里的AI助理，OpenAI做出来了",
+  "short": "OpenAI DevDay 2026 · Dots",
+  "kicker": "OPENAI DEVDAY 2026 · 解读 01",
+  "chapters": ["全天在线助理", "大活交给它", "今天就能用"],
+  "lines": [
+    {"id": "V1-N01", "kind": "vo", "ch": 0, "zh": "电影里那种一直站在你身后的 AI 助理，OpenAI 做出来了。", "say": "电影里那种一直站在你身后的AI助理，OpenAI做出来了。", "en": "OpenAI has built that movie-style AI assistant that's always standing right behind you."},
+    {"id": "V1-N02", "kind": "vo", "ch": 0, "zh": "它叫 Dots，是 ChatGPT 里新加的、全天在线的助理。", "say": "它叫Dots，是ChatGPT里新加的、全天在线的助理。", "en": "It's called Dots, a new always-on assistant inside ChatGPT."},
+    {"id": "V1-K1a", "kind": "dub", "who": "Sam", "zh": "今天，我们推出 Dots。", "say": "今天，我们推出Dots。", "en": "So today we're introducing Dots."},
+    {"id": "V1-K1b", "kind": "dub", "who": "Sam", "zh": "Dots 是能力很强、全天在线的智能体，什么活都能接。", "say": "Dots是能力很强、全天在线的智能体，什么活都能接。", "en": "Dots are remarkably capable, always-on agents, built to handle really anything you can think of."},
+    {"id": "V1-N03", "kind": "vo", "ch": 0, "zh": "发布会先放了段短片。用户给自己的 Dot 起名叫 Alfred，它就开始干活。", "say": "发布会先放了段短片。用户给自己的Dot起名叫Alfred，它就开始干活。", "en": "The keynote opened with a short film. A user names their Dot Alfred, and it gets to work."},
+    {"id": "V1-N04", "kind": "vo", "ch": 0, "zh": "改网站，更新董事会的 PPT，迁移 App。", "say": "改网站，更新董事会的PPT，迁移App。", "en": "Update the website, refresh the board deck, migrate the app."},
+    {"id": "V1-N05", "kind": "vo", "ch": 0, "zh": "蛋糕店取消了订单，它顺手找好了备选。", "say": "蛋糕店取消了订单，它顺手找好了备选。", "en": "A bakery cancels an order, and it lines up a backup on the way."},
+    {"id": "V1-N06", "kind": "vo", "ch": 1, "zh": "小事它能管，大活也能交给它。", "say": "小事它能管，大活也能交给它。", "en": "It handles the small stuff, and you can hand it the big jobs too."},
+    {"id": "V1-N07", "kind": "vo", "ch": 1, "zh": "你只要给它一项职责：盯 bug 报告，启动明年的预算规划，或者查查 App 为什么变慢。", "say": "你只要给它一项职责：盯bug报告，启动明年的预算规划，或者查查App为什么变慢。", "en": "Just give it one responsibility: watch the bug reports, start next year's budget planning, or find out why the app got slow."},
+    {"id": "V1-N08", "kind": "vo", "ch": 1, "zh": "它会开工，而且一直干下去。", "say": "它会开工，而且一直干下去。", "en": "It gets started, and it keeps going."},
+    {"id": "V1-K2a", "kind": "dub", "who": "Sam", "zh": "它们沿用你的权限，在云端有自己的电脑和浏览器，写代码、跑测试都行。", "say": "它们沿用你的权限，在云端有自己的电脑和浏览器，写代码、跑测试都行。", "en": "They follow your access. They have their own computer in the cloud, their own browser, and they can write and test code as needed."},
+    {"id": "V1-N09", "kind": "vo", "ch": 1, "zh": "找它也不用打开 ChatGPT。很快就能给它发短信，它会回你，还能直接打电话跟它聊。", "say": "找它也不用打开ChatGPT。很快就能给它发短信，它会回你，还能直接打电话跟它聊。", "en": "You don't even need to open ChatGPT. Soon you can text it and it replies, or just call it and talk."},
+    {"id": "V1-N10", "kind": "vo", "ch": 1, "zh": "你在 ChatGPT 里连好的 4000 多个应用，它都能用，权限和边界由你定。", "say": "你在ChatGPT里连好的四千多个应用，它都能用，权限和边界由你定。", "en": "It can use the 4,000-plus apps you've connected in ChatGPT, and you decide the permissions and limits."},
+    {"id": "V1-N11", "kind": "vo", "ch": 2, "zh": "Dots 今天就开放：ChatGPT Pro、Business Premium 和 Enterprise 用户都能用。", "say": "Dots今天就开放：ChatGPT Pro、Business Premium和Enterprise用户都能用。", "en": "Dots are available today to ChatGPT Pro, Business Premium and Enterprise users."},
+    {"id": "V1-N12", "kind": "vo", "ch": 2, "zh": "包含在套餐里，跟它聊天不额外占用额度。", "say": "包含在套餐里，跟它聊天不额外占用额度。", "en": "It's included in your plan, and chatting with it doesn't use up extra quota."}
+  ],
+  "plan": [
+    {"type": "vclip", "id": "S1", "ch": 0, "from": "V1-N01", "to": "V1-N01", "in": 193.5, "what": "产品短片开头：蓝色的 Dot", "callouts": [{"t": 0.3, "d": 10, "hook": true, "text": "全天在线的<br>**AI 助理**"}]},
+    {"type": "vclip", "id": "S1b", "ch": 0, "from": "V1-N02", "to": "V1-N02", "in": 148.0, "what": "舞台大屏：dots 登场"},
+    {"type": "clip", "id": "S2a", "ch": 0, "in": 144.0, "out": 148.6, "what": "Sam 宣布 Dots", "where": "主题演讲",
+     "lines": [{"id": "V1-K1a", "a": 0.51}]},
+    {"type": "clip", "id": "S2b", "ch": 0, "in": 153.6, "out": 160.4, "what": "Dots 是什么", "where": "主题演讲",
+     "lines": [{"id": "V1-K1b", "a": 0.37}]},
+    {"type": "vclip", "id": "S3a", "ch": 0, "from": "V1-N03", "to": "V1-N03", "in": 198.0, "what": "产品短片：给 Dot 起名 Alfred"},
+    {"type": "vclip", "id": "S3b", "ch": 0, "from": "V1-N04", "to": "V1-N04", "in": 206.2, "what": "产品短片：改网站、董事会 PPT"},
+    {"type": "vclip", "id": "S3c", "ch": 0, "from": "V1-N05", "to": "V1-N05", "in": 232.3, "what": "产品短片：蛋糕店取消"},
+    {"type": "vclip", "id": "S4", "ch": 1, "from": "V1-N06", "to": "V1-N08", "in": 361.5, "what": "舞台大屏：Dots 的任务"},
+    {"type": "clip", "id": "S5", "ch": 1, "in": 418.3, "out": 425.4, "what": "云端电脑", "where": "主题演讲",
+     "lines": [{"id": "V1-K2a", "a": 0.35}]},
+    {"type": "vclip", "id": "S6", "ch": 1, "from": "V1-N09", "to": "V1-N10", "in": 436.0, "what": "短信和电话", "callouts": [{"t": 7.0, "d": 4, "text": "连好的应用：**4000+**", "pos": "tl"}]},
+    {"type": "vclip", "id": "S7", "ch": 2, "from": "V1-N11", "to": "V1-N12", "in": 1041.5, "what": "舞台大屏：可用范围"}
+  ]
+}

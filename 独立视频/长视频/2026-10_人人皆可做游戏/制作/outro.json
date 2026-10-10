@@ -1,0 +1,17 @@
+{
+  "references_title": "参考文献",
+  "references": [
+    "空知英秋，《银魂》（本作为同人像素致敬作品）",
+    "悠一，《300 秒看完〈银魂〉》像素动画（Claude Code · Opus 5.5），2026-09-25",
+    "悠一，银魂像素剧情游戏（15 章网页游戏），2026-10"
+  ],
+  "thanks_title": "致谢",
+  "thanks": [
+    {"label": "原作", "value": "空知英秋《银魂》"},
+    {"label": "游戏", "value": "Claude Code（AI 生成）"},
+    {"label": "出镜", "value": "悠一"},
+    {"label": "剪辑", "value": "Claude Code"}
+  ],
+  "closing": "感谢观看，我们下期再见",
+  "signature": "悠一"
+}

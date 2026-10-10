@@ -1,0 +1,13 @@
+[w0] 0/1150 (0s)
+[w1] 0/1150 (0s)
+[w2] 0/1149 (0s)
+[w3] 0/1150 (0s)
+[w3] 600/1150 (60s)
+[w0] 600/1150 (67s)
+[w1] 600/1150 (73s)
+[w2] 600/1149 (74s)
+[w3] done 1150 frames in 107s, errors: 0
+[w0] done 1150 frames in 130s, errors: 0
+[w2] done 1149 frames in 132s, errors: 0
+[w1] done 1150 frames in 136s, errors: 0
+ok -> D:\大疆\独立视频\2026-10_两种方式订阅正版Codex和Claude\制作\00_整片\整片_v4.mp4  (4599 frames, 159s)

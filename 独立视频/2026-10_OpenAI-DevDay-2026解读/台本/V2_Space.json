@@ -1,0 +1,41 @@
+{
+  "id": "V2",
+  "no": 2,
+  "batch": "A",
+  "title": "ChatGPT Space 来了：人和 Dots 在同一个页面里干活，Slack 里转一下就开 PR",
+  "short": "OpenAI DevDay 2026 · Space 和 Dots",
+  "kicker": "OPENAI DEVDAY 2026 · 解读 02",
+  "chapters": ["Space 页面", "Slack 转交", "今天开放"],
+  "lines": [
+    {"id": "V2-N01", "kind": "vo", "ch": 0, "zh": "OpenAI 的工程师，每天让自己的 Dots 修几十个 bug。", "say": "OpenAI的工程师，每天让自己的Dots修几十个bug。", "en": "OpenAI's engineers have their Dots fix dozens of bugs every day."},
+    {"id": "V2-N02", "kind": "vo", "ch": 0, "zh": "这是产品团队的 Holly 在发布会上说的，她还现场演示了做法。", "say": "这是产品团队的Holly在发布会上说的，她还现场演示了做法。", "en": "That's Holly from the product team, who showed how it works live on stage."},
+    {"id": "V2-K1a", "kind": "dub", "who": "Sam", "zh": "接下来，推出 ChatGPT Space。", "say": "接下来，推出ChatGPT Space。", "en": "Next up, we're introducing ChatGPT Space."},
+    {"id": "V2-K1b", "kind": "dub", "who": "Sam", "zh": "在这里，你、你的队友和你的智能体，可以一起干活。", "say": "在这里，你、你的队友和你的智能体，可以一起干活。", "en": "This is a place where you, your teammates, and your agents can all work together."},
+    {"id": "V2-N03", "kind": "vo", "ch": 0, "zh": "Space 从一个页面开始。把 Dots 叫进页面，让它追踪依赖；在评论里 @ 它，它就进来干活。", "say": "Space从一个页面开始。把Dots叫进页面，让它追踪依赖；在评论里艾特它，它就进来干活。", "en": "A Space starts from a page. Call a Dot into the page to track dependencies; @-mention it in a comment and it jumps in to work."},
+    {"id": "V2-N04", "kind": "vo", "ch": 0, "zh": "还能给页面下指令，比如每天去 Slack 频道看一遍，把发现更新在页面上。", "say": "还能给页面下指令，比如每天去Slack频道看一遍，把发现更新在页面上。", "en": "You can also give the page standing instructions, like checking a Slack channel every day and updating the page with what it finds."},
+    {"id": "V2-N05", "kind": "vo", "ch": 0, "zh": "演示里，Holly 在页面里 @ 自己的 Dot，让它把图改成柱状图。", "say": "演示里，Holly在页面里艾特自己的Dot，让它把图改成柱状图。", "en": "In the demo, Holly @-mentions her own Dot on the page and has it turn the chart into a bar chart."},
+    {"id": "V2-N06", "kind": "vo", "ch": 0, "zh": "图是动态的，能按反馈类型筛选，Dot 每小时自动刷新一次数据。", "say": "图是动态的，能按反馈类型筛选，Dot每小时自动刷新一次数据。", "en": "The chart is live: you can filter by feedback type, and the Dot refreshes the data automatically every hour."},
+    {"id": "V2-N07", "kind": "vo", "ch": 1, "zh": "在 Slack 里，把一条线程转给 Dot，说一句“你来接”，活就交出去了。", "say": "在Slack里，把一条线程转给Dot，说一句“你来接”，活就交出去了。", "en": "In Slack, forward a thread to a Dot and say \"you take it from here,\" and the work is handed off."},
+    {"id": "V2-N08", "kind": "vo", "ch": 1, "zh": "有人在反馈频道里丢了个会话 ID 和用户报错，同事的 Dot 立刻去查，开了个 PR 把问题修了。", "say": "有人在反馈频道里丢了个会话ID和用户报错，同事的Dot立刻去查，开了个PR把问题修了。", "en": "Someone drops a session ID and a user's error in the feedback channel; a teammate's Dot investigates right away and opens a PR that fixes it."},
+    {"id": "V2-K2a", "kind": "dub", "who": "Holly", "zh": "这是真实的例子。", "say": "这是真实的例子。", "en": "And this is a real example."},
+    {"id": "V2-K2b", "kind": "dub", "who": "Holly", "zh": "我们的工程师，每天靠这种方式，让 Dots 修几十个 bug。", "say": "我们的工程师，每天靠这种方式，让Dots修几十个bug。", "en": "Our engineers have their dots fixing dozens of bugs a day in this way."},
+    {"id": "V2-N09", "kind": "vo", "ch": 2, "zh": "Dots 和 Space 今天对 ChatGPT Pro、Business Premium 和 Enterprise 用户开放。", "say": "Dots和Space今天对ChatGPT Pro、Business Premium和Enterprise用户开放。", "en": "Dots and Space are available today to ChatGPT Pro, Business Premium and Enterprise users."},
+    {"id": "V2-N10", "kind": "vo", "ch": 2, "zh": "企业用户还有个预览：专家 Dots。像公司配好的虚拟同事，会计、邮件营销、法务分析、工单处理，都能接。", "say": "企业用户还有个预览：专家Dots。像公司配好的虚拟同事，会计、邮件营销、法务分析、工单处理，都能接。", "en": "Enterprises also get a preview: specialist Dots. Like virtual coworkers set up by the company, they can take on accounting, email marketing, legal analysis and ticket handling."},
+    {"id": "V2-N11", "kind": "vo", "ch": 2, "zh": "OpenAI 还在和微软合作，把专家 Dots 接进 Agent 365，企业能用熟悉的微软工具来管理它们。", "say": "OpenAI还在和微软合作，把专家Dots接进Agent 365，企业能用熟悉的微软工具来管理它们。", "en": "OpenAI is also working with Microsoft to bring specialist Dots into Agent 365, so enterprises can manage them with familiar Microsoft tools."}
+  ],
+  "plan": [
+    {"type": "vclip", "id": "S1", "ch": 0, "from": "V2-N01", "to": "V2-N01", "in": 938.4, "what": "Holly 演示：Slack 里的 bug 修复", "callouts": [{"t": 0.3, "d": 10, "hook": true, "text": "工程师的 Dots<br>每天修**几十个** bug"}]},
+    {"type": "vclip", "id": "S1b", "ch": 0, "from": "V2-N02", "to": "V2-N02", "in": 574.0, "what": "Holly 自我介绍", "where": "Holly · OpenAI 产品团队"},
+    {"type": "clip", "id": "S2", "ch": 0, "in": 499.7, "out": 508.3, "what": "Sam 宣布 Space", "where": "主题演讲",
+     "lines": [{"id": "V2-K1a", "a": 0.4}, {"id": "V2-K1b", "a": 3.71}]},
+    {"type": "vclip", "id": "S3a", "ch": 0, "from": "V2-N03", "to": "V2-N03", "in": 519.5, "what": "舞台大屏：Work with dots"},
+    {"type": "vclip", "id": "S3b", "ch": 0, "from": "V2-N04", "to": "V2-N04", "in": 535.5, "what": "舞台大屏：Living Pages"},
+    {"type": "vclip", "id": "S4", "ch": 0, "from": "V2-N05", "to": "V2-N06", "in": 802.0, "what": "Holly 演示：改成柱状图", "where": "Holly · 现场演示"},
+    {"type": "vclip", "id": "S5a", "ch": 1, "from": "V2-N07", "to": "V2-N07", "in": 874.0, "what": "Holly 演示：Slack 里转给 Dot", "where": "Holly · 现场演示"},
+    {"type": "vclip", "id": "S5b", "ch": 1, "from": "V2-N08", "to": "V2-N08", "in": 920.0, "what": "Holly 演示：反馈频道里开 PR", "where": "Holly · 现场演示"},
+    {"type": "clip", "id": "S6", "ch": 1, "in": 931.7, "out": 938.4, "what": "每天修几十个 bug", "where": "现场演示",
+     "lines": [{"id": "V2-K2a", "a": 0.22}, {"id": "V2-K2b", "a": 2.1}]},
+    {"type": "vclip", "id": "S7", "ch": 2, "from": "V2-N09", "to": "V2-N09", "in": 1041.5, "what": "舞台大屏：可用范围"},
+    {"type": "vclip", "id": "S8", "ch": 2, "from": "V2-N10", "to": "V2-N11", "in": 1066.5, "what": "舞台大屏：专家 Dots"}
+  ]
+}

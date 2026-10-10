@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<!-- 《人人都是 UI 设计师》引擎：照 Claude Code相关 引擎模板（2340×1080，30 fps，白底，renderAt(t) 画出第 t 秒）改的。
+     数据：timeline.js（build_timeline.py）、frames.js（prep_frames.py，这条没有素材视频，全空）、pages.js（capture_pages.py：推文 / 书官网 / 墨问页面的截图和高亮位置）、
+     rules.js（build_rules.py：20 张对比图的面板位置、高亮框、每步讲到哪）。
+     版式：全程画外音、不放出镜框；左栏上面是“本期目录”（≤ 3 条、每条 ≤ 7 字）+ 20 个进度点，下面是当前规则卡片（编号、标题、书里的英文章名、“记住”一句）；
+     右边演示区 1504×859（内容按 1474×829 写，不缩放；让出 y 922 以下的字幕带）：规则段 = 把图里的 ✕ / ✓ 两个面板分别裁出来叠放（或并排）+ 说明栏 + 高亮框；
+     字幕按项目的中英双语标准：y 922 以下，中文一行 52 px + 英文一行 30 px，居中。强调色 #FF4F1A。 -->
+<link rel="stylesheet" href="file:///D:/大疆/AI科普/素材/字体/fonts.css">
+<style>
+:root { --ink:#1B1B1F; --ink2:#374151; --gray:#6B7280; --gray2:#9AA1AC; --line:#E5E7EB; --soft:#F4F5F7; --accent:#FF4F1A; --orange:#FF4F1A; --marker:#FFD84D; --green:#16A34A; --blue:#2563EB; --red:#E11D48; }
+* { box-sizing:border-box; margin:0; padding:0; }
+html, body { width:2340px; height:1080px; background:#fff url(bg.png) 0 0/2340px 1080px no-repeat; overflow:hidden; font-family:'Noto Sans SC', sans-serif; color:var(--ink); }
+.abs { position:absolute; }
+.frame { position:absolute; background:#fff; padding:14px; border:1px solid var(--line); border-radius:10px; box-shadow:0 14px 36px rgba(0,0,0,.14); }
+.frame .inner { position:relative; width:100%; height:100%; border-radius:4px; overflow:hidden; background:#EEF0F3; }
+.tape { position:absolute; width:150px; height:40px; background:rgba(255,214,140,.8); top:-18px; box-shadow:0 1px 2px rgba(0,0,0,.08); z-index:3; }
+.tape.l { left:44px; transform:rotate(-7deg); } .tape.r { right:44px; transform:rotate(6deg); }
+.mark { background:linear-gradient(transparent 58%, var(--marker) 58%, var(--marker) 92%, transparent 92%); }
+
+/* 左栏上：本期目录（最多 3 条，每条 ≤ 7 字）+ 20 个进度点。top 由 engine.js 按有没有规则卡片算（没有规则卡片时垂直居中） */
+#toc { position:absolute; left:118px; top:470px; width:560px; padding:28px 32px 24px; background:rgba(255,255,255,.96); border-top:3px solid var(--accent); border-left:1px solid #E6E6E6; border-right:1px solid #E6E6E6; border-bottom:1px solid #E6E6E6; box-shadow:0 6px 18px rgba(0,0,0,.08); }
+#toc .t { font:800 34px 'Noto Sans SC'; margin-bottom:16px; white-space:nowrap; }
+#toc .t span { display:block; font:600 22px 'Noto Sans SC'; color:var(--gray2); margin:6px 0 0 0; }
+#toc .it { display:flex; align-items:center; gap:12px; font:500 30px/2.0 'Noto Sans SC'; color:#B0B6BF; white-space:nowrap; }
+#toc .it .b { width:6px; height:28px; border-radius:3px; background:transparent; flex:none; }
+#toc .it .n { font:700 22px 'Space Grotesk'; width:24px; flex:none; }
+#toc .it.done { color:var(--gray); }
+#toc .it.now { color:var(--ink); font-weight:800; }
+#toc .it.now .b { background:var(--accent); }
+#toc .dots { display:flex; align-items:center; gap:7px; height:22px; margin-top:14px; }
+#toc .dots i { flex:none; width:15px; height:15px; border-radius:50%; background:#E3E6EB; }
+#toc .dots i.done { background:var(--accent); }
+#toc .dots i.now { background:var(--ink); transform:scale(1.4); }
+
+/* 左栏下：当前规则卡片 */
+#rule { position:absolute; left:118px; top:470px; width:560px; opacity:0; z-index:6; }
+#rule .rk { display:flex; align-items:baseline; gap:14px; font:800 28px 'Space Grotesk'; letter-spacing:.16em; color:var(--accent); line-height:1; }
+#rule .rk .n { font:800 104px/1 'Space Grotesk'; letter-spacing:0; color:var(--ink); }
+#rule .rk .of { font:600 32px 'Space Grotesk'; letter-spacing:0; color:var(--gray2); }
+#rule .rt { margin-top:10px; font:800 52px/1.2 'Noto Sans SC'; color:var(--ink); }
+#rule .re { margin-top:10px; font:600 25px/1.35 'Space Grotesk','Noto Sans SC'; color:var(--gray); }
+#rule .re i { font-style:normal; color:var(--gray2); margin-left:10px; white-space:nowrap; }
+#rule .rtake { margin-top:22px; height:64px; opacity:0; }
+#rule .rtake span { display:inline-block; font:800 34px/1.25 'Noto Sans SC'; padding:7px 20px 10px; background:var(--marker); border-radius:12px; color:var(--ink); white-space:nowrap; box-shadow:0 6px 16px rgba(0,0,0,.12); }
+#rule .rcred { margin-top:14px; font:600 19px/1.3 'Noto Sans SC'; color:var(--gray2); white-space:nowrap; }
+
+/* 演示区 */
+#demo { left:718px; top:40px; width:1504px; height:859px; }          /* 下沿 899 ≤ 字幕带 922 − 10 */
+#demoin { position:absolute; left:0; top:0; width:1474px; height:829px; }
+#cardbg { position:absolute; inset:0; background:linear-gradient(160deg, #F6F7F9 0%, #E7EBF0 100%); }
+#scrimg { position:absolute; left:0; top:0; width:100%; height:100%; display:block; visibility:hidden; background:#000; }
+#ovB { position:absolute; inset:0; }
+.credit { position:absolute; right:22px; top:20px; background:rgba(17,17,17,.86); color:#fff; font:700 26px 'Noto Sans SC'; padding:8px 20px; border-radius:12px; white-space:nowrap; z-index:5; }
+.zhnote { position:absolute; background:rgba(255,255,255,.96); border-left:8px solid var(--accent); border-radius:12px; box-shadow:0 8px 22px rgba(0,0,0,.32); padding:8px 22px 9px 18px; z-index:5; font:800 32px/1.35 'Noto Sans SC'; color:var(--ink); }
+.zhnote small { display:block; font:600 24px/1.4 'Noto Sans SC'; color:var(--gray); margin-top:2px; }
+.hl { position:absolute; border:5px solid var(--accent); border-radius:12px; box-shadow:0 0 0 7px rgba(255,79,26,.2); z-index:4; }
+
+/* 规则段：面板、说明栏、高亮框 */
+.panel { position:absolute; background:#fff; border-radius:12px; overflow:hidden; box-shadow:0 10px 28px rgba(15,23,42,.20); outline:1px solid #DDE2E9; }
+.panel img { position:absolute; display:block; max-width:none; }
+.lab { position:absolute; display:flex; align-items:center; gap:18px; }
+.lab .ic { flex:none; width:60px; height:60px; border-radius:50%; font:900 38px/60px 'Noto Sans SC'; text-align:center; color:#fff; }
+.lab .tx b { display:block; font:900 36px/1.2 'Noto Sans SC'; }
+.lab .tx span { display:block; margin-top:6px; font:700 29px/1.36 'Noto Sans SC'; color:var(--ink2); }
+.lab.bad .ic { background:#EF4444; } .lab.bad b { color:#DC2626; }
+.lab.good .ic { background:#22A559; } .lab.good b { color:#15803D; }
+.lab.q .ic { background:#3B82F6; } .lab.q b { color:#2563EB; }
+.lab.neutral .ic { background:#64748B; font-family:'Space Grotesk'; font-weight:800; } .lab.neutral b { color:#475569; }
+.hl2 { position:absolute; border:5px solid; border-radius:10px; z-index:4; }
+.hl2.problem { border-color:#EF4444; box-shadow:0 0 0 6px rgba(239,68,68,.20); }
+.hl2.fix { border-color:#16A34A; box-shadow:0 0 0 6px rgba(22,163,74,.20); }
+.hl2.neutral { border-color:#2563EB; box-shadow:0 0 0 6px rgba(37,99,235,.18); }
+.hl2.warn { border-color:#F59E0B; box-shadow:0 0 0 6px rgba(245,158,11,.24); }
+.hltag { position:absolute; z-index:5; font:800 24px/1 'Noto Sans SC'; color:#fff; padding:7px 13px 9px; border-radius:8px; white-space:nowrap; box-shadow:0 4px 12px rgba(0,0,0,.25); }
+.hltag.problem { background:#EF4444; } .hltag.fix { background:#16A34A; } .hltag.neutral { background:#2563EB; } .hltag.warn { background:#D97706; }
+
+/* 缩略图墙 */
+.tile { position:absolute; overflow:hidden; border-radius:10px; background:#fff; box-shadow:0 6px 16px rgba(15,23,42,.22); outline:1px solid #DDE2E9; }
+.tile img { position:absolute; display:block; max-width:none; }
+.tile .no { position:absolute; left:8px; top:8px; background:var(--accent); color:#fff; font:800 22px/1 'Space Grotesk'; padding:5px 9px 6px; border-radius:7px; z-index:2; }
+.tile .nm { position:absolute; left:0; right:0; bottom:0; background:linear-gradient(transparent, rgba(15,23,42,.82)); color:#fff; font:800 23px/1.1 'Noto Sans SC'; padding:22px 10px 8px; z-index:2; white-space:nowrap; }
+
+/* 字幕：项目的中英双语标准：y 922 起，中文一行 + 英文一行，居中 */
+#subs { position:absolute; left:0; top:922px; width:2340px; height:130px; z-index:30; pointer-events:none; }
+#subZh { position:absolute; left:0; right:0; top:0; text-align:center; font:800 52px/66px 'Noto Sans SC'; color:var(--ink); -webkit-text-stroke:10px #fff; paint-order:stroke fill; white-space:nowrap; }
+#subEn { position:absolute; left:0; right:0; top:70px; text-align:center; font:600 30px/40px 'Noto Sans SC'; color:#4B5563; -webkit-text-stroke:6px #fff; paint-order:stroke fill; white-space:nowrap; }
+#subZh .w { display:inline-block; font:800 .62em 'Noto Sans SC'; background:var(--accent); color:#fff; -webkit-text-stroke:0; padding:0 .45em; border-radius:.3em; margin-right:.5em; vertical-align:.12em; line-height:1.5; }
+</style>
+</head>
+<body>
+<div class="frame" id="demo"><div class="tape l"></div><div class="tape r"></div>
+  <div class="inner"><div id="demoin">
+    <div id="cardbg"></div>
+    <img id="scrimg">
+    <div id="ovB"></div>
+  </div></div>
+</div>
+<div id="toc"></div>
+<div id="rule"></div>
+<div id="subs"><div id="subZh"></div><div id="subEn"></div></div>
+<script src="timeline.js"></script>
+<script src="frames.js"></script>
+<script src="pages.js"></script>
+<script src="rules.js"></script>
+<script src="scenes.js"></script>
+<script src="engine.js"></script>
+</body>
+</html>

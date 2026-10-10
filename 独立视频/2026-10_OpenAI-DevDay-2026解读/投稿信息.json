@@ -1,0 +1,134 @@
+{
+  "platform": "B站（不选合集）",
+  "status": "2026-10-02 17:20 左右：用户让发 V1 / V4 / V5 三条（标题、封面文字都是用户定的），用户自己把三个 mp4 拖进三个投稿页标签、我填表并点“立即投稿”，三条都已投出，合集选的是用户新建的「OpenAI相关」；V2 / V3 / V6 用户没让发，没发，标题是我提议的、封面是原版（带标签和小标签），没确认。",
+  "source": "https://www.youtube.com/watch?v=Fls_onRviPM",
+  "source_title": "OpenAI DevDay 2026 Keynote (FULL)",
+  "source_note": "OpenAI 官方 YouTube 频道（channelId UCXZCJLdBC09xxGZ6gcdrc6A），2026-09-29 发布（太平洋时间 11:42），时长 53:34（3214 s）。2026-10-02 在浏览器里打开核对过：标题、频道、时长和我们的素材（53 分 34 秒）对得上。",
+  "category": "人工智能（接口里 tid 231「计算机技术」）",
+  "declaration": "含AI生成内容（曼波声线配音是 AI 合成的）。创作声明下拉是单选：选“含AI生成内容”就没有“转载来源”输入框，接口里 copyright = 3（和用户 Claude mod 那条一样）；选“内容为转载”才有来源框，copyright = 2（Claude Slides 那条）。这三条选的是“含AI生成内容”，来源写在简介里（原片链接 + 官方频道 + 版权声明）。",
+  "video_type": "转载（来源见 source）",
+  "tags_note": "上限 10 个；每个标签要等 2 s 校验；“Claude”“毕业论文”这类话题专用标签不能自己加（点推荐标签里的小写版本）。",
+  "common_desc_tail": "原片：OpenAI DevDay 2026 Keynote (FULL)（OpenAI 官方 YouTube 频道，2026-09-29）\nhttps://www.youtube.com/watch?v=Fls_onRviPM\n画面和英文原声的版权属于 OpenAI；中文翻译、配音和字幕为本视频制作。如有不妥请联系处理。\n\n配音：曼波声线（AI 配音）｜翻译与剪辑：Claude Code",
+  "videos": {
+    "V1": {
+      "to_publish": true,
+      "title": "OpenAI发布Dots，电影里的AI助理，OpenAI做出来了",
+      "title_note": "用户 2026-10-02 自己定的（原话：“v1标题修改为：OpenAI发布Dots，电影里的AI助理，OpenAI做出来了”）。",
+      "video": "成片/V1_Dots_成片.mp4（87.15 s = 片头 3.80 + 正片 78.53 + 片尾 4.80；2340×1080）",
+      "cover_16x9": "制作/04_封面/V1_封面_16x9_1920x1080.png",
+      "cover_4x3": "制作/04_封面/V1_封面_4x3_1440x1080.png",
+      "cover_note": "用户：“封面的文字只保留：全天在线的AI助理”。只有这一句（两行，白 + OpenAI 蓝 #0285FF），没有 OPENAI DEVDAY 2026 / 解读 01 标签、没有小标签、没有底部小字；画面里自带的 dots 是发布会屏幕上的字。旧版在 制作/04_封面/_旧稿/V1_封面_*_带全部文字版.png。",
+      "tags": [
+        "OpenAI",
+        "Dots",
+        "ChatGPT",
+        "DevDay",
+        "AI助理",
+        "AI智能体",
+        "人工智能",
+        "中文解读",
+        "科技",
+        "AI应用"
+      ],
+      "desc": "OpenAI DevDay 2026 主题演讲上，Sam Altman 发布了 Dots：ChatGPT 里新增的、全天在线的 AI 助理。它有自己的云端电脑和浏览器，能写代码、跑测试，沿用你的权限，还能用你在 ChatGPT 里连好的 4000 多个应用；你给它一项职责（盯 bug 报告、启动明年的预算规划、查 App 为什么变慢），它就开工，而且一直干下去。很快还能给它发短信、直接打电话。今天对 ChatGPT Pro、Business Premium 和 Enterprise 用户开放，包含在套餐里，和它聊天不额外占用额度。\n\n本视频是这一部分的中文解读：曼波声线画外音讲解 + 发布会原话片段（原声压低，中文同声传译）+ 发布会画面，带中英双语字幕（现场原话的同传，中文前面标橙色人名）。本片取自发布会 2:24–8:00、17:22。\n\n",
+      "published": {
+        "bvid": "BV1PKam64Emr",
+        "url": "https://www.bilibili.com/video/BV1PKam64Emr/",
+        "ptime": "2026-10-02 17:20:49",
+        "collection": "OpenAI相关",
+        "declaration": "含AI生成内容",
+        "partition": "人工智能（tid 231）",
+        "tags": 10,
+        "desc_chars": 572,
+        "duration_s": 88,
+        "note": "接口核对过：标题、cover / cover43 是两张不同的图、10 个标签、简介长度、合集 OpenAI相关、2340×1080。"
+      }
+    },
+    "V4": {
+      "to_publish": true,
+      "title": "OpenAI预览Decisions API，对标Jev模型",
+      "title_note": "用户 2026-10-02 自己定的（原话：“v4标题修改为：OpenAI预览Decisions API，对标Jev模型”）。Jev 模型 = 用户自己《原LAI如此》第 3 期讲过的（BV1WsaG64EwD）。",
+      "video": "成片/V4_Decisions-API和AI研究实习生_成片.mp4（101.72 s = 片头 3.80 + 正片 93.10 + 片尾 4.80；2340×1080）",
+      "cover_16x9": "制作/04_封面/V4_封面_16x9_1920x1080.png",
+      "cover_4x3": "制作/04_封面/V4_封面_4x3_1440x1080.png",
+      "cover_note": "用户：“封面的文字只保留：让模型只做选择，快到几乎即时”。两行（白 + 蓝）：让模型只做选择 / 快到几乎即时，行尾逗号照本组封面的习惯没写；其余文字都去掉。旧版在 _旧稿/V4_封面_*_带全部文字版.png。",
+      "tags": [
+        "OpenAI",
+        "Decisions API",
+        "Jev模型",
+        "Luna",
+        "DevDay",
+        "AI研究实习生",
+        "人工智能",
+        "中文解读",
+        "API",
+        "科技"
+      ],
+      "desc": "OpenAI DevDay 2026 上预览了新的 Decisions API：给 Luna 模型一组预先定好的选项，让它只做选择——分流一个请求、判断一张图、决定智能体下一步。选择的范围小，所以快，模型能在几分之一秒内回应，演示里的电脑操作没有加速；图像理解、多语言和安全防护都还在。\n\n之后 Sam 讲到“AI 研究实习生”：去年他和同事预测一年内会出现第一个，几周前 OpenAI 宣布目标达成。研究员 Tejal 给了数据：今年一月，模型基本做不成一天以上的研究任务；到七月，超过三分之一的整天研究任务，模型能全程不用人干预；Astra 这类模型已经帮着解出 100 多个悬了几十年的数学题。\n\n相关视频：Jev模型是什么？和LLM有什么区别？https://www.bilibili.com/video/BV1WsaG64EwD/\n\n本视频是这一部分的中文解读：曼波声线画外音讲解 + 发布会原话片段（原声压低，中文同声传译）+ 发布会画面，带中英双语字幕（现场原话的同传，中文前面标橙色人名）。本片取自发布会 22:13–27:20。\n\n",
+      "published": {
+        "bvid": "BV1yKam6xEbA",
+        "url": "https://www.bilibili.com/video/BV1yKam6xEbA/",
+        "ptime": "2026-10-02 17:21:08",
+        "collection": "OpenAI相关",
+        "declaration": "含AI生成内容",
+        "partition": "人工智能（tid 231）",
+        "tags": 10,
+        "desc_chars": 670,
+        "duration_s": null,
+        "note": "接口核对过：标题、cover / cover43 是两张不同的图、10 个标签、简介长度、合集；V4 投出时还在“复核中”（时长 0、合集还没显示），稍后要再核一次。"
+      }
+    },
+    "V5": {
+      "to_publish": true,
+      "title": "OpenAI把Codex搬上云端，手机开任务电脑接着干，Agents API开放公测",
+      "title_note": "用户 2026-10-02 自己定的（原话：“v5标题修改为：OpenAI把Codex搬上云端，手机开任务电脑接着干，Agents API开放公测”）。",
+      "video": "成片/V5_Codex上云和Agents-API_成片.mp4（95.05 s = 片头 3.80 + 正片 86.43 + 片尾 4.80；2340×1080）",
+      "cover_16x9": "制作/04_封面/V5_封面_16x9_1920x1080.png",
+      "cover_4x3": "制作/04_封面/V5_封面_4x3_1440x1080.png",
+      "cover_note": "用户：“封面中的文字只保留：合上笔记本 /任务照样跑”。两行（白 + 蓝），其余文字都去掉。旧版在 _旧稿/V5_封面_*_带全部文字版.png。",
+      "tags": [
+        "OpenAI",
+        "Codex",
+        "Agents API",
+        "DevDay",
+        "AI编程",
+        "云端",
+        "人工智能",
+        "中文解读",
+        "AI智能体",
+        "科技"
+      ],
+      "desc": "OpenAI DevDay 2026 上，Codex 全面搬到了云上：在手机上开个任务，回到浏览器或桌面端接着上次的地方干，合上笔记本任务照样跑。云上还多了 Codex Security Cloud：持续找漏洞，准备好验证过的修复等你来审，新增自动去重、定时扫描和新界面，今天就能用。\n\nAgents API 开放公测：Codex 和 Dots 背后的这套技术（harness、托管记忆、多智能体控制，再加上电脑操作）现在给开发者用，也能跑在 AWS 上；OpenAI Private Intelligence 开放预览，零数据保留加私有安全处理；Responses API 一年增长 100 倍，首个 token 快了 45%，工具调用快了 30% 以上。\n\n本视频是这一部分的中文解读：曼波声线画外音讲解 + 发布会原话片段（原声压低，中文同声传译）+ 发布会画面，带中英双语字幕（现场原话的同传，中文前面标橙色人名）。本片取自发布会 28:14–31:25、40:31。\n\n",
+      "published": {
+        "bvid": "BV1yKam6xErC",
+        "url": "https://www.bilibili.com/video/BV1yKam6xErC/",
+        "ptime": "2026-10-02 17:20:55",
+        "collection": "OpenAI相关",
+        "declaration": "含AI生成内容",
+        "partition": "人工智能（tid 231）",
+        "tags": 10,
+        "desc_chars": 635,
+        "duration_s": 96,
+        "note": "接口核对过：标题、cover / cover43 是两张不同的图、10 个标签、简介长度、合集 OpenAI相关、2340×1080。"
+      }
+    },
+    "V2": {
+      "to_publish": false,
+      "title": "OpenAI发布ChatGPT Space：人和Dots在同一个页面里协作，Slack里转一下就能开PR",
+      "title_note": "我提议的，用户没确认。",
+      "cover_note": "原版（带“OPENAI DEVDAY 2026 / 解读 02”标签、两个小标签、底部小字）；用户没确认。"
+    },
+    "V3": {
+      "to_publish": false,
+      "title": "GPT-6.1 Sol价格只有Astra的五分之一，Ultra Fast速度8倍：OpenAI开发者大会模型发布",
+      "title_note": "我提议的，用户没确认。",
+      "cover_note": "原版；用户没确认。"
+    },
+    "V6": {
+      "to_publish": false,
+      "title": "OpenAI给开发者的三个入口：用ChatGPT登录、插件扩展、OpenAI Marketplace",
+      "title_note": "我提议的，用户没确认。",
+      "cover_note": "原版；用户没确认。"
+    }
+  }
+}

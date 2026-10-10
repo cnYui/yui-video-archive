@@ -1,0 +1,38 @@
+{
+  "id": "V3",
+  "no": 3,
+  "batch": "A",
+  "title": "GPT-6.1 Sol 只要 Astra 五分之一的价格，Ultra Fast 速度 8 倍：OpenAI 开发者大会模型发布",
+  "short": "OpenAI DevDay 2026 · GPT-6.1 Sol",
+  "kicker": "OPENAI DEVDAY 2026 · 解读 03",
+  "chapters": ["价格 1/5", "8 倍速度", "订阅档位"],
+  "lines": [
+    {"id": "V3-N01", "kind": "vo", "ch": 0, "zh": "同样的任务，一边的火箭已经起飞，另一边还没画完。", "say": "同样的任务，一边的火箭已经起飞，另一边还没画完。", "en": "Same task: one rocket has already taken off, while the other hasn't even finished drawing."},
+    {"id": "V3-N02", "kind": "vo", "ch": 0, "zh": "OpenAI 开发者大会上，这次主推两样东西：GPT-6.1 Sol 和 Ultra Fast。", "say": "OpenAI开发者大会上，这次主推两样东西：GPT 6.1 Sol和Ultra Fast。", "en": "At the developer conference, OpenAI pushed two things this time: GPT-6.1 Sol and Ultra Fast."},
+    {"id": "V3-N03", "kind": "vo", "ch": 0, "zh": "先说 GPT-6.1 Sol。智能水平接近旗舰 Astra，价格只有它的五分之一。", "say": "先说GPT 6.1 Sol。智能水平接近旗舰Astra，价格只有它的五分之一。", "en": "First, GPT-6.1 Sol: intelligence close to the flagship Astra, at one fifth of the price."},
+    {"id": "V3-N04", "kind": "vo", "ch": 0, "zh": "缓存输入打 95% 折扣，智能体反复读上下文、反复改方案，成本一下低很多。", "say": "缓存输入打百分之九十五的折扣，智能体反复读上下文、反复改方案，成本一下低很多。", "en": "Cached input gets a 95% discount, so agents that keep re-reading context and revising plans cost much less."},
+    {"id": "V3-N05", "kind": "vo", "ch": 0, "zh": "幻灯片上的价格：输入 2 美元对 10 美元，缓存输入 0.1 美元对 1 美元，输出 10 美元对 50 美元。", "say": "幻灯片上的价格：输入两美元对十美元，缓存输入零点一美元对一美元，输出十美元对五十美元。", "en": "Prices on the slide: input $2 versus $10, cached input $0.10 versus $1, output $10 versus $50."},
+    {"id": "V3-K1a", "kind": "dub", "who": "Sam", "zh": "Fast 模式已经是标准版两倍的速度、两倍的价格。", "say": "Fast模式已经是标准版两倍的速度、两倍的价格。", "en": "Fast already gives you twice the speed at twice the price of standard."},
+    {"id": "V3-K1b", "kind": "dub", "who": "Sam", "zh": "Ultra Fast 直接拉到八倍速度、六倍价格，每秒 300 个 token。", "say": "Ultra Fast直接拉到八倍速度、六倍价格，每秒三百个token。", "en": "But ultra fast takes that to eight times the speed at six times the price of standard. An incredible 300 tokens per second."},
+    {"id": "V3-K1c", "kind": "dub", "who": "Sam", "zh": "我觉得，值。", "say": "我觉得，值。", "en": "You know what? It's worth it."},
+    {"id": "V3-N06", "kind": "vo", "ch": 1, "zh": "现场做了个对比：两边收到同一个提示，造一枚会发射的火箭，配上开发者大会的颜色。", "say": "现场做了个对比：两边收到同一个提示，造一枚会发射的火箭，配上开发者大会的颜色。", "en": "They ran a comparison on stage: both sides get the same prompt, build a rocket that launches, in the DevDay colors."},
+    {"id": "V3-N07", "kind": "vo", "ch": 1, "zh": "左边 Ultra Fast 的火箭已经起飞，右边普通版还差得远。Sam 说，市面上目前没有第二个。", "say": "左边Ultra Fast的火箭已经起飞，右边普通版还差得远。Sam说，市面上目前没有第二个。", "en": "The Ultra Fast rocket on the left has already lifted off; the standard one on the right is nowhere close. Sam says nothing else on the market does this."},
+    {"id": "V3-N08", "kind": "vo", "ch": 2, "zh": "订阅也跟着调。新的 Pro 500：用量是 Plus 的 25 倍，能用 Ultra Fast，幻灯片上还写着没有 5 小时限制。", "say": "订阅也跟着调。新的Pro五百：用量是Plus的二十五倍，能用Ultra Fast，幻灯片上还写着没有五小时限制。", "en": "Subscriptions change too. The new Pro 500 has 25 times the usage of Plus, includes Ultra Fast, and the slide says there's no 5-hour limit."},
+    {"id": "V3-N09", "kind": "vo", "ch": 2, "zh": "Pro 200 今天重新开放，继续能用全部前沿模型；日常拿 6.1 Sol 当主力，就够用了。", "say": "Pro两百今天重新开放，继续能用全部前沿模型；日常拿6.1 Sol当主力，就够用了。", "en": "Pro 200 reopens today and still covers all the frontier models; using 6.1 Sol as your daily driver is plenty."}
+  ],
+  "plan": [
+    {"type": "vclip", "id": "S1", "ch": 0, "from": "V3-N01", "to": "V3-N01", "in": 1278.5, "what": "火箭对比：左边已经起飞，右边还没画完", "callouts": [{"t": 0.3, "d": 10, "hook": true, "text": "火箭已经起飞<br>对手还没**画完**"}]},
+    {"type": "vclip", "id": "S1b", "ch": 0, "from": "V3-N02", "to": "V3-N02", "in": 1179.6, "what": "舞台大屏：GPT-6.1 Sol 登场"},
+    {"type": "vclip", "id": "S2", "ch": 0, "from": "V3-N03", "to": "V3-N04", "in": 1196.5, "what": "舞台大屏：GPT-6.1 Sol",
+     "callouts": [{"t": 1.5, "d": 4, "text": "价格 = Astra 的 **1/5**", "pos": "tl"}, {"t": 6.5, "d": 4.5, "text": "缓存输入 **−95%**", "pos": "tl"}]},
+    {"type": "vclip", "id": "S3", "ch": 0, "from": "V3-N05", "to": "V3-N05", "in": 1207.2, "crop": [0.51, 0.23, 0.97, 0.69], "what": "价格表（幻灯片放大）"},
+    {"type": "clip", "id": "S4", "ch": 1, "in": 1248.0, "out": 1262.0, "what": "Ultra Fast 的速度和价格", "where": "主题演讲",
+     "lines": [{"id": "V3-K1a", "a": 0.35}, {"id": "V3-K1b", "a": 4.13}, {"id": "V3-K1c", "a": 11.69}],
+     "callouts": [{"t": 0.6, "d": 3.2, "text": "API · ChatGPT · Codex 都能用", "pos": "tl"}, {"t": 5.0, "d": 6.5, "text": "Ultra Fast：**8×** 速度 · **6×** 价格 · **300** tokens/秒", "pos": "tl"}]},
+    {"type": "vclip", "id": "S5", "ch": 1, "from": "V3-N06", "to": "V3-N07", "in": 1263.5, "what": "现场对比：造火箭", "where": "现场演示 · 左 Ultra Fast / 右 普通"},
+    {"type": "vclip", "id": "S6a", "ch": 2, "from": "V3-N08", "to": "V3-N08", "in": 1303.0, "crop": [0.338, 0.303, 0.672, 0.637], "what": "Pro 500 幻灯片（放大）",
+     "callouts": [{"t": 0.8, "d": 3.2, "text": "Pro 500：Plus 的 **25 倍**用量", "pos": "tl"}, {"t": 4.6, "d": 3.2, "text": "能用 Ultra Fast · **没有 5 小时限制**", "pos": "tl"}]},
+    {"type": "vclip", "id": "S6b", "ch": 2, "from": "V3-N09", "to": "V3-N09", "in": 1311.0, "crop": [0.33, 0.27, 0.73, 0.67], "what": "100 / 200 / Pro 500 档位（放大）",
+     "callouts": [{"t": 0.5, "d": 2.7, "text": "Pro 200 **重新开放**", "pos": "tl"}, {"t": 3.5, "d": 2.8, "text": "日常主力：**GPT-6.1 Sol**", "pos": "tl"}]}
+  ]
+}

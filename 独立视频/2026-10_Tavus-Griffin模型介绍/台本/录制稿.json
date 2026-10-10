@@ -1,0 +1,153 @@
+{
+  "slug": "Tavus-Griffin模型介绍",
+  "title": "Tavus 发布 Griffin：第一个通过视频图灵测试的 AI（官方说法）",
+  "sub": "Tavus · Griffin 研究预览",
+  "tocTag": "TAVUS",
+  "titleCard": {
+    "kick": "TAVUS · GRIFFIN · 研究预览",
+    "a": "第一个通过",
+    "b": "视频图灵测试",
+    "chips": [
+      "人类交互模型 HIM",
+      "48% 以为是真人",
+      "官方说法"
+    ]
+  },
+  "outroCard": {
+    "kick": "TAVUS.IO/GRIFFIN",
+    "title": "想看原文？链接在简介里",
+    "img": "page",
+    "imgCap": "官网：Griffin 研究报告（2026 年 10 月 1 日）",
+    "qrCap": "扫码，或在浏览器里打开链接",
+    "url": "tavus.io/griffin",
+    "fine": "数据均来自 Tavus 官网和官方账号 @tavus，实验由 Tavus 自己设计和执行 · 画面：@tavus · X",
+    "sources": "本期画面来自 Tavus 官方在 X 上发的视频，以及 tavus.io 官网和博客的页面截图"
+  },
+  "chapters": [
+    {
+      "name": "先看演示",
+      "tag": "Griffin",
+      "thumb": "thumb/1.jpg"
+    },
+    {
+      "name": "再看成绩",
+      "tag": "评测",
+      "thumb": "thumb/2.jpg"
+    },
+    {
+      "name": "现在能用",
+      "tag": "产品",
+      "thumb": "thumb/3.jpg"
+    }
+  ],
+  "lines": [
+    {
+      "id": "N01",
+      "zh": "视频通话的另一头，是 AI，还是真人？",
+      "say": "视频通话的另一头，是 AI，还是真人？",
+      "en": "On the other end of this video call: an AI, or a real person?"
+    },
+    {
+      "id": "N02",
+      "zh": "这是 Tavus 刚发布的新模型 Griffin。",
+      "say": "这是 Tavus 刚发布的新模型 Griffin。",
+      "en": "This is Griffin, the new model Tavus just released."
+    },
+    {
+      "id": "N03",
+      "zh": "官方说，它是第一个通过视频图灵测试的 AI。",
+      "say": "官方说，它是第一个通过视频图灵测试的 AI。",
+      "en": "The company says it's the first AI to pass the video Turing test."
+    },
+    {
+      "id": "N04",
+      "zh": "官方管它叫“人类交互模型”：一边听，一边看，一边说。",
+      "say": "官方管它叫人类交互模型：一边听，一边看，一边说。",
+      "en": "Tavus calls it a \"Human Interaction Model\": it listens, watches and talks at the same time."
+    },
+    {
+      "id": "N05",
+      "zh": "老办法要等你说完才开口。",
+      "say": "老办法要等你说完才开口。",
+      "en": "The old way waits for you to finish before it speaks."
+    },
+    {
+      "id": "N06",
+      "zh": "Griffin 不等，每隔不到一秒就重新判断一次。",
+      "say": "Griffin 不等，每隔不到一秒就重新判断一次。",
+      "en": "Griffin doesn't wait. It re-reads the conversation every fraction of a second."
+    },
+    {
+      "id": "N10",
+      "zh": "官方做了个实验：54 个人视频通话一分钟，事先不知道对面是 AI。",
+      "say": "官方做了个实验：五十四个人视频通话一分钟，事先不知道对面是 AI。",
+      "en": "54 people had a one-minute video call, not knowing their partner was an AI."
+    },
+    {
+      "id": "N11",
+      "zh": "事后问对面是不是真人：26 个人说是，上一代系统是 41 个里只有 1 个。",
+      "say": "事后问对面是不是真人：二十六个人说是，上一代系统，四十一个里只有一个。",
+      "en": "Afterwards, 26 said it was a real person; for the previous system, only 1 out of 41."
+    },
+    {
+      "id": "N12",
+      "zh": "注意：实验是 Tavus 自己做的，只有 54 人，也没提真人对照组。",
+      "say": "注意：实验是 Tavus 自己做的，只有五十四人，也没提真人对照组。",
+      "en": "Note: Tavus ran the study itself, with 54 people and no mention of a human control group."
+    },
+    {
+      "id": "N13",
+      "zh": "在 NVIDIA 研究院的视频全双工评测榜单上，Griffin 两个赛道都是最高分。",
+      "say": "在英伟达研究院的视频全双工评测榜单上，Griffin 两个赛道都是最高分。",
+      "en": "On NVIDIA Research's video full-duplex leaderboard, Griffin tops both tracks."
+    },
+    {
+      "id": "N14",
+      "zh": "生成赛道 3.83 分，真人参照是 3.92。",
+      "say": "生成赛道三点八三分，真人参照是三点九二。",
+      "en": "Generation track: Griffin scores 3.83; the human reference is 3.92."
+    },
+    {
+      "id": "N15",
+      "zh": "Tavus 之前的渲染模型 Phoenix 4.5，在自己做的盲测里赢了三家对手。",
+      "say": "Tavus 之前的渲染模型 Phoenix 四点五，在自己做的盲测里，赢了三家对手。",
+      "en": "Tavus's earlier rendering model, Phoenix-4.5, beat three rivals in its own blind tests."
+    },
+    {
+      "id": "N16",
+      "zh": "不过，Griffin 现在只是研究预览版，只给少数测试者用。",
+      "say": "不过，Griffin 现在只是研究预览版，只给少数测试者用。",
+      "en": "But Griffin is only a research preview, open to a small group of testers."
+    },
+    {
+      "id": "N17",
+      "zh": "官方说，解决安全问题之后，会很快放出来。",
+      "say": "官方说，解决安全问题之后，会很快放出来。",
+      "en": "Tavus says it expects to release it soon after the safety concerns are addressed."
+    },
+    {
+      "id": "N18",
+      "zh": "平台上现在能用的，是 Phoenix、Raven 和 Sparrow。",
+      "say": "平台上现在能用的，是 Phoenix、Raven 和 Sparrow。",
+      "en": "On the platform today you get Phoenix, Raven and Sparrow."
+    },
+    {
+      "id": "N19",
+      "zh": "比如 Elevare，用 Raven 和 Sparrow 做了个陪伴新妈妈的 AI。",
+      "say": "比如 Elevare，用 Raven 和 Sparrow，做了个陪伴新妈妈的 AI。",
+      "en": "Elevare, for example, built an AI companion for new mothers with Raven and Sparrow."
+    },
+    {
+      "id": "N20",
+      "zh": "Tavus 的数字人还有长期记忆，官方说在 LongMemEval 上拿到 93.4%。",
+      "say": "Tavus 的数字人还有长期记忆，官方说，在 Long Mem Eval 上拿到百分之九十三点四。",
+      "en": "Tavus's digital humans also have long-term memory: 93.4% on LongMemEval, the company says."
+    },
+    {
+      "id": "N21",
+      "zh": "原文和数据来源，都在简介里。",
+      "say": "原文和数据来源，都在简介里。",
+      "en": "Sources and original posts are in the description."
+    }
+  ]
+}

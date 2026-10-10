@@ -1,0 +1,150 @@
+{
+ "X_t1": {
+  "src": "pages/X_t1.png",
+  "w": 1096,
+  "h": 782,
+  "url": "https://x.com/longhaiqwe123/status/2106216781174251724",
+  "bg": "#CFD9DE",
+  "marks": {
+   "龙海": [
+    [
+     136,
+     30,
+     60,
+     40
+    ]
+   ],
+   "默认 UI 丑陋依旧是硬伤": [
+    [
+     352,
+     332,
+     420,
+     54
+    ]
+   ],
+   "2026年10月3日": [
+    [
+     186,
+     544,
+     203,
+     40
+    ]
+   ],
+   "20 条设计军规": [
+    [
+     654,
+     428,
+     254,
+     54
+    ]
+   ],
+   "@rect:《Refactoring UI》": [
+    [
+     100,
+     432,
+     345,
+     54
+    ]
+   ]
+  }
+ },
+ "Y_hero": {
+  "src": "pages/Y_hero.png",
+  "w": 2880,
+  "h": 1800,
+  "url": "https://refactoringui.com/",
+  "bg": "#0E1927",
+  "marks": {
+   "creators of": [
+    [
+     466,
+     130,
+     242,
+     34
+    ]
+   ],
+   "tailwind css": [
+    [
+     720,
+     130,
+     252,
+     34
+    ]
+   ],
+   "@rect:1000,170,430,610": [
+    [
+     2000,
+     340,
+     860,
+     1220
+    ]
+   ],
+   "@rect:1055,610,285,90": [
+    [
+     2110,
+     1220,
+     570,
+     180
+    ]
+   ]
+  }
+ },
+ "Y_book": {
+  "src": "pages/Y_book.png",
+  "w": 1600,
+  "h": 1280,
+  "url": "https://refactoringui.com/",
+  "bg": "#FBFCFD",
+  "marks": {
+   "50 incredibly visual chapters": [
+    [
+     747,
+     218,
+     640,
+     58
+    ]
+   ],
+   "200+ painstakingly typeset pages": [
+    [
+     482,
+     298,
+     740,
+     58
+    ]
+   ]
+  }
+ },
+ "Y_tactics": {
+  "src": "pages/Y_tactics.png",
+  "w": 1600,
+  "h": 1400,
+  "url": "https://refactoringui.com/",
+  "bg": "#F1F5F9",
+  "marks": {
+   "Design with tactics, not talent.": [
+    [
+     160,
+     66,
+     1029,
+     98
+    ]
+   ],
+   "Use fewer borders.": [
+    [
+     160,
+     422,
+     331,
+     42
+    ]
+   ],
+   "It doesn’t take any talent": [
+    [
+     160,
+     934,
+     425,
+     42
+    ]
+   ]
+  }
+ }
+}

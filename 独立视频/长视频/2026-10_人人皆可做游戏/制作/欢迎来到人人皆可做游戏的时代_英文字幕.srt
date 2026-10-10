@@ -1,0 +1,411 @@
+1
+00:00:08,840 --> 00:00:12,657
+Hi everyone, welcome to the age when anyone can make a game.
+
+2
+00:00:12,677 --> 00:00:18,887
+This Gintama story game first grew out of a video.
+
+3
+00:00:18,907 --> 00:00:22,157
+On the 25th I asked Claude to make a pixel animation,
+
+4
+00:00:22,177 --> 00:00:23,753
+called "Gintama in 300 Seconds."
+
+5
+00:00:23,773 --> 00:00:26,917
+I turned on Ultra Code mode and used the Opus 5.5 model.
+
+6
+00:00:26,937 --> 00:00:30,207
+I told it: make a pixel-art Gintama of the classic scenes,
+
+7
+00:00:30,227 --> 00:00:33,233
+list them in order, then tell the story.
+
+8
+00:00:33,253 --> 00:00:36,307
+It split the story into 15 scenes and drew 42 characters,
+
+9
+00:00:36,327 --> 00:00:38,683
+plus a whole series of side views, animations and more.
+
+10
+00:00:38,703 --> 00:00:41,223
+The music and sound effects were all written by it, too.
+
+11
+00:00:41,243 --> 00:00:42,813
+When I later looked at its assets, I started wondering,
+
+12
+00:00:42,833 --> 00:00:44,547
+could this become a game?
+
+13
+00:00:44,567 --> 00:00:46,137
+Some friends also said they wanted to play it.
+
+14
+00:00:46,157 --> 00:00:48,513
+So I reused its assets and made this game.
+
+15
+00:00:48,533 --> 00:00:50,983
+It has 15 chapters of story, over 600 lines of dialogue,
+
+16
+00:00:51,003 --> 00:00:53,273
+and over 10,000 lines of code, all written by AI.
+
+17
+00:00:53,293 --> 00:00:57,090
+From the very start to the last chapter took me under 20 hours.
+
+18
+00:00:57,110 --> 00:00:59,263
+In a moment you can see it in action.
+
+19
+00:00:59,283 --> 00:01:03,223
+And at the end of the video, I want to share something more important than this game.
+
+20
+00:01:04,210 --> 00:01:06,013
+OK, let's look at the actual gameplay.
+
+21
+00:01:06,033 --> 00:01:09,713
+It has some fun little touches,
+
+22
+00:01:09,733 --> 00:01:17,663
+like cutting the shogun's hair, dodging roadblocks on a scooter, playing pachinko.
+
+23
+00:01:17,683 --> 00:01:19,663
+I didn't add many skills,
+
+24
+00:01:19,683 --> 00:01:24,373
+just a basic attack and a jump for the character.
+
+25
+00:01:24,393 --> 00:01:28,860
+Most of it is story, environmental dialogue, and NPC dialogue.
+
+26
+00:01:29,013 --> 00:01:33,107
+It's just a web page's code file: double-click and you can play.
+
+27
+00:01:33,127 --> 00:01:35,867
+Later I want to see if I can put it on Xiaohongshu,
+
+28
+00:01:35,887 --> 00:01:39,243
+or as a mini-program or tool on Douyin,
+
+29
+00:01:39,263 --> 00:01:40,507
+so everyone can play it.
+
+30
+00:01:40,527 --> 00:01:44,313
+It's a side-scrolling story brawler with a three-hit combo and a jump,
+
+31
+00:01:44,333 --> 00:01:45,497
+and you hold L to block.
+
+32
+00:01:45,517 --> 00:01:49,023
+The scenes are interactive: you can wander around and chat with NPCs,
+
+33
+00:01:49,043 --> 00:01:51,597
+with small stories and little touches,
+
+34
+00:01:51,617 --> 00:01:52,207
+and a health bar.
+
+35
+00:01:52,227 --> 00:01:55,753
+If your health runs out, you start over.
+
+36
+00:01:56,100 --> 00:01:59,513
+So let's look at where these assets came from.
+
+37
+00:01:59,533 --> 00:02:02,147
+The art was all drawn by the AI itself.
+
+38
+00:02:02,167 --> 00:02:06,527
+It drew 42 characters, each with 31 actions and 11 expressions,
+
+39
+00:02:06,567 --> 00:02:08,730
+13,124 frames in total.
+
+40
+00:02:08,750 --> 00:02:10,207
+The backgrounds were drawn in code, too,
+
+41
+00:02:10,227 --> 00:02:11,977
+and I never gave it any reference images.
+
+42
+00:02:11,997 --> 00:02:15,930
+There are also 12 pieces of 8-bit music and 80-plus sound effects,
+
+43
+00:02:15,950 --> 00:02:17,450
+all made by it.
+
+44
+00:02:17,693 --> 00:02:19,413
+Next, the story design.
+
+45
+00:02:19,433 --> 00:02:25,277
+For the story design, I wanted to start from the scenes of the original anime,
+
+46
+00:02:25,297 --> 00:02:29,473
+There are 15 big scenes, and each scene is one chapter.
+
+47
+00:02:29,493 --> 00:02:32,113
+Every chapter has a shot list:
+
+48
+00:02:32,133 --> 00:02:34,473
+which second to push in, which character stands where,
+
+49
+00:02:34,493 --> 00:02:37,950
+when the sound-effect text pops up,
+
+50
+00:02:37,970 --> 00:02:40,150
+all recorded in dedicated files.
+
+51
+00:02:40,333 --> 00:02:42,573
+And the famous scenes had to be in there too,
+
+52
+00:02:42,593 --> 00:02:44,733
+like the eye close-ups,
+
+53
+00:02:44,753 --> 00:02:45,663
+punching through a wall,
+
+54
+00:02:45,683 --> 00:02:47,647
+and "All of Edo, assemble!"
+
+55
+00:02:47,667 --> 00:02:52,150
+The mini-games and puzzles are a tribute to those wonderfully absurd anime scenes.
+
+56
+00:02:52,170 --> 00:02:54,310
+And then there's the dialogue.
+
+57
+00:02:54,330 --> 00:02:56,770
+Claude wrote it to fit each character's personality,
+
+58
+00:02:56,790 --> 00:02:58,907
+like "Natural Perm" and "Lake Toya,"
+
+59
+00:02:58,927 --> 00:03:00,483
+"It's not a wig, it's Katsura!"
+
+60
+00:03:00,503 --> 00:03:02,707
+"Zura janai, Katsura da!"
+
+61
+00:03:02,727 --> 00:03:05,707
+And some catchphrases, too. I think they're pretty fun.
+
+62
+00:03:06,027 --> 00:03:09,733
+Take chapter one's puzzle, plus chapter two, the family restaurant:
+
+63
+00:03:09,753 --> 00:03:13,310
+The street has 8 NPCs and 10 places you can investigate.
+
+64
+00:03:13,330 --> 00:03:15,713
+If you can't pay the rent, you have to dig around the office for money.
+
+65
+00:03:15,733 --> 00:03:17,593
+In the sofa cushions you'll find a note:
+
+66
+00:03:17,613 --> 00:03:20,740
+"The money that matters is hidden behind what you value most."
+
+67
+00:03:20,760 --> 00:03:23,393
+Then the player has to go find what they value most,
+
+68
+00:03:23,413 --> 00:03:24,633
+which is those two characters, "Sugar."
+
+69
+00:03:24,653 --> 00:03:27,357
+Behind it: 5,000 yen, enough to pay the rent.
+
+70
+00:03:27,377 --> 00:03:28,337
+But it turns out that's still not enough,
+
+71
+00:03:28,357 --> 00:03:30,147
+and you get knocked out the door.
+
+72
+00:03:41,433 --> 00:03:47,197
+For the climax, I designed a fight that runs nearly five minutes.
+
+73
+00:03:47,217 --> 00:03:50,537
+There are three brawls on the rooftop, and every faction piles in at once.
+
+74
+00:03:50,557 --> 00:03:53,770
+The player's Gintoki fights back to back with Takasugi,
+
+75
+00:03:53,790 --> 00:03:55,443
+holding out until dawn,
+
+76
+00:03:55,463 --> 00:03:56,823
+and then it goes into the finale.
+
+77
+00:03:56,843 --> 00:04:00,423
+In the finale, Sadaharu bites Gintoki's head,
+
+78
+00:04:00,443 --> 00:04:04,570
+a nod to the beginning, when Sadaharu first came to the house,
+
+79
+00:04:04,590 --> 00:04:07,063
+and in the end Gintoki has to kick that "END" away.
+
+80
+00:04:07,083 --> 00:04:08,590
+Gintama never ends.
+
+81
+00:04:08,610 --> 00:04:10,327
+It's a lot of fun.
+
+82
+00:04:10,347 --> 00:04:13,377
+Making something like this isn't actually that hard,
+
+83
+00:04:13,397 --> 00:04:15,257
+because I've also made many other anime videos,
+
+84
+00:04:15,277 --> 00:04:17,530
+like Attack on Titan, Naruto, and Mushoku Tensei,
+
+85
+00:04:17,550 --> 00:04:19,473
+and all those assets can be reused
+
+86
+00:04:19,493 --> 00:04:20,463
+to make games.
+
+87
+00:04:20,483 --> 00:04:24,003
+So the question is: what's left of the barrier to making games?
+
+88
+00:04:24,023 --> 00:04:26,940
+Before, you had to draw, write code, and compose music,
+
+89
+00:04:26,960 --> 00:04:28,257
+and maybe have a whole team.
+
+90
+00:04:28,277 --> 00:04:30,457
+Now all you need is what you want,
+
+91
+00:04:30,477 --> 00:04:34,233
+explain it clearly, and then it gets made.
+
+92
+00:04:34,253 --> 00:04:36,449
+Of course, a person still has
+
+93
+00:04:36,469 --> 00:04:38,803
+to judge what's good and what's not, and choose.
+
+94
+00:04:38,823 --> 00:04:40,563
+And it may not be just games:
+
+95
+00:04:40,583 --> 00:04:44,503
+an article, a video, a course, a comic, a novel,
+
+96
+00:04:44,523 --> 00:04:49,673
+any of them can become a medium I can accept and enjoy.
+
+97
+00:04:49,693 --> 00:04:53,113
+I no longer need to slog through a huge book
+
+98
+00:04:53,133 --> 00:04:56,180
+and burn a lot of time on it, which is boring, too.
+
+99
+00:04:56,200 --> 00:05:00,063
+I can just use AI tools to turn it into a video, or a game,
+
+100
+00:05:00,083 --> 00:05:03,710
+and understand its content and meaning much faster.
+
+101
+00:05:03,730 --> 00:05:06,280
+Before, people adapted to the shape of knowledge;
+
+102
+00:05:06,300 --> 00:05:09,330
+now, knowledge can grow into the shape you like.
+
+103
+00:05:09,350 --> 00:05:12,180
+Welcome to the age when anyone can make a game.

@@ -1,0 +1,131 @@
+{
+  "_说明": "交付包阶段先写 titles（3 个候选 × 3 个平台 = 3×3）和各平台默认项；用户回“封面 X 标题 Y 同意”后，把选中的那条标题写进各平台字段（bilibili.title / douyin.title / xiaohongshu.title），approval 记下选择和时间。scripts/check_titles.py 按各平台要求核对字数：B 站标题 ≤ 80 / 抖音 ≤ 30（话题 ≤ 5）/ 小红书 ≤ 20；放不下的完整标题放抖音描述、小红书正文的第一行。三个标题角度要真有区别（事实陈述 / 数字悬念 / 泼冷水），不和封面大字同一句。2026-10-06 起视频号不发（旧的 weixin_channels 字段和短标题 6–16 字存档在 references/_archive/视频号发布_已移除_20261006.md）；小红书“原创声明”开关选开（用户 2026-10-06 定）。",
+  "slug": "Claude中文界面",
+  "video": "D:\\大疆\\独立视频\\短视频\\2026-10_Claude中文界面\\Claude中文界面_成片.mp4（用户拖进各平台上传区；不压缩、不绕 10 MB）；实际传的是 Claude中文界面_成片.mp4（9.5 MB，原片，没压缩，插件 file_upload 直接传，因为 < 10 MB）",
+  "duration_s": 62.7,
+  "approval": {
+    "status": "approved",
+    "cover": "A（大字改成“终于支持中文 / 封号钓鱼执法？”）",
+    "title": "用户定稿：“Claude设置新增中文语言，是放一马还是钓鱼执法？”（小红书限 20 字，缩成“Claude加中文，放一马还是钓鱼执法？”，全句放正文第一行）",
+    "approved_at": "2026-10-06 13:2x（日本时间）",
+    "note": "用户 10-06 先说“三个平台都发布”，随后选封面 A、给定标题"
+  },
+  "titles": [
+    {
+      "id": 1,
+      "angle": "用户定稿（2026-10-06）：设置新增中文 + 放一马还是钓鱼执法",
+      "recommend": true,
+      "bilibili": "Claude设置新增中文语言，是放一马还是钓鱼执法？",
+      "douyin": "Claude设置新增中文语言，是放一马还是钓鱼执法？",
+      "xiaohongshu": "Claude加中文，放一马还是钓鱼执法？"
+    },
+    {
+      "id": 2,
+      "angle": "事实陈述 + 官方没说",
+      "bilibili": "Claude突然多了中文选项：官方还没公告，网友先发现，选了会被封号吗？",
+      "douyin": "Claude多了中文选项，官方还没公告",
+      "xiaohongshu": "Claude多了中文，官方没公告"
+    },
+    {
+      "id": 3,
+      "angle": "钓鱼执法 + 泼冷水（官方名单里没有中国大陆）",
+      "bilibili": "Claude让选中文，是福利还是钓鱼执法？官方没说，支持地区名单也没有中国大陆",
+      "douyin": "Claude让选中文，是钓鱼执法吗？",
+      "xiaohongshu": "Claude选中文是钓鱼执法吗"
+    }
+  ],
+  "covers": {
+    "3x4": "制作/04_封面/封面_选定_3x4.png",
+    "16x9": "制作/04_封面/封面_选定_16x9.png",
+    "4x3": "制作/04_封面/封面_选定_4x3.png"
+  },
+  "source": {
+    "original_post": "",
+    "original_author": "悠一（本人出镜原声）",
+    "project_or_site": "Claude 语言设置（本人账号截图）+ 官方帮助中心 / 支持地区页"
+  },
+  "bilibili": {
+    "title": "Claude设置新增中文语言，是放一马还是钓鱼执法？",
+    "desc": "Claude 的“选择您的语言”里多了中文（简体 / 繁體）。官方帮助页（8 月版）只写了 11 种语言，更新日志、官方博客、官方 X（10 月 6 日核对时）没提；官方支持地区名单里没有中国大陆、香港、澳门。视频里关于封号、态度的判断是个人观点，没有证据显示选中文会被封。来源：Claude 帮助中心 How to use Claude in your preferred language / Safeguards warnings and appeals；Anthropic 支持地区页。以官方后续说明为准。",
+    "declaration": "个人观点，仅供参考（B 站下拉里选的，发布后不能改）",
+    "category": "人工智能（tid 231）",
+    "tags": [
+      "claude",
+      "anthropic",
+      "AI",
+      "人工智能",
+      "中文界面",
+      "钓鱼执法",
+      "封号",
+      "AI工具",
+      "大模型",
+      "科技"
+    ],
+    "collection": null,
+    "repost_source": "",
+    "cover": "两个位各传各的（双比例同步改动不勾）：16:9 → 个人空间封面，4:3 → 首页推荐封面",
+    "published": null
+  },
+  "douyin": {
+    "title": "Claude设置新增中文语言，是放一马还是钓鱼执法？",
+    "desc": "Claude 的“选择您的语言”里多了中文（简体 / 繁體）。官方帮助页（8 月版）只写了 11 种语言，更新日志、官方博客、官方 X（10 月 6 日核对时）没提；官方支持地区名单里没有中国大陆、香港、澳门。视频里关于封号、态度的判断是个人观点，没有证据显示选中文会被封。来源：Claude 帮助中心 How to use Claude in your preferred language / Safeguards warnings and appeals；Anthropic 支持地区页。以官方后续说明为准。 #Claude #Anthropic #AI #中文界面 #AI工具",
+    "topics": [
+      "Claude",
+      "Anthropic",
+      "AI",
+      "中文界面",
+      "AI工具"
+    ],
+    "declaration": "内容为个人观点或见解",
+    "collection": null,
+    "cover": "竖封面 3:4 = 封面_选定_3x4.png；横封面 4:3 = 封面_选定_4x3.png",
+    "published": null
+  },
+  "xiaohongshu": {
+    "title": "Claude加中文，放一马还是钓鱼执法？",
+    "desc": "Claude设置新增中文语言，是放一马还是钓鱼执法？\nClaude 的“选择您的语言”里多了中文（简体 / 繁體）。官方帮助页（8 月版）只写了 11 种语言，更新日志、官方博客、官方 X（10 月 6 日核对时）没提；官方支持地区名单里没有中国大陆、香港、澳门。视频里关于封号、态度的判断是个人观点，没有证据显示选中文会被封。来源：Claude 帮助中心 How to use Claude in your preferred language / Safeguards warnings and appeals；Anthropic 支持地区页。以官方后续说明为准。",
+    "topics": [
+      "Claude",
+      "Anthropic",
+      "AI工具",
+      "大模型",
+      "人工智能",
+      "中文界面",
+      "封号",
+      "科技",
+      "AI"
+    ],
+    "declaration": "内容来源声明：自主拍摄（没填拍摄地点 / 日期，对话框点了取消）；没有选“笔记含AI合成内容”（本人原声出镜）",
+    "original_declaration": "开（用户 2026-10-06 定）",
+    "cover": "3:4 = 封面_选定_3x4.png",
+    "published": null
+  },
+  "published": {
+    "bilibili": {
+      "bvid": "BV1CWHZ6tEHK",
+      "time": "2026-10-06 13:32 左右（日本时间）",
+      "state": "投稿后 -1 审核中；换 4:3 封面后重新进审核",
+      "cover": "1920x1080 / 1440x1080（编辑页重传 4:3 后核对）",
+      "tid": 231,
+      "desc_len": 257,
+      "tags": 10
+    },
+    "douyin": {
+      "time": "2026-10-06 13:39（页面显示）",
+      "state": "审核中",
+      "title_len": 26,
+      "topics": 5,
+      "cover": "竖 3:4 + 横 4:3，封面检测通过",
+      "declaration": "个人观点或见解"
+    },
+    "xiaohongshu": {
+      "time": "2026-10-06 12:49 笔记管理显示（北京时间；日本时间 13:49）",
+      "state": "审核中",
+      "title_len": 20,
+      "topics": 9,
+      "original_declaration": "开（用户 10-06 在聊天里同意《原创声明须知》，我勾选并点“声明原创”）",
+      "content_source": "自主拍摄（拍摄地点 / 日期没填）",
+      "cover": "成片第 0 帧 3:4"
+    }
+  }
+}

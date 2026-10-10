@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<!-- 《OpenAI DevDay 2026 解读》系列整片：2340×1080，30 fps，白底。renderAt(t) 画出第 t 秒（同一个 t 永远是同一帧）。
+     用法：index.html?ep=V1（数据 out/V1/timeline.js 由 build_timeline.py 写，out/V1/frames.js 由 prep_frames.py 写）。
+     版式沿用《白宫超级智能协定》那条（独立视频的版式 B）：全程画外音，不放出镜框；左栏是“本条要点”，右边演示区 1504×859（内容按 1474×829 写，
+     不缩放；2026-10-02 统一字幕标准时从 1636×920 缩下来，让出 y 922 以下的字幕带）；演示区放“发布会画面”或“卡片”。
+     字幕按项目的中英双语标准（Way to AGI/skill/way-to-agi-episode/references/subtitles.md）：y 922 以下，中文一行 52 px + 英文一行 30 px，居中，
+     现场原话的同传中文前面带橙色人名胶囊；演示内容不进这条带。
+     脚本：scenes.js（卡片、角标）→ engine.js（renderAt）。 -->
+<link rel="stylesheet" href="file:///D:/大疆/AI科普/素材/字体/fonts.css">
+<style>
+:root { --ink:#1B1B1F; --ink2:#374151; --gray:#6B7280; --gray2:#9AA1AC; --line:#E5E7EB; --soft:#F4F5F7; --orange:#FF4F1A; --marker:#FFD84D; --green:#16A34A; --blue:#2563EB; --red:#E11D48; }
+* { box-sizing:border-box; margin:0; padding:0; }
+html, body { width:2340px; height:1080px; background:#fff; overflow:hidden; font-family:'Noto Sans SC', sans-serif; color:var(--ink); }
+.abs { position:absolute; }
+.frame { position:absolute; background:#fff; padding:14px; border:1px solid var(--line); border-radius:10px; box-shadow:0 14px 36px rgba(0,0,0,.14); }
+.frame .inner { position:relative; width:100%; height:100%; border-radius:4px; overflow:hidden; background:#EEF0F3; }
+.tape { position:absolute; width:150px; height:40px; background:rgba(255,214,140,.8); top:-18px; box-shadow:0 1px 2px rgba(0,0,0,.08); z-index:3; }
+.tape.l { left:44px; transform:rotate(-7deg); } .tape.r { right:44px; transform:rotate(6deg); }
+.chip { display:inline-block; padding:5px 18px; border:3px solid var(--orange); color:var(--orange); border-radius:999px; font:800 28px 'Noto Sans SC'; white-space:nowrap; }
+.chip.fill { background:var(--orange); color:#fff; }
+.chip.lg { font-size:42px; padding:8px 32px; border-width:4px; }
+.chip.ink { border-color:var(--ink); color:var(--ink); }
+.chip.blue { border-color:var(--blue); color:var(--blue); }
+.mark { background:linear-gradient(transparent 58%, var(--marker) 58%, var(--marker) 92%, transparent 92%); }
+
+/* 左栏：本条要点 */
+#toc { position:absolute; left:118px; top:470px; transform:translateY(-50%); width:560px; padding:30px 32px 22px; background:rgba(255,255,255,.96); border-top:3px solid var(--orange); border-left:1px solid #E6E6E6; border-right:1px solid #E6E6E6; border-bottom:1px solid #E6E6E6; box-shadow:0 6px 18px rgba(0,0,0,.08); }
+#toc .t { font:800 34px 'Noto Sans SC'; margin-bottom:22px; white-space:nowrap; }
+#toc .t span { display:block; font:600 22px 'Noto Sans SC'; color:var(--gray2); margin:6px 0 0 0; white-space:nowrap; }
+#toc .it { display:flex; align-items:center; gap:12px; font:500 30px/2.1 'Noto Sans SC'; color:#B0B6BF; white-space:nowrap; }
+#toc .it .b { width:6px; height:28px; border-radius:3px; background:transparent; flex:none; }
+#toc .it .n { font:700 22px 'Space Grotesk'; width:24px; flex:none; }
+#toc .it.done { color:var(--gray); }
+#toc .it.now { color:var(--ink); font-weight:800; }
+#toc .it.now .b { background:var(--orange); }
+
+/* 演示区 */
+#demo { left:718px; top:40px; width:1504px; height:859px; }
+#demoin { position:absolute; left:0; top:0; width:1474px; height:829px; }
+#cardbg { position:absolute; inset:0; background:linear-gradient(160deg, #F6F7F9 0%, #E7EBF0 100%); }
+#scrimg { position:absolute; left:0; top:0; width:100%; height:100%; display:block; visibility:hidden; background:#000; }
+#ovB { position:absolute; inset:0; }
+.chapchip { position:absolute; left:22px; top:20px; background:var(--orange); color:#fff; font:800 30px 'Noto Sans SC'; padding:8px 22px; border-radius:12px; white-space:nowrap; box-shadow:0 8px 20px rgba(0,0,0,.25); z-index:5; }
+.chapchip span { font:700 24px 'Space Grotesk'; opacity:.85; margin-right:12px; }
+.pill { position:absolute; background:rgba(17,17,17,.86); color:#fff; font:700 32px 'Noto Sans SC'; padding:12px 26px; border-radius:14px; white-space:nowrap; box-shadow:0 10px 26px rgba(0,0,0,.25); z-index:5; }
+.pill b { color:#FDBA74; font-weight:800; }
+.hook { position:absolute; left:22px; bottom:34px; background:rgba(5,5,5,.82); color:#fff; font:900 62px/1.22 'Noto Sans SC'; padding:16px 38px 16px 30px; border-radius:16px; border-left:12px solid var(--orange); box-shadow:0 14px 34px rgba(0,0,0,.35); z-index:6; white-space:nowrap; }
+.hook b { color:#FFB066; font-weight:900; }
+.credit { position:absolute; right:22px; top:20px; background:rgba(17,17,17,.84); color:#fff; font:700 26px 'Noto Sans SC'; padding:8px 20px; border-radius:12px; white-space:nowrap; z-index:5; }
+.who { position:absolute; left:304px; bottom:22px; background:rgba(255,255,255,.94); color:var(--ink); font:800 32px 'Noto Sans SC'; padding:8px 22px; border-radius:12px; white-space:nowrap; box-shadow:0 8px 20px rgba(0,0,0,.25); z-index:5; border-left:8px solid var(--orange); }
+.who small { font:600 24px 'Noto Sans SC'; color:var(--gray); margin-left:12px; }
+
+/* 卡片 */
+.kick { font:700 26px 'Noto Sans SC'; letter-spacing:.2em; color:var(--orange); white-space:nowrap; }
+.big { font:800 100px/1.15 'Noto Sans SC'; white-space:nowrap; }
+.h1 { font:800 60px/1.25 'Noto Sans SC'; white-space:nowrap; }
+.h2 { font:800 46px/1.3 'Noto Sans SC'; white-space:nowrap; }
+.cap { font:700 30px/1.45 'Noto Sans SC'; color:var(--gray); white-space:nowrap; }
+.row { position:absolute; left:130px; width:1214px; height:112px; display:flex; align-items:center; gap:26px; padding:0 34px; border-radius:18px; background:#fff; border:3px solid var(--line); box-shadow:0 8px 20px rgba(0,0,0,.07); }
+.row .n { flex:none; width:62px; height:62px; border-radius:50%; background:var(--orange); color:#fff; display:flex; align-items:center; justify-content:center; font:800 34px 'Space Grotesk'; }
+.row .tt { font:800 42px/1.2 'Noto Sans SC'; white-space:nowrap; }
+.row .dd { font:600 27px/1.3 'Noto Sans SC'; color:var(--gray); margin-top:2px; white-space:nowrap; }
+.row.hot { border-color:var(--orange); }
+.row.lg { height:158px; padding:0 40px; }
+.row.lg .n { width:76px; height:76px; font-size:42px; }
+.row.lg .tt { font-size:54px; }
+.row.lg .dd { font-size:31px; margin-top:4px; }
+.row .tag { margin-left:auto; flex:none; }
+.stat { position:absolute; left:0; width:1474px; text-align:center; font:900 270px/1 'Space Grotesk','Noto Sans SC'; letter-spacing:-.02em; white-space:nowrap; }
+.stat small { font:900 120px 'Noto Sans SC'; letter-spacing:0; margin-left:8px; }
+.tbl { position:absolute; left:130px; width:1214px; }
+.tbl .tr { position:absolute; left:0; width:1214px; height:128px; display:flex; align-items:center; border-radius:18px; background:#fff; border:3px solid var(--line); box-shadow:0 8px 20px rgba(0,0,0,.07); }
+.tbl .tr.hot { border-color:var(--orange); background:#FFF6F0; }
+.tbl .tr.hd { height:70px; background:transparent; border:none; box-shadow:none; }
+.tbl .c0 { flex:none; width:420px; padding-left:40px; font:800 46px 'Noto Sans SC'; white-space:nowrap; }
+.tbl .cv { flex:1; text-align:center; font:900 74px 'Space Grotesk','Noto Sans SC'; white-space:nowrap; }
+.tbl .tr.hd .cv { font:800 32px 'Noto Sans SC'; color:var(--gray); }
+.tbl .tr.hot .cv { color:var(--orange); }
+.tbl .cv small { font:800 28px 'Noto Sans SC'; color:var(--gray); margin-left:8px; }
+
+/* 字幕：项目的中英双语标准（模板 Way to AGI/…/03_成片/index.html 的 #subs / #subZh / #subEn）：y 922 起，中文一行 + 英文一行，居中 */
+#subs { position:absolute; left:0; top:922px; width:2340px; height:130px; z-index:30; pointer-events:none; }
+#subZh { position:absolute; left:0; right:0; top:0; text-align:center; font:800 52px/66px 'Noto Sans SC'; color:var(--ink); -webkit-text-stroke:10px #fff; paint-order:stroke fill; white-space:nowrap; }
+#subEn { position:absolute; left:0; right:0; top:70px; text-align:center; font:600 30px/40px 'Noto Sans SC'; color:#4B5563; -webkit-text-stroke:6px #fff; paint-order:stroke fill; white-space:nowrap; }
+#subZh .w { display:inline-block; font:800 .62em 'Noto Sans SC'; background:var(--orange); color:#fff; -webkit-text-stroke:0; padding:0 .45em; border-radius:.3em; margin-right:.5em; vertical-align:.12em; line-height:1.5; }
+</style>
+</head>
+<body>
+<div class="frame" id="demo"><div class="tape l"></div><div class="tape r"></div>
+  <div class="inner"><div id="demoin">
+    <div id="cardbg"></div>
+    <img id="scrimg">
+    <div id="ovB"></div>
+  </div></div>
+</div>
+<div id="toc"></div>
+<div id="subs"><div id="subZh"></div><div id="subEn"></div></div>
+<script>
+  window.EPID = new URLSearchParams(location.search).get('ep') || 'V1';
+  for (const s of ['out/' + EPID + '/timeline.js', 'out/' + EPID + '/frames.js', 'scenes.js', 'engine.js'])
+    document.write('<script src="' + s + '"><\/script>');
+</script>
+</body>
+</html>

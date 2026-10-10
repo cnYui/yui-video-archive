@@ -1,0 +1,1 @@
+2026-10-02 10:12 JST  Fish 网页版 S2 Pro · 声音「赛马娘（曼波欧耶版）」  整套 6 条 OpenAI DevDay 解读短片的画外音 + 同传，84 句 2831 字，一批（批 A）出两个版本：A_v1.mp3（第 1 个播放器，下载按钮取得，7:17）、A_v2.mp3（任务 2cc4e9…，直链 curl，438.5 s）。第一个任务（da3ae4…）的 platform.r2.fish.audio 直链是 404。生成前把编辑框里另一个会话的「Claude Fable 五点五…」稿子备份到 tts/_backup_editor_before_paste.txt，生成后要原样贴回去。
