@@ -63,6 +63,7 @@
 ## 中英双语
 
 - **版式沿用本合集已定的**：中文 52 px 一行 + 英文 30 px 一行，居中，字幕带在 y 922 以下；不用编辑器里“白字、最多三行”那套。
+- **用 ASS（libass）烧字幕时字号要换算**：52 / 30 px 指 HTML 引擎里的 CSS 字号；ASS 的 Fontsize 是行高（Noto Sans SC 静态字重是 1.448 em），写 52 只画出 0.686 倍大。ASS 里写 **76 / 44**（`bilingual_std.ass_header()` 已按 `LIBASS_EM = 0.686` 换算，2026-10-04 竖屏短视频第 2 条实测：同一串字 CSS 52 px 宽 1077 px、ASS 52 只有 739 px、ASS 76 是 1079 px）。这之前用 ASS 烧的成片（OpenAI视频中文版、ClaudeSlides、第 1 条竖屏短视频）字偏小，没重做。
 - **翻译**：
   - 口语、简洁，按意思翻，不逐字直译（英文一行，约 90 字符以内）。
   - 专有名词保留英文原名：Opus 5.5、Claude、OpenClaw、Gemini、GPT、AGI、Loop Transformer；中文特有的名称用通行英文名：豆包 → Doubao，黑神话悟空 → Black Myth: Wukong，UP主 → creator，悠一 → Yui。

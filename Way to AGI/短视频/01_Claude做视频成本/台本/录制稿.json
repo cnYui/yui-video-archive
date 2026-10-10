@@ -1,0 +1,107 @@
+{
+ "slug": "Claude做视频成本",
+ "title": "如何使用Claude来低成本的生成视频（二次剪辑）",
+ "kicker": "悠一 · Veo 3.1 对比 <b>Claude</b>",
+ "hook": [
+  "6 分钟视频 144 美元",
+  "额度只用 5%~10%"
+ ],
+ "lines": [
+  {
+   "id": "N01",
+   "zh": "做 6 分钟的视频，Google Veo 3.1 标准版要 144 美元。",
+   "say": "做六分钟的视频，Google Veo 三点一标准版，要一百四十四美元。",
+   "en": "A six-minute video on Google's Veo 3.1 Standard costs $144."
+  },
+  {
+   "id": "N02",
+   "zh": "Claude 只用掉悠一 20x 套餐一周额度的 5% 到 10%。",
+   "say": "Claude 只用掉悠一二十倍套餐，一周额度的百分之五到百分之十。",
+   "en": "Claude used just 5–10% of Yui's weekly 20x plan quota."
+  },
+  {
+   "id": "N03",
+   "zh": "9 月 28 日的教程，用的是 9 月 22 日发布的 Opus 5.5。",
+   "say": "九月二十八日的教程，用的是九月二十二日发布的 Opus 五点五。",
+   "en": "Yui's September 28 tutorial uses Opus 5.5, released on September 22."
+  },
+  {
+   "id": "N04",
+   "zh": "Claude 不会生成图片，官方文档写得很明白。",
+   "say": "Claude 不会生成图片，官方文档写得很明白。",
+   "en": "Claude can't generate images, and the official docs say so plainly."
+  },
+  {
+   "id": "N05",
+   "zh": "那视频怎么来？Claude 说：每个像素，都是它自己画的。",
+   "say": "那视频怎么来？Claude 自己说，每个像素，都是它自己画的。",
+   "en": "So where do videos come from? Claude says it draws every pixel itself."
+  },
+  {
+   "id": "N06",
+   "zh": "一秒 30 张图，20 秒就是 600 张。",
+   "say": "一秒三十张图，二十秒就是六百张。",
+   "en": "Thirty images a second, so 20 seconds is 600 images."
+  },
+  {
+   "id": "N07",
+   "zh": "放进 HTML 页面，用 ffmpeg 合成视频。",
+   "say": "放进 HTML 页面，用 ffmpeg 合成视频。",
+   "en": "They go into an HTML page, and ffmpeg stitches them into a video."
+  },
+  {
+   "id": "N08",
+   "zh": "画完还会自己截图、抽帧检查。",
+   "say": "画完还会自己截图、抽帧检查。",
+   "en": "Then it screenshots and samples frames to check its own work."
+  },
+  {
+   "id": "N09",
+   "zh": "银魂、火影、JoJo 的像素动画，都是一段提示词做出来的。",
+   "say": "银魂、火影、JoJo 的像素动画，都是一段提示词做出来的。",
+   "en": "The Gintama, Naruto and JoJo pixel animations each came from a single prompt."
+  },
+  {
+   "id": "N10",
+   "zh": "连角色嘴巴的开合，它也自己截图确认。",
+   "say": "连角色嘴巴的开合，它也自己截图确认。",
+   "en": "Even the character's mouth opening and closing, it checked by taking screenshots."
+  },
+  {
+   "id": "N11",
+   "zh": "角色素材画一次，下次直接用，还能做成 skill 批量出片。",
+   "say": "角色素材画一次，下次直接用，还能做成 skill，批量出片。",
+   "en": "Draw the character assets once, reuse them, and turn it all into a skill for batch videos."
+  },
+  {
+   "id": "N12",
+   "zh": "144 美元，是按每一秒都一次成功算的，重来要另外付钱。",
+   "say": "一百四十四美元，是按每一秒都一次成功算的，重来要另外付钱。",
+   "en": "That $144 assumes every second works on the first try; retries cost extra."
+  },
+  {
+   "id": "N13",
+   "zh": "Veo 3.1 的 Fast 版，每秒 0.12 美元，6 分钟约 43 美元。",
+   "say": "Veo 三点一的 Fast 版，每秒零点一二美元，六分钟约四十三美元。",
+   "en": "Veo 3.1 Fast is $0.12 a second, about $43 for six minutes."
+  },
+  {
+   "id": "N14",
+   "zh": "但现在画的是像素风，真人风格得等模型升级。",
+   "say": "但现在画的是像素风，真人风格得等模型升级。",
+   "en": "But for now it draws pixel art; realistic human styles must wait for better models."
+  },
+  {
+   "id": "N15",
+   "zh": "3D 渲染、游戏过场，悠一自己也说该交给扩散模型。",
+   "say": "三 D 渲染、游戏过场，悠一自己也说该交给扩散模型。",
+   "en": "Yui says diffusion models fit better for 3D rendering and game cutscenes."
+  },
+  {
+   "id": "N16",
+   "zh": "视频模型按秒收费，Claude 画一次，反复用。",
+   "say": "视频模型按秒收费，Claude 画一次，反复用。",
+   "en": "Video models charge by the second; Claude draws once and reuses it."
+  }
+ ]
+}

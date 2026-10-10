@@ -22,6 +22,11 @@
 import re
 
 ZH_PX, EN_PX = 52, 30
+# ASS（libass）的 Fontsize 是行高，不是 CSS 的 em：Noto Sans SC 静态字重 winAscent + winDescent = 1.448 em，写 52 只画出 CSS 52 px 的 0.686 倍
+# （2026-10-04 实测：同一串字 CSS 52 px 宽 1077 px、ASS 52 画出 739 px、ASS 76 才 1079 px）。ass_header 里按这个换算，烧出来和 HTML 引擎同样大。
+# 这之前用 ASS 烧字幕的成片（OpenAI视频中文版、ClaudeSlides、第 1 条竖屏短视频）字偏小，没重做。
+LIBASS_EM = 0.686
+ZH_ASS, EN_ASS = round(ZH_PX / LIBASS_EM), round(EN_PX / LIBASS_EM)   # 76 / 44
 BAND_TOP = 922
 ZH_CY = BAND_TOP + 33                 # 中文行的垂直中心：带顶 + 行高 66 的一半
 EN_CY = BAND_TOP + 70 + 20            # 英文行的垂直中心：带顶 + 70 + 行高 40 的一半
@@ -467,8 +472,8 @@ ScaledBorderAndShadow: yes
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: ZH,{zh_font},{ZH_PX},{INK},&H000000FF,&H00FFFFFF,&H00000000,0,0,0,0,100,100,0,0,1,5,0,5,0,0,0,1
-Style: EN,{en_font},{EN_PX},{GREY},&H000000FF,&H00FFFFFF,&H00000000,0,0,0,0,100,100,0,0,1,3,0,5,0,0,0,1
+Style: ZH,{zh_font},{ZH_ASS},{INK},&H000000FF,&H00FFFFFF,&H00000000,0,0,0,0,100,100,0,0,1,5,0,5,0,0,0,1
+Style: EN,{en_font},{EN_ASS},{GREY},&H000000FF,&H00FFFFFF,&H00000000,0,0,0,0,100,100,0,0,1,3,0,5,0,0,0,1
 {extra_styles}
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text

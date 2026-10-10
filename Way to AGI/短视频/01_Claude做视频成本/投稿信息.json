@@ -1,0 +1,129 @@
+{
+ "_说明": "交付包阶段先写 titles（3 个候选 × 4 个平台 = 3×4）和各平台默认项；用户回“封面 X 标题 Y 同意”后，把选中的那条标题写进各平台字段（bilibili.title / douyin.title / xiaohongshu.title / weixin_channels.short_title），approval 记下选择和时间。scripts/check_titles.py 按各平台要求核对字数：B 站标题 ≤ 80 / 抖音 ≤ 30（话题 ≤ 5）/ 小红书 ≤ 20 / 视频号短标题 6–16；放不下的完整标题放抖音描述、小红书正文、视频号描述的第一行。三个标题角度要真有区别（事实陈述 / 数字悬念 / 泼冷水），不和封面大字同一句。",
+ "slug": "Claude做视频成本",
+ "video": "D:\\大疆\\Way to AGI\\短视频\\01_Claude做视频成本\\Claude做视频成本_成片.mp4（17.7 MB，用户拖进各平台上传区；不压缩、不绕 10 MB）",
+ "duration_s": 64.6,
+ "approval": {
+  "status": "approved",
+  "cover": "C（银魂像素动画画面；大字改为 Claude做视频 / 几乎0成本）",
+  "title": 1,
+  "approved_at": "2026-10-04 21:45:26 Asia/Tokyo",
+  "note": "用户选择封面 C，并将封面大字改为“Claude做视频几乎0成本”；平台文字标题选择候选 1。"
+ },
+ "titles": [
+  {
+   "id": 1,
+   "angle": "事实陈述（主体 + 动作 + 数字）",
+   "recommend": true,
+   "bilibili": "用 Claude 做 6 分钟视频，只花一周额度的 5%–10%；同样长度用 Veo 3.1 标准版要 144 美元",
+   "douyin": "Claude 做 6 分钟视频，一周额度只用 5%",
+   "xiaohongshu": "Claude 做视频比 Veo 省多少",
+   "weixin_channels": "Claude 做视频有多省"
+  },
+  {
+   "id": 2,
+   "angle": "数字悬念",
+   "bilibili": "6 分钟视频，Veo 3.1 标准版 144 美元，Claude 只用一周额度的 5%–10%？它是怎么做到的",
+   "douyin": "6 分钟视频 Veo 要 144 美元，Claude 呢",
+   "xiaohongshu": "6 分钟视频，Veo 对比 Claude",
+   "weixin_channels": "6 分钟视频的成本账"
+  },
+  {
+   "id": 3,
+   "angle": "泼冷水（官方说 / 但是 / 要说明的）",
+   "bilibili": "Claude 不会生成视频，却能写代码一帧一帧画出来：省钱，但现在只画得出像素风",
+   "douyin": "Claude 不会生成视频，却能一帧帧画出来，现在只有像素风",
+   "xiaohongshu": "Claude 画视频：省钱但有边界",
+   "weixin_channels": "Claude 画视频的边界"
+  }
+ ],
+ "covers": {
+  "3x4": "制作/04_封面/封面_选定_3x4.png",
+  "16x9": "制作/04_封面/封面_选定_16x9.png",
+  "4x3": "制作/04_封面/封面_选定_4x3.png"
+ },
+ "source": {
+  "original_post": "https://www.bilibili.com/（B 站《如何使用Claude来低成本的生成视频》，2026-09-28，BV 号待核对）",
+  "original_author": "悠一（本人）",
+  "project_or_site": "Way to AGI 第 02 期：D:\\大疆\\Way to AGI\u0002_如何使用Claude来低成本的生成视频\\"
+ },
+ "bilibili": {
+  "note": "这条不发 B 站（用户：发除了 B 站的其他三个平台）；原长视频已在 B 站"
+ },
+ "douyin": {
+  "title": "Claude 做 6 分钟视频，一周额度只用 5%",
+  "desc": "来源：悠一《如何使用Claude来低成本的生成视频》（B 站 2026-09-28，Way to AGI 第 2 期）的二次剪辑，完整版 6 分 24 秒见 B 站。\n本视频含 AI 生成内容：AI 配音；银魂 / 火影 / JoJo 像素动画是 Claude 按提示词做的同人作品，版权归原作方所有。\n要点：① Claude 官方文档写明不生成图片；视频靠写代码一帧一帧画：每秒 30 张图 → 放进 HTML 页面 → ffmpeg 合成，画完自己截图、抽帧检查。② Google Veo 3.1 标准版 1080p 带声音每秒 0.40 美元（Gemini API 官方价目表，2026-10-01 更新），6 分钟约 144 美元，按每一秒都一次成功算；Fast 版每秒 0.12 美元，约 43 美元。③ 悠一做一条 6 分钟的视频，大约用掉 Claude 20x 套餐一周额度的 5%–10%（他自己的用量）。④ 现在画出来的是像素风，真人风格要等模型升级。",
+  "topics": [
+   "Claude",
+   "AI做视频",
+   "Opus5.5",
+   "ClaudeCode",
+   "AI教程"
+  ],
+  "declaration": "内容由AI生成",
+  "collection": "Way to AGI（B 站同名合集；抖音要先发布再在合集页加入，新建要用户确认名字）",
+  "cover": "竖封面 3:4 = 封面_选定_3x4.png；横封面 4:3 = 封面_选定_4x3.png",
+  "published": {
+   "status": "已发布",
+   "published_at": "2026-10-04 22:46 Asia/Tokyo",
+   "verified": "抖音创作者中心内容管理搜索标题后显示“已发布”"
+  }
+ },
+ "xiaohongshu": {
+  "title": "Claude 做视频比 Veo 省多少",
+  "desc": "来源：悠一《如何使用Claude来低成本的生成视频》（B 站 2026-09-28，Way to AGI 第 2 期）的二次剪辑，完整版 6 分 24 秒见 B 站。\n本视频含 AI 生成内容：AI 配音；银魂 / 火影 / JoJo 像素动画是 Claude 按提示词做的同人作品，版权归原作方所有。\n要点：① Claude 官方文档写明不生成图片；视频靠写代码一帧一帧画：每秒 30 张图 → 放进 HTML 页面 → ffmpeg 合成，画完自己截图、抽帧检查。② Google Veo 3.1 标准版 1080p 带声音每秒 0.40 美元（Gemini API 官方价目表，2026-10-01 更新），6 分钟约 144 美元，按每一秒都一次成功算；Fast 版每秒 0.12 美元，约 43 美元。③ 悠一做一条 6 分钟的视频，大约用掉 Claude 20x 套餐一周额度的 5%–10%（他自己的用量）。④ 现在画出来的是像素风，真人风格要等模型升级。",
+  "topics": [
+   "Claude",
+   "AI做视频",
+   "Opus5.5",
+   "ClaudeCode",
+   "AI教程",
+   "人工智能",
+   "程序员",
+   "像素动画",
+   "大模型",
+   "AIGC"
+  ],
+  "declaration": "笔记含AI合成内容",
+  "cover": "3:4 = 封面_选定_3x4.png",
+  "published": {
+   "status": "已发布（封面PK中）",
+   "published_at": "2026-10-04 21:41 Asia/Tokyo",
+   "cover_status": "封面PK中",
+   "verified": "小红书笔记管理显示标题和“封面PK中”"
+  },
+  "collection": "Way to AGI（小红书在发布页内联创建；原创声明开关要关）"
+ },
+ "weixin_channels": {
+  "short_title": "Claude 做视频有多省",
+  "desc": "来源：悠一《如何使用Claude来低成本的生成视频》（B 站 2026-09-28，Way to AGI 第 2 期）的二次剪辑，完整版 6 分 24 秒见 B 站。\n本视频含 AI 生成内容：AI 配音；银魂 / 火影 / JoJo 像素动画是 Claude 按提示词做的同人作品，版权归原作方所有。\n要点：① Claude 官方文档写明不生成图片；视频靠写代码一帧一帧画：每秒 30 张图 → 放进 HTML 页面 → ffmpeg 合成，画完自己截图、抽帧检查。② Google Veo 3.1 标准版 1080p 带声音每秒 0.40 美元（Gemini API 官方价目表，2026-10-01 更新），6 分钟约 144 美元，按每一秒都一次成功算；Fast 版每秒 0.12 美元，约 43 美元。③ 悠一做一条 6 分钟的视频，大约用掉 Claude 20x 套餐一周额度的 5%–10%（他自己的用量）。④ 现在画出来的是像素风，真人风格要等模型升级。",
+  "topics": [
+   "Claude",
+   "AI做视频",
+   "Opus5.5",
+   "ClaudeCode",
+   "AI教程",
+   "人工智能",
+   "程序员",
+   "像素动画",
+   "大模型",
+   "AIGC"
+  ],
+  "declaration": "视频标注：含AI生成内容",
+  "location": "不显示位置",
+  "collection": "Way to AGI（视频号内联创建，10 字刚好、创建后不可改）",
+  "cover": "成片第 0 帧 = 选定的封面（cover_frame0.py）；编辑封面选第 0 帧，3:4 裁剪框对到画面 y 450–1890（居中）",
+  "published": {
+   "status": "已发布",
+   "published_at": "2026-10-04 23:01 Asia/Tokyo",
+   "collection": "WaytoAGI（视频号创建成功；投稿页未自动挂载）",
+   "verified": "视频号视频管理第一条显示本条来源和银魂像素封面"
+  }
+ },
+ "published": {
+  "douyin": "已发布（22:46）",
+  "xiaohongshu": "已发布，封面PK中（21:41）",
+  "weixin_channels": "已发布（23:01）"
+ },
+ "_交付包状态": "2026-10-04 交付包已发给用户，等“封面 X 标题 Y 同意”"
+}
