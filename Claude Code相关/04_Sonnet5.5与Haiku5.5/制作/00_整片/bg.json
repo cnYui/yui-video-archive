@@ -1,0 +1,9 @@
+{
+ "file": "landscape_ink.png",
+ "pool": [
+  "landscape_color.png",
+  "landscape_ink.png",
+  "landscape_orange.png"
+ ],
+ "how": "随机"
+}

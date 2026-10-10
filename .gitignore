@@ -82,3 +82,15 @@ items.jsonl
 # 5) 单独排除的记录
 # B 站旧稿清理清单：里面是用户设成“仅自己可见”的稿件，不公开
 /docs/ai/context/20260927-103216-bilibili-cleanup_CN.md
+
+# Claude Code相关 第 04 期（Sonnet 5.5 与 Haiku 5.5）
+/Claude Code相关/04_Sonnet5.5与Haiku5.5/制作/00_整片/frames.js
+/Claude Code相关/04_Sonnet5.5与Haiku5.5/制作/00_整片/timeline.js
+/Claude Code相关/04_Sonnet5.5与Haiku5.5/制作/00_整片/timeline.json
+/Claude Code相关/04_Sonnet5.5与Haiku5.5/制作/00_整片/media/
+/Claude Code相关/04_Sonnet5.5与Haiku5.5/制作/00_整片/audio/
+/Claude Code相关/04_Sonnet5.5与Haiku5.5/制作/00_整片/parts/
+/Claude Code相关/04_Sonnet5.5与Haiku5.5/制作/00_整片/stills/
+/Claude Code相关/04_Sonnet5.5与Haiku5.5/制作/02_配音/tts/
+/Claude Code相关/04_Sonnet5.5与Haiku5.5/制作/02_配音/edit/
+/Claude Code相关/04_Sonnet5.5与Haiku5.5/制作/04_封面/*.png
