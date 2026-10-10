@@ -1,0 +1,37 @@
+Claude 最近发了两款新模型：Sonnet 5.5（九月底）和 Haiku 5.5（十月初）。这期只看价格和能力：官方护蛋演示开场，再把官方价格页、模型总览和两篇发布文章里的数字逐条过一遍，最后说怎么选。
+
+本期内容
+00:00 开场：官方护蛋演示
+00:58 四款模型的价格
+01:36 Sonnet 5.5 的价格
+01:54 缓存读取减半
+02:06 Haiku 5.5 的两档价格
+02:35 订阅用户的 API 额度
+02:49 Sonnet 5.5 的能力
+03:37 Haiku 5.5 的能力
+04:44 怎么选
+
+要点（来自官方发布页、价格页、模型总览和官方推文；价格是每百万 token）
+· 价格：Fable 5.1 $10 / $50；Opus 5.5 $4 / $20；Sonnet 5.5 $2 / $10；Haiku 5.5 提示 ≤ 10 万 token $0.10 / $0.50，超过 10 万 $0.50 / $2.50；Haiku 4.5 $1 / $5。Haiku 5.5 比 Sonnet 5.5 便宜 20 倍。
+· Sonnet 5.5：单价同 Sonnet 5；官方说同样的活最多便宜 30%、输出快 30% 以上；缓存读取十月初 $0.20 → $0.10，多数智能体任务再省约 20%；Sonnet 5 原定 9 月涨到 $3 / $15，官方说取消。
+· Haiku 5.5：官方说平均比 Haiku 4.5 便宜约 75%（短提示 90%、长提示 50%，已计入新分词器多用的 token，完整算式没写）；首个带思考力度档位的 Haiku；已在 Claude Platform 和 Claude Code 可用。
+· 订阅额度：Max 5x $100、Max 20x $200、Team 最多 $500 每月，可用于任何模型，到账时间官方没写。
+· 能力（Anthropic 公布，Sonnet 5.5 / Sonnet 5 / Opus 5.5）：Terminal-Bench 4.0 70.6% / 10.3% / 66.4%；GDPval-AA 1844 / 1449 / 1846；OSWorld 2.1 80.1% / 57.0% / 81.8%。八项里 Opus 5.5 领先七项，官方说开放复杂任务它更强。
+· Haiku 5.5 / Haiku 4.5 / GPT-6 Luna：GDPval-AA 1620 / 735 / 1437；OSWorld 离线子集 72.4% / 15.7% / 48.9%；Terminal-Bench 39.2% / 0.0% / 16.4%。官方说复杂编码任务仍选 Sonnet 5.5 或 Opus 5.5。
+
+几处要说明
+· 成绩都是 Anthropic 自己公布的，没有实测；同一个 Sonnet 5.5 在 Sonnet 页和 Haiku 页的部分数字不同，我只在同一页内比较。
+· 护蛋演示是官方挑的一道题；“快近四倍、便宜七成”是我按画面计时器算的，不是通用结论。
+· “输入 100 万 + 输出 20 万 token”的账是我按官方标价算的，不含折扣，Haiku 按提示都在 10 万以内算。
+· Sonnet 5.5 发布页价格表里的缓存读取 $0.20 是降价前的旧数，以官方价格页（$0.10）为准。
+
+资料来源（2026 年 10 月 10 日读的官方页面）
+· Sonnet 5.5 发布页：https://www.anthropic.com/claude-sonnet-5-5
+· Haiku 5.5 发布页：https://www.anthropic.com/claude-haiku-5-5
+· 价格页：https://platform.claude.com/docs/en/about-claude/pricing
+· 模型总览：https://platform.claude.com/docs/en/models/overview
+· @claudeai 推文：https://x.com/claudeai/status/2107894039626277339
+· @ClaudeDevs 推文（护蛋演示）：https://x.com/ClaudeDevs/status/2107895955144208813
+
+· 画面中的官方视频、推文和网页来自 Anthropic 官方网站、@claudeai、@ClaudeDevs（X），仅作介绍和评论引用，版权归原作者；封面里的官方形象版权归 Anthropic；价格会变，以官方页面为准。
+· 配音：温柔男生（AI 生成）；剪辑：Claude Code（Sonnet 5.5）。

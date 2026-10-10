@@ -32,7 +32,13 @@
 
 # 4) 整个目录不收（写在白名单后面，后写的规则优先）
 /真人素材/
+# 个人星轨照片（成片、16bit TIFF、堆栈脚本），和视频存档无关
+/星轨/
+# 个人求职（远程实习搜索程序、候选公司池、含国籍 / 在留身份 / 求职偏好等私人信息），和视频存档无关，不公开
+/求职/
 /.claude/
+# B 站评论 / 私信每日回复的摘要、状态、选题池（含私信概况和观众原话，不公开）
+/B站互动/运行记录/
 _旧稿/
 _旧稿_*/
 _旧/
@@ -83,14 +89,199 @@ items.jsonl
 # B 站旧稿清理清单：里面是用户设成“仅自己可见”的稿件，不公开
 /docs/ai/context/20260927-103216-bilibili-cleanup_CN.md
 
-# Claude Code相关 第 04 期（Sonnet 5.5 与 Haiku 5.5）
-/Claude Code相关/04_Sonnet5.5与Haiku5.5/制作/00_整片/frames.js
-/Claude Code相关/04_Sonnet5.5与Haiku5.5/制作/00_整片/timeline.js
-/Claude Code相关/04_Sonnet5.5与Haiku5.5/制作/00_整片/timeline.json
-/Claude Code相关/04_Sonnet5.5与Haiku5.5/制作/00_整片/media/
-/Claude Code相关/04_Sonnet5.5与Haiku5.5/制作/00_整片/audio/
-/Claude Code相关/04_Sonnet5.5与Haiku5.5/制作/00_整片/parts/
-/Claude Code相关/04_Sonnet5.5与Haiku5.5/制作/00_整片/stills/
-/Claude Code相关/04_Sonnet5.5与Haiku5.5/制作/02_配音/tts/
-/Claude Code相关/04_Sonnet5.5与Haiku5.5/制作/02_配音/edit/
-/Claude Code相关/04_Sonnet5.5与Haiku5.5/制作/04_封面/*.png
+# OpenAI《The dots demo, take two》中文同传（2026-10-02）：原片的英文逐字稿、整篇译稿和由它们派生的句子表、配音文本、识别结果、时间轴，
+# 都是别人视频全文的转写 / 翻译，不公开（脚本、投稿信息、片尾清单照收）
+/独立视频/2026-10_OpenAI视频中文版/台本/*.json
+/独立视频/2026-10_OpenAI视频中文版/台本/*.txt
+/独立视频/2026-10_OpenAI视频中文版/制作/02_配音/tts/
+/独立视频/2026-10_OpenAI视频中文版/制作/02_配音/asr/
+/独立视频/2026-10_OpenAI视频中文版/制作/02_配音/edit/
+/独立视频/2026-10_OpenAI视频中文版/制作/00_整片/timeline.json
+/独立视频/2026-10_OpenAI视频中文版/制作/00_整片/qa_mix_log.txt
+/独立视频/2026-10_OpenAI视频中文版/制作/00_整片/render_log.txt
+/独立视频/2026-10_OpenAI视频中文版/制作/00_整片/preview_log.txt
+
+# OpenAI DevDay 2026 解读（2026-10-02）：各条的渲染产物（时间轴、逐帧文件表、抽帧、混音、QA 报告）和配音的句子表 / 识别 / 切句结果，不公开
+# （台本、脚本、README、记录照收；台本里有 21 句发布会原话的中文译文，没有长段英文原文）
+/独立视频/2026-10_OpenAI-DevDay-2026解读/制作/00_整片/out/
+/独立视频/2026-10_OpenAI-DevDay-2026解读/制作/02_配音/tts/
+/独立视频/2026-10_OpenAI-DevDay-2026解读/制作/02_配音/asr/
+/独立视频/2026-10_OpenAI-DevDay-2026解读/制作/02_配音/edit/
+# 同一条：封面里是原片画面，选定封面也不进公开仓库（上面白名单里的 封面_选定_*.png 会被这条盖掉）
+/独立视频/2026-10_OpenAI视频中文版/制作/04_封面/*.png
+# DevDay 6 条的字幕 SRT（2026-10-02 统一字幕标准后由 package.py 导出）：整条的英文（21 句发布会原话 + 我们的译文）+ 中文，不公开；
+# 台本 JSON 里现在有那 21 句原话的英文（不到 500 词，和视频里的字幕一样），照收
+/独立视频/2026-10_OpenAI-DevDay-2026解读/成片/*.srt
+
+# Anthropic 官方视频《How an Anthropic designer uses Claude Slides》中英字幕（2026-10-02）：英文逐字稿、译文、字幕文件和由原片缩略图改的封面是别人作品的转写 / 翻译 / 衍生图，不公开（脚本、README、记录照收）
+/独立视频/2026-10_ClaudeSlides设计师用法/台本/*.json
+/独立视频/2026-10_ClaudeSlides设计师用法/台本/*.txt
+/独立视频/2026-10_ClaudeSlides设计师用法/台本/台本.md
+/独立视频/2026-10_ClaudeSlides设计师用法/成片_*字幕.srt
+/独立视频/2026-10_ClaudeSlides设计师用法/制作/00_整片/bilingual.ass
+/独立视频/2026-10_ClaudeSlides设计师用法/制作/02_转写/
+/独立视频/2026-10_ClaudeSlides设计师用法/制作/04_封面/*.png
+
+# OpenAI dots 同传的新字幕版（2026-10-02）：SRT 里是原片英文逐字稿 + 中文译文，别人作品的转写 / 翻译，不公开；渲染日志也不收
+/独立视频/2026-10_OpenAI视频中文版/*.srt
+/独立视频/2026-10_OpenAI视频中文版/制作/00_整片/render_v2_log.txt
+
+# 死神vs火影 游戏改造（2026-10-02）：克隆的官方仓库、游戏本体、Flex SDK、咒术回战角色 mod，都是第三方游戏工程，不进视频存档仓库
+/死神vs火影/
+
+# OpenAI相关 第 1 期《GPT-6.1 Sol / GPT-6 Astra 模型效果展示》（2026-10-02）：渲染产物（逐帧文件表、时间轴、抽帧、分段视频、静帧、混音）、
+# 配音的句子表 / 切句结果、封面（主体是网友作品的原帧，选定封面也不公开）不进公开仓库；台本、事实核对、脚本、README、记录照收
+/OpenAI相关/01_GPT模型效果展示/制作/00_整片/frames.js
+/OpenAI相关/01_GPT模型效果展示/制作/00_整片/timeline.js
+/OpenAI相关/01_GPT模型效果展示/制作/00_整片/timeline.json
+/OpenAI相关/01_GPT模型效果展示/制作/00_整片/media/
+/OpenAI相关/01_GPT模型效果展示/制作/00_整片/parts/
+/OpenAI相关/01_GPT模型效果展示/制作/00_整片/stills/
+/OpenAI相关/01_GPT模型效果展示/制作/02_配音/tts/
+/OpenAI相关/01_GPT模型效果展示/制作/02_配音/edit/
+/OpenAI相关/01_GPT模型效果展示/制作/04_封面/*.png
+
+# Claude Code相关 第 3 期《You should know 插件》（2026-10-03）：渲染产物（逐帧文件表、时间轴、抽帧 / 页面截图、分段视频、静帧、混音）、配音原始文件和封面候选图不进公开仓库
+# （素材/ 已在上面整体忽略；封面里的宇航员是 Anthropic 的美术，候选和选定封面都不进公开仓库）
+/Claude Code相关/03_YouShouldKnow插件/制作/00_整片/frames.js
+/Claude Code相关/03_YouShouldKnow插件/制作/00_整片/timeline.js
+/Claude Code相关/03_YouShouldKnow插件/制作/00_整片/timeline.json
+/Claude Code相关/03_YouShouldKnow插件/制作/00_整片/media/
+/Claude Code相关/03_YouShouldKnow插件/制作/00_整片/audio/
+/Claude Code相关/03_YouShouldKnow插件/制作/00_整片/parts/
+/Claude Code相关/03_YouShouldKnow插件/制作/00_整片/stills/
+/Claude Code相关/03_YouShouldKnow插件/制作/02_配音/tts/
+/Claude Code相关/03_YouShouldKnow插件/制作/02_配音/edit/
+/Claude Code相关/03_YouShouldKnow插件/制作/04_封面/*.png
+/Claude Code相关/03_YouShouldKnow插件/制作/04_封面/_旧稿_原创角色/
+
+# 独立视频《Tavus Griffin 模型介绍》（2026-10-03）：素材（Tavus 官方在 X 上发的视频、官网 / 博客截图、转写）已被 素材/ 整体忽略；
+# 画面表 plan.json 里有 24 条原片对白的英文原话，渲染产物（逐帧文件表、时间轴、抽帧、分段视频、静帧、混音）、配音的句子表 / 切句结果、
+# 封面（主体是 Tavus 官方视频的原帧和官网图）、联系表都不进公开仓库；台本、事实核对、脚本、README、记录照收
+/独立视频/2026-10_Tavus-Griffin模型介绍/台本/plan.json
+/独立视频/2026-10_Tavus-Griffin模型介绍/制作/00_整片/frames.js
+/独立视频/2026-10_Tavus-Griffin模型介绍/制作/00_整片/timeline.js
+/独立视频/2026-10_Tavus-Griffin模型介绍/制作/00_整片/timeline.json
+/独立视频/2026-10_Tavus-Griffin模型介绍/制作/00_整片/media/
+/独立视频/2026-10_Tavus-Griffin模型介绍/制作/00_整片/audio/
+/独立视频/2026-10_Tavus-Griffin模型介绍/制作/00_整片/parts/
+/独立视频/2026-10_Tavus-Griffin模型介绍/制作/00_整片/stills/
+/独立视频/2026-10_Tavus-Griffin模型介绍/制作/00_整片/qa_dlg_report.txt
+/独立视频/2026-10_Tavus-Griffin模型介绍/制作/00_整片/qa_mix_report.txt
+/独立视频/2026-10_Tavus-Griffin模型介绍/制作/00_整片/render_log.txt
+/独立视频/2026-10_Tavus-Griffin模型介绍/制作/02_配音/tts/
+/独立视频/2026-10_Tavus-Griffin模型介绍/制作/02_配音/edit/
+/独立视频/2026-10_Tavus-Griffin模型介绍/制作/02_配音/tts_input.txt
+/独立视频/2026-10_Tavus-Griffin模型介绍/制作/04_封面/*.png
+/独立视频/2026-10_Tavus-Griffin模型介绍/制作/04_封面/_src/
+/独立视频/2026-10_Tavus-Griffin模型介绍/制作/04_封面/_cover_*.html
+/独立视频/2026-10_Tavus-Griffin模型介绍/制作/04_封面/_旧稿/
+/独立视频/2026-10_Tavus-Griffin模型介绍/制作/_sheets/
+/独立视频/2026-10_Tavus-Griffin模型介绍/*.srt
+
+# 像素视频（银魂 / 火影 / JoJo / 进击的巨人…）的角色素材库、剧情分镜和原会话备份（2026-10-03 建）：同人角色代码、精灵图集、会话记录，只放本机，不进公开仓库
+/游戏素材/
+
+# 短视频（2026-10-04 建，技能 短视频/skill/short-video/；每条放在 <合集>/短视频/NN_<短名>/）：每条的渲染产物（逐帧文件表、时间轴、抽帧、分段视频、静帧、混音）、配音原始文件、原片转写、封面中间文件不进公开仓库；台本、脚本、SRT、选定封面照常收
+**/短视频/*/制作/00_整片/frames.js
+**/短视频/*/制作/00_整片/timeline.js
+**/短视频/*/制作/00_整片/timeline.json
+**/短视频/*/制作/00_整片/media/
+**/短视频/*/制作/00_整片/audio/
+**/短视频/*/制作/00_整片/parts/
+**/短视频/*/制作/00_整片/stills/
+**/短视频/*/制作/02_配音/tts/
+**/短视频/*/制作/02_配音/edit/
+**/短视频/*/制作/02_转写/
+**/短视频/*/制作/04_封面/_cover*
+**/短视频/*/素材/
+# 第 1 条 ffmpeg 路线的中间文件（build/ 里有 timeline.json、片段、静帧、总览图；proxy 是 1080p 代理、fonts 是字幕字体拷贝）
+**/短视频/*/制作/00_整片/build/
+**/短视频/*/制作/00_整片/proxy_log.txt
+**/短视频/*/制作/00_整片/fonts/
+
+# Claude Code相关/短视频 里转录自 Claude 官方视频的英文原话 + 译文（字幕 SRT、台本导出）：第三方内容，不进公开仓库（同 ClaudeSlides 那条的做法）
+/Claude Code相关/短视频/*/成片_*字幕.srt
+/Claude Code相关/短视频/*/台本/录制稿.json
+/Claude Code相关/短视频/*/台本/台本.md
+/Claude Code相关/短视频/*/台本/plan*.py
+/Claude Code相关/短视频/*/_旧稿/
+
+# 长视频《人人都是 UI 设计师》（2026-10-05，独立视频/长视频/2026-10_人人都是UI设计师/）：渲染产物、配音原始文件、封面（含别人文章里的图）不进公开仓库；文章全文和 21 张图在 独立视频/素材/2026-10_人人都是UI设计师/（整个 素材/ 已忽略）
+/独立视频/长视频/2026-10_人人都是UI设计师/制作/00_整片/frames.js
+/独立视频/长视频/2026-10_人人都是UI设计师/制作/00_整片/timeline.js
+/独立视频/长视频/2026-10_人人都是UI设计师/制作/00_整片/timeline.json
+/独立视频/长视频/2026-10_人人都是UI设计师/制作/00_整片/media/
+/独立视频/长视频/2026-10_人人都是UI设计师/制作/00_整片/audio/
+/独立视频/长视频/2026-10_人人都是UI设计师/制作/00_整片/parts/
+/独立视频/长视频/2026-10_人人都是UI设计师/制作/00_整片/stills/
+/独立视频/长视频/2026-10_人人都是UI设计师/制作/00_整片/*.mp4
+/独立视频/长视频/2026-10_人人都是UI设计师/制作/02_配音/tts/
+/独立视频/长视频/2026-10_人人都是UI设计师/制作/02_配音/edit/
+/独立视频/长视频/2026-10_人人都是UI设计师/制作/04_封面/*.png
+/独立视频/长视频/2026-10_人人都是UI设计师/台本/marks/
+/独立视频/长视频/2026-10_人人都是UI设计师/*.srt
+
+# 独立视频/长视频《不再 Review》（2026-10-05）：访谈 / 演讲的中文同传和英文原话（台本）、配音句子表、渲染产物、封面（带第三方人像）、SRT 不进公开仓库；素材在 独立视频/素材/ 里（整个被忽略）
+/独立视频/长视频/2026-10_不再Review/台本/录制稿.json
+/独立视频/长视频/2026-10_不再Review/台本/plan.json
+/独立视频/长视频/2026-10_不再Review/台本/make_script.py
+/独立视频/长视频/2026-10_不再Review/制作/00_整片/frames.js
+/独立视频/长视频/2026-10_不再Review/制作/00_整片/timeline.js
+/独立视频/长视频/2026-10_不再Review/制作/00_整片/timeline.json
+/独立视频/长视频/2026-10_不再Review/制作/00_整片/pages.js
+/独立视频/长视频/2026-10_不再Review/制作/00_整片/pages.json
+/独立视频/长视频/2026-10_不再Review/制作/00_整片/media/
+/独立视频/长视频/2026-10_不再Review/制作/00_整片/audio/
+/独立视频/长视频/2026-10_不再Review/制作/00_整片/parts/
+/独立视频/长视频/2026-10_不再Review/制作/00_整片/stills/
+/独立视频/长视频/2026-10_不再Review/制作/00_整片/*_log.txt
+/独立视频/长视频/2026-10_不再Review/制作/00_整片/qa_*_report.txt
+/独立视频/长视频/2026-10_不再Review/制作/02_配音/tts/
+/独立视频/长视频/2026-10_不再Review/制作/02_配音/edit/
+/独立视频/长视频/2026-10_不再Review/制作/02_配音/tts_input.txt
+/独立视频/长视频/2026-10_不再Review/制作/04_封面/*.png
+/独立视频/长视频/2026-10_不再Review/制作/04_封面/_*/
+/独立视频/长视频/2026-10_不再Review/*.srt
+/独立视频/长视频/2026-10_人人都是UI设计师/制作/00_整片/*_log.txt
+/独立视频/长视频/2026-10_人人都是UI设计师/制作/02_配音/qa_*.txt
+
+# 竖屏短版《人人都是 UI 设计师》（2026-10-05，独立视频/短视频/2026-10_人人都是UI设计师/）：封面（含别人文章里的书内插图）、日志、字幕不进仓库（成片 / 音频 / 静帧 / 配音原始文件已被 短视频 通配规则和 `*` 排除）
+/独立视频/短视频/2026-10_人人都是UI设计师/制作/04_封面/*.png
+/独立视频/短视频/2026-10_人人都是UI设计师/制作/00_整片/*_log.txt
+/独立视频/短视频/2026-10_人人都是UI设计师/*.srt
+
+# Claude Code相关 第 05 期（Sonnet 5.5 与 Haiku 5.5）
+/Claude Code相关/05_Sonnet5.5与Haiku5.5/制作/00_整片/frames.js
+/Claude Code相关/05_Sonnet5.5与Haiku5.5/制作/00_整片/timeline.js
+/Claude Code相关/05_Sonnet5.5与Haiku5.5/制作/00_整片/timeline.json
+/Claude Code相关/05_Sonnet5.5与Haiku5.5/制作/00_整片/media/
+/Claude Code相关/05_Sonnet5.5与Haiku5.5/制作/00_整片/audio/
+/Claude Code相关/05_Sonnet5.5与Haiku5.5/制作/00_整片/parts/
+/Claude Code相关/05_Sonnet5.5与Haiku5.5/制作/00_整片/stills/
+/Claude Code相关/05_Sonnet5.5与Haiku5.5/制作/02_配音/tts/
+/Claude Code相关/05_Sonnet5.5与Haiku5.5/制作/02_配音/edit/
+/Claude Code相关/05_Sonnet5.5与Haiku5.5/制作/04_封面/*.png
+
+# Claude Code相关 04_ClaudeProjects（Claude Code Projects 出镜口播长视频，录制用无声版）：渲染产物 / 抽帧 / 页面截图 / 成片不进公开仓库
+/Claude Code相关/04_ClaudeProjects/制作/00_整片/frames.js
+/Claude Code相关/04_ClaudeProjects/制作/00_整片/timeline.js
+/Claude Code相关/04_ClaudeProjects/制作/00_整片/timeline.json
+/Claude Code相关/04_ClaudeProjects/制作/00_整片/media/
+/Claude Code相关/04_ClaudeProjects/制作/00_整片/parts/
+/Claude Code相关/04_ClaudeProjects/制作/00_整片/stills/
+/Claude Code相关/04_ClaudeProjects/制作/00_整片/__pycache__/
+/Claude Code相关/04_ClaudeProjects/制作/00_整片/*.mp4
+/Claude Code相关/04_ClaudeProjects/制作/00_整片/*_log.txt
+
+# Claude Code相关 04_ClaudeProjects 出镜版：原片抽的音频 / 代理 / 识别 / 剪出来的口播和出镜画面、封面 png（有人脸）、成片 mp4 不进公开仓库
+/Claude Code相关/04_ClaudeProjects/制作/02_出镜/audio/
+/Claude Code相关/04_ClaudeProjects/制作/02_出镜/audio16/
+/Claude Code相关/04_ClaudeProjects/制作/02_出镜/proxy/
+/Claude Code相关/04_ClaudeProjects/制作/02_出镜/asr/
+/Claude Code相关/04_ClaudeProjects/制作/02_出镜/edit/
+/Claude Code相关/04_ClaudeProjects/制作/02_出镜/_check/
+/Claude Code相关/04_ClaudeProjects/制作/02_出镜/_*_log.txt
+/Claude Code相关/04_ClaudeProjects/制作/04_封面/*.png
+/Claude Code相关/04_ClaudeProjects/制作/04_封面/_src/
+/Claude Code相关/04_ClaudeProjects/*.mp4
