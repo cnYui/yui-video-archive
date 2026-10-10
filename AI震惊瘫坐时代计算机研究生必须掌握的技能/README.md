@@ -8,4 +8,6 @@
 
 B 站合集 / YouTube 播放列表：「AI时代计算机专业研究生如何用AI」（2026-09-30 新建）。本地目录名暂时没改。技能：`skill\cs-grad-ai-episode\`。
 
+封面：版式固定为第 1 期封面的风格（白底点阵、人物背后浅蓝圆、黑字 + 橙字黄色荧光、左上胶囊「计算机专业 · AI 基础功」；用户 2026-10-02 定）。模板 `skill\cs-grad-ai-episode\assets\template\制作\04_封面\cover.html`，每期只改 `cover.json`；规则见技能 `references\cover.md`。字幕：中英双语烧进画面（52 / 30 px，y 922 以下），标准同 Way to AGI 的 `subtitles.md`；第 1 期的页面没有字幕带，下一期拷模板时补。
+
 系列大纲草案：`docs/ai/context/20260929-115628-cs-grad-skills-series-plan-screen-zoom_CN.md`。

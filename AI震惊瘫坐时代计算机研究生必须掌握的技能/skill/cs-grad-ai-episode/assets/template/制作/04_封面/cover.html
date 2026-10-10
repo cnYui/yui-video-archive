@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<!-- 《AI时代计算机专业研究生如何用AI》合集封面模板（固定版式）。
+     用户 2026-10-02 看了深色 / 蓝色色块 / 黄底三版新设计后定：“就用这样的风格就行，人物背后有浅蓝色强调，黑色文字加上橙色和黄色提亮”。
+     = 第 1 期封面（2026-09-30）的版式：白底点阵 + 左上橙色胶囊「计算机专业 · AI 基础功」+ 第一行黑字 + 第二行橙字黄色荧光（+ 官方图标）
+       + 右边真人抠像（白描边）+ 人物背后浅蓝圆；4:3 单独排：字横跨上半部，人缩到右下。
+     每期只改同目录的 cover.json，这个文件不改；规则见技能 references/cover.md。
+     window.__COVER__ 由 render_covers.py 注入：{ w: 1920|1440, chip, line1, line2, icon, face }，高固定 1080。
+     [方括号] 标强调：第一行括起来的字变橙；第二行括起来的字橙色 + 黄色荧光，没有方括号就整行橙色 + 荧光（第 1 期就是整行）。
+     和第 1 期唯一的差别：16:9 的左边距 90 → 100（项目约定 16:9 的字收在 x 96–1824，B 站首页卡片会裁成 16:10）。 -->
+<link rel="stylesheet" href="file:///D:/大疆/AI科普/素材/字体/fonts.css">
+<style>
+:root { --ink:#1B1B1F; --orange:#FF4F1A; --marker:#FFD84D; --blue:#DDEBFF; }
+* { box-sizing:border-box; margin:0; padding:0; }
+html, body { height:1080px; overflow:hidden; background:#fff; font-family:'Noto Sans SC', sans-serif; color:var(--ink); }
+#c { position:relative; height:1080px; overflow:hidden; background:#fff radial-gradient(#E6E9EE 2.2px, transparent 2.4px) 0 0 / 36px 36px; }
+.abs { position:absolute; white-space:nowrap; }
+.blob { position:absolute; border-radius:50%; background:var(--blue); }
+.person { position:absolute; bottom:0; filter:drop-shadow(0 18px 30px rgba(0,0,0,.20)); }
+.chip { display:inline-block; padding:8px 26px; border:5px solid var(--orange); color:var(--orange); border-radius:999px; font:900 40px 'Noto Sans SC'; background:#fff; }
+/* inline-block：只标一部分字时，荧光带的高低和整行标的时候一样 */
+.mark { display:inline-block; background:linear-gradient(transparent 58%, var(--marker) 58%, var(--marker) 92%, transparent 92%); }
+.o { color:var(--orange); }
+.row { display:flex; align-items:center; gap:28px; }
+.row img { display:block; filter:drop-shadow(0 8px 16px rgba(0,0,0,.18)); }
+</style>
+</head>
+<body>
+<div id="c"></div>
+<script>
+const C = Object.assign({ w: 1920, chip: '计算机专业 · AI 基础功', line1: '第一行', line2: '第二行', icon: '', face: 'calm' }, window.__COVER__ || {});
+const W = C.w, H = 1080, WIDE = W >= 1900;
+const root = document.getElementById('c');
+root.style.width = W + 'px'; document.body.style.width = W + 'px';
+
+// 两个比例的几何：除了 16:9 的左边距，都是第 1 期线上封面的数（l1Max / l2Max = 字太宽时缩到这个宽度以内，保证不压到脸）。
+// 16:9 第二行 202：第 1 期的 cover.html 写的是 214，但它在字体加载前就量宽度（按后备字体量），缩到了 202，线上实际是 202（字体加载后再量，214 的“VSCode + 图标”超出 960，会缩到 204）。
+const G = WIDE
+  ? { x0: 100, chipTop: 80, chipSize: 40, l1Top: 196, l1Size: 176, l1Max: 1000, l2Top: 410, l2Size: 202, l2Max: 960, icon: 148, personH: 930, personRight: -110, blob: [1470, 560, 450] }
+  : { x0: 64,  chipTop: 52, chipSize: 44, l1Top: 150, l1Size: 206, l1Max: 1310, l2Top: 384, l2Size: 200, l2Max: 940, icon: 136, personH: 480, personRight: -40,  blob: [1130, 900, 290] };
+
+function el(html, style = {}, cls = 'abs') { const d = document.createElement('div'); d.className = cls; d.innerHTML = html; Object.assign(d.style, style); root.appendChild(d); return d; }
+const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+const HAS_BR = /\[[^\]]+\]/;
+const emph = (s, cls) => esc(s).replace(/\[([^\]]+)\]/g, `<span class="${cls}">$1</span>`);
+// 字太宽就缩（和第 1 期一样：每次 2 px，最小 40 px）；返回最后的字号
+function fit(node, maxW) { let s = parseFloat(getComputedStyle(node).fontSize); while (node.scrollWidth > maxW && s > 40) { s -= 2; node.style.fontSize = s + 'px'; } return s; }
+
+// ---- 人物背后的浅蓝圆 + 人像（cutout.py 出的白描边抠像）
+const [bx, by, br] = G.blob;
+el('', { left: (bx - br) + 'px', top: (by - br) + 'px', width: 2 * br + 'px', height: 2 * br + 'px' }, 'blob');
+const person = document.createElement('img');
+person.src = `face_cut/${C.face}_outline.png`; person.className = 'person';
+person.style.height = G.personH + 'px'; person.style.right = G.personRight + 'px';
+root.appendChild(person);
+
+// ---- 左上角：合集胶囊（合集固定，不改）
+const chip = el(`<span class="chip" style="font-size:${G.chipSize}px">${esc(C.chip)}</span>`, { left: G.x0 + 'px', top: G.chipTop + 'px' }, 'abs txt');
+chip.dataset.n = '胶囊';
+// ---- 第一行：黑字，[方括号] 里的变橙
+const l1 = el(emph(C.line1, 'o'), { left: G.x0 + 'px', top: G.l1Top + 'px', font: `900 ${G.l1Size}px/1.1 'Noto Sans SC'` }, 'abs txt');
+l1.dataset.n = '第一行';
+// ---- 第二行：橙字 + 黄色荧光（没有方括号就整行），后面跟官方图标
+const word = HAS_BR.test(C.line2) ? `<span>${emph(C.line2, 'o mark')}</span>` : `<span class="o mark">${esc(C.line2)}</span>`;
+const icon = C.icon ? `<img src="${esc(C.icon)}" style="width:${G.icon}px;height:${G.icon}px">` : '';
+const l2 = el(`<div class="row">${word}${icon}</div>`, { left: G.x0 + 'px', top: G.l2Top + 'px', font: `900 ${G.l2Size}px/1.1 'Noto Sans SC'` }, 'abs txt');
+l2.dataset.n = '第二行';
+
+function rect(e) { const r = e.getBoundingClientRect(); return { x0: r.left, y0: r.top, x1: r.right, y1: r.bottom }; }
+window.__READY__ = false;
+(async () => {
+  // 字体真正加载完再量宽度（按后备字体量，英文会量错）
+  await document.fonts.load(`900 100px 'Noto Sans SC'`, C.chip + C.line1 + C.line2);
+  await document.fonts.ready;
+  const s1 = fit(l1, G.l1Max);
+  l2.style.top = (G.l2Top - (G.l1Size - s1) * 1.1) + 'px';      // 第一行缩了字号，第二行跟着往上提，两行间距不变
+  const s2 = fit(l2, G.l2Max);
+  await Promise.all([...document.images].map(i => i.decode().catch(() => { throw new Error('图片加载失败 ' + decodeURI(i.src)); })));
+  window.__CHECK__ = {
+    w: W, h: H,
+    texts: [chip, l1, l2].map(e => ({ n: e.dataset.n, ...rect(e) })),
+    person: rect(person),
+    sizes: [{ n: '第一行', s: s1, d: G.l1Size }, { n: '第二行', s: s2, d: G.l2Size }],
+  };
+  window.__READY__ = true;
+})().catch(e => { window.__ERR__ = String(e && e.message || e); });
+</script>
+</body>
+</html>
