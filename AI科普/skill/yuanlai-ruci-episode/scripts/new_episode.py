@@ -25,7 +25,7 @@ leaves it out (Chinese-only 56 px subtitles, episodes 1-6).
 
 Creates <dest>/第NN期_<题目去空格>/ with
   episode.json              skeleton: presenter; canvas [2340, 1080]; bg_color "#FFFFFF"; layout "center"; style "board";
-                            voice_source "user"; bilingual true;
+                            voice_source "user"; bilingual true; cover_style "chalk" (黑板版封面, make_cover.py);
                             questions / chapters / backgrounds / outro_items
                             left empty to fill in (bg_alpha 0.22, bg_blur 10, target_minutes [5, 7],
                             auto_gestures true = 动作 v2 自动层开)
@@ -72,6 +72,7 @@ def episode_skeleton(number, title, dir_name, presenter="ryo", canvas=C.CANVAS_N
         "style": style,
         "voice_source": voice,
         "bilingual": True,
+        "cover_style": "chalk",
         "target_minutes": [5, 7],
         "question_scene": "S02",
         "questions": [],
@@ -82,6 +83,7 @@ def episode_skeleton(number, title, dir_name, presenter="ryo", canvas=C.CANVAS_N
         "terms": [],
         "auto_gestures": True,
         "intro_tagline": "",
+        "outro_references": [],
         "outro_items": [],
         "outro_closing": "",
         "_说明": [
@@ -105,12 +107,15 @@ def episode_skeleton(number, title, dir_name, presenter="ryo", canvas=C.CANVAS_N
             "bilingual：true = 中英双语字幕（2026-10-02 用户：原LAI如此也改成双语；项目统一标准，和 Way to AGI、AI每日日报一样）："
             "中文 52 px 一行 + 英文 30 px 一行，字幕带 y 900 起；台本每一句末尾写 dict(en=\"英文\")，拆得不顺的句子加 cuts；"
             "build_script.py 出 台本/双语字幕.md 并排列出每条，assemble.py 出 双语 / 中文 / 英文 三份 SRT。删掉这一项 = 只有中文字幕（第 1–6 期）",
+            "cover_style：\"chalk\" = 黑板版封面（2026-10-02 用户从三个方向里选的：深绿黑板 + 粉笔手写标题 + 讲解员站在粉笔槽上指着标题，"
+            "和《AI每日日报》的白底蓝字封面区分开）。make_cover.py 按它选模板，见 skill/references/cover.md。删掉这一项 = 按 style 选（白板版 / 小票版，第 1–6 期）",
             "questions：右上角「本期目录」，如 {\"text\": \"Token 是什么\", \"scenes\": [\"S03\"]}，scenes 是讲这一题的章节",
             "chapters：进度条章节名，如 {\"S01\": \"开场\", \"S02\": \"三个疑问\"}（没写的用场景 title）",
             "backgrounds：每章一张 素材/背景图库 里的文件名，如 {\"S01\": \"01_放学路上_树影.jpg\"}；没写的章节按图库顺序轮换。"
             "有 bg_color 时视频不用它，可以空着",
             "terms：字幕里要标橙色的术语（引擎已内置 API、API Key、Token、JSON、HTTP 等），如 [\"Token\", \"上下文窗口\"]",
-            "outro_items / outro_closing：片尾制作清单和感谢语，必须问用户，不许用默认值（assemble.py 为空会报错）",
+            "outro_references / outro_items / outro_closing：片尾（2026-10-03 起的信纸片尾，所有视频必加）左栏参考文献（字符串，≤ 8 条，可以为空）、"
+            "右栏致谢 / 制作清单（{label, value}，≤ 8 条）、感谢语，都要问用户，不许用默认值（outro_items / outro_closing 为空 assemble.py 会报错）",
             "auto_gestures：角色自动层（说话时小手势、句末点头、看向内容），true 开 / false 关；嫌多写成 "
             "{\"gesture\": 0.6}（手势密度倍率），或 {\"nod\": false} / {\"look\": false} 关掉某个通道",
             "sprites_extra（可选）：新动作帧还没追加进本期讲解员的帧目录（presenter.frames）时出样片用，例如 "

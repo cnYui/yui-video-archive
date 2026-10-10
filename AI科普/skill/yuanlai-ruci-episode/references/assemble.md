@@ -23,7 +23,7 @@ python scripts/assemble.py <期目录>          # 默认 4 路并行（2026-09-2
   - 碎行（不到 5 宽）并进邻行，并不进（会超 20）就把这两行重新平分；行尾的 ，、；： 去掉；
   - 引擎会把「≥18 个字符、以英文 / 数字结尾」的一行和「以英文 / 数字开头」的下一行粘成一行显示（给第 1 期旧时间轴用的，粘的时候不加空格），断行会避开这种断点（必要时把行尾的 ，留着）；
   - 最后按 `alignment.json` 的实际时间重新计时。改了规则只影响重跑 build_timeline 之后的时间轴（段的起止时间、口型不变，build_timeline 会说“保留原来的 mouth”）。
-- 章节（进度条和 B 站分段章节）用整片时间：片头 3.8 秒 + 正片 + 片尾 4.8 秒。
+- 章节（进度条和 B 站分段章节）用整片时间：片头 + 正片 + 片尾（2026-10-03 起片头 4.8 秒、片尾 9.0 秒；时长从 `片头片尾\intro|outro\index.html` 的 `window.DURATION` 读，模板换了重跑 build_timeline、mix_audio）。
 - 画面说明里的 `【动作：…】` 解析成 `actions`；`episode` 字段嵌入 timeline（背景路径转成相对引擎目录的路径）。
 - 画面尺寸：episode.json 的 `canvas`（新期 `[2340, 1080]`）检查后抄进 `timeline.episode.canvas`，打印 `canvas=2340x1080`；没写就是 1920×1080，时间轴和以前一模一样。它只影响出图，不影响口型和混音（改了 canvas 重跑 build_timeline 会说“保留原来的 mouth”）。
 
@@ -80,4 +80,4 @@ python scripts/assemble.py <期目录>          # 默认 4 路并行（2026-09-2
 | 画面尺寸（episode.json 的 `canvas`，例如老目录改成 2340×1080） | 引擎是 2026-09-27 以前的就先 `new_episode.py --update-engine` → `build_timeline.py`（口型、混音不变）→ `sync_assets.py` → `check_layout.py` → `render.py --stills` 看版面 → `assemble.py`（不能 `--skip-main`，片头片尾也按新宽度重渲） |
 | 卡片版的旧期换成白板版（第 3 期 2026-09-28 试过；已发布的期先在副本里做，见 lessons.md「文件操作」） | `new_episode.py --update-engine <期目录>` → episode.json 加 `"style": "board"`、`"layout": "center"`（配音照旧，不加 voice_source）→ `build_timeline.py`（口型、混音不变，它会提示 mix.wav 仍然有效）→ 按 visuals.md「白板版」**重写 scenes.js**（只参考卡片版的内容）→ `sync_assets.py`（生成 handdata.js）→ `check_layout.py` → 抽帧看章末、疑问 → 目录 → `assemble.py` → `make_cover.py`（白板期自动出白板版封面；旧 cover.json 的 subHTML 会当 sub 用，t1 / t2 照旧） |
 | BGM 音量 | 改 `mix_audio.py` 参数 → `mix_audio.py` → `assemble.py --skip-main`（画面不重渲） |
-| 片尾清单 | 改 `episode.json` 的 `outro_items` → `assemble.py --skip-main` |
+| 片尾（参考文献 / 致谢 / 感谢语） | 改 `episode.json` 的 `outro_references` / `outro_items` / `outro_closing` → `assemble.py --skip-main` |

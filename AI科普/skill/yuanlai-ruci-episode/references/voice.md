@@ -79,7 +79,7 @@
 
 1. 插件新开标签页打开本期讲解员的 `presenter.voice_app`（生成器，已带音色 id），确认右上是用户已登录的账号、模型下拉选 **S1**。
 2. 把 `配音/chunks.json` 里 C01 的整期文本（`--whole` 的拼接结果）一次贴进编辑框；Plus 单次长度够就整期一次生成（超出页面上限再按场景分成尽量少的几批，并告诉用户分批会有音色差）。编辑框里按 Ctrl+Enter 生成（出现播放器后按钮会移位，按坐标点会落空）。
-3. 用插件 `read_network_requests`（过滤 `api.fish.audio/task/`）拿任务编号，音频在 `https://platform.r2.fish.audio/tasks/<日期>/<编号>.mp3`；用 `scripts/fetch_check.py --urls 配音/urls.txt` 下载到 `配音/raw/C01_v1.mp3`（名字和 API 版一致，后面 select_takes / segment_audio 照常）。不用点浏览器的下载按钮（Chrome 会拦连续下载）。
+3. 用插件 `read_network_requests`（过滤 `api.fish.audio/task/`）拿任务编号（2026-09-30 起这个页面常抓不到请求：改点右侧「历史」每条的「分享」，`Get-Clipboard` 读 `s.fish.audio/…` 短链，`curl -I` 看 301 里的 `taskId`），音频在 `https://platform.r2.fish.audio/tasks/<日期>/<编号>.mp3`（**日期是 UTC 日期**：日本早上 8 点生成的在前一天的目录里）；用 `scripts/fetch_check.py --urls 配音/urls.txt` 下载到 `配音/raw/C01_v1.mp3`（名字和 API 版一致，后面 select_takes / segment_audio 照常）。不用点浏览器的下载按钮（Chrome 会拦连续下载）。
 4. 不改账号设置、不点升级 / 充值 / 购买；页面弹出付费或额度不足就停下告诉用户。在 `配音/raw/` 里记一行 `web_usage.txt`（日期、字数、任务编号），代替 api_usage.jsonl。
 
 ### 请用户试听 ✋

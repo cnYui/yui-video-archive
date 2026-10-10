@@ -1,0 +1,19 @@
+{
+  "references_title": "参考文献",
+  "references": [
+    "Anthropic，Claude Fable 5.1 模型卡与发布说明，2026-09",
+    "OpenAI，DevDay 2026 主题演讲与开发者文档，2026-10",
+    "DeepSeek-AI，DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning，arXiv:2501.12948",
+    "Vaswani et al.，Attention Is All You Need，NeurIPS 2017"
+  ],
+  "thanks_title": "致谢",
+  "thanks": [
+    { "label": "配音", "value": "悠一" },
+    { "label": "形象", "value": "鲸鱼娘 · 原型画师 上善无形（CC BY-NC-SA 4.0）" },
+    { "label": "剪辑", "value": "ChatCut · Claude Code（Opus 5.5）" },
+    { "label": "字体", "value": "Noto Sans SC · Ma Shan Zheng（SIL OFL）" },
+    { "label": "特别感谢", "value": "评论区提问的每一位朋友" }
+  ],
+  "closing": "感谢观看，我们下期再见",
+  "signature": "悠一"
+}

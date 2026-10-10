@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>悠一 · Intro B · 纸飞机</title>
+<link rel="stylesheet" href="../../../fonts/fonts.css">
+<link rel="stylesheet" href="../../fonts/fonts2.css">
+<script src="../../common/handdata.js"></script>
+<script src="../../common/pack.js"></script>
+<style>html, body { margin: 0; overflow: hidden; background: #ECE6D9; }</style>
+</head>
+<body>
+<script>
+(function () {
+  'use strict';
+  /* 版本 B「纸飞机」：一架纸飞机从左下角飞进来，拖着虚线航迹翻一个跟头，俯冲掠过名字——飞过哪个字，哪个字就
+   * “盖章”一样印在纸上；飞机从右边出画、从左边回来着陆，滑行的痕迹就是下划线；最后盖上一枚珊瑚色橡皮章“AI鼓励师”。
+   * 5.5 s，最后 0.3 s 淡到 endColor。 */
+  const P = window.PACK, { C, E, clamp, lerp, prog } = P;
+  const RAW = Object.assign({ name: '悠一', role: 'AI鼓励师', tagline: '', endColor: '#FFFFFF' }, window.__DATA__ || {});
+  const NAME = String(RAW.name == null ? '' : RAW.name).trim() || '悠一';
+  const ROLE = String(RAW.role == null ? '' : RAW.role).trim();
+  const TAG = String(RAW.tagline == null ? '' : RAW.tagline).trim();
+  const END_COLOR = RAW.endColor === 'none' ? 'none' : P.hexOr(RAW.endColor, '#FFFFFF');
+
+  window.DURATION = 5.5;
+  window.__READY__ = false;
+
+  const { FW, OX, ctx } = P.setup(RAW);
+  const paper = P.makePaper(FW, { seed: 41, mottle: 0.07 });
+
+  /* ------------------------------------------------------------ name (stamped) */
+  const chars = [...NAME];
+  const SIZE = chars.length <= 2 ? 330 : chars.length === 3 ? 290 : Math.min(290, 900 / chars.length);
+  const ADV = SIZE * 1.0, NAME_W = ADV * chars.length, NAME_X0 = 960 - NAME_W / 2, NAME_Y = 500;
+  const glyphs = chars.map((ch, i) => ({ ch, cx: NAME_X0 + ADV * (i + 0.5), cy: NAME_Y, rot: (i % 2 ? 1 : -1) * 0.035 }));
+  const nameLeft = NAME_X0 + 10, nameRight = NAME_X0 + NAME_W - 10;
+
+  /* ------------------------------------------------------------ flight path */
+  const PS = 1.8;                                      // plane scale
+  const T = { enter: [0.10, 1.05], loop: [1.05, 1.85], pass: [1.85, 2.95], back: [3.05, 3.25], skid: [3.25, 3.68], land: 3.25,
+              stamp: [3.82, 4.05], tag: [4.1, 4.4], fade: [5.2, 5.5] };
+  const LOOP = { cx: 560, cy: 196, r: 115 };
+  const loopBottom = [LOOP.cx, LOOP.cy + LOOP.r];
+  const enterB = [[-150, 940], [330, 800], [250, 300], loopBottom];
+  const passB = [loopBottom, [820, 290], [1250, 292], [2160, 370]];
+  const backB = [[-120, 640], [250, 660], [450, 700], [600, 700]];
+  const skidX0 = 600, skidX1 = 1370, skidY = 704;
+  function planeAt(t) {                                // -> {x, y, a (heading rad), s (scale), phase}
+    const head = (p, q) => Math.atan2(q[1] - p[1], q[0] - p[0]);
+    if (t < T.enter[0]) { return { x: -300, y: 940, a: -0.3, s: PS, phase: 'off' }; }
+    if (t < T.enter[1]) { const u = E.inOutSine(prog(t, T.enter[0], T.enter[1])); const p = P.bez(...enterB, u), q = P.bez(...enterB, Math.min(1, u + 0.01)); return { x: p[0], y: p[1], a: head(p, q), s: PS, phase: 'fly' }; }
+    if (t < T.loop[1]) { const u = E.inOutSine(prog(t, T.loop[0], T.loop[1])); const th = Math.PI / 2 - u * Math.PI * 2; const p = [LOOP.cx + LOOP.r * Math.cos(th), LOOP.cy + LOOP.r * Math.sin(th)]; return { x: p[0], y: p[1], a: th - Math.PI / 2, s: PS, phase: 'loop' }; }
+    if (t < T.pass[1]) { const u = E.inQuad(prog(t, T.pass[0], T.pass[1])) * 0.35 + prog(t, T.pass[0], T.pass[1]) * 0.65; const p = P.bez(...passB, u), q = P.bez(...passB, Math.min(1, u + 0.01)); return { x: p[0], y: p[1], a: head(p, q), s: PS, phase: 'pass' }; }
+    if (t < T.back[0]) { return { x: 2300, y: 560, a: 0.1, s: PS, phase: 'off' }; }
+    if (t < T.back[1]) { const u = prog(t, T.back[0], T.back[1]); const p = P.bez(...backB, u), q = P.bez(...backB, Math.min(1, u + 0.01)); return { x: p[0], y: p[1], a: head(p, q) * 0.6, s: PS, phase: 'back' }; }
+    const u = E.outCubic(prog(t, T.skid[0], T.skid[1]));
+    return { x: lerp(skidX0, skidX1, u), y: skidY - 4 + (1 - u) * 2, a: lerp(-0.02, -0.14, u), s: PS, phase: u >= 1 ? 'rest' : 'skid' };
+  }
+  // trail polylines (sampled from the path), with the time each point was reached
+  function sampleTrail(t0, t1) { const pts = []; for (let t = t0; t <= t1 + 1e-6; t += 1 / 240) { const p = planeAt(t); pts.push({ x: p.x, y: p.y, t }); } return pts; }
+  const trailA = sampleTrail(T.enter[0], T.pass[1]), trailB = sampleTrail(T.back[0], T.back[1]);
+  const dashRnd = P.rngFor('dashes');
+  const dashes = []; for (let i = 0; i < 400; i++) dashes.push(dashRnd(20, 30));
+  function drawTrail(ctx, trail, t, color, width, fadeFrom) {
+    // dashes along the path up to the plane's current position
+    ctx.save(); ctx.strokeStyle = color; ctx.lineWidth = width; ctx.lineCap = 'round';
+    let acc = 0, di = 0, inDash = true, dashLeft = dashes[0], gapLeft = 0, started = false;
+    const alpha = fadeFrom != null ? 1 - 0.55 * prog(t, fadeFrom, fadeFrom + 0.6) : 1;
+    ctx.globalAlpha = alpha;
+    ctx.beginPath();
+    for (let i = 1; i < trail.length; i++) {
+      if (trail[i].t > t) break;
+      const a = trail[i - 1], b = trail[i], L = Math.hypot(b.x - a.x, b.y - a.y);
+      if (inDash) { if (!started) { ctx.moveTo(a.x, a.y); started = true; } ctx.lineTo(b.x, b.y); dashLeft -= L; if (dashLeft <= 0) { inDash = false; gapLeft = 16; started = false; } }
+      else { gapLeft -= L; if (gapLeft <= 0) { inDash = true; di++; dashLeft = dashes[di % dashes.length]; } }
+      acc += L;
+    }
+    ctx.stroke(); ctx.restore();
+  }
+  // which character the plane has flown over (stamp times)
+  const stampT = glyphs.map(g => { for (let i = 1; i < trailA.length; i++) if (trailA[i].t >= T.pass[0] && trailA[i].x >= g.cx + 40) return trailA[i].t; return T.pass[1]; });
+
+  /* ------------------------------------------------------------ drawing: plane, clouds, stamps */
+  const drawPlane = P.drawPlane;
+  const clouds = [{ x: 300, y: 170, s: 64, v: 14, a: 1 }, { x: 1500, y: 130, s: 80, v: 10, a: 1 }, { x: 1750, y: 330, s: 46, v: 20, a: 0.85 }, { x: 120, y: 420, s: 40, v: 18, a: 0.8 }];
+  function drawClouds(t) { for (const c of clouds) { const x = ((c.x - c.v * t + 3000) % (1920 + 600 + OX * 2)) - 300 - OX; P.drawCloud(ctx, x, c.y, c.s, { alpha: c.a }); } }
+
+  function drawStamps(t) {
+    glyphs.forEach((g, i) => {
+      const u = prog(t, stampT[i], stampT[i] + 0.22); if (u <= 0) return;
+      const k = u < 0.55 ? lerp(1.55, 0.95, E.outCubic(u / 0.55)) : lerp(0.95, 1, E.outCubic((u - 0.55) / 0.45));
+      ctx.save(); ctx.translate(g.cx, g.cy); ctx.rotate(g.rot * (1 - u * 0.3)); ctx.scale(k, k); ctx.globalAlpha = Math.min(1, u * 3);
+      ctx.fillStyle = C.ink; ctx.font = `${SIZE}px 'Ma Shan Zheng'`; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+      ctx.fillText(g.ch, 0, SIZE * 0.04); ctx.restore();
+    });
+  }
+  const stampSplats = glyphs.map((g, i) => P.splat({ seed: 'B-stamp' + i, t0: stampT[i] + 0.04, n: 14, origin: [g.cx, g.cy + SIZE * 0.3], speed: [80, 420], dir: [-175, -5], size: [4, 11], life: [2.4, 3.2] }));
+
+  // underline = the skid mark
+  const underRS = P.inkPath([[skidX0 - 10, skidY + 4], [960, skidY - 1], [skidX1 + 30, skidY + 2]], { wobble: 2.0, seed: 17, freq: 0.006 });
+  const underLen = underRS[underRS.length - 1].s;
+  const underProf = u => 4 + 10 * Math.pow(Math.sin(Math.PI * clamp(u * 1.06)), 0.6);
+  const shower = new P.Confetti({ seed: 'B-shower', t0: T.land + 0.1, n: 110, box: [-240 - OX, -140, 1920 + 240 + OX, -20], speed: [220, 520], dir: [65, 115], gravity: 650, drag: 2.0, life: [2.2, 3.2], size: [9, 24], stagger: 0.6 });
+  const landSplat = P.splat({ seed: 'B-land', t0: T.land, n: 18, origin: [skidX0, skidY], speed: [80, 420], dir: [-170, -40], size: [4, 10] });
+
+  function drawKickerStamp(t) {
+    if (!ROLE) return;
+    const u = prog(t, T.stamp[0], T.stamp[1]); if (u <= 0) return;
+    const k = u < 0.5 ? lerp(1.7, 0.96, E.outCubic(u / 0.5)) : lerp(0.96, 1, E.outCubic((u - 0.5) / 0.5));
+    ctx.save(); ctx.translate(960, 822); ctx.rotate(-0.06); ctx.scale(k, k); ctx.globalAlpha = Math.min(1, u * 4) * 0.92;
+    ctx.font = "700 46px 'Noto Sans SC'"; ctx.textBaseline = 'middle'; ctx.fillStyle = C.coral;
+    ctx.letterSpacing = '10px'; const w = ctx.measureText(ROLE).width - 10; ctx.letterSpacing = '0px';
+    const bw = w + 84, bh = 96;
+    ctx.strokeStyle = C.coral; ctx.lineWidth = 5; ctx.beginPath(); ctx.roundRect(-bw / 2, -bh / 2, bw, bh, 12); ctx.stroke();
+    ctx.lineWidth = 1.8; ctx.beginPath(); ctx.roundRect(-bw / 2 + 9, -bh / 2 + 9, bw - 18, bh - 18, 7); ctx.stroke();
+    P.spacedText(ctx, ROLE, 0, 2, 10, 'center');
+    ctx.restore();
+    if (TAG) { const e2 = E.outCubic(prog(t, T.tag[0], T.tag[1])); if (e2 > 0) { ctx.save(); ctx.globalAlpha = e2; ctx.fillStyle = C.ink2; ctx.font = "400 30px 'Noto Sans SC'"; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillText(TAG, 960, 912 + (1 - e2) * 10); ctx.restore(); } }
+  }
+
+  /* ------------------------------------------------------------ frame */
+  function renderAt(t) {
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    ctx.drawImage(paper, 0, 0);
+    ctx.translate(OX, 0);
+    drawClouds(t);
+    drawTrail(ctx, trailA, t, C.ink3, 4, T.pass[1]);
+    if (t >= T.back[0]) drawTrail(ctx, trailB, t, C.ink3, 4, T.skid[1]);
+    drawStamps(t);
+    stampSplats.forEach(s => s.draw(ctx, t));
+    if (t >= T.skid[0]) P.inkLine(ctx, null, { _rs: underRS, width: 12, color: C.ink, profile: underProf, p: clamp((planeAt(t).x - skidX0 + 40) / (skidX1 - skidX0 + 70)) });
+    landSplat.draw(ctx, t);
+    drawKickerStamp(t);
+    const pl = planeAt(t);
+    if (pl.phase !== 'off') {
+      const sh = pl.phase === 'skid' || pl.phase === 'rest' ? skidY + 8 : (pl.phase === 'back' ? skidY + 8 : null);
+      drawPlane(ctx, pl.x, pl.y, pl.a, pl.s, sh);
+    }
+    if (t >= T.land) P.dust(ctx, skidX0 + 10, skidY + 2, t, T.land, { seed: 'B-dust', n: 8, scale: 1.3 });
+    shower.draw(ctx, t);
+    P.fade(ctx, FW, END_COLOR, prog(t, T.fade[0], T.fade[1]));
+  }
+  window.renderAt = renderAt;
+
+  P.fontsReady([`${SIZE}px 'Ma Shan Zheng'`, "700 44px 'Noto Sans SC'", "400 30px 'Noto Sans SC'"]).then(() => { window.__READY__ = true; renderAt(0); });
+})();
+</script>
+</body>
+</html>

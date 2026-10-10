@@ -7,7 +7,7 @@ Inputs
   台本/script_data.py            scenes, rows, subtitle text, visual notes with 【动作：xxx】
   制作/voice/durations.json      optional {segment_id: seconds} measured from the TTS clips (else estimate)
   制作/voice/alignment.json      optional {segment_id: [{text, start, end}]} line timing inside each clip
-  片头片尾/intro|outro/index.html window.DURATION (fallback 3.8 s / 4.8 s)
+  片头片尾/intro|outro/index.html window.DURATION (fallback 4.8 s / 9.0 s; 2026-10-03 前是 3.8 / 4.8)
 Outputs
   制作/timeline.json             see references/pipeline-contract.md §6 (never edit by hand)
   制作/chapters_bilibili.txt     "m:ss 章节名" lines for the Bilibili chapter field

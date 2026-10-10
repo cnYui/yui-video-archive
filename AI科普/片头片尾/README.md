@@ -1,114 +1,95 @@
-# 片头 / 片尾 · 终端小票（Terminal Receipt）
+# 悠一片头片尾（所有视频共用，必加）
 
-片头和片尾都是 HTML 动画，改一下 JSON 就能重新出片，不需要打开任何剪辑软件。
+**用户 2026-10-03：“用片头二，然后把片头片尾统一同步到所有 skill 中……要求所有生成的视频都需要使用片头和片尾。”**
 
-> **2026-09-29 起名字统一为“悠一”**（用户：“之后统一换成悠一”）：`intro/data.json` 的 `name`、`outro/data.json` 的 `signature` 都是 `悠一`，两个页面在没传名字 / 签名时的默认值也改成了悠一。片头走下面说的“光标逐字打字”版，片尾是文字印章；时长、节奏不变（3.8 s / 4.8 s）。新成品：`out/悠一_intro_2340.mp4`（2340×1080、30 fps）、`out/悠一_intro_sheet.png`。下文里的 UE 字标仍然保留：只有明确写 `"UE"` 才会出现。改之前的数据和页面备份在 `AI科普/_旧稿/片头片尾_UE数据_20260929/`。
+所有合集（原LAI如此、AI每日日报、Way to AGI、AI时代计算机专业研究生如何用AI、OpenAI相关、Claude Code相关、AI实操）和独立视频都用这一套，不另做、不省略。**例外：短视频开头结尾都不加**（用户 2026-10-04：“短视频开头和结尾不要用开场和收尾的视频片段”），短视频走技能 `短视频/skill/short-video/`。各技能的 SKILL.md 里都有「片头片尾（所有视频必加）」一节指向这里。
 
-```
-ue-packaging/
-├─ intro/index.html      片头（3.8 秒）
-├─ intro/data.json       片头数据：名字、tagline
-├─ intro/data.tagline.json   带 tagline 的示例
-├─ outro/index.html      片尾（4.8 秒）
-├─ outro/data.json       片尾数据：制作清单、感谢语、签名
-├─ outro/data.stress.json    6 条长文本的压力测试示例
-├─ fonts/                字体（全部 SIL OFL 1.1，可商用）
-├─ render.py             逐帧渲染器（HTML → MP4 / PNG）
-├─ out/                  成片与联系表
-└─ _archive/、_qa/        制作过程中的评审和测试文件，与成片无关，确认不需要后可以自行删除
+| | 文件 | 时长 | 内容 |
+|---|---|---|---|
+| 片头 | `intro/index.html` + `intro/data.json` | 4.8 s | Claude 品牌色「对话气泡」：`>` → `{ }` → `</>` → 神经网络（前向传播点亮每一层）→ 收进标 **LLM** 的芯片 → 对话气泡里三个点跳动（第三个是橙色原子）→ 点变成“悠一”、橙点变句号 → 名字居中，淡黄荧光笔划过“AI鼓励师” → 淡到白 |
+| 片尾 | `outro/index.html` + 每期的数据 | 9.0 s | 纸飞机丢下一封信，信展开成一页信纸：左栏**参考文献**、右栏**致谢**、感谢语、“—— 悠一”和朱印，之后定格 |
+
+时长以页面里的 `window.DURATION` 为准。脚本里不要写死，用 `pack_info.py`：
+
+```python
+import sys; sys.path.insert(0, r"D:\大疆\AI科普\片头片尾")
+from pack_info import intro_seconds, outro_seconds, ADD_TO_VIDEO     # 4.8, 9.0, add_to_video.py 的路径
 ```
 
----
+SRT、B 站 / YouTube 章节时间 = 正片时间 + `intro_seconds()`。
 
-## 一、片尾：改 `outro/data.json`
+## 怎么加到视频上
+
+| 场景 | 做法 |
+|---|---|
+| 《原LAI如此》 | `assemble.py` 自动渲染并拼接；片尾数据 = `episode.json` 的 `outro_references`、`outro_items`、`outro_closing` |
+| 《AI每日日报》 | `assemble_wide.py` 自动（2340 宽原生渲染）；`make_episode.py` 把当期新闻写进 `outro_references` |
+| 其他所有视频 | `python D:\大疆\AI科普\skill\yuanlai-ruci-episode\scripts\add_to_video.py <正片.mp4> --outro-data <片尾.json> -o <成片.mp4>`（说明：`AI科普\skill\yuanlai-ruci-episode\references\add-intro-outro.md`） |
+
+## 数据
+
+片头 `intro/data.json`（一般不改）：
+
+```json
+{ "name": "悠一", "role": "AI鼓励师", "endColor": "#FFFFFF" }
+```
+
+`endColor` 是片头最后淡到的颜色（默认白，接白底正片；`"none"` 不淡）。
+
+片尾（**每期问用户**，不沿用上一期；完整例子 `outro/data.example.json`）：
 
 ```json
 {
-  "items": [
-    { "label": "拍摄", "value": "Pocket 4P" },
-    { "label": "剪辑", "value": "ChatCut" },
-    { "label": "视频剪辑模型", "value": "Opus 5.5" }
-  ],
-  "closing": "感谢大家看到最后",
+  "references": ["Anthropic，Claude Fable 5.1 模型卡与发布说明，2026-09", "…"],
+  "items": [ { "label": "配音", "value": "悠一" }, { "label": "剪辑", "value": "Claude Code（Opus 5.5）" } ],
+  "closing": "感谢观看，我们下期再见",
   "signature": "悠一"
 }
 ```
 
-| 字段 | 作用 | 说明 |
+| 字段 | 说明 |
+|---|---|
+| `references` | 参考文献，字符串，≤ 8 条，每条最多折 3 行；没有就 `[]`（致谢占满整宽） |
+| `items`（或 `thanks`） | 致谢 / 制作清单 `{label, value}`，≤ 8 条，label ≤ 4 字最好看 |
+| `references_title` / `thanks_title` | 栏目标题，默认“参考文献”“致谢” |
+| `closing` | 感谢语（逐笔手写） |
+| `signature` | 签名，默认“悠一”；朱印取前两个字 |
+
+`outro/data.json` 是 assemble 的底稿（会被每期的数据覆盖），不要往里写某一期的内容。
+
+## 视觉规范（Claude 品牌色）
+
+| 用途 | 色值 | 出处 |
 |---|---|---|
-| `items` | 小票上的每一行“label ······ value” | 建议 1–6 条（最多支持 8 条，多出的会被忽略）。行首编号 01/02… 和底部的 `ITEMS 03` 会自动计算 |
-| `label` | 左侧灰色标签 | 建议不超过 6 个汉字 |
-| `value` | 右侧内容 | 最长约 40 个字符，中英混排都可以 |
-| `closing` | 屏幕上的大字感谢语 | 默认“感谢大家看到最后”。由橙色光标一个字一个字打出来，打完后光标轻闪两下再常亮 |
-| `signature` | 橙色印章里的签名 | 默认 `悠一`（文字印章）。写 `UE` 时用和片头一样的自绘字标；写别的名字会自动换成文字印章 |
-| `title`（可选） | 小票标题 | 不写就是“本期制作清单” |
+| 大背景 | 米白 `#FAF9F5`（片尾信纸纯白） | Anthropic 官方 brand-guidelines 技能（github.com/anthropics/skills）的 Light；claude.dev CSS |
+| 墨色 | `#141413` | 同上 Dark / claude.dev `--bg` |
+| 强调 · 橙 | `#D97757`（深橙 `#C15F3C`） | 同上 Orange / claude.dev `--accent` |
+| 强调 · 黄 | `#F5DB9A` | claude.dev 官方像素宇航员调色板的小星光黄 |
+| 灰 | `#B0AEA5`、`#E8E6DC` | brand-guidelines 的 Mid Gray / Light Gray |
 
-**增删条目**：在 `items` 里复制或删除一行 `{ "label": "…", "value": "…" }`。注意两行之间要有英文逗号，最后一行后面不要逗号。例如加一条致谢：
+白做大背景，橙、黄只做强调（原子、荧光笔、编号、标签、朱印），不引入别的色相。字体：Noto Sans SC（中文）、Poppins（品牌标题字体，“AI”“LLM”）、马善政楷书（片尾手写缺字时兜底），都是 OFL，在 `fonts/`。
 
-```json
-    { "label": "视频剪辑模型", "value": "Opus 5.5" },
-    { "label": "特别致谢", "value": "评论区的 @观众昵称一 和 @观众昵称二" }
-```
+## 技术约定（改页面前看）
 
-**排版是自动的**，不用手动调字号：
+- Canvas 2D 逐帧绘制，画面只取决于 t：渲染器每帧调 `window.renderAt(t)`；没有 requestAnimationFrame、定时器、`Date`，随机数都用固定种子。
+- 页面设 `window.DURATION`、开始时 `window.__READY__ = false`，字体加载完、排好版再设 `true`。
+- 画面宽度：`window.__CANVAS__` > data 的 `canvas` [W, H] > 1920；1920 舞台居中，更宽时背景铺满。`device_scale_factor` > 1（4K 输入）时按设备像素出图（`common/pack.js` 的 `setup()` / `reset()`），不是放大。
+- `common/pack.js`（缓动、两栏排版、逐笔手写、纸屑…）、`common/brand.js`（品牌色、符号链的几何和保角变形，从旧片头移植）、`common/handdata.js`（手写笔画表：GB2312 一级 3755 字 + ASCII + 标点；`python build_handdata.py` 重建；从 hanzi-writer-data 来，Arphic 授权，不进 git）。
+- 片头片尾源文件只读：要改先在 `候选2026-10/` 那样的副本里试，用户确认再替换。
 
-- 条目少的时候字大（默认 3 条时正文约 48px，感谢语约 72px）；条目多、文字长的时候会自动缩小字号、加宽小票，保证不溢出、不出安全框。
-- value 太长时最多折成两行。如果内容里有 `·`、`、`、`，`、`/` 这类分隔符，会优先在分隔符处断开，并且让两行长度尽量接近。`@昵称` 不会被拆开。
-- 感谢语太长时会在逗号后面自然折成两行，逗号不会出现在行首；两行时光标会跟着换行继续打字。
-- 某一行只写了 `label`、`value` 留空：只显示标签，不画点线；只写了 `value`、`label` 留空：这一行作为左对齐的备注显示；两个都空的行会被自动跳过。
-- 所有条目在打印完成后同时完整可见：3 条时约 3.8 秒，6 条时约 3.5 秒。最后约 0.58 秒是完全静止的定格画面。
-
-## 二、片头：改 `intro/data.json`
-
-```json
-{
-  "name": "悠一",
-  "tagline": ""
-}
-```
-
-| 字段 | 作用 | 说明 |
-|---|---|---|
-| `name` | 片头出现的名字 | 默认 `悠一`（光标逐字打字的版本：芯片收成下划线光标，打出“悠一_”）。写 `UE` 时显示自绘单线字标（E 的中横是橙色“芯片核心”）。写别的名字（如“小元Lab”）也是光标逐字打字的版本 |
-| `tagline` | 名字下方的一行小字 | 默认留空；可以写“拆开AI看看”这类不超过约 10 个汉字的短句，会跟着光标逐字打出 |
-| `endColor`（可选） | 片头最后约 10 帧的纯色 | 默认墨黑 `#141414`，接暗色正片或片尾都不会闪。如果正片开头很亮，可以改成 `"#EDEAE3"`（纸白） |
-
-片头节奏（名字是 UE 时；悠一等其他名字在 1.5 秒芯片收成光标、1.8 秒起逐字打出，其余相同）：0.2 秒敲出 `>` → `{ }` → `</>` → 1.3 秒变成 AI 芯片 → 芯片先左右分开成 `[ ]`，左半边立起来弯成 U，右半边翻身成 E；芯片核心缩成一小块橙色嵌在墙里跟着走，最后从 E 的竖笔里弹出成为橙色中横，约 1.9 秒成形 → 完整停留约 1.2 秒 → 像终端里全选删除一样把名字清掉 → 光标张开成纯色画面，最后 10 帧纯墨黑，可以直接硬切进正片。
-
-## 三、重新出片
-
-先进入 `ue-packaging` 目录：
+## 预览 / 出片
 
 ```bash
-cd ue-packaging
-
-# 片头
-python render.py intro/index.html --data intro/data.json -o out/悠一_intro.mp4
-
-# 片尾
-python render.py outro/index.html --data outro/data.json -o out/悠一_outro.mp4
-
-# 只想快速看效果：出一张 16 格联系表（几秒钟就好）
-python render.py outro/index.html --data outro/data.json --sheet out/悠一_outro_sheet.png
-
-# 看某几个时刻的单帧
-python render.py outro/index.html --data outro/data.json --stills 1.5,4.7 --stills-dir out/stills
+cd D:\大疆\AI科普\片头片尾
+python pack_info.py                                                                   # 路径和时长
+python render.py intro/index.html --data intro/data.json --width 2340 --sheet out/悠一_片头_sheet.png
+python render.py outro/index.html --data outro/data.example.json --width 2340 -o out/悠一_片尾_2340.mp4
 ```
 
-- 成片规格：1920×1080、60fps、H.264（MP4）。
-- 如果想保留多个版本，可以复制一份 JSON（比如 `outro/ep12.json`），用 `--data outro/ep12.json` 指定，输出文件名也相应改一下。
-- 渲染器如果报 `PAGE ERRORS`（退出码 2），多半是 JSON 格式写错了（常见原因是漏了逗号或引号）。
-- 运行环境：Python 3、`pip install playwright pillow` 后执行 `playwright install chromium`，并且需要系统里有 `ffmpeg`。
-- MP4 里写入了 BT.709 色彩标记（色域、传递函数、矩阵），导入剪辑软件或上传 B 站时颜色不会被误判。
-- 同一个时间点每次渲染得到的画面相同。唯一的例外是片尾印章的颗粒纹理（SVG 滤镜）：单独抽帧和整段渲染相比，个别像素可能差 1–5 个色阶，肉眼看不出来，也不影响成片。
+`out/` 里有当前版本的样片和联系表（不进 git）。
 
-## 四、字体与版权
+## 历史
 
-全部使用 `fonts/` 里的字体，均为 **SIL Open Font License 1.1**，可免费商用（包括 B 站商业视频），授权文件在 `fonts/OFL-*.txt`：
-
-- Noto Sans SC：中文标题、标签、感谢语
-- Space Grotesk：英文 value、芯片上的 “AI”
-- JetBrains Mono：CREDITS / RECEIPT / ITEMS、条码数字、行首编号
-- UE 字标和印章是自绘 SVG 线条，不依赖任何字体。
-
-不使用任何系统字体，也不加载任何网络资源；图标全部是自己画的，没有使用任何公司的 logo。
+- 2026-09-26 起：“终端小票”版（纸白 + 墨黑 + 橙 #FF4F1A，片头 3.8 s 符号变形后打出 UE / 悠一，片尾 4.8 s 制作清单 + 印章）。2026-10-03 挪到 `AI科普\_旧稿\片头片尾_终端小票_20261003\`。
+- 2026-10-02 重新设计：第一轮纸纹小主角三版（A 鼓励球 / B 纸飞机 / C 铅笔灯泡）被否；第二轮按“现行片头的符号变形 + Claude 品牌色”做了三版片头（打字机 / 对话气泡 / token 像素）+ B 信纸片尾换品牌色。用户选了对话气泡。全部候选在 `候选2026-10/`，记录 `docs\ai\context\20261002-220024-intro-outro-redesign-candidates_CN.md`。
+- 2026-10-03 定稿并同步到所有技能：记录 `docs\ai\context\20261003-093049-intro-outro-sync-all-skills_CN.md`。

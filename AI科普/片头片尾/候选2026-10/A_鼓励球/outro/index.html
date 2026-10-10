@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>悠一 · Outro A · 鼓励球</title>
+<link rel="stylesheet" href="../../../fonts/fonts.css">
+<link rel="stylesheet" href="../../fonts/fonts2.css">
+<script src="../../common/handdata.js"></script>
+<script src="../../common/pack.js"></script>
+<style>html, body { margin: 0; overflow: hidden; background: #ECE6D9; }</style>
+</head>
+<body>
+<script>
+(function () {
+  'use strict';
+  /* 版本 A「鼓励球」片尾：小球跳进来，当笔尖写出两个栏目标题（参考文献 / 致谢），条目一行行“墨迹”铺开；
+   * 再跳到底部写感谢语、用珊瑚色写签名，落座、撒一点墨点、眨眼，定格到结束。9.0 s。
+   * 数据：references（字符串数组）、thanks（{label, value} 数组；items 是旧字段名，同义）、closing、signature、
+   *       references_title / thanks_title（默认“参考文献”“致谢”）。两栏自动按内容缩字号（32 → 20 px），每条最多两行。 */
+  const P = window.PACK, { C, E, clamp, lerp, prog } = P;
+  const RAW = Object.assign({}, window.__DATA__ || {});
+  const D = {
+    references: Array.isArray(RAW.references) ? RAW.references : [],
+    thanks: Array.isArray(RAW.thanks) ? RAW.thanks : Array.isArray(RAW.items) ? RAW.items : [],
+    refTitle: String(RAW.references_title == null ? '参考文献' : RAW.references_title).trim(),
+    thanksTitle: String(RAW.thanks_title == null ? '致谢' : RAW.thanks_title).trim(),
+    closing: String(RAW.closing == null ? '感谢观看，我们下期再见' : RAW.closing).trim(),
+    signature: String(RAW.signature == null ? '悠一' : RAW.signature).trim() || '悠一',
+  };
+
+  window.DURATION = 9.0;
+  window.__READY__ = false;
+
+  const { FW, OX, ctx } = P.setup(RAW);
+  const paper = P.makePaper(FW, { seed: 23, mottle: 0.07 });
+  const R = 40;
+
+  /* ------------------------------------------------------------ layout */
+  const BOX = { x0: 120, y0: 252, x1: 1800, y1: 846 };
+  const FONTS = { fontBody: "400 %spx 'Noto Sans SC'", fontNum: "700 %spx 'Noto Sans SC'", fontLabel: "600 %spx 'Noto Sans SC'", fsMax: 42, fsMin: 22, lh: 1.42, entryGap: 0.55, maxLines: 3, split: 0.58, gap: 90 };
+  const HEAD_Y0 = 152, RULE_DY = 54;
+  const T = { enter: [0.0, 0.55], h1: [0.55, 1.25], hop12: [1.25, 1.45], h2: [1.45, 1.85], hopC: [1.85, 2.2], closing: [2.2, 3.5], hopS: [3.5, 3.7], sig: [3.7, 4.3], hopSeat: [4.3, 4.5], land: 4.5, wink: [5.1, 5.4] };
+  const S = {};                                        // everything that depends on measured text (rebuilt once fonts are in)
+  function build() {
+    const LAY = P.layoutCredits(ctx, D, BOX, FONTS);
+    // short credits sit a little lower so the page is balanced (never more than 110 px)
+    const tallest = Math.max(0, ...LAY.cols.map(c => c.height));
+    const dy = LAY.cols.length ? clamp((BOX.y1 - BOX.y0 - tallest) / 2, 0, 110) : 0;
+    LAY.cols.forEach(c => c.entries.forEach(e => { e.y += dy; }));
+    const cols = LAY.cols, HEAD_Y = HEAD_Y0 + dy, RULE_Y = HEAD_Y + RULE_DY;
+    // headers (hand-written by the ball); a column without entries has no header
+    const heads = cols.map((c, i) => new P.Hand({ text: c.kind === 'refs' ? D.refTitle : D.thanksTitle, x: c.x, y: HEAD_Y, size: 64, align: 'left', color: C.ink, seed: 'A-head' + i, pen: 0.09 }));
+    const hT = [];
+    if (heads.length === 1) hT.push([T.h1[0], T.h1[1]]);
+    else if (heads.length === 2) hT.push([T.h1[0], T.h1[1]], [T.h2[0], T.h2[1]]);
+    heads.forEach((h, i) => h._schedule(hT[i][0], hT[i][1]));
+    const rules = cols.map((c, i) => ({ rs: P.inkPath([[c.x, RULE_Y], [c.x + c.w * 0.5, RULE_Y - 2], [c.x + c.w, RULE_Y + 1]], { wobble: 1.6, seed: 31 + i, freq: 0.008 }), t0: hT[i][1], t1: hT[i][1] + 0.3 }));
+    const entryT = [];
+    cols.forEach((c, ci) => { const start = (ci === 0 ? T.h1[0] + 0.6 : T.h2[0] + 0.4); c.entries.forEach((e, i) => entryT.push({ ci, i, t0: start + i * 0.22, t1: start + i * 0.22 + 0.38 })); });
+    const closing = new P.Hand({ text: D.closing, x: 120, y: 938, size: 62, align: 'left', color: C.ink, t0: T.closing[0], t1: T.closing[1], seed: 'A-closing', pen: 0.088 });
+    const sig = new P.Hand({ text: D.signature, x: 1690, y: 938, size: 74, align: 'right', color: C.coral, t0: T.sig[0], t1: T.sig[1], seed: 'A-sig', pen: 0.09 });
+    Object.assign(S, { LAY, cols, heads, hT, rules, entryT, closing, sig });
+  }
+  build();
+  const seat = { x: 1760, y: 936 };
+  // where the ball must be at the start of each writing task
+  const penStart = h => { const p = h.pen(h.t0); return [p.x, p.y - R * 0.25]; };
+  const penEnd = h => { const p = h.pen(h.end + 1); return [p.x, p.y - R * 0.25]; };
+
+  /* ------------------------------------------------------------ ball */
+  function hop(a, b, t0, t1, t, height) {
+    const u = prog(t, t0, t1), e = E.inOutSine(u);
+    return { x: lerp(a[0], b[0], e), y: lerp(a[1], b[1], e) - Math.sin(Math.PI * u) * (height || Math.min(220, P.dist(a, b) * 0.35 + 40)), u };
+  }
+  function ball(t) {
+    const b = { r: R, sx: 1, sy: 1, rot: 0, look: [0.2, 0.3], smile: 0.5, shadow: null, mode: 'air' };
+    const { heads, hT, closing, sig } = S;
+    const firstTarget = heads.length ? penStart(heads[0]) : penStart(closing);
+    const writing = h => { const p = h.pen(t); b.x = p.x; b.y = p.y - R * 0.25; b.look = [0.1, 0.85]; b.sy = p.down ? 0.94 : 1; b.sx = p.down ? 1.05 : 1; b.mode = 'write'; };
+    const stretchTo = (a, c) => { const dx = c[0] - a[0], dy = c[1] - a[1]; b.rot = Math.atan2(dy, dx); b.sx = 1.12; b.sy = 0.9; b.look = [clamp(dx / 600, -1, 1), clamp(dy / 600, -1, 1)]; };
+    if (t < T.enter[1]) { const a = [-80, -60]; const h = hop(a, firstTarget, T.enter[0], T.enter[1], t, 60); b.x = h.x; b.y = h.y; stretchTo(a, firstTarget); b.rot *= 0.3; return b; }
+    if (heads.length) {
+      if (t < hT[0][1]) { writing(heads[0]); return b; }
+      if (heads.length === 2) {
+        if (t < T.hop12[1]) { const a = penEnd(heads[0]), c = penStart(heads[1]); const h = hop(a, c, T.hop12[0], T.hop12[1], t); b.x = h.x; b.y = h.y; b.look = [0.8, -0.2]; return b; }
+        if (t < hT[1][1]) { writing(heads[1]); return b; }
+      }
+    }
+    if (t < T.hopC[1]) { const a = heads.length ? penEnd(heads[heads.length - 1]) : [-80, -60], c = penStart(closing); const h = hop(a, c, T.hopC[0], T.hopC[1], t, 260); b.x = h.x; b.y = h.y; b.look = [-0.7, 0.5]; return b; }
+    if (t < T.closing[1]) { writing(closing); return b; }
+    if (t < T.hopS[1]) { const a = penEnd(closing), c = penStart(sig); const h = hop(a, c, T.hopS[0], T.hopS[1], t, 120); b.x = h.x; b.y = h.y; b.look = [0.9, 0.1]; return b; }
+    if (t < T.sig[1]) { writing(sig); return b; }
+    if (t < T.hopSeat[1]) { const a = penEnd(sig), c = [seat.x, seat.y]; const h = hop(a, c, T.hopSeat[0], T.hopSeat[1], t, 120); b.x = h.x; b.y = h.y; b.look = [0, -0.3]; b.shadow = { y: seat.y + R + 8, k: 0.8, a: h.u }; return b; }
+    const u = prog(t, T.land, T.land + 0.42), s = Math.sin(Math.PI * clamp(u * 1.6)) * 0.3 * (1 - u * 0.6);
+    b.sx = 1 + s; b.sy = 1 - s * 0.9; b.x = seat.x; b.y = seat.y + R * (1 - b.sy); b.shadow = { y: seat.y + R + 8, k: 1 }; b.look = [0, 0]; b.smile = 0.95; b.mode = 'seat';
+    return b;
+  }
+  const splatLand = P.splat({ seed: 'A-outro-splat', t0: T.land, n: 22, origin: [seat.x, seat.y + R], speed: [100, 480], dir: [-175, -5], size: [4, 12] });
+  const splatSig = P.splat({ seed: 'A-outro-sig', t0: T.sig[0] + 0.05, n: 10, origin: penStart(S.sig), speed: [60, 300], dir: [-170, -10], size: [3, 9], colors: [C.coral] });
+
+  /* ------------------------------------------------------------ drawing */
+  function drawEntries(t) {
+    const { entryT, cols, LAY } = S;
+    ctx.textBaseline = 'middle';
+    for (const et of entryT) {
+      const p = E.outCubic(prog(t, et.t0, et.t1)); if (p <= 0) continue;
+      const c = cols[et.ci], e = c.entries[et.i], lh = LAY.lh, fs = LAY.fs;
+      ctx.save(); ctx.beginPath(); ctx.rect(c.x - 6, e.y - 6, (c.w + 12) * p, e.h + 12); ctx.clip();
+      if (c.kind === 'refs') {
+        ctx.fillStyle = C.coral; ctx.font = FONTS.fontNum.replace('%s', fs); ctx.textAlign = 'left'; ctx.fillText(e.num, c.x, e.y + lh / 2);
+        ctx.fillStyle = C.ink; ctx.font = FONTS.fontBody.replace('%s', fs);
+        e.lines.forEach((ln, i) => ctx.fillText(ln, c.x + e.numW, e.y + lh / 2 + i * lh));
+      } else {
+        if (e.label) { ctx.fillStyle = C.coral; ctx.font = FONTS.fontLabel.replace('%s', fs); ctx.textAlign = 'left'; ctx.fillText(e.label, c.x, e.y + lh / 2); }
+        ctx.fillStyle = C.ink; ctx.font = FONTS.fontBody.replace('%s', fs);
+        e.lines.forEach((ln, i) => ctx.fillText(ln, c.x + e.labelW, e.y + lh / 2 + i * lh));
+      }
+      // the wet edge: a small coral tick at the wipe front while it moves
+      if (p < 1) { ctx.restore(); ctx.save(); ctx.fillStyle = C.coral; ctx.globalAlpha = 0.9; ctx.fillRect(c.x - 6 + (c.w + 12) * p - 3, e.y + 4, 3, e.h - 8); }
+      ctx.restore();
+    }
+  }
+  const blinkK = (t, tb, d = 0.14) => { const u = prog(t, tb, tb + d); return u <= 0 || u >= 1 ? 0 : Math.sin(Math.PI * u); };
+  function renderAt(t) {
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    ctx.drawImage(paper, 0, 0);
+    ctx.translate(OX, 0);
+    const { heads, rules, closing, sig } = S;
+    heads.forEach(h => { if (t > h.t0) h.draw(ctx, t); });
+    rules.forEach(r => { if (t > r.t0) P.inkLine(ctx, null, { _rs: r.rs, width: 4, color: C.ink, p: E.outCubic(prog(t, r.t0, r.t1)) }); });
+    drawEntries(t);
+    if (t > closing.t0) closing.draw(ctx, t);
+    if (t > sig.t0) sig.draw(ctx, t);
+    splatSig.draw(ctx, t); splatLand.draw(ctx, t);
+    const b = ball(t);
+    const wink = clamp(Math.min(prog(t, T.wink[0], T.wink[0] + 0.08), 1 - prog(t, T.wink[1] - 0.08, T.wink[1])));
+    const blink = Math.max(blinkK(t, 1.0), blinkK(t, 2.9), blinkK(t, 6.9), blinkK(t, 7.9, 0.12));
+    P.drawBall(ctx, { x: b.x, y: b.y, r: R, sx: b.sx, sy: b.sy, rot: b.rot, look: b.look, blink, wink, smile: b.smile, shadow: b.shadow });
+    if (t >= T.land) P.dust(ctx, seat.x, seat.y + R + 6, t, T.land, { seed: 'land', n: 6 });
+  }
+  window.renderAt = renderAt;
+
+  P.fontsReady(["400 30px 'Noto Sans SC'", "600 30px 'Noto Sans SC'", "700 30px 'Noto Sans SC'", "60px 'Ma Shan Zheng'"]).then(() => {
+    build();                                            // measured with real fonts now
+    window.__READY__ = true; renderAt(0);
+  });
+})();
+</script>
+</body>
+</html>

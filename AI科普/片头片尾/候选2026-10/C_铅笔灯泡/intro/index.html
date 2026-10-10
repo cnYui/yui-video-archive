@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>悠一 · Intro C · 铅笔灯泡</title>
+<link rel="stylesheet" href="../../../fonts/fonts.css">
+<link rel="stylesheet" href="../../fonts/fonts2.css">
+<script src="../../common/handdata.js"></script>
+<script src="../../common/pack.js"></script>
+<style>html, body { margin: 0; overflow: hidden; background: #ECE6D9; }</style>
+</head>
+<body>
+<script>
+(function () {
+  'use strict';
+  /* 版本 C「铅笔与灯泡」：一支铅笔在纸上勾出一只灯泡，点一下，灯泡亮起来、长出笑脸；两个剪纸风的大字从上面砸下来，
+   * 铅笔画下划线、用铅笔字写出“AI鼓励师”，然后退场。灯泡悬在名字上方轻轻浮动、眨眼。5.5 s，最后 0.3 s 淡到 endColor。 */
+  const P = window.PACK, { C, E, clamp, lerp, prog } = P;
+  const RAW = Object.assign({ name: '悠一', role: 'AI鼓励师', tagline: '', endColor: '#FFFFFF' }, window.__DATA__ || {});
+  const NAME = String(RAW.name == null ? '' : RAW.name).trim() || '悠一';
+  const ROLE = String(RAW.role == null ? '' : RAW.role).trim();
+  const TAG = String(RAW.tagline == null ? '' : RAW.tagline).trim();
+  const END_COLOR = RAW.endColor === 'none' ? 'none' : P.hexOr(RAW.endColor, '#FFFFFF');
+
+  window.DURATION = 5.5;
+  window.__READY__ = false;
+
+  const { FW, OX, ctx } = P.setup(RAW);
+  const paper = P.makePaper(FW, { seed: 77, mottle: 0.07 });
+  const PEN_A = -0.96;                                  // pencil lean (rad) while writing
+
+  /* ------------------------------------------------------------ timeline */
+  const T = { sketch: [0.3, 1.32], tap: [1.33, 1.5], on: 1.46, rays: [1.48, 1.85], face: [1.55, 1.8], away: [1.5, 1.95],
+              drop: [2.25, 2.6], under: [2.95, 3.15], kicker: [3.2, 3.95], exit: [4.0, 4.45], tag: [4.1, 4.4], wink: [4.55, 4.85], fade: [5.2, 5.5] };
+
+  /* ------------------------------------------------------------ the bulb sketch (strokes the pencil draws) */
+  const B = { cx: 960, cy: 232, r: 82 };
+  const nw = B.r * 0.58, neckY = B.cy + B.r * 0.82, baseY = B.cy + B.r * 1.62;
+  const arcPts = []; for (let i = 0; i <= 60; i++) { const a = Math.PI * 0.69 + i / 60 * Math.PI * 1.62; arcPts.push([B.cx + Math.cos(a) * B.r, B.cy + Math.sin(a) * B.r]); }
+  const sketchDefs = [
+    arcPts,
+    [[B.cx - nw, neckY - B.r * 0.1], [B.cx - nw, baseY - B.r * 0.46]],
+    [[B.cx + nw, neckY - B.r * 0.1], [B.cx + nw, baseY - B.r * 0.46]],
+    [[B.cx - nw - 2, baseY - B.r * 0.46], [B.cx + nw + 2, baseY - B.r * 0.46]],
+    [[B.cx - nw - 2, baseY - B.r * 0.46 + B.r * 0.153], [B.cx + nw + 2, baseY - B.r * 0.46 + B.r * 0.153]],
+    [[B.cx - nw - 2, baseY - B.r * 0.46 + B.r * 0.306], [B.cx + nw + 2, baseY - B.r * 0.46 + B.r * 0.306]],
+    [[B.cx - nw - 2, baseY], [B.cx + nw + 2, baseY]],
+    [[B.cx - nw * 0.6, neckY], [B.cx - B.r * 0.3, B.cy - B.r * 0.1], [B.cx - B.r * 0.1, B.cy + B.r * 0.3], [B.cx + B.r * 0.1, B.cy - B.r * 0.1], [B.cx + B.r * 0.3, B.cy + B.r * 0.3], [B.cx + nw * 0.6, neckY]],
+  ];
+  const sketch = sketchDefs.map((pts, i) => ({ rs: P.inkPath(pts, { wobble: 1.3, seed: 100 + i, freq: 0.02 }) }));
+  (function schedule() {                                // time proportional to length, small pauses between strokes
+    const total = sketch.reduce((a, s) => a + s.rs[s.rs.length - 1].s, 0), pause = 0.05, avail = T.sketch[1] - T.sketch[0] - pause * (sketch.length - 1);
+    let t = T.sketch[0];
+    for (const s of sketch) { const L = s.rs[s.rs.length - 1].s; s.a = t; s.b = t + avail * L / total; t = s.b + pause; }
+  })();
+  function sketchPen(t) {                               // pencil tip while sketching
+    for (let i = 0; i < sketch.length; i++) {
+      const s = sketch[i], L = s.rs[s.rs.length - 1].s;
+      if (t < s.a) { const p = s.rs[0]; if (i === 0) return { x: p.x, y: p.y, down: false }; const q = sketch[i - 1].rs[sketch[i - 1].rs.length - 1]; const u = E.inOutSine(prog(t, sketch[i - 1].b, s.a)); return { x: lerp(q.x, p.x, u), y: lerp(q.y, p.y, u) - Math.sin(Math.PI * u) * 18, down: false }; }
+      if (t < s.b) { const p = P.pointAt(s.rs, L * E.minJerk(prog(t, s.a, s.b))); return { x: p.x, y: p.y, down: true }; }
+    }
+    const last = sketch[sketch.length - 1].rs; const p = last[last.length - 1]; return { x: p.x, y: p.y, down: false };
+  }
+
+  /* ------------------------------------------------------------ the name: paper-cut characters */
+  const chars = [...NAME];
+  const SIZE = chars.length <= 2 ? 290 : chars.length === 3 ? 250 : Math.min(250, 820 / chars.length);
+  const ADV = SIZE * 1.04, NAME_W = ADV * chars.length, NAME_X0 = 960 - NAME_W / 2, NAME_Y = 592;
+  const glyphs = chars.map((ch, i) => ({ ch, cx: NAME_X0 + ADV * (i + 0.5), t0: T.drop[0] + i * 0.14 }));
+  function glyphPos(g, t) {                             // -> {y, sx, sy, landed}
+    const u = prog(t, g.t0, g.t0 + 0.32);
+    if (u < 1) return { y: lerp(NAME_Y - 760, NAME_Y, E.inQuad(u)), sx: 1, sy: 1 + 0.08 * u, landed: false };
+    const v = prog(t, g.t0 + 0.32, g.t0 + 0.6), s = Math.sin(Math.PI * clamp(v * 1.3)) * (1 - v * 0.5);
+    return { y: NAME_Y + s * 10, sx: 1 + s * 0.09, sy: 1 - s * 0.14, landed: true };
+  }
+  function drawName(t) {
+    ctx.font = `900 ${SIZE}px 'Noto Sans SC'`; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+    for (const g of glyphs) {
+      if (t < g.t0) continue;
+      const p = glyphPos(g, t);
+      ctx.save(); ctx.translate(g.cx, p.y); ctx.scale(p.sx, p.sy);
+      if (p.landed) { ctx.save(); ctx.shadowColor = 'rgba(60,40,20,0.25)'; ctx.shadowBlur = 16; ctx.shadowOffsetY = 10; ctx.fillStyle = C.coral; ctx.fillText(g.ch, 12, 14); ctx.restore(); }
+      ctx.fillStyle = C.coral; ctx.fillText(g.ch, 12, 14);
+      ctx.fillStyle = C.ink; ctx.fillText(g.ch, 0, 0);
+      ctx.restore();
+    }
+  }
+  const nameLeft = NAME_X0 + 14, nameRight = NAME_X0 + NAME_W - 14;
+
+  /* ------------------------------------------------------------ underline + kicker (pencil) */
+  const underRS = P.inkPath([[nameLeft - 40, 776], [960, 772], [nameRight + 40, 777]], { wobble: 1.8, seed: 61, freq: 0.007 });
+  const underLen = underRS[underRS.length - 1].s;
+  const kicker = ROLE ? new P.Hand({ text: ROLE, x: 960, y: 846, size: 64, align: 'center', color: C.graphite, t0: T.kicker[0], t1: T.kicker[1], seed: 'C-kicker', pen: 0.085 }) : null;
+
+  /* ------------------------------------------------------------ pencil position */
+  function pencil(t) {                                  // -> {x, y, a, down} (tip)
+    if (t < T.sketch[0]) { const p = sketch[0].rs[0]; const u = prog(t, 0, T.sketch[0]); return { x: lerp(p.x + 1100, p.x, E.outCubic(u)), y: lerp(p.y + 800, p.y, E.outCubic(u)), a: PEN_A, down: false }; }
+    if (t < T.sketch[1]) { const p = sketchPen(t); return { x: p.x, y: p.y, a: PEN_A, down: p.down }; }
+    if (t < T.tap[1]) {                                 // tap the bulb: tip goes to the base and back
+      const last = sketch[sketch.length - 1].rs, q = last[last.length - 1], u = prog(t, T.tap[0], T.tap[1]), k = Math.sin(Math.PI * u);
+      return { x: lerp(q.x, B.cx + nw * 0.8, k), y: lerp(q.y, baseY + 6, k), a: PEN_A, down: false };
+    }
+    if (t < T.away[1]) { const u = E.inOutSine(prog(t, T.away[0] + 0.02, T.away[1])); return { x: lerp(B.cx + nw * 0.8, 1500, u), y: lerp(baseY + 6, 820, u), a: PEN_A, down: false }; }
+    if (t < T.under[0]) { const u = E.inOutSine(prog(t, T.under[0] - 0.25, T.under[0])); const s = underRS[0]; return { x: lerp(1500, s.x, u), y: lerp(820, s.y, u) - Math.sin(Math.PI * u) * 30, a: PEN_A, down: false }; }
+    if (t < T.under[1]) { const p = P.pointAt(underRS, underLen * E.outCubic(prog(t, T.under[0], T.under[1]))); return { x: p.x, y: p.y, a: PEN_A, down: true }; }
+    if (kicker && t < T.kicker[0]) { const e = underRS[underRS.length - 1], s = kicker.pen(kicker.t0), u = E.inOutSine(prog(t, T.under[1], T.kicker[0])); return { x: lerp(e.x, s.x, u), y: lerp(e.y, s.y, u) - Math.sin(Math.PI * u) * 24, a: PEN_A, down: false }; }
+    if (kicker && t < T.exit[0]) { const p = kicker.pen(t); return { x: p.x, y: p.y, a: PEN_A, down: p.down }; }
+    const e = kicker ? kicker.pen(kicker.end + 1) : underRS[underRS.length - 1], u = E.inCubic(prog(t, T.exit[0], T.exit[1]));
+    return { x: lerp(e.x, e.x + 1000, u), y: lerp(e.y, e.y + 600, u), a: PEN_A + 0.15 * u, down: false };
+  }
+
+  /* ------------------------------------------------------------ particles */
+  const dusts = glyphs.map((g, i) => ({ x: g.cx, t0: g.t0 + 0.32, seed: 'C-dust' + i }));
+  const scraps = new P.Confetti({ seed: 'C-scraps', t0: T.drop[0] + 0.32, n: 46, box: [nameLeft, NAME_Y + SIZE * 0.4, nameRight, NAME_Y + SIZE * 0.45], speed: [150, 520], dir: [-165, -15], gravity: 900, drag: 2.6, life: [1.4, 2.2], size: [6, 16], shapes: ['rect', 'tri', 'dot'], colors: [C.coral, C.ink, C.gold, C.mint, C.lavender], stagger: 0.16 });
+
+  /* ------------------------------------------------------------ frame */
+  const blinkK = (t, tb, d = 0.14) => { const u = prog(t, tb, tb + d); return u <= 0 || u >= 1 ? 0 : Math.sin(Math.PI * u); };
+  function renderAt(t) {
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    ctx.drawImage(paper, 0, 0);
+    ctx.translate(OX, 0);
+    // the bulb: pencil sketch first, then the lit bulb drawn over it
+    const lit = E.outCubic(prog(t, T.on, T.on + 0.25));
+    const bob = t > T.on ? Math.sin((t - T.on) * 3.4) * 5 * clamp((t - T.on) / 0.8) : 0;
+    const tapJiggle = Math.sin(prog(t, T.tap[0] + 0.08, T.tap[1] + 0.1) * Math.PI) * 6;
+    if (lit < 1) {
+      for (const s of sketch) { if (t <= s.a) continue; const L = s.rs[s.rs.length - 1].s; const up = t >= s.b ? L : L * E.minJerk(prog(t, s.a, s.b)); ctx.save(); ctx.globalAlpha = 1 - lit; P.brush(ctx, s.rs, () => 5, C.graphite, up); ctx.restore(); }
+    }
+    if (lit > 0) {
+      const wink = clamp(Math.min(prog(t, T.wink[0], T.wink[0] + 0.08), 1 - prog(t, T.wink[1] - 0.08, T.wink[1])));
+      ctx.save(); ctx.globalAlpha = lit; P.drawBulb(ctx, B.cx, B.cy + bob - tapJiggle, B.r, { lit: 1, rays: E.outBack(prog(t, T.rays[0], T.rays[1])), face: E.outCubic(prog(t, T.face[0], T.face[1])), blink: Math.max(blinkK(t, 2.4), blinkK(t, 3.7, 0.12)), wink }); ctx.restore();
+    }
+    drawName(t);
+    for (const d of dusts) if (t >= d.t0) P.dust(ctx, d.x, NAME_Y + SIZE * 0.46, t, d.t0, { seed: d.seed, n: 7, scale: 1.4 });
+    scraps.draw(ctx, t);
+    if (t >= T.under[0]) P.inkLine(ctx, null, { _rs: underRS, width: 7, color: C.graphite, profile: u => 4 + 4 * Math.sin(Math.PI * clamp(u)), p: E.outCubic(prog(t, T.under[0], T.under[1])) });
+    if (kicker && t > kicker.t0) kicker.draw(ctx, t);
+    if (TAG) { const e2 = E.outCubic(prog(t, T.tag[0], T.tag[1])); if (e2 > 0) { ctx.save(); ctx.globalAlpha = e2; ctx.fillStyle = C.ink2; ctx.font = "400 30px 'Noto Sans SC'"; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillText(TAG, 960, 912 + (1 - e2) * 10); ctx.restore(); } }
+    const pc = pencil(t);
+    if (t < T.exit[1]) P.drawPencil(ctx, pc.x, pc.y - (pc.down ? 0 : 10), pc.a - (pc.down ? 0 : 0.1), 1);
+    P.fade(ctx, FW, END_COLOR, prog(t, T.fade[0], T.fade[1]));
+  }
+  window.renderAt = renderAt;
+
+  P.fontsReady([`900 ${SIZE}px 'Noto Sans SC'`, "400 30px 'Noto Sans SC'", "60px 'Ma Shan Zheng'"]).then(() => { window.__READY__ = true; renderAt(0); });
+})();
+</script>
+</body>
+</html>

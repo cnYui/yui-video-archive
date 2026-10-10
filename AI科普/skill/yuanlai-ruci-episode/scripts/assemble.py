@@ -11,8 +11,8 @@ outro lay out on the wider canvas themselves: centred, background / grain / crop
 full width), with the same encoder settings as before.
 Steps
   1. intro / outro rendered from SERIES/片头片尾/intro|outro/index.html at 30 fps; data written to
-     制作/build/intro_data.json ({name: 悠一, tagline: episode.intro_tagline, canvas}) and outro_data.json
-     ({items: outro_items, closing: outro_closing, signature: 悠一, canvas}); re-encoded to the common x264 settings
+     制作/build/intro_data.json ({name: 悠一, role: AI鼓励师, canvas}) and outro_data.json
+     ({references: outro_references, items: outro_items, closing: outro_closing, signature: 悠一, canvas}); re-encoded to the common x264 settings
      (name / signature come from 片头片尾/intro|outro/data.json; 悠一 since 2026-09-29, was UE)
   2. python 制作/engine/sync_assets.py --series SERIES (skip with --no-sync), then render_parallel.py -> 制作/build/main.mp4
      (--skip-main reuses an existing main.mp4)
@@ -106,7 +106,9 @@ def pack_data(p, name, ep, canvas=C.CANVAS_DEFAULT):
     if name == "intro":
         base.update(name=base.get("name", "悠一"), tagline=ep.get("intro_tagline", "") or "")
     else:
-        base.update(items=ep["outro_items"], closing=ep["outro_closing"], signature=base.get("signature", "悠一"))
+        # 2026-10-03 起的信纸片尾：左栏参考文献（episode.json 的 outro_references，可以为空）、右栏致谢（outro_items）
+        base.update(references=ep.get("outro_references") or [], items=ep["outro_items"], closing=ep["outro_closing"],
+                    signature=base.get("signature", "悠一"))
     base["canvas"] = list(canvas)          # render.py opens the viewport at this size; the page lays out on it
     return base
 

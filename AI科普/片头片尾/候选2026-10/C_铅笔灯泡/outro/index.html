@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>悠一 · Outro C · 铅笔灯泡</title>
+<link rel="stylesheet" href="../../../fonts/fonts.css">
+<link rel="stylesheet" href="../../fonts/fonts2.css">
+<script src="../../common/handdata.js"></script>
+<script src="../../common/pack.js"></script>
+<style>html, body { margin: 0; overflow: hidden; background: #ECE6D9; }</style>
+</head>
+<body>
+<script>
+(function () {
+  'use strict';
+  /* 版本 C「铅笔与灯泡」片尾：一页横格笔记本纸（横线、红色页边线、三个装订孔）。铅笔写出两个栏目标题，条目按格子
+   * 一行行写出来（手写体）；底部写感谢语、用珊瑚色写签名并划一道；灯泡亮在右上角，轻轻浮动、眨眼。9.0 s。
+   * 数据同 A 版片尾：references / thanks（或 items）/ closing / signature / references_title / thanks_title。 */
+  const P = window.PACK, { C, E, clamp, lerp, prog } = P;
+  const RAW = Object.assign({}, window.__DATA__ || {});
+  const D = {
+    references: Array.isArray(RAW.references) ? RAW.references : [],
+    thanks: Array.isArray(RAW.thanks) ? RAW.thanks : Array.isArray(RAW.items) ? RAW.items : [],
+    refTitle: String(RAW.references_title == null ? '参考文献' : RAW.references_title).trim(),
+    thanksTitle: String(RAW.thanks_title == null ? '致谢' : RAW.thanks_title).trim(),
+    closing: String(RAW.closing == null ? '感谢观看，我们下期再见' : RAW.closing).trim(),
+    signature: String(RAW.signature == null ? '悠一' : RAW.signature).trim() || '悠一',
+  };
+
+  window.DURATION = 9.0;
+  window.__READY__ = false;
+
+  const { FW, OX, ctx } = P.setup(RAW);
+  const paper = P.makePaper(FW, { seed: 91, mottle: 0.05, base: '#EFE9DC' });
+  const PEN_A = -0.96;
+
+  /* ------------------------------------------------------------ the notebook page */
+  const LINE0 = 160, LH = 60, ROWS = 15, MARGIN_X = 232;
+  const marginRS = P.inkPath([[MARGIN_X, 0], [MARGIN_X + 1, 540], [MARGIN_X, 1080]], { wobble: 1.2, seed: 7, freq: 0.01 });
+  const holes = [270, 540, 810];
+  function drawPage() {
+    ctx.save();
+    ctx.strokeStyle = 'rgba(120,150,190,0.55)'; ctx.lineWidth = 1.6;
+    for (let k = 0; k <= ROWS; k++) { const y = LINE0 + LH * k; ctx.beginPath(); ctx.moveTo(-OX, y); ctx.lineTo(1920 + OX, y); ctx.stroke(); }
+    ctx.globalAlpha = 0.7; P.inkLine(ctx, null, { _rs: marginRS, width: 2.4, color: C.coral, profile: () => 2.4 }); ctx.globalAlpha = 1;
+    for (const y of holes) { ctx.fillStyle = '#D9D2C3'; ctx.beginPath(); ctx.arc(118, y, 19, 0, 6.2832); ctx.fill(); ctx.fillStyle = '#C3BBAA'; ctx.beginPath(); ctx.arc(119, y + 1, 15, 0, 6.2832); ctx.fill(); ctx.fillStyle = '#EDE7DA'; ctx.beginPath(); ctx.arc(118, y, 13, 0, 6.2832); ctx.fill(); }
+    ctx.restore();
+  }
+
+  /* ------------------------------------------------------------ layout on the ruled lines */
+  const rowMid = k => LINE0 + LH * k + LH / 2 + 3;              // text middle for row k (glyphs sit on the line)
+  const BOX = { x0: 268, y0: LINE0 + LH * 2, x1: 1800, y1: LINE0 + LH * 12 };
+  const FONTS = { fontBody: "400 %spx 'Patrick Hand', 'Ma Shan Zheng'", fontNum: "700 %spx 'Kalam', 'Ma Shan Zheng'", fontLabel: "700 %spx 'Kalam', 'Ma Shan Zheng'", fsMax: 42, fsMin: 24, lhFixed: LH, entryGap: 0, maxLines: 3, split: 0.58, gap: 80 };
+  const T = { enter: [0.0, 0.3], h1: [0.3, 0.95], hop12: [0.95, 1.15], h2: [1.15, 1.55], hopC: [1.55, 1.9], closing: [1.9, 3.1], hopS: [3.1, 3.3], sig: [3.3, 3.8], swoosh: [3.82, 4.0], exit: [4.02, 4.45], wink: [5.0, 5.3] };
+  const S = {};
+  function build() {
+    const LAY = P.layoutCredits(ctx, D, BOX, FONTS);
+    const cols = LAY.cols, HEAD_Y = rowMid(0) - 2;
+    const heads = cols.map((c, i) => new P.Hand({ text: c.kind === 'refs' ? D.refTitle : D.thanksTitle, x: c.x, y: HEAD_Y, size: 52, align: 'left', color: C.graphite, seed: 'C-head' + i, pen: 0.085 }));
+    const hT = heads.length === 1 ? [[T.h1[0], T.h1[1]]] : [[T.h1[0], T.h1[1]], [T.h2[0], T.h2[1]]];
+    heads.forEach((h, i) => h._schedule(hT[i][0], hT[i][1]));
+    const entryT = [];
+    cols.forEach((c, ci) => { const start = (ci === 0 ? T.h1[0] + 0.6 : T.h2[0] + 0.45); c.entries.forEach((e, i) => entryT.push({ ci, i, t0: start + i * 0.2, t1: start + i * 0.2 + 0.4 })); });
+    const closing = new P.Hand({ text: D.closing, x: 268, y: rowMid(13) - 4, size: 50, align: 'left', color: C.graphite, t0: T.closing[0], t1: T.closing[1], seed: 'C-closing', pen: 0.085 });
+    const sig = new P.Hand({ text: '—— ' + D.signature, x: 1790, y: rowMid(13) - 4, size: 58, align: 'right', color: C.coral, t0: T.sig[0], t1: T.sig[1], seed: 'C-sig', pen: 0.085 });
+    const sw = P.inkPath([[sig.box[0] + 10, rowMid(13) + 34], [(sig.box[0] + sig.box[2]) / 2, rowMid(13) + 30], [sig.box[2] + 6, rowMid(13) + 36]], { wobble: 2.2, seed: 13, freq: 0.012 });
+    Object.assign(S, { LAY, cols, heads, hT, entryT, closing, sig, sw });
+  }
+  build();
+  const penStart = h => { const p = h.pen(h.t0); return [p.x, p.y]; };
+  const penEnd = h => { const p = h.pen(h.end + 1); return [p.x, p.y]; };
+
+  /* ------------------------------------------------------------ pencil */
+  function hop(a, b, t0, t1, t, lift = 26) { const u = prog(t, t0, t1), e = E.inOutSine(u); return { x: lerp(a[0], b[0], e), y: lerp(a[1], b[1], e) - Math.sin(Math.PI * u) * lift, down: false }; }
+  function pencil(t) {
+    const { heads, hT, closing, sig, sw } = S;
+    const first = heads.length ? penStart(heads[0]) : penStart(closing);
+    if (t < T.enter[1]) { const u = E.outCubic(prog(t, T.enter[0], T.enter[1])); return { x: lerp(first[0] + 1200, first[0], u), y: lerp(first[1] + 800, first[1], u), down: false }; }
+    const writing = h => { const p = h.pen(t); return { x: p.x, y: p.y, down: p.down }; };
+    if (heads.length) {
+      if (t < hT[0][1]) return writing(heads[0]);
+      if (heads.length === 2) { if (t < T.hop12[1]) return hop(penEnd(heads[0]), penStart(heads[1]), T.hop12[0], T.hop12[1], t); if (t < hT[1][1]) return writing(heads[1]); }
+    }
+    if (t < T.hopC[1]) return hop(heads.length ? penEnd(heads[heads.length - 1]) : first, penStart(closing), T.hopC[0], T.hopC[1], t, 60);
+    if (t < T.closing[1]) return writing(closing);
+    if (t < T.hopS[1]) return hop(penEnd(closing), penStart(sig), T.hopS[0], T.hopS[1], t);
+    if (t < T.sig[1]) return writing(sig);
+    if (t < T.swoosh[0]) return hop(penEnd(sig), [sw[0].x, sw[0].y], T.sig[1], T.swoosh[0], t, 14);
+    if (t < T.swoosh[1]) { const p = P.pointAt(sw, sw[sw.length - 1].s * E.outCubic(prog(t, T.swoosh[0], T.swoosh[1]))); return { x: p.x, y: p.y, down: true }; }
+    const e = sw[sw.length - 1], u = E.inCubic(prog(t, T.exit[0], T.exit[1]));
+    return { x: lerp(e.x, e.x + 900, u), y: lerp(e.y, e.y + 500, u), down: false };
+  }
+
+  /* ------------------------------------------------------------ drawing */
+  function drawEntries(t) {
+    const { entryT, cols, LAY } = S;
+    ctx.textBaseline = 'middle';
+    for (const et of entryT) {
+      const p = E.outCubic(prog(t, et.t0, et.t1)); if (p <= 0) continue;
+      const c = cols[et.ci], e = c.entries[et.i], lh = LAY.lh, fs = LAY.fs;
+      ctx.save(); ctx.beginPath(); ctx.rect(c.x - 6, e.y - 2, (c.w + 12) * p, e.h + 4); ctx.clip();
+      const mid = i => e.y + i * lh + lh / 2 + 3;
+      if (c.kind === 'refs') {
+        ctx.fillStyle = C.coral; ctx.font = FONTS.fontNum.replace('%s', fs); ctx.textAlign = 'left'; ctx.fillText(e.num, c.x, mid(0));
+        ctx.fillStyle = C.graphite; ctx.font = FONTS.fontBody.replace('%s', fs);
+        e.lines.forEach((ln, i) => ctx.fillText(ln, c.x + e.numW, mid(i)));
+      } else {
+        if (e.label) { ctx.fillStyle = C.coral; ctx.font = FONTS.fontLabel.replace('%s', fs); ctx.textAlign = 'left'; ctx.fillText(e.label, c.x, mid(0)); }
+        ctx.fillStyle = C.graphite; ctx.font = FONTS.fontBody.replace('%s', fs);
+        e.lines.forEach((ln, i) => ctx.fillText(ln, c.x + e.labelW, mid(i)));
+      }
+      ctx.restore();
+    }
+  }
+  const BULB = { cx: 1790, cy: 92, r: 34 };
+  const blinkK = (t, tb, d = 0.14) => { const u = prog(t, tb, tb + d); return u <= 0 || u >= 1 ? 0 : Math.sin(Math.PI * u); };
+  function renderAt(t) {
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    ctx.drawImage(paper, 0, 0);
+    ctx.translate(OX, 0);
+    drawPage();
+    const { heads, closing, sig, sw } = S;
+    heads.forEach(h => { if (t > h.t0) h.draw(ctx, t); });
+    drawEntries(t);
+    if (t > closing.t0) closing.draw(ctx, t);
+    if (t > sig.t0) sig.draw(ctx, t);
+    if (t > T.swoosh[0]) P.inkLine(ctx, null, { _rs: sw, width: 5, color: C.coral, profile: u => 2.5 + 3.5 * Math.sin(Math.PI * clamp(u)), p: E.outCubic(prog(t, T.swoosh[0], T.swoosh[1])) });
+    // the bulb in the corner
+    const wink = clamp(Math.min(prog(t, T.wink[0], T.wink[0] + 0.08), 1 - prog(t, T.wink[1] - 0.08, T.wink[1])));
+    const bob = Math.sin(t * 3.1) * 3;
+    P.drawBulb(ctx, BULB.cx, BULB.cy + bob, BULB.r, { lit: 1, rays: 0.9 + 0.1 * Math.sin(t * 5), face: 1, blink: Math.max(blinkK(t, 2.2), blinkK(t, 7.4, 0.12)), wink, lw: 3.5 });
+    const pc = pencil(t);
+    if (t < T.exit[1]) P.drawPencil(ctx, pc.x, pc.y - (pc.down ? 0 : 10), PEN_A - (pc.down ? 0 : 0.1), 0.92);
+  }
+  window.renderAt = renderAt;
+
+  P.fontsReady(["400 30px 'Patrick Hand'", "700 30px 'Kalam'", "30px 'Ma Shan Zheng'", "400 30px 'Noto Sans SC'"]).then(() => { build(); window.__READY__ = true; renderAt(0); });
+})();
+</script>
+</body>
+</html>

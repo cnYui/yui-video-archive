@@ -26,8 +26,8 @@ CPS = 5.3            # TTS speed estimate, spoken units / s: fitted to episode 1
                      # (324 s measured; the pre-voice guess 4.3 came out ~20 % too long)
 SENT_PAUSE = 0.25    # extra seconds per sentence end
 SEG_GAP = 0.25       # breathing room after every spoken segment in the timeline (s)
-INTRO_DEFAULT = 3.8  # UE intro length (s) when 片头片尾/intro/index.html cannot be read
-OUTRO_DEFAULT = 4.8  # UE outro length (s)
+INTRO_DEFAULT = 4.8  # intro length (s) when 片头片尾/intro/index.html cannot be read (2026-10-03 起：Claude 品牌色「对话气泡」片头；以前 3.8)
+OUTRO_DEFAULT = 9.0  # outro length (s)（信纸片尾：参考文献 + 致谢；以前 4.8）
 # Frame size (pipeline-contract.md §2 "canvas"). User, 2026-09-27: every video from episode 2 on is 19.5:9 = 2340x1080
 # (phone full screen); covers stay 16:9 1920x1080 + 4:3 1440x1080 (make_cover.py, not affected by the canvas).
 CANVAS_DEFAULT = (1920, 1080)   # episode.json without "canvas": episode 1, older folders, 《AI每日日报》's calls
