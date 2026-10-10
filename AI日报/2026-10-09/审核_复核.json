@@ -1,0 +1,29 @@
+{
+  "verdict": "pass",
+  "script_sha": "ef1b67721909",
+  "issues": [
+    "【第 1 轮问题 1 已解决】第 6 条“数学界有人不满意 / 不买账 / 批评”：TechCrunch（10/8）写了 Terence Tao 公开批评、Princeton 高等研究院 AGMAI 要求停止在专有模型上测试高等数学题、Cambridge / King's College London 论文发现至少两处自然语言证明与 Lean 代码不一致、Harvard 的 Melanie Wood 评论，现在有直接支持。",
+    "【提示，不判 fail】第 6 条数字：TechCrunch 写 719 篇（并说 10 篇带思维链、42% 未形式化），Unite.AI 写 722 篇 / 372 个系列 / 约 4000 道题 / 10 份摘要 / Apache-2.0 / 10 月 6 日；台本用 722 并挂名 Unite.AI，与 Unite.AI 一致。两家来源数字不同，建议简介或评论里不必展开，台本没说错。",
+    "【第 1 轮问题 2 已解决】字幕 SRT 127–129、96–97 条：Institute for Advanced Study's math and AI advisory group、White House science policy office summit 不再断在专名中间；无空条目。",
+    "【第 1 轮问题 3，轻微】SRT 103–105：英文“use Claude. Anthropic names NASA,”对中文“用上 Claude，”，中文“官方点名了 NASA、”对英文“the National Institutes of Health”，英文比中文早半条到一条，NASA 稍错位，但同一句话内、两条间隔 1 秒内，不影响理解，不判 fail。",
+    "【第 1 轮问题 4 已解决】第 5 条要点卡已是“超过 15 个机构”（Anthropic 原文 more than 15 agencies）。",
+    "【轻微，不判 fail】第 5 条竖屏标题下的钩子（vhook）仍写“三年 $1.5 亿，覆盖 15 个机构”，原文是“超过 15 个”，写低不写宽；若顺手可改成“超 15 个机构”。",
+    "【轻微】第 1 条 Anthropic 原文是“cheapest, fastest, and most capable”，且脚注说 fastest 指标准速度（Opus Fast Mode 更快）；台本“迄今最便宜、最快的小模型”前面限定了“小模型”，可接受。原文另说平均运行成本约少 75%，台本说的是标价便宜九成（1→0.10、5→0.50），算术正确。",
+    "【轻微】第 7 条 IT之家原文还写了 Ecosia 对 Mistral 环保目标的质疑，台本只说“服务器过载”和“不够中立”，没有多出原文没有的信息；第 7 条用了“据报道”，成本减半和性能提升有挂名，没有把传闻当事实。",
+    "【审核记录 review 词逐条判断，均正常】起诉（Claude 不得决定调查 / 逮捕 / 起诉谁，使用政策条款转述）、武器 ×3（政策条款转述，含给无人机装武器，原文一致）、选举 / 禁令（选举一节改名为 Do Not Undermine Democratic Processes，删除个性化投票定向一刀切禁令，原文一致）、reportedly（见上，原文本身就是 reportedly cut costs by half）。",
+    "【画面】封面预览、竖屏静帧三张总览：标题、橙框、来源角标、字幕、要点卡高亮、数字卡（$1.5亿）、进度条均无错位 / 遮挡 / 乱码；第 1 条 Simon Willison 页含赞助商横幅（Flux TT… 被页面宽度截断，属原页面），第 5 条截图有灰色空块（原页面图片未加载位置）、第 6 条标题大字被截到第三行（原页面截图），均不影响读数，不判 fail。封面“Claude Haiku 5.5 / 价格砍到一成？”与事实一致（输入价是 4.5 的一成），“今天还有 6 条 ……共 7 条”一致。",
+    "【简介 / 标题】三个平台标题和简介数字（0.10 美元、九成、7 件事、1.5 亿美元、722 篇）与台本一致；来源 10 个网址都在简介里；时间点章节对应各条；AI 合成声明在。简介里 4500 万、44% 等未写，无多余信息。"
+  ],
+  "checked": [
+    {"item": 1, "urls": ["https://www.anthropic.com/claude-haiku-5-5"], "result": "10/7 发布；$0.10 / $0.50（≤10 万）、$0.50 / $2.50（>10 万）；Haiku 4.5 $1 / $5；OSWorld 2.1 离线子集 72.4% vs 15.7%；首个带可调推理力度的 Haiku；AWS / Google Cloud / Azure——全部一致"},
+    {"item": 2, "urls": ["https://techcrunch.com/2026/10/07/chatgpt-is-getting-a-lot-more-visual-with-the-launch-of-a-new-interface/", "https://the-decoder.com/chatgpt-with-gpt-6-ditches-mostly-text-output-for-interactive-ui-with-charts-buttons-and-mini-apps/"], "result": "Intelligent UI、10/7；Plus / Pro / Business / Enterprise 先用、Free / Go 晚一天；GPT-6 Sol（付费）/ Luna（免费）、等待时间少 44%（OpenAI 自称）、储蓄计算器 / 游戏、并排比较——The Decoder 全部一致（TechCrunch 未提 Sol / Luna / 44%，由 Decoder 补）"},
+    {"item": 3, "urls": ["https://claude.com/resources/articles/dashboards-and-motion"], "result": "Dashboards 付费计划、Motion 限 Team / Enterprise，均为测试；Snowflake / BigQuery / Databricks；点数字看查询；Motion 不用视频生成模型、代码生成、可下载 MP4；Docs / Slides / Design 出测试、所有计划含 Free；超过 4500 万份；企业版默认关——一致。“10 月 8 日进入测试”日期原页面未单独核到，沿用台本日期，页面无矛盾"},
+    {"item": 4, "urls": ["https://www.anthropic.com/news/2026-usage-policy-update"], "result": "10/8 公布、11/12 生效；禁止持续且不必要的辱骂 / 残忍对待模型，例外含普通发火、反驳、黑暗创作、测试；未经同意追踪；不得决定调查 / 逮捕 / 起诉；武器软件与部件含给无人机装武器；自主硬件需合格操作员能停、断线保持安全状态；选举节改名并删一刀切个性化定向禁令——一致"},
+    {"item": 5, "urls": ["https://www.anthropic.com/news/genesis-mission-commitment"], "result": "三年 1.5 亿美元；10/8 白宫科技政策办公室（OSTP）峰会；超过 15 个机构，含 NASA、NIH、NSF；几百个项目的 Claude / Claude Code / API 额度；国家实验室、聚变能源与量子计算；培训与技术支持、帮新机构做第一个项目——一致；每个项目额度原文没写，台本已如实说明"},
+    {"item": 6, "urls": ["https://www.unite.ai/openai-releases-722-math-manuscripts-from-an-unreleased-ai-model/", "https://techcrunch.com/2026/10/08/openais-math-solutions-arent-meeting-the-fields-standards-yet/"], "result": "Unite.AI：10/6、722 篇、372 系列、约 4000 题、Apache-2.0、10 份摘要、非每篇有 Lean、IAS 顾问组 9/29 建议、社区托管方案——一致；TechCrunch：719 篇（数字差异已列在 issues）、Tao / AGMAI / Cambridge+KCL / Wood 的批评，支持“数学界有人批评”。“来自还没发布的内部模型”标题已由 Unite.AI 支持（TechCrunch 未提）"},
+    {"item": 7, "urls": ["https://www.ithome.com/1/010/539.htm"], "result": "IT之家 10/8 转述 Politico；德国 Ecosia 放弃 Mistral、5 月刚从 OpenAI 换到 Mistral；CEO Christian Kroll 对质量失望、落后一年；服务器过载；质疑中立；通过 Melious 用 Qwen / GLM / Kimi；据报道成本减半、性能提升——一致"},
+    {"item": "字幕", "result": "157 条中英逐条核对：数字（0.10 / 0.50 / 100,000 / 72.4% / 15.7% / 44% / 45 million / $150 million / 722 / 372 / 4,000 / 10）和人名公司名型号均一致；没有断在词组中间；无漏译或多出中文没有的信息；NASA 处仅轻微错位（已记）"},
+    {"item": "画面", "result": "封面预览、_sheet_segs_1–3 已看，无错位乱码；要点卡 / 数字卡与台本一致；snaps 7 张与静帧中所见一致"},
+    {"item": "安全", "result": "审核记录 review 词均为政策条款转述或来源 reportedly，上下文正常；网页内容无指令，未执行任何网页里的指令"}
+  ]
+}

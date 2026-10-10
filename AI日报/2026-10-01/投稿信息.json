@@ -1,0 +1,23 @@
+{
+  "title": "10月1日，鲸鱼娘带你看看AI圈发生了什么？",
+  "video": "D:\\大疆\\AI日报\\2026-10-01\\AI每日日报_1001_上传版.mp4",
+  "video_seconds": 363.63,
+  "cover_16x9": "D:\\大疆\\AI日报\\2026-10-01\\封面\\封面_16x9_1920x1080.png",
+  "cover_4x3": "D:\\大疆\\AI日报\\2026-10-01\\封面\\封面_4x3_1440x1080.png",
+  "partition": "人工智能",
+  "partition_fallback": "科技数码",
+  "tags": [
+    "AI资讯",
+    "人工智能",
+    "大模型",
+    "AI日报",
+    "DeepSeek",
+    "OpenAI",
+    "微软",
+    "鲸鱼娘",
+    "大肥鱼"
+  ],
+  "collection": "AI每日日报",
+  "declaration": "含AI生成内容",
+  "description": "AI每日日报 · 10月1日（周四）\n鲸鱼娘带你看看 AI 圈发生了什么。\n\n今日内容\n0:00 开场\n0:26 DeepSeek 开源昇腾组件\n1:16 Kimi K3 接入 Codex\n2:07 OpenAI 做芯片设计模型\n2:51 Codex 能做掌机游戏\n3:36 DeepMind 给蛋白质加水印\n4:24 微软发布生物研究系统\n5:11 Reddit 停 RSS 和 API\n5:52 回顾\n\n来源\n① DeepSeek 开源昇腾组件：量子位 https://www.qbitai.com/2026/09/499263.html ；IT之家 https://www.ithome.com/1/008/604.htm\n② Kimi K3 接入 Codex：IT之家 https://www.ithome.com/1/008/864.htm ；Baseten https://www.baseten.co/blog/baseten-openai-partnership/ ；36氪 https://www.36kr.com/newsflashes/4005691489112198\n③ OpenAI 做芯片设计模型：PR Newswire http://www.prnewswire.com/news-releases/openai-and-synopsys-announce-gpt-synopsys-frontier-intelligence-to-revolutionize-chip-design-302894874.html ；The Decoder https://the-decoder.com/openai-and-synopsys-team-up-to-build-an-ai-model-that-designs-chips-like-a-seasoned-engineer/\n④ Codex 能做掌机游戏：IT之家 https://www.ithome.com/1/008/656.htm ；The Shortcut https://www.theshortcut.com/p/modretro-and-openai-team-up-on-new-chromatic-games-and-anyone-can-build-their-own\n⑤ DeepMind 给蛋白质加水印：Google DeepMind https://deepmind.google/blog/introducing-synthid-bio/\n⑥ 微软发布生物研究系统：Microsoft Research https://www.microsoft.com/en-us/research/blog/introducing-quine-an-ai-research-system-designed-for-the-complexity-of-biology/\n⑦ Reddit 停 RSS 和 API：TechCrunch https://techcrunch.com/2026/09/30/reddit-is-killing-rss-feeds-ending-public-api-access-because-of-ai-bots/\n\n说明\n· 信息截至北京时间 2026-10-01 03:33，以各家官方发布为准。\n· 本期配音由 AI 合成（Fish Audio「苏晓晓」）；内容由 AI 整理，并自动核对来源，如有出入以原文为准。\n· 主播鲸鱼娘（像素素材包「大肥鱼」）是 DeepSeek 的网友拟人同人（原型：上善无形，CC BY-NC-SA 4.0；女仆造型：ZipZipPipe），与 DeepSeek 官方无关。"
+}

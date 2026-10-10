@@ -1,0 +1,46 @@
+{
+  "line1": "苹果收紧 Mac 权限",
+  "line2": "AI 让风险变大？",
+  "l1px": 168,
+  "l2px": 236,
+  "maxw": 1320,
+  "safe": [
+    300,
+    1620
+  ],
+  "textCx": 900,
+  "scale": 9,
+  "frame": [
+    64,
+    64
+  ],
+  "footRow": 62,
+  "fishX": 1074,
+  "foot": 1062,
+  "tag": "",
+  "theme": {
+    "bg": "#FFFFFF",
+    "lead": "#8A93AD",
+    "accent": "#4A88DA",
+    "list": "#4D5670",
+    "more": "#9AA2B8"
+  },
+  "_theme": "blue",
+  "_pose": "shrug_m1",
+  "_eyes": "idle_surprised_m0",
+  "_fx": "",
+  "_qmark": false,
+  "_place": "right",
+  "others": [
+    "Antigravity 上 Claude 5.5",
+    "Gemini 加了地图工具",
+    "Meta 开源 Muse 硬件",
+    "Suno 能做有声配乐了",
+    "Supabase 收购 Turso"
+  ],
+  "othersHead": "今天还有 6 条",
+  "othersMore": "……共 7 条",
+  "listX": 300,
+  "listW": 740,
+  "listBottom": 1000
+}

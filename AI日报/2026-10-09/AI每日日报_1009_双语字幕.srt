@@ -1,0 +1,784 @@
+1
+00:00:00,000 --> 00:00:03,273
+早上好，我是鲸鱼娘，今天是10月9日。
+Good morning, I'm Whale Girl. Today is October 9.
+
+2
+00:00:03,293 --> 00:00:05,973
+今天说七件事：Haiku 5.5 大降价，
+Seven stories today: the Haiku 5.5 price cut,
+
+3
+00:00:05,993 --> 00:00:08,353
+ChatGPT 回答变成互动界面，
+ChatGPT interactive answers,
+
+4
+00:00:08,373 --> 00:00:10,556
+Claude 能做仪表盘和动画，
+Claude dashboards and animations,
+
+5
+00:00:10,576 --> 00:00:12,673
+Anthropic 更新使用政策，
+Anthropic's new Usage Policy,
+
+6
+00:00:12,693 --> 00:00:15,398
+Anthropic 向科研计划投 1.5 亿美元，
+Anthropic's $150 million science pledge,
+
+7
+00:00:15,418 --> 00:00:17,628
+OpenAI 公开 722 篇数学稿件，
+OpenAI's 722 math manuscripts,
+
+8
+00:00:17,648 --> 00:00:19,826
+还有 Ecosia 放弃 Mistral。
+and Ecosia dropping Mistral.
+
+9
+00:00:19,846 --> 00:00:22,194
+第一件，Anthropic 发布了小模型
+First, Anthropic released its small model,
+
+10
+00:00:22,214 --> 00:00:23,911
+Claude Haiku 5.5。
+Claude Haiku 5.5.
+
+11
+00:00:23,931 --> 00:00:25,101
+10 月 7 日上线，
+It went live on October 7,
+
+12
+00:00:25,121 --> 00:00:26,614
+官方称它是 Anthropic
+and Anthropic calls it its cheapest
+
+13
+00:00:26,634 --> 00:00:28,791
+迄今最便宜、最快的小模型。
+and fastest small model yet.
+
+14
+00:00:28,811 --> 00:00:31,434
+价格是每百万输入词元 0.10 美元，
+It costs $0.10 per million input tokens
+
+15
+00:00:31,454 --> 00:00:32,721
+输出 0.50 美元，
+and $0.50 per million output tokens,
+
+16
+00:00:32,741 --> 00:00:35,292
+针对 10 万词元以内的请求。
+for prompts up to 100,000 tokens.
+
+17
+00:00:35,312 --> 00:00:38,444
+上一代 Haiku 4.5 是 1 美元和 5 美元，
+The previous Haiku 4.5 was $1 and $5,
+
+18
+00:00:38,464 --> 00:00:40,152
+等于便宜了九成。
+so that is 90% cheaper.
+
+19
+00:00:40,172 --> 00:00:42,075
+超过 10 万词元的请求，
+Above 100,000 tokens,
+
+20
+00:00:42,095 --> 00:00:44,887
+价格是 0.50 美元和 2.50 美元。
+the price is $0.50 and $2.50.
+
+21
+00:00:44,907 --> 00:00:48,539
+官方放出的成绩里，它在 OSWorld 2.1
+In Anthropic's own results, on OSWorld 2.1,
+
+22
+00:00:48,559 --> 00:00:50,712
+离线子集拿了 72.4%，
+it scores 72.4% on the offline subset,
+
+23
+00:00:50,732 --> 00:00:53,129
+Haiku 4.5 是 15.7%。
+against 15.7% for Haiku 4.5.
+
+24
+00:00:53,149 --> 00:00:55,443
+它还第一次给 Haiku 级别的模型
+It is also the first Haiku-class model
+
+25
+00:00:55,463 --> 00:00:57,050
+加了可调的推理力度，
+with an adjustable effort setting,
+
+26
+00:00:57,070 --> 00:01:00,264
+AWS、谷歌云和 Azure 上都能用。
+and it is on AWS, Google Cloud and Azure.
+
+27
+00:01:00,284 --> 00:01:02,278
+这些分数是官方自己报的，
+These scores come from Anthropic itself,
+
+28
+00:01:02,298 --> 00:01:05,384
+真要上生产，先拿自己的任务跑一遍。
+so run your own tasks before going to production.
+
+29
+00:01:05,584 --> 00:01:06,272
+第二件，
+Second,
+
+30
+00:01:06,292 --> 00:01:09,286
+ChatGPT 的回答不再只有文字了。
+ChatGPT answers are no longer just text.
+
+31
+00:01:09,306 --> 00:01:11,903
+10 月 7 日，OpenAI 带着 GPT-6
+On October 7, OpenAI, with GPT-6,
+
+32
+00:01:11,923 --> 00:01:14,096
+推出了 Intelligent UI。
+launched Intelligent UI.
+
+33
+00:01:14,116 --> 00:01:16,526
+回答里可以出现图表、按钮、
+Answers can now include things you can click,
+
+34
+00:01:16,546 --> 00:01:18,646
+表单这类能点的元素。
+like charts, buttons and forms.
+
+35
+00:01:18,666 --> 00:01:21,244
+比如比较两样东西，会并排摆；
+A comparison might sit side by side,
+
+36
+00:01:21,264 --> 00:01:24,598
+讲一个概念，可能给你一张能互动的图。
+and an explanation might become an interactive chart.
+
+37
+00:01:24,618 --> 00:01:26,648
+你还能在聊天里让它做小工具，
+You can also have it build small tools in the chat,
+
+38
+00:01:26,668 --> 00:01:29,822
+像储蓄计算器，或者一个小游戏。
+such as a savings calculator or a game.
+
+39
+00:01:29,842 --> 00:01:31,470
+Plus、Pro、Business
+Plus, Pro, Business
+
+40
+00:01:31,490 --> 00:01:33,503
+和 Enterprise 用户先用上，
+and Enterprise users get it first,
+
+41
+00:01:33,523 --> 00:01:35,789
+用的是 GPT-6 Sol。
+on GPT-6 Sol.
+
+42
+00:01:35,809 --> 00:01:38,081
+免费版和 Go 用户晚一天，
+Free and Go users follow a day later,
+
+43
+00:01:38,101 --> 00:01:40,265
+用的是 GPT-6 Luna。
+on GPT-6 Luna.
+
+44
+00:01:40,285 --> 00:01:41,944
+OpenAI 还说，
+OpenAI also says the model can answer
+
+45
+00:01:41,964 --> 00:01:43,890
+模型能边想边答，
+while it is still thinking,
+
+46
+00:01:43,910 --> 00:01:45,659
+等待时间少了 44%。
+which cuts waiting time by 44%.
+
+47
+00:01:45,679 --> 00:01:47,192
+这个数字是官方说的，
+That number is OpenAI's own,
+
+48
+00:01:47,212 --> 00:01:49,382
+还没有第三方实测，好不好用，
+with no independent test yet,
+
+49
+00:01:49,402 --> 00:01:51,203
+自己试了才知道。
+so try it yourself.
+
+50
+00:01:51,403 --> 00:01:53,720
+第三件，Claude 多了仪表盘
+Third, Claude has two new features:
+
+51
+00:01:53,740 --> 00:01:55,993
+和动画讲解两个新功能。
+dashboards and animated explainers.
+
+52
+00:01:56,013 --> 00:01:58,245
+10 月 8 日，Claude Dashboards
+Since October 8, Claude Dashboards
+
+53
+00:01:58,265 --> 00:02:00,533
+和 Claude Motion 进入测试。
+and Claude Motion have been in beta.
+
+54
+00:02:00,553 --> 00:02:03,060
+Dashboards 能把公司数据做成会随
+Dashboards turn company data into dashboards
+
+55
+00:02:03,080 --> 00:02:05,923
+数据更新的仪表盘，付费计划可用。
+that update as the data changes, on paid plans.
+
+56
+00:02:05,943 --> 00:02:08,359
+它能连 Snowflake、BigQuery、
+It connects to Snowflake, BigQuery
+
+57
+00:02:08,379 --> 00:02:10,383
+Databricks 这些数据仓库，
+and Databricks warehouses,
+
+58
+00:02:10,403 --> 00:02:13,152
+每个数字都链接到背后的查询。
+and every number links to its underlying query.
+
+59
+00:02:13,172 --> 00:02:14,519
+Motion 是一句提示词
+Motion makes a short animated
+
+60
+00:02:14,539 --> 00:02:15,918
+生成一段短动画讲解，
+explainer from a prompt,
+
+61
+00:02:15,938 --> 00:02:17,897
+只给 Team 和企业版。
+and it is for Team and Enterprise only.
+
+62
+00:02:17,917 --> 00:02:19,537
+它不是视频生成模型，
+It does not use a video generation model.
+
+63
+00:02:19,557 --> 00:02:23,107
+输出是可编辑的代码，能下载成 MP4。
+The output is editable code that you can download as an MP4.
+
+64
+00:02:23,127 --> 00:02:24,419
+另外，Docs、Slides
+Also, Docs, Slides
+
+65
+00:02:24,439 --> 00:02:25,793
+和 Design 结束测试，
+and Design are out of beta
+
+66
+00:02:25,813 --> 00:02:28,845
+所有计划都能用，包括免费版。
+and on every plan, including Free.
+
+67
+00:02:28,865 --> 00:02:31,019
+官方说，Claude 里已经做出超过
+Anthropic says more than 45 million docs,
+
+68
+00:02:31,039 --> 00:02:34,300
+4500 万份文档、幻灯片和设计。
+decks and designs have been made in Claude.
+
+69
+00:02:34,320 --> 00:02:35,496
+企业管理员要注意，
+Enterprise admins should note
+
+70
+00:02:35,516 --> 00:02:38,081
+Dashboards 和 Motion 默认是关的，
+that Dashboards and Motion are off by default
+
+71
+00:02:38,101 --> 00:02:40,004
+要自己去设置里开。
+and need to be switched on in settings.
+
+72
+00:02:40,204 --> 00:02:41,650
+第四件，Anthropic
+Fourth, Anthropic published
+
+73
+00:02:41,670 --> 00:02:43,532
+发布了新版使用政策。
+a new version of its Usage Policy.
+
+74
+00:02:43,552 --> 00:02:44,928
+10 月 8 日公布，
+It was announced on October 8
+
+75
+00:02:44,948 --> 00:02:46,686
+11 月 12 日生效。
+and takes effect on November 12.
+
+76
+00:02:46,706 --> 00:02:48,160
+最受关注的一条是，
+The line that drew attention
+
+77
+00:02:48,180 --> 00:02:49,797
+禁止对模型做持续的、
+bans sustained and needless abusive
+
+78
+00:02:49,817 --> 00:02:52,127
+不必要的辱骂或残忍行为。
+or cruel behavior toward its models.
+
+79
+00:02:52,147 --> 00:02:54,538
+官方说这是留给极端情况的，
+Anthropic says it is meant for extreme cases,
+
+80
+00:02:54,558 --> 00:02:56,131
+普通的发火、反驳、
+and ordinary frustration, pushback,
+
+81
+00:02:56,151 --> 00:02:58,683
+黑暗题材创作和测试都不算。
+dark creative themes and testing do not count.
+
+82
+00:02:58,703 --> 00:03:01,478
+监控方面，不能未经同意追踪个人，
+On surveillance, you cannot track people without consent,
+
+83
+00:03:01,498 --> 00:03:03,759
+也不能让 Claude 决定该调查、
+and Claude cannot decide who to investigate,
+
+84
+00:03:03,779 --> 00:03:05,154
+逮捕或起诉谁。
+arrest or charge.
+
+85
+00:03:05,174 --> 00:03:06,778
+武器一条扩大到让武器
+The weapons rule now covers the software
+
+86
+00:03:06,798 --> 00:03:08,239
+运转的软件和部件，
+and components that make weapons work,
+
+87
+00:03:08,259 --> 00:03:10,418
+包括给无人机装武器。
+including arming drones.
+
+88
+00:03:10,438 --> 00:03:11,729
+会自主动手的硬件，
+Hardware that acts on its own needs
+
+89
+00:03:11,749 --> 00:03:13,913
+必须有合格的操作员能让它停下，
+a qualified operator who can stop it,
+
+90
+00:03:13,933 --> 00:03:16,924
+Claude 断线时还要保持安全状态。
+and it must hold a safe state if Claude disconnects.
+
+91
+00:03:16,944 --> 00:03:18,144
+选举那一节改名了，
+The elections section was renamed,
+
+92
+00:03:18,164 --> 00:03:19,948
+也删掉了对投票的个性化
+and the blanket ban on personalized
+
+93
+00:03:19,968 --> 00:03:21,994
+定向的一刀切禁令。
+vote targeting was removed.
+
+94
+00:03:22,194 --> 00:03:24,635
+第五件，Anthropic 要在三年里
+Fifth, Anthropic will put $150 million
+
+95
+00:03:24,655 --> 00:03:27,443
+向美国的科研计划投入 1.5 亿美元。
+over three years into a US science program.
+
+96
+00:03:27,463 --> 00:03:30,060
+10 月 8 日，在白宫科技政策办公室办的
+On October 8, at a White House science policy office
+
+97
+00:03:30,080 --> 00:03:30,958
+科学峰会上，
+summit,
+
+98
+00:03:30,978 --> 00:03:31,611
+Anthropic
+Anthropic announced
+
+99
+00:03:31,631 --> 00:03:34,004
+宣布了对 Genesis Mission 的承诺。
+its commitment to the Genesis Mission.
+
+100
+00:03:34,024 --> 00:03:35,994
+Genesis Mission 是一个联邦计划，
+The Genesis Mission is a federal initiative
+
+101
+00:03:36,014 --> 00:03:39,073
+目标是用 AI 加快科学和技术发现。
+to speed up scientific and technological discovery with AI.
+
+102
+00:03:39,093 --> 00:03:40,561
+钱会用来让超过 15 个机构
+The money will let more than 15 agencies
+
+103
+00:03:40,581 --> 00:03:41,418
+用上 Claude，
+use Claude. Anthropic names NASA,
+
+104
+00:03:41,438 --> 00:03:43,048
+官方点名了 NASA、
+the National Institutes of Health
+
+105
+00:03:43,068 --> 00:03:46,587
+美国国家卫生研究院和国家科学基金会。
+and the National Science Foundation.
+
+106
+00:03:46,607 --> 00:03:49,038
+内容包括给几百个科研项目的 Claude、
+It includes Claude, Claude Code and API credits
+
+107
+00:03:49,058 --> 00:03:51,308
+Claude Code 和 API 额度。
+for several hundred research projects.
+
+108
+00:03:51,328 --> 00:03:52,869
+还会和国家实验室合作，
+It will also work with national laboratories,
+
+109
+00:03:52,889 --> 00:03:55,489
+重点是聚变能源和量子计算。
+with fusion energy and quantum computing as priorities.
+
+110
+00:03:55,509 --> 00:03:57,179
+另外提供培训和技术支持，
+Training and technical support are included,
+
+111
+00:03:57,199 --> 00:03:59,959
+帮新加入的机构做第一个项目。
+to help newer agencies launch their first projects.
+
+112
+00:03:59,979 --> 00:04:01,114
+这是官方承诺，
+This is a pledge,
+
+113
+00:04:01,134 --> 00:04:04,490
+具体每个项目拿多少额度，原文没写。
+and the article does not say how much each project gets.
+
+114
+00:04:04,690 --> 00:04:06,974
+第六件，OpenAI 公开了 722
+Sixth, OpenAI released 722 math manuscripts,
+
+115
+00:04:06,994 --> 00:04:09,899
+篇数学稿件，数学界有人不满意。
+and some in the math community are unhappy.
+
+116
+00:04:09,919 --> 00:04:11,187
+10 月 6 日，OpenAI
+On October 6, OpenAI
+
+117
+00:04:11,207 --> 00:04:13,019
+在 GitHub 上放出这批稿件，
+put the batch on GitHub,
+
+118
+00:04:13,039 --> 00:04:15,502
+来自一个还没发布的内部模型。
+produced by an unreleased internal model.
+
+119
+00:04:15,522 --> 00:04:17,205
+它们分成 372 个系列，
+They are grouped into 372 families,
+
+120
+00:04:17,225 --> 00:04:19,922
+是从大约 4000 道题里挑出来的。
+selected from about 4,000 problems posed to the model.
+
+121
+00:04:19,942 --> 00:04:21,847
+仓库用的是 Apache-2.0 许可，
+The repository uses the Apache-2.0 license
+
+122
+00:04:21,867 --> 00:04:24,420
+里面有稿件、Lean 形式化验证，
+and holds manuscripts, Lean formalizations
+
+123
+00:04:24,440 --> 00:04:26,363
+还有 10 份推理摘要。
+and 10 abridged reasoning summaries.
+
+124
+00:04:26,383 --> 00:04:27,963
+不过不是每篇都有 Lean 验证，
+But not every manuscript has a Lean formalization,
+
+125
+00:04:27,983 --> 00:04:29,462
+OpenAI 自己提醒，
+and OpenAI itself warns
+
+126
+00:04:29,482 --> 00:04:31,732
+没验证的结果可能有问题。
+that unformalized results could have issues.
+
+127
+00:04:31,752 --> 00:04:33,758
+9 月 29 日，高等研究院的数学
+On September 29, the Institute for Advanced Study's math
+
+128
+00:04:33,778 --> 00:04:34,707
+与 AI 顾问组
+and AI advisory group
+
+129
+00:04:34,727 --> 00:04:36,696
+发过负责任发布建议。
+published responsible-release recommendations.
+
+130
+00:04:36,716 --> 00:04:37,935
+里面说，实验室不该
+It says labs should not treat
+
+131
+00:04:37,955 --> 00:04:39,312
+把公布成果当成营销，
+result releases as marketing,
+
+132
+00:04:39,332 --> 00:04:42,633
+结果应该放进不受 AI 公司控制的仓库。
+and results belong in repositories no AI lab controls.
+
+133
+00:04:42,653 --> 00:04:43,510
+OpenAI 说，
+OpenAI says it is exploring
+
+134
+00:04:43,530 --> 00:04:46,435
+正在考虑符合这些指南的社区托管方案。
+community-hosted alternatives that meet those guidelines.
+
+135
+00:04:46,455 --> 00:04:47,486
+稿件对不对，
+Whether the manuscripts hold
+
+136
+00:04:47,506 --> 00:04:49,983
+要等数学家一篇篇验证。
+up will take mathematicians checking them one by one.
+
+137
+00:04:50,183 --> 00:04:51,662
+第七件，德国搜索引擎
+Seventh, the German search
+
+138
+00:04:51,682 --> 00:04:53,616
+Ecosia 不用 Mistral 了。
+engine Ecosia has dropped Mistral.
+
+139
+00:04:53,636 --> 00:04:56,291
+据 IT之家 10 月 8 日转述《政治报》，
+According to IT Home on October 8, citing Politico,
+
+140
+00:04:56,311 --> 00:04:58,780
+Ecosia 改用中国的开源模型。
+Ecosia has switched to Chinese open-source models.
+
+141
+00:04:58,800 --> 00:04:59,583
+今年 5 月，
+Back in May,
+
+142
+00:04:59,603 --> 00:05:02,033
+它刚从 OpenAI 换到 Mistral。
+it had just moved from OpenAI to Mistral.
+
+143
+00:05:02,053 --> 00:05:04,673
+创始人兼 CEO 克里斯蒂安·克罗尔说，
+Founder and CEO Christian Kroll said he was disappointed
+
+144
+00:05:04,693 --> 00:05:06,561
+对 Mistral 的质量失望，
+with Mistral's quality,
+
+145
+00:05:06,581 --> 00:05:09,053
+说它已经落后对手整整一年。
+calling it a full year behind its competitors.
+
+146
+00:05:09,073 --> 00:05:11,373
+Ecosia 还提到服务器经常过载，
+Ecosia also cited frequent server overload,
+
+147
+00:05:11,393 --> 00:05:13,519
+也怀疑 Mistral 够不够中立。
+and questioned whether Mistral is truly neutral.
+
+148
+00:05:13,539 --> 00:05:15,238
+现在它通过 Melious，
+It now works with Melious
+
+149
+00:05:15,258 --> 00:05:16,485
+用阿里的 Qwen、
+to use Alibaba's Qwen,
+
+150
+00:05:16,505 --> 00:05:19,062
+智谱的 GLM 和月之暗面的 Kimi。
+Zhipu's GLM and Moonshot AI's Kimi.
+
+151
+00:05:19,082 --> 00:05:21,883
+据报道，这次切换让成本降了一半，
+The switch reportedly cut costs in half
+
+152
+00:05:21,903 --> 00:05:23,367
+性能也有提升。
+and brought performance gains.
+
+153
+00:05:23,387 --> 00:05:25,122
+报道没有给具体的性能数字，
+The report gives no performance figures,
+
+154
+00:05:25,142 --> 00:05:26,599
+一家公司的说法，
+so one company's view
+
+155
+00:05:26,619 --> 00:05:29,200
+不能直接当成模型排名。
+is not a model ranking.
+
+156
+00:05:29,400 --> 00:05:31,920
+今天就这些，来源都在简介里。
+That's all for today. Sources are in the description.
+
+157
+00:05:31,940 --> 00:05:33,393
+我们明天见。
+See you tomorrow.

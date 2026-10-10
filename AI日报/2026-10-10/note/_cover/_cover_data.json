@@ -1,0 +1,40 @@
+{
+  "line1": "Anthropicが無料で",
+  "line2": "OSSをスキャン？",
+  "l1px": 168,
+  "l2px": 236,
+  "maxw": 1320,
+  "safe": [
+    300,
+    1620
+  ],
+  "textCx": 900,
+  "scale": 9,
+  "frame": [
+    64,
+    64
+  ],
+  "footRow": 62,
+  "fishX": 1074,
+  "foot": 1062,
+  "tag": "",
+  "theme": {
+    "bg": "#FFFFFF",
+    "lead": "#8A93AD",
+    "accent": "#4A88DA",
+    "list": "#4D5670",
+    "more": "#9AA2B8"
+  },
+  "others": [
+    "エージェント1,000体を並列実行",
+    "Claudeが紫外線の全天マップ",
+    "Anthropicが利用ポリシー更新",
+    "DeepSeekの出力ムラの理由",
+    "OpenAIの売上は約500億ドル"
+  ],
+  "othersHead": "今日はほかに6本",
+  "othersMore": "……全7本",
+  "listX": 300,
+  "listW": 740,
+  "listBottom": 1000
+}

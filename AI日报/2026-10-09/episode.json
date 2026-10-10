@@ -1,0 +1,360 @@
+{
+  "number": 1009,
+  "title": "10月9日，鲸鱼娘带你看看AI圈发生了什么？",
+  "dir_name": "AI每日日报_1009",
+  "date": "2026-10-09",
+  "date_label": "10月9日",
+  "weekday": "周五",
+  "subtitle": "鲸鱼娘带你看看 AI 圈发生了什么",
+  "target_minutes": [
+    5,
+    6
+  ],
+  "question_scene": "S01",
+  "questions": [
+    {
+      "text": "Haiku 5.5 价格砍九成",
+      "scenes": [
+        "S02"
+      ]
+    },
+    {
+      "text": "ChatGPT 回答变成互动界面",
+      "scenes": [
+        "S03"
+      ]
+    },
+    {
+      "text": "Claude 能做仪表盘和动画",
+      "scenes": [
+        "S04"
+      ]
+    },
+    {
+      "text": "Anthropic 更新使用政策",
+      "scenes": [
+        "S05"
+      ]
+    },
+    {
+      "text": "Anthropic 投 1.5 亿给科研",
+      "scenes": [
+        "S06"
+      ]
+    },
+    {
+      "text": "OpenAI 放出 722 篇数学稿",
+      "scenes": [
+        "S07"
+      ]
+    },
+    {
+      "text": "Ecosia 换中国模型",
+      "scenes": [
+        "S08"
+      ]
+    }
+  ],
+  "chapters": {
+    "S01": "开场",
+    "S02": "Haiku 5.5 价格砍九成",
+    "S03": "ChatGPT 回答变成互动界面",
+    "S04": "Claude 能做仪表盘和动画",
+    "S05": "Anthropic 更新使用政策",
+    "S06": "Anthropic 投 1.5 亿给科研",
+    "S07": "OpenAI 放出 722 篇数学稿",
+    "S08": "Ecosia 换中国模型",
+    "S09": "回顾"
+  },
+  "bar_labels": {
+    "S01": "开场",
+    "S02": "Haiku 5.5",
+    "S03": "Intelligent UI",
+    "S04": "仪表盘",
+    "S05": "使用政策",
+    "S06": "Genesis 计划",
+    "S07": "数学稿件",
+    "S08": "Ecosia 换模型",
+    "S09": "回顾"
+  },
+  "backgrounds": {
+    "S01": "01_深海气泡.png",
+    "S02": "02_星点.png",
+    "S03": "03_波纹.png",
+    "S04": "01_深海气泡.png",
+    "S05": "02_星点.png",
+    "S06": "03_波纹.png",
+    "S07": "01_深海气泡.png",
+    "S08": "02_星点.png",
+    "S09": "03_波纹.png"
+  },
+  "bg_alpha": 0.9,
+  "bg_blur": 0,
+  "intro_tagline": "",
+  "outro_references": [
+    "Haiku 5.5 价格砍九成（Anthropic）",
+    "ChatGPT 回答变成互动界面（TechCrunch / The Decoder）",
+    "Claude 能做仪表盘和动画（Claude）",
+    "Anthropic 更新使用政策（Anthropic）",
+    "Anthropic 投 1.5 亿给科研（Anthropic）",
+    "OpenAI 放出 722 篇数学稿（Unite.AI）",
+    "Ecosia 换中国模型（IT之家）"
+  ],
+  "outro_items": [
+    {
+      "label": "形象",
+      "value": "大肥鱼同人 · 上善无形 / ZipZipPipe"
+    },
+    {
+      "label": "视频制作模型",
+      "value": "Opus 5.5"
+    }
+  ],
+  "outro_closing": "感谢大家看到最后",
+  "auto_gestures": false,
+  "presenter": {
+    "id": "whale",
+    "frames": "角色/动作帧"
+  },
+  "badge_html": "AI每日日报<span class=\"n\">10.09</span>",
+  "toc_kicker_html": "<b>今日要闻</b>TODAY",
+  "bar_colors": [
+    "#97C3F0",
+    "#F3C98C",
+    "#4A88DA",
+    "#C6E6FB"
+  ],
+  "news": [
+    {
+      "headline": "Haiku 5.5 价格砍九成",
+      "org": "Anthropic",
+      "source": "Anthropic · Claude Haiku 5.5",
+      "source_short": "Anthropic",
+      "date": "10月7日",
+      "points": [
+        "输入 $0.10 / 百万",
+        "输出 $0.50 / 百万",
+        "比 Haiku 4.5 便宜九成",
+        "可调推理力度"
+      ],
+      "rundown_key": "Anthropic 发布 Claude Haiku 5.5",
+      "line_points": [
+        null,
+        null,
+        0,
+        2,
+        1,
+        null,
+        3,
+        null
+      ],
+      "refs": [
+        {
+          "name": "Anthropic",
+          "url": "https://www.anthropic.com/claude-haiku-5-5"
+        }
+      ],
+      "snap": "../assets/snaps/news_01.png",
+      "snap_src": "simonwillison.net"
+    },
+    {
+      "headline": "ChatGPT 回答变成互动界面",
+      "org": "OpenAI",
+      "source": "TechCrunch · OpenAI",
+      "source_short": "OpenAI",
+      "date": "10月7日",
+      "points": [
+        "回答带图表和按钮",
+        "能在聊天里做小工具",
+        "付费版 GPT-6 Sol",
+        "免费版 GPT-6 Luna"
+      ],
+      "rundown_key": "ChatGPT 回答变成互动界面",
+      "line_points": [
+        null,
+        null,
+        0,
+        0,
+        1,
+        2,
+        3,
+        null,
+        null
+      ],
+      "refs": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/10/07/chatgpt-is-getting-a-lot-more-visual-with-the-launch-of-a-new-interface/"
+        },
+        {
+          "name": "The Decoder",
+          "url": "https://the-decoder.com/chatgpt-with-gpt-6-ditches-mostly-text-output-for-interactive-ui-with-charts-buttons-and-mini-apps/"
+        }
+      ],
+      "snap": "../assets/snaps/news_02.png",
+      "snap_src": "the-decoder.com"
+    },
+    {
+      "headline": "Claude 能做仪表盘和动画",
+      "org": "Anthropic",
+      "source": "Claude · 官方文章",
+      "source_short": "Claude",
+      "date": "10月8日",
+      "points": [
+        "Dashboards 测试版",
+        "Motion 动画讲解",
+        "Docs 等转正，免费版可用",
+        "Motion 限 Team 以上"
+      ],
+      "rundown_key": "Claude 能做仪表盘和动画",
+      "line_points": [
+        null,
+        null,
+        0,
+        0,
+        3,
+        1,
+        2,
+        null,
+        null
+      ],
+      "refs": [
+        {
+          "name": "Claude",
+          "url": "https://claude.com/resources/articles/dashboards-and-motion"
+        }
+      ],
+      "snap": "../assets/snaps/news_03.png",
+      "snap_src": "claude.com"
+    },
+    {
+      "headline": "Anthropic 更新使用政策",
+      "org": "Anthropic",
+      "source": "Anthropic · 官方新闻",
+      "source_short": "Anthropic",
+      "date": "10月8日",
+      "points": [
+        "11月12日生效",
+        "禁止无休止辱骂模型",
+        "禁止无同意的追踪",
+        "机器人要能停下"
+      ],
+      "rundown_key": "Anthropic 更新使用政策",
+      "line_points": [
+        null,
+        0,
+        1,
+        1,
+        2,
+        null,
+        3,
+        null
+      ],
+      "refs": [
+        {
+          "name": "Anthropic",
+          "url": "https://www.anthropic.com/news/2026-usage-policy-update"
+        }
+      ],
+      "snap": "../assets/snaps/news_04.png",
+      "snap_src": "anthropic.com"
+    },
+    {
+      "headline": "Anthropic 投 1.5 亿给科研",
+      "org": "Anthropic",
+      "source": "Anthropic · 官方新闻",
+      "source_short": "Anthropic",
+      "date": "10月8日",
+      "points": [
+        "三年 1.5 亿美元",
+        "超 15 个机构",
+        "含 Claude Code 额度",
+        "聚焦聚变和量子"
+      ],
+      "rundown_key": "Anthropic 向科研计划投 1.5 亿美元",
+      "line_points": [
+        null,
+        0,
+        null,
+        1,
+        2,
+        3,
+        null,
+        null
+      ],
+      "refs": [
+        {
+          "name": "Anthropic",
+          "url": "https://www.anthropic.com/news/genesis-mission-commitment"
+        }
+      ],
+      "snap": "../assets/snaps/news_05.png",
+      "snap_src": "anthropic.com"
+    },
+    {
+      "headline": "OpenAI 放出 722 篇数学稿",
+      "org": "OpenAI",
+      "source": "Unite.AI · OpenAI",
+      "source_short": "OpenAI",
+      "date": "10月6日",
+      "points": [
+        "722 篇，372 个系列",
+        "约 4000 道题",
+        "部分没有 Lean 验证",
+        "数学界批评"
+      ],
+      "rundown_key": "OpenAI 公开 722 篇数学稿件",
+      "line_points": [
+        null,
+        0,
+        1,
+        null,
+        2,
+        null,
+        3,
+        null,
+        null
+      ],
+      "refs": [
+        {
+          "name": "Unite.AI",
+          "url": "https://www.unite.ai/openai-releases-722-math-manuscripts-from-an-unreleased-ai-model/"
+        }
+      ],
+      "snap": "../assets/snaps/news_06.png",
+      "snap_src": "unite.ai"
+    },
+    {
+      "headline": "Ecosia 换中国模型",
+      "org": "Ecosia",
+      "source": "IT之家 · 政治报",
+      "source_short": "IT之家",
+      "date": "10月8日",
+      "points": [
+        "放弃法国 Mistral",
+        "改用 Qwen、GLM、Kimi",
+        "成本降一半"
+      ],
+      "rundown_key": "Ecosia 放弃 Mistral",
+      "line_points": [
+        null,
+        0,
+        null,
+        null,
+        null,
+        1,
+        2,
+        null
+      ],
+      "refs": [
+        {
+          "name": "IT之家",
+          "url": "https://www.ithome.com/1/010/539.htm"
+        }
+      ],
+      "snap": "../assets/snaps/news_07.png",
+      "snap_src": "ithome.com"
+    }
+  ],
+  "style": "board"
+}

@@ -1,0 +1,115 @@
+{
+  "date": "2026-10-08",
+  "video": {
+    "path": "D:\\大疆\\AI日报\\2026-10-08\\AI每日日报_1008_成片.mp4",
+    "duration_seconds": 473.87
+  },
+  "bilibili": {
+    "title": "10月8日AI圈7件事：Mistral发布万亿参数Large 4，Anthropic送初创公司一年Claude Team",
+    "description": "今天的 AI 圈 7 条消息：\n\n1. Mistral Large 4：万亿参数公开预览，权重和许可证将在 10 月公布。\n2. Reflection AI 发布开放权重模型 Beam。\n3. OpenAI 将在欧盟为 ChatGPT 和 Codex 文字加入 textGrain 水印。\n4. Anthropic 为符合条件的初创公司提供一年 Claude Team 和 API 额度。\n5. Anthropic 扩大 Cyber Verification Program，分防守、红队和特殊访问三档。\n6. Together Link 让 Claude Code、Codex 等工具接入开源模型。\n7. Google DeepMind 发布 EmbeddingGemma 2，多模态嵌入模型支持文字、图片、视频和音频。\n\n内容由 AI 整理，配音使用 Fish Audio 苏晓晓；如有出入，以原始来源为准。\n\n来源：\n- Mistral AI：https://mistral.ai/news/mistral-large-4/\n- The Decoder：https://the-decoder.com/mistral-large-4-is-said-to-be-the-most-powerful-open-ai-model-from-europe-and-the-u-s/\n- TechCrunch：https://techcrunch.com/2026/10/05/reflection-debuts-beam-a-open-weight-ai-model-to-rival-chinese-models-at-lower-compute-cost/\n- TechCrunch：https://techcrunch.com/2026/10/05/openai-will-start-watermarking-chatgpts-text-in-the-eu/\n- TechCrunch：https://techcrunch.com/2026/10/06/anthropic-gives-startups-a-free-year-of-enterprise-service-and-1000-in-token-credits/\n- Anthropic：https://www.anthropic.com/news/cyber-verification-program\n- Together AI 文档：https://docs.together.ai/docs/togetherlink\n- MarkTechPost：https://www.marktechpost.com/2026/10/05/meet-together-link-a-free-cli-that-runs-open-models-like-kimi-k3-and-glm-5-3-inside-claude-code-codex-and-opencode/\n- Hugging Face：https://huggingface.co/google/embeddinggemma-2\n- MarkTechPost：https://www.marktechpost.com/2026/10/06/google-deepmind-releases-embeddinggemma-2-a-740m-open-multimodal-embedding-model-built-on-gemma-4/\n",
+    "hashtags": [
+      "#AI",
+      "#人工智能",
+      "#AI日报",
+      "#大模型",
+      "#Claude",
+      "#ChatGPT",
+      "#Mistral",
+      "#开源模型",
+      "#科技"
+    ],
+    "collection": "AI每日日报",
+    "ai_declaration": "含AI生成内容"
+  },
+  "douyin": {
+    "title": "Mistral发万亿模型，Anthropic送初创套餐",
+    "description": "10月8日AI圈7件事：Mistral发布万亿参数Large 4，Anthropic送初创公司一年Claude Team\n\n今天的 AI 圈 7 条消息：\n\n1. Mistral Large 4：万亿参数公开预览，权重和许可证将在 10 月公布。\n2. Reflection AI 发布开放权重模型 Beam。\n3. OpenAI 将在欧盟为 ChatGPT 和 Codex 文字加入 textGrain 水印。\n4. Anthropic 为符合条件的初创公司提供一年 Claude Team 和 API 额度。\n5. Anthropic 扩大 Cyber Verification Program，分防守、红队和特殊访问三档。\n6. Together Link 让 Claude Code、Codex 等工具接入开源模型。\n7. Google DeepMind 发布 EmbeddingGemma 2，多模态嵌入模型支持文字、图片、视频和音频。\n\n内容由 AI 整理，配音使用 Fish Audio 苏晓晓；如有出入，以原始来源为准。\n\n来源：\n- Mistral AI：https://mistral.ai/news/mistral-large-4/\n- The Decoder：https://the-decoder.com/mistral-large-4-is-said-to-be-the-most-powerful-open-ai-model-from-europe-and-the-u-s/\n- TechCrunch：https://techcrunch.com/2026/10/05/reflection-debuts-beam-a-open-weight-ai-model-to-rival-chinese-models-at-lower-compute-cost/\n- TechCrunch：https://techcrunch.com/2026/10/05/openai-will-start-watermarking-chatgpts-text-in-the-eu/\n- TechCrunch：https://techcrunch.com/2026/10/06/anthropic-gives-startups-a-free-year-of-enterprise-service-and-1000-in-token-credits/\n- Anthropic：https://www.anthropic.com/news/cyber-verification-program\n- Together AI 文档：https://docs.together.ai/docs/togetherlink\n- MarkTechPost：https://www.marktechpost.com/2026/10/05/meet-together-link-a-free-cli-that-runs-open-models-like-kimi-k3-and-glm-5-3-inside-claude-code-codex-and-opencode/\n- Hugging Face：https://huggingface.co/google/embeddinggemma-2\n- MarkTechPost：https://www.marktechpost.com/2026/10/06/google-deepmind-releases-embeddinggemma-2-a-740m-open-multimodal-embedding-model-built-on-gemma-4/\n",
+    "hashtags": [
+      "#AI",
+      "#人工智能",
+      "#AI日报",
+      "#大模型",
+      "#Claude"
+    ],
+    "collection": "AI每日日报",
+    "declaration": "内容由AI生成",
+    "status": "暂停发布"
+  },
+  "xiaohongshu": {
+    "title": "AI圈7件事：Mistral万亿模型",
+    "description": "今天的 AI 圈 7 条消息：\n\n1. Mistral Large 4：万亿参数公开预览，权重和许可证将在 10 月公布。\n2. Reflection AI 发布开放权重模型 Beam。\n3. OpenAI 将在欧盟为 ChatGPT 和 Codex 文字加入 textGrain 水印。\n4. Anthropic 为符合条件的初创公司提供一年 Claude Team 和 API 额度。\n5. Anthropic 扩大 Cyber Verification Program，分防守、红队和特殊访问三档。\n6. Together Link 让 Claude Code、Codex 等工具接入开源模型。\n7. Google DeepMind 发布 EmbeddingGemma 2，多模态嵌入模型支持文字、图片、视频和音频。\n\n内容由 AI 整理，配音使用 Fish Audio 苏晓晓；如有出入，以原始来源为准。\n\n来源：\n- Mistral AI：https://mistral.ai/news/mistral-large-4/\n- The Decoder：https://the-decoder.com/mistral-large-4-is-said-to-be-the-most-powerful-open-ai-model-from-europe-and-the-u-s/\n- TechCrunch：https://techcrunch.com/2026/10/05/reflection-debuts-beam-a-open-weight-ai-model-to-rival-chinese-models-at-lower-compute-cost/\n- TechCrunch：https://techcrunch.com/2026/10/05/openai-will-start-watermarking-chatgpts-text-in-the-eu/\n- TechCrunch：https://techcrunch.com/2026/10/06/anthropic-gives-startups-a-free-year-of-enterprise-service-and-1000-in-token-credits/\n- Anthropic：https://www.anthropic.com/news/cyber-verification-program\n- Together AI 文档：https://docs.together.ai/docs/togetherlink\n- MarkTechPost：https://www.marktechpost.com/2026/10/05/meet-together-link-a-free-cli-that-runs-open-models-like-kimi-k3-and-glm-5-3-inside-claude-code-codex-and-opencode/\n- Hugging Face：https://huggingface.co/google/embeddinggemma-2\n- MarkTechPost：https://www.marktechpost.com/2026/10/06/google-deepmind-releases-embeddinggemma-2-a-740m-open-multimodal-embedding-model-built-on-gemma-4/\n\n\n#AI #人工智能 #AI日报 #大模型 #Claude #ChatGPT #Mistral #开源模型 #科技",
+    "hashtags": [
+      "#AI",
+      "#人工智能",
+      "#AI日报",
+      "#大模型",
+      "#Claude",
+      "#ChatGPT",
+      "#Mistral",
+      "#开源模型",
+      "#科技"
+    ],
+    "collection": "AI每日日报",
+    "declaration": "笔记含AI合成内容",
+    "original_statement": true,
+    "status": "暂停发布"
+  },
+  "wechat_video": {
+    "title": "10月8日AI圈7件事：Mistral发布万亿参数Large 4，Anthropic送初创公司一年Claude Team",
+    "description": "今天的 AI 圈 7 条消息：\n\n1. Mistral Large 4：万亿参数公开预览，权重和许可证将在 10 月公布。\n2. Reflection AI 发布开放权重模型 Beam。\n3. OpenAI 将在欧盟为 ChatGPT 和 Codex 文字加入 textGrain 水印。\n4. Anthropic 为符合条件的初创公司提供一年 Claude Team 和 API 额度。\n5. Anthropic 扩大 Cyber Verification Program，分防守、红队和特殊访问三档。\n6. Together Link 让 Claude Code、Codex 等工具接入开源模型。\n7. Google DeepMind 发布 EmbeddingGemma 2，多模态嵌入模型支持文字、图片、视频和音频。\n\n内容由 AI 整理，配音使用 Fish Audio 苏晓晓；如有出入，以原始来源为准。\n\n来源：\n- Mistral AI：https://mistral.ai/news/mistral-large-4/\n- The Decoder：https://the-decoder.com/mistral-large-4-is-said-to-be-the-most-powerful-open-ai-model-from-europe-and-the-u-s/\n- TechCrunch：https://techcrunch.com/2026/10/05/reflection-debuts-beam-a-open-weight-ai-model-to-rival-chinese-models-at-lower-compute-cost/\n- TechCrunch：https://techcrunch.com/2026/10/05/openai-will-start-watermarking-chatgpts-text-in-the-eu/\n- TechCrunch：https://techcrunch.com/2026/10/06/anthropic-gives-startups-a-free-year-of-enterprise-service-and-1000-in-token-credits/\n- Anthropic：https://www.anthropic.com/news/cyber-verification-program\n- Together AI 文档：https://docs.together.ai/docs/togetherlink\n- MarkTechPost：https://www.marktechpost.com/2026/10/05/meet-together-link-a-free-cli-that-runs-open-models-like-kimi-k3-and-glm-5-3-inside-claude-code-codex-and-opencode/\n- Hugging Face：https://huggingface.co/google/embeddinggemma-2\n- MarkTechPost：https://www.marktechpost.com/2026/10/06/google-deepmind-releases-embeddinggemma-2-a-740m-open-multimodal-embedding-model-built-on-gemma-4/\n",
+    "hashtags": [
+      "#AI",
+      "#人工智能",
+      "#AI日报",
+      "#大模型",
+      "#Claude",
+      "#ChatGPT",
+      "#Mistral",
+      "#开源模型",
+      "#科技"
+    ],
+    "status": "不发布"
+  },
+  "sources": [
+    {
+      "name": "Mistral AI",
+      "url": "https://mistral.ai/news/mistral-large-4/"
+    },
+    {
+      "name": "The Decoder",
+      "url": "https://the-decoder.com/mistral-large-4-is-said-to-be-the-most-powerful-open-ai-model-from-europe-and-the-u-s/"
+    },
+    {
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/2026/10/05/reflection-debuts-beam-a-open-weight-ai-model-to-rival-chinese-models-at-lower-compute-cost/"
+    },
+    {
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/2026/10/05/openai-will-start-watermarking-chatgpts-text-in-the-eu/"
+    },
+    {
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/2026/10/06/anthropic-gives-startups-a-free-year-of-enterprise-service-and-1000-in-token-credits/"
+    },
+    {
+      "name": "Anthropic",
+      "url": "https://www.anthropic.com/news/cyber-verification-program"
+    },
+    {
+      "name": "Together AI 文档",
+      "url": "https://docs.together.ai/docs/togetherlink"
+    },
+    {
+      "name": "MarkTechPost",
+      "url": "https://www.marktechpost.com/2026/10/05/meet-together-link-a-free-cli-that-runs-open-models-like-kimi-k3-and-glm-5-3-inside-claude-code-codex-and-opencode/"
+    },
+    {
+      "name": "Hugging Face",
+      "url": "https://huggingface.co/google/embeddinggemma-2"
+    },
+    {
+      "name": "MarkTechPost",
+      "url": "https://www.marktechpost.com/2026/10/06/google-deepmind-releases-embeddinggemma-2-a-740m-open-multimodal-embedding-model-built-on-gemma-4/"
+    }
+  ]
+}

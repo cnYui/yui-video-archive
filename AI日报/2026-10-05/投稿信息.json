@@ -1,0 +1,23 @@
+{
+  "title": "10月5日，鲸鱼娘带你看看AI圈发生了什么？",
+  "video": "D:\\大疆\\AI日报\\2026-10-05\\AI每日日报_1005_上传版.mp4",
+  "video_seconds": 353.12,
+  "cover_16x9": "D:\\大疆\\AI日报\\2026-10-05\\封面\\封面_16x9_1920x1080.png",
+  "cover_4x3": "D:\\大疆\\AI日报\\2026-10-05\\封面\\封面_4x3_1440x1080.png",
+  "partition": "人工智能",
+  "partition_fallback": "科技数码",
+  "tags": [
+    "AI资讯",
+    "人工智能",
+    "大模型",
+    "AI日报",
+    "谷歌",
+    "DeepSeek",
+    "OpenAI",
+    "鲸鱼娘",
+    "大肥鱼"
+  ],
+  "collection": "AI每日日报",
+  "declaration": "含AI生成内容",
+  "description": "AI每日日报 · 10月5日（周一）\n鲸鱼娘带你看看 AI 圈发生了什么。\n\n来源\n① Gemini 免费版降级：9to5Google https://9to5google.com/2026/10/03/gemini-model-limits-oct-26/ ；The Decoder https://the-decoder.com/googles-new-gemini-tiers-cut-free-users-to-its-weakest-model-and-lock-5-month-subscribers-out-of-pro/\n② 德国开源模型 Kolibri：Aleph Alpha https://aleph-alpha.com/en/blog/kolibri-has-landed-a-sovereign-open-weight-model/ ；Hugging Face https://huggingface.co/Aleph-Alpha/Kolibri-1\n③ DeepSeek Harness 新测试版：GitHub https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.2.1-alpha.1 ；36氪 https://www.36kr.com/p/4010809598922624\n④ GPT-6 打星际搬顶尖代码：Kotaku https://kotaku.com/openais-gpt-6-astra-gets-frustrated-losing-at-starcraft-and-decides-to-cheat-instead-2000739607 ；XDA https://www.xda-developers.com/gpt-6-astra-started-losing-starcraft-stole-winning-bot-instead-of-playing-fair/\n⑤ 谷歌暂停开源漏洞赏金：IT之家 https://www.ithome.com/1/009/673.htm ；Tom's Hardware https://www.tomshardware.com/tech-industry/artificial-intelligence/google-suspends-part-of-the-oss-vrp-bug-bounty-program-due-to-an-influx-of-invalid-ai-submissions-product-vulnerability-submissions-ended-october-1\n⑥ COSMIC 拒收 AI 代码：Linuxiac https://linuxiac.com/cosmic-stops-accepting-llm-generated-content-in-pull-requests/ ；GitHub https://github.com/pop-os/cosmic-epoch/blob/master/.github/PULL_REQUEST_TEMPLATE.md ；IT之家 https://www.ithome.com/1/009/669.htm\n⑦ Gboard 训练搬进加密服务器：Google Research https://research.google/blog/toward-provably-private-learning-from-federated-data/ ；AlphaSignal https://alphasignal.ai/news/google-moves-gboard-s-private-ai-training-into-secure-server-enclaves\n⑧ 治 AI 智能体刷题：The Decoder https://the-decoder.com/google-researchers-find-a-way-to-keep-self-improving-ai-agents-from-memorizing-their-tests/ ；arXiv https://arxiv.org/abs/2609.24972\n\n说明\n· 信息截至北京时间 2026-10-05 03:34，以各家官方发布为准。\n· 本期配音由 AI 合成（Fish Audio「苏晓晓」）；内容由 AI 整理，并自动核对来源，如有出入以原文为准。\n· 主播鲸鱼娘（像素素材包「大肥鱼」）是 DeepSeek 的网友拟人同人（原型：上善无形，CC BY-NC-SA 4.0；女仆造型：ZipZipPipe），与 DeepSeek 官方无关。"
+}

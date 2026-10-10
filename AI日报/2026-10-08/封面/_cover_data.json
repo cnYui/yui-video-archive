@@ -1,0 +1,46 @@
+{
+  "line1": "Mistral 万亿参数模型",
+  "line2": "权重要等到月底？",
+  "l1px": 168,
+  "l2px": 236,
+  "maxw": 1320,
+  "safe": [
+    300,
+    1620
+  ],
+  "textCx": 900,
+  "scale": 9,
+  "frame": [
+    64,
+    64
+  ],
+  "footRow": 62,
+  "fishX": 1074,
+  "foot": 1062,
+  "tag": "",
+  "theme": {
+    "bg": "#FFFFFF",
+    "lead": "#8A93AD",
+    "accent": "#4A88DA",
+    "list": "#4D5670",
+    "more": "#9AA2B8"
+  },
+  "_theme": "blue",
+  "_pose": "pose_huh",
+  "_eyes": "",
+  "_fx": "",
+  "_qmark": false,
+  "_place": "right",
+  "others": [
+    "Reflection 发布 Beam",
+    "ChatGPT 文字加水印",
+    "初创公司免费用 Claude",
+    "网络安全验证计划",
+    "Together Link"
+  ],
+  "othersHead": "今天还有 6 条",
+  "othersMore": "……共 7 条",
+  "listX": 300,
+  "listW": 740,
+  "listBottom": 1000
+}

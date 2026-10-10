@@ -1,0 +1,46 @@
+{
+  "line1": "arXiv 限制投稿",
+  "line2": "每月只能投两篇？",
+  "l1px": 168,
+  "l2px": 236,
+  "maxw": 1320,
+  "safe": [
+    300,
+    1620
+  ],
+  "textCx": 900,
+  "scale": 9,
+  "frame": [
+    64,
+    64
+  ],
+  "footRow": 62,
+  "fishX": 1074,
+  "foot": 1062,
+  "tag": "",
+  "theme": {
+    "bg": "#FFFFFF",
+    "lead": "#8A93AD",
+    "accent": "#4A88DA",
+    "list": "#4D5670",
+    "more": "#9AA2B8"
+  },
+  "_theme": "blue",
+  "_pose": "finger_up_m2",
+  "_eyes": "idle_surprised_m0",
+  "_fx": "fx_emph",
+  "_qmark": false,
+  "_place": "right",
+  "others": [
+    "Anthropic 办工程师学院",
+    "微软发布三个语音模型",
+    "ChatGPT 能虚拟试穿了",
+    "DGX Spark 出 64GB 版",
+    "Flux 3 Image 改图更稳"
+  ],
+  "othersHead": "今天还有 6 条",
+  "othersMore": "……共 7 条",
+  "listX": 300,
+  "listW": 740,
+  "listBottom": 1000
+}

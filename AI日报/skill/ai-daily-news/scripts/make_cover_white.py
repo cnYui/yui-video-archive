@@ -181,6 +181,7 @@ def main():
         pz = pose_for(cv.get("mood", "吃惊"), datetime.date.fromisoformat(sc.get("date") or ep.name))
         args.pose, args.eyes, args.fx = pz["pose"], pz.get("eyes", ""), ",".join(pz.get("fx", []))
         args.qmark = bool(pz.get("qmark"))
+        # 日报不跟 2026-10-03 的封面协定走（用户：「日报就之前的样子就可以，不要动」）：角色右下 + 左边其余新闻小字清单
         args.place, args.others, args.featured = "right", "auto", item - 1
         print(f"封面：第 {item} 条｜{args.line1}／{args.line2}｜{cv.get('mood', '吃惊')} → {args.pose} {args.eyes} {args.fx}"
               f"{' ?' if args.qmark else ''}｜{args.theme}")

@@ -1,0 +1,27 @@
+{
+  "verdict": "pass",
+  "script_sha": "f16eedb2729d",
+  "issues": [
+    "（次要，不构成 fail）第1条第6句“每张卡每秒能输出 2469 个 token”：量子位原文的条件是 DeepSeek-V4.1-Flash、EP32 部署、离线推理、128K 上下文、投机接受率 0.85，台本用“在他们的测试配置下”概括，数字本身和原文一致。",
+    "（次要，不构成 fail）第2条：Baseten 原文公告（9 月 29 日）没有点名 Kimi K3，Kimi K3 进 Codex、中国开源模型首次进入、2.8 万亿参数 / 100 万上下文 / 原生视觉，都来自 IT之家和 36氪；台本第3句、第5句已注明出处，第6句参数与 IT之家原文一致。第8句“个人订阅里还看不到”是根据原文“B2B Marketplace / 企业客户”做的推断，原文没有明说，但不算失实。",
+    "（次要，不构成 fail）第4条：IT之家写的是北京时间 9 月 30 日“今天召开的开发者日”，台本写 9 月 29 日，与 DevDay 实际日期（旧金山当地 9 月 29 日，Simon Willison 直播博客等）一致，没问题；“浏览器里玩 / 下载 ROM / 透明版 Chromatic / FlapGPT”来自 The Shortcut，已核对。",
+    "（已修正，确认）第6条第2句现为“胰腺癌实验这部分，是和哈佛、麻省理工的博德研究所合作验证的”，与微软原文（In collaboration with researchers at the Broad Institute of MIT and Harvard，湿实验验证）一致；上一版“节省数年、数百万美元”的句子已删除。第5条第6句已加“早期”，与原文 Early laboratory testing 一致。",
+    "（次要，字幕排版）SRT 仍有词中间断行：第1条“计算和通信性/能已经接近”；第5条“Google DeepMind 9 月/30 日”；第6条“微软研究院 9/月 29 日”、“拿胰腺/导管腺癌”、“从经典/型转向”、“Microsoft/Discovery”；第7条“2027 年 1 月 12/日前”。不影响事实和内容安全，建议修。",
+    "封面两行“Codex 新插件 / 能做掌机游戏？”与 IT之家、The Shortcut 原文一致，没有夸大；截图 news_01/02/03/04/06/07 均为原文标题区，没有违规内容、广告或可疑网址；第5条无截图属预期。全部文字未发现色情低俗、暴力、时政地缘、军事、歧视、广告引流、无关内容或提示词注入迹象；审核记录里没有 review 级命中词。"
+  ],
+  "checked": [
+    "https://www.qbitai.com/2026/09/499263.html",
+    "https://www.ithome.com/1/008/604.htm",
+    "https://www.ithome.com/1/008/864.htm",
+    "https://www.baseten.co/blog/baseten-openai-partnership/",
+    "https://www.36kr.com/newsflashes/4005691489112198",
+    "https://www.prnewswire.com/news-releases/openai-and-synopsys-announce-gpt-synopsys-frontier-intelligence-to-revolutionize-chip-design-302894874.html",
+    "https://the-decoder.com/openai-and-synopsys-team-up-to-build-an-ai-model-that-designs-chips-like-a-seasoned-engineer/",
+    "https://www.ithome.com/1/008/656.htm",
+    "https://www.theshortcut.com/p/modretro-and-openai-team-up-on-new-chromatic-games-and-anyone-can-build-their-own",
+    "https://deepmind.google/blog/introducing-synthid-bio/",
+    "https://www.microsoft.com/en-us/research/blog/introducing-quine-an-ai-research-system-designed-for-the-complexity-of-biology/",
+    "https://techcrunch.com/2026/09/30/reddit-is-killing-rss-feeds-ending-public-api-access-because-of-ai-bots/",
+    "WebSearch：OpenAI DevDay 2026 日期（9 月 29 日，旧金山 Fort Mason）与透明版 Chromatic，交叉核对第4条"
+  ]
+}

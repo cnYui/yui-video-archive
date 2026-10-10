@@ -1,0 +1,123 @@
+{
+ "date": "2026-10-06",
+ "script_sha": "a5cd22f345a4",
+ "passed": false,
+ "checked_at": "2026-10-06 19:14:09",
+ "checks": [
+  {
+   "check": "台本检查",
+   "ok": true,
+   "level": "ok",
+   "detail": "7 条，约 2203 字"
+  },
+  {
+   "check": "成片",
+   "ok": true,
+   "level": "ok",
+   "detail": "D:\\大疆\\AI日报\\2026-10-06\\AI每日日报_1006_成片.mp4"
+  },
+  {
+   "check": "上传版 ≤ 9 MB",
+   "ok": true,
+   "level": "ok",
+   "detail": "8.99 MB"
+  },
+  {
+   "check": "H.264 上传版 ≤ 9 MB（抖音 / 小红书）",
+   "ok": true,
+   "level": "ok",
+   "detail": "8.77 MB"
+  },
+  {
+   "check": "竖屏成片 1080×2340",
+   "ok": true,
+   "level": "ok",
+   "detail": "1080,2340"
+  },
+  {
+   "check": "竖屏 QA（帧数 / 时长 / 口型对齐）",
+   "ok": true,
+   "level": "ok",
+   "detail": "{\"width\": 1080, \"height\": 2340, \"frames\": 11031, \"want_frames\": 11031, \"duration\": 367.7, \"total\": 367.684, \"lufs\": \"-16.0\", \"lra\": \"2.0\", \"true_peak\": \"-3.5\", \"mouth_best_lag\": 0, \"mouth_corr\": 0.758, \"mouth_corr0\": 0.758, \"subs\": 177, \"ok\": true}"
+  },
+  {
+   "check": "竖屏字幕中英对齐（make_vertical.py lint）",
+   "ok": true,
+   "level": "ok",
+   "detail": "字幕对齐检查：177 段，错 0 处、提示 1 处"
+  },
+  {
+   "check": "封面",
+   "ok": true,
+   "level": "ok",
+   "detail": "16x9 + 4x3 + 3x4"
+  },
+  {
+   "check": "中英双语字幕（画面 + 三份 SRT）",
+   "ok": true,
+   "level": "ok",
+   "detail": "116 条"
+  },
+  {
+   "check": "标题（三个平台限长）",
+   "ok": true,
+   "level": "ok",
+   "detail": "10月6日AI圈7件事：ChatGPT生图时测试图片广告，OpenAI给欧盟文本加隐形水印 | ChatGPT生图测广告，欧盟文本加水印 | ChatGPT生图要插广告！AI圈7件事"
+  },
+  {
+   "check": "简介里有全部来源",
+   "ok": true,
+   "level": "ok",
+   "detail": "18 个网址"
+  },
+  {
+   "check": "简介里没有别的网址",
+   "ok": true,
+   "level": "ok",
+   "detail": ""
+  },
+  {
+   "check": "简介 ≤ 2000 字",
+   "ok": true,
+   "level": "ok",
+   "detail": "1962 字"
+  },
+  {
+   "check": "总时长超过 5 分钟（B 站分段章节要求）",
+   "ok": true,
+   "level": "ok",
+   "detail": "367.7 秒"
+  },
+  {
+   "check": "配音识别分 ≥ 0.75",
+   "ok": true,
+   "level": "ok",
+   "detail": "1 批"
+  },
+  {
+   "check": "事实核对（数字、英文名都在原文里）",
+   "ok": true,
+   "level": "ok",
+   "detail": "全部找到"
+  },
+  {
+   "check": "内容安全（色情、暴力、时政、广告、提示词注入、隐藏字符）",
+   "ok": true,
+   "level": "ok",
+   "detail": "没有命中"
+  },
+  {
+   "check": "没有重复最近 7 天播过的原文",
+   "ok": true,
+   "level": "ok",
+   "detail": ""
+  },
+  {
+   "check": "AI 复核（独立子代理，看成品和原文）",
+   "ok": false,
+   "level": "block",
+   "detail": "没有针对当前台本（sha a5cd22f345a4）的通过结论：【中英内容交叉 + 中文断在定语中间｜上一轮已指出，这版只多切了一刀，没改到位】第 2 条第 2 句：SRT #42/#43 中文“会给欧盟的 | ChatGPT 和 Codex 文本输出加水印。”，英文“watermark EU text | from ChatGPT and Codex.”。英文 #42 已经说了“加水印、文本”，中文 #42 只有“会给欧盟的”（以“的”悬空）；中文 #43 的“文本输出加水印”对应的英文只剩“from ChatGPT and Codex.”，两条各自说的不是同一件事。前一条 #41“未来几周 / it will, over the coming weeks,”只停 0.63 秒（英文约 49 字符/秒），#42 只停 0.79 秒，基本读不完。音频不用动，只改英文和切点即可，例如把这句 en 改成“On October 5, OpenAI said"
+  }
+ ],
+ "hits": []
+}

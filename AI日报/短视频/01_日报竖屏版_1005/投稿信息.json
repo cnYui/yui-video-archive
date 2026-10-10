@@ -1,0 +1,157 @@
+{
+ "_说明": "用户 2026-10-05：标题用 ①；B 站今天不发（日报），明天起四个平台都发；今天只发抖音 / 小红书 / 视频号（视频由用户拖进上传区）；抖音 / 视频号 / 小红书各新建合集“AI每日日报”。封面保持日报原样。",
+ "slug": "AI每日日报_1005_竖屏版",
+ "video": "D:\\大疆\\AI日报\\短视频\\01_日报竖屏版_1005\\AI每日日报_1005_竖屏版_成片.mp4",
+ "duration_s": 337.87,
+ "layout": "排版① 标准竖版（技能版式 B 单框 + 边框 6）；背景印花：pattern_orange（随机挑中）；BGM：系列 BGM（−14.5 dB 垫底）",
+ "approval": {
+  "status": "approved",
+  "cover": "原封面（不动）",
+  "title": 1,
+  "approved_at": "2026-10-05T10:08:20+09:00",
+  "note": "标题 ① + 今天只发抖音 / 小红书 / 视频号（B 站今天不发，用户 11:5x 说）；3:4 封面用第 0 帧裁切（原封面）；合集：抖音 / 视频号 / 小红书新建同名合集"
+ },
+ "titles": [
+  {
+   "id": 1,
+   "angle": "事实陈述（主体 + 动作 + 数字）",
+   "recommend": true,
+   "bilibili": "10月5日AI圈8件事：Gemini免费版只剩Flash-Lite，DeepSeek Harness试着兼容Claude Code插件",
+   "douyin": "Gemini免费版降级，DeepSeek试接Claude插件",
+   "xiaohongshu": "Gemini免费版降级！AI圈8件事",
+   "weixin_channels": "AI圈8件事：Gemini降级"
+  },
+  {
+   "id": 2,
+   "angle": "数字悬念",
+   "bilibili": "不到6分钟看完AI圈8件事：78B参数的模型每个词只动3.46B，谷歌暂停了部分漏洞赏金",
+   "douyin": "78B参数只动3.46B？AI圈8件事",
+   "xiaohongshu": "78B只动3.46B？AI圈8件事",
+   "weixin_channels": "78B只动3.46B的模型"
+  },
+  {
+   "id": 3,
+   "angle": "泼冷水（要说明的：AI 写的东西开始被拦）",
+   "bilibili": "AI写的东西开始被拦了：COSMIC拒收AI代码，谷歌暂停部分开源漏洞赏金，还有6件AI圈大事",
+   "douyin": "COSMIC拒收AI代码，谷歌暂停部分漏洞赏金",
+   "xiaohongshu": "COSMIC拒收AI代码！谷歌停部分赏金",
+   "weixin_channels": "COSMIC拒收AI代码"
+  }
+ ],
+ "covers": {
+  "16x9": "封面\\封面_16x9_1920x1080.png",
+  "4x3": "封面\\封面_4x3_1440x1080.png",
+  "3x4": "封面\\封面_3x4_原封面居中.png（第 0 帧 y450–1890 的裁切；待用户定要不要另出竖版）"
+ },
+ "source": {
+  "long_version": "日报横屏版 BV1JrHE6CEjS（2026-10-05 06:00 发布）",
+  "episode_dir": "D:\\大疆\\AI日报\\2026-10-05"
+ },
+ "bilibili": {
+  "title": "10月5日AI圈8件事：Gemini免费版只剩Flash-Lite，DeepSeek Harness试着兼容Claude Code插件",
+  "desc": "AI每日日报 · 10月5日（周一）· 竖屏版\n鲸鱼娘带你看看 AI 圈发生了什么。\n\n来源\n① Gemini 免费版降级：9to5Google https://9to5google.com/2026/10/03/gemini-model-limits-oct-26/ ；The Decoder https://the-decoder.com/googles-new-gemini-tiers-cut-free-users-to-its-weakest-model-and-lock-5-month-subscribers-out-of-pro/\n② 德国开源模型 Kolibri：Aleph Alpha https://aleph-alpha.com/en/blog/kolibri-has-landed-a-sovereign-open-weight-model/ ；Hugging Face https://huggingface.co/Aleph-Alpha/Kolibri-1\n③ DeepSeek Harness 新测试版：GitHub https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.2.1-alpha.1 ；36氪 https://www.36kr.com/p/4010809598922624\n④ GPT-6 打星际搬顶尖代码：Kotaku https://kotaku.com/openais-gpt-6-astra-gets-frustrated-losing-at-starcraft-and-decides-to-cheat-instead-2000739607 ；XDA https://www.xda-developers.com/gpt-6-astra-started-losing-starcraft-stole-winning-bot-instead-of-playing-fair/\n⑤ 谷歌暂停开源漏洞赏金：IT之家 https://www.ithome.com/1/009/673.htm ；Tom's Hardware https://www.tomshardware.com/tech-industry/artificial-intelligence/google-suspends-part-of-the-oss-vrp-bug-bounty-program-due-to-an-influx-of-invalid-ai-submissions-product-vulnerability-submissions-ended-october-1\n⑥ COSMIC 拒收 AI 代码：Linuxiac https://linuxiac.com/cosmic-stops-accepting-llm-generated-content-in-pull-requests/ ；GitHub https://github.com/pop-os/cosmic-epoch/blob/master/.github/PULL_REQUEST_TEMPLATE.md ；IT之家 https://www.ithome.com/1/009/669.htm\n⑦ Gboard 训练搬进加密服务器：Google Research https://research.google/blog/toward-provably-private-learning-from-federated-data/ ；AlphaSignal https://alphasignal.ai/news/google-moves-gboard-s-private-ai-training-into-secure-server-enclaves\n⑧ 治 AI 智能体刷题：The Decoder https://the-decoder.com/google-researchers-find-a-way-to-keep-self-improving-ai-agents-from-memorizing-their-tests/ ；arXiv https://arxiv.org/abs/2609.24972\n\n说明\n· 信息截至北京时间 2026-10-05 03:34，以各家官方发布为准。\n· 配音由 AI 合成（Fish Audio「苏晓晓」），背景音乐为程序合成；内容由 AI 整理并自动核对来源，以原文为准。\n· 主播鲸鱼娘（像素素材包「大肥鱼」）是 DeepSeek 的网友拟人同人（原型：上善无形，CC BY-NC-SA 4.0；女仆造型：ZipZipPipe），与 DeepSeek 官方无关。",
+  "declaration": "含AI生成内容",
+  "category": "人工智能（tid 231）",
+  "tags": [
+   "AI资讯",
+   "人工智能",
+   "大模型",
+   "AI日报",
+   "Gemini",
+   "DeepSeek",
+   "谷歌",
+   "鲸鱼娘",
+   "大肥鱼"
+  ],
+  "collection": "AI每日日报（B 站已有）",
+  "repost_source": "",
+  "cover": "两个位各传各的（双比例同步改动不勾）：16:9 → 个人空间封面，4:3 → 首页推荐封面",
+  "published": null,
+  "skipped": "用户 2026-10-05：B 站今天不发，明天开始四个平台都发"
+ },
+ "douyin": {
+  "title": "Gemini免费版降级，DeepSeek试接Claude插件",
+  "desc": "10月5日AI圈8件事：Gemini免费版只剩Flash-Lite，DeepSeek Harness试着兼容Claude Code插件\n今日 8 件事：Gemini 免费版降级、德国开源模型 Kolibri、DeepSeek Harness 试着兼容 Claude Code 插件、GPT-6 Astra 打星际、谷歌暂停部分开源漏洞赏金、COSMIC 拒收 AI 代码、Gboard 训练搬进加密服务器、谷歌治 AI 刷题的新方法。\n内容由 AI 整理并自动核对来源，如有出入以原文为准。",
+  "topics": [
+   "AI每日日报",
+   "人工智能",
+   "大模型",
+   "Gemini",
+   "DeepSeek"
+  ],
+  "declaration": "内容由AI生成",
+  "collection": "AI每日日报（新建：先发布，再在合集页把这条加进去）",
+  "cover": "竖封面 3:4 + 横封面 4:3（原封面）",
+  "published": null
+ },
+ "xiaohongshu": {
+  "title": "Gemini免费版降级！AI圈8件事",
+  "desc": "10月5日AI圈8件事：Gemini免费版只剩Flash-Lite，DeepSeek Harness试着兼容Claude Code插件\n今日 8 件事：Gemini 免费版降级、德国开源模型 Kolibri、DeepSeek Harness 试着兼容 Claude Code 插件、GPT-6 Astra 打星际、谷歌暂停部分开源漏洞赏金、COSMIC 拒收 AI 代码、Gboard 训练搬进加密服务器、谷歌治 AI 刷题的新方法。\n内容由 AI 整理并自动核对来源，如有出入以原文为准。",
+  "topics": [
+   "AI每日日报",
+   "人工智能",
+   "大模型",
+   "AI资讯",
+   "Gemini",
+   "DeepSeek",
+   "开源",
+   "科技",
+   "AIGC"
+  ],
+  "declaration": "笔记含AI合成内容（原创声明关）",
+  "cover": "3:4",
+  "published": null,
+  "collection": "AI每日日报（新建：内容设置 → 加入合集 → 创建合集）"
+ },
+ "weixin_channels": {
+  "short_title": "AI圈8件事：Gemini降级",
+  "desc": "10月5日AI圈8件事：Gemini免费版只剩Flash-Lite，DeepSeek Harness试着兼容Claude Code插件\n今日 8 件事：Gemini 免费版降级、德国开源模型 Kolibri、DeepSeek Harness 试着兼容 Claude Code 插件、GPT-6 Astra 打星际、谷歌暂停部分开源漏洞赏金、COSMIC 拒收 AI 代码、Gboard 训练搬进加密服务器、谷歌治 AI 刷题的新方法。\n内容由 AI 整理并自动核对来源，如有出入以原文为准。",
+  "topics": [
+   "AI每日日报",
+   "人工智能",
+   "大模型",
+   "AI资讯",
+   "Gemini",
+   "DeepSeek",
+   "开源",
+   "科技",
+   "AIGC"
+  ],
+  "declaration": "视频标注：含AI生成内容",
+  "location": "不显示位置",
+  "collection": "AI每日日报（新建：添加到合集 → 创建新合集，标题 6 字、创建后不可改）",
+  "cover": "成片第 0 帧 = 原封面；编辑封面选第 0 帧，3:4 裁剪框对到画面 y 450–1890（居中）",
+  "published": null
+ },
+ "published": {
+  "note": "用户 2026-10-05：B 站今天不发，明天起四个平台都发；今天发了另外三个。成片由用户拖进各页（32.1 MB 原片，没压缩）。",
+  "xiaohongshu": {
+   "time": "2026-10-05 12:02 JST（管理页显示 11:02）",
+   "status": "审核中",
+   "title": "Gemini免费版降级！AI圈8件事",
+   "duration": "05:37",
+   "collection": "AI每日日报（发布页内新建并选上）",
+   "topics": "9 个（#AI每日日报 在小红书是新建话题没浏览量，换成现成的 #每日AI日报）"
+  },
+  "douyin": {
+   "time": "2026-10-05 12:05 JST",
+   "status": "审核中",
+   "title": "Gemini免费版降级，DeepSeek试接Claude插件",
+   "duration": "05:38",
+   "collection": "AI每日日报（合集已建，待视频审核通过后在合集页“编辑合集 → 点击添加作品”加入；审核中的作品在列表里灰色、没有 +）"
+  },
+  "weixin_channels": {
+   "time": "2026-10-05 12:12 JST",
+   "status": "已发表",
+   "short_title": "AI圈8件事：Gemini降级",
+   "collection": "AI每日日报（发布页内新建并选上）",
+   "location": "不显示位置",
+   "cover": "第 0 帧，3:4 裁剪（编辑封面里已是它，确认即可）"
+  }
+ },
+ "collections_new": {
+  "name": "AI每日日报",
+  "intro_xhs_le50": "每天一条竖屏日报：鲸鱼娘带你 5 分钟看完当天 AI 圈新闻",
+  "intro_douyin_le200": "每天一条竖屏日报：鲸鱼娘带你 5 分钟看完当天 AI 圈新闻，每条都附来源，配音和整理由 AI 完成。"
+ }
+}

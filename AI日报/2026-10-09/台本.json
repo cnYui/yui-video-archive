@@ -1,0 +1,636 @@
+{
+ "date": "2026-10-09",
+ "opening": [
+  {
+   "text": "早上好，我是鲸鱼娘，今天是10月9日。",
+   "en": "Good morning, I'm Whale Girl. Today is October 9.",
+   "tts": "早上好，我是鲸鱼娘，今天是十月九日。",
+   "expr": "开心"
+  },
+  {
+   "text": "今天说七件事：Haiku 5.5 大降价，ChatGPT 回答变成互动界面，Claude 能做仪表盘和动画，Anthropic 更新使用政策，Anthropic 向科研计划投 1.5 亿美元，OpenAI 公开 722 篇数学稿件，还有 Ecosia 放弃 Mistral。",
+   "en": "Seven stories today: the Haiku 5.5 price cut, ChatGPT interactive answers, Claude dashboards and animations, Anthropic's new Usage Policy, Anthropic's $150 million science pledge, OpenAI's 722 math manuscripts, and Ecosia dropping Mistral.",
+   "tts": "今天说七件事：Haiku 5.5 大降价，ChatGPT 回答变成互动界面，Claude 能做仪表盘和动画，Anthropic 更新使用政策，Anthropic 向科研计划投一点五亿美元，OpenAI 公开七百二十二篇数学稿件，还有 Ecosia 放弃 Mistral。"
+  }
+ ],
+ "news": [
+  {
+   "headline": "Haiku 5.5 价格砍九成",
+   "bar_label": "Haiku 5.5",
+   "org": "Anthropic",
+   "source": "Anthropic · Claude Haiku 5.5",
+   "source_short": "Anthropic",
+   "date": "10月7日",
+   "rundown_key": "Anthropic 发布 Claude Haiku 5.5",
+   "vhook": "输入 $0.10，仅 4.5 的一成",
+   "points": [
+    "输入 $0.10 / 百万",
+    "输出 $0.50 / 百万",
+    "比 Haiku 4.5 便宜九成",
+    "可调推理力度"
+   ],
+   "lines": [
+    {
+     "text": "第一件，Anthropic 发布了小模型 Claude Haiku 5.5。",
+     "en": "First, Anthropic released its small model, Claude Haiku 5.5.",
+     "expr": "开心"
+    },
+    {
+     "text": "10 月 7 日上线，官方称它是 Anthropic 迄今最便宜、最快的小模型。",
+     "en": "It went live on October 7, and Anthropic calls it its cheapest and fastest small model yet.",
+     "tts": "十月七日上线，官方称它是 Anthropic 迄今最便宜、最快的小模型。"
+    },
+    {
+     "text": "价格是每百万输入词元 0.10 美元，输出 0.50 美元，针对 10 万词元以内的请求。",
+     "en": "It costs $0.10 per million input tokens and $0.50 per million output tokens, for prompts up to 100,000 tokens.",
+     "tts": "价格是每百万输入词元零点一美元，输出零点五美元，针对十万词元以内的请求。",
+     "point": 0
+    },
+    {
+     "text": "上一代 Haiku 4.5 是 1 美元和 5 美元，等于便宜了九成。",
+     "en": "The previous Haiku 4.5 was $1 and $5, so that is 90% cheaper.",
+     "tts": "上一代 Haiku 4.5 是一美元和五美元，等于便宜了九成。",
+     "point": 2
+    },
+    {
+     "text": "超过 10 万词元的请求，价格是 0.50 美元和 2.50 美元。",
+     "en": "Above 100,000 tokens, the price is $0.50 and $2.50.",
+     "tts": "超过十万词元的请求，价格是零点五美元和二点五美元。",
+     "point": 1
+    },
+    {
+     "text": "官方放出的成绩里，它在 OSWorld 2.1 离线子集拿了 72.4%，Haiku 4.5 是 15.7%。",
+     "en": "In Anthropic's own results, on OSWorld 2.1, it scores 72.4% on the offline subset, against 15.7% for Haiku 4.5.",
+     "tts": "官方放出的成绩里，它在 OSWorld 2.1 离线子集拿了百分之七十二点四，Haiku 4.5 是百分之十五点七。"
+    },
+    {
+     "text": "它还第一次给 Haiku 级别的模型加了可调的推理力度，AWS、谷歌云和 Azure 上都能用。",
+     "en": "It is also the first Haiku-class model with an adjustable effort setting, and it is on AWS, Google Cloud and Azure.",
+     "point": 3
+    },
+    {
+     "text": "这些分数是官方自己报的，真要上生产，先拿自己的任务跑一遍。",
+     "en": "These scores come from Anthropic itself, so run your own tasks before going to production."
+    }
+   ],
+   "vbigs": [
+    {
+     "line": 3,
+     "n": "-90%",
+     "small": "比 Haiku 4.5 便宜",
+     "d": "输入 $0.10 · 输出 $0.50"
+    },
+    {
+     "line": 5,
+     "n": "72.4%",
+     "small": "OSWorld 2.1 离线",
+     "d": "Haiku 4.5 只有 15.7%"
+    }
+   ],
+   "refs": [
+    {
+     "name": "Anthropic",
+     "url": "https://www.anthropic.com/claude-haiku-5-5"
+    },
+    {
+     "name": "Simon Willison",
+     "url": "https://simonwillison.net/2026/Oct/7/claude-haiku-5-5/"
+    }
+   ],
+   "snap_url": "https://simonwillison.net/2026/Oct/7/claude-haiku-5-5/"
+  },
+  {
+   "headline": "ChatGPT 回答变成互动界面",
+   "bar_label": "Intelligent UI",
+   "org": "OpenAI",
+   "source": "TechCrunch · OpenAI",
+   "source_short": "OpenAI",
+   "date": "10月7日",
+   "rundown_key": "ChatGPT 回答变成互动界面",
+   "vhook": "图表、按钮、表单，直接写进回答",
+   "points": [
+    "回答带图表和按钮",
+    "能在聊天里做小工具",
+    "付费版 GPT-6 Sol",
+    "免费版 GPT-6 Luna"
+   ],
+   "lines": [
+    {
+     "text": "第二件，ChatGPT 的回答不再只有文字了。",
+     "en": "Second, ChatGPT answers are no longer just text.",
+     "expr": "吃惊"
+    },
+    {
+     "text": "10 月 7 日，OpenAI 带着 GPT-6 推出了 Intelligent UI。",
+     "en": "On October 7, OpenAI, with GPT-6, launched Intelligent UI.",
+     "tts": "十月七日，OpenAI 带着 GPT-6 推出了 Intelligent UI。"
+    },
+    {
+     "text": "回答里可以出现图表、按钮、表单这类能点的元素。",
+     "en": "Answers can now include things you can click, like charts, buttons and forms.",
+     "point": 0
+    },
+    {
+     "text": "比如比较两样东西，会并排摆；讲一个概念，可能给你一张能互动的图。",
+     "en": "A comparison might sit side by side, and an explanation might become an interactive chart.",
+     "point": 0
+    },
+    {
+     "text": "你还能在聊天里让它做小工具，像储蓄计算器，或者一个小游戏。",
+     "en": "You can also have it build small tools in the chat, such as a savings calculator or a game.",
+     "point": 1
+    },
+    {
+     "text": "Plus、Pro、Business 和 Enterprise 用户先用上，用的是 GPT-6 Sol。",
+     "en": "Plus, Pro, Business and Enterprise users get it first, on GPT-6 Sol.",
+     "point": 2
+    },
+    {
+     "text": "免费版和 Go 用户晚一天，用的是 GPT-6 Luna。",
+     "en": "Free and Go users follow a day later, on GPT-6 Luna.",
+     "point": 3
+    },
+    {
+     "text": "OpenAI 还说，模型能边想边答，等待时间少了 44%。",
+     "en": "OpenAI also says the model can answer while it is still thinking, which cuts waiting time by 44%.",
+     "tts": "OpenAI 还说，模型能边想边答，等待时间少了百分之四十四。"
+    },
+    {
+     "text": "这个数字是官方说的，还没有第三方实测，好不好用，自己试了才知道。",
+     "en": "That number is OpenAI's own, with no independent test yet, so try it yourself."
+    }
+   ],
+   "vbigs": [
+    {
+     "line": 7,
+     "n": "-44%",
+     "small": "等待时间",
+     "d": "官方称：边想边答"
+    }
+   ],
+   "refs": [
+    {
+     "name": "TechCrunch",
+     "url": "https://techcrunch.com/2026/10/07/chatgpt-is-getting-a-lot-more-visual-with-the-launch-of-a-new-interface/"
+    },
+    {
+     "name": "The Decoder",
+     "url": "https://the-decoder.com/chatgpt-with-gpt-6-ditches-mostly-text-output-for-interactive-ui-with-charts-buttons-and-mini-apps/"
+    }
+   ],
+   "snap_url": "https://the-decoder.com/chatgpt-with-gpt-6-ditches-mostly-text-output-for-interactive-ui-with-charts-buttons-and-mini-apps/"
+  },
+  {
+   "headline": "Claude 能做仪表盘和动画",
+   "bar_label": "仪表盘",
+   "org": "Anthropic",
+   "source": "Claude · 官方文章",
+   "source_short": "Claude",
+   "date": "10月8日",
+   "rundown_key": "Claude 能做仪表盘和动画",
+   "vhook": "数据变仪表盘，提示词变动画",
+   "points": [
+    "Dashboards 测试版",
+    "Motion 动画讲解",
+    "Docs 等转正，免费版可用",
+    "Motion 限 Team 以上"
+   ],
+   "lines": [
+    {
+     "text": "第三件，Claude 多了仪表盘和动画讲解两个新功能。",
+     "en": "Third, Claude has two new features: dashboards and animated explainers.",
+     "expr": "开心"
+    },
+    {
+     "text": "10 月 8 日，Claude Dashboards 和 Claude Motion 进入测试。",
+     "en": "Since October 8, Claude Dashboards and Claude Motion have been in beta.",
+     "tts": "十月八日，Claude Dashboards 和 Claude Motion 进入测试。"
+    },
+    {
+     "text": "Dashboards 能把公司数据做成会随数据更新的仪表盘，付费计划可用。",
+     "en": "Dashboards turn company data into dashboards that update as the data changes, on paid plans.",
+     "point": 0
+    },
+    {
+     "text": "它能连 Snowflake、BigQuery、Databricks 这些数据仓库，每个数字都链接到背后的查询。",
+     "en": "It connects to Snowflake, BigQuery and Databricks warehouses, and every number links to its underlying query.",
+     "point": 0
+    },
+    {
+     "text": "Motion 是一句提示词生成一段短动画讲解，只给 Team 和企业版。",
+     "en": "Motion makes a short animated explainer from a prompt, and it is for Team and Enterprise only.",
+     "point": 3
+    },
+    {
+     "text": "它不是视频生成模型，输出是可编辑的代码，能下载成 MP4。",
+     "en": "It does not use a video generation model. The output is editable code that you can download as an MP4.",
+     "point": 1
+    },
+    {
+     "text": "另外，Docs、Slides 和 Design 结束测试，所有计划都能用，包括免费版。",
+     "en": "Also, Docs, Slides and Design are out of beta and on every plan, including Free.",
+     "point": 2
+    },
+    {
+     "text": "官方说，Claude 里已经做出超过 4500 万份文档、幻灯片和设计。",
+     "en": "Anthropic says more than 45 million docs, decks and designs have been made in Claude.",
+     "tts": "官方说，Claude 里已经做出超过四千五百万份文档、幻灯片和设计。"
+    },
+    {
+     "text": "企业管理员要注意，Dashboards 和 Motion 默认是关的，要自己去设置里开。",
+     "en": "Enterprise admins should note that Dashboards and Motion are off by default and need to be switched on in settings."
+    }
+   ],
+   "vbigs": [
+    {
+     "line": 7,
+     "n": "4500万",
+     "small": "文档 / 幻灯片 / 设计",
+     "d": "Claude 里已做出的数量"
+    }
+   ],
+   "refs": [
+    {
+     "name": "Claude",
+     "url": "https://claude.com/resources/articles/dashboards-and-motion"
+    }
+   ],
+   "snap_url": "https://claude.com/resources/articles/dashboards-and-motion"
+  },
+  {
+   "headline": "Anthropic 更新使用政策",
+   "bar_label": "使用政策",
+   "org": "Anthropic",
+   "source": "Anthropic · 官方新闻",
+   "source_short": "Anthropic",
+   "date": "10月8日",
+   "rundown_key": "Anthropic 更新使用政策",
+   "vhook": "11 月 12 日生效，禁虐待模型",
+   "points": [
+    "11月12日生效",
+    "禁止无休止辱骂模型",
+    "禁止无同意的追踪",
+    "机器人要能停下"
+   ],
+   "lines": [
+    {
+     "text": "第四件，Anthropic 发布了新版使用政策。",
+     "en": "Fourth, Anthropic published a new version of its Usage Policy.",
+     "expr": "认真"
+    },
+    {
+     "text": "10 月 8 日公布，11 月 12 日生效。",
+     "en": "It was announced on October 8 and takes effect on November 12.",
+     "tts": "十月八日公布，十一月十二日生效。",
+     "point": 0
+    },
+    {
+     "text": "最受关注的一条是，禁止对模型做持续的、不必要的辱骂或残忍行为。",
+     "en": "The line that drew attention bans sustained and needless abusive or cruel behavior toward its models.",
+     "point": 1
+    },
+    {
+     "text": "官方说这是留给极端情况的，普通的发火、反驳、黑暗题材创作和测试都不算。",
+     "en": "Anthropic says it is meant for extreme cases, and ordinary frustration, pushback, dark creative themes and testing do not count.",
+     "point": 1
+    },
+    {
+     "text": "监控方面，不能未经同意追踪个人，也不能让 Claude 决定该调查、逮捕或起诉谁。",
+     "en": "On surveillance, you cannot track people without consent, and Claude cannot decide who to investigate, arrest or charge.",
+     "point": 2
+    },
+    {
+     "text": "武器一条扩大到让武器运转的软件和部件，包括给无人机装武器。",
+     "en": "The weapons rule now covers the software and components that make weapons work, including arming drones."
+    },
+    {
+     "text": "会自主动手的硬件，必须有合格的操作员能让它停下，Claude 断线时还要保持安全状态。",
+     "en": "Hardware that acts on its own needs a qualified operator who can stop it, and it must hold a safe state if Claude disconnects.",
+     "point": 3
+    },
+    {
+     "text": "选举那一节改名了，也删掉了对投票的个性化定向的一刀切禁令。",
+     "en": "The elections section was renamed, and the blanket ban on personalized vote targeting was removed."
+    }
+   ],
+   "vbigs": [
+    {
+     "line": 1,
+     "n": "11月12日",
+     "small": "新政策生效",
+     "d": "10月8日公布"
+    }
+   ],
+   "refs": [
+    {
+     "name": "Anthropic",
+     "url": "https://www.anthropic.com/news/2026-usage-policy-update"
+    }
+   ],
+   "snap_url": "https://www.anthropic.com/news/2026-usage-policy-update"
+  },
+  {
+   "headline": "Anthropic 投 1.5 亿给科研",
+   "bar_label": "Genesis 计划",
+   "org": "Anthropic",
+   "source": "Anthropic · 官方新闻",
+   "source_short": "Anthropic",
+   "date": "10月8日",
+   "rundown_key": "Anthropic 向科研计划投 1.5 亿美元",
+   "vhook": "三年 $1.5 亿，覆盖 15 个机构",
+   "points": [
+    "三年 1.5 亿美元",
+    "超过 15 个机构",
+    "含 Claude Code 额度",
+    "聚焦聚变和量子"
+   ],
+   "lines": [
+    {
+     "text": "第五件，Anthropic 要在三年里向美国的科研计划投入 1.5 亿美元。",
+     "en": "Fifth, Anthropic will put $150 million over three years into a US science program.",
+     "expr": "认真"
+    },
+    {
+     "text": "10 月 8 日，在白宫科技政策办公室办的科学峰会上，Anthropic 宣布了对 Genesis Mission 的承诺。",
+     "en": "On October 8, at a White House science policy office summit, Anthropic announced its commitment to the Genesis Mission.",
+     "tts": "十月八日，在白宫科技政策办公室办的科学峰会上，Anthropic 宣布了对 Genesis Mission 的承诺。",
+     "point": 0
+    },
+    {
+     "text": "Genesis Mission 是一个联邦计划，目标是用 AI 加快科学和技术发现。",
+     "en": "The Genesis Mission is a federal initiative to speed up scientific and technological discovery with AI."
+    },
+    {
+     "text": "钱会用来让超过 15 个机构用上 Claude，官方点名了 NASA、美国国家卫生研究院和国家科学基金会。",
+     "en": "The money will let more than 15 agencies use Claude. Anthropic names NASA, the National Institutes of Health and the National Science Foundation.",
+     "tts": "钱会用来让超过十五个机构用上 Claude，官方点名了 NASA、美国国家卫生研究院和国家科学基金会。",
+     "point": 1
+    },
+    {
+     "text": "内容包括给几百个科研项目的 Claude、Claude Code 和 API 额度。",
+     "en": "It includes Claude, Claude Code and API credits for several hundred research projects.",
+     "point": 2
+    },
+    {
+     "text": "还会和国家实验室合作，重点是聚变能源和量子计算。",
+     "en": "It will also work with national laboratories, with fusion energy and quantum computing as priorities.",
+     "point": 3
+    },
+    {
+     "text": "另外提供培训和技术支持，帮新加入的机构做第一个项目。",
+     "en": "Training and technical support are included, to help newer agencies launch their first projects."
+    },
+    {
+     "text": "这是官方承诺，具体每个项目拿多少额度，原文没写。",
+     "en": "This is a pledge, and the article does not say how much each project gets."
+    }
+   ],
+   "vbigs": [
+    {
+     "line": 0,
+     "n": "$1.5亿",
+     "small": "三年投入",
+     "d": "Genesis Mission"
+    }
+   ],
+   "refs": [
+    {
+     "name": "Anthropic",
+     "url": "https://www.anthropic.com/news/genesis-mission-commitment"
+    }
+   ],
+   "snap_url": "https://www.anthropic.com/news/genesis-mission-commitment"
+  },
+  {
+   "headline": "OpenAI 放出 722 篇数学稿",
+   "bar_label": "数学稿件",
+   "org": "OpenAI",
+   "source": "Unite.AI · OpenAI",
+   "source_short": "OpenAI",
+   "date": "10月6日",
+   "rundown_key": "OpenAI 公开 722 篇数学稿件",
+   "vhook": "722 篇稿件，数学界不买账",
+   "points": [
+    "722 篇，372 个系列",
+    "约 4000 道题",
+    "部分没有 Lean 验证",
+    "数学界批评"
+   ],
+   "lines": [
+    {
+     "text": "第六件，OpenAI 公开了 722 篇数学稿件，数学界有人不满意。",
+     "en": "Sixth, OpenAI released 722 math manuscripts, and some in the math community are unhappy.",
+     "expr": "认真"
+    },
+    {
+     "text": "10 月 6 日，OpenAI 在 GitHub 上放出这批稿件，来自一个还没发布的内部模型。",
+     "en": "On October 6, OpenAI put the batch on GitHub, produced by an unreleased internal model.",
+     "tts": "十月六日，OpenAI 在 GitHub 上放出这批稿件，来自一个还没发布的内部模型。",
+     "point": 0
+    },
+    {
+     "text": "它们分成 372 个系列，是从大约 4000 道题里挑出来的。",
+     "en": "They are grouped into 372 families, selected from about 4,000 problems posed to the model.",
+     "point": 1
+    },
+    {
+     "text": "仓库用的是 Apache-2.0 许可，里面有稿件、Lean 形式化验证，还有 10 份推理摘要。",
+     "en": "The repository uses the Apache-2.0 license and holds manuscripts, Lean formalizations and 10 abridged reasoning summaries.",
+     "tts": "仓库用的是 Apache 二点零许可，里面有稿件、Lean 形式化验证，还有十份推理摘要。"
+    },
+    {
+     "text": "不过不是每篇都有 Lean 验证，OpenAI 自己提醒，没验证的结果可能有问题。",
+     "en": "But not every manuscript has a Lean formalization, and OpenAI itself warns that unformalized results could have issues.",
+     "point": 2
+    },
+    {
+     "text": "9 月 29 日，高等研究院的数学与 AI 顾问组发过负责任发布建议。",
+     "en": "On September 29, the Institute for Advanced Study's math and AI advisory group published responsible-release recommendations.",
+     "tts": "九月二十九日，高等研究院的数学与 AI 顾问组发过负责任发布建议。"
+    },
+    {
+     "text": "里面说，实验室不该把公布成果当成营销，结果应该放进不受 AI 公司控制的仓库。",
+     "en": "It says labs should not treat result releases as marketing, and results belong in repositories no AI lab controls.",
+     "point": 3
+    },
+    {
+     "text": "OpenAI 说，正在考虑符合这些指南的社区托管方案。",
+     "en": "OpenAI says it is exploring community-hosted alternatives that meet those guidelines."
+    },
+    {
+     "text": "稿件对不对，要等数学家一篇篇验证。",
+     "en": "Whether the manuscripts hold up will take mathematicians checking them one by one."
+    }
+   ],
+   "vbigs": [
+    {
+     "line": 2,
+     "n": "722 篇",
+     "small": "372 个系列",
+     "d": "从约 4000 道题里选出"
+    }
+   ],
+   "refs": [
+    {
+     "name": "Unite.AI",
+     "url": "https://www.unite.ai/openai-releases-722-math-manuscripts-from-an-unreleased-ai-model/"
+    },
+    {
+     "name": "TechCrunch",
+     "url": "https://techcrunch.com/2026/10/08/openais-math-solutions-arent-meeting-the-fields-standards-yet/"
+    }
+   ],
+   "snap_url": "https://www.unite.ai/openai-releases-722-math-manuscripts-from-an-unreleased-ai-model/"
+  },
+  {
+   "headline": "Ecosia 换中国模型",
+   "bar_label": "Ecosia 换模型",
+   "org": "Ecosia",
+   "source": "IT之家 · 政治报",
+   "source_short": "IT之家",
+   "date": "10月8日",
+   "rundown_key": "Ecosia 放弃 Mistral",
+   "vhook": "成本减半，改用 Qwen、Kimi",
+   "points": [
+    "放弃法国 Mistral",
+    "改用 Qwen、GLM、Kimi",
+    "成本降一半"
+   ],
+   "lines": [
+    {
+     "text": "第七件，德国搜索引擎 Ecosia 不用 Mistral 了。",
+     "en": "Seventh, the German search engine Ecosia has dropped Mistral.",
+     "expr": "吃惊"
+    },
+    {
+     "text": "据 IT之家 10 月 8 日转述《政治报》，Ecosia 改用中国的开源模型。",
+     "en": "According to IT Home on October 8, citing Politico, Ecosia has switched to Chinese open-source models.",
+     "tts": "据 IT之家十月八日转述《政治报》，Ecosia 改用中国的开源模型。",
+     "point": 0
+    },
+    {
+     "text": "今年 5 月，它刚从 OpenAI 换到 Mistral。",
+     "en": "Back in May, it had just moved from OpenAI to Mistral.",
+     "tts": "今年五月，它刚从 OpenAI 换到 Mistral。"
+    },
+    {
+     "text": "创始人兼 CEO 克里斯蒂安·克罗尔说，对 Mistral 的质量失望，说它已经落后对手整整一年。",
+     "en": "Founder and CEO Christian Kroll said he was disappointed with Mistral's quality, calling it a full year behind its competitors.",
+     "tts": "创始人兼 C E O 克里斯蒂安·克罗尔说，对 Mistral 的质量失望，说它已经落后对手整整一年。"
+    },
+    {
+     "text": "Ecosia 还提到服务器经常过载，也怀疑 Mistral 够不够中立。",
+     "en": "Ecosia also cited frequent server overload, and questioned whether Mistral is truly neutral."
+    },
+    {
+     "text": "现在它通过 Melious，用阿里的 Qwen、智谱的 GLM 和月之暗面的 Kimi。",
+     "en": "It now works with Melious to use Alibaba's Qwen, Zhipu's GLM and Moonshot AI's Kimi.",
+     "point": 1
+    },
+    {
+     "text": "据报道，这次切换让成本降了一半，性能也有提升。",
+     "en": "The switch reportedly cut costs in half and brought performance gains.",
+     "point": 2
+    },
+    {
+     "text": "报道没有给具体的性能数字，一家公司的说法，不能直接当成模型排名。",
+     "en": "The report gives no performance figures, so one company's view is not a model ranking."
+    }
+   ],
+   "vbigs": [
+    {
+     "line": 6,
+     "n": "-50%",
+     "small": "成本",
+     "d": "据报道，切换后"
+    }
+   ],
+   "refs": [
+    {
+     "name": "IT之家",
+     "url": "https://www.ithome.com/1/010/539.htm"
+    }
+   ],
+   "snap_url": "https://www.ithome.com/1/010/539.htm"
+  }
+ ],
+ "closing": [
+  {
+   "text": "今天就这些，来源都在简介里。",
+   "en": "That's all for today. Sources are in the description.",
+   "expr": "开心"
+  },
+  {
+   "text": "我们明天见。",
+   "en": "See you tomorrow.",
+   "expr": "开心"
+  }
+ ],
+ "cover": {
+  "item": 3,
+  "line1": "Claude 能做",
+  "line2": "仪表盘和动画？",
+  "mood": "开心"
+ },
+ "titles": {
+  "bilibili": "10月9日AI圈7件事：Claude Haiku 5.5输入价降到每百万0.10美元，ChatGPT回答变成互动界面",
+  "douyin": "Haiku 5.5输入价降九成，ChatGPT回答可交互",
+  "xiaohongshu": "AI圈7件事：Haiku 5.5降价九成"
+ },
+ "vertical": {
+  "cuts": {
+   "官方放出的成绩里，它在 OSWorld 2.1 离线子集拿了 72.4%，": [
+    [
+     "OSWorld 2.1",
+     "on OSWorld 2.1,"
+    ]
+   ],
+   "10 月 7 日，OpenAI 带着 GPT-6 推出了 Intelligent UI。": [
+    [
+     "GPT-6",
+     "with GPT-6,"
+    ]
+   ],
+   "10 月 8 日，Claude Dashboards 和 Claude Motion 进入测试。": [
+    [
+     "Claude Dashboards",
+     "Claude Dashboards"
+    ]
+   ],
+   "它能连 Snowflake、BigQuery、Databricks 这些数据仓库，": [
+    [
+     "BigQuery、",
+     "BigQuery"
+    ]
+   ],
+   "10 月 8 日，在白宫科技政策办公室办的科学峰会上，": [
+    [
+     "办公室办的",
+     "science policy office"
+    ]
+   ],
+   "9 月 29 日，高等研究院的数学与 AI 顾问组发过负责任发布建议。": [
+    [
+     "9 月 29 日，",
+     "On September 29,"
+    ],
+    [
+     "顾问组",
+     "advisory group"
+    ]
+   ],
+   "钱会用来让超过 15 个机构用上 Claude，": [
+    [
+     "15 个机构",
+     "15 agencies"
+    ]
+   ],
+   "10 月 6 日，OpenAI 在 GitHub 上放出这批稿件，": [
+    [
+     "OpenAI",
+     "OpenAI"
+    ]
+   ]
+  }
+ }
+}

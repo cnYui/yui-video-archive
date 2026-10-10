@@ -1,0 +1,9 @@
+0:00 开场
+0:26 Anthropic 办工程师学院
+1:14 微软发布三个语音模型
+2:04 ChatGPT 能虚拟试穿了
+2:46 DGX Spark 出 64GB 版
+3:35 arXiv 限制每月投稿数
+4:18 Flux 3 Image 改图更稳
+4:55 Cloudflare 开源决策模型
+5:43 回顾

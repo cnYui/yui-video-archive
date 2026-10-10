@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<!-- 日报竖屏版（用户 2026-10-05：“用标准竖版”= 短视频技能的版式 B 单框 + 边框 6）：1080×2340，30 fps。renderAt(t) 画出第 t 秒（同一个 t 永远是同一帧）。
+     数据：tl_v.js（make_vertical.py data 写的）；素材：assets/（bg.png 背景印花、cover.png 封面、snaps/ 来源截图、sprites/ 鲸鱼娘）。
+       0–250     留空（状态栏 / 平台顶栏）
+       280–570   标题：kicker + 黑 76 px 新闻名 + 橙 60 px 钩子（每条新闻一套，跟着场景换）
+       770–1339  来源截图框 1000×569（边框 6：7 px 黑描边 + 橙色硬阴影 + 黄贴纸 = 来源），橙框圈出原文标题；开场 / 回顾是 N 条清单（没有截图的条目放机构名）
+       1498–1608 字幕：中文 52 px + 英文 30 px（双语标准），居中
+       1660–1850 左：鲸鱼娘 192 px（3 倍像素）；右：要点卡 2×2（按配音一条条亮）或数字卡（硬数字那几句）
+       1912      进度条（开场 + N 条 + 回顾 共 N+2 段）
+       1950–2340 留空（账号名 / 文案 / 音乐条）；右边 x ≥ 940、y 1170–1990 是抖音的按钮区
+     第 0 帧 = 封面（用户：封面不动）。 -->
+<link rel="stylesheet" href="file:///D:/大疆/AI科普/素材/字体/fonts.css">
+<style>
+* { box-sizing:border-box; margin:0; padding:0; }
+:root { --bg:#FAF9F5; --ink:#141413; --ink2:#374151; --gray:#6B7280; --line:#E5E7EB; --accent:#FF4F1A; --marker:#FFD84D; --rows:4; }
+html, body { width:1080px; height:2340px; overflow:hidden; font-family:'Noto Sans SC', sans-serif; color:var(--ink); background:var(--bg) url('assets/bg.png') 0 0 / 1080px 2340px no-repeat; }
+.sc { position:absolute; left:0; top:0; width:1080px; height:2340px; opacity:0; visibility:hidden; }
+.head { position:absolute; left:40px; right:40px; top:280px; height:290px; text-align:center; }
+.kicker { font:700 30px 'Noto Sans SC'; letter-spacing:.18em; color:var(--gray); white-space:nowrap; }
+.kicker b { color:var(--accent); font-weight:800; }
+.t1 { margin-top:22px; font:900 76px/1.22 'Noto Sans SC'; color:var(--ink); white-space:nowrap; }
+.t2 { margin-top:10px; font:800 60px/1.25 'Noto Sans SC'; color:var(--accent); white-space:nowrap; }
+.t2 span { background:linear-gradient(transparent 62%, var(--marker) 62%, var(--marker) 94%, transparent 94%); padding:0 6px; }
+/* 边框 6：7 px 黑描边 + 橙色硬阴影 14 px + 右上角黄贴纸 */
+.frame { position:absolute; left:40px; top:770px; width:1000px; height:569px; background:#141413; border:7px solid #141413; border-radius:14px; box-shadow:14px 14px 0 var(--accent); }
+.frame::after { content:attr(data-tag); position:absolute; right:-8px; top:-40px; background:var(--marker); color:var(--ink); border:5px solid #141413; border-radius:10px; padding:0 16px; font:900 26px/38px 'Noto Sans SC'; transform:rotate(3deg); white-space:nowrap; z-index:6; }
+.frame[data-tag='']::after, .frame:not([data-tag])::after { display:none; }
+.frame .inner { position:relative; width:100%; height:100%; border-radius:4px; overflow:hidden; background:#fff; }
+.snap { position:absolute; left:0; top:0; width:100%; display:block; }
+.hl { position:absolute; border:6px solid var(--accent); border-radius:10px; box-shadow:0 0 0 7px rgba(255,79,26,.2); z-index:4; opacity:0; }
+/* 没有来源截图的条目（页面拦机器人、没有 h1）：框里放机构名 + 标题 + 来源 */
+.nosnap { position:absolute; inset:0; display:flex; flex-direction:column; justify-content:center; align-items:center; gap:18px; padding:0 48px; text-align:center; background:linear-gradient(180deg,#FFF8E1,#FFFFFF); }
+.nosnap .org { font:800 34px 'Noto Sans SC'; color:var(--accent); letter-spacing:.12em; }
+.nosnap .hd { font:900 60px/1.25 'Noto Sans SC'; color:var(--ink); }
+.nosnap .src { font:700 30px 'Noto Sans SC'; color:var(--gray); }
+/* 清单（开场 / 回顾） */
+.agenda { position:absolute; inset:0; display:grid; grid-template-columns:1fr 1fr; grid-template-rows:repeat(var(--rows),1fr); gap:8px; padding:8px; background:#EEF0F3; }
+.agenda .row { display:flex; background:#fff; border-radius:8px; overflow:hidden; border:1px solid #DCDFE4; }
+.agenda .row.cur { background:#FFF1B8; border-color:var(--accent); box-shadow:0 0 0 3px var(--accent) inset; }
+.agenda .th { position:relative; flex:none; width:42%; overflow:hidden; background:#fff; border-right:1px solid #DCDFE4; }
+.agenda .th img { position:absolute; left:0; top:0; width:100%; }
+.agenda .th .no { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; background:#FFF1B8; font:900 28px 'Noto Sans SC'; color:var(--ink); text-align:center; padding:0 6px; }
+.agenda .th s { position:absolute; right:6px; bottom:2px; text-decoration:none; font:900 46px/1 'Noto Sans SC'; color:#16A34A; opacity:0; text-shadow:0 0 0 #fff, 0 3px 0 #fff, 3px 0 0 #fff, -3px 0 0 #fff, 0 -3px 0 #fff, 3px 3px 0 #fff, -3px -3px 0 #fff, 3px -3px 0 #fff, -3px 3px 0 #fff; }
+.agenda .tx { flex:1; display:flex; align-items:center; gap:10px; padding:0 10px; min-width:0; }
+.agenda .tx b { flex:none; width:42px; height:42px; border-radius:50%; background:var(--accent); color:#fff; font:900 26px/42px 'Noto Sans SC'; text-align:center; }
+.agenda .tx span { font:800 27px/1.22 'Noto Sans SC'; color:var(--ink); }
+/* 要点卡 / 数字卡（同一个位置，互相替换） */
+.cardwrap { position:absolute; left:250px; top:1660px; width:740px; height:190px; }
+.bigcard, .pts { position:absolute; left:0; top:0; width:740px; height:190px; background:#fff; border:1px solid var(--line); border-top:8px solid var(--accent); border-radius:22px; box-shadow:0 16px 40px rgba(0,0,0,.12); }
+.bigcard { display:flex; flex-direction:column; justify-content:center; align-items:center; padding:0 28px; opacity:0; }
+.bigcard .n { font:900 92px/1.05 'Space Grotesk','Noto Sans SC'; color:var(--accent); white-space:nowrap; }
+.bigcard .n small { font:800 42px 'Noto Sans SC'; color:var(--ink); margin-left:8px; }
+.bigcard .d { margin-top:4px; font:700 34px/1.4 'Noto Sans SC'; color:var(--ink2); white-space:nowrap; }
+.pts { display:grid; grid-template-columns:1fr 1fr; gap:10px; padding:0 14px; align-content:center; }
+.pts .pt { display:flex; align-items:center; gap:8px; padding:9px 10px; border-radius:14px; font:800 30px/1.2 'Noto Sans SC'; color:var(--gray); white-space:nowrap; overflow:hidden; }
+.pts .pt i { flex:none; width:36px; height:36px; border-radius:50%; background:#E5E7EB; color:var(--gray); font:900 22px/36px 'Noto Sans SC'; text-align:center; font-style:normal; }
+.pts .pt.cur { background:#FFE98A; color:var(--ink); }
+.pts .pt.cur i { background:var(--accent); color:#fff; }
+.pts .pt.done { color:var(--ink2); }
+.pts .pt.done i { background:var(--ink); color:#fff; }
+/* 鲸鱼娘 */
+.whale { position:absolute; left:40px; top:1650px; width:192px; height:192px; image-rendering:pixelated; visibility:hidden; z-index:12; }
+#wshadow { position:absolute; left:63px; top:1822px; width:146px; height:19px; border-radius:50%; background:radial-gradient(closest-side, rgba(0,0,0,.22), rgba(0,0,0,0)); z-index:11; }
+/* 字幕（项目标准：中文 52 + 英文 30，居中，描边和背景同色） */
+#subs { position:absolute; left:0; top:1498px; width:1080px; height:112px; z-index:30; }
+#subZh { position:absolute; left:0; right:0; top:0; text-align:center; font:800 52px/66px 'Noto Sans SC'; color:var(--ink); -webkit-text-stroke:10px var(--bg); paint-order:stroke fill; white-space:nowrap; }
+#subEn { position:absolute; left:0; right:0; top:70px; text-align:center; font:600 30px/40px 'Noto Sans SC'; color:#4B5563; -webkit-text-stroke:6px var(--bg); paint-order:stroke fill; white-space:nowrap; }
+/* 进度 */
+#prog { position:absolute; left:60px; top:1912px; width:960px; display:flex; gap:8px; z-index:20; }
+#prog i { flex:1; height:14px; border-radius:7px; background:rgba(20,20,19,.16); }
+#prog i.done { background:var(--ink); }
+#prog i.cur { box-shadow:0 0 0 3px var(--bg); }
+/* 第 0 帧 = 封面 */
+#cover0 { position:absolute; inset:0; z-index:100; display:none; background:var(--bg) url('assets/bg.png') 0 0 / 1080px 2340px no-repeat; }
+#cover0 .frame { left:40px; top:889px; height:576px; box-shadow:14px 14px 0 var(--accent); }
+#cover0 .frame img { width:100%; display:block; }
+</style>
+</head>
+<body>
+<div id="scenes"></div>
+<div id="wshadow"></div>
+<div id="whales"></div>
+<div id="subs"><div id="subZh"></div><div id="subEn"></div></div>
+<div id="prog"></div>
+<div id="cover0"><div class="frame" data-tag=""><div class="inner"><img id="coverImg"></div></div></div>
+<script src="tl_v.js"></script>
+<script src="engine.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+{
+  "line1": "谷歌 Gemini 4 发布",
+  "line2": "为啥还用不上？",
+  "l1px": 168,
+  "l2px": 236,
+  "maxw": 1320,
+  "textCx": 900,
+  "scale": 9,
+  "frame": [
+    64,
+    64
+  ],
+  "footRow": 62,
+  "fishX": 1074,
+  "foot": 1062,
+  "tag": "",
+  "theme": {
+    "bg": "#FFFFFF",
+    "lead": "#8A93AD",
+    "accent": "#4A88DA",
+    "list": "#4D5670",
+    "more": "#9AA2B8"
+  },
+  "_theme": "blue",
+  "_pose": "pose_huh",
+  "_eyes": "",
+  "_fx": "",
+  "_qmark": false,
+  "_place": "right",
+  "others": [
+    "Claude Code 支持 Mods",
+    "Sonnet 4.5 定了退役日",
+    "豆包能订票打车了",
+    "Cohere 发布 Embed 5",
+    "亚马逊开源决策小模型"
+  ],
+  "othersHead": "今天还有 5 条",
+  "othersMore": "",
+  "listX": 270,
+  "listW": 770,
+  "listBottom": 1000
+}

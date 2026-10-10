@@ -1,0 +1,129 @@
+{
+ "date": "2026-10-07",
+ "script_sha": "43f23f16a2ad",
+ "passed": true,
+ "checked_at": "2026-10-07 04:33:16",
+ "checks": [
+  {
+   "check": "台本检查",
+   "ok": true,
+   "level": "ok",
+   "detail": "7 条，约 2083 字"
+  },
+  {
+   "check": "台本提示",
+   "ok": false,
+   "level": "warn",
+   "detail": "cover.line1「Anthropic 送初创公司」10.5 字宽，建议 ≤10（会自动缩小字号）；第 1 条第 1 句 的数字在英文里没找到：1（换算过的写法也行，确认意思一致）；第 2 条第 3 句 的数字在英文里没找到：1（换算过的写法也行，确认意思一致）"
+  },
+  {
+   "check": "成片",
+   "ok": true,
+   "level": "ok",
+   "detail": "D:\\大疆\\AI日报\\2026-10-07\\AI每日日报_1007_成片.mp4"
+  },
+  {
+   "check": "上传版 ≤ 9 MB",
+   "ok": true,
+   "level": "ok",
+   "detail": "8.93 MB"
+  },
+  {
+   "check": "H.264 上传版 ≤ 9 MB（抖音 / 小红书）",
+   "ok": true,
+   "level": "ok",
+   "detail": "8.71 MB"
+  },
+  {
+   "check": "竖屏成片 1080×2340",
+   "ok": true,
+   "level": "ok",
+   "detail": "1080,2340"
+  },
+  {
+   "check": "竖屏 QA（帧数 / 时长 / 口型对齐）",
+   "ok": true,
+   "level": "ok",
+   "detail": "{\"width\": 1080, \"height\": 2340, \"frames\": 9046, \"want_frames\": 9046, \"duration\": 301.533, \"total\": 301.542, \"lufs\": \"-16.0\", \"lra\": \"1.5\", \"true_peak\": \"-2.9\", \"mouth_best_lag\": 0, \"mouth_corr\": 0.74, \"mouth_corr0\": 0.74, \"subs\": 157, \"ok\": true}"
+  },
+  {
+   "check": "竖屏字幕中英对齐（make_vertical.py lint）",
+   "ok": true,
+   "level": "ok",
+   "detail": "字幕对齐检查：157 段，错 0 处、提示 1 处"
+  },
+  {
+   "check": "封面",
+   "ok": true,
+   "level": "ok",
+   "detail": "16x9 + 4x3 + 3x4"
+  },
+  {
+   "check": "中英双语字幕（画面 + 三份 SRT）",
+   "ok": true,
+   "level": "ok",
+   "detail": "109 条"
+  },
+  {
+   "check": "标题（三个平台限长）",
+   "ok": true,
+   "level": "ok",
+   "detail": "10月7日AI圈7件事：Mistral发布万亿参数Large 4，Anthropic送初创公司一年Claude Team | Mistral发万亿模型，Anthropic送初创套餐 | AI圈7件事：Mistral万亿模型"
+  },
+  {
+   "check": "简介里有全部来源",
+   "ok": true,
+   "level": "ok",
+   "detail": "10 个网址"
+  },
+  {
+   "check": "简介里没有别的网址",
+   "ok": true,
+   "level": "ok",
+   "detail": ""
+  },
+  {
+   "check": "简介 ≤ 2000 字",
+   "ok": true,
+   "level": "ok",
+   "detail": "1589 字"
+  },
+  {
+   "check": "总时长超过 5 分钟（B 站分段章节要求）",
+   "ok": false,
+   "level": "warn",
+   "detail": "301.5 秒"
+  },
+  {
+   "check": "配音识别分 ≥ 0.75",
+   "ok": true,
+   "level": "ok",
+   "detail": "1 批"
+  },
+  {
+   "check": "事实核对（数字、英文名都在原文里）",
+   "ok": true,
+   "level": "ok",
+   "detail": "全部找到"
+  },
+  {
+   "check": "内容安全（色情、暴力、时政、广告、提示词注入、隐藏字符）",
+   "ok": true,
+   "level": "ok",
+   "detail": "没有命中"
+  },
+  {
+   "check": "没有重复最近 7 天播过的原文",
+   "ok": true,
+   "level": "ok",
+   "detail": ""
+  },
+  {
+   "check": "AI 复核（独立子代理，看成品和原文）",
+   "ok": true,
+   "level": "ok",
+   "detail": "通过：风格提示（不判 fail）：第 6 条英文“gives startups a free year”里的 free 在中文第 6–7 条没有对应词，但同一件事、同一句，不影响理解。；风格提示：第 48–49 条英文 “adding to ChatGPT's / text an invisible watermark” 断得略生硬；第 117 条英文行尾是 “a free,”（形容词和名词断开）；第 149–150 条英文 “support / for more than 100 languages” 断在动词和介词之间。均不影响理解。；风格提示：第 98 条“拦截分类器也会放松”英文为 “fewer blocking classifiers”，语气略有差别，意思一致。；风格提示：第 6 条以后几个要点屏的来源截图标题（例如 Expanding the Cyber Verification "
+  }
+ ],
+ "hits": []
+}

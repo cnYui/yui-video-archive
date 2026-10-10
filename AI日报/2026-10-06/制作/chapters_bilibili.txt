@@ -1,0 +1,9 @@
+0:00 开场
+0:28 ChatGPT 生图时插广告
+1:18 ChatGPT 欧盟文本加水印
+2:15 Reflection 发布 Beam
+3:09 维基抓到疑似 OpenAI 智能体
+3:56 Reka 发布全能模型 Rho-1
+4:42 Cohere 推出 North 2
+5:17 挖漏洞的开源模型 apex
+6:06 回顾

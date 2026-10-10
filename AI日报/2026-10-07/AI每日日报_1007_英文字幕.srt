@@ -1,0 +1,627 @@
+1
+00:00:00,000 --> 00:00:02,515
+Good morning, I'm Whale Girl. Today is October 7.
+
+2
+00:00:02,535 --> 00:00:03,255
+Seven stories today:
+
+3
+00:00:03,275 --> 00:00:05,655
+Mistral's trillion-parameter model,
+
+4
+00:00:05,675 --> 00:00:08,495
+Reflection's open-weight model Beam,
+
+5
+00:00:08,515 --> 00:00:11,175
+OpenAI watermarks ChatGPT text,
+
+6
+00:00:11,195 --> 00:00:12,984
+Anthropic gives startups a free year
+
+7
+00:00:13,004 --> 00:00:14,115
+of Claude Team,
+
+8
+00:00:14,135 --> 00:00:16,655
+Anthropic expands its cyber verification program,
+
+9
+00:00:16,675 --> 00:00:17,837
+Together Link
+
+10
+00:00:17,857 --> 00:00:19,846
+runs open models in Claude Code,
+
+11
+00:00:19,866 --> 00:00:22,001
+and Google's multimodal embedding model.
+
+12
+00:00:22,021 --> 00:00:24,437
+First, a one-trillion-parameter model
+
+13
+00:00:24,457 --> 00:00:26,162
+that activates only 49B for each token.
+
+14
+00:00:26,182 --> 00:00:28,552
+On October 6, French company Mistral
+
+15
+00:00:28,572 --> 00:00:29,972
+released Mistral Large 4
+
+16
+00:00:29,992 --> 00:00:31,640
+as a public preview,
+
+17
+00:00:31,660 --> 00:00:33,082
+with API access.
+
+18
+00:00:33,102 --> 00:00:34,858
+It was trained in Mistral's own European
+
+19
+00:00:34,878 --> 00:00:36,237
+data centers on 3,800 NVIDIA
+
+20
+00:00:36,257 --> 00:00:38,178
+Grace Blackwell GPUs.
+
+21
+00:00:38,198 --> 00:00:39,912
+The weights won't come until the end of October,
+
+22
+00:00:39,932 --> 00:00:41,649
+and the license will be announced then.
+
+23
+00:00:41,669 --> 00:00:43,720
+Its headline claim is security work:
+
+24
+00:00:43,740 --> 00:00:46,918
+82% on a test of reproducing open-source vulnerabilities.
+
+25
+00:00:46,938 --> 00:00:48,837
+The Decoder says Opus 5.5
+
+26
+00:00:48,857 --> 00:00:50,973
+and GPT-6 Astra score near zero
+
+27
+00:00:50,993 --> 00:00:52,955
+on it because they refuse the task.
+
+28
+00:00:52,975 --> 00:00:55,526
+On the overall Intelligence Index, though, it scores 38
+
+29
+00:00:55,546 --> 00:00:57,395
+against Opus 5.5's 58.
+
+30
+00:00:57,415 --> 00:00:59,336
+Finding bugs doesn't make it strong at everything.
+
+31
+00:00:59,356 --> 00:01:01,100
+Wait for the weights.
+
+32
+00:01:01,300 --> 00:01:03,881
+Second, US startup Reflection AI
+
+33
+00:01:03,901 --> 00:01:06,481
+released Beam, its first open-weight model.
+
+34
+00:01:06,501 --> 00:01:08,299
+It's a mixture of experts
+
+35
+00:01:08,319 --> 00:01:11,341
+with 501B total parameters and 23B active.
+
+36
+00:01:11,361 --> 00:01:12,238
+It handles text only,
+
+37
+00:01:12,258 --> 00:01:13,862
+with a one-million-token context window
+
+38
+00:01:13,882 --> 00:01:16,432
+and 23.8T tokens of pre-training.
+
+39
+00:01:16,452 --> 00:01:18,969
+Weights and technical details will come in October
+
+40
+00:01:18,989 --> 00:01:20,678
+through major cloud providers.
+
+41
+00:01:20,698 --> 00:01:23,389
+Reflection says it matches Zhipu's GLM-5.2
+
+42
+00:01:23,409 --> 00:01:25,859
+while using 3 to 4 times less inference compute.
+
+43
+00:01:25,879 --> 00:01:28,168
+It's backed by NVIDIA and Sequoia Capital,
+
+44
+00:01:28,188 --> 00:01:29,846
+with about $4.7 billion raised.
+
+45
+00:01:29,866 --> 00:01:32,261
+These performance numbers are all the company's own,
+
+46
+00:01:32,281 --> 00:01:33,506
+not independently verified.
+
+47
+00:01:33,526 --> 00:01:36,432
+The weights aren't out yet, so hold off on conclusions.
+
+48
+00:01:36,632 --> 00:01:38,731
+Third, OpenAI is adding to ChatGPT's
+
+49
+00:01:38,751 --> 00:01:40,878
+text an invisible watermark.
+
+50
+00:01:40,898 --> 00:01:42,833
+On October 5, OpenAI announced
+
+51
+00:01:42,853 --> 00:01:44,746
+that in the coming weeks it will first give EU users'
+
+52
+00:01:44,766 --> 00:01:45,953
+text a watermark.
+
+53
+00:01:45,973 --> 00:01:47,904
+It covers ChatGPT and Codex,
+
+54
+00:01:47,924 --> 00:01:50,144
+and the reason is compliance with the EU AI Act.
+
+55
+00:01:50,164 --> 00:01:51,805
+The watermark is called textGrain.
+
+56
+00:01:51,825 --> 00:01:53,313
+It subtly shapes word choices,
+
+57
+00:01:53,333 --> 00:01:56,216
+leaving a pattern people can't see but a detector can.
+
+58
+00:01:56,236 --> 00:01:57,263
+API developers
+
+59
+00:01:57,283 --> 00:01:59,636
+can opt in right now, anywhere.
+
+60
+00:01:59,656 --> 00:02:02,101
+But a few edits weaken it.
+
+61
+00:02:02,121 --> 00:02:04,322
+Swapping 10% of words for synonyms
+
+62
+00:02:04,342 --> 00:02:07,060
+cuts detection from about 92% to 66%.
+
+63
+00:02:07,080 --> 00:02:08,171
+Short passages, math answers
+
+64
+00:02:08,191 --> 00:02:10,226
+and translated text are harder to detect.
+
+65
+00:02:10,246 --> 00:02:11,321
+OpenAI also says
+
+66
+00:02:11,341 --> 00:02:13,794
+that a missing watermark doesn't prove a human wrote it.
+
+67
+00:02:13,994 --> 00:02:15,321
+Fourth, Anthropic
+
+68
+00:02:15,341 --> 00:02:17,944
+is giving startups a free year of Claude Team.
+
+69
+00:02:17,964 --> 00:02:19,465
+On October 6, Anthropic
+
+70
+00:02:19,485 --> 00:02:21,824
+expanded its Claude for Startups program:
+
+71
+00:02:21,844 --> 00:02:23,832
+a free year of Claude Team,
+
+72
+00:02:23,852 --> 00:02:25,194
+with up to 5 seats.
+
+73
+00:02:25,214 --> 00:02:27,505
+It also adds $1,000 in API credits.
+
+74
+00:02:27,525 --> 00:02:29,108
+Startups also get access to Claude Marketplace
+
+75
+00:02:29,128 --> 00:02:29,715
+for building plugins,
+
+76
+00:02:29,735 --> 00:02:32,435
+and virtual office hours with Anthropic's Applied AI team.
+
+77
+00:02:32,455 --> 00:02:34,586
+There are two conditions, and meeting either is enough:
+
+78
+00:02:34,606 --> 00:02:36,009
+founded within the last 5 years,
+
+79
+00:02:36,029 --> 00:02:37,996
+or funded within the last 2.
+
+80
+00:02:38,016 --> 00:02:39,651
+The article lists no regional limit.
+
+81
+00:02:39,671 --> 00:02:40,235
+Applications go
+
+82
+00:02:40,255 --> 00:02:43,000
+through the Claude for Startups program page.
+
+83
+00:02:43,020 --> 00:02:44,400
+Anthropic's argument is that most people
+
+84
+00:02:44,420 --> 00:02:46,730
+will get AI's benefits through the companies
+
+85
+00:02:46,750 --> 00:02:48,530
+that build on top of models.
+
+86
+00:02:48,550 --> 00:02:49,652
+The free ride lasts one year,
+
+87
+00:02:49,672 --> 00:02:51,825
+so decide what to build with it.
+
+88
+00:02:52,025 --> 00:02:53,333
+Fifth, Anthropic merged
+
+89
+00:02:53,353 --> 00:02:55,550
+two cyber programs into one,
+
+90
+00:02:55,570 --> 00:02:57,480
+open to more defenders.
+
+91
+00:02:57,500 --> 00:02:58,736
+October 6: the expanded
+
+92
+00:02:58,756 --> 00:03:00,543
+Cyber Verification Program
+
+93
+00:03:00,563 --> 00:03:00,940
+is live,
+
+94
+00:03:00,960 --> 00:03:02,546
+combining Project Glasswing
+
+95
+00:03:02,566 --> 00:03:03,980
+and the original verification program.
+
+96
+00:03:04,000 --> 00:03:05,537
+Verified security professionals
+
+97
+00:03:05,557 --> 00:03:07,250
+get stronger cyber capabilities
+
+98
+00:03:07,270 --> 00:03:09,730
+and fewer blocking classifiers.
+
+99
+00:03:09,750 --> 00:03:11,018
+There are three tiers:
+
+100
+00:03:11,038 --> 00:03:13,293
+Defense, Red Team and Specialized access.
+
+101
+00:03:13,313 --> 00:03:14,691
+Defense is for work like incident response
+
+102
+00:03:14,711 --> 00:03:15,778
+and malware analysis.
+
+103
+00:03:15,798 --> 00:03:17,668
+Individuals and open-source maintainers
+
+104
+00:03:17,688 --> 00:03:19,809
+can apply, with a reply in a few days.
+
+105
+00:03:19,829 --> 00:03:21,833
+Red Team adds authorized penetration testing.
+
+106
+00:03:21,853 --> 00:03:23,539
+It's for organizations only, with a wait of a few weeks.
+
+107
+00:03:23,559 --> 00:03:25,259
+Specialized access is for flight systems,
+
+108
+00:03:25,279 --> 00:03:27,533
+power grids and other safety-critical testing,
+
+109
+00:03:27,553 --> 00:03:28,483
+with limited slots.
+
+110
+00:03:28,503 --> 00:03:30,021
+It covers Claude Opus 5.5,
+
+111
+00:03:30,041 --> 00:03:31,834
+Sonnet 5.5 and Mythos 5.1,
+
+112
+00:03:31,854 --> 00:03:33,984
+plus new models going forward.
+
+113
+00:03:34,004 --> 00:03:36,934
+If you do vulnerability research, check which tier you fit.
+
+114
+00:03:37,134 --> 00:03:38,890
+Sixth, you use Claude Code
+
+115
+00:03:38,910 --> 00:03:40,075
+but run open models behind it,
+
+116
+00:03:40,095 --> 00:03:41,799
+and there's now a ready-made tool.
+
+117
+00:03:41,819 --> 00:03:43,485
+Together AI released Together Link, a free,
+
+118
+00:03:43,505 --> 00:03:45,841
+MIT-licensed command-line tool
+
+119
+00:03:45,861 --> 00:03:47,262
+that's now in beta.
+
+120
+00:03:47,282 --> 00:03:48,546
+It connects Claude Code,
+
+121
+00:03:48,566 --> 00:03:49,812
+Codex, OpenCode,
+
+122
+00:03:49,832 --> 00:03:52,482
+and the Claude and ChatGPT desktop apps.
+
+123
+00:03:52,502 --> 00:03:53,642
+In Claude Code,
+
+124
+00:03:53,662 --> 00:03:55,549
+the Opus tier runs Kimi K3
+
+125
+00:03:55,569 --> 00:03:57,592
+and the Fable tier runs GLM 5.3.
+
+126
+00:03:57,612 --> 00:03:58,673
+By default, an auto router
+
+127
+00:03:58,693 --> 00:04:00,528
+sends simple requests to Together's models
+
+128
+00:04:00,548 --> 00:04:02,418
+and hard ones to Claude Opus.
+
+129
+00:04:02,438 --> 00:04:03,725
+Routing to Opus requires
+
+130
+00:04:03,745 --> 00:04:06,488
+that you connect your own Anthropic API key.
+
+131
+00:04:06,508 --> 00:04:09,043
+Note the tool is free, but the models aren't:
+
+132
+00:04:09,063 --> 00:04:10,545
+Together's models are billed
+
+133
+00:04:10,565 --> 00:04:12,286
+at its standard rates.
+
+134
+00:04:12,306 --> 00:04:13,897
+It supports only macOS and Linux
+
+135
+00:04:13,917 --> 00:04:16,657
+for now, and needs a Together API key.
+
+136
+00:04:16,677 --> 00:04:17,884
+Does swapping models save money?
+
+137
+00:04:17,904 --> 00:04:19,068
+Work it out.
+
+138
+00:04:19,268 --> 00:04:20,909
+Seventh, Google DeepMind
+
+139
+00:04:20,929 --> 00:04:22,742
+released a 740M-parameter
+
+140
+00:04:22,762 --> 00:04:25,041
+open multimodal embedding model.
+
+141
+00:04:25,061 --> 00:04:26,209
+An embedding model turns
+
+142
+00:04:26,229 --> 00:04:27,816
+content into a list of numbers,
+
+143
+00:04:27,836 --> 00:04:29,971
+so it can be searched and compared.
+
+144
+00:04:29,991 --> 00:04:32,151
+EmbeddingGemma 2 puts text, images,
+
+145
+00:04:32,171 --> 00:04:35,021
+video and audio into one vector space.
+
+146
+00:04:35,041 --> 00:04:38,387
+The output is 768 dimensions, and you can truncate it to 512,
+
+147
+00:04:38,407 --> 00:04:40,761
+256 or 128 to save space.
+
+148
+00:04:40,781 --> 00:04:42,280
+It's built on Gemma 4,
+
+149
+00:04:42,300 --> 00:04:44,092
+with an 8,192-token context window and support
+
+150
+00:04:44,112 --> 00:04:45,942
+for more than 100 languages.
+
+151
+00:04:45,962 --> 00:04:47,534
+It's under the Apache 2.0 license,
+
+152
+00:04:47,554 --> 00:04:49,227
+with weights released the same day.
+
+153
+00:04:49,247 --> 00:04:51,468
+It's designed for everyday devices like phones and laptops,
+
+154
+00:04:51,488 --> 00:04:54,098
+which makes local multimodal search much easier.
+
+155
+00:04:54,118 --> 00:04:57,358
+If you build search or Q&A, it's ready to try.
+
+156
+00:04:57,558 --> 00:04:59,849
+That's all for today. Sources are in the description.
+
+157
+00:04:59,869 --> 00:05:01,192
+See you tomorrow.

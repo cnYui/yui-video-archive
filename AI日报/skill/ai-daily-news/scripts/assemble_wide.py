@@ -1,4 +1,6 @@
-# AI每日日报宽屏版（2340x1080）：从《原LAI如此》scripts/assemble.py 复制。改动：片头片尾补边到 2340 宽、正片用 render_parallel_wide。原文件不动。
+# AI每日日报宽屏版（2340x1080）：从《原LAI如此》scripts/assemble.py 复制。改动：正片用 render_parallel_wide。原文件不动。
+# 2026-10-03：片头片尾换成 Claude 品牌色「对话气泡」片头 + 信纸片尾（所有视频共用、必加），页面自己支持 2340 宽，
+# 改成按 canvas 原生渲染（不再 1920 渲染后补边）；片尾左栏参考文献 = episode.json 的 outro_references（make_episode.py 按新闻写）。
 """Render intro + main + outro at 30 fps, join them, mux the final mix, write the SRT and chapter list.
 
   python assemble.py <episode_dir> [--workers 4] [--skip-main] [--no-sync] [--series D:/大疆/AI科普]
@@ -8,8 +10,8 @@ Needs: 制作/timeline.json with `mouth` and 制作/build/mix.wav (run mix_audio
 empty values stop the script).
 Steps
   1. intro / outro rendered from SERIES/片头片尾/intro|outro/index.html at 30 fps; data written to
-     制作/build/intro_data.json ({name: 悠一, tagline: episode.intro_tagline}) and outro_data.json
-     ({items: outro_items, closing: outro_closing, signature: 悠一}); re-encoded to the common x264 settings
+     制作/build/intro_data.json ({name: 悠一, role: AI鼓励师, canvas 2340x1080}) and outro_data.json
+     ({references: outro_references, items: outro_items, closing: outro_closing, signature: 悠一, canvas}); re-encoded to the common x264 settings
   2. python 制作/engine/sync_assets.py --series SERIES (skip with --no-sync), then render_parallel.py -> 制作/build/main.mp4
      (--skip-main reuses an existing main.mp4)
   3. concat -> build/video.mp4, mux build/mix.wav (AAC 192k) ->
@@ -87,24 +89,28 @@ def reencode(src, dst):
     run(["ffmpeg", "-y", "-loglevel", "error", "-i", src, "-r", FPS, *ENC, "-an", dst])
 
 
-# AI每日日报：UE 片头片尾按原样 1920x1080 渲染，两边各补 210 px 到 2340x1080。补的部分取每一帧最边上 8 px 拉宽再模糊，
-# 所以片头从纸白变成深色时，两边跟着变，不会露出色块。
-WIDE, PAD = 2340, 210
-WIDEN_VF = (f"[0:v]split=3[m][l][r];[l]crop=8:1080:0:0,scale={PAD}:1080,boxblur=12:2[lp];"
-            f"[r]crop=8:1080:1912:0,scale={PAD}:1080,boxblur=12:2[rp];"
-            f"[m]pad={WIDE}:1080:{PAD}:0[pd];[pd][lp]overlay=0:0[t];[t][rp]overlay={WIDE - PAD}:0,format=yuv420p")
+# AI每日日报是 2340x1080：片头片尾页面按这个 canvas 原生排版（2026-10-03 起；以前的 UE 页面只有 1920 宽，要补边）。
+WIDE = 2340
 
 
-def reencode_wide(src, dst):
-    run(["ffmpeg", "-y", "-loglevel", "error", "-i", src, "-filter_complex", WIDEN_VF, "-r", FPS, *ENC, "-an", dst])
+def frame_size(path):
+    r = subprocess.run(["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_entries", "stream=width,height",
+                        "-of", "csv=p=0", str(path)], capture_output=True, text=True)
+    try:
+        w, h = r.stdout.strip().split(",")[:2]
+        return [int(w), int(h)]
+    except ValueError:
+        return None
 
 
 def pack_data(p, name, ep):
     base = C.load_json(p.pack / name / "data.json", {}) or {}
     if name == "intro":
-        base.update(name=base.get("name", "悠一"), tagline=ep.get("intro_tagline", "") or "")   # 兜底值 2026-09-29 起是悠一
+        base.update(name=base.get("name", "悠一"))                                   # role（AI鼓励师）、endColor 用模板的 data.json
     else:
-        base.update(items=ep["outro_items"], closing=ep["outro_closing"], signature=base.get("signature", "悠一"))
+        base.update(references=ep.get("outro_references") or [], items=ep["outro_items"], closing=ep["outro_closing"],
+                    signature=base.get("signature", "悠一"))
+    base["canvas"] = [WIDE, 1080]          # render.py opens the viewport at this size; the page lays out on it
     return base
 
 
@@ -142,7 +148,9 @@ def main():
         C.write_json(data_path, pack_data(p, name, ep), indent=2)
         out = p.build / f"{name}_raw.mp4"
         run([sys.executable, render_py, p.pack / name / "index.html", "--data", data_path, "--fps", FPS, "-o", out])
-        reencode_wide(out, p.build / f"{name}.mp4")
+        reencode(out, p.build / f"{name}.mp4")
+        if frame_size(p.build / f"{name}.mp4") != [WIDE, 1080]:
+            sys.exit(f"build/{name}.mp4 是 {frame_size(p.build / f'{name}.mp4')}，应该是 {WIDE}x1080：检查 片头片尾/{name}/index.html 和 render.py")
 
     if not args.skip_main:
         sync = p.engine / "sync_assets.py"

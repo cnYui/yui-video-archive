@@ -1,0 +1,336 @@
+{
+  "number": 1002,
+  "title": "10月2日，鲸鱼娘带你看看AI圈发生了什么？",
+  "dir_name": "AI每日日报_1002",
+  "date": "2026-10-02",
+  "date_label": "10月2日",
+  "weekday": "周五",
+  "subtitle": "鲸鱼娘带你看看 AI 圈发生了什么",
+  "target_minutes": [
+    5,
+    6
+  ],
+  "question_scene": "S01",
+  "questions": [
+    {
+      "text": "谷歌发布 Gemini 4 Argon",
+      "scenes": [
+        "S02"
+      ]
+    },
+    {
+      "text": "Claude Code 支持 Mods",
+      "scenes": [
+        "S03"
+      ]
+    },
+    {
+      "text": "Sonnet 4.5 定了退役日",
+      "scenes": [
+        "S04"
+      ]
+    },
+    {
+      "text": "豆包能订票打车了",
+      "scenes": [
+        "S05"
+      ]
+    },
+    {
+      "text": "Cohere 发布 Embed 5",
+      "scenes": [
+        "S06"
+      ]
+    },
+    {
+      "text": "亚马逊开源决策小模型",
+      "scenes": [
+        "S07"
+      ]
+    }
+  ],
+  "chapters": {
+    "S01": "开场",
+    "S02": "谷歌发布 Gemini 4 Argon",
+    "S03": "Claude Code 支持 Mods",
+    "S04": "Sonnet 4.5 定了退役日",
+    "S05": "豆包能订票打车了",
+    "S06": "Cohere 发布 Embed 5",
+    "S07": "亚马逊开源决策小模型",
+    "S08": "回顾"
+  },
+  "bar_labels": {
+    "S01": "开场",
+    "S02": "Gemini 4",
+    "S03": "Code Mods",
+    "S04": "Sonnet 4.5",
+    "S05": "豆包出行",
+    "S06": "Embed 5",
+    "S07": "Decider 2B",
+    "S08": "回顾"
+  },
+  "backgrounds": {
+    "S01": "01_深海气泡.png",
+    "S02": "02_星点.png",
+    "S03": "03_波纹.png",
+    "S04": "01_深海气泡.png",
+    "S05": "02_星点.png",
+    "S06": "03_波纹.png",
+    "S07": "01_深海气泡.png",
+    "S08": "02_星点.png"
+  },
+  "bg_alpha": 0.9,
+  "bg_blur": 0,
+  "intro_tagline": "",
+  "outro_items": [
+    {
+      "label": "新闻来源",
+      "value": "Google 博客 · The Decoder · Claude 博客"
+    },
+    {
+      "label": "来源（续）",
+      "value": "Claude Code 更新日志（GitHub） · Cla"
+    },
+    {
+      "label": "形象",
+      "value": "大肥鱼同人 · 上善无形 / ZipZipPipe"
+    },
+    {
+      "label": "视频制作模型",
+      "value": "Opus 5.5"
+    }
+  ],
+  "outro_closing": "感谢大家看到最后",
+  "auto_gestures": false,
+  "presenter": {
+    "id": "whale",
+    "frames": "角色/动作帧"
+  },
+  "badge_html": "AI每日日报<span class=\"n\">10.02</span>",
+  "toc_kicker_html": "<b>今日要闻</b>TODAY",
+  "bar_colors": [
+    "#97C3F0",
+    "#F3C98C",
+    "#4A88DA",
+    "#C6E6FB"
+  ],
+  "news": [
+    {
+      "headline": "谷歌发布 Gemini 4 Argon",
+      "org": "Google",
+      "source": "Google 博客 · The Decoder",
+      "source_short": "Google",
+      "date": "9月30日",
+      "points": [
+        "先给网络安全伙伴",
+        "输出上限一百万",
+        "限时价 2 美元起",
+        "独立测试和 Astra 持平"
+      ],
+      "rundown_key": "谷歌发布 Gemini 4 Argon",
+      "line_points": [
+        null,
+        0,
+        null,
+        1,
+        2,
+        null,
+        3,
+        null,
+        null
+      ],
+      "refs": [
+        {
+          "name": "Google 博客",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/"
+        },
+        {
+          "name": "The Decoder",
+          "url": "https://the-decoder.com/google-gemini-4-argon-closes-the-gap-with-openai-and-anthropic-but-doesnt-take-a-clear-lead/"
+        }
+      ],
+      "snap": "../assets/snaps/news_01.png",
+      "snap_src": "the-decoder.com"
+    },
+    {
+      "headline": "Claude Code 支持 Mods",
+      "org": "Anthropic",
+      "source": "Claude 博客 · 更新日志",
+      "source_short": "Claude 博客",
+      "date": "10月1日",
+      "points": [
+        "TypeScript 小函数",
+        "能拦截、改写工具调用",
+        "打包成插件分享",
+        "团队版先加载安全默认"
+      ],
+      "rundown_key": "Claude Code 支持 Mods",
+      "line_points": [
+        null,
+        0,
+        1,
+        null,
+        2,
+        3,
+        null,
+        null
+      ],
+      "refs": [
+        {
+          "name": "Claude 博客",
+          "url": "https://claude.com/blog/claude-code-mods"
+        },
+        {
+          "name": "Claude Code 更新日志（GitHub）",
+          "url": "https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md"
+        }
+      ],
+      "snap": "../assets/snaps/news_02.png",
+      "snap_src": "claude.com"
+    },
+    {
+      "headline": "Sonnet 4.5 定了退役日",
+      "org": "Anthropic",
+      "source": "Claude 平台文档",
+      "source_short": "Claude 文档",
+      "date": "9月30日",
+      "points": [
+        "11 月 30 日 API 退役",
+        "建议换 Sonnet 5.5",
+        "云厂商自定时间",
+        "用量页能导出核对"
+      ],
+      "rundown_key": "Claude Sonnet 4.5 定了退役日期",
+      "line_points": [
+        null,
+        0,
+        null,
+        1,
+        null,
+        2,
+        3,
+        null
+      ],
+      "refs": [
+        {
+          "name": "Claude 平台更新日志",
+          "url": "https://platform.claude.com/docs/en/release-notes/overview"
+        },
+        {
+          "name": "Claude 模型弃用说明",
+          "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+        }
+      ],
+      "snap": "../assets/snaps/news_03.png",
+      "snap_src": "platform.claude.com"
+    },
+    {
+      "headline": "豆包能订票打车了",
+      "org": "字节 Seed",
+      "source": "IT之家 · 中华网",
+      "source_short": "IT之家",
+      "date": "9月30日",
+      "points": [
+        "订机票、火车票",
+        "打车和导航",
+        "合作航班管家等",
+        "出行用豆包入口"
+      ],
+      "rundown_key": "豆包能订票打车了",
+      "line_points": [
+        null,
+        0,
+        1,
+        null,
+        null,
+        2,
+        3,
+        null
+      ],
+      "refs": [
+        {
+          "name": "IT之家",
+          "url": "https://www.ithome.com/1/008/646.htm"
+        },
+        {
+          "name": "中华网",
+          "url": "https://tech.china.com/article/20260930/202609301963245.html"
+        }
+      ],
+      "snap": "../assets/snaps/news_04.png",
+      "snap_src": "ithome.com"
+    },
+    {
+      "headline": "Cohere 发布 Embed 5",
+      "org": "Cohere",
+      "source": "Cohere · MarkTechPost",
+      "source_short": "Cohere",
+      "date": "9月30日",
+      "points": [
+        "Pro 和 Fast 两档",
+        "上下文 128K",
+        "每百万 token 0.12 美元",
+        "两档共用向量空间"
+      ],
+      "rundown_key": "Cohere 出了 Embed 5",
+      "line_points": [
+        null,
+        0,
+        1,
+        2,
+        null,
+        null,
+        3,
+        null
+      ],
+      "refs": [
+        {
+          "name": "Cohere",
+          "url": "https://cohere.com/blog/embed-5"
+        },
+        {
+          "name": "MarkTechPost",
+          "url": "https://www.marktechpost.com/2026/10/01/cohere-releases-embed-5/"
+        }
+      ],
+      "snap": "../assets/snaps/news_05.png",
+      "snap_src": "cohere.com"
+    },
+    {
+      "headline": "亚马逊开源决策小模型",
+      "org": "Amazon / Qwen",
+      "source": "Strands 博客 · TechCrunch",
+      "source_short": "Strands",
+      "date": "10月1日",
+      "points": [
+        "只做选择，不写文字",
+        "基于 Qwen3.5-2B",
+        "电脑上一百多毫秒",
+        "权重放在 Hugging Face"
+      ],
+      "rundown_key": "亚马逊开源了一个只做选择题的小模型",
+      "line_points": [
+        null,
+        0,
+        1,
+        2,
+        null,
+        null,
+        3
+      ],
+      "refs": [
+        {
+          "name": "Strands 博客",
+          "url": "https://strandsagents.com/blog/introducing-strands-decider/"
+        },
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/10/01/amazon-releases-its-own-jev-clone-as-decision-models-flood-the-web/"
+        }
+      ],
+      "snap": "../assets/snaps/news_06.png",
+      "snap_src": "strandsagents.com"
+    }
+  ],
+  "style": "board"
+}

@@ -1,0 +1,93 @@
+{
+ "date": "2026-10-01",
+ "script_sha": "f16eedb2729d",
+ "passed": true,
+ "checked_at": "2026-10-01 04:33:56",
+ "checks": [
+  {
+   "check": "台本检查",
+   "ok": true,
+   "level": "ok",
+   "detail": "7 条，约 2229 字"
+  },
+  {
+   "check": "成片",
+   "ok": true,
+   "level": "ok",
+   "detail": "D:\\大疆\\AI日报\\2026-10-01\\AI每日日报_1001_成片.mp4"
+  },
+  {
+   "check": "上传版 ≤ 9 MB",
+   "ok": true,
+   "level": "ok",
+   "detail": "8.94 MB"
+  },
+  {
+   "check": "封面",
+   "ok": true,
+   "level": "ok",
+   "detail": "16:9 + 4:3"
+  },
+  {
+   "check": "标题格式",
+   "ok": true,
+   "level": "ok",
+   "detail": "10月1日，鲸鱼娘带你看看AI圈发生了什么？"
+  },
+  {
+   "check": "简介里有全部来源",
+   "ok": true,
+   "level": "ok",
+   "detail": "12 个网址"
+  },
+  {
+   "check": "简介里没有别的网址",
+   "ok": true,
+   "level": "ok",
+   "detail": ""
+  },
+  {
+   "check": "简介 ≤ 2000 字",
+   "ok": true,
+   "level": "ok",
+   "detail": "1571 字"
+  },
+  {
+   "check": "总时长超过 5 分钟（B 站分段章节要求）",
+   "ok": true,
+   "level": "ok",
+   "detail": "363.6 秒"
+  },
+  {
+   "check": "配音识别分 ≥ 0.75",
+   "ok": true,
+   "level": "ok",
+   "detail": "1 批"
+  },
+  {
+   "check": "事实核对（数字、英文名都在原文里）",
+   "ok": true,
+   "level": "ok",
+   "detail": "全部找到"
+  },
+  {
+   "check": "内容安全（色情、暴力、时政、广告、提示词注入、隐藏字符）",
+   "ok": true,
+   "level": "ok",
+   "detail": "没有命中"
+  },
+  {
+   "check": "没有重复最近 7 天播过的原文",
+   "ok": true,
+   "level": "ok",
+   "detail": ""
+  },
+  {
+   "check": "AI 复核（独立子代理，看成品和原文）",
+   "ok": true,
+   "level": "ok",
+   "detail": "通过：（次要，不构成 fail）第1条第6句“每张卡每秒能输出 2469 个 token”：量子位原文的条件是 DeepSeek-V4.1-Flash、EP32 部署、离线推理、128K 上下文、投机接受率 0.85，台本用“在他们的测试配置下”概括，数字本身和原文一致。；（次要，不构成 fail）第2条：Baseten 原文公告（9 月 29 日）没有点名 Kimi K3，Kimi K3 进 Codex、中国开源模型首次进入、2.8 万亿参数 / 100 万上下文 / 原生视觉，都来自 IT之家和 36氪；台本第3句、第5句已注明出处，第6句参数与 IT之家原文一致。第8句“个人订阅里还看不到”是根据原文“B2B Marketplace / 企业客户”做的推断，原文没有明说，但不算失实。；（次要，不构成 fail）第4条：IT之家写的是北京时间 9 月 30 日“今天召开的开发者日”，台本写"
+  }
+ ],
+ "hits": []
+}

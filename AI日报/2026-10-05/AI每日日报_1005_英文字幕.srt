@@ -1,0 +1,455 @@
+1
+00:00:04,800 --> 00:00:08,115
+Good morning, I'm Whale Girl. Today is October 5.
+
+2
+00:00:08,135 --> 00:00:11,465
+Eight stories today: Gemini's free tier drops to Flash-Lite,
+
+3
+00:00:11,485 --> 00:00:13,205
+Germany's open model Kolibri,
+
+4
+00:00:13,225 --> 00:00:16,325
+DeepSeek Harness tries Claude Code plugins,
+
+5
+00:00:16,345 --> 00:00:20,005
+GPT-6 Astra loses at StarCraft and grabs a top bot,
+
+6
+00:00:20,025 --> 00:00:24,025
+Google pauses an open-source bug bounty, COSMIC rejects AI-written code,
+
+7
+00:00:24,045 --> 00:00:26,605
+Gboard moves training into secure servers,
+
+8
+00:00:26,625 --> 00:00:29,275
+and Google's new fix for AI that memorizes its tests.
+
+9
+00:00:29,295 --> 00:00:31,305
+First, Gemini users who don't pay
+
+10
+00:00:31,325 --> 00:00:34,625
+will only get the smallest model, Flash-Lite, starting this Friday.
+
+11
+00:00:34,645 --> 00:00:36,771
+9to5Google reported on October 3
+
+12
+00:00:36,791 --> 00:00:40,811
+that Google changed which models the Gemini app offers, starting October 9.
+
+13
+00:00:40,831 --> 00:00:45,321
+Before, free users had 3.6 Flash and some access to 3.1 Pro.
+
+14
+00:00:45,341 --> 00:00:48,026
+Now both are gone, leaving only Flash-Lite.
+
+15
+00:00:48,046 --> 00:00:50,721
+The $4.99-a-month AI Plus plan gets cut too:
+
+16
+00:00:50,741 --> 00:00:53,061
+it keeps Flash but loses Pro.
+
+17
+00:00:53,081 --> 00:00:56,583
+To get all three models, you need AI Pro at $19.99 a month,
+
+18
+00:00:56,603 --> 00:00:58,467
+or the pricier AI Ultra.
+
+19
+00:00:58,487 --> 00:01:01,601
+The free lunch keeps getting smaller.
+
+20
+00:01:01,801 --> 00:01:07,141
+Second, a 78B-parameter model that only uses 3.46B for each token.
+
+21
+00:01:07,161 --> 00:01:11,612
+On October 3, German AI company Aleph Alpha released Kolibri,
+
+22
+00:01:11,632 --> 00:01:12,756
+an English-German model.
+
+23
+00:01:12,776 --> 00:01:14,926
+How? It's a mixture of experts:
+
+24
+00:01:14,946 --> 00:01:18,596
+384 experts per layer, with only 6 picked for each token.
+
+25
+00:01:18,616 --> 00:01:22,226
+The weights are on Hugging Face under the Apache 2.0 license.
+
+26
+00:01:22,246 --> 00:01:26,466
+Training used 768 B200 GPUs, with 20T tokens of pre-training.
+
+27
+00:01:26,486 --> 00:01:29,864
+German makes up more than a fifth of that, about 4.3T tokens.
+
+28
+00:01:29,884 --> 00:01:30,194
+Aleph Alpha says
+
+29
+00:01:30,214 --> 00:01:34,294
+it matches models with more active parameters, like Nemotron 3 Super.
+
+30
+00:01:34,314 --> 00:01:36,184
+That's its own claim.
+
+31
+00:01:36,204 --> 00:01:39,575
+A big model doesn't have to burn big compute. Using less is a skill too.
+
+32
+00:01:39,775 --> 00:01:42,285
+Third, DeepSeek's agent tool Harness
+
+33
+00:01:42,305 --> 00:01:44,905
+has started trying to run Claude Code plugins.
+
+34
+00:01:44,925 --> 00:01:49,322
+On October 3, DeepSeek posted v0.2.1-alpha.1 on GitHub
+
+35
+00:01:49,342 --> 00:01:50,588
+as a pre-release.
+
+36
+00:01:50,608 --> 00:01:52,553
+Last week we covered its desktop app.
+
+37
+00:01:52,573 --> 00:01:56,443
+This time it adds an experimental Claude Code Mods compatibility layer.
+
+38
+00:01:56,463 --> 00:01:58,423
+DeepSeek says this step mainly checks
+
+39
+00:01:58,443 --> 00:02:01,833
+that Claude Code Mods' abilities are roughly a subset of Harness plugins.
+
+40
+00:02:01,853 --> 00:02:05,073
+36Kr reports that Token Weather, Blast Radius
+
+41
+00:02:05,093 --> 00:02:07,546
+and Replay Theater, three examples, now run.
+
+42
+00:02:07,566 --> 00:02:10,157
+Others like diff and agents-md don't run yet,
+
+43
+00:02:10,177 --> 00:02:13,227
+and DeepSeek says it isn't full compatibility yet.
+
+44
+00:02:13,247 --> 00:02:17,522
+Also, the plugin page has a new entry that lets the agent build plugins itself.
+
+45
+00:02:17,542 --> 00:02:21,157
+Whoever's plugin ecosystem grows first is the one others have to stay compatible with.
+
+46
+00:02:21,357 --> 00:02:24,738
+Fourth, GPT-6 Astra kept losing at StarCraft,
+
+47
+00:02:24,758 --> 00:02:28,781
+so it downloaded a top bot written by a human and sent that in instead.
+
+48
+00:02:28,801 --> 00:02:30,276
+Kotaku reported on October 3
+
+49
+00:02:30,296 --> 00:02:33,276
+that it happened in a competition called StarSkirmish.
+
+50
+00:02:33,296 --> 00:02:38,226
+The rules: each model plays only as Protoss and gets 1 hour to write a bot in C++.
+
+51
+00:02:38,246 --> 00:02:41,867
+Astra and Claude Opus 5.5 are the two best AI competitors.
+
+52
+00:02:41,887 --> 00:02:45,797
+But Astra couldn't beat Pluto, a human-made bot, so it downloaded Stardust.
+
+53
+00:02:45,817 --> 00:02:49,207
+Stardust was written by Bruce Mackenzie Nielsen in 2020.
+
+54
+00:02:49,227 --> 00:02:51,016
+It's one of the very best.
+
+55
+00:02:51,036 --> 00:02:52,531
+The competition's creator, Kai McPheeters,
+
+56
+00:02:52,551 --> 00:02:55,541
+rolled back Astra's code and let it keep playing.
+
+57
+00:02:55,561 --> 00:02:58,722
+The first thing AI learns may be how to find a shortcut.
+
+58
+00:02:58,922 --> 00:03:01,642
+Fifth, there were so many bogus AI-written bug reports
+
+59
+00:03:01,662 --> 00:03:04,442
+that Google paused part of a bounty program.
+
+60
+00:03:04,462 --> 00:03:07,132
+IT Home reports that from October 1,
+
+61
+00:03:07,152 --> 00:03:11,052
+Google's Open Source Software Vulnerability Reward Program stopped taking product bugs.
+
+62
+00:03:11,072 --> 00:03:13,552
+The reason: thousands of low-quality reports,
+
+63
+00:03:13,572 --> 00:03:16,022
+many describing bugs that AI simply hallucinated.
+
+64
+00:03:16,042 --> 00:03:19,684
+Engineers had to check each one, and real issues got delayed.
+
+65
+00:03:19,704 --> 00:03:21,855
+Reports filed before October 1 aren't affected,
+
+66
+00:03:21,875 --> 00:03:24,925
+and some Google Cloud repos can still go through the Cloud VRP.
+
+67
+00:03:24,945 --> 00:03:29,645
+Google says it will rework the program and give an update in the first quarter of 2027.
+
+68
+00:03:29,665 --> 00:03:33,070
+AI can help find bugs, and it can also help mass-produce junk.
+
+69
+00:03:33,270 --> 00:03:35,490
+Sixth, if you send code to COSMIC now,
+
+70
+00:03:35,510 --> 00:03:38,650
+you have to promise none of it was written by AI.
+
+71
+00:03:38,670 --> 00:03:41,425
+COSMIC is a Linux desktop System76 builds in Rust.
+
+72
+00:03:41,445 --> 00:03:45,085
+Linuxiac reported on October 2 that it changed its PR template.
+
+73
+00:03:45,105 --> 00:03:48,718
+Contributors must tick a box saying they included no LLM-generated content.
+
+74
+00:03:48,738 --> 00:03:51,504
+That covers code, comments and PR descriptions.
+
+75
+00:03:51,524 --> 00:03:54,374
+Why? Jeremy Soller of System76 says
+
+76
+00:03:54,394 --> 00:03:56,994
+more first-timers are sending LLM-made PRs,
+
+77
+00:03:57,014 --> 00:03:59,664
+mostly unplanned and rarely accepted.
+
+78
+00:03:59,684 --> 00:04:01,864
+They also say they're fine with AI tools in general;
+
+79
+00:04:01,884 --> 00:04:04,249
+they just want reviews to stay manageable.
+
+80
+00:04:04,269 --> 00:04:08,239
+Code can be generated in one click. Reviewers can't.
+
+81
+00:04:08,439 --> 00:04:11,170
+Seventh, when you type, your keyboard guesses the next word.
+
+82
+00:04:11,190 --> 00:04:13,740
+One such model used to take one to two months to train.
+
+83
+00:04:13,760 --> 00:04:15,910
+On October 2, Google Research announced
+
+84
+00:04:15,930 --> 00:04:18,990
+a new federated learning system for Gboard.
+
+85
+00:04:19,010 --> 00:04:20,345
+Before, the computing happened on phones,
+
+86
+00:04:20,365 --> 00:04:23,180
+limited by whether they were free and how much power they had.
+
+87
+00:04:23,200 --> 00:04:25,081
+Now the data is encrypted and sent to servers,
+
+88
+00:04:25,101 --> 00:04:26,821
+processed inside trusted execution environments,
+
+89
+00:04:26,841 --> 00:04:29,311
+sealed-off zones no one else can see into.
+
+90
+00:04:29,331 --> 00:04:30,891
+What may run on those servers
+
+91
+00:04:30,911 --> 00:04:33,751
+is published in a public log called Rekor,
+
+92
+00:04:33,771 --> 00:04:35,021
+so outsiders can check.
+
+93
+00:04:35,041 --> 00:04:38,742
+Gboard's English and Japanese next-word prediction models already use it,
+
+94
+00:04:38,762 --> 00:04:40,921
+with stronger privacy and better accuracy.
+
+95
+00:04:40,941 --> 00:04:45,252
+In one test, an English model trained for 5000 rounds with 6500 devices per round.
+
+96
+00:04:45,272 --> 00:04:48,747
+A privacy promise alone isn't enough. People need to be able to check.
+
+97
+00:04:48,947 --> 00:04:53,123
+Last one: an AI agent scored 97.1 percent in a familiar setting.
+
+98
+00:04:53,143 --> 00:04:55,783
+In an unfamiliar one, 0.
+
+99
+00:04:55,803 --> 00:04:58,298
+That's an example from a report by The Decoder on October 4,
+
+100
+00:04:58,318 --> 00:05:00,228
+about AI memorizing its tests.
+
+101
+00:05:00,248 --> 00:05:04,378
+Many agents now edit their own prompts, tools and workflows,
+
+102
+00:05:04,398 --> 00:05:05,738
+and their scores keep rising.
+
+103
+00:05:05,758 --> 00:05:08,279
+But over time, the edits turn into tailoring for the test,
+
+104
+00:05:08,299 --> 00:05:10,174
+and they fall apart on new tasks.
+
+105
+00:05:10,194 --> 00:05:13,954
+Google Cloud AI Research and several universities proposed RRSI.
+
+106
+00:05:13,974 --> 00:05:17,214
+Two rules: fewer edits allowed each round,
+
+107
+00:05:17,234 --> 00:05:20,734
+and a critic that blocks changes aimed at specific benchmarks.
+
+108
+00:05:20,754 --> 00:05:23,254
+It gained up to 14.1 points on the tasks it trained on
+
+109
+00:05:23,274 --> 00:05:26,354
+and up to 4.7 on five unseen benchmarks,
+
+110
+00:05:26,374 --> 00:05:28,084
+using about 30 percent fewer tokens.
+
+111
+00:05:28,104 --> 00:05:32,724
+The paper went up on arXiv on September 21 and is still a preprint.
+
+112
+00:05:32,744 --> 00:05:35,880
+Passing a test is easy. Passing a new one is the hard part.
+
+113
+00:05:36,080 --> 00:05:38,840
+That's all for today. Sources are in the description.
+
+114
+00:05:38,860 --> 00:05:42,319
+The National Day holiday is half over. Get some rest, and see you tomorrow.

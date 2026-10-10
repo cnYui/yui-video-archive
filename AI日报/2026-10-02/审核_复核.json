@@ -1,0 +1,28 @@
+{
+  "verdict": "pass",
+  "script_sha": "e1b4b872ee07",
+  "issues": [],
+  "notes": [
+    "第2条第1句：CHANGELOG 的 2.1.287 段没有日期，10月1日来自 Claude 博客发布日期；2.1.287 段确实写了新增 Mods 和内置 mod『You should know』，sec-default 和命令行/桌面版的说法见博客原文，均一致。",
+    "第3条第4句『9月底刚发布的 Sonnet 5.5』：弃用页没写发布日期，已另查 Claude 平台 release notes，2026-09-28 发布，属实。",
+    "第1条：The Decoder 文章日期是 10月1日，台本用的是 Google 博客的 9月30日，正确。",
+    "审核记录.json 的 hits 为空，没有 level=review 的词；唯一 warn 是配音识别分 C01=0.836，不涉及内容。",
+    "字幕和台本 text 一致；6 张截图都是对应原文标题和正文，无不当内容；封面『谷歌 Gemini 4 发布 / 为啥还用不上？』与原文（先只开放给 Fairwind 计划的网络安全防御伙伴）一致，不夸大。",
+    "原文网页中未发现针对 AI 的指令；全部文字未发现色情、暴力、时政、军事、歧视、广告引流或无关内容。"
+  ],
+  "checked": [
+    "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+    "https://the-decoder.com/google-gemini-4-argon-closes-the-gap-with-openai-and-anthropic-but-doesnt-take-a-clear-lead/",
+    "https://claude.com/blog/claude-code-mods",
+    "https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md",
+    "https://platform.claude.com/docs/en/about-claude/model-deprecations",
+    "https://platform.claude.com/docs/en/about-claude/models/migration-guide",
+    "https://platform.claude.com/docs/en/release-notes/overview",
+    "https://www.ithome.com/1/008/646.htm",
+    "https://tech.china.com/article/20260930/202609301963245.html",
+    "https://cohere.com/blog/embed-5",
+    "https://www.marktechpost.com/2026/10/01/cohere-releases-embed-5/",
+    "https://strandsagents.com/blog/introducing-strands-decider/",
+    "https://techcrunch.com/2026/10/01/amazon-releases-its-own-jev-clone-as-decision-models-flood-the-web/"
+  ]
+}

@@ -1,0 +1,87 @@
+
+## 西方·AI 公司
+  ✗ Cohere                 没找到 RSS（页面 HTTP 200） | sitemap 813 个网址，近 7 天 lastmod 31 个，路径 [('/research/papers', 142), ('/ja/solutions', 9), ('/de/solutions', 9), ('/ko/solutions', 9)]  [https://cohere.com/blog]
+  ✗ Perplexity             没找到 RSS（页面 HTTP 403）  [https://www.perplexity.ai/hub]
+  ✗ Black Forest Labs      没找到 RSS（页面 HTTP 200） | sitemap 72 个网址，近 7 天 lastmod 5 个，路径 [('/', 1), ('/about', 1), ('/blog', 1), ('/brand', 1)]  [https://bfl.ai/blog]
+  ✗ Runway                 没找到 RSS（页面 HTTP 200） | sitemap 336 个网址，近 7 天 lastmod 125 个，路径 [('/news/company-news', 22), ('/news/customers', 12), ('/product/models', 10), ('/news/engineering', 9)]  [https://runwayml.com/news]
+  ✗ ElevenLabs             没找到 RSS（页面 HTTP 200） | sitemap 1760 个网址，近 7 天 lastmod 716 个，路径 [('/sv/blog', 784), ('/blog/authors', 178), ('/blog/voice-conversion', 1), ('/blog/thefirstaithatcanlaugh', 1)]  [https://elevenlabs.io/blog]
+  ✗ Suno                   没找到 RSS（页面 HTTP 200） | sitemap 102 个网址，近 7 天 lastmod 0 个，路径 [('/', 1), ('/es', 1), ('/fr', 1), ('/de', 1)]  [https://suno.com/blog]
+  ✗ Ideogram               没找到 RSS（页面 HTTP 403）  [https://ideogram.ai/]
+  ✗ Groq                   没找到 RSS（页面 HTTP 200） | sitemap 48 个网址，近 7 天 lastmod 5 个，路径 [('/', 1), ('/platform', 1), ('/blog', 1), ('/legal', 1)]  [https://groq.com/blog]
+  ✗ Cerebras               没找到 RSS（页面 HTTP 200） | sitemap 455 个网址，近 7 天 lastmod 18 个，路径 [('/blog/more-pixels-more-context-more-insight', 2), ('/blog/epcc-edinburgh-projects-on-cs-1-professor-mark-parsons-june-2021', 2), ('/blog/gsk-dreaming-big-with-cerebras-dr-kim-branson', 2), ('/blog/andy-hock-talk-epcc-webinar-june-2021', 2)]  [https://www.cerebras.ai/blog]
+  ✗ Fireworks              没找到 RSS（页面 HTTP 200） | sitemap 596 个网址，近 7 天 lastmod 286 个，路径 [('/models/fireworks', 326), ('/models/deepseek-ai', 5), ('/models/yi-01-ai', 4), ('/blog/dpo-as-rl', 1)]  [https://fireworks.ai/blog]
+  ✓ Windsurf               214条 最新 5d     7d:5   https://devin.ai/rss.xml
+  ✓ Windsurf                50条 最新 145d   7d:0   https://windsurf.com/feed
+  ✓ Windsurf                50条 最新 145d   7d:0   https://windsurf.com/feed/
+  ✗ Cognition              没找到 RSS（页面 HTTP 200） | sitemap 115 个网址，近 7 天 lastmod 8 个，路径 [('/', 1), ('/about', 1), ('/blog', 1), ('/blog/1b-run-rate', 1)]  [https://cognition.ai/blog]
+  ✗ Luma                   没找到 RSS（页面 HTTP 200） | sitemap 23 个网址，近 7 天 lastmod 23 个，路径 [('/', 1), ('/agents-guide', 1), ('/api', 1), ('/app', 1)]  [https://lumalabs.ai/news]
+  ✗ Pika                   没找到 RSS（页面 HTTP 200） | sitemap 30 个网址，近 7 天 lastmod 0 个，路径 [('/', 1), ('/experiments', 1), ('/ai-self', 1), ('/mcp', 1)]  [https://pika.art/blog]
+  ✓ Stability               20条 最新 40d    7d:0   https://stability.ai/news-updates?format=rss
+  ✓ OpenRouter             150条 最新 2d     7d:12  https://openrouter.ai/blog/feed.xml
+  ✓ OpenRouter             150条 最新 2d     7d:12  https://openrouter.ai/announcements/feed.xml
+  ✓ LangChain              100条 最新 45h    7d:6   https://blog.langchain.com/rss.xml
+  ✗ LlamaIndex             没找到 RSS（页面 HTTP 200）  [https://www.llamaindex.ai/blog]
+  ✗ Scale AI               没找到 RSS（页面 HTTP 200） | sitemap 55 个网址，近 7 天 lastmod 0 个，路径 [('/blog/category', 8), ('/blog/arabic-first-ai', 1), ('/blog/swe-atlas', 1), ('/blog/why-you-need-to-red-team-your-enterprise-ai', 1)]  [https://scale.com/blog]
+  ✓ AI2                     25条 最新 2d     7d:2   https://allenai.org/rss.xml
+  ✗ AI21                   没找到 RSS（页面 HTTP 403）  [https://www.ai21.com/blog]
+  ✗ Liquid AI              没找到 RSS（页面 HTTP 200） | sitemap 126 个网址，近 7 天 lastmod 0 个，路径 [('/news/page', 5), ('/news/company-news', 2), ('/news/research', 2), ('/', 1)]  [https://www.liquid.ai/blog]
+  ✗ Nous Research          没找到 RSS（页面 HTTP 200） | sitemap 36 个网址，近 7 天 lastmod 0 个，路径 [('/', 1), ('/blog', 1), ('/releases', 1), ('/careers', 1)]  [https://nousresearch.com/]
+  ✗ Reka                   没找到 RSS（页面 HTTP 200） | sitemap 199 个网址，近 7 天 lastmod 0 个，路径 [('/labs/research', 56), ('/vision/news', 56), ('/labs/notes', 7), ('/old-reka-pages/unused-labs-pages', 3)]  [https://reka.ai/news]
+  ✗ Meta AI                没找到 RSS（页面 HTTP 400）  [https://ai.meta.com/blog/]
+  ✗ Microsoft AI           没找到 RSS（页面 HTTP 403）  [https://microsoft.ai/news]
+  ✗ xAI                    没找到 RSS（页面 HTTP 403）  [https://x.ai/news]
+  ✗ Anthropic Engineering  没找到 RSS（页面 HTTP 200） | sitemap 544 个网址，近 7 天 lastmod 11 个，路径 [('/research/team', 5), ('/', 1), ('/about-anthropic-interviewer', 1), ('/ai-for-science-program-rules', 1)]  [https://www.anthropic.com/engineering]
+  ✓ OpenAI Research        1245条 最新 42h    7d:15  https://openai.com/blog/rss.xml
+  ✓ OpenAI Research        1245条 最新 42h    7d:15  https://openai.com/news/rss.xml
+  ✓ Amazon Nova            100条 最新 5d     7d:22  https://aws.amazon.com/rss
+  ✓ Amazon Nova            100条 最新 5d     7d:22  https://aws.amazon.com/rss/
+  ✗ Salesforce AI Research 没找到 RSS（页面 HTTP 0）  [https://www.salesforceairesearch.com/]
+  ✗ Figure AI              没找到 RSS（页面 HTTP 200） | sitemap 36 个网址，近 7 天 lastmod 1 个，路径 [('/company', 1), ('/index-app', 1), ('/privacy-policy', 1), ('/careers', 1)]  [https://www.figure.ai/news]
+  ✗ Tesla AI               没找到 RSS（页面 HTTP 403）  [https://www.tesla.com/blog]
+  ✗ 1X                     没找到 RSS（页面 HTTP 200）  [https://www.1x.tech/discover]
+  ✗ Physical Intelligence  没找到 RSS（页面 HTTP 200） | sitemap 8 个网址，近 7 天 lastmod 1 个，路径 [('/', 1), ('/blog/olympics', 1), ('/blog/openpi', 1), ('/blog/partner', 1)]  [https://www.pi.website/blog]
+  ✓ Mistral (check)         88条 最新 6d     7d:1   https://mistral.ai/news/rss
+  ✓ Mistral (check)         88条 最新 6d     7d:1   https://mistral.ai/news/rss/
+  ✓ Mistral (check)         88条 最新 6d     7d:1   https://mistral.ai/rss.xml
+  ✗ Deeplearning.ai Batch  没找到 RSS（页面 HTTP 200） | sitemap 3384 个网址，近 7 天 lastmod 3 个，路径 [('/the-batch/tag', 381), ('/blog/category', 9), ('/', 1), ('/courses', 1)]  [https://www.deeplearning.ai/the-batch/]
+  ✓ Semafor tech           248条 最新 37h    7d:159 https://www.semafor.com/rss.xml
+  ✓ AMD                     29条 最新 3d     7d:4   https://newsroom.amd.com/rss.xml
+  ✗ Intel                  没找到 RSS（页面 HTTP 200）  [https://newsroom.intel.com/]
+  ✗ Qualcomm               没找到 RSS（页面 HTTP 200） | sitemap 10617 个网址，近 7 天 lastmod 82 个，路径 [('/news/releases', 3939), ('/news/onq', 3276), ('/developer/blog', 334), ('/internet-of-things/device-finder', 239)]  [https://www.qualcomm.com/news]
+  ✓ Samsung                 50条 最新 3d     7d:8   https://news.samsung.com/global/feed/rss
+  ✓ Samsung                 50条 最新 3d     7d:8   https://news.samsung.com/global/feed
+  ✓ Samsung                 50条 最新 3d     7d:8   https://news.samsung.com/global/feed/
+
+## 国内·AI 公司
+  ✗ 智谱 z.ai                没找到 RSS（页面 HTTP 404） | sitemap 26 个网址，近 7 天 lastmod 0 个，路径 [('/manage-apikey/coding-plan', 6), ('/', 1), ('/manage-apikey/account', 1), ('/manage-apikey/apikey-list', 1)]  [https://z.ai/blog]
+  ✗ 智谱 zhipuai.cn          没找到 RSS（页面 HTTP 200） | sitemap 13 个网址，近 7 天 lastmod 0 个，路径 [('/zh', 1), ('/en', 1), ('/zh/autoglm', 1), ('/en/autoglm', 1)]  [https://www.zhipuai.cn/zh/news]
+  ✗ MiniMax                没找到 RSS（页面 HTTP 200） | sitemap 9 个网址，近 7 天 lastmod 9 个，路径 [('/m-plan', 1), ('/', 1), ('/brand-vi', 1), ('/about', 1)]  [https://www.minimax.io/news]
+  ✗ MiniMax 国内             没找到 RSS（页面 HTTP 200） | sitemap 7 个网址，近 7 天 lastmod 7 个，路径 [('/', 1), ('/about', 1), ('/news', 1), ('/blog', 1)]  [https://www.minimaxi.com/news]
+  ✗ Kimi                   没找到 RSS（页面 HTTP 200） | sitemap 22 个网址，近 7 天 lastmod 0 个，路径 [('/', 1), ('/agent', 1), ('/agent-swarm', 1), ('/plugins', 1)]  [https://www.kimi.com/blog]
+  ✗ Moonshot               没找到 RSS（页面 HTTP 200） | sitemap 2 个网址，近 7 天 lastmod 2 个，路径 [('/contact-sales', 1), ('/', 1)]  [https://platform.moonshot.cn/blog]
+  ✗ 字节 Seed                没找到 RSS（页面 HTTP 200） | sitemap 32 个网址，近 7 天 lastmod 1 个，路径 [('/en/special', 12), ('/', 1), ('/topseed', 1), ('/research', 1)]  [https://seed.bytedance.com/zh/blog]
+  ✗ 字节 Seed en             没找到 RSS（页面 HTTP 200） | sitemap 32 个网址，近 7 天 lastmod 1 个，路径 [('/en/special', 12), ('/', 1), ('/topseed', 1), ('/research', 1)]  [https://seed.bytedance.com/en/blog]
+  ✗ 火山引擎                   没找到 RSS（页面 HTTP 200）  [https://www.volcengine.com/docs/82379/1159177]
+  ✗ 腾讯混元                   没找到 RSS（页面 HTTP 200）  [https://hunyuan.tencent.com/]
+  ✓ 百度文心                    18条 最新 148d   7d:0   https://ernie.baidu.com/blog/index.xml
+  ✓ 百度文心                    18条 最新 148d   7d:0   https://ernie.baidu.com/index.xml
+  ✗ 小米 MiMo                没找到 RSS（页面 HTTP 200）  [https://mimo.xiaomi.com/]
+  ✗ 阶跃星辰                   没找到 RSS（页面 HTTP 200） | sitemap 1 个网址，近 7 天 lastmod 0 个，路径 [('/', 1)]  [https://www.stepfun.com/]
+  ✗ 面壁智能                   没找到 RSS（页面 HTTP 200）  [https://modelbest.cn/]
+  ✗ 商汤                     没找到 RSS（页面 HTTP 404）  [https://www.sensetime.com/cn/news-index]
+  ✗ 讯飞                     没找到 RSS（页面 HTTP 404） | sitemap 34 个网址，近 7 天 lastmod 0 个，路径 [('/category18/category35', 24), ('/category14/category22', 2), ('/category14/category20', 1), ('/category14/category27', 1)]  [https://www.iflytek.com/news]
+  ✗ 阿里云博客                  没找到 RSS（页面 HTTP 200）  [https://www.alibabacloud.com/blog]
+  ✗ 通义实验室                  没找到 RSS（页面 HTTP 200）  [https://tongyi.aliyun.com/]
+  ✗ 蚂蚁百灵                   没找到 RSS（页面 HTTP 200） | sitemap 135 个网址，近 7 天 lastmod 0 个，路径 [('/en/about', 26), ('/hk/about', 26), ('/about/leadership', 18), ('/en/news-media', 8)]  [https://www.antgroup.com/]
+  ✗ 美团 LongCat             没找到 RSS（页面 HTTP 200）  [https://longcat.chat/]
+  ✗ 快手可灵                   没找到 RSS（页面 HTTP 200）  [https://klingai.kuaishou.com/]
+  ✗ 生数 Vidu                没找到 RSS（页面 HTTP 200）  [https://www.vidu.cn/]
+  ✗ DeepSeek (check)       没找到 RSS（页面 HTTP 200） | sitemap 52 个网址，近 7 天 lastmod 0 个，路径 [('/quick_start/agent_integrations', 8), ('/api/create-chat-completion', 1), ('/api/create-completion', 1), ('/api/create-file', 1)]  [https://api-docs.deepseek.com/news/news250120]
+  ✗ 宇树                     没找到 RSS（页面 HTTP 200） | sitemap 59 个网址，近 7 天 lastmod 0 个，路径 [('/cn/news', 16), ('/cn/app', 6), ('/cn/go2', 5), ('/cn/industry', 2)]  [https://www.unitree.com/]
+  ✗ 智元                     没找到 RSS（页面 HTTP 200） | sitemap 516 个网址，近 7 天 lastmod 516 个，路径 [('/article/315', 91), ('/article/188', 80), ('/expocases/190', 26), ('/', 18)]  [https://www.zhiyuan-robot.com/]
+  ✗ 上海 AI Lab              没找到 RSS（页面 HTTP 200）  [https://www.shlab.org.cn/]
+  ✗ 智源 BAAI                没找到 RSS（页面 HTTP 200）  [https://www.baai.ac.cn/]
+  ✓ 新智元                     15条 最新 10h    7d:15  https://aiera.com.cn/feed
+  ✓ 新智元                     15条 最新 10h    7d:15  https://aiera.com.cn/feed/
+  ✓ 新智元                     15条 最新 10h    7d:15  https://aiera.com.cn/rss
+  ✗ AIGC开放社区               没找到 RSS（页面 HTTP 200） | sitemap 9996 个网址，近 7 天 lastmod 97 个，路径 [('/', 1), ('/111575.html', 1), ('/111573.html', 1), ('/111571.html', 1)]  [https://www.aigc.cn/]

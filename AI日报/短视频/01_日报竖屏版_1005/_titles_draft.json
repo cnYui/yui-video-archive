@@ -1,0 +1,27 @@
+[
+ {
+  "id": 1,
+  "angle": "事实陈述（主体 + 动作 + 数字）",
+  "recommend": true,
+  "bilibili": "10月5日AI圈8件事：Gemini免费版只剩Flash-Lite，DeepSeek Harness试着兼容Claude Code插件",
+  "douyin": "Gemini免费版降级，DeepSeek试接Claude插件",
+  "xiaohongshu": "Gemini免费版降级！AI圈8件事",
+  "weixin_channels": "AI圈8件事：Gemini降级"
+ },
+ {
+  "id": 2,
+  "angle": "数字悬念",
+  "bilibili": "不到6分钟看完AI圈8件事：78B参数的模型每个词只动3.46B，谷歌暂停了部分漏洞赏金",
+  "douyin": "78B参数只动3.46B？AI圈8件事",
+  "xiaohongshu": "78B只动3.46B？AI圈8件事",
+  "weixin_channels": "78B只动3.46B的模型"
+ },
+ {
+  "id": 3,
+  "angle": "泼冷水（要说明的：AI 写的东西开始被拦）",
+  "bilibili": "AI写的东西开始被拦了：COSMIC拒收AI代码，谷歌暂停部分开源漏洞赏金，还有6件AI圈大事",
+  "douyin": "COSMIC拒收AI代码，谷歌暂停部分漏洞赏金",
+  "xiaohongshu": "COSMIC拒收AI代码！谷歌停部分赏金",
+  "weixin_channels": "COSMIC拒收AI代码"
+ }
+]

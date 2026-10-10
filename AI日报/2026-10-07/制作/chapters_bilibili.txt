@@ -1,0 +1,9 @@
+0:00 开场
+0:26 Mistral Large 4
+1:06 Reflection 发布 Beam
+1:41 ChatGPT 文字加水印
+2:18 初创公司免费用 Claude
+2:56 网络安全验证计划
+3:42 Together Link
+4:24 EmbeddingGemma 2
+5:02 回顾
