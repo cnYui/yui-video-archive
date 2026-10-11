@@ -2,154 +2,98 @@
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8">
-<title>原LAI如此 封面</title>
+<title>原LAI如此 封面（黑板版）</title>
 <link rel="stylesheet" href="../../素材/字体/fonts.css">
 <style>
-  :root {
-    --paper: #EDEAE3;
-    --ink: #141414;
-    --ink2: #57534C;
-    --ink3: #A29D93;
-    --orange: #FF4F1A;
-    --navy: #1B2340;
-    --pink: #F2A0BD; --yellow: #F6C945; --blue: #4A6FD0; --kred: #E2463F;
-    --cjk: 'Noto Sans SC', sans-serif;
-    --mono: 'JetBrains Mono', 'Noto Sans SC', monospace;
-  }
+  /* 黑板版封面（2026-10-02 用户三选一定的 A「黑板粉笔」：要有鲸鱼娘，和《AI每日日报》的白底蓝字封面区分开）：
+     深绿黑板 + 粉笔手写标题（这一期视频同一只手：制作/engine/hand.js + 封面/_handdata.js），讲解员站在下面的粉笔槽上
+     指着标题（make_cover.py 把她的帧加一圈奶白描边存成 封面/sprite.png）。make_cover.py 填占位符、传 window.__DATA__。
+     画面宽度来自 __DATA__.canvas：16:9 按 1920 排、4:3 按 1440 单独排一遍（2026-10-03 用户：鲸鱼娘再往左一些、标题再大一些，
+     往左以后 4:3 不能再从 16:9 中间裁，所以两个比例各排各的；make_cover.py 渲染两次，4:3 那次切左边 1440 宽）。 */
+  :root { --cjk: 'Noto Sans SC', sans-serif; --mono: 'JetBrains Mono', 'Noto Sans SC', monospace; }
   * { box-sizing: border-box; }
-  html, body { margin: 0; width: 1920px; height: 1080px; overflow: hidden; background: var(--navy); }
+  html, body { margin: 0; width: 1920px; height: 1080px; overflow: hidden; background: #1C2C25; }
   body { font-family: var(--cjk); -webkit-font-smoothing: antialiased; }
-  #stage { position: absolute; inset: 0; overflow: hidden; background: var(--navy); }
-
-  /* ---------- background: STARRY interior, blurred and pressed down ---------- */
-  #bgImg { position: absolute; object-fit: fill; }
-  #bgTint { position: absolute; inset: 0;
-            background: radial-gradient(ellipse 80% 90% at 50% 50%, rgba(0,0,0,0) 45%, rgba(8,10,20,.55) 100%); }
-  /* warm spotlight behind the presenter so her outline separates from the dark room */
-  #spot { position: absolute; border-radius: 50%; }
-
-  /* ---------- the receipt ---------- */
-  #receipt { position: absolute; transform-origin: 50% 0; }
-  #receiptShadow { position: absolute; inset: 0; background: rgba(0,0,0,.55); filter: blur(26px);
-                   transform: translate(10px, 22px); }
-  #paper { position: absolute; inset: 0; background: var(--paper); overflow: hidden; }
-  #paperGrain { position: absolute; left: 0; top: 0; opacity: .9; }
-  #slotShade { position: absolute; left: 0; right: 0; top: 0; height: 60px;
-               background: linear-gradient(to bottom, rgba(0,0,0,.20), rgba(0,0,0,0)); }
-  #curl { position: absolute; inset: 0;
-          background: linear-gradient(90deg, rgba(0,0,0,.07), rgba(0,0,0,0) 8%, rgba(0,0,0,0) 92%, rgba(0,0,0,.06)); }
-  #content { position: absolute; top: 56px; color: var(--ink); }
-
-  .head { display: flex; align-items: center; justify-content: space-between; height: 64px; }
-  .series { font: 900 50px/1 var(--cjk); letter-spacing: .02em; white-space: nowrap; display: flex; align-items: center; }
-  .series .sq { width: 26px; height: 26px; background: var(--orange); margin-right: 18px; }
-  .series .lai { color: var(--orange); }
-  .headR { display: flex; align-items: center; gap: 22px; }
-  .kb { display: flex; gap: 7px; }
-  .kb i { display: block; width: 40px; height: 16px; border: 2px solid var(--ink); border-radius: 8px; }
-  .epi { font: 800 44px/1 var(--mono); letter-spacing: .02em; color: var(--paper); background: var(--ink);
-         padding: 9px 16px 10px; border-radius: 4px; }
-  .rule { height: 2px; background-image: repeating-linear-gradient(90deg, var(--ink3) 0 10px, transparent 10px 18px); }
-  .rule.double { height: 8px; background:
-      linear-gradient(var(--ink), var(--ink)) 0 0 / 100% 4px no-repeat,
-      linear-gradient(var(--ink), var(--ink)) 0 100% / 100% 2px no-repeat; }
-
-  .t1 { font-weight: 900; font-family: var(--cjk); white-space: nowrap; }
-  .t2 { font-weight: 900; font-family: var(--cjk); white-space: nowrap; }
-  .t2 .q { color: var(--orange); }
-  .sub { font-family: var(--cjk); font-weight: 800; white-space: nowrap; letter-spacing: 0; }
-  .sub .hl { background: linear-gradient(180deg, transparent 52%, var(--yellow) 52%, var(--yellow) 94%, transparent 94%);
-             padding: 0 6px; margin: 0 -2px 0 -6px; }
-  .sub .qm { font-weight: 800; }
-  .sub .qm.o1 { margin-left: -.36em; }
-  .sub .qm.c { margin-right: -.44em; }
-  .sub .o { color: var(--orange); }
-
-  /* ---------- the presenter (ids #ryo / #ryoShadow are historic) + pixel "?" ---------- */
-  #ryo { position: absolute; image-rendering: pixelated; }
-  #ryoShadow { position: absolute; border-radius: 50%;
-               background: radial-gradient(closest-side, rgba(0,0,0,.7), rgba(0,0,0,.4) 55%, rgba(0,0,0,0)); }
-  #floor { position: absolute; border-radius: 50%;
-           background: radial-gradient(closest-side, rgba(255,214,170,.20), rgba(255,214,170,.07) 60%, rgba(255,214,170,0)); }
-  canvas.px { position: absolute; image-rendering: pixelated; }
-
-  /* ---------- plain page (cover.json "plain": "#FFFFFF"): one solid colour instead of the photo; no vignette, warm
-     light or floor glow, softer shadows (第 4 期白底，2026-09-28) ---------- */
-  body.plain, body.plain #stage { background: var(--plainBg); }
-  body.plain #bgImg, body.plain #bgTint, body.plain #spot, body.plain #floor { display: none; }
-  body.plain #receiptShadow { background: rgba(0,0,0,.2); filter: blur(22px); transform: translate(8px, 16px); }
-  body.plain #ryoShadow { background: radial-gradient(closest-side, rgba(0,0,0,.26), rgba(0,0,0,.12) 55%, rgba(0,0,0,0)); }
+  #stage { position: absolute; left: 0; top: 0; height: 1080px; overflow: hidden;
+           background: radial-gradient(1300px 900px at 58% 42%, #2F4B41 0%, #263D34 52%, #1D2F28 100%); }
+  canvas.full { position: absolute; left: 0; top: 0; }
+  .smudge { position: absolute; border-radius: 50%; background: rgba(255,255,255,.055); filter: blur(34px); }
+  #tray { position: absolute; left: 0; right: 0; height: 64px;
+          background: linear-gradient(#8B5B36, #6A4327 55%, #4E311C); box-shadow: 0 -8px 18px rgba(0,0,0,.38); }
+  #tray::before { content: ''; position: absolute; left: 0; right: 0; top: 0; height: 9px; background: #A87146; }
+  .stick { position: absolute; height: 18px; border-radius: 6px; box-shadow: 0 3px 4px rgba(0,0,0,.35); }
+  /* 系列名（印刷体，和视频左上角同一套：橙色方块 + 原LAI如此 + 四色胶囊 + 期号） */
+  #brand { position: absolute; display: flex; align-items: center; color: #F3F1E8; }
+  #brand .series { font-weight: 900; letter-spacing: .02em; display: flex; align-items: center; line-height: 1; white-space: nowrap; }
+  #brand .sq { display: block; background: #FF4F1A; }
+  #brand .lai { color: #FF7A4D; }
+  #brand .kb { display: flex; gap: 7px; }
+  #brand .kb i { display: block; border: 2px solid #10201A; }
+  #brand .epi { font-family: var(--mono); font-weight: 800; line-height: 1; color: #FFE066; border: 3px solid #FFE066; border-radius: 6px; }
+  #who { position: absolute; image-rendering: pixelated; filter: drop-shadow(0 10px 0 rgba(0,0,0,.25)); }
 </style>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute">
+  <!-- 粉笔颗粒：用噪声把笔画打出细小的缺口（太重了缩略图会发灰，2026-10-02 调过） -->
+  <filter id="chalk" x="-5%" y="-10%" width="110%" height="120%">
+    <feTurbulence type="fractalNoise" baseFrequency="1.1" numOctaves="2" seed="7" result="n"/>
+    <feColorMatrix in="n" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -1.3 1.65" result="m"/>
+    <feComposite in="SourceGraphic" in2="m" operator="in"/>
+  </filter>
+</svg>
 <div id="stage">
-  <img id="bgImg" src="../../素材/背景图库/04_桌游_室内.webp" alt="">
-  <div id="bgTint"></div>
-  <div id="spot"></div>
-
-  <div id="receipt">
-    <div id="receiptShadow"></div>
-    <div id="paper">
-      <canvas id="paperGrain" width="960" height="1000"></canvas>
-      <div id="content">
-        <div class="head">
-          <div class="series"><span class="sq"></span>原<span class="lai">LAI</span>如此</div>
-          <div class="headR">
-            <span class="kb"><i style="background:var(--pink)"></i><i style="background:var(--yellow)"></i><i style="background:var(--blue)"></i><i style="background:var(--kred)"></i></span>
-            <div class="epi" id="epi">#NN</div>
-          </div>
-        </div>
-        <div class="rule double" id="dbl"></div>
-        <div id="title">
-          <div class="t1" id="t1"></div>
-          <div class="t2" id="t2"></div>
-        </div>
-        <div class="rule" id="dash"></div>
-        <div class="sub" id="sub"></div>
-      </div>
-      <div id="curl"></div>
-      <div id="slotShade"></div>
-    </div>
-  </div>
-
-  <div id="floor"></div>
-  <div id="ryoShadow"></div>
-  <img id="ryo" src="../../素材/角色/大肥鱼像素素材包/素材/动作帧/reach_m2/00.png" alt="">
-  <canvas class="px" id="qmark"></canvas>
+  <canvas class="full" id="dust" width="1920" height="1080"></canvas>
+  <div class="smudge" id="sm1"></div>
+  <div class="smudge" id="sm2"></div>
+  <div id="brand"><div class="series"><span class="sq"></span>原<span class="lai">LAI</span>如此</div>
+    <span class="kb"><i style="background:#F2A0BD"></i><i style="background:#F6C945"></i><i style="background:#4A6FD0"></i><i style="background:#E2463F"></i></span>
+    <div class="epi" id="epi">#NN</div></div>
+  <img id="who" src="sprite.png" alt="">
+  <div id="tray"></div>
+  <div class="stick" id="st1" style="width:120px;background:#F4F2EA"></div>
+  <div class="stick" id="st2" style="width:86px;background:#F6D46B"></div>
+  <div class="stick" id="st3" style="width:64px;background:#FF8A5C"></div>
 </div>
 
 <script>
+// hand.js 要在加载时拿到 ENG（W / H / E / EP / ctx）：给它一个最小的静态外壳，所有笔画直接画完（封面 = 写完那一刻）
 (function () {
   'use strict';
   window.DURATION = 1;
-  window.__READY__ = false;   // render.py waits until layout below has measured the real fonts
-  // Defaults = the #01 cover (山田凉). make_cover.py → window.__DATA__ = the presenter's cover overrides
-  // (scripts/epcommon.py PRESENTERS[..].cover) under 封面/cover.json; object keys (bg, spot, q, shadow, floor) merge
-  // one level deep, so {"q": {"on": false}} only switches the question mark off.
-  //   number: 2            → "#02" on the receipt
-  //   t1: "Token"          big line (auto-shrinks to fit the receipt)
-  //   t2: "是什么？"        second line; a trailing ？/? is coloured orange
-  //   subHTML: '<span class="hl">一句话</span>花了多少钱<span class="o">？</span>'
-  //            .hl = yellow highlighter, .o = orange, .qm = tight CJK quote mark
+  window.__READY__ = false;
+  const IN = window.__DATA__ || {};
+  const stage = document.getElementById('stage');
+  const lin = u => u;
+  window.ENG = {
+    W: (IN.canvas || [1920])[0], H: 1080, E: { lin, sine: lin }, EP: { number: IN.number || 0 },
+    ctx: () => ({ root: stage, sid: 'cover', S: null, T: (el, init, fx) => ({ to() { if (fx) fx({ k: 1 }); return this; } }), cue: () => {} }),
+  };
+})();
+</script>
+<script src="_handdata.js"></script>
+<script src="../../skill/yuanlai-ruci-episode/assets/engine-template/hand.js"></script>
+<script>
+(function () {
+  'use strict';
+  // make_cover.py -> window.__DATA__ = 封面/cover.json（去掉 sprite / eyes / fx）+ number + 描边后 sprite 的 frame / footRow
+  //   + 这一个比例的版面（make_cover.py 的 CHALK_LAYOUT["16x9" | "4x3"]，cover.json 里同名的键可以覆盖）
+  //   t1: "深度思考"            第一行（本期最核心、观众会搜的词），粉笔黄大字，下面一道白粉笔波浪线
+  //   t2: "AI 在想什么？"        第二行，白粉笔，结尾的 ？/? 用橙色粉笔
+  //   只有这两行：2026-10-03 封面协定，最下面那行小字（sub）删掉，详细信息写进标题
   const DEF = {
-    number: 1, t1: 'API', t2: '是什么？',
-    subHTML: '<span class="hl"><span class="qm o1">“</span>已接入 DeepSeek<span class="qm c">”</span></span>接的是什么<span class="o">？</span>',
-    // background: cover-fit the image, then zoom by `scale` around focus point (fx, fy) in 0..1 of the image
-    bg: { scale: 1.0, fx: .5, fy: .5, opacity: .36, blur: 8 },
-    spot: { x: 500, y: 600, w: 760, h: 820, a: .16 },
-    // receipt
-    rx: 726, rw: 904, rh: 946, rtop: -14, rot: -1.2, pad: 54,
-    headGap: 20, t1px: 456, t1lh: .84, t1ls: -.005, t1ml: -16, t1mt: 12,
-    t2px: 232, t2mt: 4, t2ml: -8, dashMt: 24, subpx: 52, subMt: 20,
-    // the presenter (sprite = 封面 sprite, e.g. reach_m2/00.png of her frames): integer nearest-neighbour `scale`,
-    // never mirrored; ryoX = left edge of the 64 px frame (the name is historic: it is the x of any presenter),
-    // foot = screen y of her soles (frame row footRow), frame = sprite size in px
-    scale: 11, ryoX: 184, foot: 908, footRow: 62, frame: [64, 64], outline: ['#141414', '#EDEAE3'],
-    // cast shadow / warm floor glow under her, in sprite px relative to (ryoX, foot)
-    shadow: { x: 6, w: 52, y: -2, h: 8 }, floor: { x: -4, w: 72, y: -7, h: 16 },
-    // pixel question mark on the same grid as the sprite: x / y in screen px, or sx / sy in sprite px from the frame's
-    // top-left (sx / sy win when given, so the mark follows scale / ryoX; #01: x 591, y 138 = sx 37, sy -8)
-    q: { on: true, x: 591, y: 138, fill: '#F6C945' },
+    number: 7, t1: '深度思考', t2: 'AI 在想什么？',
+    canvas: [1920, 1080],
+    // 标题块：左边 x、右边界（字太长自动缩小）、在 [btop, bbot] 这段高度里上下居中（放不下两行一起缩小）
+    bx: 730, bxr: 1800, btop: 150, bbot: 930,
+    t1px: 380, t2px: 260, gap1: 34,
+    pen: 0.1,                               // 笔宽 / 字号（视频 0.07；粉笔要粗一点，缩到信息流也看得清）
+    colors: { t1: '#FFE066', text: '#FBFAF4', q: '#FF7A4D', ul: '#FBFAF4' },
+    ul: { on: true, w: 14, gap: 22 },       // t1 下面的白粉笔波浪线
+    brand: { x: 120, y: 62, px: 46 },
+    // 讲解员：整数倍最近邻放大，不镜像；whoX = 帧（含描边）的左边，foot = 鞋底的屏幕 y（帧的 footRow 行）
+    scale: 9, whoX: 100, foot: 1012, footRow: 64, frame: [68, 68],
+    tray: 1016,                             // 粉笔槽顶边 y
   };
   const IN = window.__DATA__ || {};
   const D = Object.assign({}, DEF, IN);
@@ -158,140 +102,90 @@
     if (a && b && typeof a === 'object' && typeof b === 'object' && !Array.isArray(a) && !Array.isArray(b)) D[k] = Object.assign({}, a, b);
   }
   window.__D__ = D;
+  const $ = id => document.getElementById(id), px = v => v + 'px';
+  const W = D.canvas[0];
 
-  function mulberry32(a) { return function () { a |= 0; a = a + 0x6D2B79F5 | 0; let t = Math.imul(a ^ a >>> 15, 1 | a); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
-  const $ = (id) => document.getElementById(id);
-  const px = (v) => v + 'px';
-  //   plain: '#FFFFFF'     solid page colour instead of the background photo (make_cover.py then needs no bg_file)
-  if (D.plain) { document.body.classList.add('plain'); document.body.style.setProperty('--plainBg', D.plain); }
+  // ---- page width = this ratio's canvas (the viewport stays 1920; make_cover.py keeps the left W px)
+  document.documentElement.style.width = document.body.style.width = px(W);
+  $('stage').style.width = px(W);
+  $('dust').width = W;
+  Object.assign($('sm1').style, { left: px(W * 0.51), top: '120px', width: px(W * 0.4), height: '260px' });
+  Object.assign($('sm2').style, { left: px(W * 0.615), top: '640px', width: px(W * 0.29), height: '200px' });
 
-  // ---- background framing (cover-fit + zoom around a focus point; set after the image has decoded)
-  const b = $('bgImg');
-  b.style.opacity = D.bg.opacity; b.style.filter = `blur(${D.bg.blur}px)`;
-  function frameBg() {
-    const iw = b.naturalWidth || 1920, ih = b.naturalHeight || 1080;
-    const k = Math.max(1920 / iw, 1080 / ih) * (D.bg.scale || 1);
-    const w = iw * k, h = ih * k;
-    const left = Math.min(0, Math.max(1920 - w, 960 - D.bg.fx * w));
-    const top = Math.min(0, Math.max(1080 - h, 540 - D.bg.fy * h));
-    b.style.width = px(w); b.style.height = px(h); b.style.left = px(left); b.style.top = px(top);
-  }
-  const sp = $('spot');
-  sp.style.left = px(D.spot.x - D.spot.w / 2); sp.style.top = px(D.spot.y - D.spot.h / 2);
-  sp.style.width = px(D.spot.w); sp.style.height = px(D.spot.h);
-  sp.style.background = `radial-gradient(closest-side, rgba(255,214,170,${D.spot.a}), rgba(255,214,170,${D.spot.a * .45}) 55%, rgba(255,214,170,0))`;
+  // ---- brand
+  const br = $('brand'), B = D.brand, u = B.px;
+  br.style.left = px(B.x); br.style.top = px(B.y); br.style.gap = px(Math.round(u * .42));
+  const se = br.querySelector('.series'); se.style.fontSize = px(u);
+  const sq = se.querySelector('.sq'); sq.style.width = sq.style.height = px(Math.round(u * .52)); sq.style.marginRight = px(Math.round(u * .34));
+  br.querySelectorAll('.kb i').forEach(i => { i.style.width = px(Math.round(u * .78)); i.style.height = px(Math.round(u * .3)); i.style.borderRadius = px(Math.round(u * .15)); });
+  const ep = $('epi'); ep.textContent = '#' + String(D.number).padStart(2, '0');
+  ep.style.fontSize = px(Math.round(u * .86)); ep.style.padding = `${Math.round(u * .13)}px ${Math.round(u * .26)}px ${Math.round(u * .15)}px`;
 
-  // ---- receipt geometry + type sizes
-  const r = $('receipt');
-  r.style.left = px(D.rx); r.style.top = px(D.rtop); r.style.width = px(D.rw); r.style.height = px(D.rh);
-  r.style.transform = `rotate(${D.rot}deg)`;
-  const c = $('content'); c.style.left = px(D.pad); c.style.right = px(D.pad);
-  $('dbl').style.marginTop = px(D.headGap);
-  const t1 = $('t1');
-  t1.style.fontSize = px(D.t1px); t1.style.lineHeight = D.t1lh; t1.style.letterSpacing = D.t1ls + 'em';
-  t1.style.marginLeft = px(D.t1ml); t1.style.marginTop = px(D.t1mt);
-  const t2 = $('t2');
-  t2.style.fontSize = px(D.t2px); t2.style.lineHeight = 1; t2.style.marginTop = px(D.t2mt); t2.style.marginLeft = px(D.t2ml);
-  $('dash').style.marginTop = px(D.dashMt);
-  const sub = $('sub'); sub.style.fontSize = px(D.subpx); sub.style.lineHeight = 1.2; sub.style.marginTop = px(D.subMt);
-  $('epi').textContent = '#' + String(D.number).padStart(2, '0');
-  t1.textContent = D.t1;
-  const m2 = /^(.*?)([？?])$/.exec(D.t2 || '');
-  t2.innerHTML = '';
-  t2.append(m2 ? m2[1] : (D.t2 || ''));
-  if (m2) { const q = document.createElement('span'); q.className = 'q'; q.textContent = m2[2]; t2.append(q); }
-  if (D.subHTML) sub.innerHTML = D.subHTML;
+  // ---- board: chalk dust (fixed seed), tray, sticks (right part of the tray)
+  const g = $('dust').getContext('2d');
+  let s = 12345; const rnd = () => (s = (s * 16807) % 2147483647) / 2147483647;
+  for (let i = 0; i < 2600; i++) { g.fillStyle = `rgba(255,255,255,${(0.02 + rnd() * 0.07).toFixed(3)})`; const r = rnd() * 2.2 + .4; g.beginPath(); g.arc(rnd() * W, rnd() * (D.tray - 6), r, 0, 7); g.fill(); }
+  $('tray').style.top = px(D.tray);
+  [['st1', 710], ['st2', 560], ['st3', 450]].forEach(([id, fromRight]) => { const el = $(id); el.style.top = px(D.tray - 16); el.style.left = px(W - fromRight); });
 
-  // Shrink a line until it fits the receipt's content width (a 3-letter "API" at 456 px fits; "Token" won't).
-  function fit(el, maxPx) {
-    const avail = D.rw - 2 * D.pad - (parseFloat(el.style.marginLeft) || 0);
-    const textW = () => { el.style.width = 'max-content'; const w = el.offsetWidth; el.style.width = ''; return w; };
-    let size = maxPx;
-    el.style.fontSize = px(size);
-    while (textW() > avail && size > 40) { size -= 4; el.style.fontSize = px(size); }
-    return size;
+  // ---- presenter (cream-outlined frame from make_cover.py)
+  const S = D.scale, who = $('who');
+  who.style.width = px(D.frame[0] * S); who.style.height = px(D.frame[1] * S);
+  who.style.left = px(D.whoX); who.style.top = px(D.foot - D.footRow * S);
+
+  // ---- chalk title block
+  function splitQ(t) { const m = /^(.*?)([？?])$/.exec(t || ''); return m ? [m[1], m[2]] : [t || '', '']; }
+  function build(k) {
+    if (!ENG.HAND || !ENG.HAND.ready) throw new Error('handdata.js 没有笔画数据');
+    const c = ENG.ctx({}), avail = D.bxr - D.bx, lines = [], Cc = D.colors;
+    function line(text, maxPx, key, col, extra) {
+      const [body, q] = splitQ(text);
+      const w1 = ENG.handWidth(body + q, 1), size = (w1 > 0 ? Math.min(maxPx, avail / w1) : maxPx) * k;
+      const grp = c.handGroup(); grp.setAttribute('filter', 'url(#chalk)');
+      const pen = D.pen * size;
+      const it = c.hand({ text: body, x: D.bx, y: 0, size, at: 0, pen, color: col, parent: grp, seed: key + body, cue: false });
+      let box = [it.x0, it.y0, it.x1, it.y1];
+      if (q) {
+        const qi = c.hand({ text: q, x: D.bx + ENG.handWidth(body, size), y: 0, size, at: 0, pen, color: Cc.q, parent: grp, seed: key + 'q', cue: false });
+        box = [Math.min(box[0], qi.x0), Math.min(box[1], qi.y0), Math.max(box[2], qi.x1), Math.max(box[3], qi.y1)];
+      }
+      const L = { g: grp, box, item: it, size, body };
+      if (extra) extra(L, c);
+      lines.push(L);
+      return L;
+    }
+    line(D.t1, D.t1px, 't1', Cc.t1, (L, c) => {
+      if (!D.ul || !D.ul.on) return;
+      const b = L.box, y = b[3] + D.ul.gap * k;
+      c.handUnderline({ x0: b[0] - 6, x1: b[2] + 10, y, at: 0, dur: .4, w: D.ul.w * k, color: Cc.ul, parent: L.g });
+      L.box = [b[0], b[1], b[2] + 10, y + D.ul.w * k];
+    });
+    if (D.t2) line(D.t2, D.t2px, 't2', Cc.text);
+    const gaps = [0, D.gap1 * k], hs = lines.map(L => L.box[3] - L.box[1]);
+    const total = hs.reduce((a, h) => a + h, 0) + gaps.slice(1, lines.length).reduce((a, x) => a + x, 0);
+    return { lines, gaps, hs, total };
   }
   function layout() {
-    frameBg();
-    const s1 = fit(t1, D.t1px);
-    if (s1 < D.t1px) t1.style.marginTop = px(D.t1mt + (D.t1px - s1) * 0.25);   // keep the block visually centred
-    fit(t2, D.t2px);
-    fit(sub, D.subpx);
-    // A shrunken title leaves blank paper at the bottom: tear the receipt off shorter instead.
-    const bottom = c.offsetTop + c.offsetHeight + 84;
-    if (bottom < D.rh) r.style.height = px(Math.max(620, bottom));
+    let k = 1, r = build(k);
+    for (let n = 0; n < 6 && r.total > D.bbot - D.btop; n++) {   // two lines too tall: shrink them together
+      r.lines.forEach(L => L.g.remove());
+      k *= (D.bbot - D.btop) / r.total * 0.99;
+      r = build(k);
+    }
+    let y = D.btop + Math.max(0, (D.bbot - D.btop - r.total) / 2);
+    const placed = [];
+    r.lines.forEach((L, i) => {
+      if (i) y += r.gaps[i];
+      const dy = y - L.box[1];
+      L.g.setAttribute('transform', `translate(0 ${dy.toFixed(1)})`);
+      placed.push([L.box[0], L.box[1] + dy, L.box[2], L.box[3] + dy]);
+      y += r.hs[i];
+    });
+    window.__BOXES__ = placed;              // ink boxes of the lines (for debugging the layout)
+    if (ENG.handMissing && ENG.handMissing.length) console.error('没有笔画数据：' + ENG.handMissing.join(''));
   }
-  const decoded = (im) => (im.decode ? im.decode().catch(() => {}) : Promise.resolve());
-  Promise.all([document.fonts.ready, decoded(b), decoded($('ryo'))]).then(() => { layout(); window.__READY__ = true; });
-
-  // ---- paper grain (seeded, static)
-  const cv = $('paperGrain'), cx = cv.getContext('2d');
-  const img = cx.createImageData(cv.width, cv.height), d = img.data, rnd = mulberry32(7);
-  for (let i = 0; i < d.length; i += 4) { const v = rnd(); d[i] = d[i + 1] = d[i + 2] = v < .5 ? 60 : 255; d[i + 3] = Math.round(Math.abs(v - .5) * 2 * 16); }
-  cx.putImageData(img, 0, 0);
-
-  // ---- torn zig-zag bottom edge
-  const paper = $('paper'), shadow = $('receiptShadow');
-  const PW = D.rw, TW = 28, TH = 14, n = Math.round(PW / TW), tw = PW / n;
-  const pts = ['0 0', '100% 0', `100% calc(100% - ${TH}px)`];
-  for (let i = n; i >= 0; i--) pts.push(`${(i * tw).toFixed(2)}px calc(100% - ${i % 2 ? 0 : TH}px)`);
-  pts.push(`0 calc(100% - ${TH}px)`);
-  paper.style.clipPath = shadow.style.clipPath = `polygon(${pts.join(',')})`;
-
-  // ---- the presenter: integer scale, 1-sprite-pixel ink outline + 1-sprite-pixel paper outline (sticker style)
-  const S = D.scale, FX = D.ryoX, FOOT = D.foot;
-  const ryo = $('ryo');
-  ryo.style.width = px(D.frame[0] * S); ryo.style.height = px(D.frame[1] * S);
-  ryo.style.left = px(FX);
-  ryo.style.top = px(FOOT - D.footRow * S);    // shoe soles sit on sprite row footRow (62)
-  const ring = (col) => `drop-shadow(${S}px 0 0 ${col}) drop-shadow(-${S}px 0 0 ${col}) drop-shadow(0 ${S}px 0 ${col}) drop-shadow(0 -${S}px 0 ${col})`;
-  // plus the same soft cast shadow the receipt has (light from upper-left), so both sit in one space
-  ryo.style.filter = D.outline.map(ring).join(' ') + (D.plain ? ' drop-shadow(8px 14px 16px rgba(0,0,0,.2))' : ' drop-shadow(10px 20px 18px rgba(0,0,0,.55))');
-  const sh = $('ryoShadow');
-  sh.style.left = px(FX + D.shadow.x * S); sh.style.width = px(D.shadow.w * S);
-  sh.style.top = px(FOOT + D.shadow.y * S); sh.style.height = px(D.shadow.h * S);
-  const fl = $('floor');
-  fl.style.left = px(FX + D.floor.x * S); fl.style.width = px(D.floor.w * S);
-  fl.style.top = px(FOOT + D.floor.y * S); fl.style.height = px(D.floor.h * S);
-
-  // ---- pixel "?" on the sprite grid (ink ring, then paper ring, same as the presenter)
-  const Q = [
-    '.####.',
-    '##..##',
-    '....##',
-    '...##.',
-    '..##..',
-    '..##..',
-    '......',
-    '..##..',
-    '..##..',
-  ];
-  const qc = $('qmark');
-  if (D.q && D.q.on) {
-    const rings = D.outline.length, h = Q.length, w = Q[0].length, P = rings;
-    qc.width = w + 2 * P; qc.height = h + 2 * P;
-    const g = qc.getContext('2d');
-    let mask = Array.from({ length: qc.height }, (_, y) => Array.from({ length: qc.width }, (_, x) => {
-      const r0 = y - P, k0 = x - P; return r0 >= 0 && r0 < h && k0 >= 0 && k0 < w && Q[r0][k0] === '#';
-    }));
-    const layers = [mask];
-    for (let i = 0; i < rings; i++) {
-      const m = layers[layers.length - 1];
-      layers.push(m.map((row, y) => row.map((_, x) => {
-        for (let dy = -1; dy <= 1; dy++) for (let dx = -1; dx <= 1; dx++) { const yy = y + dy, xx = x + dx; if (m[yy] && m[yy][xx]) return true; }
-        return false;
-      })));
-    }
-    for (let i = rings; i >= 1; i--) {           // outermost ring first
-      g.fillStyle = D.outline[i - 1];
-      layers[i].forEach((row, y) => row.forEach((on, x) => { if (on) g.fillRect(x, y, 1, 1); }));
-    }
-    g.fillStyle = D.q.fill;
-    layers[0].forEach((row, y) => row.forEach((on, x) => { if (on) g.fillRect(x, y, 1, 1); }));
-    qc.style.width = px(qc.width * S); qc.style.height = px(qc.height * S);
-    qc.style.left = px(D.q.sx != null ? FX + D.q.sx * S : D.q.x);
-    qc.style.top = px(D.q.sy != null ? FOOT - D.footRow * S + D.q.sy * S : D.q.y);
-  } else { qc.style.display = 'none'; }
+  const dec = im => (im.decode ? im.decode().catch(() => {}) : Promise.resolve());
+  Promise.all([document.fonts.ready, dec(who)]).then(() => { layout(); window.__READY__ = true; });
 })();
 </script>
 </body>

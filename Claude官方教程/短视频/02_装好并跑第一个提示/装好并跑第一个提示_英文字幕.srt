@@ -1,0 +1,123 @@
+1
+00:00:00,000 --> 00:00:01,041
+Installing Claude Code takes
+
+2
+00:00:01,061 --> 00:00:02,980
+one command on Windows, Mac and Linux.
+
+3
+00:00:03,000 --> 00:00:04,227
+On Mac and Linux it's a curl command;
+
+4
+00:00:04,247 --> 00:00:05,780
+on Windows, PowerShell.
+
+5
+00:00:05,800 --> 00:00:08,201
+A prompt starting with PS is PowerShell;
+
+6
+00:00:08,221 --> 00:00:10,460
+without it, it's CMD. Don't mix them up.
+
+7
+00:00:10,480 --> 00:00:12,683
+Homebrew and winget work too,
+
+8
+00:00:12,703 --> 00:00:14,710
+but they don't auto-update by default.
+
+9
+00:00:14,730 --> 00:00:17,038
+Open a new terminal and run claude --version.
+
+10
+00:00:17,058 --> 00:00:19,410
+If a version number shows up, you're set.
+
+11
+00:00:19,430 --> 00:00:21,542
+Run claude in your project folder.
+
+12
+00:00:21,562 --> 00:00:23,310
+The first launch asks you to sign in.
+
+13
+00:00:23,330 --> 00:00:24,829
+You can sign in with a Pro,
+
+14
+00:00:24,849 --> 00:00:27,830
+Max, Team or Enterprise account, or use an API key.
+
+15
+00:00:27,850 --> 00:00:30,105
+It can access the folder you launch it in and every subfolder;
+
+16
+00:00:30,125 --> 00:00:32,780
+anything outside needs your permission.
+
+17
+00:00:32,800 --> 00:00:34,821
+Prefer not to use the terminal? There are editor plugins,
+
+18
+00:00:34,841 --> 00:00:36,750
+a desktop app, and a web version.
+
+19
+00:00:36,770 --> 00:00:37,968
+Still, the terminal has the fullest feature set,
+
+20
+00:00:37,988 --> 00:00:39,830
+and some features exist only there.
+
+21
+00:00:39,850 --> 00:00:41,470
+For your first prompt, don't let it edit yet.
+
+22
+00:00:41,490 --> 00:00:43,880
+Press Shift+Tab until the status bar shows plan mode.
+
+23
+00:00:43,900 --> 00:00:45,830
+Plan mode researches and proposes without
+
+24
+00:00:45,850 --> 00:00:48,260
+editing your source, then hands back a plan.
+
+25
+00:00:48,280 --> 00:00:49,325
+Once the plan is up,
+
+26
+00:00:49,345 --> 00:00:51,980
+press Ctrl+G to edit it before you approve.
+
+27
+00:00:52,000 --> 00:00:54,434
+The official example: dark mode across the whole app,
+
+28
+00:00:54,454 --> 00:00:55,907
+a toggle in the header,
+
+29
+00:00:55,927 --> 00:00:58,270
+and a good contrast color.
+
+30
+00:00:58,290 --> 00:01:00,241
+Installing it takes one command.
+
+31
+00:01:00,261 --> 00:01:02,470
+Using it well starts with Shift+Tab.

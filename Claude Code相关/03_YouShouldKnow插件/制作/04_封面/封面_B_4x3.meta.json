@@ -1,0 +1,68 @@
+{
+ "size": [
+  1440,
+  1080
+ ],
+ "scheme": "orange",
+ "line1": "You should know",
+ "line2": "官方新插件",
+ "font_size": 154,
+ "text_boxes": {
+  "t1": [
+   84,
+   100,
+   1376.375,
+   254
+  ],
+  "t2": [
+   84,
+   266,
+   846.3125,
+   420
+  ]
+ },
+ "safe_x": [
+  0,
+  1440
+ ],
+ "colors": {
+  "bg": "#D97757",
+  "t1": "#FAF9F5",
+  "t2": "#141413"
+ },
+ "mascot": {
+  "pose": "float3",
+  "flip": false,
+  "eyes": null,
+  "cell": 12,
+  "origin": [
+   756,
+   674
+  ],
+  "bbox": [
+   864,
+   686,
+   1152,
+   950
+  ],
+  "width_frac": 0.2,
+  "body_width_frac": 0.2,
+  "shifted": [
+   0,
+   0
+  ]
+ },
+ "background": {
+  "mode": "pixel",
+  "seed": 1,
+  "scale": 3.0,
+  "anchor": [
+   0.72,
+   0.64
+  ],
+  "shift": [
+   0.0,
+   0.0
+  ]
+ }
+}

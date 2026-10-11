@@ -1,0 +1,307 @@
+1
+00:00:05,000 --> 00:00:08,540
+Build a carrier so an egg survives a 32-metre drop.
+
+2
+00:00:08,900 --> 00:00:12,480
+Anthropic's own demo. Two teams start at the same time.
+
+3
+00:00:12,500 --> 00:00:17,150
+Left: Opus 5.5 alone. Right: Opus 5.5 plus ten Haiku 5.5 subagents.
+
+4
+00:00:17,700 --> 00:00:22,680
+Right: 58 seconds, 86 designs, $0.14.
+
+5
+00:00:28,700 --> 00:00:33,350
+Left made it too: 3:37, 25 designs, $0.47.
+
+6
+00:00:34,500 --> 00:00:37,390
+Same goal: nearly four times faster and about 70% cheaper.
+
+7
+00:00:37,410 --> 00:00:40,720
+But it is a single task Anthropic chose. Don't read it as a general result.
+
+8
+00:00:40,870 --> 00:00:44,120
+This video covers two new models: price, and capability.
+
+9
+00:00:44,140 --> 00:00:46,710
+Sonnet 5.5 shipped in late September.
+
+10
+00:00:46,760 --> 00:00:49,760
+Haiku 5.5 followed in early October.
+
+11
+00:00:49,910 --> 00:00:54,890
+Price first. The official post says Haiku 5.5 costs about 75% less on average.
+
+12
+00:00:54,910 --> 00:00:57,650
+The comparison is with the previous Haiku 4.5.
+
+13
+00:00:57,800 --> 00:01:01,100
+The docs price four models per million tokens, input and output separately:
+
+14
+00:01:01,120 --> 00:01:05,220
+Fable 5.1: $10 in, $50 out.
+
+15
+00:01:05,240 --> 00:01:08,400
+Opus 5.5: $4 in, $20 out.
+
+16
+00:01:08,420 --> 00:01:12,630
+Sonnet 5.5: $2 in, $10 out.
+
+17
+00:01:12,650 --> 00:01:16,500
+Haiku 5.5: $0.10 in, $0.50 out.
+
+18
+00:01:16,520 --> 00:01:20,180
+Haiku 5.5 is exactly 20 times cheaper than Sonnet 5.5.
+
+19
+00:01:20,200 --> 00:01:23,950
+Run 1M tokens in and 200K out, and the bill looks like this:
+
+20
+00:01:23,970 --> 00:01:28,490
+Haiku 5.5: $0.20. Sonnet 5.5: $4.
+
+21
+00:01:28,510 --> 00:01:32,090
+Opus 5.5: $8. Fable 5.1: $20.
+
+22
+00:01:32,110 --> 00:01:36,230
+At list price, no discounts, every prompt under 100K tokens.
+
+23
+00:01:36,380 --> 00:01:40,140
+Now Sonnet 5.5. Same price as Sonnet 5. No increase.
+
+24
+00:01:40,160 --> 00:01:43,230
+Sonnet 5 was due a September price rise. Anthropic cancelled it.
+
+25
+00:01:43,250 --> 00:01:46,380
+Anthropic says the same work costs up to 30% less.
+
+26
+00:01:46,400 --> 00:01:49,890
+The rate did not drop. It simply uses far fewer tokens.
+
+27
+00:01:49,910 --> 00:01:53,550
+It is faster too: output is 30% or more faster than Sonnet 5.
+
+28
+00:01:53,700 --> 00:01:58,090
+Early October brought another cut: Sonnet 5.5 cache reads are half price.
+
+29
+00:01:58,110 --> 00:02:01,730
+From $0.20 to $0.10 per million tokens.
+
+30
+00:02:01,750 --> 00:02:05,960
+Anthropic says most agentic tasks now cost about 20% less.
+
+31
+00:02:06,110 --> 00:02:09,480
+Back to Haiku 5.5. Pricing has two tiers, set by prompt length.
+
+32
+00:02:09,500 --> 00:02:13,630
+Prompts up to 100K tokens: $0.10 in, $0.50 out.
+
+33
+00:02:13,650 --> 00:02:16,850
+Over 100K: $0.50 in, $2.50 out.
+
+34
+00:02:16,870 --> 00:02:20,590
+The previous Haiku 4.5 charged $1 in, $5 out.
+
+35
+00:02:20,740 --> 00:02:23,580
+Short prompts: 90% cheaper. Long prompts: 50% cheaper.
+
+36
+00:02:23,600 --> 00:02:26,790
+Nine in ten Haiku 4.5 requests were under 100K tokens.
+
+37
+00:02:26,810 --> 00:02:29,280
+Averaged out, about 75% cheaper.
+
+38
+00:02:29,300 --> 00:02:32,470
+That figure already counts the extra tokens from the new tokenizer.
+
+39
+00:02:32,490 --> 00:02:35,440
+Anthropic gives the result, not the full calculation.
+
+40
+00:02:35,590 --> 00:02:38,170
+Subscribers also get a monthly API credit.
+
+41
+00:02:38,190 --> 00:02:42,720
+Max 5x: $100. Max 20x: $200.
+
+42
+00:02:42,740 --> 00:02:45,490
+Team: up to $500, pooled across the team.
+
+43
+00:02:45,510 --> 00:02:49,060
+It works on any model. Anthropic does not give the exact timing.
+
+44
+00:02:49,210 --> 00:02:51,440
+Now capability. Sonnet 5.5 first.
+
+45
+00:02:51,460 --> 00:02:55,760
+Terminal-Bench 4.0, terminal coding: 70.6%.
+
+46
+00:02:55,780 --> 00:03:00,410
+Sonnet 5 scored 10.3%. Opus 5.5 scored 66.4%.
+
+47
+00:03:00,430 --> 00:03:03,380
+Opus's score is its best one, at Xhigh effort.
+
+48
+00:03:03,400 --> 00:03:09,550
+GDPval-AA, knowledge work: 1844 against 1846. Two points apart.
+
+49
+00:03:09,570 --> 00:03:15,500
+OSWorld 2.1, computer use: 80.1% against 81.8%.
+
+50
+00:03:15,520 --> 00:03:21,190
+Chartography, reading charts: 61.6%, up from 15.6% on Sonnet 5.
+
+51
+00:03:21,240 --> 00:03:25,620
+It is also the first Sonnet to beat Pokémon Red from screenshots alone.
+
+52
+00:03:25,770 --> 00:03:29,780
+Opus 5.5 leads on seven of eight, mostly by two or three points.
+
+53
+00:03:29,800 --> 00:03:34,170
+Anthropic says Opus 5.5 is clearly stronger on open-ended work needing sustained judgment.
+
+54
+00:03:34,190 --> 00:03:37,040
+All of these scores are published by Anthropic itself.
+
+55
+00:03:37,190 --> 00:03:41,230
+Now Haiku 5.5. Anthropic positions it for high-volume, cost-sensitive work.
+
+56
+00:03:41,250 --> 00:03:45,140
+Summaries, compaction, database queries and classification.
+
+57
+00:03:45,160 --> 00:03:48,580
+It also pairs with Opus or Sonnet as a coding subagent.
+
+58
+00:03:48,600 --> 00:03:51,970
+It is fast enough for live customer support and browser use.
+
+59
+00:03:52,120 --> 00:03:57,220
+GDPval-AA: 1620, up from 735 on Haiku 4.5.
+
+60
+00:03:57,240 --> 00:04:03,380
+OSWorld offline subset: 72.4%, up from 15.7%.
+
+61
+00:04:03,400 --> 00:04:08,350
+Terminal-Bench: 39.2%, up from 0.0%.
+
+62
+00:04:08,370 --> 00:04:12,280
+In Anthropic's table, GPT-6 Luna has six scores. Haiku 5.5 leads on all six.
+
+63
+00:04:12,300 --> 00:04:18,910
+But on Terminal-Bench it trails Sonnet 5.5 by 31 points: 39.2% against 70.6%.
+
+64
+00:04:19,060 --> 00:04:23,460
+Anthropic says Sonnet and Opus remain the better choice for complex agentic coding.
+
+65
+00:04:23,610 --> 00:04:26,420
+It is the first Haiku with adjustable effort levels.
+
+66
+00:04:26,440 --> 00:04:29,560
+Anthropic also plots score against cost at every effort level.
+
+67
+00:04:29,580 --> 00:04:33,120
+In all three charts, the top score belongs to Sonnet 5.5.
+
+68
+00:04:33,270 --> 00:04:37,830
+The official post says Haiku 5.5 is already available in Claude Code.
+
+69
+00:04:37,980 --> 00:04:41,370
+The egg-drop demo at the start shows it working as a subagent.
+
+70
+00:04:43,980 --> 00:04:46,070
+How to choose? Start with what the docs say.
+
+71
+00:04:46,090 --> 00:04:48,930
+If you are unsure, the docs suggest starting with Opus 5.5.
+
+72
+00:04:48,950 --> 00:04:50,960
+For speed and savings: Sonnet 5.5,
+
+73
+00:04:50,980 --> 00:04:54,010
+'the best combination of speed and intelligence'.
+
+74
+00:04:54,030 --> 00:04:57,570
+High-volume, simple, latency-sensitive work goes to Haiku 5.5.
+
+75
+00:04:57,590 --> 00:05:02,040
+All four take 1M tokens of context, but Haiku bills the higher tier above 100K.
+
+76
+00:05:02,190 --> 00:05:05,250
+Work out what one task costs, then check whether it gets done.
+
+77
+00:05:05,270 --> 00:05:07,560
+A task that fails is expensive, however cheap the model.

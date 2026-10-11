@@ -1,0 +1,16 @@
+{
+ "width": 1080,
+ "height": 2340,
+ "frames": 14216,
+ "want_frames": 14216,
+ "duration": 473.867,
+ "total": 473.873,
+ "lufs": "-16.0",
+ "lra": "1.9",
+ "true_peak": "-3.0",
+ "mouth_best_lag": 0,
+ "mouth_corr": 0.758,
+ "mouth_corr0": 0.758,
+ "subs": 157,
+ "ok": true
+}

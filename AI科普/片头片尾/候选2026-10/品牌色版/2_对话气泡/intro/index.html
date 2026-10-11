@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>悠一 · Intro · 品牌色 2 · 对话气泡</title>
+<link rel="stylesheet" href="../../../../fonts/fonts.css">
+<link rel="stylesheet" href="../../fonts/brand-fonts.css">
+<script src="../../../common/pack.js"></script>
+<script src="../../common/brand.js"></script>
+<style>html, body { margin: 0; overflow: hidden; background: #FAF9F5; }</style>
+</head>
+<body>
+<script>
+(function () {
+  'use strict';
+  /* 品牌色版 2「对话气泡」：> → { } → </> → 神经网络（左右括号收成两端的节点，中间节点弹出、连线、一次前向传播：
+   * 信号从左到右点亮每一层）→ 网络收进芯片，芯片标“LLM”→ 芯片滑到左下，右上冒出对话气泡 → 气泡里三个点跳动
+   * （正在输入，第三个点是橙色原子）→ 两个点变成“悠一”，橙点变成句号 → 气泡和芯片退场，名字移到画面中央，
+   * 下面打出“AI鼓励师”（淡黄荧光笔划过）→ 句号闪一下 → 白。4.8 s。 */
+  const P = window.PACK, B = window.BRAND, { clamp, lerp, prog, E } = P, C = B.C;
+  const RAW = Object.assign({ name: '悠一', role: 'AI鼓励师', endColor: '#FFFFFF' }, window.__DATA__ || {});
+  const NAME = String(RAW.name == null ? '' : RAW.name).trim() || '悠一';
+  const ROLE = String(RAW.role == null ? '' : RAW.role).trim();
+  const END_COLOR = RAW.endColor === 'none' ? 'none' : P.hexOr(RAW.endColor, '#FFFFFF');
+
+  window.DURATION = 4.8;
+  window.__READY__ = false;
+  const { FW, OX, ctx } = P.setup(RAW, C.ivory);
+
+  /* ------------------------------------------------------------ timeline */
+  const T = {
+    chain: Object.assign({}, B.T0, { m3: [9, 9.1], ai: [9, 9.1], pinsIn: 9 }),   // the chain stops at </>; the chip comes from the net
+    toNodes: [0.98, 1.16], nodes: [1.14, 1.34], edges: [1.22, 1.44],
+    fire: [1.46, 1.84],                                 // forward pass: layer 0 lit 1.46, pulses, layer 2 lit 1.80
+    collapse: [1.88, 2.06], body: [1.96, 2.14], pinsIn: 2.08, label: [2.12, 2.22],
+    slide: [2.24, 2.44], bubble: [2.30, 2.50], leave: [2.42, 2.56], dots: [2.52, 3.02], reveal: [3.02, 3.26],
+    dissolve: [3.30, 3.52], centre: [3.34, 3.72], kicker: [3.72, 4.02], blink: [4.10, 4.30], fade: [4.46, 4.78],
+  };
+  const NET = { xs: [-236, 0, 236], ys: [-86, 0, 86], r: 17 };
+  const CHIP_AT = [-250, 130];                          // where the chip slides to when the bubble appears
+  const BUB = { cx: 190, cy: -150, w: 540, h: 214, r: 48 };
+  const NODE_SQ = [0, -17, 0, 17, 34];
+
+  /* ------------------------------------------------------------ net geometry */
+  const sq = (cx, cy, s) => [[cx - s, cy - s], [cx + s, cy - s], [cx + s, cy + s], [cx - s, cy + s], [cx - s, cy - s]];
+  const Mn = { L: B.pair(B.ltL, sq(NET.xs[0], 0, 17)), R: B.pair(B.ltR, sq(NET.xs[2], 0, 17)) };
+  const nodes = []; NET.xs.forEach((x, li) => NET.ys.forEach((y, ni) => nodes.push({ x, y, li, ni, centre: li === 1 && ni === 1, mid: ni === 1 })));
+  const edges = []; for (let li = 0; li < 2; li++) for (let a = 0; a < 3; a++) for (let b = 0; b < 3; b++) edges.push({ li, a, b, x0: NET.xs[li], y0: NET.ys[a], x1: NET.xs[li + 1], y1: NET.ys[b] });
+
+  /* ------------------------------------------------------------ text */
+  const L = { nameSize: 230, inSize: 150, kickSize: 46 };
+  const nameChars = [...NAME];
+  function layout() { ctx.font = `700 ${L.nameSize}px 'Noto Sans SC'`; L.nameW = ctx.measureText(NAME).width; L.adv = nameChars.map((_, i) => ctx.measureText(NAME.slice(0, i + 1)).width); }
+  // name group: centre (cx, cy) and scale k (1 = L.nameSize)
+  function nameGroup(t) {
+    const e = E.inOutCubic(prog(t, T.centre[0], T.centre[1]));
+    const inK = L.inSize / L.nameSize, dotsW = 128;     // the period sits where the third dot was: shift the text left a bit
+    const cx0 = BUB.cx - 34, cy0 = BUB.cy;
+    return { cx: lerp(cx0, 0, e), cy: lerp(cy0, -30, e), k: lerp(inK, 1, e) };
+  }
+  // where the period (orange atom) sits relative to the group centre, in group units
+  const periodOff = () => [L.nameW / 2 + L.nameSize * 0.16, L.nameSize * 0.30];
+
+  /* ------------------------------------------------------------ drawing helpers */
+  function node(x, y, s, fill, strokeW = 5, op = 1) {
+    if (s <= 0.01 || op <= 0.001) return;
+    ctx.save(); ctx.globalAlpha *= op; ctx.translate(x, y); ctx.scale(s, s);
+    ctx.fillStyle = fill; ctx.strokeStyle = C.dark; ctx.lineWidth = strokeW; ctx.beginPath(); ctx.roundRect(-17, -17, 34, 34, 5); ctx.fill(); ctx.stroke(); ctx.restore();
+  }
+  function bubblePath(k) {                              // k: scale from the tail tip
+    const tip = [BUB.cx - BUB.w / 2 + 60, BUB.cy + BUB.h / 2 + 46];
+    ctx.save(); ctx.translate(tip[0], tip[1]); ctx.scale(k, k); ctx.translate(-tip[0], -tip[1]);
+    const x0 = BUB.cx - BUB.w / 2, y0 = BUB.cy - BUB.h / 2, x1 = BUB.cx + BUB.w / 2, y1 = BUB.cy + BUB.h / 2, r = BUB.r;
+    ctx.beginPath();
+    ctx.moveTo(x0 + r, y0); ctx.lineTo(x1 - r, y0); ctx.quadraticCurveTo(x1, y0, x1, y0 + r); ctx.lineTo(x1, y1 - r); ctx.quadraticCurveTo(x1, y1, x1 - r, y1);
+    ctx.lineTo(x0 + 120, y1); ctx.lineTo(tip[0], tip[1]); ctx.lineTo(x0 + 62, y1);        // tail towards the chip (down-left)
+    ctx.lineTo(x0 + r, y1); ctx.quadraticCurveTo(x0, y1, x0, y1 - r); ctx.lineTo(x0, y0 + r); ctx.quadraticCurveTo(x0, y0, x0 + r, y0); ctx.closePath();
+    ctx.restore();
+  }
+
+  let ready = false;
+  function renderAt(t) {
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    ctx.fillStyle = C.ivory; ctx.fillRect(0, 0, FW, 1080);
+    if (!ready) return;
+    const z = B.zoom(t, 4.0);
+    ctx.translate(OX + 960, 540); ctx.scale(z, z);
+
+    /* ---------------- 1. symbol chain up to </> ---------------- */
+    const S = B.chain(t, T.chain);
+    const toN = B.morphEase(prog(t, T.toNodes[0], T.toNodes[1]));
+    if (t < T.toNodes[0]) B.drawChain(ctx, S, { ink: C.dark, atomOp: 1 });
+    else if (t < T.collapse[0]) {
+      // the brackets become the two outer middle nodes, the slash the centre node
+      if (toN < 1) { B.stroke(ctx, B.mix(Mn.L[0], Mn.L[1], toN), lerp(26, 5, toN), C.dark); B.stroke(ctx, B.mix(Mn.R[0], Mn.R[1], toN), lerp(26, 5, toN), C.dark); }
+    }
+
+    /* ---------------- 2. the network ---------------- */
+    const col = E.inCubic(prog(t, T.collapse[0], T.collapse[1]));       // 0..1 contraction into the chip
+    if (t >= T.toNodes[0] && col < 1) {
+      const fireP = prog(t, T.fire[0], T.fire[1]);
+      // edges (draw before nodes)
+      edges.forEach((e, i) => {
+        const g = E.outCubic(prog(t, T.edges[0] + e.li * 0.08 + (e.a * 3 + e.b) * 0.006, T.edges[0] + e.li * 0.08 + (e.a * 3 + e.b) * 0.006 + 0.12));
+        if (g <= 0) return;
+        const x0 = lerp(e.x0, 0, col), y0 = lerp(e.y0, 0, col), x1 = lerp(e.x1, 0, col), y1 = lerp(e.y1, 0, col);
+        ctx.save(); ctx.globalAlpha *= (1 - col) * 0.35; ctx.strokeStyle = C.dark; ctx.lineWidth = 4; ctx.lineCap = 'round';
+        ctx.beginPath(); ctx.moveTo(x0, y0); ctx.lineTo(lerp(x0, x1, g), lerp(y0, y1, g)); ctx.stroke(); ctx.restore();
+        // the pulse: layer 0->1 during the first part of the pass, 1->2 during the second
+        const pw = e.li === 0 ? [0.08, 0.42] : [0.58, 0.92];
+        const pp = prog(fireP, pw[0], pw[1]);
+        if (pp > 0 && col < 1) {
+          ctx.save(); ctx.globalAlpha *= 1 - col; ctx.strokeStyle = C.orange; ctx.lineWidth = 5; ctx.lineCap = 'round';
+          const head = E.outCubic(pp), tail = E.inCubic(pp);
+          ctx.beginPath(); ctx.moveTo(lerp(x0, x1, tail), lerp(y0, y1, tail)); ctx.lineTo(lerp(x0, x1, head), lerp(y0, y1, head)); ctx.stroke();
+          if (pp < 1) { ctx.fillStyle = C.yellow; ctx.beginPath(); ctx.arc(lerp(x0, x1, head), lerp(y0, y1, head), 7, 0, 6.2832); ctx.fill(); }
+          ctx.restore();
+        }
+      });
+      // nodes
+      nodes.forEach(n => {
+        if (n.centre) return;                            // the centre node is the atom
+        const outer = n.mid && n.li !== 1;               // the two nodes the brackets became
+        const pop = outer ? toN : E.outBack(prog(t, T.nodes[0] + n.li * 0.05 + (n.ni === 0 ? 0 : 0.04), T.nodes[0] + n.li * 0.05 + (n.ni === 0 ? 0 : 0.04) + 0.16));
+        if (pop <= 0) return;
+        const litAt = [0.0, 0.46, 0.94][n.li];
+        const lit = E.outCubic(prog(fireP, litAt, litAt + 0.08));
+        const flash = 1 + 0.25 * Math.sin(Math.PI * clamp((fireP - litAt) / 0.14)) * (fireP > litAt ? 1 : 0);
+        node(lerp(n.x, 0, col), lerp(n.y, 0, col), pop * flash * (1 - col * 0.7), lit > 0 ? P.mixHex(C.ivory, C.yellow, lit) : C.ivory, 5, 1 - col);
+      });
+    }
+
+    /* ---------------- 3. the chip (body grows around the collapsed net), its label, the slide ---------------- */
+    const bodyE = E.outCubic(prog(t, T.body[0], T.body[1]));
+    const slide = E.inOutCubic(prog(t, T.slide[0], T.slide[1]));
+    const chipX = lerp(0, CHIP_AT[0], slide), chipY = lerp(0, CHIP_AT[1], slide);
+    const dis = E.inOutCubic(prog(t, T.dissolve[0], T.dissolve[1]));   // chip + bubble leave
+    const chipOp = (1 - dis);
+    const pins = B.pinDefs.map((_, i) => E.outCubic(prog(t, T.pinsIn + (i % 4) * 0.012 + Math.floor(i / 4) * 0.022, T.pinsIn + (i % 4) * 0.012 + Math.floor(i / 4) * 0.022 + 0.13)));
+    const leave = E.inOutCubic(prog(t, T.leave[0], T.leave[1]));       // the atom leaves the die
+    if (bodyE > 0 && chipOp > 0.001) {
+      ctx.save(); ctx.translate(chipX, chipY + dis * 70); ctx.globalAlpha *= chipOp;
+      B.pins(ctx, pins, C.dark, 1, 1);
+      ctx.save(); ctx.scale(lerp(0.5, 1, bodyE), lerp(0.5, 1, bodyE)); B.stroke(ctx, B.chipL, B.CHIP_SW, C.dark, bodyE); B.stroke(ctx, B.chipR, B.CHIP_SW, C.dark, bodyE); ctx.restore();
+      // the die: orange while the atom is docked, yellow once it has left ("the model is generating")
+      if (leave > 0) { ctx.fillStyle = C.yellow; ctx.fillRect(-62, -62, 124, 124); }
+      const lab = E.outCubic(prog(t, T.label[0], T.label[1]));
+      if (lab > 0) { ctx.save(); ctx.scale(lerp(0.8, 1, lab), lerp(0.8, 1, lab)); ctx.fillStyle = P.mixHex(C.ivory, C.dark, leave); ctx.font = "700 44px 'Poppins'"; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.letterSpacing = '1px'; ctx.globalAlpha *= lab; ctx.fillText('LLM', 0, 3); ctx.restore(); }
+      ctx.restore();
+    }
+
+    /* ---------------- 4. the bubble, the dots, the name ---------------- */
+    const bub = E.outBack(prog(t, T.bubble[0], T.bubble[1]));
+    const rev = prog(t, T.reveal[0], T.reveal[1]);
+    const g = nameGroup(t);
+    if (bub > 0 && dis < 1) {
+      ctx.save(); ctx.globalAlpha *= 1 - dis; bubblePath(bub); ctx.fillStyle = C.white; ctx.fill(); ctx.strokeStyle = C.dark; ctx.lineWidth = 6; ctx.lineJoin = 'round'; ctx.stroke(); ctx.restore();
+    }
+    // typing dots (the first two are gray; the third is the orange atom, handled below)
+    const dotsP = prog(t, T.dots[0], T.dots[1]);
+    const dotX = i => BUB.cx + (i - 1) * 64;
+    const bounce = i => { const u = (t - T.dots[0]) / 0.5 - i * 0.18; return u > 0 && u < 2 ? Math.max(0, Math.sin(u * Math.PI * 2)) * 16 : 0; };
+    for (let i = 0; i < 2; i++) {
+      const on = E.outBack(prog(t, T.dots[0] + i * 0.06, T.dots[0] + i * 0.06 + 0.14)) * (1 - E.inCubic(prog(rev, i * 0.25, i * 0.25 + 0.4)));
+      if (on <= 0.001) continue;
+      ctx.save(); ctx.fillStyle = C.gray; ctx.beginPath(); ctx.arc(dotX(i), BUB.cy - bounce(i), 14 * on, 0, 6.2832); ctx.fill(); ctx.restore();
+    }
+    // the name: characters grow out of the dots
+    if (rev > 0) {
+      ctx.save(); ctx.translate(g.cx, g.cy); ctx.scale(g.k, g.k);
+      ctx.fillStyle = C.dark; ctx.font = `700 ${L.nameSize}px 'Noto Sans SC'`; ctx.textAlign = 'left'; ctx.textBaseline = 'alphabetic';
+      nameChars.forEach((ch, i) => {
+        const k = E.outBack(prog(rev, Math.min(i, 2) * 0.25, Math.min(i, 2) * 0.25 + 0.5)); if (k <= 0) return;
+        const x = -L.nameW / 2 + (i ? L.adv[i - 1] : 0), base = L.nameSize * 0.38;
+        ctx.save(); ctx.globalAlpha *= clamp(k * 1.5); ctx.translate(x + L.adv[i] / 2 - (i ? L.adv[i - 1] / 2 : 0), base - L.nameSize * 0.35); ctx.scale(lerp(0.5, 1, k), lerp(0.5, 1, k)); ctx.translate(-(x + L.adv[i] / 2 - (i ? L.adv[i - 1] / 2 : 0)), -(base - L.nameSize * 0.35));
+        ctx.fillText(ch, x, base); ctx.restore();
+      });
+      ctx.restore();
+    }
+
+    /* ---------------- 5. the orange atom through the whole piece ---------------- */
+    let a, aOp = 1;
+    if (t < T.toNodes[0]) a = S.atom;
+    else if (t < T.collapse[0]) a = B.seg(B.A.slash, NODE_SQ, toN);
+    else if (t < T.leave[0]) { a = B.seg(NODE_SQ, B.A.die, E.outCubic(prog(t, T.collapse[0] + 0.04, T.body[1]))); a = [a[0] + chipX, a[1] + chipY, a[2] + chipX, a[3] + chipY, a[4]]; }
+    else {
+      // flies from the die to the third dot, bounces with the dots, then becomes the full stop after the name
+      const dieAt = [chipX, chipY], dot3 = [dotX(2), BUB.cy];
+      const pOff = periodOff(), per = [g.cx + pOff[0] * g.k, g.cy + pOff[1] * g.k], perS = L.nameSize * 0.11 * g.k;
+      const toPer = E.inOutCubic(prog(rev, 0.5, 1));
+      let x = lerp(dieAt[0], dot3[0], leave), y = lerp(dieAt[1], dot3[1], leave) - Math.sin(Math.PI * leave) * 90 - (leave >= 1 ? bounce(2) : 0);
+      let s = lerp(124, 28, leave);
+      x = lerp(x, per[0], toPer); y = lerp(y, per[1], toPer); s = lerp(s, perS, toPer);
+      a = [x, y - s / 2, x, y + s / 2, s];
+      const bl = prog(t, T.blink[0], T.blink[1]); aOp = 1 - 0.7 * Math.pow(Math.sin(Math.PI * bl), 2);
+    }
+    B.atom(ctx, a, C.orange, aOp);
+    // centre node flash during the pass
+    if (t >= T.fire[0] && t < T.collapse[0]) { const f = Math.sin(Math.PI * clamp((prog(t, T.fire[0], T.fire[1]) - 0.46) / 0.14)); if (f > 0) { ctx.save(); ctx.globalAlpha *= f * 0.9; ctx.strokeStyle = C.yellow; ctx.lineWidth = 6; ctx.strokeRect(-27, -27, 54, 54); ctx.restore(); } }
+
+    /* ---------------- 6. kicker with a highlighter sweep ---------------- */
+    if (ROLE) {
+      const hl = E.outCubic(prog(t, T.kicker[0], T.kicker[0] + 0.22)), tx = E.outCubic(prog(t, T.kicker[0] + 0.08, T.kicker[1]));
+      if (hl > 0) {
+        const y = g.cy + L.nameSize * 0.5 + 100;
+        ctx.save(); ctx.font = `600 ${L.kickSize}px 'Poppins'`; ctx.letterSpacing = '8px';
+        const w = B.roleText(ctx, ROLE, 0, y, L.kickSize, C.dark, 8, 'center', 0);   // measure only
+        ctx.fillStyle = C.yellow; ctx.fillRect(-w / 2 - 18, y - L.kickSize * 0.55, (w + 36) * hl, L.kickSize * 1.1);
+        B.roleText(ctx, ROLE, 0, y, L.kickSize, C.dark, 8, 'center', tx);
+        ctx.restore();
+      }
+    }
+
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    P.fade(ctx, FW, END_COLOR, prog(t, T.fade[0], T.fade[1]));
+  }
+  window.renderAt = renderAt;
+
+  P.fontsReady([`700 ${L.nameSize}px 'Noto Sans SC'`, "500 46px 'Noto Sans SC'", "600 46px 'Poppins'", "700 44px 'Poppins'"]).then(() => {
+    layout(); ready = true; renderAt(0); window.__READY__ = true;
+  });
+})();
+</script>
+</body>
+</html>

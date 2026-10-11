@@ -1,0 +1,95 @@
+{
+ "slug": "Skills",
+ "title": "Claude官方教程 第8期｜Skills：把重复的流程做成按需取用的手册",
+ "kicker": "<b>Claude官方教程</b> 第8期",
+ "hook": [
+  "同一段指令",
+  "别再每次粘贴"
+ ],
+ "lines": [
+  {
+   "id": "N01",
+   "zh": "每次让 Claude 审 PR，都得把同一大段审查标准重新粘贴？",
+   "say": "每次让 Claude 审 PR，都得把同一大段审查标准重新粘贴？",
+   "en": "Pasting the same long review standards every time you ask Claude to review a PR?"
+  },
+  {
+   "id": "N02",
+   "zh": "Skills 治这个：把流程写成文件，Claude 需要时自己取用。",
+   "say": "Skills 治这个：把流程写成文件，Claude 需要时自己取用。",
+   "en": "Skills fix that: write the process down once and Claude pulls it in when needed."
+  },
+  {
+   "id": "N03",
+   "zh": "技能是个文件夹，里面放 SKILL.md：名称、描述，加上步骤。",
+   "say": "技能是个文件夹，里面放 skill 点 md：名称、描述，加上步骤。",
+   "en": "A skill is a folder with a SKILL.md: a name and description first, then the actual steps."
+  },
+  {
+   "id": "N04",
+   "zh": "放在个人目录，所有项目都能用；放在项目里，整个团队共享。",
+   "say": "放在个人目录，所有项目都能用；放在项目里，整个团队共享。",
+   "en": "Keep it in your personal folder to use it everywhere, or in the project to share it with the team."
+  },
+  {
+   "id": "N05",
+   "zh": "关键区别：它不会一开始就全塞进上下文。",
+   "say": "关键区别：它不会一开始就全塞进上下文。",
+   "en": "The key difference: it isn't loaded into context all at once."
+  },
+  {
+   "id": "N06",
+   "zh": "Claude 先只读每个技能的名称和描述，对上号了，才把全文读进来。",
+   "say": "Claude 先只读每个技能的名称和描述，对上号了，才把全文读进来。",
+   "en": "Claude first sees only each skill's name and description, and loads the full contents once one matches."
+  },
+  {
+   "id": "N07",
+   "zh": "CLAUDE.md 是每次会话都载入的规矩，技能是需要时才翻开的手册。",
+   "say": "Claude 点 md 是每次会话都载入的规矩，技能是需要时才翻开的手册。",
+   "en": "CLAUDE.md is the rulebook loaded every session; a skill is a manual opened only when needed.",
+   "cut": [
+    [
+     "都载入的",
+     "every session;"
+    ]
+   ]
+  },
+  {
+   "id": "N08",
+   "zh": "输入 / 加技能名能直接调用，也能让它自己判断；改完不用重启。",
+   "say": "输入斜杠加技能名能直接调用，也能让它自己判断；改完不用重启，当场生效。",
+   "en": "Type a slash and the skill name to call it, or let Claude decide. Edits take effect right away, no restart."
+  },
+  {
+   "id": "N09",
+   "zh": "官方课的经验法则：同一套多步指令打了两遍，就该做成技能。",
+   "say": "官方课的经验法则：同一套多步指令打了两遍，就该做成技能。",
+   "en": "The course's rule of thumb: type the same multi-step instruction twice, and it's a skill."
+  },
+  {
+   "id": "N10",
+   "zh": "比如视频里演示的：提交信息、PR 描述、调试、写文档。",
+   "say": "比如视频里演示的：提交信息、PR 描述、调试、写文档。",
+   "en": "Like the ones in the video: commit messages, PR descriptions, debugging, documentation."
+  },
+  {
+   "id": "N13",
+   "zh": "有副作用的流程，比如部署，设成只能手动叫它。",
+   "say": "有副作用的流程，比如部署，设成只能手动叫它。",
+   "en": "For workflows with side effects, like deploys, make the skill manual-only."
+  },
+  {
+   "id": "N11",
+   "zh": "别高兴太早：技能装多了，描述每一轮都占上下文，用不到的别装。",
+   "say": "别高兴太早：技能装多了，描述每一轮都占上下文，用不到的别装。",
+   "en": "Don't celebrate yet: every skill's description sits in context on every turn, so skip the ones you won't use."
+  },
+  {
+   "id": "N12",
+   "zh": "常驻的规矩进 CLAUDE.md，偶尔用的手册做成技能。",
+   "say": "常驻的规矩进 Claude 点 md，偶尔用的手册做成技能。",
+   "en": "Always-on rules go in CLAUDE.md. Occasional manuals become skills."
+  }
+ ]
+}

@@ -19,10 +19,13 @@ x 440-1860, episodes 1-4).
 is said, text 1 s ahead of the voice, 56 px subtitles; hand.js / board.js); "cards" leaves the field out (printed
 cards, episodes 1-4). --voice is written into "voice_source": default user = the user records the narration
 (record_script.py -> the user's recording -> import_voice.py); "tts" = Fish Audio TTS (only when the user asks).
+"bilingual": true is written by default (中英双语字幕，用户 2026-10-02：“原LAI如此也改成双语”; the project standard,
+scripts/bilingual.py): every say row carries its English, dict(en=…, cuts=…) at the end of the row; --no-bilingual
+leaves it out (Chinese-only 56 px subtitles, episodes 1-6).
 
 Creates <dest>/第NN期_<题目去空格>/ with
   episode.json              skeleton: presenter; canvas [2340, 1080]; bg_color "#FFFFFF"; layout "center"; style "board";
-                            voice_source "user";
+                            voice_source "user"; bilingual true; cover_style "chalk" (黑板版封面, make_cover.py);
                             questions / chapters / backgrounds / outro_items
                             left empty to fill in (bg_alpha 0.22, bg_blur 10, target_minutes [5, 7],
                             auto_gestures true = 动作 v2 自动层开)
@@ -47,6 +50,7 @@ TEMPLATE = C.SKILL / "assets" / "engine-template"
 SKIP_NAMES = {"__pycache__", "_check", ".DS_Store", "Thumbs.db"}
 TEXT_EXT = {".html", ".js", ".css", ".py", ".json", ".md", ".txt"}
 CONTRACT_REL = "../../../"          # engine -> series, for an episode directly under SERIES
+EN_NAMES = {"ryo": "Ryo Yamada", "whale": "Whale Girl"}     # 英文字幕里讲解员的名字（骨架里的开场 / 结尾句用）
 
 
 def dir_name_for(number, title):
@@ -56,7 +60,7 @@ def dir_name_for(number, title):
 
 
 def episode_skeleton(number, title, dir_name, presenter="ryo", canvas=C.CANVAS_NEW, bg_color=C.BG_COLOR_NEW,
-                     layout=C.LAYOUT_NEW, style=C.STYLE_NEW, voice=C.VOICE_NEW):
+                     layout=C.LAYOUT_NEW, style=C.STYLE_NEW, voice=C.VOICE_NEW, bilingual=True):
     ep = {
         "number": number,
         "title": title,
@@ -67,6 +71,8 @@ def episode_skeleton(number, title, dir_name, presenter="ryo", canvas=C.CANVAS_N
         "layout": layout,
         "style": style,
         "voice_source": voice,
+        "bilingual": True,
+        "cover_style": "chalk",
         "target_minutes": [5, 7],
         "question_scene": "S02",
         "questions": [],
@@ -77,6 +83,7 @@ def episode_skeleton(number, title, dir_name, presenter="ryo", canvas=C.CANVAS_N
         "terms": [],
         "auto_gestures": True,
         "intro_tagline": "",
+        "outro_references": [],
         "outro_items": [],
         "outro_closing": "",
         "_说明": [
@@ -97,12 +104,18 @@ def episode_skeleton(number, title, dir_name, presenter="ryo", canvas=C.CANVAS_N
             "voice_source：\"user\" = 用户自己配音（2026-09-28 用户：原LAI如此配音之后需要我来配音）：record_script.py 出录音稿，"
             "用户录好后 import_voice.py 导入，segment_audio.py 切句（能跳过重读的句子）；\"tts\" = Fish Audio 合成（用户点名要时才用，"
             "AI 配音现在只用于《AI每日日报》）",
+            "bilingual：true = 中英双语字幕（2026-10-02 用户：原LAI如此也改成双语；项目统一标准，和 Way to AGI、AI每日日报一样）："
+            "中文 52 px 一行 + 英文 30 px 一行，字幕带 y 900 起；台本每一句末尾写 dict(en=\"英文\")，拆得不顺的句子加 cuts；"
+            "build_script.py 出 台本/双语字幕.md 并排列出每条，assemble.py 出 双语 / 中文 / 英文 三份 SRT。删掉这一项 = 只有中文字幕（第 1–6 期）",
+            "cover_style：\"chalk\" = 黑板版封面（2026-10-02 用户从三个方向里选的：深绿黑板 + 粉笔手写标题 + 讲解员站在粉笔槽上指着标题，"
+            "和《AI每日日报》的白底蓝字封面区分开）。make_cover.py 按它选模板，见 skill/references/cover.md。删掉这一项 = 按 style 选（白板版 / 小票版，第 1–6 期）",
             "questions：右上角「本期目录」，如 {\"text\": \"Token 是什么\", \"scenes\": [\"S03\"]}，scenes 是讲这一题的章节",
             "chapters：进度条章节名，如 {\"S01\": \"开场\", \"S02\": \"三个疑问\"}（没写的用场景 title）",
             "backgrounds：每章一张 素材/背景图库 里的文件名，如 {\"S01\": \"01_放学路上_树影.jpg\"}；没写的章节按图库顺序轮换。"
             "有 bg_color 时视频不用它，可以空着",
             "terms：字幕里要标橙色的术语（引擎已内置 API、API Key、Token、JSON、HTTP 等），如 [\"Token\", \"上下文窗口\"]",
-            "outro_items / outro_closing：片尾制作清单和感谢语，必须问用户，不许用默认值（assemble.py 为空会报错）",
+            "outro_references / outro_items / outro_closing：片尾（2026-10-03 起的信纸片尾，所有视频必加）左栏参考文献（字符串，≤ 8 条，可以为空）、"
+            "右栏致谢 / 制作清单（{label, value}，≤ 8 条）、感谢语，都要问用户，不许用默认值（outro_items / outro_closing 为空 assemble.py 会报错）",
             "auto_gestures：角色自动层（说话时小手势、句末点头、看向内容），true 开 / false 关；嫌多写成 "
             "{\"gesture\": 0.6}（手势密度倍率），或 {\"nod\": false} / {\"look\": false} 关掉某个通道",
             "sprites_extra（可选）：新动作帧还没追加进本期讲解员的帧目录（presenter.frames）时出样片用，例如 "
@@ -110,9 +123,9 @@ def episode_skeleton(number, title, dir_name, presenter="ryo", canvas=C.CANVAS_N
             "这个 _说明 字段可以删掉，脚本不读它",
         ],
     }
-    for k, v in (("bg_color", bg_color), ("layout", layout), ("style", style), ("voice_source", voice)):
+    for k, v in (("bg_color", bg_color), ("layout", layout), ("style", style), ("voice_source", voice), ("bilingual", bilingual)):
         if not v:
-            del ep[k]                     # --bg-color none / --layout old / --style cards: left out (as episodes 1-4)
+            del ep[k]                     # --bg-color none / --layout old / --style cards / --no-bilingual: left out
     return ep
 
 
@@ -128,8 +141,13 @@ SCRIPT_SKELETON = '''# -*- coding: utf-8 -*-
   python {scripts}/tts_api.py      <本期>     -> 配音/raw/C01_v1.mp3（Fish Audio API，本期讲解员的音色）
 
 行的写法（skill/references/pipeline-contract.md 第 3、4 节）：
-  ("say", "字幕原文", "TTS 文本", "画面说明")    一段配音 = 一段字幕；段号按全片顺序自动生成（S03-12）
+  ("say", "字幕原文", "TTS 文本", "画面说明", dict(en="English subtitle"))
+                                                 一段配音 = 一段字幕；段号按全片顺序自动生成（S03-12）
   ("gap", 秒, "画面说明")                        不说话的纯画面停顿
+中英双语字幕（episode.json bilingual true，项目统一标准）：每个 say 行末尾的 dict 写 en = 这句的英文字幕（口语、按意思翻，
+只用英文和半角标点；中文里的英文名在英文里原样保留）。一句太长时自动拆成几条（中文 ≤ 约 28 字、英文 ≤ 约 90 字符一条）；
+build_script.py 出 台本/双语字幕.md 并排列出每条，拆得中英对不上的句子在 dict 里加 cuts=[("中文锚点", "英文锚点")]
+（中文在这段文字之后断、英文在这段文字之后断）。规则见 skill/references/script.md「英文字幕」。
 TTS 文本：英文缩写拆开读（"A P I"）、品牌名分词（"Deep Seek"）、网址念出来（"platform 点 deepseek 点 com"）。
 
 画面 {canvas_w}×{canvas_h}（episode.json canvas）：画面说明里的“左边 / 右边 / 中间”都按居中的 1920×1080 内容舞台想，
@@ -171,30 +189,32 @@ SCENES = [
         ("gap", 1.2, "【动作：走动】背景淡入"),
         ("say", "大家好，我是{name}。今天给大家介绍（待写）。",
                 "大家好，我是{name}。今天给大家介绍（待写）。",
-                "【动作：手放胸前@我是】画面中央大字「（待写）」"),
+                "【动作：手放胸前@我是】画面中央大字「（待写）」",
+                dict(en="Hi, I'm {en_name}. Today let's talk about (to be written).")),
         ("gap", 0.4, ""),
     ]),
     dict(id="S02", title="三个疑问", char="说话；列举疑问时数一、二、三", rows=[
         ("say", "你可能会有三个疑问：", "你可能会有三个疑问。",
-                "【动作：抬手】右侧出现标题「你可能也想问」"),
-        ("say", "第一，（待写）？", "第一，（待写）？", "【动作：数一@第一】疑问卡 ① 弹出（“嗒”）"),
-        ("say", "第二，（待写）？", "第二，（待写）？", "【动作：数二@第二】疑问卡 ② 弹出（“嗒”）"),
-        ("say", "第三，（待写）？", "第三，（待写）？", "【动作：数三@第三】疑问卡 ③ 弹出（“嗒”）"),
+                "【动作：抬手】右侧出现标题「你可能也想问」", dict(en="You might have three questions:")),
+        ("say", "第一，（待写）？", "第一，（待写）？", "【动作：数一@第一】疑问卡 ① 弹出（“嗒”）", dict(en="First, (to be written)?")),
+        ("say", "第二，（待写）？", "第二，（待写）？", "【动作：数二@第二】疑问卡 ② 弹出（“嗒”）", dict(en="Second, (to be written)?")),
+        ("say", "第三，（待写）？", "第三，（待写）？", "【动作：数三@第三】疑问卡 ③ 弹出（“嗒”）", dict(en="Third, (to be written)?")),
         ("say", "这期视频，就把这三个问题讲清楚。", "这期视频，就把这三个问题讲清楚。",
-                "【动作：点头】三张疑问卡飞到右上角，成为本期目录"),
+                "【动作：点头】三张疑问卡飞到右上角，成为本期目录", dict(en="This video answers all three.")),
         ("gap", 0.6, "转场：目录 ① 高亮"),
     ]),
     dict(id="S03", title="一、（待写）", char="说话；指向要点卡", rows=[
-        ("say", "先说第一个问题：（待写）。", "先说第一个问题，（待写）。", "章节标题「一、（待写）」"),
-        ("say", "它主要做三件事：", "它主要做三件事。", "【动作：指这里】要点卡标题「（待写）」"),
-        ("say", "（待写）", "（待写）", "【动作：好耶@末尾】要点逐条出现；讲完这一题"),
+        ("say", "先说第一个问题：（待写）。", "先说第一个问题，（待写）。", "章节标题「一、（待写）」",
+                dict(en="Let's start with the first one: (to be written).")),
+        ("say", "它主要做三件事：", "它主要做三件事。", "【动作：指这里】要点卡标题「（待写）」", dict(en="It does three main things:")),
+        ("say", "（待写）", "（待写）", "【动作：好耶@末尾】要点逐条出现；讲完这一题", dict(en="(to be written)")),
         ("gap", 0.6, "目录 ① 打勾"),
     ]),
     # ... S04、S05 …… 每一题一个或几个章节（在 episode.json 的 questions 里对应起来）
     dict(id="S08", title="总结", char="说话", rows=[
-        ("say", "最后总结一下。", "最后总结一下。", "【动作：合手】总结卡标题「本期总结」"),
-        ("say", "第一，（待写）。", "第一，（待写）。", "总结卡 ①"),
-        ("say", "我是{name}，我们下期见。", "我是{name}，我们下期见。", "【动作：挥手】"),
+        ("say", "最后总结一下。", "最后总结一下。", "【动作：合手】总结卡标题「本期总结」", dict(en="To wrap up.")),
+        ("say", "第一，（待写）。", "第一，（待写）。", "总结卡 ①", dict(en="First, (to be written).")),
+        ("say", "我是{name}，我们下期见。", "我是{name}，我们下期见。", "【动作：挥手】", dict(en="I'm {en_name}. See you next time.")),
         ("gap", 0.5, "淡出到片尾"),
     ]),
 ]
@@ -273,6 +293,8 @@ def main():
                          "cards = 不写（印刷体卡片版，第 1–4 期）")
     ap.add_argument("--voice", default=C.VOICE_NEW, choices=["user", "tts"],
                     help="配音，写进 episode.json 的 voice_source：user（默认）= 用户自己录；tts = Fish Audio 合成（用户点名要时才用）")
+    ap.add_argument("--no-bilingual", action="store_true",
+                    help="不写 episode.json 的 \"bilingual\": true（默认写：中英双语字幕，2026-10-02 起）= 只有中文字幕")
     ap.add_argument("--update-engine", metavar="EPISODE_DIR",
                     help="不新建：把引擎模板重新复制到这个已有的期目录（不动 scenes.js 和 episode.json，被替换的文件移到 _旧稿）")
     C.add_common(ap, episode=False)
@@ -311,12 +333,14 @@ def main():
     for sub in ("台本", "配音/raw", "配音/segments", "制作/engine", "制作/voice", "制作/build", "封面"):
         (ep_dir / sub).mkdir(parents=True, exist_ok=True)
     p = C.Paths(ep_dir, series)
-    ep = episode_skeleton(args.number, args.title, name, args.presenter, canvas, bg_color, layout, style, voice)
+    ep = episode_skeleton(args.number, args.title, name, args.presenter, canvas, bg_color, layout, style, voice,
+                          bilingual=not args.no_bilingual)
     C.write_json(p.episode_json, ep, indent=2)
     pr = C.presenter_of(ep)
     own_gags = [g for g in pr.get("gags") or [] if g not in C.FORBIDDEN_GAGS]
     p.script_data.write_text(SCRIPT_SKELETON.format(number=args.number, title=args.title, scripts=C.SCRIPTS.as_posix(),
                                                     name=pr["name"], voice_name=pr["voice_name"],
+                                                    en_name=EN_NAMES.get(pr["id"], pr["name"]),
                                                     canvas_w=canvas[0], canvas_h=canvas[1],
                                                     look=("背景纯色 " + bg_color + "（episode.json bg_color），不用背景图；" if bg_color
                                                           else "背景是章节背景图（episode.json backgrounds）；")
@@ -332,8 +356,9 @@ def main():
     print("  背景 " + (f"纯色 {bg_color}（episode.json bg_color；视频不用背景图；白板版封面也是白底）" if bg_color
                       else "章节背景图（没写 bg_color）")
           + "；版面 " + ("内容以画面中线居中（layout center）" if layout else "旧版面（没写 layout）")
-          + "；风格 " + ("白板手写版（style board，画面早 1 秒、字幕 56 px）" if style else "印刷体卡片版（没写 style）")
-          + "；配音 " + ("用户自己录（voice_source user）" if voice == "user" else "Fish Audio 合成（voice_source tts）"))
+          + "；风格 " + ("白板手写版（style board，画面早 1 秒）" if style else "印刷体卡片版（没写 style）")
+          + "；配音 " + ("用户自己录（voice_source user）" if voice == "user" else "Fish Audio 合成（voice_source tts）")
+          + "；字幕 " + ("只有中文（--no-bilingual）" if args.no_bilingual else "中英双语（bilingual true：每句末尾写 dict(en=…)）"))
     print(f"  episode.json、台本/script_data.py 骨架；引擎文件 {sum(1 for a, _ in done if a == 'copy')} 个")
     frames = C.presenter_frames(series, ep)
     if not (frames / "anims.json").exists():

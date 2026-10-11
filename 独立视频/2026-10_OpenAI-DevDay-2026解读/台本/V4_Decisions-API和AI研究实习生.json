@@ -1,0 +1,38 @@
+{
+  "id": "V4",
+  "no": 4,
+  "batch": "A",
+  "title": "OpenAI预览Decisions API，对标Jev模型",
+  "short": "OpenAI DevDay 2026 · Decisions API",
+  "kicker": "OPENAI DEVDAY 2026 · 解读 04",
+  "chapters": ["几分之一秒", "研究实习生", "长任务无人管"],
+  "lines": [
+    {"id": "V4-N01", "kind": "vo", "ch": 0, "zh": "几分之一秒的响应，这段视频没有加速。", "say": "几分之一秒的响应，这段视频没有加速。", "en": "A response in a fraction of a second, and this video is not sped up."},
+    {"id": "V4-K1a", "kind": "dub", "who": "Sam", "zh": "今天预览新的 Decisions API。", "say": "今天预览新的Decisions API。", "en": "Today we're previewing our new Decisions API."},
+    {"id": "V4-K1b", "kind": "dub", "who": "Sam", "zh": "Decisions API 能让模型在几分之一秒内回应。", "say": "Decisions API能让模型在几分之一秒内回应。", "en": "The Decisions API lets the model respond in a fraction of a second."},
+    {"id": "V4-K1c", "kind": "dub", "who": "Sam", "zh": "快到用起来几乎是即时的。", "say": "快到用起来几乎是即时的。", "en": "It's so fast, so it really feels almost instant to interact with."},
+    {"id": "V4-K1d", "kind": "dub", "who": "Sam", "zh": "你看它操作电脑，一步接一步，这段没有加速。", "say": "你看它操作电脑，一步接一步，这段没有加速。", "en": "You can see here it using a computer and how quickly it's moving through these steps. This is not sped up."},
+    {"id": "V4-N02", "kind": "vo", "ch": 0, "zh": "做法是给 Luna 模型一组预先定好的选项，让它只做选择：分流一个请求，判断一张图，决定智能体下一步。", "say": "做法是给Luna模型一组预先定好的选项，让它只做选择：分流一个请求，判断一张图，决定智能体下一步。", "en": "The approach: give the Luna model a predefined set of options and have it only choose, to route a request, judge an image, or decide the agent's next step."},
+    {"id": "V4-N03", "kind": "vo", "ch": 0, "zh": "选择的范围小，所以快；图像理解、多语言和安全防护都还在。", "say": "选择的范围小，所以快；图像理解、多语言和安全防护都还在。", "en": "A small range of choices is why it's fast; image understanding, multilingual support and safeguards are all still there."},
+    {"id": "V4-K2a", "kind": "dub", "who": "Sam", "zh": "去年这个时候，我和同事在直播里做了个挺大胆的预测：一年内会出现第一个 AI 研究实习生。", "say": "去年这个时候，我和同事在直播里做了个挺大胆的预测：一年内会出现第一个AI研究实习生。", "en": "Last year around this time, Jakob and I made a somewhat bold prediction on a live stream, saying that we would see the first AI research intern in the next year."},
+    {"id": "V4-K2b", "kind": "dub", "who": "Sam", "zh": "当时全世界对这个预测没多少信心，这么说都算客气了。", "say": "当时全世界对这个预测没多少信心，这么说都算客气了。", "en": "To say the world did not have a lot of confidence in that prediction at the time was an understatement.", "cut": [["信心，", "at the time"]]},
+    {"id": "V4-K2c", "kind": "dub", "who": "Sam", "zh": "几周前，我们宣布目标达成了。", "say": "几周前，我们宣布目标达成了。", "en": "A few weeks ago, we announced that we hit that goal."},
+    {"id": "V4-K2d", "kind": "dub", "who": "Sam", "zh": "它能接手一项定义清楚的研究任务，换成熟练的研究员，要花很多时间和精力。", "say": "它能接手一项定义清楚的研究任务，换成熟练的研究员，要花很多时间和精力。", "en": "We now have an AI research intern, a system that can take on a clearly defined research task that would take a skilled researcher a lot of time and effort to complete.", "cut": [["研究任务，", "clearly defined research task"]]},
+    {"id": "V4-N04", "kind": "vo", "ch": 2, "zh": "研究员 Tejal 给了数据：今年一月，一天以上的研究任务，模型基本做不成。", "say": "研究员Tejal给了数据：今年一月，一天以上的研究任务，模型基本做不成。", "en": "Researcher Tejal shared the data: in January, the models basically couldn't finish research tasks that took a day or more."},
+    {"id": "V4-N05", "kind": "vo", "ch": 2, "zh": "到了七月，超过三分之一的整天研究任务，模型能全程不用人干预。", "say": "到了七月，超过三分之一的整天研究任务，模型能全程不用人干预。", "en": "By July, models could complete over a third of full-day research tasks start to finish, with no human intervention."},
+    {"id": "V4-N06", "kind": "vo", "ch": 2, "zh": "Astra 这类模型，已经帮着解出了 100 多个悬了几十年的数学题。", "say": "Astra这类模型，已经帮着解出了一百多个悬了几十年的数学题。", "en": "Models like Astra have already helped solve more than 100 math problems that had been open for decades."},
+    {"id": "V4-N07", "kind": "vo", "ch": 2, "zh": "它们还在帮着加快新抗生素、古代语言研究、可再生能源和工业制造。", "say": "它们还在帮着加快新抗生素、古代语言研究、可再生能源和工业制造。", "en": "They're also helping speed up work on new antibiotics, ancient languages, renewable energy and industrial manufacturing."}
+  ],
+  "plan": [
+    {"type": "vclip", "id": "S1", "ch": 0, "from": "V4-N01", "to": "V4-N01", "in": 1340.5, "what": "Decisions API 演示：订机票", "callouts": [{"t": 0.3, "d": 5, "hook": true, "text": "几分之一秒<br>**没有加速**"}]},
+    {"type": "clip", "id": "S2", "ch": 0, "in": 1333.8, "out": 1357.3, "what": "Decisions API 演示", "where": "主题演讲",
+     "lines": [{"id": "V4-K1a", "a": 0.2}, {"id": "V4-K1b", "a": 3.44}, {"id": "V4-K1c", "a": 15.08}, {"id": "V4-K1d", "a": 18.24}],
+     "callouts": [{"t": 6.0, "d": 6, "text": "演示：订机票，**没有加速**", "pos": "tl"}]},
+    {"type": "vclip", "id": "S3", "ch": 0, "from": "V4-N02", "to": "V4-N03", "in": 1357.4, "what": "Decisions API：给 Luna 一组选项"},
+    {"type": "clip", "id": "S4", "ch": 1, "in": 1411.0, "out": 1439.4, "what": "AI 研究实习生", "where": "主题演讲",
+     "lines": [{"id": "V4-K2a", "a": 0.37}, {"id": "V4-K2b", "a": 9.77}, {"id": "V4-K2c", "a": 15.24}, {"id": "V4-K2d", "a": 19.07}]},
+    {"type": "vclip", "id": "S5", "ch": 2, "from": "V4-N04", "to": "V4-N05", "in": 1586.0, "what": "Tejal 的图表：一月 vs 七月", "where": "Tejal · OpenAI 后训练研究负责人",
+     "callouts": [{"t": 6.2, "d": 5, "text": "8–16 小时的任务，无人干预：**10%** → **35%**", "pos": "tl"}]},
+    {"type": "vclip", "id": "S6", "ch": 2, "from": "V4-N06", "to": "V4-N07", "in": 1615.5, "what": "研究的下一步", "where": "Tejal · OpenAI 后训练研究负责人"}
+  ]
+}

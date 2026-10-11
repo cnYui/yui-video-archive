@@ -1,0 +1,42 @@
+{
+  "line1": "Codex 新插件",
+  "line2": "能做掌机游戏？",
+  "l1px": 168,
+  "l2px": 236,
+  "maxw": 1320,
+  "textCx": 900,
+  "scale": 9,
+  "frame": [
+    64,
+    64
+  ],
+  "footRow": 62,
+  "fishX": 1074,
+  "foot": 1062,
+  "tag": "",
+  "theme": {
+    "bg": "#FFFFFF",
+    "lead": "#8A93AD",
+    "accent": "#4A88DA",
+    "list": "#4D5670",
+    "more": "#9AA2B8"
+  },
+  "_theme": "blue",
+  "_pose": "shrug_m1",
+  "_eyes": "idle_surprised_m0",
+  "_fx": "",
+  "_qmark": false,
+  "_place": "right",
+  "others": [
+    "DeepSeek 开源昇腾组件",
+    "Kimi K3 接入 Codex",
+    "OpenAI 做芯片设计模型",
+    "DeepMind 给蛋白质加水印",
+    "微软发布生物研究系统"
+  ],
+  "othersHead": "今天还有 6 条",
+  "othersMore": "……共 7 条",
+  "listX": 270,
+  "listW": 770,
+  "listBottom": 1000
+}

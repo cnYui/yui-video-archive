@@ -1,0 +1,47 @@
+{
+  "_说明": "已发布作品的登记表：build_manifest.py 只扫这里列的目录，只列视频文件（mp4 / mov / mkv / webm / avi / m4v / flv / wmv）。往里加一条之前，先看那一条的 `投稿信息.json`：approval.status 是 pending、或者有平台还写着“待发 / 没发”的，一律不加（2026-10-05 就因此留下了《不再Review》短版和《Claude封号潮》，它们的视频号还等用户拖成片）。include / exclude 是对“作品目录内的相对路径”的正则（不区分大小写），用来只收其中某几条（DevDay 六条里只发了 V1 / V4 / V5）或避开没发布的版本（第 3 期白板版）。`cleaned` 记哪天清过；清过的条目再跑一次就是 0 个文件，留着当记录。",
+  "root": "D:/大疆",
+  "protected_components": ["素材", "参考分析", "真人素材", "游戏素材", "_skilltest", "片头片尾", "proxy", "_check", "engine"],
+  "works": [
+    {"label": "原LAI如此 第01期", "dir": "AI科普/第01期_什么是API", "exclude": "白板版_未发布", "evidence": "B站 BV1L4a46HE6U + GitHub release yuanlai-01", "cleaned": "2026-10-05"},
+    {"label": "原LAI如此 第02期", "dir": "AI科普/第02期_从学会说人话到AGI", "exclude": "白板版_未发布", "evidence": "B站 BV1nhav6DEsP + release yuanlai-02", "cleaned": "2026-10-05"},
+    {"label": "原LAI如此 第03期", "dir": "AI科普/第03期_Jev模型是什么", "exclude": "白板版_未发布", "evidence": "B站 BV1WsaG64EwD（线上是卡片版；白板版做好了没换，所以留着）", "cleaned": "2026-10-05"},
+    {"label": "原LAI如此 第04期", "dir": "AI科普/第04期_大模型从夯到拉", "exclude": "白板版_未发布", "evidence": "B站 BV1t7aG6wEK5", "cleaned": "2026-10-05"},
+    {"label": "原LAI如此 第05期", "dir": "AI科普/第05期_论文AIGC检测到底在测什么", "exclude": "白板版_未发布", "evidence": "B站 BV1wqYw6aEd1", "cleaned": "2026-10-05"},
+    {"label": "原LAI如此 第06期", "dir": "AI科普/第06期_AI深度思考在想什么", "exclude": "白板版_未发布", "evidence": "B站 BV1r6Yw6bEJ7", "cleaned": "2026-10-05"},
+
+    {"label": "AI每日日报 2026-09-27", "dir": "AI日报/2026-09-27", "evidence": "运行记录.md BV1Etah6TExW", "cleaned": "2026-10-05"},
+    {"label": "AI每日日报 2026-09-28", "dir": "AI日报/2026-09-28", "evidence": "BV1PFaa6LE3V", "cleaned": "2026-10-05"},
+    {"label": "AI每日日报 2026-09-29", "dir": "AI日报/2026-09-29", "evidence": "BV1MKaJ6XEDd", "cleaned": "2026-10-05"},
+    {"label": "AI每日日报 2026-09-30", "dir": "AI日报/2026-09-30", "evidence": "BV1tUaQ6VEaF", "cleaned": "2026-10-05"},
+    {"label": "AI每日日报 2026-10-01", "dir": "AI日报/2026-10-01", "evidence": "BV16qYF6XEYZ", "cleaned": "2026-10-05"},
+    {"label": "AI每日日报 2026-10-02", "dir": "AI日报/2026-10-02", "evidence": "BV1prar6MEni", "cleaned": "2026-10-05"},
+    {"label": "AI每日日报 2026-10-03", "dir": "AI日报/2026-10-03", "evidence": "BV1B1H86zEpP", "cleaned": "2026-10-05"},
+    {"label": "AI每日日报 2026-10-04", "dir": "AI日报/2026-10-04", "evidence": "BV1cGHB6NEkd", "cleaned": "2026-10-05"},
+    {"label": "AI每日日报 2026-10-05", "dir": "AI日报/2026-10-05", "evidence": "BV1JrHE6CEjS", "cleaned": "2026-10-05"},
+    {"label": "AI每日日报 竖屏版1005", "dir": "AI日报/短视频/01_日报竖屏版_1005", "evidence": "抖音 / 小红书 / 视频号已发（B 站当天不发）", "cleaned": "2026-10-05"},
+
+    {"label": "Way to AGI 02", "dir": "Way to AGI/02_如何使用Claude来低成本的生成视频", "evidence": "B站 BV1s2aV6cELo + YouTube + release way-to-agi-02", "cleaned": "2026-10-05"},
+    {"label": "Way to AGI 短01", "dir": "Way to AGI/短视频/01_Claude做视频成本", "evidence": "抖音 / 小红书 / 视频号已发（不发 B 站）", "cleaned": "2026-10-05"},
+    {"label": "CS研究生 01（在 worktree 里）", "dir": ".claude/worktrees/ai-era-cs-grad-skills-1a823b/AI震惊瘫坐时代计算机研究生必须掌握的技能/01_别再用VSCode了", "evidence": "B站 BV14zao6REeR + YouTube + release cs-grad-ai-01", "cleaned": "2026-10-05"},
+
+    {"label": "ClaudeCode相关 01", "dir": "Claude Code相关/01_Claude Code模组发布", "evidence": "B站 BV1Zoa16CEeU", "cleaned": "2026-10-05"},
+    {"label": "ClaudeCode相关 03", "dir": "Claude Code相关/03_YouShouldKnow插件", "evidence": "B站 BV1PdHh6QE72（记录里是“审核中”，没记过审结果）", "cleaned": "2026-10-05"},
+    {"label": "ClaudeCode相关 短02", "dir": "Claude Code相关/短视频/02_Anthropic设计师用Claude做设计", "evidence": "B站 BV16fH666Eeg + 抖音 + 小红书 + 视频号", "cleaned": "2026-10-05"},
+    {"label": "OpenAI相关 01", "dir": "OpenAI相关/01_GPT模型效果展示", "evidence": "B站 BV1wYaU6oEbw（接口核对 state 0）", "cleaned": "2026-10-05"},
+
+    {"label": "独立 ClaudeFable5.5模型介绍", "dir": "独立视频/2026-10_ClaudeFable5.5模型介绍", "evidence": "B站 BV13Ga26YEV6（记录里是“审核中”，没记过审结果）", "cleaned": "2026-10-05"},
+    {"label": "独立 ClaudeSlides设计师用法", "dir": "独立视频/2026-10_ClaudeSlides设计师用法", "evidence": "B站 BV1Yham6gECf（开放浏览）", "cleaned": "2026-10-05"},
+    {"label": "独立 两种方式订阅正版Codex和Claude", "dir": "独立视频/2026-10_两种方式订阅正版Codex和Claude", "evidence": "B站 BV1pqaz6AEJP（10-01 换视频后“修改内容待审核”，没记过审结果）", "cleaned": "2026-10-05"},
+    {"label": "独立 白宫超级智能协议", "dir": "独立视频/2026-10_白宫超级智能协议", "evidence": "B站 BV1qVaC6NEaK（记录里是“审核中”，没记过审结果）", "cleaned": "2026-10-05"},
+    {"label": "独立 DevDay V1/V4/V5", "dir": "独立视频/2026-10_OpenAI-DevDay-2026解读", "include": "(^|\\\\)V(1|4|5)(_|\\\\|$)", "exclude": "(^|\\\\)V(2|3|6)(_|\\\\|$)", "evidence": "只发了 V1 / V4 / V5（BV1PKam64Emr 等）；V2 / V3 / V6 用户没让发，所以留着", "cleaned": "2026-10-05"},
+
+    {"label": "独立短 01_Tavus-Griffin", "dir": "独立视频/短视频/01_Tavus-Griffin", "evidence": "四个平台用户自己点的发布", "cleaned": "2026-10-05"},
+    {"label": "独立短 image-blaster推荐", "dir": "独立视频/短视频/2026-10_image-blaster推荐", "evidence": "B站 BV1ncHr6gE4U + 其余三个平台", "cleaned": "2026-10-05"},
+    {"label": "独立短 text-to-cad", "dir": "独立视频/短视频/2026-10_text-to-cad", "evidence": "B站 BV1jKHE6BEkN + 三个平台在线核对", "cleaned": "2026-10-05"},
+    {"label": "独立短 MuseGadgets开源", "dir": "独立视频/短视频/2026-10_MuseGadgets开源", "evidence": "B站 BV1fQHp6HEjt + 三个平台", "cleaned": "2026-10-05"},
+    {"label": "独立短 人人都是UI设计师", "dir": "独立视频/短视频/2026-10_人人都是UI设计师", "evidence": "B站 BV1soHH6FE1K + 三个平台", "cleaned": "2026-10-05"},
+    {"label": "独立长 不再Review", "dir": "独立视频/长视频/2026-10_不再Review", "evidence": "B站 BV1jEHs6XEne + 三个平台", "cleaned": "2026-10-05"},
+    {"label": "独立长 人人都是UI设计师", "dir": "独立视频/长视频/2026-10_人人都是UI设计师", "evidence": "B站 BV1FXHs68Eh1 + 三个平台", "cleaned": "2026-10-05"}
+  ]
+}

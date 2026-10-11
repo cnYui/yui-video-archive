@@ -1,0 +1,7 @@
+input 2340x1080 @ 30.0 fps, 512.5s, speech -16.0 LUFS -> music -3.0 dB; intro / outro page 2340x1080 at scale 1
+intro: 4.80s rendered
+outro: 9.00s rendered
+-> D:\大疆\独立视频\长视频\2026-10_人人都是UI设计师\人人都是UI设计师_成片.mp4  (526.32s = 4.80 + 512.50 + 9.00)
+三份 SRT：D:\大疆\独立视频\长视频\2026-10_人人都是UI设计师\人人都是UI设计师_双语字幕.srt / _中文字幕.srt / _英文字幕.srt（142 条，时间含片头 4.80 s）
+人人都是UI设计师_成片.mp4: 526.32 s，121.2 MB，-16.1 LUFS，LRA 2.2，真峰值 -1.0 dBFS
+人人都是UI设计师_手机预览.mp4: 526.33 s，24.9 MB，-16.1 LUFS，LRA 2.2，真峰值 0.2 dBFS

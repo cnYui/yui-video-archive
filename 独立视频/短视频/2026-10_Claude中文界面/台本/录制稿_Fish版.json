@@ -1,0 +1,83 @@
+{
+ "slug": "Claude中文界面",
+ "title": "Claude 界面出现中文选项（网友先发现、官方未公告）",
+ "kicker": "悠一 · <b>Claude</b> 新动静",
+ "hook": [
+  "Claude 终于有中文了",
+  "选了会被钓鱼执法？"
+ ],
+ "lines": [
+  {
+   "id": "N01",
+   "zh": "Claude 的语言列表里，突然多了中文，简体繁体都有。",
+   "say": "Claude 的语言列表里，突然多了中文，简体繁体都有。",
+   "en": "Claude's language list suddenly includes Chinese, both Simplified and Traditional."
+  },
+  {
+   "id": "N02",
+   "zh": "今早，X 上的网友 KC 晒出这个选择框，说网页和 app 都有。",
+   "say": "今早，X上的网友 K C 晒出这个选择框，说网页和 app 都有。",
+   "en": "This morning, X user KC posted this picker and said both web and app have it."
+  },
+  {
+   "id": "N03",
+   "zh": "点左下角头像，选“语言”，简体和繁体都在列表里。",
+   "say": "点左下角头像，选“语言”，简体和繁体都在列表里。",
+   "en": "Click your avatar at the bottom left, choose Language, and both Simplified and Traditional Chinese are listed."
+  },
+  {
+   "id": "N04",
+   "zh": "这个列表，比官方帮助页长得多。八月那一版，只写了十一种语言，没有中文。",
+   "say": "这个列表，比官方帮助页长得多。八月那一版，只写了十一种语言，没有中文。",
+   "en": "The list is far longer than the official help page, whose August version names just 11 languages and no Chinese."
+  },
+  {
+   "id": "N05",
+   "zh": "更新日志、官方博客、官方 X，到现在都没提这件事。",
+   "say": "更新日志、官方博客、官方 X，到现在都没提这件事。",
+   "en": "The release notes, official blog and official X accounts haven't mentioned it."
+  },
+  {
+   "id": "N06",
+   "zh": "KC 说，这是重新支持，之前下架过。可没查到任何官方记录。",
+   "say": "K C 说，这是重新支持，之前下架过。可没查到任何官方记录。",
+   "en": "KC says it's back after being pulled, but no official record of that turned up."
+  },
+  {
+   "id": "N07",
+   "zh": "还有网友开玩笑：该不会是钓鱼执法？先让中文用户自己点，点完直接封号？",
+   "say": "还有网友开玩笑：该不会是钓鱼执法？先让中文用户自己点，点完直接封号？",
+   "en": "One user joked: is it entrapment? Let Chinese-speaking users pick it, then ban them?"
+  },
+  {
+   "id": "N08",
+   "zh": "悠一，一开始也不敢点。",
+   "say": "悠一，一开始也不敢点。",
+   "en": "Yui didn't dare click at first either."
+  },
+  {
+   "id": "N09",
+   "zh": "不过没查到任何证据说选中文会被封，官方也一个字没说。",
+   "say": "不过没查到任何证据说选中文会被封，官方也一个字没说。",
+   "en": "But there's no evidence that picking Chinese gets you banned, and Anthropic hasn't said a word."
+  },
+  {
+   "id": "N10",
+   "zh": "语言能选，不等于地区放开。",
+   "say": "语言能选，不等于地区放开。",
+   "en": "Being able to pick a language doesn't open up a region."
+  },
+  {
+   "id": "N11",
+   "zh": "官方支持地区名单里，没有中国大陆、香港、澳门。",
+   "say": "官方支持地区名单里，没有中国大陆、香港、澳门。",
+   "en": "Mainland China, Hong Kong and Macao are not on the official supported-regions list."
+  },
+  {
+   "id": "N12",
+   "zh": "选语言是界面的事，封不封号是规矩的事。",
+   "say": "选语言是界面的事，封不封号是规矩的事。",
+   "en": "Picking a language is about the interface. Getting banned is about the rules."
+  }
+ ]
+}

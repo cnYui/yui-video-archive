@@ -23,7 +23,7 @@ python scripts/assemble.py <期目录>          # 默认 4 路并行（2026-09-2
   - 碎行（不到 5 宽）并进邻行，并不进（会超 20）就把这两行重新平分；行尾的 ，、；： 去掉；
   - 引擎会把「≥18 个字符、以英文 / 数字结尾」的一行和「以英文 / 数字开头」的下一行粘成一行显示（给第 1 期旧时间轴用的，粘的时候不加空格），断行会避开这种断点（必要时把行尾的 ，留着）；
   - 最后按 `alignment.json` 的实际时间重新计时。改了规则只影响重跑 build_timeline 之后的时间轴（段的起止时间、口型不变，build_timeline 会说“保留原来的 mouth”）。
-- 章节（进度条和 B 站分段章节）用整片时间：片头 3.8 秒 + 正片 + 片尾 4.8 秒。
+- 章节（进度条和 B 站分段章节）用整片时间：片头 + 正片 + 片尾（2026-10-03 起片头 4.8 秒、片尾 9.0 秒；时长从 `片头片尾\intro|outro\index.html` 的 `window.DURATION` 读，模板换了重跑 build_timeline、mix_audio）。
 - 画面说明里的 `【动作：…】` 解析成 `actions`；`episode` 字段嵌入 timeline（背景路径转成相对引擎目录的路径）。
 - 画面尺寸：episode.json 的 `canvas`（新期 `[2340, 1080]`）检查后抄进 `timeline.episode.canvas`，打印 `canvas=2340x1080`；没写就是 1920×1080，时间轴和以前一模一样。它只影响出图，不影响口型和混音（改了 canvas 重跑 build_timeline 会说“保留原来的 mouth”）。
 
@@ -50,7 +50,7 @@ python scripts/assemble.py <期目录>          # 默认 4 路并行（2026-09-2
 - 片头片尾从 `SERIES\片头片尾\` 的 HTML 以 30 fps 重新渲染，**按 canvas 原生渲染**（data 里写 `"canvas": [2340, 1080]`，`render.py` 按它开视口）：名字（悠一）/ 小票居中，底色、纹理、四角裁切标、片头收尾的整屏墨黑铺满全宽，不是把 1920 的画面补边或拉伸。片尾清单用 `episode.json` 的 `outro_items` / `outro_closing`，为空时脚本报错——**去问用户**，不要自己填。
 - 正片：先自动跑一遍 `engine\sync_assets.py --series`（`--no-sync` 跳过），再 `render_parallel.py` 4 路并行（2026-09-28 用户定：所有渲染统一 4 路并行；JPEG q95 截图 → x264 CRF 16；视口 = canvas）。某一路浏览器卡住（截图 / 打开页面 30 s 超时）会自动重启并从卡住的那一帧接着渲染。各路相隔 0.7 s 启动（`--stagger`）；引擎预加载角色帧时偶发的加载失败由引擎自己重试，救回来的只打印一行 `image loads failed and were retried by the engine … all recovered`，不算报错。
 - 三段统一编码后拼接，混入 `mix.wav`（AAC 192k），`+faststart`。
-- 输出（期目录下）：`第NN期_<题目>_成片.mp4`、`_字幕.srt`（画面已烧录，这份给 B 站外挂字幕）、`_章节.txt`（B 站分段章节）。
+- 输出（期目录下）：`第NN期_<题目>_成片.mp4`、字幕（画面已烧录；SRT 给 B 站外挂字幕或存档）、`_章节.txt`（B 站分段章节）。中英双语的期（2026-10-02 起）出三份：`_双语字幕.srt`（每条中文一行、英文一行）、`_中文字幕.srt`、`_英文字幕.srt`，时间 = 画面上的显示区间（`segments[].subs` 的 a / b）；单语的旧期照旧一份 `_字幕.srt`。
 - 脚本自带的检查（不通过就停下，不会留下一个短了的成片）：episode.json 的 canvas 和时间轴里的一致（不一致 = 改了 canvas 没重跑 build_timeline）；片头、正片、片尾和成片的尺寸都等于 canvas；正片帧数 = round(main_duration × 30)；拼接后和成片时长与 `total_duration` 相差 ≤0.1 s；页面报错（JS 异常、console.error、字体加载失败、引擎重试后仍没加载成功的文件——报错里写出文件地址）→ 停下并提示先修 scenes.js。`--skip-main` 时如果时间轴在上次渲染后变了（帧数或尺寸对不上），也会被拦下。
 
 ## 5. 交付前检查
@@ -59,7 +59,7 @@ python scripts/assemble.py <期目录>          # 默认 4 路并行（2026-09-2
 - 抽帧（片头、每章开头和中段、章节切换处、片尾）拼成联系表用 Read 看：
   - 画面是 canvas 的宽度（2340）：内容舞台居中，徽标、讲解员贴画布左边，目录贴画布右边，进度条全宽，背景铺满，两边没有空白或黑边；片头片尾也是全宽、构图居中；
   - 左上只有「原LAI如此 #NN」；右上目录状态对（补充章节期间不高亮，讲完打勾）；
-  - 字幕按画布整体居中、不压角色、不压进度条；
+  - 字幕按画布整体居中、不压角色、不压进度条；双语的期中英两行都在，英文行不压进度条的标签，中英说的是同一件事；
   - 背景按章节切换，够淡，内容清楚；
   - 角色动作出现在该出现的地方，没有镜像、没有跳帧；
   - 进度条章节名和时间正确。
@@ -73,10 +73,11 @@ python scripts/assemble.py <期目录>          # 默认 4 路并行（2026-09-2
 |---|---|
 | 某句配音 | 重生成那一批 → `select_takes.py` → `segment_audio.py` → `build_timeline.py` → `mix_audio.py` → `assemble.py` |
 | 字幕文字（配音不变） | 改 `script_data.py` 字幕原文 → `build_script.py` → `build_timeline.py` → `mix_audio.py` → `assemble.py` |
+| 只改英文字幕（`dict(en=…, cuts=…)`） | `build_script.py`（看 `台本\双语字幕.md`）→ `build_timeline.py`（口型、混音不变，它会提示 mix.wav 仍然有效）→ `assemble.py`（字幕烧在画面里，不能 `--skip-main`） |
 | 画面（scenes.js、背景、动作） | `build_timeline.py`（动作、背景在 timeline 里时）→ `mix_audio.py` → `sync_assets.py` → `assemble.py` |
 | 讲解员的帧还没画完，先出草稿 | `sync_assets.py --frames <已有的帧目录> --allow-missing` → `assemble.py --no-sync`（帧画完后去掉这两个参数重跑 `assemble.py`） |
 | 技能的引擎模板更新了（新规则、修复） | `new_episode.py --update-engine <期目录>`（scenes.js 不动）→ `build_timeline.py` → `mix_audio.py` → `sync_assets.py` → `check_layout.py` → `assemble.py` |
 | 画面尺寸（episode.json 的 `canvas`，例如老目录改成 2340×1080） | 引擎是 2026-09-27 以前的就先 `new_episode.py --update-engine` → `build_timeline.py`（口型、混音不变）→ `sync_assets.py` → `check_layout.py` → `render.py --stills` 看版面 → `assemble.py`（不能 `--skip-main`，片头片尾也按新宽度重渲） |
 | 卡片版的旧期换成白板版（第 3 期 2026-09-28 试过；已发布的期先在副本里做，见 lessons.md「文件操作」） | `new_episode.py --update-engine <期目录>` → episode.json 加 `"style": "board"`、`"layout": "center"`（配音照旧，不加 voice_source）→ `build_timeline.py`（口型、混音不变，它会提示 mix.wav 仍然有效）→ 按 visuals.md「白板版」**重写 scenes.js**（只参考卡片版的内容）→ `sync_assets.py`（生成 handdata.js）→ `check_layout.py` → 抽帧看章末、疑问 → 目录 → `assemble.py` → `make_cover.py`（白板期自动出白板版封面；旧 cover.json 的 subHTML 会当 sub 用，t1 / t2 照旧） |
 | BGM 音量 | 改 `mix_audio.py` 参数 → `mix_audio.py` → `assemble.py --skip-main`（画面不重渲） |
-| 片尾清单 | 改 `episode.json` 的 `outro_items` → `assemble.py --skip-main` |
+| 片尾（参考文献 / 致谢 / 感谢语） | 改 `episode.json` 的 `outro_references` / `outro_items` / `outro_closing` → `assemble.py --skip-main` |

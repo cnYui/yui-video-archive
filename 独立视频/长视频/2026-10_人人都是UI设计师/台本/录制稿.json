@@ -1,0 +1,864 @@
+{
+ "slug": "人人都是UI设计师",
+ "title": "人人都是 UI 设计师：20 条设计军规",
+ "sub": "20 条设计军规",
+ "chapters": [
+  "起步与层级",
+  "空间与排版",
+  "颜色与细节"
+ ],
+ "lines": [
+  {
+   "id": "A01",
+   "zh": "AI 几分钟就能做出一个产品，界面却可能丑得让人想走。",
+   "say": "AI 几分钟就能做出一个产品，界面却可能丑得让人想走。",
+   "en": "AI can build a product in minutes, but the interface may be too ugly to keep anyone."
+  },
+  {
+   "id": "A02",
+   "zh": "10 月 3 号，X 用户龙海发了一篇长文。",
+   "say": "十月三号，X 用户龙海发了一篇长文。",
+   "en": "On October 3, X user Long Hai posted a long article."
+  },
+  {
+   "id": "A03",
+   "zh": "标题叫《人人都是 UI 设计师》。",
+   "say": "标题叫《人人都是 UI 设计师》。",
+   "en": "It is called “Everyone Is a UI Designer”."
+  },
+  {
+   "id": "A04",
+   "zh": "二十条设计规则，配二十张前后对比图。",
+   "say": "二十条设计规则，配二十张前后对比图。",
+   "en": "Twenty design rules, each with a before-and-after picture."
+  },
+  {
+   "id": "A05",
+   "zh": "规则全部出自一本书，《Refactoring UI》。",
+   "say": "规则全部出自一本书，Refactoring UI。",
+   "en": "Every rule comes from one book, Refactoring UI."
+  },
+  {
+   "id": "A06",
+   "zh": "作者是 Adam Wathan 和 Steve Schoger。",
+   "say": "作者是 Adam Wathan 和 Steve Schoger。",
+   "en": "Its authors are Adam Wathan and Steve Schoger."
+  },
+  {
+   "id": "A07",
+   "zh": "官网写着：出自 Tailwind CSS 的作者之手。",
+   "say": "官网写着：出自 Tailwind CSS 的作者之手。",
+   "en": "The site says it comes from the creators of Tailwind CSS."
+  },
+  {
+   "id": "A08",
+   "zh": "全书五十章，一本 218 页的 PDF。",
+   "say": "全书五十章，一本二百一十八页的 PDF。",
+   "en": "Fifty chapters in a 218-page PDF."
+  },
+  {
+   "id": "A09",
+   "zh": "为什么要补这一课？因为写代码的门槛，被 AI 抹平了。",
+   "say": "为什么要补这一课？因为写代码的门槛，被 AI 抹平了。",
+   "en": "Why learn this now? Because AI has flattened the barrier to writing code."
+  },
+  {
+   "id": "A10",
+   "zh": "功能能用，界面却很可能丑得没法接受。",
+   "say": "功能能用，界面却很可能丑得没法接受。",
+   "en": "The features work, but the interface can be too ugly to accept."
+  },
+  {
+   "id": "A11",
+   "zh": "作者估计，用户打开新产品的耐心，只有三秒。",
+   "say": "作者估计，用户打开新产品的耐心，只有三秒。",
+   "en": "The author reckons a user gives a new product about three seconds."
+  },
+  {
+   "id": "A12",
+   "zh": "第一眼像草台班子，功能再强，信任也归零。",
+   "say": "第一眼像草台班子，功能再强，信任也归零。",
+   "en": "If it looks amateur at first glance, trust drops to zero."
+  },
+  {
+   "id": "A13",
+   "zh": "好消息是，UI 不靠天分。",
+   "say": "好消息是，UI 不靠天分。",
+   "en": "The good news: UI does not take talent."
+  },
+  {
+   "id": "A14",
+   "zh": "书的官网首页就有这句：用方法，别靠天赋。",
+   "say": "书的官网首页就有这句：用方法，别靠天赋。",
+   "en": "The book's homepage says it outright: design with tactics, not talent."
+  },
+  {
+   "id": "A15",
+   "zh": "二十条规则，分三段，一条一条过。",
+   "say": "二十条规则，分三段，一条一条过。",
+   "en": "Twenty rules in three parts, one at a time."
+  },
+  {
+   "id": "R01a",
+   "zh": "第一条：先给界面定个性。",
+   "say": "第一条：先给界面定个性。",
+   "en": "Rule one: give your interface a personality."
+  },
+  {
+   "id": "R01b",
+   "zh": "个性由四样东西决定：字体、颜色、圆角、措辞。",
+   "say": "个性由四样东西决定：字体、颜色、圆角、措辞。",
+   "en": "Four things set it: typeface, color, corner radius, wording."
+  },
+  {
+   "id": "R01c",
+   "zh": "左边是银行：深青色、小圆角、措辞规矩，传达可靠。",
+   "say": "左边是银行：深青色、小圆角、措辞规矩，传达可靠。",
+   "en": "Left, a bank: deep teal, small corners, formal wording. It feels reliable."
+  },
+  {
+   "id": "R01d",
+   "zh": "右边是社交产品：亮色、插画、口语文案，传达轻松。",
+   "say": "右边是社交产品：亮色、插画、口语文案，传达轻松。",
+   "en": "Right, a social product: bright color, illustration, casual copy. It feels relaxed."
+  },
+  {
+   "id": "R01e",
+   "zh": "定了调，同一个界面里就别混搭。",
+   "say": "定了调，同一个界面里就别混搭。",
+   "en": "Once you pick a tone, keep it consistent across the interface."
+  },
+  {
+   "id": "R02a",
+   "zh": "第二条：先别上色。",
+   "say": "第二条：先别上色。",
+   "en": "Rule two: hold off on color."
+  },
+  {
+   "id": "R02b",
+   "zh": "早期用黑白灰做界面，只能靠间距、字重和对比度分层级。",
+   "say": "早期用黑白灰做界面，只能靠间距、字重和对比度分层级。",
+   "en": "Early on, work in grayscale: spacing, weight and contrast must carry the hierarchy."
+  },
+  {
+   "id": "R02c",
+   "zh": "左边就是灰度版：骨架清楚，主次分明。",
+   "say": "左边就是灰度版：骨架清楚，主次分明。",
+   "en": "The left is the grayscale version: a clear structure with clear priorities."
+  },
+  {
+   "id": "R02d",
+   "zh": "右边只改了两处：创建账号按钮，和选中套餐的对勾。",
+   "say": "右边只改了两处：创建账号按钮，和选中套餐的对勾。",
+   "en": "On the right only two spots changed: the Create Account button and the plan's check."
+  },
+  {
+   "id": "R02e",
+   "zh": "颜色只用来强化重点，不用来撑结构。",
+   "say": "颜色只用来强化重点，不用来撑结构。",
+   "en": "Color only reinforces what the layout already says."
+  },
+  {
+   "id": "R03a",
+   "zh": "第三条：别只靠字号分层级。",
+   "say": "第三条：别只靠字号分层级。",
+   "en": "Rule three: do not build hierarchy from font size alone."
+  },
+  {
+   "id": "R03b",
+   "zh": "左边的字重全是 400，只有大小不同。",
+   "say": "左边的字重全是四百，只有大小不同。",
+   "en": "On the left every weight is 400. Only the sizes differ."
+  },
+  {
+   "id": "R03c",
+   "zh": "结果是标题膨胀，辅助文字小得看不清。",
+   "say": "结果是标题膨胀，辅助文字小得看不清。",
+   "en": "The title balloons and the small print becomes hard to read."
+  },
+  {
+   "id": "R03d",
+   "zh": "右边改用字重和颜色：标题加粗到 700，次要文字调灰。",
+   "say": "右边改用字重和颜色：标题加粗到七百，次要文字调灰。",
+   "en": "On the right, weight and color do the work: a bold 700 title, greyed secondary text."
+  },
+  {
+   "id": "R03e",
+   "zh": "两三种文字颜色，加两种字重，就够了。",
+   "say": "两三种文字颜色，加两种字重，就够了。",
+   "en": "Two or three text colors plus two weights are enough."
+  },
+  {
+   "id": "R04a",
+   "zh": "第四条：想让主角突出，先给配角降音量。",
+   "say": "第四条：想让主角突出，先给配角降音量。",
+   "en": "Rule four: to make the lead stand out, turn the others down."
+  },
+  {
+   "id": "R04b",
+   "zh": "左边选中的 Orders 用了蓝色。",
+   "say": "左边选中的 Orders 用了蓝色。",
+   "en": "On the left, the selected item, Orders, is blue."
+  },
+  {
+   "id": "R04c",
+   "zh": "可旁边全是深色粗体，它还是跳不出来。",
+   "say": "可旁边全是深色粗体，它还是跳不出来。",
+   "en": "But everything beside it is dark and bold, so it still does not pop."
+  },
+  {
+   "id": "R04d",
+   "zh": "右边别再给它加戏，把没选中的调浅、降成常规字重。",
+   "say": "右边别再给它加戏，把没选中的调浅、降成常规字重。",
+   "en": "On the right, stop boosting it: lighten the rest and drop them to regular weight."
+  },
+  {
+   "id": "R04e",
+   "zh": "主角一点没改，却立刻成了焦点。",
+   "say": "主角一点没改，却立刻成了焦点。",
+   "en": "The selected item did not change, yet it is now the focus."
+  },
+  {
+   "id": "R05a",
+   "zh": "第五条：能不写标签，就不写。",
+   "say": "第五条：能不写标签，就不写。",
+   "en": "Rule five: if you can skip the label, skip it."
+  },
+  {
+   "id": "R05b",
+   "zh": "左边每行都是“标签加数据”，像数据库。",
+   "say": "左边每行都是“标签加数据”，像数据库。",
+   "en": "On the left every row is “label plus value”, like a database dump."
+  },
+  {
+   "id": "R05c",
+   "zh": "每个字段一样重，页面没有主次。",
+   "say": "每个字段一样重，页面没有主次。",
+   "en": "Every field weighs the same, so nothing leads."
+  },
+  {
+   "id": "R05d",
+   "zh": "右边去掉标签，名字加大加粗放最上面。",
+   "say": "右边去掉标签，名字加大加粗放最上面。",
+   "en": "On the right the labels go, and the name moves to the top, larger and bolder."
+  },
+  {
+   "id": "R05e",
+   "zh": "邮箱一看就是邮箱，电话一看就是电话。",
+   "say": "邮箱一看就是邮箱，电话一看就是电话。",
+   "en": "An email looks like an email, a phone number like a phone number."
+  },
+  {
+   "id": "R05f",
+   "zh": "例外是规格表和数据看板：标签要留，还要比数据略深。",
+   "say": "例外是规格表和数据看板：标签要留，还要比数据略深。",
+   "en": "The exception: spec sheets and dashboards keep labels, a shade darker than the data."
+  },
+  {
+   "id": "R06a",
+   "zh": "第六条：按钮看重要性，不看含义。",
+   "say": "第六条：按钮看重要性，不看含义。",
+   "en": "Rule six: style buttons by importance, not by meaning."
+  },
+  {
+   "id": "R06b",
+   "zh": "左边红的删除、蓝的编辑、绿的发布，全是实心。",
+   "say": "左边红的删除、蓝的编辑、绿的发布，全是实心。",
+   "en": "On the left: red Delete, blue Edit, green Publish, all solid."
+  },
+  {
+   "id": "R06c",
+   "zh": "三个并排，互相抢戏。",
+   "say": "三个并排，互相抢戏。",
+   "en": "Side by side, they compete."
+  },
+  {
+   "id": "R06d",
+   "zh": "一个页面通常只有一个主操作，一两个次操作，其余是辅助。",
+   "say": "一个页面通常只有一个主操作，一两个次操作，其余是辅助。",
+   "en": "A page usually has one primary action, one or two secondary, and a few minor ones."
+  },
+  {
+   "id": "R06e",
+   "zh": "右边：发布实心，编辑浅底，删除退成文字链接。",
+   "say": "右边：发布实心，编辑浅底，删除退成文字链接。",
+   "en": "On the right: Publish solid, Edit muted, Delete reduced to a text link."
+  },
+  {
+   "id": "R06f",
+   "zh": "删除再危险，也等用户点了再弹确认框，那时才用大红按钮。",
+   "say": "删除再危险，也等用户点了再弹确认框，那时才用大红按钮。",
+   "en": "Even a risky Delete waits: the big red button belongs in the confirmation dialog."
+  },
+  {
+   "id": "R07a",
+   "zh": "第七条：留白先给多，再收。",
+   "say": "第七条：留白先给多，再收。",
+   "en": "Rule seven: start with too much white space, then take it back."
+  },
+  {
+   "id": "R07b",
+   "zh": "平时的做法是加：挤了，就补一点边距。",
+   "say": "平时的做法是加：挤了，就补一点边距。",
+   "en": "The usual habit is adding: it feels crowded, so add a little padding."
+  },
+  {
+   "id": "R07c",
+   "zh": "结果每个元素只拿到“不至于太糟”的最小空间。",
+   "say": "结果每个元素只拿到“不至于太糟”的最小空间。",
+   "en": "Each element ends up with just enough room to look “not terrible”."
+  },
+  {
+   "id": "R07d",
+   "zh": "反着来：先给得远超所需，再慢慢收紧。",
+   "say": "反着来：先给得远超所需，再慢慢收紧。",
+   "en": "Flip it: give far more than you need, then tighten bit by bit."
+  },
+  {
+   "id": "R07e",
+   "zh": "单看一个元素觉得多的留白，放进整个界面，往往刚好。",
+   "say": "单看一个元素觉得多的留白，放进整个界面，往往刚好。",
+   "en": "Space that feels excessive around one element is often just right in the whole page."
+  },
+  {
+   "id": "R08a",
+   "zh": "第八条：有空间，不等于要用满。",
+   "say": "第八条：有空间，不等于要用满。",
+   "en": "Rule eight: having space does not mean filling it."
+  },
+  {
+   "id": "R08b",
+   "zh": "960 像素的桌面时代过去了，画布起手就是 1200 到 1400。",
+   "say": "九百六十像素的桌面时代过去了，画布起手就是一千二到一千四。",
+   "en": "960 pixels is history. Canvases now start at 1,200 to 1,400 pixels."
+  },
+  {
+   "id": "R08c",
+   "zh": "只需要 600 像素，就只用 600 像素。",
+   "say": "只需要六百像素，就只用六百像素。",
+   "en": "If 600 pixels is all you need, use 600."
+  },
+  {
+   "id": "R08d",
+   "zh": "左边的结账页硬撑满，输入框拉得老长。",
+   "say": "左边的结账页硬撑满，输入框拉得老长。",
+   "en": "On the left the checkout page is stretched edge to edge, with very long inputs."
+  },
+  {
+   "id": "R08e",
+   "zh": "右边收窄居中，反而好读好填。",
+   "say": "右边收窄居中，反而好读好填。",
+   "en": "On the right it is narrower and centered, easier to read and to fill in."
+  },
+  {
+   "id": "R08f",
+   "zh": "设计小界面没头绪，就先从 400 像素的手机宽度画起。",
+   "say": "设计小界面没头绪，就先从四百像素的手机宽度画起。",
+   "en": "Stuck on a small UI? Start from a 400-pixel mobile width."
+  },
+  {
+   "id": "R09a",
+   "zh": "第九条：这个标签，属于上面还是下面？",
+   "say": "第九条：这个标签，属于上面还是下面？",
+   "en": "Rule nine: does this label belong to the field above or below?"
+  },
+  {
+   "id": "R09b",
+   "zh": "左边的表单，标签上下各空 20 像素。",
+   "say": "左边的表单，标签上下各空二十像素。",
+   "en": "On the left a label has 20 pixels above it and 20 below."
+  },
+  {
+   "id": "R09c",
+   "zh": "它飘在两个输入框中间，归谁说不清。",
+   "say": "它飘在两个输入框中间，归谁说不清。",
+   "en": "It floats between two inputs, and nobody can say which it belongs to."
+  },
+  {
+   "id": "R09d",
+   "zh": "右边上面还是 20，下面收到 10 像素。",
+   "say": "右边上面还是二十，下面收到十像素。",
+   "en": "On the right it is still 20 above, but only 10 below."
+  },
+  {
+   "id": "R09e",
+   "zh": "标签立刻贴住自己的输入框，一条线都不用画。",
+   "say": "标签立刻贴住自己的输入框，一条线都不用画。",
+   "en": "The label snaps to its own input without a single line drawn."
+  },
+  {
+   "id": "R09f",
+   "zh": "法则：组与组的间距，要大于组内的间距。",
+   "say": "法则：组与组的间距，要大于组内的间距。",
+   "en": "The rule: space between groups must exceed the space inside them."
+  },
+  {
+   "id": "R10a",
+   "zh": "第十条：手机上，别照搬桌面的缩放比例。",
+   "say": "第十条：手机上，别照搬桌面的缩放比例。",
+   "en": "Rule ten: do not carry desktop proportions straight onto a phone."
+  },
+  {
+   "id": "R10b",
+   "zh": "桌面正文 18 像素，标题 45，是 2.5 倍。",
+   "say": "桌面正文十八像素，标题四十五，是二点五倍。",
+   "en": "Desktop: 18-pixel body, 45-pixel heading, 2.5 times bigger."
+  },
+  {
+   "id": "R10c",
+   "zh": "手机正文缩到 14，标题还乘 2.5，就是 35 像素。",
+   "say": "手机正文缩到十四，标题还乘二点五，就是三十五像素。",
+   "en": "On a phone the body drops to 14, and 2.5 times that is a 35-pixel heading."
+  },
+  {
+   "id": "R10d",
+   "zh": "标题折成四行，又笨又占地方。",
+   "say": "标题折成四行，又笨又占地方。",
+   "en": "The heading wraps to four lines, clumsy and space-hungry."
+  },
+  {
+   "id": "R10e",
+   "zh": "右边把标题单独收到 24 像素，只比正文大 1.7 倍。",
+   "say": "右边把标题单独收到二十四像素，只比正文大一点七倍。",
+   "en": "On the right the heading is 24 pixels, only about 1.7 times the body."
+  },
+  {
+   "id": "R10f",
+   "zh": "大屏上越大的元素，到小屏要缩得越多。",
+   "say": "大屏上越大的元素，到小屏要缩得越多。",
+   "en": "The bigger an element is on a large screen, the more it should shrink on a small one."
+  },
+  {
+   "id": "R11a",
+   "zh": "第十一条：一行多长，决定行距多大。",
+   "say": "第十一条：一行多长，决定行距多大。",
+   "en": "Rule eleven: line length decides line spacing."
+  },
+  {
+   "id": "R11b",
+   "zh": "左边一行约 120 个字符，眼睛很容易串行。",
+   "say": "左边一行约一百二十个字符，眼睛很容易串行。",
+   "en": "On the left a line runs about 120 characters, and the eye slips to the wrong line."
+  },
+  {
+   "id": "R11c",
+   "zh": "右边收到 45 到 55 个字符，读起来稳多了。",
+   "say": "右边收到四十五到五十五个字符，读起来稳多了。",
+   "en": "On the right it is 45 to 55 characters, which reads far steadier."
+  },
+  {
+   "id": "R11d",
+   "zh": "书里的建议：每行 45 到 75 个字符。",
+   "say": "书里的建议：每行四十五到七十五个字符。",
+   "en": "The book's advice: 45 to 75 characters per line."
+  },
+  {
+   "id": "R11e",
+   "zh": "行越长，行高越大：窄的约 1.5，宽的 1.8 到 2。",
+   "say": "行越长，行高越大：窄的约一点五，宽的一点八到二。",
+   "en": "Longer lines need more line height: about 1.5 when narrow, 1.8 to 2 when wide."
+  },
+  {
+   "id": "R11f",
+   "zh": "大标题反过来：行高收到 1.1 到 1.2。",
+   "say": "大标题反过来：行高收到一点一到一点二。",
+   "en": "Big headlines go the other way: tighten to 1.1 or 1.2."
+  },
+  {
+   "id": "R12a",
+   "zh": "第十二条：大小字并排，按基线对齐。",
+   "say": "第十二条：大小字并排，按基线对齐。",
+   "en": "Rule twelve: when big and small text sit together, align the baselines."
+  },
+  {
+   "id": "R12b",
+   "zh": "标题旁挂着小字链接，多数人直接居中。",
+   "say": "标题旁挂着小字链接，多数人直接居中。",
+   "en": "A small link next to a title, and most people just center it."
+  },
+  {
+   "id": "R12c",
+   "zh": "离得近的时候，小字像飘在半空。",
+   "say": "离得近的时候，小字像飘在半空。",
+   "en": "When they sit close, the small text seems to float."
+  },
+  {
+   "id": "R12d",
+   "zh": "右边只改了一行：center 换成 baseline。",
+   "say": "右边只改了一行：center 换成 baseline。",
+   "en": "On the right one line changed: center became baseline."
+  },
+  {
+   "id": "R12e",
+   "zh": "基线，就是字母“坐”着的那条隐形横线。",
+   "say": "基线，就是字母“坐”着的那条隐形横线。",
+   "en": "The baseline is the invisible line the letters sit on."
+  },
+  {
+   "id": "R12f",
+   "zh": "视线顺着它平移，整行立刻稳了。",
+   "say": "视线顺着它平移，整行立刻稳了。",
+   "en": "The eye glides along it, and the whole row settles."
+  },
+  {
+   "id": "R13a",
+   "zh": "第十三条：五种颜色，什么都做不出来。",
+   "say": "第十三条：五种颜色，什么都做不出来。",
+   "en": "Rule thirteen: five colors cannot build anything."
+  },
+  {
+   "id": "R13b",
+   "zh": "在线调色板给你五个色码，号称够用整个网站。",
+   "say": "在线调色板给你五个色码，号称够用整个网站。",
+   "en": "Online palette generators give you five hex codes and call it enough for a whole site."
+  },
+  {
+   "id": "R13c",
+   "zh": "硬套上去，就是左下角这样：黄底、红条、深蓝侧栏。",
+   "say": "硬套上去，就是左下角这样：黄底、红条、深蓝侧栏。",
+   "en": "Force them on and you get the lower left: a yellow page, a red bar, a dark blue sidebar."
+  },
+  {
+   "id": "R13d",
+   "zh": "真实界面要三类颜色：灰色 8 到 10 档。",
+   "say": "真实界面要三类颜色：灰色八到十档。",
+   "en": "A real UI needs three families of color. Greys come first: 8 to 10 shades."
+  },
+  {
+   "id": "R13e",
+   "zh": "品牌主色 5 到 10 档，红黄绿强调色各 5 到 10 档。",
+   "say": "品牌主色五到十档，红黄绿强调色各五到十档。",
+   "en": "Five to ten shades of the brand color, and of each accent such as red, yellow and green."
+  },
+  {
+   "id": "R13f",
+   "zh": "一套成熟的 UI，十种颜色、每种 5 到 10 档很常见。",
+   "say": "一套成熟的 UI，十种颜色、每种五到十档很常见。",
+   "en": "A mature UI commonly has ten colors, each with five to ten shades."
+  },
+  {
+   "id": "R13g",
+   "zh": "浅底不抢戏，深字不发虚，层次才自然。",
+   "say": "浅底不抢戏，深字不发虚，层次才自然。",
+   "en": "Light backgrounds stay quiet, dark text stays solid, and the layers feel natural."
+  },
+  {
+   "id": "R14a",
+   "zh": "第十四条：无障碍，也可以好看。",
+   "say": "第十四条：无障碍，也可以好看。",
+   "en": "Rule fourteen: accessible can still look good."
+  },
+  {
+   "id": "R14b",
+   "zh": "WCAG 要求普通文字对比度至少 4.5 比 1。",
+   "say": "W C A G 要求普通文字对比度至少四点五比一。",
+   "en": "WCAG asks for a contrast ratio of at least 4.5 to 1 for normal text."
+  },
+  {
+   "id": "R14c",
+   "zh": "白底黑字轻松过线，彩色小标签才难。",
+   "say": "白底黑字轻松过线，彩色小标签才难。",
+   "en": "Black on white passes easily. Small colored badges are the hard part."
+  },
+  {
+   "id": "R14d",
+   "zh": "要让白字过线，底色得又深又饱和，特别抢眼。",
+   "say": "要让白字过线，底色得又深又饱和，特别抢眼。",
+   "en": "To make white text pass, the badge must be dark and saturated, and it shouts."
+  },
+  {
+   "id": "R14e",
+   "zh": "左边三个标签都合格：5.97、5.07、5.34。",
+   "say": "左边三个标签都合格：五点九七、五点零七、五点三四。",
+   "en": "The three badges on the left all pass: 5.97, 5.07, 5.34."
+  },
+  {
+   "id": "R14f",
+   "zh": "右边反转：浅底深字，9.01、9.78、12.32。",
+   "say": "右边反转：浅底深字，九点零一、九点七八、十二点三二。",
+   "en": "On the right, flip it: pale background, dark text, 9.01, 9.78, 12.32."
+  },
+  {
+   "id": "R14g",
+   "zh": "对比度更高，看着反而更柔和。",
+   "say": "对比度更高，看着反而更柔和。",
+   "en": "More contrast, yet softer on the eye."
+  },
+  {
+   "id": "R15a",
+   "zh": "第十五条：别只靠颜色说话。",
+   "say": "第十五条：别只靠颜色说话。",
+   "en": "Rule fifteen: do not let color do all the talking."
+  },
+  {
+   "id": "R15b",
+   "zh": "左边的涨跌，只靠绿和红两种颜色区分。",
+   "say": "左边的涨跌，只靠绿和红两种颜色区分。",
+   "en": "On the left, green and red are the only signal for up versus down."
+  },
+  {
+   "id": "R15c",
+   "zh": "红绿色盲的用户看过去，两个标签几乎一样。",
+   "say": "红绿色盲的用户看过去，两个标签几乎一样。",
+   "en": "To a red-green colorblind user the two badges look almost identical."
+  },
+  {
+   "id": "R15d",
+   "zh": "强光、弱光下，颜色也会失效。",
+   "say": "强光、弱光下，颜色也会失效。",
+   "en": "Glare or dim light can wash color out too."
+  },
+  {
+   "id": "R15e",
+   "zh": "右边加了向上、向下的箭头，两个通道一起传。",
+   "say": "右边加了向上、向下的箭头，两个通道一起传。",
+   "en": "The right adds an up arrow and a down arrow, so two channels carry the message."
+  },
+  {
+   "id": "R15f",
+   "zh": "颜色只能强化信息，不能当唯一的手段。",
+   "say": "颜色只能强化信息，不能当唯一的手段。",
+   "en": "Color may reinforce a message, never be the only way to send it."
+  },
+  {
+   "id": "R16a",
+   "zh": "第十六条：加一道强调色边，界面就有了重心。",
+   "say": "第十六条：加一道强调色边，界面就有了重心。",
+   "en": "Rule sixteen: add one accent border and the interface gets a focal point."
+  },
+  {
+   "id": "R16b",
+   "zh": "不会画画，也能让界面更有设计感。",
+   "say": "不会画画，也能让界面更有设计感。",
+   "en": "No illustration skills needed to make a UI feel designed."
+  },
+  {
+   "id": "R16c",
+   "zh": "左边是一张素净的白卡片，大片白色，没有重心。",
+   "say": "左边是一张素净的白卡片，大片白色，没有重心。",
+   "en": "On the left, a plain white card: lots of white, no focus."
+  },
+  {
+   "id": "R16d",
+   "zh": "右边只在卡片顶部加了一条蓝色细条。",
+   "say": "右边只在卡片顶部加了一条蓝色细条。",
+   "en": "On the right, just one thin blue bar across the top."
+  },
+  {
+   "id": "R16e",
+   "zh": "同一招还能用在选中的导航项、提示框侧边、页面顶部。",
+   "say": "同一招还能用在选中的导航项、提示框侧边、页面顶部。",
+   "en": "The same trick works on a selected nav item, an alert box edge, or the page top."
+  },
+  {
+   "id": "R16f",
+   "zh": "一个彩色矩形，不需要设计天分。",
+   "say": "一个彩色矩形，不需要设计天分。",
+   "en": "One colored rectangle takes no design talent."
+  },
+  {
+   "id": "R17a",
+   "zh": "第十七条：字看不清，要改的是背景。",
+   "say": "第十七条：字看不清，要改的是背景。",
+   "en": "Rule seventeen: when text is unreadable, fix the background."
+  },
+  {
+   "id": "R17b",
+   "zh": "照片光影太复杂，字怎么调，也撑不住每个像素的对比度。",
+   "say": "照片光影太复杂，字怎么调，也撑不住每个像素的对比度。",
+   "en": "A photo's light and dark vary too much; no text color holds contrast at every pixel."
+  },
+  {
+   "id": "R17c",
+   "zh": "左边白字压在亮处就隐形，高光和暗部交错。",
+   "say": "左边白字压在亮处就隐形，高光和暗部交错。",
+   "en": "On the left, white text vanishes in the highlights, broken up by shadows."
+  },
+  {
+   "id": "R17d",
+   "zh": "右边垫了半透明黑色蒙版，标注里写的是 0.55。",
+   "say": "右边垫了半透明黑色蒙版，标注里写的是零点五五。",
+   "en": "On the right sits a semi-transparent black overlay, 0.55 according to the label."
+  },
+  {
+   "id": "R17e",
+   "zh": "还有几招：降图片对比度、叠品牌单色、加柔和文字光晕。",
+   "say": "还有几招：降图片对比度、叠品牌单色、加柔和文字光晕。",
+   "en": "Or lower the photo's contrast, tint it in a brand color, or add a soft text glow."
+  },
+  {
+   "id": "R18a",
+   "zh": "第十八条：图标和截图，都有适用的尺寸。",
+   "say": "第十八条：图标和截图，都有适用的尺寸。",
+   "en": "Rule eighteen: icons and screenshots each have an intended size."
+  },
+  {
+   "id": "R18b",
+   "zh": "矢量图放大不糊，就把 24 像素的图标拉到 64。",
+   "say": "矢量图放大不糊，就把二十四像素的图标拉到六十四。",
+   "en": "Vectors do not blur, so people blow a 24-pixel icon up to 64."
+  },
+  {
+   "id": "R18c",
+   "zh": "可小图标放大后，线条又粗又笨，比例失调。",
+   "say": "可小图标放大后，线条又粗又笨，比例失调。",
+   "en": "But an icon drawn small turns thick and clumsy when enlarged."
+  },
+  {
+   "id": "R18d",
+   "zh": "右边让图标保持原大小，外面套一个浅色圆底。",
+   "say": "右边让图标保持原大小，外面套一个浅色圆底。",
+   "en": "On the right the icon keeps its size inside a light circle that fills the space."
+  },
+  {
+   "id": "R18e",
+   "zh": "截图也一样：整张后台缩小七成，文字成了蚂蚁线。",
+   "say": "截图也一样：整张后台缩小七成，文字成了蚂蚁线。",
+   "en": "Same for screenshots: shrink a full dashboard 70 percent and the text becomes ant trails."
+  },
+  {
+   "id": "R18f",
+   "zh": "只截核心局部，或者画个简化的示意图。",
+   "say": "只截核心局部，或者画个简化的示意图。",
+   "en": "Crop to the core, or draw a simplified mock-up."
+  },
+  {
+   "id": "R19a",
+   "zh": "第十九条：画线之前，先想想别的办法。",
+   "say": "第十九条：画线之前，先想想别的办法。",
+   "en": "Rule nineteen: before you draw a line, try something else."
+  },
+  {
+   "id": "R19b",
+   "zh": "要区分元素，很多人第一反应是一条 1 像素的灰边。",
+   "say": "要区分元素，很多人第一反应是一条一像素的灰边。",
+   "en": "To separate two things, people reach for a 1-pixel grey border."
+  },
+  {
+   "id": "R19c",
+   "zh": "边框一多，界面就像一张噪点爆炸的 Excel 表。",
+   "say": "边框一多，界面就像一张噪点爆炸的 Excel 表。",
+   "en": "Too many borders and the UI looks like a noisy Excel sheet."
+  },
+  {
+   "id": "R19d",
+   "zh": "左边每个区块、每一行都有线，切得细碎拥挤。",
+   "say": "左边每个区块、每一行都有线，切得细碎拥挤。",
+   "en": "On the left every block and row has a line, and the page is chopped into pieces."
+  },
+  {
+   "id": "R19e",
+   "zh": "右边拿掉外框和输入框的描边，改用阴影和灰底。",
+   "say": "右边拿掉外框和输入框的描边，改用阴影和灰底。",
+   "en": "On the right the card and input outlines are gone; a shadow and a grey fill take over."
+  },
+  {
+   "id": "R19f",
+   "zh": "还有一招：直接拉大间距，留白就是分割线。",
+   "say": "还有一招：直接拉大间距，留白就是分割线。",
+   "en": "One more option: widen the gap, since white space is a divider too."
+  },
+  {
+   "id": "R20a",
+   "zh": "第二十条：空状态，要先设计。",
+   "say": "第二十条：空状态，要先设计。",
+   "en": "Rule twenty: design the empty state first."
+  },
+  {
+   "id": "R20b",
+   "zh": "新功能上线，新用户点进来，一条数据都没有。",
+   "say": "新功能上线，新用户点进来，一条数据都没有。",
+   "en": "A feature ships, a new user opens it, and there is no data at all."
+  },
+  {
+   "id": "R20c",
+   "zh": "左边只有一句“没找到联系人”，用户不知道点哪里。",
+   "say": "左边只有一句“没找到联系人”，用户不知道点哪里。",
+   "en": "The left only says “No contacts found”, and the user has no idea where to tap."
+  },
+  {
+   "id": "R20d",
+   "zh": "右边有插画、一句引导，和醒目的添加按钮。",
+   "say": "右边有插画、一句引导，和醒目的添加按钮。",
+   "en": "The right has an illustration, a prompt and a bold Add contact button."
+  },
+  {
+   "id": "R20e",
+   "zh": "没内容时，把用不上的标签页、筛选器、排序先藏起来。",
+   "say": "没内容时，把用不上的标签页、筛选器、排序先藏起来。",
+   "en": "Until there is content, hide tabs, filters and sorting that do nothing."
+  },
+  {
+   "id": "R20f",
+   "zh": "空状态，是用户和新功能的第一次见面。",
+   "say": "空状态，是用户和新功能的第一次见面。",
+   "en": "The empty state is a user's first meeting with a new feature."
+  },
+  {
+   "id": "Z01",
+   "zh": "二十条看完，有个共同点：没有一条靠天分。",
+   "say": "二十条看完，有个共同点：没有一条靠天分。",
+   "en": "After all twenty, one thing is common: none of them takes talent."
+  },
+  {
+   "id": "Z02",
+   "zh": "先灰度后上色，是把骨架和渲染分开。",
+   "say": "先灰度后上色，是把骨架和渲染分开。",
+   "en": "Grayscale first and color later separates structure from rendering."
+  },
+  {
+   "id": "Z03",
+   "zh": "间距和基线，背后是格式塔心理学和阅读习惯。",
+   "say": "间距和基线，背后是格式塔心理学和阅读习惯。",
+   "en": "Spacing and baselines rest on Gestalt psychology and reading habits."
+  },
+  {
+   "id": "Z04",
+   "zh": "作者给了两个练习。第一个：看到好界面就截图。",
+   "say": "作者给了两个练习。第一个：看到好界面就截图。",
+   "en": "The author suggests two exercises. First: screenshot every interface you admire."
+  },
+  {
+   "id": "Z05",
+   "zh": "再拿清单问自己：字重多少？组间距是组内的几倍？",
+   "say": "再拿清单问自己：字重多少？组间距是组内的几倍？",
+   "en": "Then ask it: what weight is the title? How many times bigger is the group gap?"
+  },
+  {
+   "id": "Z06",
+   "zh": "第二个：别看源码，用 HTML 和 CSS 一比一复刻。",
+   "say": "第二个：别看源码，用 HTML 和 CSS 一比一复刻。",
+   "en": "Second: skip the source and rebuild it one to one in HTML and CSS."
+  },
+  {
+   "id": "Z07",
+   "zh": "但二十条，连书里五十章的一半都不到。",
+   "say": "但二十条，连书里五十章的一半都不到。",
+   "en": "But twenty rules are less than half of the book's fifty chapters."
+  },
+  {
+   "id": "Z08",
+   "zh": "官网有两章免费样章，想看全书可以从那里开始。",
+   "say": "官网有两章免费样章，想看全书可以从那里开始。",
+   "en": "The site offers two free chapters if you want to start on the rest."
+  },
+  {
+   "id": "Z09",
+   "zh": "文末有个彩蛋：墨问上有篇笔记，讲怎么把这本书做成 Skill。",
+   "say": "文末有个彩蛋：墨问上有篇笔记，讲怎么把这本书做成 Skill。",
+   "en": "A bonus at the end: a Mowen note explains how to turn the book into a Skill."
+  },
+  {
+   "id": "Z10",
+   "zh": "规则是跑道，要靠自己的眼睛，别死记数字。",
+   "say": "规则是跑道，要靠自己的眼睛，别死记数字。",
+   "en": "Rules are a runway. Trust your own eyes and do not memorize numbers."
+  },
+  {
+   "id": "Z11",
+   "zh": "好看这件事，能逐条检查，就能逐条改。",
+   "say": "好看这件事，能逐条检查，就能逐条改。",
+   "en": "If good looks can be checked rule by rule, they can be fixed rule by rule."
+  }
+ ]
+}

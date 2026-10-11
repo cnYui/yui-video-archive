@@ -1,0 +1,27 @@
+N41   要听到：Max
+      听成：Max 5倍党 100美元, Max 20倍党 200美元.
+      没听到：—
+N46   要听到：Terminal Bench
+      听成：终端编程测试 Terminal Bench 4.0% 70.6%
+      没听到：—
+N48   要听到：Opus high
+      听成：Opus 这个分数取的是它最高的 x-hide
+      没听到：high
+N51   要听到：OS World
+      听成：电脑操作测试OS World 2.1 80.1%对81.8%
+      没听到：—
+N52   要听到：Sonnet Chartography
+      听成：看图表测试, Chartography 61.6%, Sonnet 5 15.6%
+      没听到：—
+N64   要听到：OS World
+      听成：电脑操作测试OS Word 离线字集 72.4% 上一代 15.7%
+      没听到：World
+N65   要听到：Terminal Bench
+      听成：Terminal Bench is 39.2% The last one is 0%
+      没听到：—
+N66   要听到：Luna GPT
+      听成：In the news report, GPT-6 Luna has the success of the 6th项, it is all ranked.
+      没听到：—
+N75   要听到：Sonnet
+      听成：Sony 5.5 It is called the speed and performance of the 5.5 It is called the speed and performance of the best.
+      没听到：Sonnet

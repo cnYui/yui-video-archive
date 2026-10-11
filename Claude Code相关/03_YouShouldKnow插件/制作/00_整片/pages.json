@@ -1,0 +1,365 @@
+{
+ "X_t1": {
+  "src": "pages/X_t1.png",
+  "w": 1096,
+  "h": 638,
+  "url": "https://x.com/ClaudeDevs/status/2106118517447876618",
+  "bg": "#FFFFFF",
+  "marks": {
+   "new plugin to Claude Code": [
+    [
+     309,
+     140,
+     480,
+     54
+    ]
+   ],
+   "It scans Claude's output for important information you might miss": [
+    [
+     32,
+     284,
+     960,
+     54
+    ],
+    [
+     992,
+     284,
+     11,
+     54
+    ],
+    [
+     32,
+     332,
+     193,
+     54
+    ]
+   ],
+   "to help keep you in the loop": [
+    [
+     236,
+     332,
+     500,
+     54
+    ]
+   ],
+   "/plugin enable cc-plugin-you-should-know@builtin": [
+    [
+     32,
+     524,
+     909,
+     54
+    ]
+   ]
+  }
+ },
+ "X_t2": {
+  "src": "pages/X_t2.png",
+  "w": 1096,
+  "h": 1422,
+  "url": "https://x.com/ClaudeDevs/status/2106118519368888562",
+  "bg": "#CFD9DE",
+  "marks": {
+   "is a mod that works by spinning off a sideagent to observe Claude's output": [
+    [
+     375,
+     188,
+     652,
+     54
+    ],
+    [
+     1027,
+     188,
+     11,
+     54
+    ],
+    [
+     32,
+     236,
+     659,
+     54
+    ]
+   ],
+   "Read more about mods in our newest blog post": [
+    [
+     32,
+     332,
+     844,
+     54
+    ]
+   ],
+   "Mods are hooks that ship inside plugins and run inside your Claude Code session": [
+    [
+     58,
+     1062,
+     968,
+     40
+    ],
+    [
+     1026,
+     1062,
+     8,
+     40
+    ],
+    [
+     58,
+     1102,
+     96,
+     40
+    ]
+   ]
+  }
+ },
+ "T_open": {
+  "src": "pages/T_open.png",
+  "w": 1600,
+  "h": 1120,
+  "url": "https://claude.dev/blog/getting-started-with-claude-code-mods/",
+  "bg": "#FAF9F5",
+  "marks": {
+   "A mod is a small JavaScript or TypeScript file that runs inside your Claude Code session": [
+    [
+     72,
+     86,
+     1229,
+     46
+    ],
+    [
+     72,
+     147,
+     227,
+     46
+    ]
+   ],
+   "It can watch what's happening, change what Claude Code does, or draw its own UI": [
+    [
+     315,
+     147,
+     1067,
+     46
+    ],
+    [
+     72,
+     208,
+     300,
+     46
+    ]
+   ]
+  }
+ },
+ "T_moves": {
+  "src": "pages/T_moves.png",
+  "w": 1600,
+  "h": 2200,
+  "url": "https://claude.dev/blog/getting-started-with-claude-code-mods/",
+  "bg": "#FAF9F5",
+  "marks": {
+   "A hook can do one of three things": [
+    [
+     213,
+     188,
+     565,
+     46
+    ]
+   ],
+   "Record every file edit. Take a reading after each turn.": [
+    [
+     817,
+     1006,
+     540,
+     40
+    ],
+    [
+     817,
+     1053,
+     228,
+     40
+    ]
+   ]
+  }
+ },
+ "T_uses": {
+  "src": "pages/T_uses.png",
+  "w": 1600,
+  "h": 680,
+  "url": "https://claude.dev/blog/getting-started-with-claude-code-mods/",
+  "bg": "#FAF9F5",
+  "marks": {
+   "Some of Claude Code's own features are built as mods": [
+    [
+     594,
+     30,
+     767,
+     46
+    ],
+    [
+     72,
+     91,
+     139,
+     46
+    ]
+   ],
+   "AGENTS.md support": [
+    [
+     388,
+     91,
+     351,
+     46
+    ]
+   ],
+   "the /diff pane beside the conversation": [
+    [
+     72,
+     24,
+     1320,
+     245
+    ]
+   ]
+  }
+ },
+ "Y_list": {
+  "src": "pages/Y_list.png",
+  "w": 1600,
+  "h": 2040,
+  "url": "https://code.claude.com/docs/en/plugins/mods/overview",
+  "bg": "#FFFFFF",
+  "marks": {
+   "You can't update or uninstall a built-in mod": [
+    [
+     1240,
+     224,
+     289,
+     40
+    ],
+    [
+     40,
+     280,
+     339,
+     40
+    ]
+   ],
+   "cc-plugin-you-should-know": [
+    [
+     56,
+     1525,
+     204,
+     28
+    ],
+    [
+     56,
+     1565,
+     160,
+     28
+    ]
+   ],
+   "Runs a side agent that watches your back while Claude works on longer tasks.": [
+    [
+     364,
+     1519,
+     290,
+     36
+    ],
+    [
+     364,
+     1559,
+     322,
+     36
+    ],
+    [
+     364,
+     1599,
+     391,
+     36
+    ]
+   ],
+   "it shows you a note above the prompt": [
+    [
+     437,
+     1719,
+     250,
+     36
+    ],
+    [
+     364,
+     1759,
+     234,
+     36
+    ]
+   ],
+   "Disabled by default.": [
+    [
+     794,
+     1519,
+     261,
+     36
+    ]
+   ],
+   "if available for your org": [
+    [
+     995,
+     1599,
+     183,
+     36
+    ],
+    [
+     794,
+     1639,
+     108,
+     36
+    ]
+   ],
+   "/plugin enable cc-plugin-you-should-know@builtin": [
+    [
+     810,
+     1685,
+     364,
+     28
+    ],
+    [
+     810,
+     1725,
+     335,
+     28
+    ]
+   ],
+   "@row:cc-plugin-you-should-know|Disable it in /plugin": [
+    [
+     1195,
+     1500,
+     365,
+     314
+    ]
+   ]
+  }
+ },
+ "Y_cl287": {
+  "src": "pages/Y_cl287.png",
+  "w": 1600,
+  "h": 1040,
+  "url": "https://code.claude.com/docs/en/changelog",
+  "bg": "#FFFFFF",
+  "marks": {
+   "Added You should know, a built-in mod where a side agent watches your back": [
+    [
+     100,
+     306,
+     1008,
+     36
+    ]
+   ],
+   "(for first-party sessions with telemetry on)": [
+    [
+     1183,
+     354,
+     312,
+     36
+    ],
+    [
+     100,
+     402,
+     245,
+     36
+    ]
+   ]
+  }
+ }
+}

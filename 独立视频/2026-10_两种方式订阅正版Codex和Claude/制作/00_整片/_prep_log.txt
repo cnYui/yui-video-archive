@@ -1,0 +1,8 @@
+截图：iap.jpg（邮箱打码）、usage.png、up_video.png、up_account.png
+打码静帧： still_list, still_mail, still_zoom
+M1139：445 帧；打码 68 帧，没找到定位的 53 帧
+M1140：444 帧；打码 110 帧，没找到定位的 30 帧
+录屏原片：11 段，1080 张，用到 976 帧
+出镜：2134 帧，抽了 2086 张
+frames.js ok
+mix.wav 153.33s；出镜原始 -17.66 LUFS、克隆配音原始 -23.14 LUFS → 各 -16.0；整片 -14.8 LUFS

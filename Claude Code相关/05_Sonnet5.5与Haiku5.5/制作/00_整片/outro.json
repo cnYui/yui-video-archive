@@ -1,0 +1,19 @@
+{
+  "references_title": "参考文献",
+  "references": [
+    "Anthropic，Introducing Claude Sonnet 5.5，anthropic.com/claude-sonnet-5-5",
+    "Anthropic，Introducing Claude Haiku 5.5，anthropic.com/claude-haiku-5-5",
+    "Anthropic，Claude API 定价，platform.claude.com/docs · pricing",
+    "Anthropic，模型总览，platform.claude.com/docs · models/overview",
+    "@claudeai、@ClaudeDevs，Haiku 5.5 发布推文与护蛋演示，X，2026-10"
+  ],
+  "thanks_title": "致谢",
+  "thanks": [
+    {"label": "演示画面", "value": "@ClaudeDevs · X（官方）"},
+    {"label": "资料", "value": "Anthropic 官方发布页 · 文档"},
+    {"label": "配音", "value": "温柔男生（AI 生成）"},
+    {"label": "剪辑", "value": "Claude Code（Sonnet 5.5）"}
+  ],
+  "closing": "感谢观看，我们下期再见",
+  "signature": "悠一"
+}

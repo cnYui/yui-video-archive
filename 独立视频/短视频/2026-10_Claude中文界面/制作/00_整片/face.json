@@ -1,0 +1,9 @@
+{
+  "src": "H:/DCIM/DJI_001/DJI_20261006130553_0177_D.MP4",
+  "start": 0.20,
+  "duration": 62.69,
+  "mirror": true,
+  "crop": {"cx": 0.515, "cy": 0.449, "side": 0.787},
+  "size": 360,
+  "sticker": "悠一 出镜"
+}

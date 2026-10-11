@@ -1,0 +1,139 @@
+1
+00:00:00,000 --> 00:00:02,014
+Claude Code 干活，就三步：
+Claude Code works in three steps: gather context,
+
+2
+00:00:02,034 --> 00:00:04,230
+找线索，动手，验结果。
+take action, verify the result.
+
+3
+00:00:04,250 --> 00:00:06,403
+官方入门课第一课，五月发布，
+Lesson one of the official intro course,
+
+4
+00:00:06,423 --> 00:00:08,740
+出镜的是 Lewis Menelaws。
+published in May, taught by Lewis Menelaws.
+
+5
+00:00:08,760 --> 00:00:10,497
+它和聊天窗口最大的差别，
+The big difference from a chat window:
+
+6
+00:00:10,517 --> 00:00:12,580
+是能直接动你的文件和终端。
+it can work on your files and terminal directly.
+
+7
+00:00:12,600 --> 00:00:13,942
+聊天框给你一段代码，
+A chat window hands you code to copy
+
+8
+00:00:13,962 --> 00:00:16,520
+你得自己复制粘贴。它自己进去改。
+and paste. Claude Code goes in and edits it itself.
+
+9
+00:00:16,540 --> 00:00:19,261
+怎么改？先收集上下文，再动手改
+How? It gathers context, then acts by editing files
+
+10
+00:00:19,281 --> 00:00:22,220
+文件、跑命令，最后验证结果。
+and running commands, then verifies the result.
+
+11
+00:00:22,240 --> 00:00:24,360
+没达标，就回到第一步重来，
+If it falls short, it loops back
+
+12
+00:00:24,380 --> 00:00:26,350
+一直循环到能验证为止。
+and tries again until the result checks out.
+
+13
+00:00:26,370 --> 00:00:29,058
+比如让它修失败的测试：先跑，
+Ask it to fix failing tests: it runs them, reads the errors,
+
+14
+00:00:29,078 --> 00:00:32,140
+读报错，找文件，改，再跑一遍。
+finds the files, edits, and runs them again.
+
+15
+00:00:32,160 --> 00:00:33,708
+整个过程里，你随时
+At any point, you can add context,
+
+16
+00:00:33,728 --> 00:00:35,630
+能插话、打断、纠偏。
+interrupt, or steer it.
+
+17
+00:00:35,650 --> 00:00:38,254
+改错了？按两下 Esc，文件能回到
+Made a mistake? Press Esc twice and your files roll back,
+
+18
+00:00:38,274 --> 00:00:40,940
+改之前；远端的改动撤不回。
+though changes to remote systems can't be undone.
+
+19
+00:00:40,960 --> 00:00:42,810
+撑起这个循环的有四样：
+Four things hold it up: the loop itself,
+
+20
+00:00:42,830 --> 00:00:45,880
+循环本身、上下文窗口、工具、权限。
+the context window, tools, and permissions.
+
+21
+00:00:45,900 --> 00:00:48,275
+窗口满了会自动压缩，什么时候调用
+The window compacts itself when it fills up, Claude decides
+
+22
+00:00:48,295 --> 00:00:50,771
+工具由它判断，权限由你来定。
+when to call tools, and you set the permissions.
+
+23
+00:00:50,791 --> 00:00:52,162
+终端、编辑器插件、
+It runs in your terminal,
+
+24
+00:00:52,182 --> 00:00:54,571
+桌面应用、网页版，都能用。
+as an editor plugin, in the desktop app, and on the web.
+
+25
+00:00:54,591 --> 00:00:57,150
+官方课自己也提醒：它可能理解错、
+The official course itself warns: it can misread your intent,
+
+26
+00:00:57,170 --> 00:00:59,241
+写出 bug、把事情做过头。
+introduce bugs, and over-engineer things.
+
+27
+00:00:59,261 --> 00:01:01,363
+聊天框交答案，代理交结果。
+A chat window delivers answers; an agent delivers results.
+
+28
+00:01:01,383 --> 00:01:03,891
+结果对不对，还得你来验。
+Whether they're right is still on you to verify.

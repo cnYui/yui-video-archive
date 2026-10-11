@@ -1,0 +1,36 @@
+Claude Code 新增了一个内置插件 You should know（在 /plugin 里叫 cc-plugin-you-should-know）：Claude 做较长任务时，有一个旁路智能体（side agent）在旁边替你盯着，发现你可能漏掉的事，就在输入框上方给你留一条便条。这期用官方演示视频把它的流程过一遍，再讲官方写明的开关和前提。
+
+本期内容
+00:00 开场：一份看起来很完美的总结
+00:18 新插件 You should know 是什么
+00:29 官方演示：提醒、详情、带回主会话
+01:05 原理：旁路智能体
+01:13 官方文档：内置模组表、默认关闭、怎么开关
+01:39 更新日志：哪个版本加的、有什么前提
+01:45 官方没写的地方
+
+要点（都来自官方推文、文档和更新日志）
+· 官方推文：新增插件 You should know，扫描 Claude 的输出，把你可能漏掉的重要信息挑出来；启用命令 /plugin enable cc-plugin-you-should-know@builtin。
+· 官方回复：它是一个 mod（模组），靠派出一个 sideagent 观察 Claude 的输出。
+· 官方文档（Mods 概览的内置模组表）：现在共 6 个内置模组，它是其中之一；默认关闭；在 /plugin → Installed → Show disabled 里能看到（如果你的组织可用）；在 /plugin 里 Disable 关闭；内置模组不能更新、不能卸载。
+· 更新日志：2.1.287 加入（括号里的前提：第一方会话、遥测开着）；2.1.288 把便条的措辞改成按谁负责某个决定，分别用 we / the main agent / you。
+· 官方演示：Claude 修结账超时，加了自动重试；总结之后插件弹出提醒——这个重试可能让顾客被扣两次钱；按 1 看详情（解法是幂等键），按 2 把这条提醒当作旁路智能体的备注带回主会话，Claude 看完改成每笔付款只生成一次随机键。
+
+几处要说明
+· 官方没写：它用哪个模型、多久提醒一次、会不会误报、扫描哪些内容、会不会多花额度；它的源码也没有公开（mods/ 目录里没有它）。我没有实测，以上只来自官方推文、文档和更新日志。
+· 画面里的 Glossed over 是官方演示视频自带的标注，不是插件界面。
+· 第 1 期讲过的“模组默认开着”指模组这个功能；这个内置插件默认是关的，要自己开。
+· 有用户在官方仓库反馈：按提示开启时提示 Plugin is not installed in this project（issue #99071，10 月 3 日还没解决），这是用户反馈，不是官方结论。
+
+资料来源（2026 年 10 月 3 日读的官方页面）
+· @ClaudeDevs 推文（新增 You should know，带演示视频）：https://x.com/ClaudeDevs/status/2106118517447876618
+· @ClaudeDevs 回复（它是个 mod，派出 sideagent 观察）：https://x.com/ClaudeDevs/status/2106118519368888562
+· 官方文档 · Mods 概览 · 内置模组表：https://code.claude.com/docs/en/plugins/mods/overview#mods-built-into-claude-code
+· 官方更新日志（2.1.287、2.1.288）：https://code.claude.com/docs/en/changelog
+· 模组入门教程（claude.dev，推文里链的那篇）：https://claude.dev/blog/getting-started-with-claude-code-mods/
+
+补充说明
+· 画面里的官方演示视频、推文和文档页面来自 @ClaudeDevs（X 平台）和 Anthropic 官方网站，仅作介绍和评论引用，版权归原作者；
+· 封面里的像素宇航员取自 claude.dev 官方页面，版权归 Anthropic；
+· 功能、版本号会变，以官方文档为准；
+· 配音：曼波声线（AI 生成）；剪辑：Claude Code（Sonnet 5.5）。

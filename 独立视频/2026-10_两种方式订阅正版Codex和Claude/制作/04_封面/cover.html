@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<!-- 《国内订阅Codex/Claude教程！（非中转非代充）》封面（三选一）：window.__COVER__ = { v: 1|2|3|4, w: 1920|1440 }，高 1080。
+     用户 2026-10-01：封面图展示文字“支付宝支付！官方正版”。人像由 cutout.py 从开场出镜抠出（face_cut/）。
+     三个方案版式一样，只换人像（用户：用正常的照片，不要挥手等大动作）：1 说完最后一句、带一点笑（87.2 s）/ 2 停顿（45.6 s）/ 3 停顿（52.5 s）。4 = 选定版（选好后改 PICKED）。
+     第三版（用户：“不走中转 不找代充请你删除，把顶部的codex claude拿到下面不找中转的位置，同时加上两个app的图标”）：
+     第四版（用户：“国内订阅这四个字也去除，两个图标再大一些，边上的黑色框也去除”）：底部只留“[Codex 图标] Codex / [Claude 图标] Claude”，图标 150 px，不加框。
+     图标取自本机装的 App、原样放（不改色不加底）：
+     Codex = Windows 商店版 OpenAI.Codex 26.928.2636.0 的 assets/Square44x44Logo.targetsize-256_altform-lightunplated.png（黑色 OpenAI 结）；
+     Claude = Claude 应用 app-2.16120.0 的 resources/ion-dist/images/claude_app_icon.png。复制在 ../../素材/图标/（素材目录不进 git）。
+     支付宝不放图标，只用文字（“支付宝”三个字用支付宝蓝）。 -->
+<link rel="stylesheet" href="file:///D:/大疆/AI科普/素材/字体/fonts.css">
+<style>
+:root { --ink:#1B1B1F; --gray:#6B7280; --orange:#FF4F1A; --marker:#FFD84D; --ali:#1677FF; }
+* { box-sizing:border-box; margin:0; padding:0; }
+html, body { height:1080px; overflow:hidden; background:#fff; font-family:'Noto Sans SC', sans-serif; color:var(--ink); }
+#c { position:relative; height:1080px; overflow:hidden; background:#fff radial-gradient(#E6E9EE 2.2px, transparent 2.4px) 0 0 / 36px 36px; }
+.abs { position:absolute; white-space:nowrap; }
+.blob { position:absolute; border-radius:50%; }
+.person { position:absolute; bottom:0; filter:drop-shadow(0 18px 30px rgba(0,0,0,.20)); }
+.chip { display:inline-block; padding:8px 28px; border:5px solid var(--orange); color:var(--orange); border-radius:999px; font:900 44px 'Noto Sans SC'; background:#fff; }
+.chip.fill { background:var(--orange); color:#fff; }
+.apps { display:inline-flex; align-items:center; gap:24px; font:900 84px 'Noto Sans SC'; }
+.apps img { display:block; width:150px; height:150px; }
+.apps .sl { color:#B0B6BF; font-weight:700; margin:0 6px; }
+.mark { background:linear-gradient(transparent 60%, var(--marker) 60%, var(--marker) 94%, transparent 94%); }
+.ali { color:var(--ali); }
+.o { color:var(--orange); }
+</style>
+</head>
+<body>
+<div id="c"></div>
+<script>
+const C = window.__COVER__ || { v: 1, w: 1920 };
+const W = C.w, H = 1080, WIDE = W >= 1900;
+const PICKED = 'calm_a';                                   // 选定版：用户 2026-10-01 选方案 1（说完最后一句、带一点笑，87.2 s）
+const FACE = { 1: 'calm_a', 2: 'calm_b', 3: 'calm_c', 4: PICKED }[C.v];
+const root = document.getElementById('c');
+root.style.width = W + 'px'; document.body.style.width = W + 'px';
+function el(html, style = {}) { const d = document.createElement('div'); d.className = 'abs'; d.innerHTML = html; Object.assign(d.style, style); root.appendChild(d); return d; }
+function person(file, h, right) { const img = document.createElement('img'); img.src = `face_cut/${file}_outline.png`; img.className = 'person'; img.style.height = h + 'px'; img.style.right = right + 'px'; root.appendChild(img); return img; }
+function blob(x, y, r, color) { const b = document.createElement('div'); b.className = 'blob'; Object.assign(b.style, { left: (x - r) + 'px', top: (y - r) + 'px', width: 2 * r + 'px', height: 2 * r + 'px', background: color }); root.appendChild(b); return b; }
+// 字太宽就缩：保证标题不压到脸上
+function fit(node, maxW) { let s = parseFloat(getComputedStyle(node).fontSize); while (node.scrollWidth > maxW && s > 40) { s -= 2; node.style.fontSize = s + 'px'; } }
+
+const X0 = WIDE ? 84 : 64;
+const ICON = { codex: '../../素材/图标/codex_256_lightunplated.png', claude: '../../素材/图标/claude_app_icon.png' };
+// 用户：“国内订阅这四个字也去除，两个图标再大一些，边上的黑色框也去除”——只留 [图标] Codex / [图标] Claude，不加框
+const APPS = `<span class="apps"><img src="${ICON.codex}">Codex<span class="sl">/</span><img src="${ICON.claude}">Claude</span>`;
+if (WIDE) {
+  blob(1520, 600, 430, '#DCEBFF');
+  person(FACE, 900, -90);
+  const a = el(`<span class="ali">支付宝</span>支付！`, { left: X0 + 'px', top: '160px', font: "900 196px/1.1 'Noto Sans SC'" });
+  const b = el(`<span class="o mark">官方正版</span>`, { left: X0 + 'px', top: '406px', font: "900 230px/1.1 'Noto Sans SC'" });
+  const c = el(APPS, { left: (X0 - 6) + 'px', top: '722px' });
+  fit(a, 1060); fit(b, 1000); fit(c.firstChild, 915);   // 底部那行别碰到肩膀（方案 2 的肩最靠左，按它留 ≥ 50 px）
+} else {
+  // 4:3（首页推荐）：标题横跨上半部分放大，人缩到右下角；底部一行图标 + 名字（别压到右下角的人）
+  blob(1150, 930, 280, '#DCEBFF');
+  person(FACE, 470, -60);
+  const a = el(`<span class="ali">支付宝</span>支付！`, { left: X0 + 'px', top: '90px', font: "900 216px/1.1 'Noto Sans SC'" });
+  const b = el(`<span class="o mark">官方正版</span>`, { left: X0 + 'px', top: '342px', font: "900 236px/1.1 'Noto Sans SC'" });
+  const c = el(APPS, { left: (X0 - 6) + 'px', top: '700px' });
+  fit(a, 1310); fit(b, 1310); fit(c.firstChild, 900);
+}
+window.__READY__ = false;
+Promise.all([document.fonts.ready, ...[...document.images].map(i => i.decode().catch(() => { throw new Error('图片加载失败 ' + i.src); }))]).then(() => { window.__READY__ = true; });
+</script>
+</body>
+</html>

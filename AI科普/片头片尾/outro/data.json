@@ -1,9 +1,17 @@
 {
+  "references_title": "参考文献",
+  "references": [],
+  "thanks_title": "致谢",
   "items": [
-    { "label": "拍摄", "value": "Pocket 4P" },
-    { "label": "剪辑", "value": "ChatCut" },
-    { "label": "视频剪辑模型", "value": "Opus 5.5" }
+    {
+      "label": "配音",
+      "value": "悠一"
+    },
+    {
+      "label": "剪辑",
+      "value": "Claude Code（Opus 5.5）"
+    }
   ],
-  "closing": "感谢大家看到最后",
+  "closing": "感谢观看，我们下期再见",
   "signature": "悠一"
 }

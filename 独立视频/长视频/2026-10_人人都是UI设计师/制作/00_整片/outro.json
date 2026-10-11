@@ -1,0 +1,17 @@
+{
+  "references_title": "参考文献",
+  "references": [
+    "龙海 @longhaiqwe123，人人都是 UI 设计师（X 长文），2026-10-03",
+    "Adam Wathan、Steve Schoger，Refactoring UI（书与官网），refactoringui.com",
+    "老李，从「读过」到「用上」：把一本书做成随叫随到的 Skill，墨问，2026-08-22"
+  ],
+  "thanks_title": "致谢",
+  "thanks": [
+    {"label": "文章与对比图", "value": "龙海 @longhaiqwe123 · X"},
+    {"label": "书内插图", "value": "Refactoring UI · Adam Wathan / Steve Schoger"},
+    {"label": "配音", "value": "温柔男生声线（AI 生成）"},
+    {"label": "剪辑", "value": "Claude Code（Sonnet 5.5）"}
+  ],
+  "closing": "感谢观看，我们下期再见",
+  "signature": "悠一"
+}

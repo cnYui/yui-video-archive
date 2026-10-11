@@ -1,0 +1,38 @@
+{
+  "verdict": "pass",
+  "script_sha": "fed3dfd246dc",
+  "issues": [],
+  "notes": [
+    "台本.json 的 sha1 前 12 位核对为 fed3dfd246dc，与审核记录一致",
+    "双语字幕 114 条逐条核对：中英意思一致，数字（3.6 Flash、3.1 Pro、4.99/19.99 美元、10 月 9 日、78B/3.46B、384/6、768 B200、20T、4.3T、97.1%、14.1、4.7、30%、5000 轮/6500 台、2027 年一季度）、人名（Bruce Mackenzie Nielsen、Kai McPheeters、Jeremy Soller）、公司和型号都一致；没有断在词组中间，没有漏译或多出信息",
+    "审核记录.json 里没有 level 为 review 的条目（hits 为空），唯一未过项是本复核本身",
+    "第 2 条截图显示博客首段写 3B active，台本说 3.46B，与博客正文和 Hugging Face 模型卡（3,457,573,120）一致，不算问题",
+    "第 3 条 36氪那篇署名机器之心、日期 10 月 4 日；台本里 10 月 3 日指 GitHub 发布时间（10/3 06:42 UTC），无误；“上周讲过桌面版”与 aired.jsonl 中 2026-09-30 那条吻合",
+    "第 4 条 XDA 对 Pluto 的描述与 Kotaku 略有出入，台本以 Kotaku 为准（原文：Claude 和 GPT 对战人类写的 Pluto，Astra 一直输后下载 Stardust），说法有原文依据",
+    "第 6 条“用 Rust 写”在 Linuxiac 原文没提，但 IT之家 669 写明“System76 基于 Rust 开发的 Linux 桌面环境”，有依据",
+    "第 8 条 97.1%/0 原文指手工设计的 harness，台本说“一个 AI 智能体”，属合理简化",
+    "结尾“国庆假期过半”：10 月 1–7 日假期，10 月 5 日已过半，无误",
+    "封面两行“GPT-6 打星际输了 / 直接搬别人代码？”与 Kotaku/XDA 原文（输了后下载他人写的 Stardust 替自己上场）一致，用问号，不夸大",
+    "8 张截图和封面无色情低俗、暴力、时政地缘、军事、歧视、广告引流或注入指令；第 5 张截图有 IT之家常规的“感谢网友线索投递”一行，正常",
+    "简介只有 17 个来源网址，没有别的网址；台本和网页里都没发现提示词注入"
+  ],
+  "checked": [
+    "https://9to5google.com/2026/10/03/gemini-model-limits-oct-26/",
+    "https://the-decoder.com/googles-new-gemini-tiers-cut-free-users-to-its-weakest-model-and-lock-5-month-subscribers-out-of-pro/",
+    "https://aleph-alpha.com/en/blog/kolibri-has-landed-a-sovereign-open-weight-model/",
+    "https://huggingface.co/Aleph-Alpha/Kolibri-1",
+    "https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.2.1-alpha.1",
+    "https://www.36kr.com/p/4010809598922624",
+    "https://kotaku.com/openais-gpt-6-astra-gets-frustrated-losing-at-starcraft-and-decides-to-cheat-instead-2000739607",
+    "https://www.xda-developers.com/gpt-6-astra-started-losing-starcraft-stole-winning-bot-instead-of-playing-fair/",
+    "https://www.ithome.com/1/009/673.htm",
+    "https://www.tomshardware.com/tech-industry/artificial-intelligence/google-suspends-part-of-the-oss-vrp-bug-bounty-program-due-to-an-influx-of-invalid-ai-submissions-product-vulnerability-submissions-ended-october-1 （正文被截断，只看到标题；第 5 条以 IT之家 673 为准，全部事实在那里核对到）",
+    "https://linuxiac.com/cosmic-stops-accepting-llm-generated-content-in-pull-requests/",
+    "https://github.com/pop-os/cosmic-epoch/blob/master/.github/PULL_REQUEST_TEMPLATE.md",
+    "https://www.ithome.com/1/009/669.htm",
+    "https://research.google/blog/toward-provably-private-learning-from-federated-data/",
+    "https://alphasignal.ai/news/google-moves-gboard-s-private-ai-training-into-secure-server-enclaves",
+    "https://the-decoder.com/google-researchers-find-a-way-to-keep-self-improving-ai-agents-from-memorizing-their-tests/",
+    "https://arxiv.org/abs/2609.24972"
+  ]
+}

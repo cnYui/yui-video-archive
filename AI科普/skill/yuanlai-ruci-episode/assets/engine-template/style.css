@@ -77,6 +77,15 @@ body { font-family: var(--cjk); color: var(--paper); -webkit-font-smoothing: ant
 #subs .hr { margin-right: -.6em; }
 #subs .hr2 { margin-right: -.5em; }
 #subs .hl { margin-left: -.6em; }
+/* 中英双语（episode.json "bilingual"，用户 2026-10-02：“原LAI如此也改成双语”；core.js 在时间轴有 segments[].subs 时给 #subs 加 .bi）：
+   项目统一标准 = Way to AGI 的 #subZh / #subEn——中文 52 px / 800、行高 66，英文 30 px / 600、行高 40、在带顶下 70 px，各一行居中。
+   底部有全宽进度条（标签 y 1026 起），整条带从标准的 y 922 上移到 y 900，英文行才不压进度条。白板版的颜色在 board.css。 */
+#subs.bi { top: 900px; height: 130px; }
+#subs.bi .s { font-weight: 800; letter-spacing: 0; line-height: 66px; }
+#subs.bi .s.en { top: 70px; font-weight: 600; line-height: 40px; }
+#subs.bi .stroke { -webkit-text-stroke-width: 10px; }
+#subs.bi .en.stroke { -webkit-text-stroke-width: 6px; }
+#subs.bi .en.fill { color: rgba(237,234,227,.82); }
 
 /* ---------- chapter bar (Bocchi palette), full canvas width ---------- */
 #barShade { position: absolute; left: 0; top: 1000px; width: var(--cw); height: 80px;

@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>悠一 · Intro · 品牌色 1 · 打字机</title>
+<link rel="stylesheet" href="../../../../fonts/fonts.css">
+<link rel="stylesheet" href="../../fonts/brand-fonts.css">
+<script src="../../../common/pack.js"></script>
+<script src="../../common/brand.js"></script>
+<style>html, body { margin: 0; overflow: hidden; background: #FAF9F5; }</style>
+</head>
+<body>
+<script>
+(function () {
+  'use strict';
+  /* 品牌色版 1「打字机 · 发送」：现行片头的符号链（> → { } → </> → AI 芯片）原样保留，芯片收成光标后先打一行小字
+   * “AI鼓励师”，回车换行打大字“悠一”；全选变成淡黄高亮，再按回车把整段像一条消息一样发出去，画面落到白。4.3 s。
+   * 配色：米白 #FAF9F5 背景、墨色 #141413、橙 #D97757 原子、淡黄 #F5DB9A 高亮。 */
+  const P = window.PACK, B = window.BRAND, { clamp, lerp, prog, E } = P, C = B.C;
+  const RAW = Object.assign({ name: '悠一', role: 'AI鼓励师', endColor: '#FFFFFF' }, window.__DATA__ || {});
+  const NAME = String(RAW.name == null ? '' : RAW.name).trim() || '悠一';
+  const ROLE = String(RAW.role == null ? '' : RAW.role).trim();
+  const END_COLOR = RAW.endColor === 'none' ? 'none' : P.hexOr(RAW.endColor, '#FFFFFF');
+
+  window.DURATION = 4.3;
+  window.__READY__ = false;
+  const { FW, OX, ctx } = P.setup(RAW, C.ivory);
+
+  const T = Object.assign({}, B.T0, { pinsOut: [1.47, 1.57], aiOut: [1.51, 1.57], fold: [1.50, 1.62], caret: [1.58, 1.78],
+    role: 1.80, enter: [2.20, 2.30], name: 2.32, blink: [2.75, 3.15], sel: [3.30, 3.48], send: [3.56, 3.88], fade: [3.95, 4.25] });
+
+  /* ------------------------------------------------------------ text layout (stage units, measured once fonts are in) */
+  const L = { roleSize: 44, roleSp: 5, nameSize: 250 };
+  const nameChars = [...NAME], roleChars = [...ROLE];
+  function measureRole(text) {                         // cumulative widths of the mixed-font role line
+    const m = /^([A-Za-z0-9 ]+)(.*)$/.exec(text), lat = m ? m[1] : '', cjk = m ? m[2] : text, adv = [];
+    ctx.save(); ctx.letterSpacing = L.roleSp + 'px';
+    for (let i = 1; i <= text.length; i++) {
+      const pre = text.slice(0, i), pl = pre.slice(0, lat.length), pc = pre.slice(lat.length);
+      ctx.font = `600 ${L.roleSize}px 'Poppins'`; const wl = pl ? ctx.measureText(pl).width : 0;
+      ctx.font = `500 ${L.roleSize}px 'Noto Sans SC'`; const wc = pc ? ctx.measureText(pc).width : 0;
+      adv.push(wl + wc - L.roleSp);
+    }
+    ctx.restore(); return { lat, cjk, adv, w: adv.length ? adv[adv.length - 1] : 0 };
+  }
+  function layout() {
+    ctx.font = `700 ${L.nameSize}px 'Noto Sans SC'`;
+    let w = ctx.measureText(NAME).width;
+    const maxW = 860, groupW = (fs, w0) => w0 + fs * 0.62;
+    if (groupW(L.nameSize, w) > maxW) { L.nameSize = Math.max(70, L.nameSize * maxW / groupW(L.nameSize, w)); ctx.font = `700 ${L.nameSize}px 'Noto Sans SC'`; w = ctx.measureText(NAME).width; }
+    L.nameAdv = nameChars.map((_, i) => ctx.measureText(NAME.slice(0, i + 1)).width);
+    L.nameW = w;
+    L.role = measureRole(ROLE);
+    const blockW = Math.max(groupW(L.nameSize, w), L.role.w + L.roleSize * 0.6);
+    L.x0 = -blockW / 2;                                  // left edge of both lines
+    L.nameY = ROLE ? 42 : 0;                             // middle of the name line
+    L.nameBase = L.nameY + L.nameSize * 0.38;
+    L.roleY = L.nameY - L.nameSize * 0.5 - 62;           // middle of the role line
+    L.caretH = Math.max(10, L.nameSize * 0.08);
+    L.top = ROLE ? L.roleY - L.roleSize * 0.7 : L.nameY - L.nameSize * 0.5;
+    L.bot = L.nameBase + L.nameSize * 0.14;
+    L.right = L.x0 + Math.max(w, L.role.w) ;
+  }
+
+  /* ------------------------------------------------------------ drawing */
+  function drawText(t, op) {
+    ctx.save(); ctx.globalAlpha *= op; ctx.fillStyle = C.dark; ctx.textBaseline = 'alphabetic'; ctx.textAlign = 'left';
+    if (ROLE) {
+      const dt = 0.045, { lat } = L.role;
+      ctx.letterSpacing = L.roleSp + 'px'; ctx.textBaseline = 'middle';
+      roleChars.forEach((ch, i) => {
+        const k = E.outCubic(prog(t, T.role + i * dt, T.role + i * dt + 0.03)); if (k <= 0) return;
+        const x = L.x0 + (i ? L.role.adv[i - 1] + L.roleSp : 0);
+        ctx.save(); ctx.globalAlpha *= k;
+        if (i < lat.length) { ctx.font = `600 ${L.roleSize}px 'Poppins'`; ctx.fillText(ch, x, L.roleY + L.roleSize * 0.04); }
+        else { ctx.font = `500 ${L.roleSize}px 'Noto Sans SC'`; ctx.fillText(ch, x, L.roleY); }
+        ctx.restore();
+      });
+      ctx.letterSpacing = '0px'; ctx.textBaseline = 'alphabetic';
+    }
+    ctx.font = `700 ${L.nameSize}px 'Noto Sans SC'`;
+    const dt = Math.min(0.09, 0.42 / Math.max(1, nameChars.length));
+    nameChars.forEach((ch, i) => {
+      const k = E.outCubic(prog(t, T.name + i * dt, T.name + i * dt + 0.03)); if (k <= 0) return;
+      ctx.save(); ctx.globalAlpha *= k; ctx.fillText(ch, L.x0 + (i ? L.nameAdv[i - 1] : 0), L.nameBase); ctx.restore();
+    });
+    ctx.restore();
+  }
+  /** the caret: an orange underscore that follows the typing (returns [x0, y0, x1, y1, w]) */
+  function caretAt(t) {
+    const roleDt = 0.045, nameDt = Math.min(0.09, 0.42 / Math.max(1, nameChars.length));
+    // line 1 (role) geometry
+    const rW = L.roleSize * 0.5, rH = Math.max(8, L.roleSize * 0.11), rY = L.roleY + L.roleSize * 0.42;
+    let adv = 0;
+    roleChars.forEach((_, i) => { adv = lerp(adv, L.role.adv[i] + L.roleSp, E.outCubic(prog(t, T.role + i * roleDt, T.role + i * roleDt + 0.045))); });
+    const line1 = [L.x0 + adv, rY, L.x0 + adv + rW, rY, rH];
+    // line 2 (name) geometry
+    const nW = L.nameSize * 0.5, nH = L.caretH, nY = L.nameBase + L.nameSize * 0.06 + nH / 2;
+    let adv2 = 0;
+    nameChars.forEach((_, i) => { adv2 = lerp(adv2, L.nameAdv[i] + L.nameSize * 0.08, E.outCubic(prog(t, T.name + i * nameDt, T.name + i * nameDt + 0.045))); });
+    const line2 = [L.x0 + adv2, nY, L.x0 + adv2 + nW, nY, nH];
+    if (!ROLE) return line2;
+    const e = E.inOutCubic(prog(t, T.enter[0], T.enter[1]));
+    return B.seg(line1, line2, e);
+  }
+
+  let ready = false;
+  function renderAt(t) {
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    ctx.fillStyle = C.ivory; ctx.fillRect(0, 0, FW, 1080);
+    if (!ready) return;
+    const z = B.zoom(t, 3.5);
+    ctx.translate(OX + 960, 540); ctx.scale(z, z);
+
+    /* --- the symbol chain, then the chip folds back into its core --- */
+    const S = B.chain(t, T);
+    const fold = E.inOutCubic(prog(t, T.fold[0], T.fold[1]));
+    const chipOp = 1 - E.inCubic(prog(t, T.fold[0] + 0.02, T.fold[1]));
+    const sc = lerp(1, 0.46, fold);
+    const pinsOut = E.inCubic(prog(t, T.pinsOut[0], T.pinsOut[1]));
+    const labelOp = 1 - prog(t, T.aiOut[0], T.aiOut[1]);
+    if (chipOp > 0.001 && t < T.caret[1]) {
+      ctx.save(); ctx.scale(sc, sc);
+      const S2 = Object.assign({}, S, { pins: S.pins.map(g => g * (1 - pinsOut)), w: S.w * lerp(1, 0.7, fold) });
+      B.drawChain(ctx, S2, { op: chipOp, atomOp: 0, label: 'AI', labelOp: labelOp, ink: C.dark });
+      ctx.restore();
+    }
+    /* --- the atom: die -> caret -> follows the typing --- */
+    let a;
+    if (t < T.caret[0]) a = S.atom;
+    else { const e = B.morphEase(prog(t, T.caret[0], T.caret[1])); a = B.seg(B.A.dieH, caretAt(t), e); }
+    if (t >= T.caret[1]) a = caretAt(t);
+    const bl = prog(t, T.blink[0], T.blink[1]);
+    let aOp = 1 - 0.75 * Math.pow(Math.sin(Math.PI * bl * 2), 2);
+    aOp *= 1 - E.inOutCubic(prog(t, T.sel[0] - 0.06, T.sel[0] + 0.03));
+
+    /* --- selection + send --- */
+    const selE = (() => { const p = prog(t, T.sel[0], T.sel[1]); return 0.35 * E.inOutCubic(p) + 0.65 * E.outCubic(p); })();
+    const sendP = prog(t, T.send[0], T.send[1]), sendE = E.inCubic(sendP);
+    const padX = 30, padY = 26;
+    const left = L.x0 - padX, right = Math.max(L.right, L.x0 + L.nameW + L.nameSize * 0.6) + padX, top = L.top - padY, bot = L.bot + padY;
+    ctx.save();
+    if (sendP > 0) { ctx.translate(0, -820 * sendE); ctx.globalAlpha *= 1 - E.inQuad(clamp((sendP - 0.55) / 0.45)); }
+    if (selE > 0) { const x = lerp(right, left, selE); ctx.fillStyle = C.yellow; ctx.fillRect(x, top, right - x, bot - top); }
+    if (t >= T.caret[0]) drawText(t, 1);
+    B.atom(ctx, a, C.orange, t >= T.caret[0] ? aOp : 1);
+    ctx.restore();
+    if (t < T.caret[0]) B.atom(ctx, a, C.orange, 1);
+
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    P.fade(ctx, FW, END_COLOR, prog(t, T.fade[0], T.fade[1]));
+  }
+  window.renderAt = renderAt;
+
+  P.fontsReady([`700 ${L.nameSize}px 'Noto Sans SC'`, "500 44px 'Noto Sans SC'", "600 44px 'Poppins'", "700 54px 'Poppins'"]).then(() => {
+    layout(); ready = true; renderAt(0); window.__READY__ = true;
+  });
+})();
+</script>
+</body>
+</html>

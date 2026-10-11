@@ -1,0 +1,12 @@
+{
+  "slug": "短名（成片 / 字幕文件名前缀，例：YouShouldKnow插件）",
+  "title": "本期内部标题（不是 B 站标题）",
+  "sub": "Claude Code 新插件（左栏目录标题下面的小字）",
+  "chapters": ["≤ 7 个字", "≤ 7 个字", "≤ 7 个字"],
+  "lines": [
+    {"id": "N01", "zh": "中文字幕（一句话，口语，短；≤ 约 28 字）", "say": "念的字（数字写汉字：二点一点二八七；/plugin 写“斜杠 plugin”；@ 写艾特；3D 写“三 D”）", "en": "English subtitle: spoken, concise, ≤ 90 characters, official names kept."},
+    {"id": "N02", "zh": "…", "say": "…", "en": "…"},
+    {"id": "N03", "zh": "官方推文说：……", "say": "官方推文说：……", "en": "The official post says …"},
+    {"id": "N04", "zh": "官方没写的，明说“官方没写”。", "say": "官方没写的，明说，官方没写。", "en": "What the docs don't say, we say so."}
+  ]
+}

@@ -8,9 +8,9 @@
     python daily.py webvoice --task <编号> [--task <编号2>] [--date ...] [--probe]   网页版音频 → 配音/raw/C01_vN.mp3（登记文字、记用量）
     python daily.py tts    [--date ...] --api [--takes 1] [--model s1]   Fish Audio API 配音（停用：只在用户点名时加 --api 用）
     python daily.py voice  [--date ...] [--hist urls_hist.txt]   选版本 + 按句切开、对齐字幕
-    python daily.py render [--date ...] [--skip-main]           时间轴 → 混音 → 成片 → 封面 → 上传版（≤9 MB）→ 核对 → 审稿单、投稿信息
+    python daily.py render [--date ...] [--workers N] [--horizontal]   时间轴 → 混音 → 中英双语字幕 → 封面 → 竖屏成片（make_vertical.py）→ 上传版（B 站 H.265 / 另三个平台 H.264，≤9 MB）→ 核对 → 审稿单、投稿信息
         ✋ 用户看 审稿单.md 和成片，回复“发”；Claude 用 Chrome 插件填 B 站投稿页，收到“发”才点「立即投稿」
-    python daily.py published --bv BV1xxxxxxxxx [--date ...]   记 BV 号，写进已播清单（下次选题去重用）
+    python daily.py published --bv BV1xxxxxxxxx [--also 抖音 --also 小红书] [--date ...]   记 BV 号和另外发成功的平台，写进已播清单（下次选题去重用）
     python daily.py status [--date ...]
 
 日期默认是北京时间今天。期目录 = D:/大疆/AI日报/<日期>/（必须直接放在系列根下）。
@@ -150,12 +150,14 @@ def cmd_tts(a):
 
 # ---------------------------------------------------------------- webvoice（Fish Audio 网页版的音频 → 配音/raw/）
 R2 = "https://platform.r2.fish.audio/tasks/{d}/{t}.mp3"
+# 2026-10-03 起 R2 拦不带来源页的请求（404），要带 fish.audio 的 Referer / Origin
+R2_HEADERS = {"Referer": "https://fish.audio/", "Origin": "https://fish.audio"}
 
 
 def r2_exists(url):
     for method, headers in (("HEAD", {}), ("GET", {"Range": "bytes=0-0"})):
         try:
-            r = httpx.request(method, url, headers={"User-Agent": UA, **headers}, timeout=20, follow_redirects=True)
+            r = httpx.request(method, url, headers={"User-Agent": UA, **R2_HEADERS, **headers}, timeout=20, follow_redirects=True)
             if r.status_code in (200, 206):
                 return True
         except httpx.HTTPError:
@@ -177,7 +179,12 @@ def cmd_webvoice(a):
     now = datetime.now(timezone.utc)
     days = list(dict.fromkeys((now + timedelta(days=k)).strftime("%Y-%m-%d") for k in (0, -1, 1)))
     urls = []
-    for t in a.task:
+    if a.file:   # 2026-10-04：音频改存私有桶（…r2.cloudflarestorage.com/fish-platform-data/task/<编号>.mp3 + 签名），公开地址 404
+        for f in a.file:
+            if not Path(f).is_file():
+                sys.exit(f"找不到文件：{f}")
+            urls.append(Path(f))
+    for t in ([] if a.file else a.task):
         t = t.strip().lower()
         if not re.fullmatch(r"[0-9a-f]{32}", t):
             sys.exit(f"任务编号应该是 32 位十六进制：{t}")
@@ -203,19 +210,23 @@ def cmd_webvoice(a):
         while (raw / f"{c['chunk']}_v{n}.mp3").exists():
             n += 1
         dst = raw / f"{c['chunk']}_v{n}.mp3"
-        r = httpx.get(u, headers={"User-Agent": UA}, timeout=120, follow_redirects=True)
-        r.raise_for_status()
+        if isinstance(u, Path):
+            content = u.read_bytes()
+        else:
+            r = httpx.get(u, headers={"User-Agent": UA, **R2_HEADERS}, timeout=120, follow_redirects=True)
+            r.raise_for_status()
+            content = r.content
         tmp = dst.with_suffix(".part")
-        tmp.write_bytes(r.content)
+        tmp.write_bytes(content)
         tmp.replace(dst)
         dur = ffprobe_duration(dst)
         if dur < 60:
             sys.exit(f"{dst.name} 只有 {dur:.1f} 秒：网页上可能没生成完或只生成了一段，查一下再下")
         db[dst.name] = c["text"]
-        print(f"{dst.name}: {dur:.1f} s，{len(r.content) / 1e6:.2f} MB")
+        print(f"{dst.name}: {dur:.1f} s，{len(content) / 1e6:.2f} MB")
     db_path.write_text(json.dumps(db, ensure_ascii=False, indent=1), encoding="utf-8")
     with open(raw / "web_usage.txt", "a", encoding="utf-8") as f:
-        f.write(f"{datetime.now(CST):%Y-%m-%d %H:%M} 北京｜网页版 S1｜{len(c['text'])} 字 / {c['count']} 字节｜任务 {' '.join(a.task)}\n")
+        f.write(f"{datetime.now(CST):%Y-%m-%d %H:%M} 北京｜网页版 S1｜{len(c['text'])} 字 / {c['count']} 字节｜任务 {' '.join(a.task)}{'（页面下载）' if a.file else ''}\n")
     save_state(ep, st, "tts", source="web", tasks=a.task)
     print("下一步：daily.py voice")
 
@@ -238,21 +249,22 @@ def ffprobe_duration(p):
     return float(out.decode().strip())
 
 
-def encode_upload(src, dst, logdir, codec="hevc"):
+def encode_upload(src, dst, logdir, codec="hevc", vf=None):
     """上传版 ≤ UPLOAD_LIMIT（插件单个文件上限 10 MB）。5–6 分钟、2340x1080 只能给视频约 150 kbps，
-    所以默认用 H.265（同样大小画质比 H.264 好一截；B 站收 H.265）。codec="h264" 是退路（B 站不收时用）。
+    所以默认用 H.265（同样大小画质比 H.264 好一截；B 站收 H.265）。codec="h264" 是退路（B 站不收时用）；抖音 / 小红书用 H.264。
     两遍编码；x265 的 stats 路径里不能有盘符冒号，所以在 logdir 里用相对路径跑。"""
     dur = ffprobe_duration(src)
     v = max(100, int(UPLOAD_LIMIT * 8 / 1000 / dur * 0.96) - 64)
     logdir = Path(logdir)
+    vfa = ["-vf", vf] if vf else []                      # 竖屏版：缩到 720×1560 再编码（2026-10-05：1080×2340 在 ≈150 kbps 下会糊成块）
     for _ in range(3):
         if codec == "hevc":
             xp = f"vbv-maxrate={int(v * 1.6)}:vbv-bufsize={v * 2}:log-level=error"
-            common = ["-c:v", "libx265", "-preset", "medium", "-b:v", f"{v}k", "-pix_fmt", "yuv420p"]
+            common = [*vfa, "-c:v", "libx265", "-preset", "medium", "-b:v", f"{v}k", "-pix_fmt", "yuv420p"]
             p1 = [*common, "-x265-params", f"pass=1:stats=x265_2pass.log:{xp}"]
             p2 = [*common, "-x265-params", f"pass=2:stats=x265_2pass.log:{xp}", "-tag:v", "hvc1"]
         else:
-            common = ["-c:v", "libx264", "-preset", "slow", "-tune", "animation", "-b:v", f"{v}k", "-maxrate", f"{int(v * 1.6)}k",
+            common = [*vfa, "-c:v", "libx264", "-preset", "slow", "-tune", "animation", "-b:v", f"{v}k", "-maxrate", f"{int(v * 1.6)}k",
                       "-bufsize", f"{v * 2}k", "-pix_fmt", "yuv420p", "-passlogfile", "x264_2pass"]
             p1, p2 = [*common, "-pass", "1"], [*common, "-pass", "2"]
         run(["ffmpeg", "-y", "-loglevel", "error", "-i", Path(src).resolve(), *p1, "-an", "-f", "null", "NUL"], cwd=logdir)
@@ -268,6 +280,7 @@ def encode_upload(src, dst, logdir, codec="hevc"):
 NUM = re.compile(r"\d+(?:\.\d+)?")
 LATIN = re.compile(r"[A-Za-z][A-Za-z0-9.\-]*\d[A-Za-z0-9.\-]*|[A-Z][A-Za-z]{2,}")
 COMMON = {"AI", "CEO", "API", "The", "App", "OpenAI", "Anthropic", "Google"}
+MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 
 
 def page_text(url):
@@ -285,6 +298,25 @@ def page_text(url):
         return False, f"{type(e).__name__}: {str(e)[:60]}"
 
 
+def num_alts(txt):
+    """Other spellings of the numbers in a Chinese line that an English source may use instead."""
+    alt = {}
+    # “116亿” = 11.6 billion, “18亿” = 1.8 billion, “3万” = 30,000 / 30K: accept the English forms too
+    for num, unit in re.findall(r"(\d+(?:\.\d+)?)\s*(亿|万)", txt):
+        v = float(num) / 10 if unit == "亿" else float(num) * 10
+        s = f"{v:g}"
+        alt[num] = [s, s + "k", f"{float(num) / 100:g} million"] if unit == "万" else [s, f"{float(num) * 100:g} million"]   # 1.5 亿 = 150 million
+    # “5000 台” = 5,000（英文原文带千分位逗号；2026-10-04 Muse Home Link）
+    for num in re.findall(r"(?<![\d.,])(\d{4,})(?![\d.])", txt):
+        alt.setdefault(num, []).append(f"{int(num):,}")
+    # “9 月” = September / Sep（英文原文只写月份名，没有数字 9；2026-10-01 DeepMind 博客）
+    for num in re.findall(r"(?<![\d.])(\d{1,2})\s*月", txt):
+        if 1 <= int(num) <= 12:
+            name = MONTHS[int(num) - 1]
+            alt.setdefault(num, []).extend([name, name[:3] + " "])
+    return alt
+
+
 def fact_check(sc):
     """For every line: numbers and latin names that do not appear in any of its item's source pages."""
     cache, out = {}, []
@@ -300,12 +332,7 @@ def fact_check(sc):
         for ln in n["lines"]:
             txt = ln["text"]
             toks = [t for t in dict.fromkeys(NUM.findall(txt) + LATIN.findall(txt)) if t not in COMMON]
-            # “116亿” = 11.6 billion, “18亿” = 1.8 billion, “3万” = 30,000 / 30K: accept the English forms too
-            alt = {}
-            for num, unit in re.findall(r"(\d+(?:\.\d+)?)\s*(亿|万)", txt):
-                v = float(num) / 10 if unit == "亿" else float(num) * 10
-                s = f"{v:g}"
-                alt[num] = [s, s + "k"] if unit == "万" else [s]
+            alt = num_alts(txt)
             def found(t):
                 return t.lower() in corpus or any(a.lower() in corpus for a in alt.get(t, []))
             missing = [t for t in toks if not found(t)] if corpus else toks
@@ -327,7 +354,54 @@ def desc_len(s):
     return len(s.encode("utf-16-le")) // 2      # 按网页里 JS 的字符串长度算（表情符号算 2）
 
 
-def build_publish_info(ep, ep_json, sc, upload_path, dur):
+# 三个平台的标题限长（用户 2026-10-04 的“标题 3×4”，2026-10-06 视频号不发后改 3×3：B 站 ≤ 80 / 抖音 ≤ 30 / 小红书 ≤ 20；check_titles.py 同口径）
+TITLE_LIMITS = {"bilibili": (1, 80), "douyin": (1, 30), "xiaohongshu": (1, 20)}
+TITLE_NAMES = {"bilibili": "B 站标题", "douyin": "抖音标题", "xiaohongshu": "小红书标题"}
+CJK_ADJ = re.compile(r"\s*([一-鿿，。！？：；、“”（）《》])\s*")
+
+
+def squeeze(s):
+    """标题里中文和英文之间不留空格（“Gemini免费版只剩Flash-Lite”），英文单词之间的空格保留。"""
+    s = re.sub(r"\s+", " ", (s or "").strip())
+    return CJK_ADJ.sub(r"\1", s)
+
+
+def auto_titles(sc):
+    """台本.json 没写 titles（或某个平台超限）时的退路：10月5日AI圈8件事：<第 1 条>，<第 2 条>。写得好的标题由台本 titles 给，见 SKILL.md 第 3 步。"""
+    d = datetime.fromisoformat(sc["date"])
+    news = sc["news"]
+    n = len(news)
+    keys = [squeeze(x.get("rundown_key") or x["headline"]) for x in news]
+    heads = [squeeze(x["headline"]) for x in news]
+    md = f"{d.month}月{d.day}日"
+    bili = f"{md}AI圈{n}件事：{keys[0]}，{keys[1]}" if n > 1 else f"{md}AI圈{n}件事：{keys[0]}"
+    if len(bili) > TITLE_LIMITS["bilibili"][1]:
+        bili = f"{md}AI圈{n}件事：{keys[0]}"
+    dy = f"{heads[0]}，{heads[1]}" if n > 1 else heads[0]
+    if len(dy) > TITLE_LIMITS["douyin"][1]:
+        dy = heads[0]
+    xhs = f"{heads[0]}！AI圈{n}件事"
+    if len(xhs) > TITLE_LIMITS["xiaohongshu"][1]:
+        xhs = f"AI圈{n}件事：{heads[0]}"
+    return {"bilibili": bili[:80], "douyin": dy[:30], "xiaohongshu": xhs[:20]}
+
+
+def platform_titles(sc):
+    """台本 titles 优先（每个平台单独校验限长），缺的 / 超限的用 auto_titles 补；返回 (titles, 说明)。"""
+    auto = auto_titles(sc)
+    given = sc.get("titles") or {}
+    out, notes = {}, []
+    for k, (lo, hi) in TITLE_LIMITS.items():
+        t = squeeze(given.get(k) or "")
+        if t and lo <= len(t) <= hi:
+            out[k] = t
+        else:
+            out[k] = auto[k]
+            notes.append(f"{TITLE_NAMES[k]}" + ("没写" if not t else f"「{t}」{len(t)} 字超限（{lo}–{hi}）") + f"，用自动的「{auto[k]}」")
+    return out, notes
+
+
+def build_publish_info(ep, ep_json, sc, upload_path, dur, upload_h264=None):
     news = sc["news"]
     tags = list(BASE_TAGS)
     for n in news:
@@ -344,24 +418,38 @@ def build_publish_info(ep, ep_json, sc, upload_path, dur):
         refs = " ；".join(f"{r.get('name', '')} {r.get('url', '')}".strip() for r in n.get("refs") or [])   # 空格隔开，网址后面不粘标点
         src_lines.append(f"{num[i]} {n['headline']}：{refs}")
     exported = load_json(ep / "candidates.json", {}).get("meta", {}).get("exported_cst", "")
-    head = [f"AI每日日报 · {ep_json['date_label']}（{ep_json.get('weekday', '')}）", "鲸鱼娘带你看看 AI 圈发生了什么。", ""]
+    head = [f"AI每日日报 · {ep_json['date_label']}（{ep_json.get('weekday', '')}）· 竖屏版", "鲸鱼娘带你看看 AI 圈发生了什么。", ""]
     toc = ["今日内容", *(chap or [f"{num[i]} {n['headline']}" for i, n in enumerate(news)]), ""]
     tail = ["来源", *src_lines, "",
             "说明",
             f"· 信息截至北京时间 {exported or ep_json['date']}，以各家官方发布为准。",
-            "· 本期配音由 AI 合成（Fish Audio「苏晓晓」）；内容由 AI 整理，并自动核对来源，如有出入以原文为准。",   # 全自动：没有人工审核，不能写“经人工审核”
+            "· 本期配音由 AI 合成（Fish Audio「苏晓晓」），背景音乐为程序合成；内容由 AI 整理，并自动核对来源，如有出入以原文为准。",   # 全自动：没有人工审核，不能写“经人工审核”
             "· 主播鲸鱼娘（像素素材包「大肥鱼」）是 DeepSeek 的网友拟人同人（原型：上善无形，CC BY-NC-SA 4.0；女仆造型：ZipZipPipe），与 DeepSeek 官方无关。"]
     desc = "\n".join(head + toc + tail)
     if desc_len(desc) > DESC_LIMIT:
         # 超出时先去掉时间表（过审后 B 站分段章节有同样的时间点）；来源和说明不能删，还超就由 gate 挡住
         desc = "\n".join(head + tail)
+    titles, tnotes = platform_titles(sc)
+    # 抖音 / 小红书：标题放不下完整信息，完整标题放简介第一行；简介 = 完整标题 + 今日几件事 + AI 声明（来源在 B 站简介里，这里不放网址）
+    items = "、".join(squeeze(n.get("rundown_key") or n["headline"]) for n in news)
+    short_desc = f"{titles['bilibili']}\n今日 {len(news)} 件事：{items}。\n内容由 AI 整理并自动核对来源，如有出入以原文为准。"
+    topic_pool = ["AI每日日报", "人工智能", "大模型", "AI资讯"] + [t for t in tags if t not in BASE_TAGS and t not in ("鲸鱼娘", "大肥鱼")] + ["AIGC", "科技", "开源"]
+    topics = list(dict.fromkeys(topic_pool))
+    c3 = str(ep / "封面" / "封面_3x4_1080x1440.png")
+    c4 = str(ep / "封面" / "封面_4x3_1440x1080.png")
+    v264 = str(upload_h264 or upload_path)
     return {
-        "title": ep_json["title"],
-        "video": str(upload_path), "video_seconds": round(dur, 2),
-        "cover_16x9": str(ep / "封面" / "封面_16x9_1920x1080.png"), "cover_4x3": str(ep / "封面" / "封面_4x3_1440x1080.png"),
+        "title": titles["bilibili"], "titles": titles, "title_notes": tnotes,
+        "video": str(upload_path), "video_h264": str(upload_h264) if upload_h264 else None, "video_seconds": round(dur, 2),
+        "cover_16x9": str(ep / "封面" / "封面_16x9_1920x1080.png"), "cover_4x3": c4, "cover_3x4": c3,
         "partition": "人工智能", "partition_fallback": "科技数码",
         "tags": tags[:10], "collection": "AI每日日报", "declaration": "含AI生成内容",
         "description": desc,
+        # 另外两个平台（用户 2026-10-05：“之后日报的 routine 都是竖屏，并且都要发四个平台”；2026-10-06 起视频号不发）；填表步骤见 SKILL.md 第 8 步
+        "douyin": {"title": titles["douyin"], "description": short_desc, "topics": topics[:5], "declaration": "内容由AI生成", "collection": "AI每日日报",
+                   "video": v264, "cover_3x4": c3, "cover_4x3": c4},
+        "xiaohongshu": {"title": titles["xiaohongshu"], "description": short_desc, "topics": topics[:9], "declaration": "笔记含AI合成内容", "original": True,
+                        "collection": "AI每日日报", "video": v264, "cover_3x4": c3},
     }
 
 
@@ -390,6 +478,8 @@ def write_review(ep, ep_json, sc, checks, cache, info, final_mp4, upload_size, d
     rest = [c for c in cands if c["url"] not in used][:10]
     if rest:
         L += ["## 没选的候选（前 10）"] + [f"- {c['cid']}（{c['score']}）{c['title'][:70]}｜{c['source']}" for c in rest] + [""]
+    L += ["## 三个平台的标题（台本 titles 优先，缺的 / 超限的用自动的）"] + [f"- {TITLE_NAMES[k]}（{len(v)} 字）：{v}" for k, v in (info.get("titles") or {}).items()]
+    L += [f"- 说明：{x}" for x in info.get("title_notes") or []] + [""]
     L += ["## B 站投稿信息", f"- 标题：{info['title']}",
           f"- 分区：{info['partition']}（投稿页只有一级分区；没有就用 {info['partition_fallback']}）",
           f"- 标签：{'、'.join(info['tags'])}", f"- 合集：{info['collection']}（已建好，在“加入合集”下拉里选）", f"- 创作声明：{info['declaration']}",
@@ -398,18 +488,26 @@ def write_review(ep, ep_json, sc, checks, cache, info, final_mp4, upload_size, d
 
 
 def cmd_render(a):
+    """竖屏（用户 2026-10-05：之后日报的 routine 都是竖屏、发四个平台；2026-10-06 起视频号不发，三个平台）：配音时间轴 → 混音（口型）→ 中英双语字幕 → 封面 → make_vertical.py all
+    （竖屏数据、字幕自动拆条、BGM、4 路渲染、成片 + 三份 SRT + 章节 + 3:4 封面）→ 上传版（B 站 H.265 / 其余两个平台 H.264，各 ≤ 9 MB）→ 事实核对 → 审稿单、投稿信息。
+    --horizontal = 以前的 2340×1080 横屏版（悠一片头片尾 + 手写白板），竖屏出不来时的退路，只发 B 站。"""
     ep = ep_dir(a.date)
     st = load_state(ep)
     run([sys.executable, YL / "build_timeline.py", ep, "--series", SERIES])
     run([sys.executable, YL / "mix_audio.py", ep, "--series", SERIES])
-    # 2340x1080（iPhone 全面屏 19.5:9）：本技能自己的宽屏拼接脚本（《原LAI如此》的 assemble.py 是 1920x1080，不动它）
-    run([sys.executable, SK / "assemble_wide.py", ep, "--series", SERIES, "--workers", str(a.workers)] + (["--skip-main"] if a.skip_main else []))
-    run([sys.executable, SK / "make_cover_white.py", ep, "--from-script"])   # 2026-09-28 起：白底两行大字 + 鲸鱼娘右下 + 其余新闻小字（旧版 make_cover.py 留着不用）
+    # 中英双语字幕（用户 2026-10-02，项目统一标准）：台本每句的 text + en 拆条、按配音对齐的时间写进 timeline.json 的 segments[].subs
+    run([sys.executable, SK / "bilingual_subs.py", ep])
+    run([sys.executable, SK / "make_cover_white.py", ep, "--from-script"])   # 2026-09-28 起：白底两行大字 + 鲸鱼娘右下 + 其余新闻小字；竖屏第 0 帧要用，所以先出
     ep_json = load_json(ep / "episode.json")
     final = ep / f"{ep_json['dir_name']}_成片.mp4"
     upload = ep / f"{ep_json['dir_name']}_上传版.mp4"
-    size, kbps = encode_upload(final, upload, ep / "制作" / "build", "h264" if a.x264 else "hevc")
-    print(f"上传版 {size / 1e6:.2f} MB（{'H.264' if a.x264 else 'H.265'}，视频 {kbps} kbps）")
+    if a.horizontal:
+        # 2340x1080（iPhone 全面屏 19.5:9）：本技能自己的宽屏拼接脚本（《原LAI如此》的 assemble.py 是 1920x1080，不动它）
+        run([sys.executable, SK / "assemble_wide.py", ep, "--series", SERIES, "--workers", str(a.workers or 4)] + (["--skip-main"] if a.skip_main else []))
+        size, kbps = encode_upload(final, upload, ep / "制作" / "build", "h264" if a.x264 else "hevc")
+        print(f"上传版 {size / 1e6:.2f} MB（{'H.264' if a.x264 else 'H.265'}，视频 {kbps} kbps）")
+    else:
+        run([sys.executable, SK / "make_vertical.py", ep, "all", "--upload"] + (["--workers", str(a.workers)] if a.workers else []))
     cmd_review(a, st)
 
 
@@ -421,11 +519,12 @@ def cmd_review(a, st=None):
     sc = load_json(ep / "台本.json")
     final = ep / f"{ep_json['dir_name']}_成片.mp4"
     upload = ep / f"{ep_json['dir_name']}_上传版.mp4"
+    upload264 = ep / f"{ep_json['dir_name']}_上传版_h264.mp4"
     dur = ffprobe_duration(final)
     size = upload.stat().st_size
     checks, cache = fact_check(sc)
     (ep / "制作" / "source_pages.json").write_text(json.dumps(cache, ensure_ascii=False), encoding="utf-8")   # gate 复用，不再重新抓
-    info = build_publish_info(ep, ep_json, sc, upload, dur)
+    info = build_publish_info(ep, ep_json, sc, upload, dur, upload264 if upload264.exists() else None)
     (ep / "投稿信息.json").write_text(json.dumps(info, ensure_ascii=False, indent=2), encoding="utf-8")
     write_review(ep, ep_json, sc, checks, cache, info, final, size, dur)
     n_warn = sum(1 for c in checks if c["missing"])
@@ -449,7 +548,9 @@ def cmd_gate(a):
     sc = load_json(ep / "台本.json") or {}
     info = load_json(ep / "投稿信息.json") or {}
     name = ep_json.get("dir_name", "")
-    final, upload, srt = ep / f"{name}_成片.mp4", ep / f"{name}_上传版.mp4", ep / f"{name}_字幕.srt"
+    final, upload, srt = ep / f"{name}_成片.mp4", ep / f"{name}_上传版.mp4", ep / f"{name}_双语字幕.srt"
+    upload264 = ep / f"{name}_上传版_h264.mp4"
+    vertical = bool(info.get("cover_3x4"))                       # 2026-10-05 起竖屏 + 三个平台（视频号 10-06 起不发）；没有 cover_3x4 的是旧的横屏期
     checks = []
 
     def add(check, ok, detail="", level="block"):
@@ -462,10 +563,34 @@ def cmd_gate(a):
     add("成片", final.exists(), str(final))
     add("上传版 ≤ 9 MB", upload.exists() and upload.stat().st_size <= UPLOAD_LIMIT,
         f"{upload.stat().st_size / 1e6:.2f} MB" if upload.exists() else "没有上传版")
-    add("封面", all((ep / "封面" / f).exists() for f in ("封面_16x9_1920x1080.png", "封面_4x3_1440x1080.png")), "16:9 + 4:3")
+    if vertical:
+        add("H.264 上传版 ≤ 9 MB（抖音 / 小红书）", upload264.exists() and upload264.stat().st_size <= UPLOAD_LIMIT,
+            f"{upload264.stat().st_size / 1e6:.2f} MB" if upload264.exists() else "没有 H.264 上传版")
+        wh = subprocess.run(["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_entries", "stream=width,height", "-of", "csv=p=0", str(final)],
+                            capture_output=True, text=True).stdout.strip().strip(",") if final.exists() else ""
+        add("竖屏成片 1080×2340", wh == "1080,2340", wh or "没有成片")
+        qa = load_json(ep / "制作" / "vertical" / "qa.json", {}) or {}
+        add("竖屏 QA（帧数 / 时长 / 口型对齐）", qa.get("ok") is True, json.dumps(qa, ensure_ascii=False)[:300] if qa else "没有 制作/vertical/qa.json")
+        # 2026-10-06 加：竖屏字幕中英错条 / 断在词中间（那天 AI 复核连挂 3 次几乎都是这个）。和 make_vertical.py lint 同一套规则
+        lt = subprocess.run([sys.executable, str(SK / "make_vertical.py"), str(ep), "lint"], capture_output=True, text=True, encoding="utf-8", errors="replace")
+        lines = [l.strip() for l in lt.stdout.splitlines() if l.strip().startswith("✗")]
+        add("竖屏字幕中英对齐（make_vertical.py lint）", lt.returncode == 0,
+            "；".join(l[:120] for l in lines[:6]) or (lt.stdout.strip().splitlines() or [lt.stderr.strip()[-200:]])[0])
+    covers = ["封面_16x9_1920x1080.png", "封面_4x3_1440x1080.png"] + (["封面_3x4_1080x1440.png"] if vertical else [])
+    add("封面", all((ep / "封面" / f).exists() for f in covers), " + ".join(c.split("_")[1] for c in covers))
+    tl = load_json(ep / "制作" / "timeline.json", {}) or {}
+    n_sub = sum(len(s.get("subs") or []) for s in tl.get("segments") or [])
+    srts = [ep / f"{name}_{k}.srt" for k in ("双语字幕", "中文字幕", "英文字幕")]
+    add("中英双语字幕（画面 + 三份 SRT）", n_sub and all(s.get("subs") for s in tl.get("segments") or []) and all(p.exists() for p in srts),
+        f"{n_sub} 条" if n_sub else "时间轴里没有 subs：render 里的 bilingual_subs.py 没跑")
     d = datetime.fromisoformat(sc.get("date") or "2000-01-01")
     want_title = f"{d.month}月{d.day}日，鲸鱼娘带你看看AI圈发生了什么？"
-    add("标题格式", info.get("title") == want_title, info.get("title", "没有 投稿信息.json"))
+    if vertical:
+        titles = info.get("titles") or {}
+        badt = [f"{TITLE_NAMES[k]} {len(titles.get(k, ''))} 字（限 {lo}–{hi}）" for k, (lo, hi) in TITLE_LIMITS.items() if not lo <= len(titles.get(k, "")) <= hi]
+        add("标题（三个平台限长）", bool(titles) and not badt, "；".join(badt) or " | ".join(titles.values()))
+    else:
+        add("标题格式", info.get("title") == want_title, info.get("title", "没有 投稿信息.json"))
     refs = [r.get("url", "") for n in sc.get("news", []) for r in n.get("refs") or [] if r.get("url")]
     desc = info.get("description", "")
     miss = [u for u in refs if u not in desc]
@@ -498,8 +623,7 @@ def cmd_gate(a):
         for ln in n.get("lines") or []:
             txt = ln["text"]
             toks = [t for t in dict.fromkeys(NUM.findall(txt) + LATIN.findall(txt)) if t not in COMMON]
-            alt = {num: [f"{float(num) / 10 if unit == '亿' else float(num) * 10:g}"]
-                   for num, unit in re.findall(r"(\d+(?:\.\d+)?)\s*(亿|万)", txt)}
+            alt = num_alts(txt)
             bad = [t for t in toks if t.lower() not in corpus and not any(x.lower() in corpus for x in alt.get(t, []))]
             if bad:
                 fc.append(f"第 {i} 条「{txt[:24]}」原文里没找到：{'、'.join(bad)}")
@@ -574,14 +698,14 @@ def cmd_published(a):
     with open(AIRED, "a", encoding="utf-8") as f:
         for n in sc.get("news", []):
             f.write(json.dumps({"date": a.date, "headline": n["headline"], "refs": n.get("refs", []), "bv": a.bv}, ensure_ascii=False) + "\n")
-    save_state(ep, st, "published", bv=a.bv)
-    print(f"已记录 {a.bv}，{len(sc.get('news', []))} 条写进 {AIRED}")
+    save_state(ep, st, "published", bv=a.bv, also=a.also or [])
+    print(f"已记录 {a.bv}（另外发了：{'、'.join(a.also) if a.also else '没有'}），{len(sc.get('news', []))} 条写进 {AIRED}")
 
 
 NEXT = {None: "daily.py init", "init": "选 6–8 条、查原文、写 台本.json，然后 daily.py build",
         "build": "Fish Audio 网页版配音（SKILL.md 第 5 步）→ daily.py webvoice --task …",
         "tts": "daily.py voice", "voice": "daily.py render", "render": "daily.py gate → AI 复核 → daily.py gate",
-        "gate": "gate 通过：插件填 B 站投稿页、定时北京 06:00 投稿，然后 daily.py published --bv …（没通过：改台本重做）",
+        "gate": "gate 通过：插件填 B 站发布页（定时北京 06:00；SKILL.md 第 8 步 8a。2026-10-06 起抖音 / 小红书暂停，不做 8b / 8c），然后 daily.py published --bv …（不带 --also；没通过：改台本重做）",
         "published": "公开后加 B 站分段章节（daily.py chapters），加好后 daily.py chapters --done", "chapters": "本期完成"}
 
 
@@ -607,6 +731,7 @@ def main():
             s.add_argument("--batches", action="store_true", help="保留按场景分批（只在网页版单次放不下整期时用）；默认整期一批，一次生成")
         if name == "webvoice":
             s.add_argument("--task", action="append", required=True, help="网页版的任务编号（32 位十六进制；一次出两个版本就写两次 --task）")
+            s.add_argument("--file", action="append", help="R2 地址找不到时（2026-10-04 起音频改成私有签名地址）：用页面播放器的「下载」按钮存下的 mp3，按版本顺序写，可写多次")
             s.add_argument("--probe", action="store_true", help="只找音频地址、打印出来，不下载、不改文件")
         if name == "tts":
             s.add_argument("--api", action="store_true", help="用户点名要用 API 时才加（2026-09-29 起默认用网页版）")
@@ -616,11 +741,13 @@ def main():
         if name == "voice":
             s.add_argument("--hist", help="配音/raw/ 下的 urls_hist.txt（从 Fish Audio 历史记录抓到的 CDN 地址）")
         if name == "render":
-            s.add_argument("--workers", type=int, default=4)   # 2026-09-28 用户定：所有渲染统一 4 路并行
+            s.add_argument("--workers", type=int, default=None, help="渲染路数；竖屏不写 = 按空闲内存挑 4 / 3 / 2（2026-09-28 用户定：统一 4 路，内存不够降）")
+            s.add_argument("--horizontal", action="store_true", help="退路：以前的 2340×1080 横屏版（只发 B 站）")
             s.add_argument("--skip-main", action="store_true")
             s.add_argument("--x264", action="store_true", help="上传版用 H.264（B 站不收 H.265 时的退路）")
         if name == "published":
             s.add_argument("--bv", required=True)
+            s.add_argument("--also", action="append", help="另外发成功的平台：抖音 / 小红书（可写多次；没发成的不写，运行记录里说明原因）")
         if name == "chapters":
             s.add_argument("--done", action="store_true", help="B 站分段章节已加好，记进 state.json")
     a = ap.parse_args()

@@ -1,0 +1,30 @@
+input 2340x1080 @ 30.0 fps, 78.5s, speech -15.8 LUFS -> music -2.8 dB; intro / outro page 2340x1080 at scale 1
+intro: 3.80s rendered
+outro: 4.80s rendered
+-> D:\大疆\独立视频\2026-10_OpenAI-DevDay-2026解读\成片\V1_Dots_成片.mp4  (87.15s = 3.80 + 78.53 + 4.80)
+V1 -> D:\大疆\独立视频\2026-10_OpenAI-DevDay-2026解读\成片\V1_Dots_成片.mp4 + 三份 SRT（22 条，时间含片头 3.80 s）
+input 2340x1080 @ 30.0 fps, 88.3s, speech -15.9 LUFS -> music -2.9 dB; intro / outro page 2340x1080 at scale 1
+intro: 3.80s rendered
+outro: 4.80s rendered
+-> D:\大疆\独立视频\2026-10_OpenAI-DevDay-2026解读\成片\V2_Space_成片.mp4  (96.95s = 3.80 + 88.33 + 4.80)
+V2 -> D:\大疆\独立视频\2026-10_OpenAI-DevDay-2026解读\成片\V2_Space_成片.mp4 + 三份 SRT（25 条，时间含片头 3.80 s）
+input 2340x1080 @ 30.0 fps, 80.1s, speech -15.9 LUFS -> music -2.9 dB; intro / outro page 2340x1080 at scale 1
+intro: 3.80s rendered
+outro: 4.80s rendered
+-> D:\大疆\独立视频\2026-10_OpenAI-DevDay-2026解读\成片\V3_GPT-6.1-Sol和Ultra-Fast_成片.mp4  (88.75s = 3.80 + 80.13 + 4.80)
+V3 -> D:\大疆\独立视频\2026-10_OpenAI-DevDay-2026解读\成片\V3_GPT-6.1-Sol和Ultra-Fast_成片.mp4 + 三份 SRT（22 条，时间含片头 3.80 s）
+input 2340x1080 @ 30.0 fps, 93.1s, speech -16.0 LUFS -> music -3.0 dB; intro / outro page 2340x1080 at scale 1
+intro: 3.80s rendered
+outro: 4.80s rendered
+-> D:\大疆\独立视频\2026-10_OpenAI-DevDay-2026解读\成片\V4_Decisions-API和AI研究实习生_成片.mp4  (101.72s = 3.80 + 93.10 + 4.80)
+V4 -> D:\大疆\独立视频\2026-10_OpenAI-DevDay-2026解读\成片\V4_Decisions-API和AI研究实习生_成片.mp4 + 三份 SRT（25 条，时间含片头 3.80 s）
+input 2340x1080 @ 30.0 fps, 86.4s, speech -16.0 LUFS -> music -3.0 dB; intro / outro page 2340x1080 at scale 1
+intro: 3.80s rendered
+outro: 4.80s rendered
+-> D:\大疆\独立视频\2026-10_OpenAI-DevDay-2026解读\成片\V5_Codex上云和Agents-API_成片.mp4  (95.05s = 3.80 + 86.43 + 4.80)
+V5 -> D:\大疆\独立视频\2026-10_OpenAI-DevDay-2026解读\成片\V5_Codex上云和Agents-API_成片.mp4 + 三份 SRT（25 条，时间含片头 3.80 s）
+input 2340x1080 @ 30.0 fps, 88.9s, speech -16.0 LUFS -> music -3.0 dB; intro / outro page 2340x1080 at scale 1
+intro: 3.80s rendered
+outro: 4.80s rendered
+-> D:\大疆\独立视频\2026-10_OpenAI-DevDay-2026解读\成片\V6_登录插件和Marketplace_成片.mp4  (97.49s = 3.80 + 88.87 + 4.80)
+V6 -> D:\大疆\独立视频\2026-10_OpenAI-DevDay-2026解读\成片\V6_登录插件和Marketplace_成片.mp4 + 三份 SRT（26 条，时间含片头 3.80 s）

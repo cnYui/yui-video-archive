@@ -1,0 +1,707 @@
+1
+00:00:00,000 --> 00:00:03,832
+Good morning, I'm Whale Girl. Today is October 6.
+
+2
+00:00:03,852 --> 00:00:05,333
+Seven stories today:
+
+3
+00:00:05,353 --> 00:00:08,037
+ChatGPT tests ads during image generation,
+
+4
+00:00:08,057 --> 00:00:10,417
+OpenAI watermarks text in the EU,
+
+5
+00:00:10,437 --> 00:00:13,037
+Reflection unveils the open model Beam,
+
+6
+00:00:13,057 --> 00:00:15,817
+Wikipedia finds agents it believes are OpenAI's,
+
+7
+00:00:15,837 --> 00:00:17,997
+Reka puts text, images and video in one model,
+
+8
+00:00:18,017 --> 00:00:19,737
+Cohere launches North 2,
+
+9
+00:00:19,757 --> 00:00:21,862
+and an open model for finding bugs,
+
+10
+00:00:21,882 --> 00:00:23,513
+apex-flash-1.
+
+11
+00:00:23,533 --> 00:00:26,347
+First, when you generate images in ChatGPT,
+
+12
+00:00:26,367 --> 00:00:28,448
+ads may start showing up next to them.
+
+13
+00:00:28,468 --> 00:00:30,079
+On October 5, OpenAI announced that
+
+14
+00:00:30,099 --> 00:00:31,249
+in image generation,
+
+15
+00:00:31,269 --> 00:00:33,338
+it will test a new visual ad format.
+
+16
+00:00:33,358 --> 00:00:35,982
+Testing starts later this month in the US,
+
+17
+00:00:36,002 --> 00:00:37,818
+with an initial group of advertisers.
+
+18
+00:00:37,838 --> 00:00:38,586
+OpenAI says
+
+19
+00:00:38,606 --> 00:00:41,575
+ChatGPT reaches 1.2 billion users every week.
+
+20
+00:00:41,595 --> 00:00:42,699
+Ads will be clearly labeled
+
+21
+00:00:42,719 --> 00:00:44,625
+and kept separate from your image.
+
+22
+00:00:44,645 --> 00:00:48,025
+OpenAI says ads don't affect ChatGPT's answers.
+
+23
+00:00:48,045 --> 00:00:48,562
+OpenAI also
+
+24
+00:00:48,582 --> 00:00:51,245
+expanded measurement tools for advertisers,
+
+25
+00:00:51,265 --> 00:00:52,701
+adding partners such as AppsFlyer,
+
+26
+00:00:52,721 --> 00:00:54,595
+Adjust and more.
+
+27
+00:00:54,615 --> 00:00:56,782
+It's also working with DoubleVerify and IAS
+
+28
+00:00:56,802 --> 00:00:58,366
+on brand suitability pilots,
+
+29
+00:00:58,386 --> 00:01:01,606
+so advertisers can see what surrounds their ads.
+
+30
+00:01:01,626 --> 00:01:03,961
+TechCrunch says that once ads roll out globally,
+
+31
+00:01:03,981 --> 00:01:06,850
+advertisers can reach those 1.2 billion users.
+
+32
+00:01:06,870 --> 00:01:07,735
+TechCrunch notes
+
+33
+00:01:07,755 --> 00:01:09,246
+the move follows Meta's launch
+
+34
+00:01:09,266 --> 00:01:11,480
+of its free agent app, Muse.
+
+35
+00:01:11,500 --> 00:01:13,786
+Someone always pays for the free paintbrush.
+
+36
+00:01:13,986 --> 00:01:15,026
+Second, in the EU,
+
+37
+00:01:15,046 --> 00:01:16,821
+text written with ChatGPT
+
+38
+00:01:16,841 --> 00:01:19,295
+will soon carry an invisible watermark.
+
+39
+00:01:19,315 --> 00:01:21,064
+On October 5, OpenAI said
+
+40
+00:01:21,084 --> 00:01:22,846
+that to comply with the EU AI Act,
+
+41
+00:01:22,866 --> 00:01:24,305
+over the coming weeks, in the EU,
+
+42
+00:01:24,325 --> 00:01:27,342
+it will watermark text output from ChatGPT and Codex.
+
+43
+00:01:27,362 --> 00:01:30,187
+How? The technique is called textGrain.
+
+44
+00:01:30,207 --> 00:01:33,504
+It hides a statistical signal in the model's word choices.
+
+45
+00:01:33,524 --> 00:01:36,334
+API customers worldwide can opt in.
+
+46
+00:01:36,354 --> 00:01:37,900
+It's off by default.
+
+47
+00:01:37,920 --> 00:01:39,868
+In OpenAI's tests on psychology text,
+
+48
+00:01:39,888 --> 00:01:41,351
+at a 1% false positive rate,
+
+49
+00:01:41,371 --> 00:01:43,063
+400-token passages
+
+50
+00:01:43,083 --> 00:01:45,064
+were detected about 95% of the time.
+
+51
+00:01:45,084 --> 00:01:48,391
+But rewriting weakens it: replace 25% of the words,
+
+52
+00:01:48,411 --> 00:01:50,642
+and detection drops to 17%.
+
+53
+00:01:50,662 --> 00:01:52,646
+Math text is harder:
+
+54
+00:01:52,666 --> 00:01:55,467
+at 400 tokens, only about 60% is detected.
+
+55
+00:01:55,487 --> 00:01:56,566
+At first, the detector
+
+56
+00:01:56,586 --> 00:01:59,484
+will only go to approved researchers and expert organizations.
+
+57
+00:01:59,504 --> 00:02:01,409
+The Decoder points out that
+
+58
+00:02:01,429 --> 00:02:02,737
+Anthropic, for Claude,
+
+59
+00:02:02,757 --> 00:02:04,209
+uses a watermark that is mandatory worldwide,
+
+60
+00:02:04,229 --> 00:02:06,798
+while OpenAI's API version is optional.
+
+61
+00:02:06,818 --> 00:02:08,518
+A watermark can catch copy and paste,
+
+62
+00:02:08,538 --> 00:02:10,292
+but not someone who edits.
+
+63
+00:02:10,492 --> 00:02:13,747
+Third, US startup Reflection AI
+
+64
+00:02:13,767 --> 00:02:16,947
+unveiled its first open-weight model, Beam,
+
+65
+00:02:16,967 --> 00:02:18,724
+with 501B total parameters.
+
+66
+00:02:18,744 --> 00:02:20,291
+Released on October 5,
+
+67
+00:02:20,311 --> 00:02:21,605
+it's a mixture of experts
+
+68
+00:02:21,625 --> 00:02:23,379
+that activates only 23B parameters at a time.
+
+69
+00:02:23,399 --> 00:02:25,411
+Reflection says that on hard reasoning tests,
+
+70
+00:02:25,431 --> 00:02:27,540
+it scores comparably to GLM-5.2
+
+71
+00:02:27,560 --> 00:02:30,509
+while using three to four times less inference compute.
+
+72
+00:02:30,529 --> 00:02:32,021
+On coding and agent tasks,
+
+73
+00:02:32,041 --> 00:02:34,286
+it approaches Alibaba's Qwen 3.8-Max.
+
+74
+00:02:34,306 --> 00:02:36,126
+It was pretrained on 23.8T tokens,
+
+75
+00:02:36,146 --> 00:02:39,019
+and reinforcement learning ran on 10.5K GB300 GPUs
+
+76
+00:02:39,039 --> 00:02:40,378
+for four weeks.
+
+77
+00:02:40,398 --> 00:02:42,288
+The license is Apache 2.0.
+
+78
+00:02:42,308 --> 00:02:43,808
+But the weights aren't out yet.
+
+79
+00:02:43,828 --> 00:02:46,085
+Reflection says they're coming later this month.
+
+80
+00:02:46,105 --> 00:02:47,189
+Semafor notes
+
+81
+00:02:47,209 --> 00:02:49,152
+that Qwen 3.8-Max itself still trails
+
+82
+00:02:49,172 --> 00:02:51,431
+OpenAI's and Anthropic's top
+
+83
+00:02:51,451 --> 00:02:52,535
+closed models.
+
+84
+00:02:52,555 --> 00:02:54,230
+Semafor also reports
+
+85
+00:02:54,250 --> 00:02:55,933
+Reflection is backed by
+
+86
+00:02:55,953 --> 00:02:57,570
+Nvidia, Sequoia and Citigroup,
+
+87
+00:02:57,590 --> 00:03:01,066
+and its June round valued it at $25 billion pre-money.
+
+88
+00:03:01,086 --> 00:03:02,335
+The open door is there,
+
+89
+00:03:02,355 --> 00:03:04,355
+but the key is still a few weeks away.
+
+90
+00:03:04,555 --> 00:03:05,183
+Fourth,
+
+91
+00:03:05,203 --> 00:03:07,775
+the Wikimedia Foundation, which runs Wikipedia,
+
+92
+00:03:07,795 --> 00:03:08,813
+says it found
+
+93
+00:03:08,833 --> 00:03:11,335
+agents it believes are operated by OpenAI.
+
+94
+00:03:11,355 --> 00:03:12,625
+Its October 5 blog post says
+
+95
+00:03:12,645 --> 00:03:13,520
+the agents
+
+96
+00:03:13,540 --> 00:03:16,385
+made millions of automated requests to public APIs
+
+97
+00:03:16,405 --> 00:03:17,925
+and crawled millions of pages,
+
+98
+00:03:17,945 --> 00:03:20,300
+mainly from Wikidata and Commons.
+
+99
+00:03:20,320 --> 00:03:22,065
+They also made test edits in sandboxes
+
+100
+00:03:22,085 --> 00:03:24,085
+and changed a citation tool's configuration,
+
+101
+00:03:24,105 --> 00:03:26,455
+which the foundation believes was meant to use it as a proxy
+
+102
+00:03:26,475 --> 00:03:28,088
+for fetching other sites.
+
+103
+00:03:28,108 --> 00:03:29,177
+There were also a few attempts to compromise
+
+104
+00:03:29,197 --> 00:03:31,586
+the public Etherpad, all unsuccessful.
+
+105
+00:03:31,606 --> 00:03:33,232
+Hundreds of thousands of data queries
+
+106
+00:03:33,252 --> 00:03:35,413
+also hit the Wikidata Query Service.
+
+107
+00:03:35,433 --> 00:03:36,621
+The foundation says this traffic
+
+108
+00:03:36,641 --> 00:03:37,568
+may have contributed, in May,
+
+109
+00:03:37,588 --> 00:03:40,697
+to a partial outage of the Wikidata Query Service.
+
+110
+00:03:40,717 --> 00:03:42,719
+The good news: it found no evidence that its systems
+
+111
+00:03:42,739 --> 00:03:44,384
+or data were compromised.
+
+112
+00:03:44,404 --> 00:03:46,051
+Note: "believed to be OpenAI's"
+
+113
+00:03:46,071 --> 00:03:47,829
+is the foundation's own assessment.
+
+114
+00:03:47,849 --> 00:03:51,542
+Agents that go out to work need to learn to knock first.
+
+115
+00:03:51,742 --> 00:03:54,132
+Fifth, a single 19B model
+
+116
+00:03:54,152 --> 00:03:55,715
+that handles text, images, video,
+
+117
+00:03:55,735 --> 00:03:57,548
+and robot actions.
+
+118
+00:03:57,568 --> 00:04:00,178
+Reka AI released Rho-1 on October 5.
+
+119
+00:04:00,198 --> 00:04:01,962
+It turns all of these into tokens
+
+120
+00:04:01,982 --> 00:04:03,615
+inside one network.
+
+121
+00:04:03,635 --> 00:04:05,980
+The Decoder says it uses no tool calls
+
+122
+00:04:06,000 --> 00:04:07,447
+or external models.
+
+123
+00:04:07,467 --> 00:04:09,626
+Training used just 320 H100 GPUs
+
+124
+00:04:09,646 --> 00:04:10,962
+for about three months.
+
+125
+00:04:10,982 --> 00:04:13,240
+In Reka's internal tests, its distilled version
+
+126
+00:04:13,260 --> 00:04:16,346
+returned a 5.3-second video clip in about a second.
+
+127
+00:04:16,366 --> 00:04:17,925
+Where does robot data come from?
+
+128
+00:04:17,945 --> 00:04:19,728
+An inverse dynamics model
+
+129
+00:04:19,748 --> 00:04:22,321
+pulls actions out of ordinary web videos.
+
+130
+00:04:22,341 --> 00:04:24,182
+It's only a research preview,
+
+131
+00:04:24,202 --> 00:04:25,734
+and Reka hasn't said anything about open weights.
+
+132
+00:04:25,754 --> 00:04:28,469
+Video is currently capped at 672×384,
+
+133
+00:04:28,489 --> 00:04:29,896
+and Reka admits
+
+134
+00:04:29,916 --> 00:04:33,477
+consistency across varied prompts is still brittle.
+
+135
+00:04:33,497 --> 00:04:35,563
+A small model wants to do it all.
+
+136
+00:04:35,583 --> 00:04:37,385
+Real-world tests will tell.
+
+137
+00:04:37,585 --> 00:04:39,662
+Sixth, companies using AI agents
+
+138
+00:04:39,682 --> 00:04:40,760
+fear two things:
+
+139
+00:04:40,780 --> 00:04:43,617
+runaway bills, and starting from scratch every time.
+
+140
+00:04:43,637 --> 00:04:45,330
+On October 5, Cohere released
+
+141
+00:04:45,350 --> 00:04:47,148
+its enterprise agent platform, North 2,
+
+142
+00:04:47,168 --> 00:04:49,509
+with a redesigned agent harness.
+
+143
+00:04:49,529 --> 00:04:50,810
+Cohere told VentureBeat
+
+144
+00:04:50,830 --> 00:04:53,405
+that context, across sessions and agents,
+
+145
+00:04:53,425 --> 00:04:54,270
+now persists longer,
+
+146
+00:04:54,290 --> 00:04:56,055
+so they don't start cold each time.
+
+147
+00:04:56,075 --> 00:04:57,676
+Admins can set rate limits,
+
+148
+00:04:57,696 --> 00:04:59,460
+user quotas, and company-wide caps,
+
+149
+00:04:59,480 --> 00:05:02,187
+and see how many tokens each agent uses.
+
+150
+00:05:02,207 --> 00:05:03,871
+It deploys in the cloud, on premises,
+
+151
+00:05:03,891 --> 00:05:05,346
+or fully air-gapped.
+
+152
+00:05:05,366 --> 00:05:06,286
+Pricing isn't public.
+
+153
+00:05:06,306 --> 00:05:08,415
+It's based on the scale and complexity of each deployment.
+
+154
+00:05:08,435 --> 00:05:10,808
+When companies buy AI, the first question is often:
+
+155
+00:05:10,828 --> 00:05:12,387
+will it blow the budget?
+
+156
+00:05:12,587 --> 00:05:13,327
+Seventh,
+
+157
+00:05:13,347 --> 00:05:16,176
+an open model built for hunting security bugs
+
+158
+00:05:16,196 --> 00:05:18,150
+solved 40 of 60 tasks.
+
+159
+00:05:18,170 --> 00:05:20,291
+Security firm Cantina, with Yeta,
+
+160
+00:05:20,311 --> 00:05:23,791
+released apex-flash-1 on October 1.
+
+161
+00:05:23,811 --> 00:05:26,341
+It's built on Zhipu's GLM-5.3-Flash.
+
+162
+00:05:26,361 --> 00:05:29,034
+How? It turned 50 real vulnerability cases
+
+163
+00:05:29,054 --> 00:05:30,626
+into 150 training tasks
+
+164
+00:05:30,646 --> 00:05:32,976
+and fine-tuned with reinforcement learning.
+
+165
+00:05:32,996 --> 00:05:35,804
+Cantina says that on 60 held-out internal tasks,
+
+166
+00:05:35,824 --> 00:05:37,326
+it scored 66.7%,
+
+167
+00:05:37,346 --> 00:05:40,071
+versus 60% for the base model.
+
+168
+00:05:40,091 --> 00:05:41,894
+Claude Opus 5 High
+
+169
+00:05:41,914 --> 00:05:44,091
+scored 71.7%, still higher.
+
+170
+00:05:44,111 --> 00:05:47,329
+The weights are on Hugging Face under the MIT license.
+
+171
+00:05:47,349 --> 00:05:50,514
+But it ran all 60 tasks for about $2.38,
+
+172
+00:05:50,534 --> 00:05:53,795
+versus about $74.68 for Opus 5 High.
+
+173
+00:05:53,815 --> 00:05:56,604
+Note: this is Cantina's own internal evaluation.
+
+174
+00:05:56,624 --> 00:05:58,014
+Cheap models doing the work
+
+175
+00:05:58,034 --> 00:06:01,405
+while pricey ones direct it may become more common.
+
+176
+00:06:01,605 --> 00:06:04,489
+That's all for today. Sources are in the description.
+
+177
+00:06:04,509 --> 00:06:07,334
+Have a smooth day, and see you tomorrow.

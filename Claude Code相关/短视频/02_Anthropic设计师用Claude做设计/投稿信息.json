@@ -1,0 +1,128 @@
+{
+  "_说明": "第 2 条《Anthropic 设计师怎么用 Claude 做设计》四个平台的投稿信息（2026-10-04，时间是日本时间）。文案原件见 发布文案.md；成片由用户自己拖进各平台上传区（插件 file_upload ≤ 10 MB，不压缩）。",
+  "video": "成片_竖屏_中英字幕.mp4",
+  "video_note": "原片 成片_竖屏_中英字幕_无封面帧.mp4（21.4 MB，B 站 / 抖音 / 小红书 / 视频号第一版发的就是它）；现在的 成片_竖屏_中英字幕.mp4 = 同一条把第 0 帧换成了封面（cover_frame0.py，其余帧原样拷贝，音画不变，21.5 MB），视频号第二版（19:35）用的是它。",
+  "covers": {
+    "3x4": "制作/04_封面/cover_3x4.png",
+    "16x9": "制作/04_封面/cover_16x9.png",
+    "4x3": "制作/04_封面/cover_4x3.png",
+    "hook": "不只写代码 / 还能做设计",
+    "note": "只做了一套（没有 ×3 候选）；脚本 制作/04_封面/make_cover_short.py"
+  },
+  "source": {
+    "design": {
+      "title": "Build an App With Claude Design",
+      "url": "https://www.youtube.com/watch?v=COJAZQM1aeQ",
+      "date": "2026-10-02"
+    },
+    "slides": {
+      "title": "How an Anthropic designer uses Claude Slides",
+      "url": "https://www.youtube.com/watch?v=bVXiNb9RyyI",
+      "date": "2026-10-01"
+    },
+    "channel": "Claude 官方 YouTube"
+  },
+  "bilibili": {
+    "title": "Anthropic 设计师怎么用 Claude 做设计：Claude Design 做 App 原型 + Claude Slides 做演示文稿",
+    "bvid": "BV16fH666Eeg",
+    "url": "https://www.bilibili.com/video/BV16fH666Eeg",
+    "published_at": "2026-10-04T16:24:39+09:00",
+    "published_by": "用户点的“立即投稿”（我已把表填完、读回核对）",
+    "state": "开放浏览",
+    "tid": 231,
+    "tags": [
+      "claude",
+      "Claude Design",
+      "Anthropic",
+      "AI设计",
+      "设计师",
+      "Claude Code",
+      "Claude Slides",
+      "AI工具",
+      "人工智能",
+      "AI配音"
+    ],
+    "season": "Claude Code相关",
+    "declare": "内容为转载（创作声明单选；AI 配音写在简介第一段）",
+    "source_field": "转自 Claude 官方 YouTube 频道：…（两条链接 + 日期，192/200 字）",
+    "covers": "16:9 + 4:3 两张不同的图（cover / cover43 核对过）",
+    "api_check": "archives / archive/view / web-interface/view 三个接口核对过：copyright 2、1080×2340、138 s、ugc_season = Claude Code相关",
+    "declare_note": "用户 2026-10-04 定“声明统一选AI”，但 B 站发布后“创作声明”和“分区”在编辑页是灰的改不了，这条仍是“内容为转载”（简介前两行已写 AI 配音和来源，标签有“AI配音”）"
+  },
+  "douyin": {
+    "title": "Anthropic 设计师怎么用 Claude 做设计",
+    "topics": [
+      "Claude",
+      "ClaudeDesign",
+      "ClaudeCode",
+      "Anthropic",
+      "AI设计"
+    ],
+    "topics_note": "抖音话题上限 5 个",
+    "declare": "内容由AI生成（自主声明单选）",
+    "covers": "竖封面 3:4 + 横封面 4:3（封面效果检测通过）",
+    "published_at": "2026-10-04T16:24+09:00",
+    "published_by": "用户点的发布",
+    "state": "已发布（审核后）",
+    "season": "Claude Code相关（16:21 新建；发布页下拉选不到，18:5x 在合集页“添加作品”加入；合集状态审核中，可设为公开）",
+    "season_cover": "Claude Code相关/素材/合集封面/封面_合集_1x1.png"
+  },
+  "xiaohongshu": {
+    "title": "官方设计师怎么用Claude做设计",
+    "topics": [
+      "Claude",
+      "ClaudeDesign",
+      "ClaudeCode",
+      "Anthropic",
+      "AI设计",
+      "AI工具",
+      "人工智能",
+      "设计师"
+    ],
+    "topics_note": "点发布时我还在加第 8 个，实际上线 7–8 个",
+    "published_at": "2026-10-04T16:35+09:00（笔记管理显示 15:35 CST）",
+    "published_by": "用户自己点的发布（我的表还没填完）",
+    "missing": "（已补）16:35 用户点发布时缺合集，且“原创声明”开关是开着的（默认开）；18:5x 我在 笔记管理 → 编辑 里关掉原创声明、新建并选了合集“Claude Code相关”（名称 ≤ 20、简介 ≤ 50），提交后“更新成功”；AI 声明（笔记含AI合成内容）本来就选着；封面仍是默认首帧（第一次编辑没生效，没再重做）",
+    "state": "已发布，已更新（笔记管理里有，193 浏览 / 6 赞 / 10 藏 / 2 评论 的快照）",
+    "season": "Claude Code相关（18:5x 新建并加入）",
+    "original_declaration": "已关（发布时是开着的）",
+    "declare": "笔记含AI合成内容（来源声明子菜单有“自主拍摄 / 来源转载”，和 AI 声明是同一个单选菜单，没选转载）",
+    "cover": "19:3x 在笔记管理 → 编辑里换成了 cover_3x4.png（更新成功；与视频第 0 帧一致）"
+  },
+  "weixin_channels": {
+    "short_title": "设计师怎么用Claude做设计",
+    "description_first_line": "Anthropic 设计师怎么用 Claude 做设计｜Claude Design 做 App 原型 + Claude Slides 做演示文稿",
+    "topics": [
+      "Claude",
+      "ClaudeDesign",
+      "ClaudeCode",
+      "Anthropic",
+      "AI设计",
+      "AI工具",
+      "人工智能",
+      "设计师",
+      "演示文稿",
+      "AIGC"
+    ],
+    "location": "不显示位置",
+    "label": "含AI生成内容（视频标注单选）",
+    "season": "ClaudeCode（视频号合集标题 ≤ 10 字、创建后不可改，“Claude Code相关”放不下）",
+    "cover": "第二版（19:35）视频第 0 帧就是封面，默认封面即选定封面（个人主页 / 分享卡片 3:4）；第一版（18:58）是默认首帧（标题 + 双框）",
+    "published_at": "第一版 2026-10-04T18:58+09:00；第二版（第 0 帧 = 封面）19:35",
+    "published_by": "我点的发表（用户：“你把视频号填完继续发布”）",
+    "state": "已发表（视频管理列表第一条）",
+    "old_post": "第一版（18:58）还在视频管理里，等用户确认后删除（我不替用户删内容）"
+  },
+  "published": {
+    "bilibili": "BV16fH666Eeg 开放浏览",
+    "douyin": "已发布",
+    "xiaohongshu": "已发布（用户点的）；18:5x 补了合集 + 关了原创声明（更新成功）",
+    "weixin_channels": "已发表两版：18:58（默认首帧封面）和 19:35（第 0 帧 = 封面）；旧的那版待用户删除"
+  },
+  "todo_user": [
+    "视频号第一版（18:58）请删掉（视频管理 → 那条的更多操作 → 删除），留 19:35 的第二版",
+    "抖音合集审核通过后设为公开",
+    "配音 D03a / D11a / D12b / S02a / S07a 机器分低，请用耳朵听；Fish 里 3 个“未命名项目”请自己删",
+    "抖音合集审核通过后设为公开"
+  ]
+}

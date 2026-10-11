@@ -1,0 +1,498 @@
+[
+  {
+    "id": "S01-01",
+    "scene": "S01",
+    "text": "早上好，我是鲸鱼娘，今天是10月7日。",
+    "tts_text": "早上好，我是鲸鱼娘，今天是十月七日。",
+    "est_seconds": 3.1,
+    "start": 0.0
+  },
+  {
+    "id": "S01-02",
+    "scene": "S01",
+    "text": "今天说七件事：Mistral 发布万亿参数模型，Reflection 发布开放权重模型 Beam，OpenAI 给 ChatGPT 文字加水印，Anthropic 送初创公司一年 Claude Team，Anthropic 扩大网络安全验证计划，Together Link 让 Claude Code 跑开源模型，还有谷歌的多模态嵌入模型。",
+    "tts_text": "今天说七件事：Mistral 发布万亿参数模型，Reflection 发布开放权重模型 Beam，OpenAI 给 ChatGPT 文字加水印，Anthropic 送初创公司一年 Claude Team，Anthropic 扩大网络安全验证计划，Together Link 让 Claude Code 跑开源模型，还有谷歌的多模态嵌入模型。",
+    "est_seconds": 17.0,
+    "start": 3.4
+  },
+  {
+    "id": "S02-03",
+    "scene": "S02",
+    "text": "第一件，一个 1 万亿参数的模型，每个词只激活 49B。",
+    "tts_text": "第一件，一个一万亿参数的模型，每个词只激活四十九 B。",
+    "est_seconds": 4.6,
+    "start": 20.6
+  },
+  {
+    "id": "S02-04",
+    "scene": "S02",
+    "text": "10 月 6 日，法国公司 Mistral 发布了 Mistral Large 4，现在是公开预览，API 能用。",
+    "tts_text": "十月六日，法国公司 Mistral 发布了 Mistral Large 4，现在是公开预览，A P I 能用。",
+    "est_seconds": 5.9,
+    "start": 25.5
+  },
+  {
+    "id": "S02-05",
+    "scene": "S02",
+    "text": "它在欧洲自己的数据中心训练，用了 3,800 块英伟达 Grace Blackwell 芯片。",
+    "tts_text": "它在欧洲自己的数据中心训练，用了三千八百块英伟达 Grace Blackwell 芯片。",
+    "est_seconds": 5.9,
+    "start": 31.6
+  },
+  {
+    "id": "S02-06",
+    "scene": "S02",
+    "text": "模型权重要等到 10 月底，许可证也到时才公布。",
+    "tts_text": "模型权重要等到十月底，许可证也到时才公布。",
+    "est_seconds": 3.8,
+    "start": 37.8
+  },
+  {
+    "id": "S02-07",
+    "scene": "S02",
+    "text": "官方最看重的是网络安全，复现开源软件漏洞的测试里拿到 82%。",
+    "tts_text": "官方最看重的是网络安全，复现开源软件漏洞的测试里拿到百分之八十二。",
+    "est_seconds": 6.1,
+    "start": 41.8
+  },
+  {
+    "id": "S02-08",
+    "scene": "S02",
+    "text": "The Decoder 称，Opus 5.5 和 GPT-6 Astra 这项接近零分，因为它们直接拒绝任务。",
+    "tts_text": "The Decoder 称，Opus 五点五和 GPT 六 Astra 这项接近零分，因为它们直接拒绝任务。",
+    "est_seconds": 6.1,
+    "start": 48.1
+  },
+  {
+    "id": "S02-09",
+    "scene": "S02",
+    "text": "不过在综合指数上，它是 38 分，Opus 5.5 是 58 分。",
+    "tts_text": "不过在综合指数上，它是三十八分，Opus 五点五是五十八分。",
+    "est_seconds": 4.6,
+    "start": 54.5
+  },
+  {
+    "id": "S02-10",
+    "scene": "S02",
+    "text": "能查漏洞，不等于什么都强，等权重出来再看。",
+    "tts_text": "能查漏洞，不等于什么都强，等权重出来再看。",
+    "est_seconds": 3.6,
+    "start": 59.4
+  },
+  {
+    "id": "S03-11",
+    "scene": "S03",
+    "text": "第二件，美国创业公司 Reflection AI 发布了第一个开放权重模型 Beam。",
+    "tts_text": "第二件，美国创业公司 Reflection AI 发布了第一个开放权重模型 Beam。",
+    "est_seconds": 5.3,
+    "start": 63.7
+  },
+  {
+    "id": "S03-12",
+    "scene": "S03",
+    "text": "它是混合专家结构，总参数 501B，每次激活 23B。",
+    "tts_text": "它是混合专家结构，总参数五百零一 B，每次激活二十三 B。",
+    "est_seconds": 4.8,
+    "start": 69.2
+  },
+  {
+    "id": "S03-13",
+    "scene": "S03",
+    "text": "只处理文字，上下文长度 1M token，预训练用了 23.8T token。",
+    "tts_text": "只处理文字，上下文长度一百万 token，预训练用了二十三点八 T token。",
+    "est_seconds": 5.5,
+    "start": 74.3
+  },
+  {
+    "id": "S03-14",
+    "scene": "S03",
+    "text": "权重和技术细节会在 10 月内放出，走大型云厂商渠道。",
+    "tts_text": "权重和技术细节会在十月内放出，走大型云厂商渠道。",
+    "est_seconds": 4.4,
+    "start": 80.0
+  },
+  {
+    "id": "S03-15",
+    "scene": "S03",
+    "text": "官方称，它和智谱 GLM-5.2 水平相当，推理算力少用 3 到 4 倍。",
+    "tts_text": "官方称，它和智谱 GLM 五点二水平相当，推理算力少用三到四倍。",
+    "est_seconds": 5.3,
+    "start": 84.7
+  },
+  {
+    "id": "S03-16",
+    "scene": "S03",
+    "text": "公司拿了英伟达、红杉等投资，累计约 47 亿美元。",
+    "tts_text": "公司拿了英伟达、红杉等投资，累计约四十七亿美元。",
+    "est_seconds": 4.2,
+    "start": 90.2
+  },
+  {
+    "id": "S03-17",
+    "scene": "S03",
+    "text": "这些性能数字目前都是公司自己说的，没有独立验证。",
+    "tts_text": "这些性能数字目前都是公司自己说的，没有独立验证。",
+    "est_seconds": 4.4,
+    "start": 94.7
+  },
+  {
+    "id": "S03-18",
+    "scene": "S03",
+    "text": "权重还没放出来，先别急着下结论。",
+    "tts_text": "权重还没放出来，先别急着下结论。",
+    "est_seconds": 2.9,
+    "start": 99.4
+  },
+  {
+    "id": "S04-19",
+    "scene": "S04",
+    "text": "第三件，OpenAI 要给 ChatGPT 生成的文字加看不见的水印。",
+    "tts_text": "第三件，OpenAI 要给 ChatGPT 生成的文字加看不见的水印。",
+    "est_seconds": 4.2,
+    "start": 103.0
+  },
+  {
+    "id": "S04-20",
+    "scene": "S04",
+    "text": "10 月 5 日，OpenAI 宣布，未来几周会先给欧盟用户的文字加水印。",
+    "tts_text": "十月五日，OpenAI 宣布，未来几周会先给欧盟用户的文字加水印。",
+    "est_seconds": 5.0,
+    "start": 107.5
+  },
+  {
+    "id": "S04-21",
+    "scene": "S04",
+    "text": "范围是 ChatGPT 和 Codex，原因是要符合欧盟的 AI 法案。",
+    "tts_text": "范围是 ChatGPT 和 Codex，原因是要符合欧盟的 AI 法案。",
+    "est_seconds": 4.2,
+    "start": 112.7
+  },
+  {
+    "id": "S04-22",
+    "scene": "S04",
+    "text": "这个水印叫 textGrain，原理是微调模型选词，留下人看不出、检测器能认出的规律。",
+    "tts_text": "这个水印叫 textGrain，原理是微调模型选词，留下人看不出、检测器能认出的规律。",
+    "est_seconds": 6.3,
+    "start": 117.2
+  },
+  {
+    "id": "S04-23",
+    "scene": "S04",
+    "text": "API 开发者现在就能自己选择开启，不限地区。",
+    "tts_text": "API 开发者现在就能自己选择开启，不限地区。",
+    "est_seconds": 4.0,
+    "start": 123.7
+  },
+  {
+    "id": "S04-24",
+    "scene": "S04",
+    "text": "但改几个词就能削弱它：把 10% 的词换成同义词，检出率从约 92% 降到 66%。",
+    "tts_text": "但改几个词就能削弱它：把百分之十的词换成同义词，检出率从约百分之九十二降到百分之六十六。",
+    "est_seconds": 8.0,
+    "start": 128.0
+  },
+  {
+    "id": "S04-25",
+    "scene": "S04",
+    "text": "短文本、数学答案和翻译过的文字，更难检出。",
+    "tts_text": "短文本、数学答案和翻译过的文字，更难检出。",
+    "est_seconds": 3.6,
+    "start": 136.2
+  },
+  {
+    "id": "S04-26",
+    "scene": "S04",
+    "text": "OpenAI 也说，没有水印不代表是人写的。",
+    "tts_text": "OpenAI 也说，没有水印不代表是人写的。",
+    "est_seconds": 3.1,
+    "start": 140.1
+  },
+  {
+    "id": "S05-27",
+    "scene": "S05",
+    "text": "第四件，Anthropic 要送初创公司一年的 Claude Team 套餐。",
+    "tts_text": "第四件，Anthropic 要送初创公司一年的 Claude Team 套餐。",
+    "est_seconds": 4.0,
+    "start": 143.9
+  },
+  {
+    "id": "S05-28",
+    "scene": "S05",
+    "text": "10 月 6 日，Anthropic 扩大了 Claude for Startups 计划，免费用一年 Claude Team，最多 5 个席位。",
+    "tts_text": "十月六日，Anthropic 扩大了 Claude for Startups 计划，免费用一年 Claude Team，最多五个席位。",
+    "est_seconds": 6.3,
+    "start": 148.2
+  },
+  {
+    "id": "S05-29",
+    "scene": "S05",
+    "text": "另外送 1,000 美元的 API 额度。",
+    "tts_text": "另外送一千美元的 A P I 额度。",
+    "est_seconds": 2.7,
+    "start": 154.7
+  },
+  {
+    "id": "S05-30",
+    "scene": "S05",
+    "text": "还能用 Claude Marketplace 开发插件，参加应用 AI 团队的线上答疑。",
+    "tts_text": "还能用 Claude Marketplace 开发插件，参加应用 AI 团队的线上答疑。",
+    "est_seconds": 5.2,
+    "start": 157.7
+  },
+  {
+    "id": "S05-31",
+    "scene": "S05",
+    "text": "条件有两个，满足一个就行：公司成立不到 5 年，或者近 2 年拿到过融资。",
+    "tts_text": "条件有两个，满足一个就行：公司成立不到五年，或者近两年拿到过融资。",
+    "est_seconds": 5.7,
+    "start": 163.1
+  },
+  {
+    "id": "S05-32",
+    "scene": "S05",
+    "text": "原文没有写地区限制，申请入口在 Claude for Startups 的项目页面。",
+    "tts_text": "原文没有写地区限制，申请入口在 Claude for Startups 的项目页面。",
+    "est_seconds": 5.0,
+    "start": 169.0
+  },
+  {
+    "id": "S05-33",
+    "scene": "S05",
+    "text": "Anthropic 的说法是，多数人会通过基于模型做产品的公司，享受到 AI 的好处。",
+    "tts_text": "Anthropic 的说法是，多数人会通过基于模型做产品的公司，享受到 AI 的好处。",
+    "est_seconds": 6.1,
+    "start": 174.3
+  },
+  {
+    "id": "S05-34",
+    "scene": "S05",
+    "text": "免费只有一年，先想清楚拿它做什么。",
+    "tts_text": "免费只有一年，先想清楚拿它做什么。",
+    "est_seconds": 3.1,
+    "start": 180.6
+  },
+  {
+    "id": "S06-35",
+    "scene": "S06",
+    "text": "第五件，Anthropic 把两个网络安全项目合并成一个，开放给更多防守方。",
+    "tts_text": "第五件，Anthropic 把两个网络安全项目合并成一个，开放给更多防守方。",
+    "est_seconds": 5.5,
+    "start": 184.5
+  },
+  {
+    "id": "S06-36",
+    "scene": "S06",
+    "text": "10 月 6 日，扩大后的 Cyber Verification Program 上线，合并了 Project Glasswing 和原来的验证计划。",
+    "tts_text": "十月六日，扩大后的 Cyber Verification Program 上线，合并了 Project Glasswing 和原来的验证计划。",
+    "est_seconds": 6.7,
+    "start": 190.2
+  },
+  {
+    "id": "S06-37",
+    "scene": "S06",
+    "text": "通过验证的安全人员，能用到更强的网络能力，模型的拦截分类器也会放松。",
+    "tts_text": "通过验证的安全人员，能用到更强的网络能力，模型的拦截分类器也会放松。",
+    "est_seconds": 6.1,
+    "start": 197.2
+  },
+  {
+    "id": "S06-38",
+    "scene": "S06",
+    "text": "新方案分三档：防守、红队和特殊访问。",
+    "tts_text": "新方案分三档：防守、红队和特殊访问。",
+    "est_seconds": 3.1,
+    "start": 203.5
+  },
+  {
+    "id": "S06-39",
+    "scene": "S06",
+    "text": "防守档做应急响应、恶意软件分析，个人研究者和开源维护者也能申请，几天内回复。",
+    "tts_text": "防守档做应急响应、恶意软件分析，个人研究者和开源维护者也能申请，几天内回复。",
+    "est_seconds": 6.7,
+    "start": 206.9
+  },
+  {
+    "id": "S06-40",
+    "scene": "S06",
+    "text": "红队档加上授权渗透测试，只收机构，要等几周。",
+    "tts_text": "红队档加上授权渗透测试，只收机构，要等几周。",
+    "est_seconds": 3.8,
+    "start": 213.8
+  },
+  {
+    "id": "S06-41",
+    "scene": "S06",
+    "text": "特殊档面向飞行系统、电网这类安全关键系统的测试，名额有限。",
+    "tts_text": "特殊档面向飞行系统、电网这类安全关键系统的测试，名额有限。",
+    "est_seconds": 5.2,
+    "start": 217.9
+  },
+  {
+    "id": "S06-42",
+    "scene": "S06",
+    "text": "覆盖 Claude Opus 5.5、Sonnet 5.5 和 Mythos 5.1，以后的新模型也算。",
+    "tts_text": "覆盖 Claude Opus 五点五、Sonnet 五点五和 Mythos 五点一，以后的新模型也算。",
+    "est_seconds": 5.3,
+    "start": 223.3
+  },
+  {
+    "id": "S06-43",
+    "scene": "S06",
+    "text": "做漏洞研究的人，先看自己属于哪一档。",
+    "tts_text": "做漏洞研究的人，先看自己属于哪一档。",
+    "est_seconds": 3.3,
+    "start": 228.9
+  },
+  {
+    "id": "S07-44",
+    "scene": "S07",
+    "text": "第六件，用着 Claude Code，后台却跑开源模型，现在有现成工具了。",
+    "tts_text": "第六件，用着 Claude Code，后台却跑开源模型，现在有现成工具了。",
+    "est_seconds": 4.8,
+    "start": 232.9
+  },
+  {
+    "id": "S07-45",
+    "scene": "S07",
+    "text": "Together AI 推出 Together Link，免费、MIT 许可的命令行工具，目前是测试版。",
+    "tts_text": "Together AI 推出 Together Link，免费、MIT 许可的命令行工具，目前是测试版。",
+    "est_seconds": 5.9,
+    "start": 238.0
+  },
+  {
+    "id": "S07-46",
+    "scene": "S07",
+    "text": "它能连 Claude Code、Codex、OpenCode，还有 Claude 和 ChatGPT 的桌面应用。",
+    "tts_text": "它能连 Claude Code、Codex、OpenCode，还有 Claude 和 ChatGPT 的桌面应用。",
+    "est_seconds": 4.6,
+    "start": 244.1
+  },
+  {
+    "id": "S07-47",
+    "scene": "S07",
+    "text": "在 Claude Code 里，Opus 档换成 Kimi K3，Fable 档是 GLM 5.3。",
+    "tts_text": "在 Claude Code 里，Opus 档换成 Kimi K3，Fable 档是 GLM 五点三。",
+    "est_seconds": 4.4,
+    "start": 249.0
+  },
+  {
+    "id": "S07-48",
+    "scene": "S07",
+    "text": "默认的 auto 路由，简单请求交给 Together 的模型，难的交给 Claude Opus。",
+    "tts_text": "默认的 auto 路由，简单请求交给 Together 的模型，难的交给 Claude Opus。",
+    "est_seconds": 5.0,
+    "start": 253.6
+  },
+  {
+    "id": "S07-49",
+    "scene": "S07",
+    "text": "转给 Opus 的前提，是你自己接了 Anthropic 的 API key。",
+    "tts_text": "转给 Opus 的前提，是你自己接了 Anthropic 的 A P I key。",
+    "est_seconds": 4.0,
+    "start": 258.9
+  },
+  {
+    "id": "S07-50",
+    "scene": "S07",
+    "text": "要注意，工具免费，模型不免费：用 Together 的模型，按它的标准价格付费。",
+    "tts_text": "要注意，工具免费，模型不免费：用 Together 的模型，按它的标准价格付费。",
+    "est_seconds": 5.5,
+    "start": 263.1
+  },
+  {
+    "id": "S07-51",
+    "scene": "S07",
+    "text": "目前只支持 macOS 和 Linux，还需要一个 Together 账号的 API key。",
+    "tts_text": "目前只支持 macOS 和 Linux，还需要一个 Together 账号的 A P I key。",
+    "est_seconds": 5.0,
+    "start": 268.9
+  },
+  {
+    "id": "S07-52",
+    "scene": "S07",
+    "text": "换模型能不能省钱，要自己算。",
+    "tts_text": "换模型能不能省钱，要自己算。",
+    "est_seconds": 2.5,
+    "start": 274.1
+  },
+  {
+    "id": "S08-53",
+    "scene": "S08",
+    "text": "第七件，谷歌 DeepMind 发布了一个 740M 参数的开放多模态嵌入模型。",
+    "tts_text": "第七件，谷歌 DeepMind 发布了一个七百四十 M 参数的开放多模态嵌入模型。",
+    "est_seconds": 5.9,
+    "start": 277.4
+  },
+  {
+    "id": "S08-54",
+    "scene": "S08",
+    "text": "嵌入模型的工作，是把内容变成一串数字，方便搜索和比较相似度。",
+    "tts_text": "嵌入模型的工作，是把内容变成一串数字，方便搜索和比较相似度。",
+    "est_seconds": 5.3,
+    "start": 283.5
+  },
+  {
+    "id": "S08-55",
+    "scene": "S08",
+    "text": "EmbeddingGemma 2 把文字、图片、视频和音频放进同一个向量空间。",
+    "tts_text": "EmbeddingGemma 2 把文字、图片、视频和音频放进同一个向量空间。",
+    "est_seconds": 5.0,
+    "start": 289.1
+  },
+  {
+    "id": "S08-56",
+    "scene": "S08",
+    "text": "输出是 768 维，也可以截短到 512、256 或 128 维省空间。",
+    "tts_text": "输出是七百六十八维，也可以截短到五百一十二、二百五十六或一百二十八维省空间。",
+    "est_seconds": 6.9,
+    "start": 294.3
+  },
+  {
+    "id": "S08-57",
+    "scene": "S08",
+    "text": "基于 Gemma 4 搭建，上下文长度 8,192 token，覆盖 100 多种语言。",
+    "tts_text": "基于 Gemma 四搭建，上下文长度八千一百九十二 token，覆盖一百多种语言。",
+    "est_seconds": 5.7,
+    "start": 301.5
+  },
+  {
+    "id": "S08-58",
+    "scene": "S08",
+    "text": "用 Apache 2.0 许可，当天就放出了权重。",
+    "tts_text": "用 Apache 二点零许可，当天就放出了权重。",
+    "est_seconds": 3.3,
+    "start": 307.4
+  },
+  {
+    "id": "S08-59",
+    "scene": "S08",
+    "text": "它设计给手机、笔记本这类普通设备用，本地做多模态搜索会方便很多。",
+    "tts_text": "它设计给手机、笔记本这类普通设备用，本地做多模态搜索会方便很多。",
+    "est_seconds": 5.7,
+    "start": 311.0
+  },
+  {
+    "id": "S08-60",
+    "scene": "S08",
+    "text": "做搜索和问答的人，可以直接拿来试。",
+    "tts_text": "做搜索和问答的人，可以直接拿来试。",
+    "est_seconds": 3.1,
+    "start": 316.9
+  },
+  {
+    "id": "S09-61",
+    "scene": "S09",
+    "text": "今天就这些，来源都在简介里。",
+    "tts_text": "今天就这些，来源都在简介里。",
+    "est_seconds": 2.5,
+    "start": 320.8
+  },
+  {
+    "id": "S09-62",
+    "scene": "S09",
+    "text": "我们明天见。",
+    "tts_text": "我们明天见。",
+    "est_seconds": 1.2,
+    "start": 323.5
+  }
+]

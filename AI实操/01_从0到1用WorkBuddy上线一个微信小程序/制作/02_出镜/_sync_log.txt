@@ -1,0 +1,70 @@
+粗对齐（每段出镜 × 每段录屏，peak 越大越像）
+0155: R1013:1.23(lag +2.17s, x3.5, ov 153s)  R1036:0.51(lag -137.87s, x1.4, ov 15s)  R1041:0.51(lag +167.19s, x1.2, ov 20s)
+0156: R1029:1.03(lag -15.23s, x1.6, ov 82s)  R1046:0.81(lag +183.50s, x1.2, ov 15s)  R1036:0.59(lag -67.13s, x1.5, ov 30s)
+0158: R1036:1.03(lag +5.07s, x2.0, ov 86s)  R1046:0.49(lag +171.80s, x1.5, ov 27s)  R0948:0.43(lag +18.80s, x1.4, ov 17s)
+0159: R1041:1.04(lag +1.90s, x2.1, ov 110s)  R1013:0.59(lag -82.83s, x1.2, ov 27s)  R1036:0.58(lag -91.09s, x2.1, ov 18s)
+0160: R1041:1.06(lag +163.50s, x3.0, ov 24s)  R1036:0.50(lag -10.18s, x1.2, ov 15s)  R1013:0.48(lag +73.74s, x1.0, ov 25s)
+0161: R1046:0.92(lag -5.06s, x2.0, ov 188s)  R0945:0.49(lag -174.81s, x1.3, ov 19s)  R1013:0.41(lag -131.13s, x1.2, ov 62s)
+0162: R1046:0.50(lag -166.36s, x2.0, ov 20s)  R1041:0.41(lag +162.94s, x1.2, ov 24s)  R0945:0.40(lag -165.96s, x1.1, ov 21s)
+
+细对齐（20 s 窗口，每 10 s 一个；lag = 录屏时间 − 出镜时间）
+0155 ↔ R1013: coarse +2.17s  fine 2.1696  spread 2.9 ms  drift 16.5 ppm  windows 14 (good 12)
+    cam     0.0s  lag +2.1679s  q 4.0
+    cam    10.0s  lag +2.1682s  q 3.4
+    cam    20.0s  lag +2.1695s  q 3.3
+    cam    30.0s  lag +2.1684s  q 3.5
+    cam    40.0s  lag +2.1699s  q 2.8
+    cam    50.0s  lag +2.1686s  q 3.3
+    cam    60.0s  lag +2.1701s  q 3.0
+    cam    70.0s  lag +2.1686s  q 4.1
+    cam    80.0s  lag +2.1696s  q 3.6
+    cam    90.0s  lag +2.1697s  q 2.9
+    cam   100.0s  lag +2.1706s  q 4.1
+    cam   110.0s  lag +2.1708s  q 3.2
+    cam   120.0s  lag +2.1698s  q 3.5
+    cam   130.0s  lag +2.1698s  q 4.2
+0156 ↔ R1029: coarse -15.23s  fine -15.2337  spread 1.6 ms  drift 21.0 ppm  windows 6 (good 5)
+    cam    25.2s  lag -15.2335s  q 2.9
+    cam    35.2s  lag -15.2348s  q 4.1
+    cam    45.2s  lag -15.2332s  q 3.3
+    cam    55.2s  lag -15.2337s  q 4.9
+    cam    65.2s  lag -15.2337s  q 4.4
+    cam    75.2s  lag -15.2335s  q 4.7
+0158 ↔ R1036: coarse +5.07s  fine 5.0672  spread 1.3 ms  drift 3.9 ppm  windows 7 (good 7)
+    cam     0.0s  lag +5.0672s  q 3.6
+    cam    10.0s  lag +5.0661s  q 3.5
+    cam    20.0s  lag +5.0674s  q 4.8
+    cam    30.0s  lag +5.0663s  q 4.2
+    cam    40.0s  lag +5.0663s  q 4.4
+    cam    50.0s  lag +5.0672s  q 4.0
+    cam    60.0s  lag +5.0672s  q 4.5
+0159 ↔ R1041: coarse +1.90s  fine 1.8963  spread 2.0 ms  drift 13.5 ppm  windows 9 (good 9)
+    cam     0.0s  lag +1.8958s  q 3.4
+    cam    10.0s  lag +1.8965s  q 3.3
+    cam    20.0s  lag +1.8957s  q 4.0
+    cam    30.0s  lag +1.8967s  q 3.5
+    cam    40.0s  lag +1.8960s  q 3.8
+    cam    50.0s  lag +1.8960s  q 4.7
+    cam    60.0s  lag +1.8966s  q 3.4
+    cam    70.0s  lag +1.8963s  q 4.7
+    cam    80.0s  lag +1.8977s  q 4.1
+0160 ↔ R1041: coarse +163.50s  fine 163.4984  spread 0.0 ms  drift None ppm  windows 1 (good 1)
+    cam     0.0s  lag +163.4984s  q 3.7
+0161 ↔ R1046: coarse -5.06s  fine -5.0568  spread 111.6 ms  drift 532.8 ppm  windows 16 (good 15)
+    cam    15.1s  lag -5.1672s  q 4.2
+    cam    25.1s  lag -5.1672s  q 4.3
+    cam    35.1s  lag -5.0569s  q 2.9
+    cam    45.1s  lag -5.0562s  q 4.3
+    cam    55.1s  lag -5.0573s  q 5.7
+    cam    65.1s  lag -5.0570s  q 3.9
+    cam    75.1s  lag -5.0573s  q 3.8
+    cam    85.1s  lag -5.0556s  q 4.4
+    cam    95.1s  lag -5.0568s  q 3.5
+    cam   105.1s  lag -5.0570s  q 5.0
+    cam   115.1s  lag -5.0569s  q 3.5
+    cam   125.1s  lag -5.0563s  q 3.0
+    cam   135.1s  lag -5.0563s  q 3.8
+    cam   145.1s  lag -5.0565s  q 3.4
+    cam   155.1s  lag -5.0564s  q 4.0
+    cam   165.1s  lag -5.0559s  q 3.0
+0162 ↔ R1046: coarse -166.36s  fine None  spread None ms  drift None ppm  windows 0 (good 0)

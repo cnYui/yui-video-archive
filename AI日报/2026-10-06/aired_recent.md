@@ -1,0 +1,51 @@
+# 最近 7 天已播（选题去重：同一件事没有新进展就不再报）
+
+- 2026-09-29｜Claude Sonnet 5.5 发布｜https://www.anthropic.com/claude-sonnet-5-5 https://platform.claude.com/docs/en/models/sonnet-5-5/overview
+- 2026-09-29｜英伟达推出智能体安全平台｜https://nvidianews.nvidia.com/news/open-agent-safety-platform https://claude.com/blog/giving-companies-more-control-over-their-ai-agents-with-nvidia
+- 2026-09-29｜华为开源盘古训练代码｜https://www.ithome.com/1/007/740.htm https://gitcode.com/ascend-tribe/openPangu-2.0-Training
+- 2026-09-29｜千问打通夸克网盘｜https://www.ithome.com/1/007/871.htm https://internet.cnmo.com/event/819464.html
+- 2026-09-29｜Gems 将迁移成 skills｜https://9to5google.com/2026/09/27/gemini-gems-skills/
+- 2026-09-29｜Shopify 让 AI 帮你结账｜https://shopify.dev/changelog/posts/webmcp-support-for-checkout https://techcrunch.com/2026/09/28/shopify-opens-checkout-to-browser-based-ai-agents/
+- 2026-09-29｜AMD 收购 World Labs｜https://ir.amd.com/news-events/press-releases/detail/1299/amd-to-acquire-world-labs-to-advance-the-future-of-ai-compute https://techcrunch.com/2026/09/28/amd-will-acquire-fei-fei-lis-world-labs-for-8-2-billion/
+- 2026-09-30｜OpenAI 发布 GPT-6.1 Sol｜https://techcrunch.com/2026/09/29/openai-launches-gpt-6-1-sol-says-it-nearly-matches-gpt-6-astra-and-costs-less/ https://the-decoder.com/gpt-6-1-sol-comes-close-to-astra-at-a-fifth-of-the-price/
+- 2026-09-30｜OpenAI 推出智能体 Dots｜https://the-decoder.com/openai-launches-always-on-dots-agents-to-rival-metas-muse/ https://techcrunch.com/2026/09/29/openai-launches-dots-its-bubbly-agentic-avatar/
+- 2026-09-30｜ChatGPT Pro 套餐调整｜https://the-decoder.com/openai-reopens-its-200-pro-plan-but-cuts-api-credits-in-half-as-it-nudges-users-toward-pay-per-use/ https://the-decoder.com/openai-expands-codex-and-its-api-at-devday-with-security-scans-a-decisions-api-and-ultrafast/
+- 2026-09-30｜Codex 加了云端环境｜https://techcrunch.com/2026/09/29/openai-gives-codex-reusable-cloud-environments-that-work-across-devices/ https://the-decoder.com/openai-expands-codex-and-its-api-at-devday-with-security-scans-a-decisions-api-and-ultrafast/
+- 2026-09-30｜DeepSeek Harness 出桌面版｜https://www.ithome.com/1/008/469.htm https://www.36kr.com/newsflashes/4004459316137858
+- 2026-09-30｜ElevenLabs 发布 v4 语音｜https://elevenlabs.io/blog/eleven-v4 https://the-decoder.com/elevenlabs-new-v4-speech-model-makes-ai-voices-more-expressive-and-consistent/
+- 2026-09-30｜Holo4 公开权重｜https://hcompany.ai/newsroom/holo4 https://www.marktechpost.com/2026/09/29/h-company-releases-holo4-open-weight-computer-use-models-that-click-code-and-call-tools-across-desktop-web-android-and-apis/
+- 2026-10-01｜DeepSeek 开源昇腾组件｜https://www.qbitai.com/2026/09/499263.html https://www.ithome.com/1/008/604.htm
+- 2026-10-01｜Kimi K3 接入 Codex｜https://www.ithome.com/1/008/864.htm https://www.baseten.co/blog/baseten-openai-partnership/
+- 2026-10-01｜OpenAI 做芯片设计模型｜http://www.prnewswire.com/news-releases/openai-and-synopsys-announce-gpt-synopsys-frontier-intelligence-to-revolutionize-chip-design-302894874.html https://the-decoder.com/openai-and-synopsys-team-up-to-build-an-ai-model-that-designs-chips-like-a-seasoned-engineer/
+- 2026-10-01｜Codex 能做掌机游戏｜https://www.ithome.com/1/008/656.htm https://www.theshortcut.com/p/modretro-and-openai-team-up-on-new-chromatic-games-and-anyone-can-build-their-own
+- 2026-10-01｜DeepMind 给蛋白质加水印｜https://deepmind.google/blog/introducing-synthid-bio/
+- 2026-10-01｜微软发布生物研究系统｜https://www.microsoft.com/en-us/research/blog/introducing-quine-an-ai-research-system-designed-for-the-complexity-of-biology/
+- 2026-10-01｜Reddit 停 RSS 和 API｜https://techcrunch.com/2026/09/30/reddit-is-killing-rss-feeds-ending-public-api-access-because-of-ai-bots/
+- 2026-10-02｜谷歌发布 Gemini 4 Argon｜https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/ https://the-decoder.com/google-gemini-4-argon-closes-the-gap-with-openai-and-anthropic-but-doesnt-take-a-clear-lead/
+- 2026-10-02｜Claude Code 支持 Mods｜https://claude.com/blog/claude-code-mods https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md
+- 2026-10-02｜Sonnet 4.5 定了退役日｜https://platform.claude.com/docs/en/about-claude/model-deprecations
+- 2026-10-02｜豆包能订票打车了｜https://www.ithome.com/1/008/646.htm https://tech.china.com/article/20260930/202609301963245.html
+- 2026-10-02｜Cohere 发布 Embed 5｜https://cohere.com/blog/embed-5 https://www.marktechpost.com/2026/10/01/cohere-releases-embed-5/
+- 2026-10-02｜亚马逊开源决策小模型｜https://strandsagents.com/blog/introducing-strands-decider/ https://techcrunch.com/2026/10/01/amazon-releases-its-own-jev-clone-as-decision-models-flood-the-web/
+- 2026-10-03｜Anthropic 办工程师学院｜https://www.anthropic.com/news/claude-frontier-academy https://www.unite.ai/new-anthropic-academy-backs-10-000-engineer-residencies-with-100m/
+- 2026-10-03｜微软发布三个语音模型｜https://microsoft.ai/news/our-first-streaming-transcription-model/ https://the-decoder.com/microsoft-ai-releases-new-transcription-and-text-to-speech-models-for-voice-agents/
+- 2026-10-03｜ChatGPT 能虚拟试穿了｜https://www.ithome.com/1/009/197.htm https://techcrunch.com/2026/10/01/chatgpt-can-now-virtually-try-on-clothes-for-you/
+- 2026-10-03｜DGX Spark 出 64GB 版｜https://blogs.nvidia.com/blog/local-ai-dgx-spark-64gb-sync/ https://www.ithome.com/1/009/359.htm
+- 2026-10-03｜arXiv 限制每月投稿数｜https://blog.arxiv.org/2026/10/01/updated-rate-limit-policy/ https://www.timeshighereducation.com/news/arxivs-new-preprint-submission-cap-divides-opinion
+- 2026-10-03｜Flux 3 Image 改图更稳｜https://the-decoder.com/black-forest-labs-launches-flux-3-image-with-multi-step-editing-that-leaves-the-rest-of-your-picture-alone/ https://openrouter.ai/black-forest-labs/flux-3-image
+- 2026-10-03｜Cloudflare 开源决策模型｜https://blog.cloudflare.com/clef-decision-models/ https://www.marktechpost.com/2026/10/01/cloudflare-releases-clef-and-clef-flash/
+- 2026-10-04｜苹果收紧 Mac 磁盘权限｜https://developer.apple.com/news/?id=p6zjojqw https://www.ithome.com/1/009/381.htm
+- 2026-10-04｜Antigravity 上 Claude 5.5｜https://antigravity.google/docs/models https://letsdatascience.com/news/google-antigravity-adds-claude-55-to-paid-tiers-6a3e78f1
+- 2026-10-04｜Gemini 加了地图工具｜https://9to5google.com/2026/10/02/gemini-app-map-tool/ https://www.androidauthority.com/gemini-app-map-tool-3718688/
+- 2026-10-04｜Meta 开源 Muse 硬件｜https://techcrunch.com/2026/10/02/meta-wants-you-to-build-your-own-muse-gadget/ https://the-decoder.com/muse-gadgets-turns-ai-hardware-into-an-open-source-diy-project/
+- 2026-10-04｜Suno 能做有声配乐了｜https://suno.com/blog/introducing-speech-beta https://www.ithome.com/1/009/440.htm
+- 2026-10-04｜Supabase 收购 Turso｜https://supabase.com/blog/supabase-is-acquiring-turso https://www.prnewswire.com/news-releases/supabase-announces-150m-in-new-funding-and-turso-acquisition-302896752.html
+- 2026-10-04｜用 Claude 写 36 篇论文｜https://the-decoder.com/open-source-bootloops-harness-supports-ai-models-in-performing-precise-scientific-calculations/ https://bootloops.ai
+- 2026-10-05｜Gemini 免费版降级｜https://9to5google.com/2026/10/03/gemini-model-limits-oct-26/ https://the-decoder.com/googles-new-gemini-tiers-cut-free-users-to-its-weakest-model-and-lock-5-month-subscribers-out-of-pro/
+- 2026-10-05｜德国开源模型 Kolibri｜https://aleph-alpha.com/en/blog/kolibri-has-landed-a-sovereign-open-weight-model/ https://huggingface.co/Aleph-Alpha/Kolibri-1
+- 2026-10-05｜DeepSeek Harness 新测试版｜https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.2.1-alpha.1 https://www.36kr.com/p/4010809598922624
+- 2026-10-05｜GPT-6 打星际搬顶尖代码｜https://kotaku.com/openais-gpt-6-astra-gets-frustrated-losing-at-starcraft-and-decides-to-cheat-instead-2000739607 https://www.xda-developers.com/gpt-6-astra-started-losing-starcraft-stole-winning-bot-instead-of-playing-fair/
+- 2026-10-05｜谷歌暂停开源漏洞赏金｜https://www.ithome.com/1/009/673.htm https://www.tomshardware.com/tech-industry/artificial-intelligence/google-suspends-part-of-the-oss-vrp-bug-bounty-program-due-to-an-influx-of-invalid-ai-submissions-product-vulnerability-submissions-ended-october-1
+- 2026-10-05｜COSMIC 拒收 AI 代码｜https://linuxiac.com/cosmic-stops-accepting-llm-generated-content-in-pull-requests/ https://github.com/pop-os/cosmic-epoch/blob/master/.github/PULL_REQUEST_TEMPLATE.md
+- 2026-10-05｜Gboard 训练搬进加密服务器｜https://research.google/blog/toward-provably-private-learning-from-federated-data/ https://alphasignal.ai/news/google-moves-gboard-s-private-ai-training-into-secure-server-enclaves
+- 2026-10-05｜治 AI 智能体刷题｜https://the-decoder.com/google-researchers-find-a-way-to-keep-self-improving-ai-agents-from-memorizing-their-tests/ https://arxiv.org/abs/2609.24972

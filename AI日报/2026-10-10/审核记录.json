@@ -1,0 +1,234 @@
+{
+ "date": "2026-10-10",
+ "script_sha": "ee6dc3b72196",
+ "passed": true,
+ "checked_at": "2026-10-10 04:30:44",
+ "checks": [
+  {
+   "check": "台本检查",
+   "ok": true,
+   "level": "ok",
+   "detail": "7 条，约 2006 字"
+  },
+  {
+   "check": "台本提示",
+   "ok": false,
+   "level": "warn",
+   "detail": "第 2 条 vhook「测试找到 66 个，单个 14 到 27」15.05 字宽，竖屏标题第二行放不下会缩小字号（≤15 字宽）"
+  },
+  {
+   "check": "成片",
+   "ok": true,
+   "level": "ok",
+   "detail": "D:\\大疆\\AI日报\\2026-10-10\\AI每日日报_1010_成片.mp4"
+  },
+  {
+   "check": "上传版 ≤ 9 MB",
+   "ok": true,
+   "level": "ok",
+   "detail": "8.97 MB"
+  },
+  {
+   "check": "H.264 上传版 ≤ 9 MB（抖音 / 小红书）",
+   "ok": true,
+   "level": "ok",
+   "detail": "8.77 MB"
+  },
+  {
+   "check": "竖屏成片 1080×2340",
+   "ok": true,
+   "level": "ok",
+   "detail": "1080,2340"
+  },
+  {
+   "check": "竖屏 QA（帧数 / 时长 / 口型对齐）",
+   "ok": true,
+   "level": "ok",
+   "detail": "{\"width\": 1080, \"height\": 2340, \"frames\": 9433, \"want_frames\": 9433, \"duration\": 314.433, \"total\": 314.431, \"lufs\": \"-16.0\", \"lra\": \"1.9\", \"true_peak\": \"-3.3\", \"mouth_best_lag\": 0, \"mouth_corr\": 0.752, \"mouth_corr0\": 0.752, \"subs\": 156, \"ok\": true}"
+  },
+  {
+   "check": "竖屏字幕中英对齐（make_vertical.py lint）",
+   "ok": true,
+   "level": "ok",
+   "detail": "字幕对齐检查：156 段，错 0 处、提示 0 处"
+  },
+  {
+   "check": "封面",
+   "ok": true,
+   "level": "ok",
+   "detail": "16x9 + 4x3 + 3x4"
+  },
+  {
+   "check": "中英双语字幕（画面 + 三份 SRT）",
+   "ok": true,
+   "level": "ok",
+   "detail": "101 条"
+  },
+  {
+   "check": "标题（三个平台限长）",
+   "ok": true,
+   "level": "ok",
+   "detail": "10月10日AI圈7件事：Anthropic推出OSS Scanner免费扫开源漏洞，Claude动态工作流最多并行1000个智能体 | Anthropic免费扫开源漏洞，智能体并行1000个 | AI圈7件事：Anthropic扫漏洞"
+  },
+  {
+   "check": "简介里有全部来源",
+   "ok": true,
+   "level": "ok",
+   "detail": "8 个网址"
+  },
+  {
+   "check": "简介里没有别的网址",
+   "ok": true,
+   "level": "ok",
+   "detail": ""
+  },
+  {
+   "check": "简介 ≤ 2000 字",
+   "ok": true,
+   "level": "ok",
+   "detail": "1181 字"
+  },
+  {
+   "check": "总时长超过 5 分钟（B 站分段章节要求）",
+   "ok": true,
+   "level": "ok",
+   "detail": "314.4 秒"
+  },
+  {
+   "check": "配音识别分 ≥ 0.75",
+   "ok": true,
+   "level": "ok",
+   "detail": "1 批"
+  },
+  {
+   "check": "事实核对（数字、英文名都在原文里）",
+   "ok": true,
+   "level": "ok",
+   "detail": "全部找到"
+  },
+  {
+   "check": "内容安全（色情、暴力、时政、广告、提示词注入、隐藏字符）",
+   "ok": true,
+   "level": "ok",
+   "detail": "没有命中"
+  },
+  {
+   "check": "要 AI 复核确认的词",
+   "ok": false,
+   "level": "warn",
+   "detail": "[敏感词（看上下文）] 第 4 条 第 5 句：起诉；[敏感词（看上下文）] 第 4 条 第 6 句：武器；[敏感词（看上下文）] 第 4 条 第 6 句：武器；[敏感词（看上下文）] 第 4 条 第 6 句：武器；[敏感词（看上下文）] 第 4 条 第 8 句：选举；[敏感词（看上下文）] 第 4 条 第 8 句：禁令；[传闻] 第 7 条 第 7 句（英文字幕）：reportedly；[传闻] 字幕 srt：reportedly；[敏感词（看上下文）] 字幕 srt：起诉；[敏感词（看上下文）] 字幕 srt：武器；[敏感词（看上下文）] 字幕 srt：武器；[敏感词（看上下文）] 字幕 srt：武器；[敏感词（看上下文）] 字幕 srt：选举；[敏感词（看上下文）] 字幕 srt：禁令"
+  },
+  {
+   "check": "没有重复最近 7 天播过的原文",
+   "ok": true,
+   "level": "ok",
+   "detail": ""
+  },
+  {
+   "check": "AI 复核（独立子代理，看成品和原文）",
+   "ok": true,
+   "level": "ok",
+   "detail": "通过：【发布前必须做】投稿信息.json 里 xiaohongshu.topics 仍有“豆包”标签，与本期内容无关；按约定发布前删掉（删掉后再发）。；【非阻断】SRT 第 15 条：中文“项目维护者要主动报名，”英文为空，英文 “and maintainers opt in on GitHub” 落在第 16 条（中文是“在 GitHub 上提交一个”）。同一句话的两半，意思没错、专名完整，但中英没落在同一条上，建议把英文挪到第 15 条或合并。竖屏烧录字幕 lint 无错。；【非阻断】SRT 第 12 条英文多带了 “a free vulnerability scan”（中文在下一条才说“免费帮开源项目找漏洞”），第 57-59 条“天体物理学家”中文断成“天体 / 物理学家”、英文 “and also a / researcher” 偏移半条；专有名词（约翰斯·霍普金斯大学、Claude"
+  }
+ ],
+ "hits": [
+  {
+   "level": "review",
+   "cat": "敏感词（看上下文）",
+   "word": "起诉",
+   "where": "第 4 条 第 5 句",
+   "context": "让 Claude 决定该调查、逮捕或起诉谁。"
+  },
+  {
+   "level": "review",
+   "cat": "敏感词（看上下文）",
+   "word": "武器",
+   "where": "第 4 条 第 6 句",
+   "context": "武器一条扩大到让武器运转的软件和部件，包"
+  },
+  {
+   "level": "review",
+   "cat": "敏感词（看上下文）",
+   "word": "武器",
+   "where": "第 4 条 第 6 句",
+   "context": "武器一条扩大到让武器运转的软件和部件，包括给无人机装武器"
+  },
+  {
+   "level": "review",
+   "cat": "敏感词（看上下文）",
+   "word": "武器",
+   "where": "第 4 条 第 6 句",
+   "context": "武器运转的软件和部件，包括给无人机装武器。"
+  },
+  {
+   "level": "review",
+   "cat": "敏感词（看上下文）",
+   "word": "选举",
+   "where": "第 4 条 第 8 句",
+   "context": "选举那一节改名了，也删掉了对投票的个性化"
+  },
+  {
+   "level": "review",
+   "cat": "敏感词（看上下文）",
+   "word": "禁令",
+   "where": "第 4 条 第 8 句",
+   "context": "，也删掉了对投票的个性化定向的一刀切禁令。"
+  },
+  {
+   "level": "review",
+   "cat": "传闻",
+   "word": "reportedly",
+   "where": "第 7 条 第 7 句（英文字幕）",
+   "context": "The switch reportedly cut costs in half"
+  },
+  {
+   "level": "review",
+   "cat": "传闻",
+   "word": "reportedly",
+   "where": "字幕 srt",
+   "context": "本降了一半， The switch reportedly cut costs in half"
+  },
+  {
+   "level": "review",
+   "cat": "敏感词（看上下文）",
+   "word": "起诉",
+   "where": "字幕 srt",
+   "context": "nvestigate,    逮捕或起诉谁。 arrest or charg"
+  },
+  {
+   "level": "review",
+   "cat": "敏感词（看上下文）",
+   "word": "武器",
+   "where": "字幕 srt",
+   "context": "est or charge.    武器一条扩大到让武器 The weapo"
+  },
+  {
+   "level": "review",
+   "cat": "敏感词（看上下文）",
+   "word": "武器",
+   "where": "字幕 srt",
+   "context": "harge.    武器一条扩大到让武器 The weapons rule "
+  },
+  {
+   "level": "review",
+   "cat": "敏感词（看上下文）",
+   "word": "武器",
+   "where": "字幕 srt",
+   "context": "s work,    包括给无人机装武器。 including arming"
+  },
+  {
+   "level": "review",
+   "cat": "敏感词（看上下文）",
+   "word": "选举",
+   "where": "字幕 srt",
+   "context": "e disconnects.    选举那一节改名了， The electi"
+  },
+  {
+   "level": "review",
+   "cat": "敏感词（看上下文）",
+   "word": "禁令",
+   "where": "字幕 srt",
+   "context": "onalized    定向的一刀切禁令。 vote targeting w"
+  }
+ ]
+}

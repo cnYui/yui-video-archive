@@ -1,0 +1,382 @@
+{
+ "1": {
+  "n": 1,
+  "ch": 0,
+  "title": "为设计选一种个性",
+  "en": "Choose a personality",
+  "page": 17,
+  "take": "先定调，再动手",
+  "img": "图01_个性.jpg",
+  "tagL": [
+   "neutral",
+   "稳重风"
+  ],
+  "tagR": [
+   "neutral",
+   "俏皮风"
+  ],
+  "capL": "深青色、小圆角、措辞规矩",
+  "capR": "亮色、插画、口语文案"
+ },
+ "2": {
+  "n": 2,
+  "ch": 0,
+  "title": "别着急上色",
+  "en": "Detail comes later",
+  "page": 10,
+  "take": "先灰度，后上色",
+  "img": "图02_先灰度后上色.jpg",
+  "tagL": [
+   "neutral",
+   "灰度版"
+  ],
+  "tagR": [
+   "neutral",
+   "点睛上色"
+  ],
+  "capL": "只靠间距和字重，骨架先站稳",
+  "capR": "只给两处上主色"
+ },
+ "3": {
+  "n": 3,
+  "ch": 0,
+  "title": "字号并非万能",
+  "en": "Size isn't everything",
+  "page": 32,
+  "take": "字重和颜色也能分层级",
+  "img": "图03_字号并非万能.jpg",
+  "tagL": [
+   "bad",
+   "别这样"
+  ],
+  "tagR": [
+   "good",
+   "这样做"
+  ],
+  "capL": "字重全是 400，只有大小不同",
+  "capR": "标题加粗，次要文字调灰"
+ },
+ "4": {
+  "n": 4,
+  "ch": 0,
+  "title": "弱化来凸显重点",
+  "en": "De-emphasize to emphasize",
+  "page": 39,
+  "take": "压低配角，主角自现",
+  "img": "图04_弱化凸显主角.jpg",
+  "tagL": [
+   "bad",
+   "别这样"
+  ],
+  "tagR": [
+   "good",
+   "这样做"
+  ],
+  "capL": "选中项被深色粗体淹没",
+  "capR": "其余调浅，选中项自己跳出来"
+ },
+ "5": {
+  "n": 5,
+  "ch": 0,
+  "title": "非必要不用标签",
+  "en": "Labels are a last resort",
+  "page": 41,
+  "take": "能省标签就省",
+  "img": "图05_删冗余标签.jpg",
+  "tagL": [
+   "bad",
+   "别这样"
+  ],
+  "tagR": [
+   "good",
+   "这样做"
+  ],
+  "capL": "“标签：数据”，字段平摊权重",
+  "capR": "去掉标签，名字放大加粗"
+ },
+ "6": {
+  "n": 6,
+  "ch": 0,
+  "title": "按钮看主次不看含义",
+  "en": "Semantics are secondary",
+  "page": 52,
+  "take": "一个主操作，其余让位",
+  "img": "图06_按钮分主次.jpg",
+  "tagL": [
+   "bad",
+   "别这样"
+  ],
+  "tagR": [
+   "good",
+   "这样做"
+  ],
+  "capL": "红、蓝、绿三个实心按钮并排抢戏",
+  "capR": "发布实心，编辑浅底，删除是文字链接"
+ },
+ "7": {
+  "n": 7,
+  "ch": 1,
+  "title": "从过度留白开始",
+  "en": "Start with too much white space",
+  "page": 56,
+  "take": "先给多，再收紧",
+  "img": "图07_过度留白起步.jpg",
+  "tagL": [
+   "bad",
+   "别这样"
+  ],
+  "tagR": [
+   "good",
+   "这样做"
+  ],
+  "capL": "内边距紧凑，内容贴着边",
+  "capR": "先给足留白，再适度收紧"
+ },
+ "8": {
+  "n": 8,
+  "ch": 1,
+  "title": "不必填满屏幕",
+  "en": "You don't have to fill the whole screen",
+  "page": 65,
+  "take": "要多宽，用多宽",
+  "img": "图08_别撑满屏幕.jpg",
+  "tagL": [
+   "bad",
+   "别这样"
+  ],
+  "tagR": [
+   "good",
+   "这样做"
+  ],
+  "capL": "表单撑满整个屏幕，输入框拉得老长",
+  "capR": "按内容收窄、居中"
+ },
+ "9": {
+  "n": 9,
+  "ch": 1,
+  "title": "间距有亲疏",
+  "en": "Avoid ambiguous spacing",
+  "page": 83,
+  "take": "组间距 大于 组内距",
+  "img": "图09_间距亲疏.jpg",
+  "tagL": [
+   "bad",
+   "别这样"
+  ],
+  "tagR": [
+   "good",
+   "这样做"
+  ],
+  "capL": "标签上下各空 20px，归属不清",
+  "capR": "上 20px、下 10px，贴住输入框"
+ },
+ "10": {
+  "n": 10,
+  "ch": 1,
+  "title": "缩放不总是等比",
+  "en": "Relative sizing doesn't scale",
+  "page": 79,
+  "take": "越大的元素，缩得越多",
+  "img": "图10_手机端非等比缩放.jpg",
+  "tagL": [
+   "bad",
+   "别这样"
+  ],
+  "tagR": [
+   "good",
+   "这样做"
+  ],
+  "capL": "2.5em 的标题在手机上是 35px",
+  "capR": "标题独立收到 24px"
+ },
+ "11": {
+  "n": 11,
+  "ch": 1,
+  "title": "行长与行高联动",
+  "en": "Keep your line length in check",
+  "page": 99,
+  "take": "每行 45 到 75 个字符",
+  "img": "图11_行长与行高.jpg",
+  "tagL": [
+   "bad",
+   "别这样"
+  ],
+  "tagR": [
+   "good",
+   "这样做"
+  ],
+  "capL": "一行约 120 个字符，容易串行",
+  "capR": "一行 45–55 个字符"
+ },
+ "12": {
+  "n": 12,
+  "ch": 1,
+  "title": "基线对齐，不居中",
+  "en": "Baseline, not center",
+  "page": 102,
+  "take": "字母坐在同一条线上",
+  "img": "图12_基线对齐.jpg",
+  "tagL": [
+   "bad",
+   "别这样"
+  ],
+  "tagR": [
+   "good",
+   "这样做"
+  ],
+  "capL": "align-items: center",
+  "capR": "align-items: baseline"
+ },
+ "13": {
+  "n": 13,
+  "ch": 2,
+  "title": "颜色比想象的多",
+  "en": "You need more colors than you think",
+  "page": 123,
+  "take": "灰 8 到 10 档，主色 5 到 10 档",
+  "img": "图13_颜色比想象多.jpg",
+  "tagL": [
+   "bad",
+   "别这样"
+  ],
+  "tagR": [
+   "good",
+   "这样做"
+  ],
+  "capL": "在线生成的 5 色方案",
+  "capR": "完整色阶：主色、灰、强调色"
+ },
+ "14": {
+  "n": 14,
+  "ch": 2,
+  "title": "无障碍也能好看",
+  "en": "Accessible doesn't have to mean ugly",
+  "page": 142,
+  "take": "浅底深字，对比更高更柔和",
+  "img": "图14_浅底深字.jpg",
+  "tagL": [
+   "q",
+   "合格，但抢眼"
+  ],
+  "tagR": [
+   "good",
+   "浅底深字"
+  ],
+  "capL": "深底白字，对比 5.07–5.97",
+  "capR": "浅底深字，对比 9.01–12.32"
+ },
+ "15": {
+  "n": 15,
+  "ch": 2,
+  "title": "别只靠颜色",
+  "en": "Don't rely on color alone",
+  "page": 146,
+  "take": "颜色加图形，双通道",
+  "img": "图15_不只靠颜色.jpg",
+  "tagL": [
+   "bad",
+   "别这样"
+  ],
+  "tagR": [
+   "good",
+   "这样做"
+  ],
+  "capL": "只靠红、绿区分涨跌",
+  "capR": "加上向上、向下的箭头"
+ },
+ "16": {
+  "n": 16,
+  "ch": 2,
+  "title": "强调色边框",
+  "en": "Add color with accent borders",
+  "page": 195,
+  "take": "加一条彩色细边",
+  "img": "图16_强调色边框.jpg",
+  "tagL": [
+   "bad",
+   "别这样"
+  ],
+  "tagR": [
+   "good",
+   "这样做"
+  ],
+  "capL": "平淡白卡片，没有重心",
+  "capR": "顶部加一条蓝色细边"
+ },
+ "17": {
+  "n": 17,
+  "ch": 2,
+  "title": "图上文字先处理背景",
+  "en": "Text needs consistent contrast",
+  "page": 176,
+  "take": "先压暗背景，再放字",
+  "img": "图17_图上文字.jpg",
+  "tagL": [
+   "bad",
+   "别这样"
+  ],
+  "tagR": [
+   "good",
+   "这样做"
+  ],
+  "capL": "文字直接压在照片上，看不清",
+  "capR": "垫一层半透明黑色蒙版"
+ },
+ "18": {
+  "n": 18,
+  "ch": 2,
+  "title": "每样东西有适用尺寸",
+  "en": "Everything has an intended size",
+  "page": 181,
+  "take": "小图标别硬拉大",
+  "img": "图18_适用尺寸.jpg",
+  "tagL": [
+   "q",
+   "很多人这样做"
+  ],
+  "tagR": [
+   "good",
+   "这样做"
+  ],
+  "capL": "小图标直接拉大：笨重",
+  "capR": "保持原大小，外包浅色圆底"
+ },
+ "19": {
+  "n": 19,
+  "ch": 2,
+  "title": "慎用边框",
+  "en": "Use fewer borders",
+  "page": 206,
+  "take": "用底色和留白分区",
+  "img": "图19_慎用边框.jpg",
+  "tagL": [
+   "bad",
+   "别这样"
+  ],
+  "tagR": [
+   "good",
+   "这样做"
+  ],
+  "capL": "每个区块、每一行都画线",
+  "capR": "用底色差和留白分区"
+ },
+ "20": {
+  "n": 20,
+  "ch": 2,
+  "title": "别忽视空状态",
+  "en": "Don't overlook empty states",
+  "page": 203,
+  "take": "空状态要指路",
+  "img": "图20_空状态.jpg",
+  "tagL": [
+   "bad",
+   "别这样"
+  ],
+  "tagR": [
+   "good",
+   "这样做"
+  ],
+  "capL": "只有一句 No contacts found",
+  "capR": "插画 + 引导 + 添加按钮"
+ }
+}

@@ -1,0 +1,89 @@
+{
+ "slug": "子代理",
+ "title": "Claude官方教程 第7期｜子代理：脏活交出去，主对话只收答案",
+ "kicker": "<b>Claude官方教程</b> 第7期",
+ "hook": [
+  "脏活交给子代理",
+  "主对话只留答案"
+ ],
+ "lines": [
+  {
+   "id": "N01",
+   "zh": "查一个问题，Claude 翻了一大堆文件，主对话的上下文就这么被占满了。",
+   "say": "查一个问题，Claude 翻了一大堆文件，主对话的上下文就这么被占满了。",
+   "en": "Ask one question and Claude reads a pile of files, and your main context fills up."
+  },
+  {
+   "id": "N02",
+   "zh": "子代理就是解法：它在自己的上下文窗口里干活，只把摘要交回来。",
+   "say": "子代理就是解法：它在自己的上下文窗口里干活，只把摘要交回来。",
+   "en": "Subagents are the fix: they work in their own context window and hand back only a summary."
+  },
+  {
+   "id": "N03",
+   "zh": "比如问一句：这个应用在哪处理退款？Claude 会派探索型子代理去翻代码。",
+   "say": "比如问一句：这个应用在哪处理退款？Claude 会派探索型子代理去翻代码。",
+   "en": "Ask where the app handles refunds, and Claude sends an Explore subagent to dig through the code."
+  },
+  {
+   "id": "N04",
+   "zh": "翻的过程留在子代理那边，主对话里只剩结论。",
+   "say": "翻的过程留在子代理那边，主对话里只剩结论。",
+   "en": "The digging stays with the subagent. Your main conversation gets just the conclusion."
+  },
+  {
+   "id": "N13",
+   "zh": "官方示意里，子代理读了六千多 token，只回你四百多。",
+   "say": "官方示意里，子代理读了六千多 token，只回你四百多。",
+   "en": "In Anthropic's illustration, the subagent reads over 6,000 tokens and sends back only about 400."
+  },
+  {
+   "id": "N05",
+   "zh": "自带几个子代理：Explore 只读搜代码，Plan 做计划调研。",
+   "say": "自带几个子代理：Explore 只读搜代码，Plan 做计划调研。",
+   "en": "Claude Code ships with built-in subagents: Explore searches code read-only, Plan researches in plan mode."
+  },
+  {
+   "id": "N06",
+   "zh": "想自己做一个？最省事的办法，是直接让 Claude 来建。",
+   "say": "想自己做一个？最省事的办法，是直接让 Claude 来建。",
+   "en": "Want your own? The easy way is to ask Claude: build me a subagent."
+  },
+  {
+   "id": "N07",
+   "zh": "官方课演示的 /agents 创建向导，新版本已经删了，别照着找。",
+   "say": "官方课演示的斜杠 agents 创建向导，新版本已经删了，别照着找。",
+   "en": "The /agents creation wizard shown in the course has been removed in newer versions, so don't go looking for it."
+  },
+  {
+   "id": "N08",
+   "zh": "描述写得好，Claude 才知道什么时候该叫它；用 @ 点名，则一定会派它。",
+   "say": "描述写得好，Claude 才知道什么时候该叫它；用艾特点名，则一定会派它。",
+   "en": "A good description tells Claude when to call it, and an @ mention guarantees it runs."
+  },
+  {
+   "id": "N09",
+   "zh": "子代理就是带 YAML 头的 Markdown 文件，必填只有两个：名字和描述。",
+   "say": "子代理就是带亚马尔头的 Markdown 文件，必填只有两个：名字和描述。",
+   "en": "A subagent is a Markdown file with YAML frontmatter, and only the name and description are required."
+  },
+  {
+   "id": "N10",
+   "zh": "加一行 memory，它就能跨对话记住东西，越用越熟。",
+   "say": "加一行 memory，它就能跨对话记住东西，越用越熟。",
+   "en": "Add one memory line and it can remember things across conversations."
+  },
+  {
+   "id": "N11",
+   "zh": "还能预载技能：写进 skills 字段，整份技能都会塞进它的上下文。",
+   "say": "还能预载技能：写进 skills 字段，整份技能都会塞进它的上下文。",
+   "en": "You can also preload skills: list them in the skills field, and the whole skill is injected into its context."
+  },
+  {
+   "id": "N12",
+   "zh": "不过子代理自己也花用量，别当成免费的。脏活外包，只收结论。",
+   "say": "不过子代理自己也花用量，别当成免费的。脏活外包，只收结论。",
+   "en": "Subagents spend usage of their own, so they aren't free. Outsource the heavy lifting; take only the conclusion."
+  }
+ ]
+}

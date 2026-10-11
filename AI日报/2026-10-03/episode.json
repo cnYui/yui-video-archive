@@ -1,0 +1,373 @@
+{
+  "number": 1003,
+  "title": "10月3日，鲸鱼娘带你看看AI圈发生了什么？",
+  "dir_name": "AI每日日报_1003",
+  "date": "2026-10-03",
+  "date_label": "10月3日",
+  "weekday": "周六",
+  "subtitle": "鲸鱼娘带你看看 AI 圈发生了什么",
+  "target_minutes": [
+    5,
+    6
+  ],
+  "question_scene": "S01",
+  "questions": [
+    {
+      "text": "Anthropic 办工程师学院",
+      "scenes": [
+        "S02"
+      ]
+    },
+    {
+      "text": "微软发布三个语音模型",
+      "scenes": [
+        "S03"
+      ]
+    },
+    {
+      "text": "ChatGPT 能虚拟试穿了",
+      "scenes": [
+        "S04"
+      ]
+    },
+    {
+      "text": "DGX Spark 出 64GB 版",
+      "scenes": [
+        "S05"
+      ]
+    },
+    {
+      "text": "arXiv 限制每月投稿数",
+      "scenes": [
+        "S06"
+      ]
+    },
+    {
+      "text": "Flux 3 Image 改图更稳",
+      "scenes": [
+        "S07"
+      ]
+    },
+    {
+      "text": "Cloudflare 开源决策模型",
+      "scenes": [
+        "S08"
+      ]
+    }
+  ],
+  "chapters": {
+    "S01": "开场",
+    "S02": "Anthropic 办工程师学院",
+    "S03": "微软发布三个语音模型",
+    "S04": "ChatGPT 能虚拟试穿了",
+    "S05": "DGX Spark 出 64GB 版",
+    "S06": "arXiv 限制每月投稿数",
+    "S07": "Flux 3 Image 改图更稳",
+    "S08": "Cloudflare 开源决策模型",
+    "S09": "回顾"
+  },
+  "bar_labels": {
+    "S01": "开场",
+    "S02": "Claude 学院",
+    "S03": "微软语音",
+    "S04": "虚拟试穿",
+    "S05": "DGX Spark",
+    "S06": "arXiv 限投",
+    "S07": "Flux 3",
+    "S08": "Clef",
+    "S09": "回顾"
+  },
+  "backgrounds": {
+    "S01": "01_深海气泡.png",
+    "S02": "02_星点.png",
+    "S03": "03_波纹.png",
+    "S04": "01_深海气泡.png",
+    "S05": "02_星点.png",
+    "S06": "03_波纹.png",
+    "S07": "01_深海气泡.png",
+    "S08": "02_星点.png",
+    "S09": "03_波纹.png"
+  },
+  "bg_alpha": 0.9,
+  "bg_blur": 0,
+  "intro_tagline": "",
+  "outro_items": [
+    {
+      "label": "新闻来源",
+      "value": "Anthropic · Unite.AI · Microsoft AI · The Decoder"
+    },
+    {
+      "label": "来源（续）",
+      "value": "IT之家 · TechCrunch · NVIDIA 博客 "
+    },
+    {
+      "label": "形象",
+      "value": "大肥鱼同人 · 上善无形 / ZipZipPipe"
+    },
+    {
+      "label": "视频制作模型",
+      "value": "Opus 5.5"
+    }
+  ],
+  "outro_closing": "感谢大家看到最后",
+  "auto_gestures": false,
+  "presenter": {
+    "id": "whale",
+    "frames": "角色/动作帧"
+  },
+  "badge_html": "AI每日日报<span class=\"n\">10.03</span>",
+  "toc_kicker_html": "<b>今日要闻</b>TODAY",
+  "bar_colors": [
+    "#97C3F0",
+    "#F3C98C",
+    "#4A88DA",
+    "#C6E6FB"
+  ],
+  "news": [
+    {
+      "headline": "Anthropic 办工程师学院",
+      "org": "Anthropic",
+      "source": "Anthropic · Unite.AI",
+      "source_short": "Anthropic",
+      "date": "10月2日",
+      "points": [
+        "一亿美元培训 1 万人",
+        "像住院医师一样学",
+        "要公司推荐才能报",
+        "先在三座城市开课"
+      ],
+      "rundown_key": "Anthropic 办了个工程师学院",
+      "line_points": [
+        null,
+        0,
+        1,
+        null,
+        2,
+        null,
+        3
+      ],
+      "refs": [
+        {
+          "name": "Anthropic",
+          "url": "https://www.anthropic.com/news/claude-frontier-academy"
+        },
+        {
+          "name": "Unite.AI",
+          "url": "https://www.unite.ai/new-anthropic-academy-backs-10-000-engineer-residencies-with-100m/"
+        }
+      ],
+      "snap": "../assets/snaps/news_01.png",
+      "snap_src": "unite.ai"
+    },
+    {
+      "headline": "微软发布三个语音模型",
+      "org": "Microsoft",
+      "source": "Microsoft AI · The Decoder",
+      "source_short": "Microsoft AI",
+      "date": "10月1日",
+      "points": [
+        "实时转写 60 种语言",
+        "100 多毫秒出字",
+        "语音合成 23 种语言",
+        "几秒录音就能克隆"
+      ],
+      "rundown_key": "微软发布三个语音模型",
+      "line_points": [
+        null,
+        0,
+        1,
+        null,
+        2,
+        null,
+        3,
+        null
+      ],
+      "refs": [
+        {
+          "name": "Microsoft AI",
+          "url": "https://microsoft.ai/news/our-first-streaming-transcription-model/"
+        },
+        {
+          "name": "The Decoder",
+          "url": "https://the-decoder.com/microsoft-ai-releases-new-transcription-and-text-to-speech-models-for-voice-agents/"
+        }
+      ],
+      "snap": "../assets/snaps/news_02.png",
+      "snap_src": "the-decoder.com"
+    },
+    {
+      "headline": "ChatGPT 能虚拟试穿了",
+      "org": "OpenAI",
+      "source": "IT之家 · TechCrunch",
+      "source_short": "IT之家",
+      "date": "10月1日",
+      "points": [
+        "上传自拍就能试穿",
+        "商品截图也能换装",
+        "基于 Images 2.5",
+        "收藏和试穿图放一起"
+      ],
+      "rundown_key": "ChatGPT 能虚拟试穿了",
+      "line_points": [
+        null,
+        0,
+        1,
+        null,
+        2,
+        3,
+        null
+      ],
+      "refs": [
+        {
+          "name": "IT之家",
+          "url": "https://www.ithome.com/1/009/197.htm"
+        },
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/10/01/chatgpt-can-now-virtually-try-on-clothes-for-you/"
+        }
+      ],
+      "snap": "../assets/snaps/news_03.png",
+      "snap_src": "ithome.com"
+    },
+    {
+      "headline": "DGX Spark 出 64GB 版",
+      "org": "NVIDIA",
+      "source": "NVIDIA 博客 · IT之家",
+      "source_short": "NVIDIA",
+      "date": "10月2日",
+      "points": [
+        "4,999 美元起",
+        "最大跑 1000 亿参数",
+        "两台组网合成 128GB",
+        "双机最快 1.7 倍"
+      ],
+      "rundown_key": "DGX Spark 出了 64GB 版",
+      "line_points": [
+        null,
+        0,
+        1,
+        null,
+        2,
+        null,
+        3
+      ],
+      "refs": [
+        {
+          "name": "NVIDIA 博客",
+          "url": "https://blogs.nvidia.com/blog/local-ai-dgx-spark-64gb-sync/"
+        },
+        {
+          "name": "IT之家",
+          "url": "https://www.ithome.com/1/009/359.htm"
+        }
+      ],
+      "snap": "../assets/snaps/news_04.png",
+      "snap_src": "ithome.com"
+    },
+    {
+      "headline": "arXiv 限制每月投稿数",
+      "org": "arXiv",
+      "source": "arXiv 博客 · Times Higher Education",
+      "source_short": "arXiv",
+      "date": "10月1日",
+      "points": [
+        "每月最多投 2 篇",
+        "9 月投稿近翻倍",
+        "AI 写的论文变多",
+        "被拒的也算名额"
+      ],
+      "rundown_key": "arXiv 限制每月投稿",
+      "line_points": [
+        null,
+        0,
+        1,
+        null,
+        null,
+        2,
+        3
+      ],
+      "refs": [
+        {
+          "name": "arXiv 博客",
+          "url": "https://blog.arxiv.org/2026/10/01/updated-rate-limit-policy/"
+        },
+        {
+          "name": "Times Higher Education",
+          "url": "https://www.timeshighereducation.com/news/arxivs-new-preprint-submission-cap-divides-opinion"
+        }
+      ]
+    },
+    {
+      "headline": "Flux 3 Image 改图更稳",
+      "org": "Black Forest Labs",
+      "source": "The Decoder · OpenRouter",
+      "source_short": "The Decoder",
+      "date": "10月1日",
+      "points": [
+        "只改指定的地方",
+        "用框摆放画面",
+        "10 张参考图、4K 输出",
+        "开放权重几周内到"
+      ],
+      "rundown_key": "Flux 3 Image 改图更稳",
+      "line_points": [
+        null,
+        0,
+        1,
+        2,
+        null,
+        null,
+        3
+      ],
+      "refs": [
+        {
+          "name": "The Decoder",
+          "url": "https://the-decoder.com/black-forest-labs-launches-flux-3-image-with-multi-step-editing-that-leaves-the-rest-of-your-picture-alone/"
+        },
+        {
+          "name": "OpenRouter",
+          "url": "https://openrouter.ai/black-forest-labs/flux-3-image"
+        }
+      ],
+      "snap": "../assets/snaps/news_06.png",
+      "snap_src": "the-decoder.com"
+    },
+    {
+      "headline": "Cloudflare 开源决策模型",
+      "org": "Cloudflare",
+      "source": "Cloudflare 博客 · MarkTechPost",
+      "source_short": "Cloudflare",
+      "date": "10月1日",
+      "points": [
+        "只给概率不写文字",
+        "基于 Qwen 改的",
+        "Flash 中位 38.8 毫秒",
+        "Apache 2.0 开源"
+      ],
+      "rundown_key": "Cloudflare 开源了决策模型",
+      "line_points": [
+        null,
+        0,
+        1,
+        2,
+        null,
+        3,
+        null
+      ],
+      "refs": [
+        {
+          "name": "Cloudflare 博客",
+          "url": "https://blog.cloudflare.com/clef-decision-models/"
+        },
+        {
+          "name": "MarkTechPost",
+          "url": "https://www.marktechpost.com/2026/10/01/cloudflare-releases-clef-and-clef-flash/"
+        }
+      ],
+      "snap": "../assets/snaps/news_07.png",
+      "snap_src": "blog.cloudflare.com"
+    }
+  ],
+  "style": "board"
+}

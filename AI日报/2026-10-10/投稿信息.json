@@ -1,0 +1,68 @@
+{
+ "title": "10月10日AI圈7件事：Anthropic推出OSS Scanner免费扫开源漏洞，Claude动态工作流最多并行1000个智能体",
+ "titles": {
+  "bilibili": "10月10日AI圈7件事：Anthropic推出OSS Scanner免费扫开源漏洞，Claude动态工作流最多并行1000个智能体",
+  "douyin": "Anthropic免费扫开源漏洞，智能体并行1000个",
+  "xiaohongshu": "AI圈7件事：Anthropic扫漏洞"
+ },
+ "title_notes": [],
+ "video": "D:\\大疆\\AI日报\\2026-10-10\\AI每日日报_1010_上传版.mp4",
+ "video_h264": "D:\\大疆\\AI日报\\2026-10-10\\AI每日日报_1010_上传版_h264.mp4",
+ "video_seconds": 314.43,
+ "cover_16x9": "D:\\大疆\\AI日报\\2026-10-10\\封面\\封面_16x9_1920x1080.png",
+ "cover_4x3": "D:\\大疆\\AI日报\\2026-10-10\\封面\\封面_4x3_1440x1080.png",
+ "cover_3x4": "D:\\大疆\\AI日报\\2026-10-10\\封面\\封面_3x4_1080x1440.png",
+ "partition": "人工智能",
+ "partition_fallback": "科技数码",
+ "tags": [
+  "AI资讯",
+  "人工智能",
+  "大模型",
+  "AI日报",
+  "Anthropic",
+  "Claude",
+  "OpenAI",
+  "DeepSeek",
+  "鲸鱼娘",
+  "大肥鱼"
+ ],
+ "collection": "AI每日日报",
+ "declaration": "含AI生成内容",
+ "description": "AI每日日报 · 10月10日（周六）· 竖屏版\n鲸鱼娘带你看看 AI 圈发生了什么。\n\n今日内容\n0:00 开场\n0:21 Anthropic 免费查开源漏洞\n1:12 Claude 智能体并行 1000 个\n1:47 Claude 画出紫外天图\n2:29 Anthropic 更新使用政策\n3:10 DeepSeek 抽风的原因\n3:52 OpenAI 年化营收少 200 亿\n4:32 Ecosia 换中国模型\n5:10 回顾\n\n来源\n① Anthropic 免费查开源漏洞：Anthropic https://www.anthropic.com/research/launching-opt-in-vuln-finding-service-for-open-source\n② Claude 智能体并行 1000 个：The Decoder https://the-decoder.com/anthropics-claude-can-now-orchestrate-up-to-1000-ai-agents-in-parallel-through-dynamic-workflows/\n③ Claude 画出紫外天图：Anthropic https://www.anthropic.com/research/the-missing-map-of-the-sky\n④ Anthropic 更新使用政策：Anthropic https://www.anthropic.com/news/2026-usage-policy-update\n⑤ DeepSeek 抽风的原因：IT之家 https://www.ithome.com/1/010/780.htm\n⑥ OpenAI 年化营收少 200 亿：IT之家 https://www.ithome.com/1/010/751.htm ；The Decoder https://the-decoder.com/openai-and-anthropic-before-the-ipo-different-balance-sheets-make-comparison-difficult/\n⑦ Ecosia 换中国模型：IT之家 https://www.ithome.com/1/010/539.htm\n\n说明\n· 信息截至北京时间 2026-10-10 03:33，以各家官方发布为准。\n· 本期配音由 AI 合成（Fish Audio「苏晓晓」），背景音乐为程序合成；内容由 AI 整理，并自动核对来源，如有出入以原文为准。\n· 主播鲸鱼娘（像素素材包「大肥鱼」）是 DeepSeek 的网友拟人同人（原型：上善无形，CC BY-NC-SA 4.0；女仆造型：ZipZipPipe），与 DeepSeek 官方无关。",
+ "douyin": {
+  "title": "Anthropic免费扫开源漏洞，智能体并行1000个",
+  "description": "10月10日AI圈7件事：Anthropic推出OSS Scanner免费扫开源漏洞，Claude动态工作流最多并行1000个智能体\n今日 7 件事：Anthropic给开源项目免费查漏洞、Claude智能体最多并行一千个、Claude画出紫外天图、Anthropic更新使用政策、字节找到DeepSeek抽风原因、OpenAI年化营收少了两百亿、Ecosia放弃Mistral。\n内容由 AI 整理并自动核对来源，如有出入以原文为准。",
+  "topics": [
+   "AI每日日报",
+   "人工智能",
+   "大模型",
+   "AI资讯",
+   "Anthropic"
+  ],
+  "declaration": "内容由AI生成",
+  "collection": "AI每日日报",
+  "video": "D:\\大疆\\AI日报\\2026-10-10\\AI每日日报_1010_上传版_h264.mp4",
+  "cover_3x4": "D:\\大疆\\AI日报\\2026-10-10\\封面\\封面_3x4_1080x1440.png",
+  "cover_4x3": "D:\\大疆\\AI日报\\2026-10-10\\封面\\封面_4x3_1440x1080.png"
+ },
+ "xiaohongshu": {
+  "title": "AI圈7件事：Anthropic扫漏洞",
+  "description": "10月10日AI圈7件事：Anthropic推出OSS Scanner免费扫开源漏洞，Claude动态工作流最多并行1000个智能体\n今日 7 件事：Anthropic给开源项目免费查漏洞、Claude智能体最多并行一千个、Claude画出紫外天图、Anthropic更新使用政策、字节找到DeepSeek抽风原因、OpenAI年化营收少了两百亿、Ecosia放弃Mistral。\n内容由 AI 整理并自动核对来源，如有出入以原文为准。",
+  "topics": [
+   "AI每日日报",
+   "人工智能",
+   "大模型",
+   "AI资讯",
+   "Anthropic",
+   "豆包",
+   "OpenAI",
+   "AIGC",
+   "科技"
+  ],
+  "declaration": "笔记含AI合成内容",
+  "original": true,
+  "collection": "AI每日日报",
+  "video": "D:\\大疆\\AI日报\\2026-10-10\\AI每日日报_1010_上传版_h264.mp4",
+  "cover_3x4": "D:\\大疆\\AI日报\\2026-10-10\\封面\\封面_3x4_1080x1440.png"
+ }
+}

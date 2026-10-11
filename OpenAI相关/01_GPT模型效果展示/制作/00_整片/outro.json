@@ -1,0 +1,30 @@
+{
+  "items": [
+    {
+      "label": "实测画面",
+      "value": "网友作品（X 平台，见简介）"
+    },
+    {
+      "label": "官方画面",
+      "value": "OpenAI DevDay 2026 主题演讲"
+    },
+    {
+      "label": "资料",
+      "value": "OpenAI 官方文档 · 价格页 · 公开报道"
+    },
+    {
+      "label": "配音",
+      "value": "曼波声线"
+    },
+    {
+      "label": "剪辑",
+      "value": "Claude Code"
+    },
+    {
+      "label": "视频剪辑模型",
+      "value": "Sonnet 5.5"
+    }
+  ],
+  "closing": "感谢大家看到最后",
+  "signature": "悠一"
+}

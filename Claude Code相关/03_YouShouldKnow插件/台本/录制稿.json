@@ -1,0 +1,35 @@
+{
+  "slug": "YouShouldKnow插件",
+  "title": "Claude Code 新增内置插件 You should know（第 3 期，v1：已按 事实核对.md 的“能写 / 不能写”改过）",
+  "sub": "Claude Code 新插件",
+  "chapters": ["新插件是什么", "看官方演示", "原理和开关"],
+  "lines": [
+    {"id": "N01", "zh": "你让 Claude 改完代码，最后它会给你一份总结。", "say": "你让 Claude 改完代码，最后它会给你一份总结。", "en": "You ask Claude to change some code, and at the end it hands you a summary."},
+    {"id": "N02", "zh": "这份总结写得很顺，每一条看着都是好消息。", "say": "这份总结写得很顺，每一条看着都是好消息。", "en": "The summary reads smoothly, and every line looks like good news."},
+    {"id": "N03", "zh": "可有一条，被它一笔带过了。", "say": "可有一条，被它一笔带过了。", "en": "But one line got quietly glossed over."},
+
+    {"id": "N04", "zh": "Claude Code 新加了一个内置插件，叫 You should know，直译就是“你该知道”。", "say": "Claude Code 新加了一个内置插件，叫 You should know，直译就是，你该知道。", "en": "Claude Code just added a built-in plugin called You should know."},
+    {"id": "N05", "zh": "官方推文说：它会扫描 Claude 的输出，把你可能漏掉的重要信息挑出来，让你跟得上。", "say": "官方推文说：它会扫描 Claude 的输出，把你可能漏掉的重要信息挑出来，让你跟得上。", "en": "The official post says it scans Claude's output for important information you might miss, to keep you in the loop."},
+
+    {"id": "N06", "zh": "回到演示。总结刚结束，输入框上方就弹出一条提醒。", "say": "回到演示。总结刚结束，输入框上方就弹出一条提醒。", "en": "Back to the demo. As soon as the summary ends, a note pops up above the prompt."},
+    {"id": "N07", "zh": "它说：刚才加的自动重试，可能让顾客被扣两次钱。", "say": "它说：刚才加的自动重试，可能让顾客被扣两次钱。", "en": "It warns that the automatic retry just added could charge a customer twice."},
+    {"id": "N08", "zh": "按 1 看详情：超时不等于没扣款，有时只是回信丢了，重试就会再扣一次。", "say": "按一看详情：超时不等于没扣款，有时只是回信丢了，重试就会再扣一次。", "en": "Press 1 for details: a timeout does not mean no charge. Sometimes only the reply got lost, and a retry charges again."},
+    {"id": "N09", "zh": "常见的解法，是给每笔付款一个唯一编号，叫幂等键。", "say": "常见的解法，是给每笔付款一个唯一编号，叫幂等键。", "en": "The usual fix is an idempotency key: one unique ID per payment."},
+    {"id": "N10", "zh": "按 2，这条提醒会带回主会话，标明是旁路智能体给的备注。", "say": "按二，这条提醒会带回主会话，标明是旁路智能体给的备注。", "en": "Press 2, and the note goes back to the main session, labeled as offered by a side agent."},
+    {"id": "N11", "zh": "你顺口追问一句：这个键会不会过期？", "say": "你顺口追问一句：这个键会不会过期？", "en": "You ask a quick follow-up: does the key ever expire?"},
+    {"id": "N12", "zh": "Claude 看完说，旁路智能体说得对，马上改。", "say": "Claude 看完说，旁路智能体说得对，马上改。", "en": "Claude replies that the side agent is right, and fixes it right away."},
+    {"id": "N13", "zh": "改完：每笔付款只生成一次随机键，每次重试都带着它。", "say": "改完：每笔付款只生成一次随机键，每次重试都带着它。", "en": "Done: each payment gets one random key, sent with every retry."},
+
+    {"id": "N14", "zh": "它是怎么做到的？官方在下一条推文里说了。", "say": "它是怎么做到的？官方在下一条推文里说了。", "en": "How does it work? The official team explained in the next post."},
+    {"id": "N15", "zh": "这是一个模组：派出一个旁路智能体，在旁边观察 Claude 的输出。", "say": "这是一个模组：派出一个旁路智能体，在旁边观察 Claude 的输出。", "en": "It's a mod that spins off a side agent to observe Claude's output."},
+    {"id": "N16", "zh": "模组是什么，第一期讲过。官方文档的内置模组表里，现在多了它，一共六个。", "say": "模组是什么，第一期讲过。官方文档的内置模组表里，现在多了它，一共六个。", "en": "Mods were covered in episode one. The docs' built-in mods table now includes this one, six in total."},
+    {"id": "N17", "zh": "文档里的说明：Claude 做较长的任务时，它在旁边替你盯着；有你可能漏掉的，就在输入框上方留一条便条。", "say": "文档里的说明：Claude 做较长的任务时，它在旁边替你盯着；有你可能漏掉的，就在输入框上方留一条便条。", "en": "The docs say that while Claude works on longer tasks, a side agent watches your back and leaves a note above the prompt."},
+    {"id": "N18", "zh": "注意，它默认是关着的，要自己开，还要看你的组织有没有开放。", "say": "注意，它默认是关着的，要自己开，还要看你的组织有没有开放。", "en": "Note that it is disabled by default, and your organization has to make it available."},
+    {"id": "N19", "zh": "想开，输入官方给的这条命令就行。", "say": "想开，输入官方给的这条命令就行。", "en": "To turn it on, type the command the docs give."},
+    {"id": "N20", "zh": "不想要了，在 /plugin 里关掉；内置的模组不能卸载。", "say": "不想要了，在 斜杠 plugin 里关掉；内置的模组不能卸载。", "en": "To turn it off, disable it in /plugin. Built-in mods can't be uninstalled."},
+    {"id": "N21", "zh": "更新日志写着：2.1.287 版加入，前提是第一方会话、遥测开着。", "say": "更新日志写着：二点一点二八七 版加入，前提是第一方会话、遥测开着。", "en": "The changelog says it arrived in 2.1.287, for first-party sessions with telemetry on."},
+
+    {"id": "N22", "zh": "至于多久提醒一次，会不会误报，官方没写。", "say": "至于多久提醒一次，会不会误报，官方没写。", "en": "How often it speaks up, and whether it ever misfires, the official docs don't say."},
+    {"id": "N23", "zh": "总结写得再漂亮，也有没说出口的。多一双眼睛盯着，挺省心。", "say": "总结写得再漂亮，也有没说出口的。多一双眼睛盯着，挺省心。", "en": "However polished a summary is, something may go unsaid. A second pair of eyes helps."}
+  ]
+}

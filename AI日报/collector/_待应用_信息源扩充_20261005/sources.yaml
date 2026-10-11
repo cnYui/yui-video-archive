@@ -1,0 +1,241 @@
+# 《AI每日日报》信息源（2026-09-27 本机逐个实测可用；2026-10-04 又扩了一批，名单和落选原因见 docs/ai/context/20261004-*-ai-daily-sources-expansion_CN.md）
+#
+# tier（选题时的可信度）：
+#   official   官方一手：可以单独成条
+#   community  社区脚本抓官网生成的 RSS：内容是官网的，按官方看待，但要提防脚本停更
+#   xproxy     X 的替代（Bluesky 镜像号、XGo 的 X 账号 RSS、Techmeme X Chatter、HN）：只当线索，不能单独成条
+#   media      英文科技媒体：交叉验证；两家可靠媒体可以成条
+#   cn         中文媒体 / 日报：交叉验证和国内视角
+#   signal     发版、上传、文档更新：辅助信号，同一天同一来源合并成一条
+#   status     服务状态：只报大面积故障
+#   background 周更新闻信：背景，不单独成条
+#
+# kind（抓取方式）：rss | html_links | deepseek_sitemap | qwen_api | hf_models | readhub_daily | rsshub
+# 过滤：exclude_categories / exclude_title（正则）/ include_keywords（标题或摘要里至少有一个）
+# snapshot: true = 新条目第一次出现时抓原文存快照（核对用）
+# serial: true = 排在其他源之后一个一个抓（限流严的第三方，如 XGo）；weight 负数 = 只有这一个源报道时扣分
+
+defaults:
+  timeout: 25
+  rsshub_instances:        # 按顺序试；自建实例（如果装了）放最前面。2026-10-04 实测 bestblogs 最快最全（0.5–1 s，ChatGPT 更新日志只有它能出），另外两个常 429 / 503
+    - https://rsshub.bestblogs.dev
+    - https://rsshub.isrss.com
+    - https://rsshub.ktachibana.party
+
+seo_junk: &seo_junk ['(?i)\bbest\b.*\b(prompts?|tools?|apps?)\b', '(?i)\bhow to\b', '(?i)\bsetup\b.*\bsteps\b', '\[20\d\d\]', '(?i)price prediction|predicts? .*\b(ETH|BTC|XRP|Bitcoin|crypto)', '(?i)^opinion:', '(?i)\b(coupon|promo code|discount code)s?\b', '(?i)\bvs\.?\b.*\bwhich\b', '怎么用|教程|攻略|提示词大全']
+
+ai_keywords: &ai_kw [AI, 人工智能, 大模型, 模型, 智能体, Agent, OpenAI, ChatGPT, GPT, Claude, Anthropic, Gemini, DeepSeek, 深度求索,
+  Qwen, 通义, 千问, Kimi, 月之暗面, 智谱, GLM, MiniMax, 豆包, 字节, Seed, 混元, 文心, 百度, 阶跃, 小米, MiMo, Llama, Meta, Mistral,
+  xAI, Grok, 英伟达, NVIDIA, 算力, 芯片, 机器人, 具身, AIGC, 生成式, 多模态, 推理, 开源, Copilot, Cursor, Codex]
+
+# 综合科技媒体用的更严的关键词（不含“模型 / 字节 / 小米 / 百度 / 芯片 / 开源 / Meta”这类单独出现不一定是 AI 的词）；2026-10-04 新增，只给新加的源用
+ai_keywords_en: &ai_en [AI, LLM, OpenAI, ChatGPT, GPT, Claude, Anthropic, Gemini, Gemma, DeepSeek, Qwen, Kimi, Zhipu, GLM, MiniMax, ByteDance, Doubao, Llama, "Meta AI", Muse,
+  Mistral, xAI, Grok, NVIDIA, Copilot, Cursor, Codex, Perplexity, Midjourney, Sora, Suno, ElevenLabs, Veo, Seedance, Kling, "Apple Intelligence", Siri, Runway,
+  "Stable Diffusion", Flux, NotebookLM, "machine learning", humanoid, humanoids, robot, robots, robotics, agentic, MCP, chatbot, chatbots]
+ai_keywords_zh: &ai_zh [AI, 人工智能, 大模型, 大语言模型, 智能体, Agent, LLM, OpenAI, ChatGPT, GPT, Claude, Anthropic, Gemini, DeepSeek, 深度求索, Qwen, 通义, 千问, Kimi,
+  月之暗面, 智谱, GLM, MiniMax, 豆包, 混元, 文心, 阶跃, MiMo, Llama, Mistral, xAI, Grok, 英伟达, NVIDIA, 算力, 具身, 人形机器人, AIGC, 生成式, 多模态, Copilot, Cursor,
+  Codex, Sora, 可灵, Kling, Midjourney, Perplexity, 机器学习, 深度学习, 文生图, 文生视频, MCP]
+
+# X 账号 RSS 里常见的闲聊 / 纯链接 / 回复 / 活动，进不了选题（XGo 的源用）
+x_chatter: &x_chatter ['^\s*https?://\S+\s*$', '^[^\w一-鿿]{0,8}$', '^@\w+', '(?i)^(what are you|tell us|heard you|thanks?\b|thank you|congrats|happy |join us|submissions close|we.re hiring|rsvp|reminder|don.t miss|see you|good morning|gm\b)', '(?i)\b(giveaway|retweet to win|promo code|discount code)\b']
+
+sources:
+  # ---------------- 官方一手 ----------------
+  - {id: openai_news, name: OpenAI 官方新闻, org: OpenAI, tier: official, kind: rss, url: "https://openai.com/news/rss.xml", snapshot: true,
+     exclude_categories: [Startup, AI Adoption, OpenAI Academy, Applied AI, Intelligence Age, OpenAI on OpenAI],
+     exclude_title: ['\bwith (Codex|ChatGPT|GPT)', 'uses (Codex|ChatGPT|GPT)', 'How .* (uses|builds|cuts|boosts|saves)'],
+     note: "时刻是占位值（GMT 00:00 / 10:00），只信日期"}
+  - {id: openai_devdocs, name: OpenAI 开发者文档, org: OpenAI, tier: signal, kind: rss, url: "https://developers.openai.com/rss.xml",
+     note: "2026-10-04 核对：最新一条是 2026-05-05，152 天没更新，疑似已停；没找到替代地址（/changelog、/blog 的 rss 都是 404）"}
+  - {id: claude_release_notes, name: Claude 平台更新日志, org: Anthropic, tier: official, kind: rss, url: "https://platform.claude.com/docs/en/release-notes/feed.xml", snapshot: true}
+  - {id: claude_code_changelog, name: Claude Code 更新日志, org: Anthropic, tier: signal, kind: rss, url: "https://code.claude.com/docs/en/changelog/rss.xml"}
+  - {id: anthropic_newsroom, name: Anthropic 官方新闻, org: Anthropic, tier: official, kind: html_links, url: "https://www.anthropic.com/news",
+     link_pattern: '^/news/[a-z0-9\-]+$', base: "https://www.anthropic.com", snapshot: true}
+  - {id: claude_blog_page, name: Claude 官方博客, org: Anthropic, tier: official, kind: html_links, url: "https://claude.com/blog",
+     link_pattern: '^/blog/[a-z0-9\-]+$', base: "https://claude.com", snapshot: true}
+  - {id: google_ai_blog, name: Google AI 博客, org: Google, tier: official, kind: rss, url: "https://blog.google/technology/ai/rss/", snapshot: true}
+  - {id: deepmind_blog, name: Google DeepMind 博客, org: Google, tier: official, kind: rss, url: "https://deepmind.google/blog/rss.xml", snapshot: true}
+  - {id: google_research, name: Google Research 博客, org: Google, tier: official, kind: rss, url: "https://research.google/blog/rss/"}
+  - {id: mistral_news, name: Mistral 官方新闻, org: Mistral, tier: official, kind: rss, url: "https://mistral.ai/news/rss", snapshot: true}
+  - {id: nvidia_blog, name: NVIDIA 博客, org: NVIDIA, tier: official, kind: rss, url: "https://blogs.nvidia.com/feed/",
+     exclude_title: ['GeForce NOW', 'GFN Thursday', 'Game', 'Gaming', 'RTX .* (Game|Mod)', 'Studio']}
+  - {id: hf_blog, name: Hugging Face 博客, org: Hugging Face, tier: official, kind: rss, url: "https://huggingface.co/blog/feed.xml"}
+  - {id: aws_ml_blog, name: AWS 机器学习博客, org: AWS, tier: signal, kind: rss, url: "https://aws.amazon.com/blogs/machine-learning/feed/"}
+  - {id: apple_ml, name: Apple 机器学习研究, org: Apple, tier: official, kind: rss, url: "https://machinelearning.apple.com/rss.xml"}
+  - {id: deepseek_news, name: DeepSeek 官方新闻, org: DeepSeek, tier: official, kind: deepseek_sitemap, url: "https://api-docs.deepseek.com/sitemap.xml", snapshot: true}
+  - {id: qwen_blog, name: Qwen 官方博客, org: Qwen, tier: official, kind: qwen_api,
+     url: "https://qwen.ai/api/v2/article/retrieval?language=zh-CN&type=qwen_ai"}
+  - {id: hf_models, name: Hugging Face 新模型, tier: signal, kind: hf_models,
+     orgs: {deepseek-ai: DeepSeek, Qwen: Qwen, moonshotai: Kimi, zai-org: 智谱, MiniMaxAI: MiniMax, XiaomiMiMo: 小米, tencent: 腾讯,
+            baidu: 百度, stepfun-ai: 阶跃星辰, ByteDance-Seed: 字节 Seed, openai: OpenAI, google: Google, meta-llama: Meta, mistralai: Mistral, nvidia: NVIDIA,
+            # 2026-10-04 新增：国内
+            inclusionAI: 蚂蚁 inclusionAI, openbmb: 面壁, internlm: 书生（上海 AI Lab）, meituan-longcat: 美团 LongCat, Kwaipilot: 快手 Kwaipilot,
+            Wan-AI: 通义万相 Wan, Tongyi-MAI: 通义 MAI, Skywork: 昆仑万维 Skywork, sensenova: 商汤, baichuan-inc: 百川, Kwai-Kolors: 快手 Kolors,
+            # 2026-10-04 新增：国外
+            black-forest-labs: Black Forest Labs, stabilityai: Stability AI, Lightricks: Lightricks, microsoft: Microsoft, ibm-granite: IBM Granite,
+            allenai: Ai2, CohereLabs: Cohere, LiquidAI: Liquid AI, xai-org: xAI, apple: Apple, ai21labs: AI21, LGAI-EXAONE: LG EXAONE},
+     exclude_title: ['GGUF', 'AWQ', 'GPTQ', 'FP8', 'INT4', 'INT8', 'NVFP4', 'MLX', 'bnb', 'EXL2']}
+  - {id: gh_openai_python, name: openai-python 发版, org: OpenAI, tier: signal, kind: rss, url: "https://github.com/openai/openai-python/releases.atom"}
+  - {id: gh_anthropic_python, name: anthropic-sdk-python 发版, org: Anthropic, tier: signal, kind: rss, url: "https://github.com/anthropics/anthropic-sdk-python/releases.atom"}
+  - {id: gh_google_genai, name: google-genai 发版, org: Google, tier: signal, kind: rss, url: "https://github.com/googleapis/python-genai/releases.atom"}
+  - {id: gh_codex, name: Codex 发版, org: OpenAI, tier: signal, kind: rss, url: "https://github.com/openai/codex/releases.atom"}
+  - {id: gh_ollama, name: Ollama 发版, org: Ollama, tier: signal, kind: rss, url: "https://github.com/ollama/ollama/releases.atom"}
+  - {id: gh_vllm, name: vLLM 发版, org: vLLM, tier: signal, kind: rss, url: "https://github.com/vllm-project/vllm/releases.atom"}
+  - {id: openai_status, name: OpenAI 服务状态, org: OpenAI, tier: status, kind: rss, url: "https://status.openai.com/history.rss"}
+  - {id: anthropic_status, name: Anthropic 服务状态, org: Anthropic, tier: status, kind: rss, url: "https://status.anthropic.com/history.rss"}
+
+  # ---------------- GitHub 社区生成的 RSS（GitHub Actions 每小时抓官网） ----------------
+  - {id: xai_news_0xsmw, name: xAI 新闻（社区 RSS）, org: xAI, tier: community, kind: rss, url: "https://raw.githubusercontent.com/0xSMW/rss-feeds/main/feeds/feed_xai_news.xml", snapshot: true}
+  - {id: anthropic_news_olshansk, name: Anthropic 新闻（社区 RSS）, org: Anthropic, tier: community, kind: rss, url: "https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_anthropic_news.xml"}
+  - {id: anthropic_research_olshansk, name: Anthropic 研究（社区 RSS）, org: Anthropic, tier: community, kind: rss, url: "https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_anthropic_research.xml"}
+  - {id: claude_blog_olshansk, name: Claude 博客（社区 RSS）, org: Anthropic, tier: community, kind: rss, url: "https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_claude.xml"}
+  - {id: openai_devblog_olshansk, name: OpenAI 开发者博客（社区 RSS）, org: OpenAI, tier: community, kind: rss, url: "https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_openai_developer.xml"}
+  - {id: cursor_blog_olshansk, name: Cursor 博客（社区 RSS）, org: Cursor, tier: community, kind: rss, url: "https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_cursor.xml"}
+  - {id: ai_research_0xsmw, name: AI 研究合集（社区 RSS）, tier: signal, kind: rss, url: "https://raw.githubusercontent.com/0xSMW/rss-feeds/main/feeds/feed_ai_research.xml"}
+
+  # ---------------- X 的替代（Bluesky 自带 RSS） ----------------
+  - {id: x_openai, name: "@OpenAI（X 镜像）", org: OpenAI, tier: xproxy, kind: rss, url: "https://bsky.app/profile/openai.xmirror.bot/rss"}
+  - {id: x_anthropicai, name: "@AnthropicAI（X 镜像）", org: Anthropic, tier: xproxy, kind: rss, url: "https://bsky.app/profile/anthropicai.xmirror.bot/rss"}
+  - {id: x_xai, name: "@xai（X 镜像）", org: xAI, tier: xproxy, kind: rss, url: "https://bsky.app/profile/xai.xmirror.bot/rss"}
+  - {id: x_sama, name: "@sama（X 镜像）", org: OpenAI, tier: xproxy, kind: rss, url: "https://bsky.app/profile/sama.xmirror.bot/rss"}
+  - {id: x_kimi, name: "@Kimi_Moonshot（X 镜像）", org: Kimi, tier: xproxy, kind: rss, url: "https://bsky.app/profile/kimi-moonshot.xmirror.bot/rss"}
+  - {id: x_ollama, name: "@ollama（X 镜像）", org: Ollama, tier: xproxy, kind: rss, url: "https://bsky.app/profile/ollama.xmirror.bot/rss"}
+  - {id: techmeme_xchatter, name: Techmeme X Chatter, tier: xproxy, kind: rss, url: "https://bsky.app/profile/xchatter.techmeme.com/rss", include_keywords: *ai_kw}
+
+  # ---------------- 英文媒体 ----------------
+  - {id: techmeme, name: Techmeme, tier: media, kind: rss, url: "https://www.techmeme.com/feed.xml", include_keywords: *ai_kw}
+  - {id: verge_ai, name: The Verge AI, tier: media, kind: rss, url: "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml"}
+  - {id: techcrunch_ai, name: TechCrunch AI, tier: media, kind: rss, url: "https://techcrunch.com/category/artificial-intelligence/feed/"}
+  - {id: arstechnica_ai, name: Ars Technica AI, tier: media, kind: rss, url: "https://arstechnica.com/ai/feed/"}
+  - {id: mit_tr_ai, name: MIT Technology Review AI, tier: media, kind: rss, url: "https://www.technologyreview.com/topic/artificial-intelligence/feed"}
+  - {id: the_decoder, name: The Decoder, tier: media, kind: rss, url: "https://the-decoder.com/feed/"}
+  - {id: marktechpost, name: MarkTechPost, tier: media, kind: rss, url: "https://www.marktechpost.com/feed/"}
+  - {id: simonwillison, name: Simon Willison, tier: media, kind: rss, url: "https://simonwillison.net/atom/everything/", include_keywords: *ai_kw}
+  - {id: hn_ai, name: Hacker News 首页（AI 关键词）, tier: xproxy, weight: -1, kind: rss, url: "https://news.ycombinator.com/rss", include_keywords: *ai_en,
+     note: "原来的 hnrss.org 九个 OR 的查询返回 502（2026-09-28 起一直失败），改用官方首页 RSS + 关键词过滤"}
+  - {id: reddit_localllama, name: r/LocalLLaMA 日榜, tier: xproxy, weight: -2, kind: rss, url: "https://www.reddit.com/r/LocalLLaMA/top/.rss?t=day"}
+  - {id: gnews_openai_anthropic, name: Google News（OpenAI / Anthropic）, tier: media, kind: rss, weight: -3, exclude_title: *seo_junk,
+     url: "https://news.google.com/rss/search?q=OpenAI+OR+Anthropic+OR+ChatGPT+OR+Claude+when:1d&hl=en-US&gl=US&ceid=US:en"}
+  - {id: gnews_google_meta_xai, name: Google News（Google / Meta / xAI / Mistral）, tier: media, kind: rss, weight: -3, exclude_title: *seo_junk,
+     url: "https://news.google.com/rss/search?q=%22Google+Gemini%22+OR+DeepMind+OR+%22Meta+AI%22+OR+Llama+OR+xAI+OR+Grok+OR+Mistral+when:1d&hl=en-US&gl=US&ceid=US:en"}
+  - {id: gnews_china_ai_en, name: Google News（中国模型，英文）, tier: media, kind: rss, weight: -3, exclude_title: *seo_junk,
+     url: "https://news.google.com/rss/search?q=DeepSeek+OR+Qwen+OR+Kimi+OR+Zhipu+OR+MiniMax+OR+ByteDance+AI+when:1d&hl=en-US&gl=US&ceid=US:en"}
+  - {id: import_ai, name: Import AI, tier: background, kind: rss, url: "https://importai.substack.com/feed"}
+  - {id: latent_space, name: Latent Space, tier: background, kind: rss, url: "https://www.latent.space/feed"}
+  - {id: interconnects, name: Interconnects, tier: background, kind: rss, url: "https://www.interconnects.ai/feed"}
+  - {id: last_week_in_ai, name: Last Week in AI, tier: background, kind: rss, url: "https://lastweekin.ai/feed"}
+  - {id: tldr_ai, name: TLDR AI, tier: background, kind: rss, url: "https://tldr.tech/api/rss/ai"}
+  - {id: bens_bites, name: "Ben's Bites", tier: background, kind: rss, url: "https://www.bensbites.com/feed"}
+
+  # ---------------- 中文 ----------------
+  - {id: qbitai, name: 量子位, tier: cn, kind: rss, url: "https://www.qbitai.com/feed"}
+  - {id: ithome, name: IT之家, tier: cn, kind: rss, url: "https://www.ithome.com/rss/", include_keywords: *ai_kw}
+  - {id: readhub_daily, name: readhub 每日早报, tier: cn, kind: readhub_daily, url: "https://api.readhub.cn/daily", include_keywords: *ai_kw}
+  - {id: gnews_zh, name: Google News 中文（大模型）, tier: cn, kind: rss, weight: -3, exclude_title: *seo_junk,
+     url: "https://news.google.com/rss/search?q=%E5%A4%A7%E6%A8%A1%E5%9E%8B+OR+DeepSeek+OR+%E9%80%9A%E4%B9%89%E5%8D%83%E9%97%AE+OR+Kimi+OR+%E6%99%BA%E8%B0%B1+when:1d&hl=zh-CN&gl=CN&ceid=CN:zh-Hans"}
+  - {id: aibase_daily, name: aibase AI日报, tier: cn, kind: rsshub, route: "/aibase/daily",
+     note: "2026-10-04 核对：RSSHub 这条路由三个实例都只返回 2026-09-30 以前的旧条目（停更）；aibase 官网没有原生 RSS"}
+  - {id: aibase_news, name: aibase 资讯, tier: cn, kind: rsshub, route: "/aibase/news",
+     note: "同上，停更"}
+  - {id: kr36_flash, name: 36氪快讯, tier: cn, kind: rsshub, route: "/36kr/newsflashes", include_keywords: *ai_kw}
+  - {id: leiphone_flash, name: 雷锋网快讯, tier: cn, kind: rsshub, route: "/leiphone/newsflash", include_keywords: *ai_kw,
+     note: "2026-10-04 核对：这条 RSSHub 路由 2026-09-30 起停更；下面新增了雷峰网原生 feed（leiphone_native）顶替"}
+
+  # ================= 2026-10-04 扩充：每个源都在本机实测过（能连、近期有条目、条目有标题），落选的和原因见 docs/ai/context/20261004-*-ai-daily-sources-expansion_CN.md =================
+
+  # ---------------- 官方一手（新增） ----------------
+  - {id: chatgpt_release_notes, name: ChatGPT 更新日志, org: OpenAI, tier: official, kind: rsshub, route: "/openai/chatgpt/release-notes",
+     note: "OpenAI 帮助中心的 ChatGPT 更新日志（套餐 / 价格 / 功能变更）；目前只有 rsshub.bestblogs.dev 能出；时刻是占位值，只信日期"}
+  - {id: gemini_app_blog, name: Gemini 应用博客, org: Google, tier: official, kind: rss, url: "https://blog.google/products/gemini/rss/", snapshot: true}
+  - {id: google_labs_blog, name: Google Labs 博客, org: Google, tier: official, kind: rss, url: "https://blog.google/technology/google-labs/rss/"}
+  - {id: nvidia_newsroom, name: NVIDIA 新闻稿, org: NVIDIA, tier: official, kind: rss, url: "https://nvidianews.nvidia.com/releases.xml", snapshot: true,
+     exclude_title: ['GeForce NOW', 'GFN Thursday', 'Game', 'Gaming', 'Fellowship', 'Studio']}
+  - {id: meta_newsroom, name: Meta 新闻室, org: Meta, tier: official, kind: rss, url: "https://about.fb.com/news/feed/", snapshot: true,
+     include_keywords: [AI, Llama, Muse, Superintelligence, "Meta AI"],
+     note: "ai.meta.com/blog 拦爬虫（HTTP 400），用 Meta 新闻室按 AI 关键词过滤顶替；社区的 Meta AI RSS 已 69 天没更新"}
+  - {id: ms_source, name: Microsoft Source（新闻室）, org: Microsoft, tier: official, kind: rss, url: "https://news.microsoft.com/source/feed/", include_keywords: *ai_en,
+     note: "microsoft.ai 和 blogs.microsoft.com/ai 的 RSS 分别是 404 / 410"}
+  - {id: allenai_news, name: Ai2（艾伦人工智能研究所）, org: Ai2, tier: official, kind: rss, url: "https://allenai.org/rss.xml"}
+  - {id: cohere_changelog, name: Cohere 更新日志, org: Cohere, tier: official, kind: rss, url: "https://docs.cohere.com/changelog.rss",
+     note: "Cohere 官网博客是单页应用没有 RSS，新模型会写进更新日志"}
+  - {id: thinkingmachines_blog, name: Thinking Machines 博客, org: Thinking Machines, tier: official, kind: rss, url: "https://thinkingmachines.ai/blog/index.xml",
+     note: "很久才发一篇（最近一篇 2026-07-31），发了就是大事"}
+  - {id: midjourney_updates, name: Midjourney 更新, org: Midjourney, tier: official, kind: rss, url: "https://updates.midjourney.com/rss/"}
+  - {id: characterai_blog, name: Character.AI 博客, org: Character.AI, tier: official, kind: rss, url: "https://blog.character.ai/rss/"}
+  - {id: stability_news, name: Stability AI 新闻, org: Stability AI, tier: official, kind: rss, url: "https://stability.ai/news-updates?format=rss"}
+  - {id: amd_newsroom, name: AMD 新闻室, org: AMD, tier: official, kind: rss, url: "https://newsroom.amd.com/rss.xml", include_keywords: *ai_en}
+  - {id: apple_newsroom, name: Apple 新闻室, org: Apple, tier: official, kind: rss, url: "https://www.apple.com/newsroom/rss-feed.rss", include_keywords: *ai_en}
+
+  # ---------------- 辅助信号（新增；发得多或偏技术，同一天同一来源合并成一条） ----------------
+  - {id: cloudflare_ai, name: Cloudflare AI 博客, org: Cloudflare, tier: signal, kind: rss, url: "https://blog.cloudflare.com/tag/ai/rss/"}
+  - {id: github_copilot_changelog, name: GitHub Copilot 更新日志, org: GitHub, tier: signal, kind: rss, url: "https://github.blog/changelog/label/copilot/feed/"}
+  - {id: gcloud_ai_blog, name: Google Cloud AI 博客, org: Google, tier: signal, kind: rss, url: "https://cloudblog.withgoogle.com/products/ai-machine-learning/rss/"}
+  - {id: workspace_updates, name: Google Workspace 更新, org: Google, tier: signal, kind: rss, url: "https://workspaceupdates.googleblog.com/atom.xml", include_keywords: [Gemini, AI, NotebookLM]}
+  - {id: aws_news_blog, name: AWS 新闻博客, org: AWS, tier: signal, kind: rss, url: "https://aws.amazon.com/blogs/aws/feed/",
+     include_keywords: [AI, Bedrock, Nova, Kiro, SageMaker, AgentCore, "Amazon Q", Agent]}
+  - {id: msr_blog, name: Microsoft Research 博客, org: Microsoft, tier: signal, kind: rss, url: "https://www.microsoft.com/en-us/research/feed/"}
+  - {id: devin_blog, name: Devin / Windsurf（Cognition）, org: Cognition, tier: signal, kind: rss, url: "https://devin.ai/rss.xml",
+     note: "Windsurf 被 Cognition 收购后博客和更新日志合并到这里；windsurf.com/feed 已 145 天没更新"}
+  - {id: sakana_ai, name: Sakana AI, org: Sakana AI, tier: signal, kind: rss, url: "https://sakana.ai/feed.xml"}
+  - {id: gh_transformers, name: transformers 发版, org: Hugging Face, tier: signal, kind: rss, url: "https://github.com/huggingface/transformers/releases.atom"}
+  - {id: gh_geminicli, name: gemini-cli 发版, org: Google, tier: signal, kind: rss, url: "https://github.com/google-gemini/gemini-cli/releases.atom", exclude_title: ['(?i)nightly', '(?i)preview']}
+
+  # ---------------- 英文媒体（新增；综合科技媒体按 AI 关键词过滤） ----------------
+  - {id: guardian_ai, name: The Guardian AI, tier: media, weight: -1, kind: rss, url: "https://www.theguardian.com/technology/artificialintelligenceai/rss", include_keywords: *ai_en}
+  - {id: wired_ai, name: Wired AI, tier: media, weight: -1, kind: rss, url: "https://www.wired.com/feed/tag/ai/latest/rss", include_keywords: *ai_en}
+  - {id: zdnet_ai, name: ZDNET AI, tier: media, weight: -1, kind: rss, url: "https://www.zdnet.com/topic/artificial-intelligence/rss.xml", include_keywords: *ai_en}
+  - {id: register_ai, name: The Register AI, tier: media, kind: rss, url: "https://www.theregister.com/software/ai_ml/headlines.atom"}
+  - {id: ieee_ai, name: IEEE Spectrum AI, tier: media, kind: rss, url: "https://spectrum.ieee.org/feeds/topic/artificial-intelligence.rss"}
+  - {id: cnbc_tech, name: CNBC Technology, tier: media, weight: -1, kind: rss, url: "https://www.cnbc.com/id/19854910/device/rss/rss.html", include_keywords: *ai_en}
+  - {id: bloomberg_tech, name: Bloomberg Technology, tier: media, weight: -1, kind: rss, url: "https://feeds.bloomberg.com/technology/news.rss", include_keywords: *ai_en}
+  - {id: nyt_tech, name: NYT Technology, tier: media, weight: -1, kind: rss, url: "https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml", include_keywords: *ai_en}
+  - {id: wsj_tech, name: WSJ Technology, tier: media, weight: -1, kind: rss, url: "https://feeds.content.dowjones.io/public/rss/RSSWSJD", include_keywords: *ai_en}
+  - {id: bbc_tech, name: BBC Technology, tier: media, weight: -1, kind: rss, url: "https://feeds.bbci.co.uk/news/technology/rss.xml", include_keywords: *ai_en}
+  - {id: 9to5google, name: 9to5Google, tier: media, weight: -1, kind: rss, url: "https://9to5google.com/feed/", include_keywords: *ai_en}
+  - {id: 9to5mac, name: 9to5Mac, tier: media, weight: -1, kind: rss, url: "https://9to5mac.com/feed/", include_keywords: *ai_en}
+  - {id: siliconangle_ai, name: SiliconANGLE AI, tier: media, weight: -1, kind: rss, url: "https://siliconangle.com/category/ai/feed/"}
+  - {id: unite_ai, name: Unite.AI, tier: media, weight: -1, kind: rss, url: "https://www.unite.ai/feed/"}
+  - {id: robot_report, name: The Robot Report, tier: media, weight: -1, kind: rss, url: "https://www.therobotreport.com/feed/",
+     include_keywords: [AI, humanoid, humanoids, Optimus, Figure, Unitree, "Boston Dynamics", NVIDIA, agentic]}
+  - {id: servethehome, name: ServeTheHome, tier: media, weight: -1, kind: rss, url: "https://www.servethehome.com/feed/", include_keywords: [AI, NVIDIA, GPU, DGX, Instinct, accelerator, inference]}
+  - {id: rundown_ai, name: The Rundown AI, tier: background, kind: rss, url: "https://www.therundown.ai/feed"}
+
+  # ---------------- 中文（新增） ----------------
+  - {id: aiera, name: 新智元, tier: cn, kind: rss, url: "https://aiera.com.cn/feed"}
+  - {id: geekpark, name: 极客公园, tier: cn, kind: rss, url: "https://www.geekpark.net/rss", include_keywords: *ai_zh}
+  - {id: ifanr, name: 爱范儿, tier: cn, kind: rss, url: "https://www.ifanr.com/feed", include_keywords: *ai_zh}
+  - {id: leiphone_native, name: 雷峰网, tier: cn, kind: rss, url: "https://www.leiphone.com/feed", include_keywords: *ai_zh}
+  - {id: oschina_news, name: 开源中国资讯, tier: cn, kind: rss, url: "https://www.oschina.net/news/rss", include_keywords: *ai_zh}
+  - {id: infoq_cn, name: InfoQ 中文, tier: cn, kind: rss, url: "https://www.infoq.cn/feed", include_keywords: *ai_zh, note: "时间戳标 GMT，实际是北京时间（早 8 小时），所以会出现“未来”的时刻"}
+  - {id: cnbeta, name: cnBeta, tier: cn, weight: -1, kind: rss, url: "https://www.cnbeta.com.tw/backend.php", include_keywords: *ai_zh}
+  - {id: huxiu, name: 虎嗅, tier: cn, kind: rsshub, route: "/huxiu/article", include_keywords: *ai_zh, note: "虎嗅原生 RSS 从日本连不上（超时），走 RSSHub"}
+  - {id: pingwest, name: 品玩, tier: cn, kind: rsshub, route: "/pingwest/status", include_keywords: *ai_zh, note: "品玩原生 RSS 返回网页，走 RSSHub"}
+  # 微信公众号 RSS：个人站 decemberpei.cyou 的静态文件，约每天北京 07:00–09:00 整体刷新一次，每个号只留最近 1–8 篇，没有日期和摘要（第一次抓会把现有的几篇都当新条目）
+  - {id: wx_jiqizhixin, name: 机器之心（公众号）, tier: cn, weight: -1, kind: rss, url: "https://decemberpei.cyou/rssbox/wechat-jiqizhixin.xml", note: "机器之心官网 RSS 返回网页，公众号文章只有这个渠道"}
+  - {id: wx_appso, name: APPSO（公众号）, tier: cn, weight: -1, kind: rss, url: "https://decemberpei.cyou/rssbox/wechat-appso.xml", include_keywords: *ai_zh}
+  - {id: wx_xixiaoyao, name: 夕小瑶科技说（公众号）, tier: cn, weight: -1, kind: rss, url: "https://decemberpei.cyou/rssbox/wechat-xixiaoyaokejishuo.xml"}
+  - {id: wx_deeptech, name: DeepTech 深科技（公众号）, tier: cn, weight: -1, kind: rss, url: "https://decemberpei.cyou/rssbox/wechat-shenkeji.xml", include_keywords: *ai_zh}
+
+  # ---------------- X 的替代（新增；只当线索） ----------------
+  - {id: x_trq212, name: "@trq212（Thariq，X 镜像）", org: Anthropic, tier: xproxy, kind: rss, url: "https://bsky.app/profile/trq212.xmirror.bot/rss"}
+  - {id: x_bcherny, name: "@bcherny（Boris Cherny，X 镜像）", org: Anthropic, tier: xproxy, kind: rss, url: "https://bsky.app/profile/bcherny.xmirror.bot/rss"}
+  # XGo（xgo.ing）把 X 账号转成的 RSS：第三方商业服务，地址里的 ID 取自 SuYxh/ai-news-aggregator 的 follow.opml；每个约 200 KB、最近 50 条；
+  # 闲聊多，用 x_chatter 过滤，weight -2 让单独的推文排在媒体后面；serial: true 一个一个抓，别压它
+  - {id: xg_openaidevs, name: "@OpenAIDevs（XGo）", org: OpenAI, tier: xproxy, weight: -2, serial: true, kind: rss, exclude_title: *x_chatter, url: "https://api.xgo.ing/rss/user/971dc1fc90da449bac23e5fad8a33d55"}
+  - {id: xg_chatgpt, name: "@ChatGPTapp（XGo）", org: OpenAI, tier: xproxy, weight: -2, serial: true, kind: rss, exclude_title: *x_chatter, url: "https://api.xgo.ing/rss/user/f7992687b8d74b14bf2341eb3a0a5ec4"}
+  - {id: xg_claudeai, name: "@claudeai（XGo）", org: Anthropic, tier: xproxy, weight: -2, serial: true, kind: rss, exclude_title: *x_chatter, url: "https://api.xgo.ing/rss/user/01f60d63a61b44d692cc35c7feb0b4a4"}
+  - {id: xg_googleai, name: "@GoogleAI（XGo）", org: Google, tier: xproxy, weight: -2, serial: true, kind: rss, exclude_title: *x_chatter, url: "https://api.xgo.ing/rss/user/4de0bd2d5cef4333a0260dc8157054a7"}
+  - {id: xg_deepmind, name: "@GoogleDeepMind（XGo）", org: Google, tier: xproxy, weight: -2, serial: true, kind: rss, exclude_title: *x_chatter, url: "https://api.xgo.ing/rss/user/a99538443a484fcc846bdcc8f50745ec"}
+  - {id: xg_geminiapp, name: "@GeminiApp（XGo）", org: Google, tier: xproxy, weight: -2, serial: true, kind: rss, exclude_title: *x_chatter, url: "https://api.xgo.ing/rss/user/6fb337feeec44ca38b79491b971d868d"}
+  - {id: xg_notebooklm, name: "@NotebookLM（XGo）", org: Google, tier: xproxy, weight: -2, serial: true, kind: rss, exclude_title: *x_chatter, url: "https://api.xgo.ing/rss/user/221a88341acb475db221a12fed8208d0"}
+  - {id: xg_huggingface, name: "@huggingface（XGo）", org: Hugging Face, tier: xproxy, weight: -2, serial: true, kind: rss, exclude_title: *x_chatter, url: "https://api.xgo.ing/rss/user/fc16750ce50741f1b1f05ea1fb29436f"}
+  - {id: xg_nvidiaai, name: "@NVIDIAAI（XGo）", org: NVIDIA, tier: xproxy, weight: -2, serial: true, kind: rss, exclude_title: *x_chatter, url: "https://api.xgo.ing/rss/user/05f1492e43514dc3862a076d3697c390"}
+  - {id: xg_aiatmeta, name: "@AIatMeta（XGo）", org: Meta, tier: xproxy, weight: -2, serial: true, kind: rss, exclude_title: *x_chatter, url: "https://api.xgo.ing/rss/user/ef7c70f9568d45f4915169fef4ce90b4"}
+  - {id: xg_msftresearch, name: "@MSFTResearch（XGo）", org: Microsoft, tier: xproxy, weight: -2, serial: true, kind: rss, exclude_title: *x_chatter, url: "https://api.xgo.ing/rss/user/61f4b78554fb4b8fa5653ec5d924d15a"}
+  - {id: xg_cursor, name: "@cursor_ai（XGo）", org: Cursor, tier: xproxy, weight: -2, serial: true, kind: rss, exclude_title: *x_chatter, url: "https://api.xgo.ing/rss/user/5287b4e0e13a4ab7ab7b1d56f9d88960"}
+  - {id: xg_qwen, name: "@Alibaba_Qwen（XGo）", org: Qwen, tier: xproxy, weight: -2, serial: true, kind: rss, exclude_title: *x_chatter, url: "https://api.xgo.ing/rss/user/80032d016d654eb4afe741ff34b7643d"}
+  - {id: xg_deepseek, name: "@deepseek_ai（XGo）", org: DeepSeek, tier: xproxy, weight: -2, serial: true, kind: rss, exclude_title: *x_chatter, url: "https://api.xgo.ing/rss/user/68b610deb24b47ae9a236811563cda86"}
+  - {id: xg_hunyuan, name: "@TXhunyuan（XGo）", org: 腾讯, tier: xproxy, weight: -2, serial: true, kind: rss, exclude_title: *x_chatter, url: "https://api.xgo.ing/rss/user/6e8e7b42cb434818810f87bcf77d86fb"}
+  - {id: xg_kling, name: "@Kling_ai（XGo）", org: 快手可灵, tier: xproxy, weight: -2, serial: true, kind: rss, exclude_title: *x_chatter, url: "https://api.xgo.ing/rss/user/564237c3de274d58a04f064920817888"}
+  - {id: xg_hailuo, name: "@Hailuo_AI（XGo）", org: MiniMax, tier: xproxy, weight: -2, serial: true, kind: rss, exclude_title: *x_chatter, url: "https://api.xgo.ing/rss/user/e65b5e59fcb544918c1ba17f5758f0f8"}
+  - {id: xg_fishaudio, name: "@FishAudio（XGo）", org: Fish Audio, tier: xproxy, weight: -2, serial: true, kind: rss, exclude_title: *x_chatter, url: "https://api.xgo.ing/rss/user/4900b3dcd592424687582ff9e0f148ea"}

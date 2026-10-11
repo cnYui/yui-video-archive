@@ -1,0 +1,107 @@
+1
+00:00:00,000 --> 00:00:01,359
+Pasting the same long review
+
+2
+00:00:01,379 --> 00:00:03,850
+standards every time you ask Claude to review a PR?
+
+3
+00:00:03,870 --> 00:00:06,187
+Skills fix that: write the process down once
+
+4
+00:00:06,207 --> 00:00:08,321
+and Claude pulls it in when needed.
+
+5
+00:00:08,341 --> 00:00:11,233
+A skill is a folder with a SKILL.md: a name
+
+6
+00:00:11,253 --> 00:00:13,561
+and description first, then the actual steps.
+
+7
+00:00:13,581 --> 00:00:15,961
+Keep it in your personal folder to use it everywhere,
+
+8
+00:00:15,981 --> 00:00:18,441
+or in the project to share it with the team.
+
+9
+00:00:18,461 --> 00:00:19,933
+The key difference:
+
+10
+00:00:19,953 --> 00:00:21,771
+it isn't loaded into context all at once.
+
+11
+00:00:21,791 --> 00:00:24,392
+Claude first sees only each skill's name and description,
+
+12
+00:00:24,412 --> 00:00:26,741
+and loads the full contents once one matches.
+
+13
+00:00:26,761 --> 00:00:29,083
+CLAUDE.md is the rulebook loaded every session;
+
+14
+00:00:29,103 --> 00:00:32,121
+a skill is a manual opened only when needed.
+
+15
+00:00:32,141 --> 00:00:34,768
+Type a slash and the skill name to call it, or let
+
+16
+00:00:34,788 --> 00:00:38,211
+Claude decide. Edits take effect right away, no restart.
+
+17
+00:00:38,231 --> 00:00:39,693
+The course's rule of thumb:
+
+18
+00:00:39,713 --> 00:00:41,668
+type the same multi-step instruction twice,
+
+19
+00:00:41,688 --> 00:00:43,001
+and it's a skill.
+
+20
+00:00:43,021 --> 00:00:44,401
+Like the ones in the video:
+
+21
+00:00:44,421 --> 00:00:47,141
+commit messages, PR descriptions, debugging, documentation.
+
+22
+00:00:47,161 --> 00:00:49,233
+For workflows with side effects, like deploys,
+
+23
+00:00:49,253 --> 00:00:51,081
+make the skill manual-only.
+
+24
+00:00:51,101 --> 00:00:53,153
+Don't celebrate yet: every skill's description sits
+
+25
+00:00:53,173 --> 00:00:55,701
+in context on every turn, so skip the ones you won't use.
+
+26
+00:00:55,721 --> 00:00:57,710
+Always-on rules go in CLAUDE.md.
+
+27
+00:00:57,730 --> 00:01:00,091
+Occasional manuals become skills.

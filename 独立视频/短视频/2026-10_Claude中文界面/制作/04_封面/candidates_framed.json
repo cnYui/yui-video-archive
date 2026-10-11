@@ -1,0 +1,59 @@
+{
+ "candidates": [
+  {
+   "id": "A",
+   "note": "语言选择框 + 用户定的字：“Claude终于支持中文语言！封号钓鱼执法？”压缩成两行",
+   "recommend": true,
+   "video": "D:\\大疆\\独立视频\\短视频\\2026-10_Claude中文界面\\制作\\04_封面\\_src\\A_picker_top.png",
+   "t": 0.0,
+   "crop": [
+    0,
+    0,
+    1,
+    1
+   ],
+   "big": [
+    "终于支持中文",
+    "封号钓鱼执法？"
+   ],
+   "accent_line": 1,
+   "sticker": "Claude · 语言设置"
+  },
+  {
+   "id": "B",
+   "note": "悠一出镜（镜像，安静的帧）+ 钩子“不敢点的 / 中文选项”",
+   "video": "D:\\大疆\\独立视频\\短视频\\2026-10_Claude中文界面\\制作\\04_封面\\_src\\B_face_mirror.png",
+   "t": 0.0,
+   "crop": [
+    0,
+    0,
+    1,
+    1
+   ],
+   "big": [
+    "不敢点的",
+    "中文选项"
+   ],
+   "accent_line": 1,
+   "sticker": "悠一 · 出镜"
+  },
+  {
+   "id": "C",
+   "note": "语言选择框 + 钩子“Claude / 终于有中文”",
+   "video": "D:\\大疆\\独立视频\\短视频\\2026-10_Claude中文界面\\制作\\04_封面\\_src\\B_picker_rows.png",
+   "t": 0.0,
+   "crop": [
+    0,
+    0,
+    1,
+    1
+   ],
+   "big": [
+    "Claude",
+    "终于有中文"
+   ],
+   "accent_line": 1,
+   "sticker": "Claude · 语言设置"
+  }
+ ]
+}

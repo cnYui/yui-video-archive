@@ -26,8 +26,8 @@ CPS = 5.3            # TTS speed estimate, spoken units / s: fitted to episode 1
                      # (324 s measured; the pre-voice guess 4.3 came out ~20 % too long)
 SENT_PAUSE = 0.25    # extra seconds per sentence end
 SEG_GAP = 0.25       # breathing room after every spoken segment in the timeline (s)
-INTRO_DEFAULT = 3.8  # UE intro length (s) when 片头片尾/intro/index.html cannot be read
-OUTRO_DEFAULT = 4.8  # UE outro length (s)
+INTRO_DEFAULT = 4.8  # intro length (s) when 片头片尾/intro/index.html cannot be read (2026-10-03 起：Claude 品牌色「对话气泡」片头；以前 3.8)
+OUTRO_DEFAULT = 9.0  # outro length (s)（信纸片尾：参考文献 + 致谢；以前 4.8）
 # Frame size (pipeline-contract.md §2 "canvas"). User, 2026-09-27: every video from episode 2 on is 19.5:9 = 2340x1080
 # (phone full screen); covers stay 16:9 1920x1080 + 4:3 1440x1080 (make_cover.py, not affected by the canvas).
 CANVAS_DEFAULT = (1920, 1080)   # episode.json without "canvas": episode 1, older folders, 《AI每日日报》's calls
@@ -324,9 +324,13 @@ def normalise_row(row, where):
     """Return ('say', text, tts, visual) or ('gap', seconds, visual).
 
     Accepts the contract forms ("say", text, tts, visual) / ("gap", sec, visual), plus the older
-    episode-1 form ("say", id, text, tts, visual) (the id is ignored: ids are generated)."""
+    episode-1 form ("say", id, text, tts, visual) (the id is ignored: ids are generated).
+    A say row may end with a dict of extras (中英双语字幕，2026-10-02 起): ("say", text, tts, visual, dict(en=…, cuts=…));
+    row_extra(row) returns it."""
     if not row:
         sys.exit(f"{where}: 空行")
+    if row[0] == "say" and isinstance(row[-1], dict):
+        row = tuple(row[:-1])
     kind = row[0]
     if kind == "gap":
         if len(row) not in (2, 3):
@@ -348,8 +352,14 @@ def normalise_row(row, where):
     sys.exit(f"{where}: 行类型必须是 \"say\" 或 \"gap\"：{row!r}")
 
 
+def row_extra(row):
+    """the trailing dict of a say row ({} if none): en = 英文字幕，cuts = 中英拆条的手动断点"""
+    return row[-1] if row and row[0] == "say" and isinstance(row[-1], dict) else {}
+
+
 def walk_script(scenes):
-    """Main-body scenes with normalised rows and generated segment ids (S03-12 = scene-global index)."""
+    """Main-body scenes with normalised rows and generated segment ids (S03-12 = scene-global index).
+    Say rows carry `en` / `cuts` from their extras dict when the script has them (双语字幕)."""
     out, n, seen = [], 0, set()
     for sc in scenes:
         if is_bookend(sc):
@@ -363,7 +373,9 @@ def walk_script(scenes):
             r = normalise_row(row, f"{sid} 第 {i + 1} 行")
             if r[0] == "say":
                 n += 1
-                rows.append(dict(kind="say", id=f"{sid}-{n:02d}", text=r[1], tts=r[2], visual=r[3]))
+                ex = row_extra(row)
+                rows.append(dict(kind="say", id=f"{sid}-{n:02d}", text=r[1], tts=r[2], visual=r[3],
+                                 en=str(ex.get("en") or "").strip(), cuts=ex.get("cuts")))
             else:
                 rows.append(dict(kind="gap", dur=r[1], visual=r[2]))
         out.append(dict(id=sid, title=sc.get("title", sid), char=sc.get("char", ""), bg_note=sc.get("bg", ""),

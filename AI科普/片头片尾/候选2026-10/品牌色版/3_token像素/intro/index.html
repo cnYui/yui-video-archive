@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>悠一 · Intro · 品牌色 3 · token 像素</title>
+<link rel="stylesheet" href="../../../../fonts/fonts.css">
+<link rel="stylesheet" href="../../fonts/brand-fonts.css">
+<script src="../../../common/pack.js"></script>
+<script src="../../common/brand.js"></script>
+<style>html, body { margin: 0; overflow: hidden; background: #FAF9F5; }</style>
+</head>
+<body>
+<script>
+(function () {
+  'use strict';
+  /* 品牌色版 3「token 流 · 像素」：> → { } → </> → AI 芯片 → 芯片滑到左边，从右侧引脚一粒一粒吐出小方块（token），
+   * 方块沿弧线飞过去，拼成像素字“悠一”（方舟像素字体 12 px 的点阵，每个点一个 token，最后一粒橙色的是句号）→
+   * 像素“升采样”：方块收缩、清晰的黑体字浮现，芯片退场、名字居中 → 像素小字“AI鼓励师”逐列亮起（淡黄底）→
+   * 像素溶解到白。4.8 s。 */
+  const P = window.PACK, B = window.BRAND, { clamp, lerp, prog, E } = P, C = B.C;
+  const RAW = Object.assign({ name: '悠一', role: 'AI鼓励师', endColor: '#FFFFFF' }, window.__DATA__ || {});
+  const NAME = String(RAW.name == null ? '' : RAW.name).trim() || '悠一';
+  const ROLE = String(RAW.role == null ? '' : RAW.role).trim();
+  const END_COLOR = RAW.endColor === 'none' ? 'none' : P.hexOr(RAW.endColor, '#FFFFFF');
+
+  window.DURATION = 4.8;
+  window.__READY__ = false;
+  const { FW, OX, ctx } = P.setup(RAW, C.ivory);
+
+  const T = Object.assign({}, B.T0, { slide: [1.32, 1.50], emit: [1.52, 2.28], flight: 0.42, chipOut: [2.40, 2.70], up: [2.50, 2.95], centre: [2.55, 2.95],
+    kicker: [3.02, 3.40], blink: [3.9, 4.1], dissolve: [4.42, 4.72], end: 4.72 });
+  const CELL = 18;                                     // one pixel of the 12 px font = one token (stage units)
+  const CHIP_X = -480, NAME_C = [150, -70];            // chip parks left; the pixel name assembles here, then slides to x = 0
+  const rnd = P.rngFor('tokens');
+
+  /* ------------------------------------------------------------ pixel grids from the 12 px bitmap font */
+  function pixelGrid(text) {
+    const cv = document.createElement('canvas'), n = [...text].length; cv.width = 12 * n + 8; cv.height = 20;
+    const g = cv.getContext('2d', { willReadFrequently: true });
+    g.font = "12px 'Ark Pixel'"; g.textBaseline = 'top'; g.fillStyle = '#000'; g.fillText(text, 2, 3);
+    const d = g.getImageData(0, 0, cv.width, cv.height).data, cells = [];
+    let x0 = 1e9, y0 = 1e9, x1 = -1e9, y1 = -1e9;
+    for (let y = 0; y < cv.height; y++) for (let x = 0; x < cv.width; x++) if (d[(y * cv.width + x) * 4 + 3] > 100) { cells.push([x, y]); x0 = Math.min(x0, x); y0 = Math.min(y0, y); x1 = Math.max(x1, x); y1 = Math.max(y1, y); }
+    return { cells: cells.map(([x, y]) => [x - x0, y - y0]), w: x1 - x0 + 1, h: y1 - y0 + 1, cv, x0, y0 };
+  }
+  let G, tokens = [], period, KICK;
+  function build() {
+    G = pixelGrid(NAME);
+    // token destinations in stage units (grid centred on NAME_C), emitted left column first, top to bottom
+    const ox = NAME_C[0] - G.w * CELL / 2, oy = NAME_C[1] - G.h * CELL / 2;
+    const order = G.cells.slice().sort((a, b) => a[0] - b[0] || a[1] - b[1]);
+    tokens = order.map(([cx, cy], i) => ({ x: ox + (cx + 0.5) * CELL, y: oy + (cy + 0.5) * CELL, col: cx, t0: T.emit[0] + (T.emit[1] - T.emit[0]) * (i / Math.max(1, order.length - 1)), from: [CHIP_X + B.PB + B.PL, [-78, 0, 78][i % 3]], arc: rnd(90, 170) }));
+    period = { x: ox + (G.w + 1.5) * CELL, y: oy + (G.h - 0.5) * CELL, t0: T.emit[1] + 0.05, from: [CHIP_X + B.PB + B.PL, 0], arc: 140 };
+    G.box = { x: ox, y: oy, w: G.w * CELL, h: G.h * CELL };
+    // the kicker as a pixel bitmap, drawn 3x
+    if (ROLE) {                                       // the kicker bitmap, trimmed to its ink box and tinted dark
+      const k = pixelGrid(ROLE), cv = document.createElement('canvas'); cv.width = k.w; cv.height = k.h;
+      const g = cv.getContext('2d'); g.drawImage(k.cv, k.x0, k.y0, k.w, k.h, 0, 0, k.w, k.h); g.globalCompositeOperation = 'source-in'; g.fillStyle = C.dark; g.fillRect(0, 0, k.w, k.h);
+      KICK = { cv, w: k.w, h: k.h, scale: 4 };
+    }
+    ctx.font = `900 ${nameFont()}px 'Noto Sans SC'`; G.textW = ctx.measureText(NAME).width;
+  }
+  const nameFont = () => Math.round(G.h * CELL / 0.86);
+
+  function tokenPos(tk, t) {                            // -> {x, y, s, col} or null before emission
+    const u = prog(t, tk.t0, tk.t0 + T.flight); if (u <= 0) return null;
+    const e = E.outCubic(u), x = lerp(tk.from[0], tk.x, e), y = lerp(tk.from[1], tk.y, e) - Math.sin(Math.PI * e) * tk.arc;
+    return { x, y, s: lerp(1.3, 1, e), e };
+  }
+
+  let ready = false;
+  function renderAt(t) {
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    ctx.fillStyle = C.ivory; ctx.fillRect(0, 0, FW, 1080);
+    if (!ready) return;
+    const z = B.zoom(t, 4.0);
+    ctx.translate(OX + 960, 540); ctx.scale(z, z);
+
+    /* ---------------- chip (chain, then slides left, then leaves) ---------------- */
+    const S = B.chain(t, T);
+    const slide = E.inOutCubic(prog(t, T.slide[0], T.slide[1])), out = E.inCubic(prog(t, T.chipOut[0], T.chipOut[1]));
+    const chipX = lerp(0, CHIP_X, slide) - 140 * out;
+    const emitting = t >= T.emit[0] && t <= T.emit[1] + T.flight;
+    if (out < 1) {
+      ctx.save(); ctx.translate(chipX, 0); ctx.globalAlpha *= 1 - out;
+      // the die glows yellow while tokens stream out
+      const glow = emitting ? 0.5 + 0.5 * Math.sin((t - T.emit[0]) * 28) : 0;
+      B.drawChain(ctx, S, { ink: C.dark, atomOp: 1, label: 'AI' });
+      if (glow > 0 && S.chip) { ctx.save(); ctx.globalAlpha *= glow * 0.85; ctx.fillStyle = C.yellow; ctx.fillRect(-62, -62, 124, 124); ctx.fillStyle = C.dark; ctx.font = "700 54px 'Poppins'"; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.letterSpacing = '1px'; ctx.fillText('AI', 0, 3); ctx.restore(); }
+      ctx.restore();
+    }
+
+    /* ---------------- tokens -> pixel name -> smooth name ---------------- */
+    const up = E.inOutCubic(prog(t, T.up[0], T.up[1]));
+    const shift = E.inOutCubic(prog(t, T.centre[0], T.centre[1])) * -NAME_C[0];   // the name slides to x = 0
+    ctx.save(); ctx.translate(shift, 0);
+    for (const tk of tokens) {
+      const p = tokenPos(tk, t); if (!p) continue;
+      // upsampling: blocks shrink column by column while the smooth glyphs fade in
+      const shrink = up > 0 ? E.inCubic(prog(up, tk.col / G.w * 0.6, tk.col / G.w * 0.6 + 0.4)) : 0;
+      const s = CELL * p.s * (1 - shrink); if (s < 0.5) continue;
+      ctx.fillStyle = P.mixHex(C.yellow, C.dark, clamp(p.e * 1.6 - 0.4));
+      ctx.fillRect(p.x - s / 2, p.y - s / 2, s, s);
+    }
+    if (up > 0) {
+      ctx.save(); ctx.globalAlpha *= E.outCubic(up); ctx.fillStyle = C.dark; ctx.font = `900 ${nameFont()}px 'Noto Sans SC'`; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+      ctx.fillText(NAME, G.box.x + G.box.w / 2, G.box.y + G.box.h / 2 + nameFont() * 0.04); ctx.restore();
+    }
+    // the period token (orange): the last to land, stays as a square full stop
+    const pp = tokenPos(period, t);
+    if (pp) { const bl = prog(t, T.blink[0], T.blink[1]); ctx.save(); ctx.globalAlpha *= 1 - 0.7 * Math.pow(Math.sin(Math.PI * bl), 2); ctx.fillStyle = C.orange; const s = CELL * 1.25 * pp.s; ctx.fillRect(pp.x - s / 2, pp.y - s / 2, s, s); ctx.restore(); }
+
+    /* ---------------- kicker: pixel text revealed column by column over a yellow bar ---------------- */
+    if (KICK) {
+      const k = E.outCubic(prog(t, T.kicker[0], T.kicker[1]));
+      if (k > 0) {
+        const w = KICK.w * KICK.scale, h = KICK.h * KICK.scale, x = G.box.x + G.box.w / 2 - w / 2, y = G.box.y + G.box.h + 70;
+        ctx.save(); ctx.fillStyle = C.yellow; ctx.fillRect(x - 16, y - 10, (w + 32) * E.outCubic(prog(t, T.kicker[0], T.kicker[0] + 0.25)), h + 20);
+        ctx.beginPath(); ctx.rect(x, y, w * k, h); ctx.clip(); ctx.imageSmoothingEnabled = false;
+        ctx.drawImage(KICK.cv, 0, 0, KICK.w, KICK.h, x, y, w, h); ctx.restore();
+      }
+    }
+    ctx.restore();
+
+    /* ---------------- pixel dissolve to white ---------------- */
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    const dp = prog(t, T.dissolve[0], T.dissolve[1]);
+    if (dp > 0) {
+      const cs = 60, cols = Math.ceil(FW / cs), rows = Math.ceil(1080 / cs), r2 = P.mulberry32(99);
+      ctx.fillStyle = END_COLOR === 'none' ? C.ivory : END_COLOR;
+      for (let j = 0; j < rows; j++) for (let i = 0; i < cols; i++) { const th = r2() * 0.85 + (i / cols) * 0.15; if (dp >= th) ctx.fillRect(i * cs, j * cs, cs + 1, cs + 1); }
+      if (t >= T.end) ctx.fillRect(0, 0, FW, 1080);
+    }
+  }
+  window.renderAt = renderAt;
+
+  P.fontsReady(["12px 'Ark Pixel'", "900 240px 'Noto Sans SC'", "700 54px 'Poppins'"]).then(() => {
+    // make sure the bitmap font is really in before sampling it
+    return document.fonts.load("12px 'Ark Pixel'", NAME + ROLE);
+  }).then(() => { build(); ready = true; renderAt(0); window.__READY__ = true; });
+})();
+</script>
+</body>
+</html>

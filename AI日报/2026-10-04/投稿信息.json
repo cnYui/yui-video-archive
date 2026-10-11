@@ -1,0 +1,23 @@
+{
+  "title": "10月4日，鲸鱼娘带你看看AI圈发生了什么？",
+  "video": "D:\\大疆\\AI日报\\2026-10-04\\AI每日日报_1004_上传版.mp4",
+  "video_seconds": 352.3,
+  "cover_16x9": "D:\\大疆\\AI日报\\2026-10-04\\封面\\封面_16x9_1920x1080.png",
+  "cover_4x3": "D:\\大疆\\AI日报\\2026-10-04\\封面\\封面_4x3_1440x1080.png",
+  "partition": "人工智能",
+  "partition_fallback": "科技数码",
+  "tags": [
+    "AI资讯",
+    "人工智能",
+    "大模型",
+    "AI日报",
+    "苹果",
+    "谷歌",
+    "Meta",
+    "鲸鱼娘",
+    "大肥鱼"
+  ],
+  "collection": "AI每日日报",
+  "declaration": "含AI生成内容",
+  "description": "AI每日日报 · 10月4日（周日）\n鲸鱼娘带你看看 AI 圈发生了什么。\n\n今日内容\n0:00 开场\n0:27 苹果收紧 Mac 磁盘权限\n1:11 Antigravity 上 Claude 5.5\n1:53 Gemini 加了地图工具\n2:30 Meta 开源 Muse 硬件\n3:22 Suno 能做有声配乐了\n4:00 Supabase 收购 Turso\n4:51 用 Claude 写 36 篇论文\n5:34 回顾\n\n来源\n① 苹果收紧 Mac 磁盘权限：Apple Developer https://developer.apple.com/news/?id=p6zjojqw ；IT之家 https://www.ithome.com/1/009/381.htm\n② Antigravity 上 Claude 5.5：Google Antigravity https://antigravity.google/docs/models ；Let's Data Science https://letsdatascience.com/news/google-antigravity-adds-claude-55-to-paid-tiers-6a3e78f1\n③ Gemini 加了地图工具：9to5Google https://9to5google.com/2026/10/02/gemini-app-map-tool/ ；Android Authority https://www.androidauthority.com/gemini-app-map-tool-3718688/\n④ Meta 开源 Muse 硬件：TechCrunch https://techcrunch.com/2026/10/02/meta-wants-you-to-build-your-own-muse-gadget/ ；The Decoder https://the-decoder.com/muse-gadgets-turns-ai-hardware-into-an-open-source-diy-project/\n⑤ Suno 能做有声配乐了：Suno https://suno.com/blog/introducing-speech-beta ；IT之家 https://www.ithome.com/1/009/440.htm\n⑥ Supabase 收购 Turso：Supabase https://supabase.com/blog/supabase-is-acquiring-turso ；PR Newswire https://www.prnewswire.com/news-releases/supabase-announces-150m-in-new-funding-and-turso-acquisition-302896752.html ；SiliconANGLE https://siliconangle.com/2026/10/02/database-startup-supabase-raises-150m-acquires-turso/\n⑦ 用 Claude 写 36 篇论文：The Decoder https://the-decoder.com/open-source-bootloops-harness-supports-ai-models-in-performing-precise-scientific-calculations/ ；BootLoops https://bootloops.ai\n\n说明\n· 信息截至北京时间 2026-10-04 03:33，以各家官方发布为准。\n· 本期配音由 AI 合成（Fish Audio「苏晓晓」）；内容由 AI 整理，并自动核对来源，如有出入以原文为准。\n· 主播鲸鱼娘（像素素材包「大肥鱼」）是 DeepSeek 的网友拟人同人（原型：上善无形，CC BY-NC-SA 4.0；女仆造型：ZipZipPipe），与 DeepSeek 官方无关。"
+}

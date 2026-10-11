@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>悠一 · Outro B · 纸飞机</title>
+<link rel="stylesheet" href="../../../fonts/fonts.css">
+<link rel="stylesheet" href="../../fonts/fonts2.css">
+<script src="../../common/handdata.js"></script>
+<script src="../../common/pack.js"></script>
+<style>html, body { margin: 0; overflow: hidden; background: #ECE6D9; }</style>
+</head>
+<body>
+<script>
+(function () {
+  'use strict';
+  /* 版本 B「纸飞机」片尾：飞机从左上飞来，丢下一封封好的信；信落到桌面上弹一下，横向、纵向两次展开成一整页信纸；
+   * 信纸上写出“参考文献”“致谢”两栏，条目一行行铺开，末尾写感谢语、署名，最后盖一枚方形朱印。飞机停在信纸右上角。9.0 s。
+   * 数据同 A 版片尾：references / thanks（或 items）/ closing / signature / references_title / thanks_title。 */
+  const P = window.PACK, { C, E, clamp, lerp, prog } = P;
+  const RAW = Object.assign({}, window.__DATA__ || {});
+  const D = {
+    references: Array.isArray(RAW.references) ? RAW.references : [],
+    thanks: Array.isArray(RAW.thanks) ? RAW.thanks : Array.isArray(RAW.items) ? RAW.items : [],
+    refTitle: String(RAW.references_title == null ? '参考文献' : RAW.references_title).trim(),
+    thanksTitle: String(RAW.thanks_title == null ? '致谢' : RAW.thanks_title).trim(),
+    closing: String(RAW.closing == null ? '感谢观看，我们下期再见' : RAW.closing).trim(),
+    signature: String(RAW.signature == null ? '悠一' : RAW.signature).trim() || '悠一',
+  };
+
+  window.DURATION = 9.0;
+  window.__READY__ = false;
+
+  const { FW, OX, ctx } = P.setup(RAW);
+  const paper = P.makePaper(FW, { seed: 47, mottle: 0.07 });
+  const PS = 1.8;
+
+  /* ------------------------------------------------------------ letter geometry + timeline */
+  const L = { x: 140, y: 118, w: 1640, h: 836, r: 8 };         // the open sheet
+  const LC = [L.x + L.w / 2, L.y + L.h / 2];
+  const FOLD = 110;                                              // the folded letter (square)
+  const T = { fly: [0.0, 2.3], drop: 0.62, land: 1.28, openX: [1.36, 1.72], openY: [1.72, 2.06], h1: [2.15, 2.65], h2: [2.5, 2.85],
+              closing: [4.1, 5.1], sig: [5.15, 5.6], seal: [5.72, 5.95] };
+  // plane: glides in from the top-left, lets go of the letter, banks right and parks on the sheet's top-right corner
+  const flyB = [[-150, 60], [500, 250], [1500, 120], [1680, 182]];
+  const dropAt = (() => { const p = P.bez(...flyB, prog(T.drop, T.fly[0], T.fly[1]) ); return p; })();
+  function planeAt(t) {
+    const u = E.outSine(prog(t, T.fly[0], T.fly[1]));
+    const p = P.bez(...flyB, u), q = P.bez(...flyB, Math.min(1, u + 0.01));
+    const a = u >= 0.995 ? -0.12 : Math.atan2(q[1] - p[1], q[0] - p[0]);
+    return { x: p[0], y: p[1], a: lerp(a, -0.12, E.inOutSine(prog(u, 0.9, 1))), rest: u >= 0.995 };
+  }
+  // the falling letter: from the plane's position at drop time down to the centre of the desk
+  function letterAt(t) {
+    const u = prog(t, T.drop, T.land);
+    const x = lerp(dropAt[0], LC[0], E.outSine(u)), y = lerp(dropAt[1] + 20, LC[1], E.inQuad(u));
+    return { x, y, rot: lerp(-0.45, 0.0, E.outCubic(u)) };
+  }
+  function sheetScale(t) {                                       // (kx, ky) of the sheet rectangle
+    const kx0 = FOLD / L.w, ky0 = FOLD / L.h;
+    const kx = t < T.openX[0] ? kx0 : lerp(kx0, 1, E.outBackSoft(prog(t, T.openX[0], T.openX[1])));
+    const ky = t < T.openY[0] ? ky0 : lerp(ky0, 1, E.outBackSoft(prog(t, T.openY[0], T.openY[1])));
+    // landing bounce on the folded square
+    const b = pulse(t, T.land, T.land + 0.22);
+    return { kx: kx * (1 + 0.12 * b), ky: ky * (1 - 0.18 * b) };
+  }
+  const pulse = (t, a, b) => { const u = prog(t, a, b); return u <= 0 || u >= 1 ? 0 : Math.sin(Math.PI * u); };
+
+  /* ------------------------------------------------------------ credits layout (inside the sheet) */
+  const BOX = { x0: L.x + 90, y0: 318, x1: L.x + L.w - 90, y1: 800 };
+  const FONTS = { fontBody: "400 %spx 'Noto Sans SC'", fontNum: "700 %spx 'Noto Sans SC'", fontLabel: "600 %spx 'Noto Sans SC'", fsMax: 40, fsMin: 21, lh: 1.42, entryGap: 0.5, maxLines: 3, split: 0.58, gap: 90 };
+  const S = {};
+  function build() {
+    const LAY = P.layoutCredits(ctx, D, BOX, FONTS);
+    const tallest = Math.max(0, ...LAY.cols.map(c => c.height));
+    const dy = LAY.cols.length ? clamp((BOX.y1 - BOX.y0 - tallest) / 2, 0, 70) : 0;
+    LAY.cols.forEach(c => c.entries.forEach(e => { e.y += dy; }));
+    const cols = LAY.cols, HEAD_Y = 232 + dy, RULE_Y = HEAD_Y + 50;
+    const heads = cols.map((c, i) => new P.Hand({ text: c.kind === 'refs' ? D.refTitle : D.thanksTitle, x: c.x, y: HEAD_Y, size: 56, align: 'left', color: C.ink, t0: i === 0 ? T.h1[0] : T.h2[0], t1: i === 0 ? T.h1[1] : T.h2[1], seed: 'B-head' + i, pen: 0.09 }));
+    const rules = cols.map((c, i) => ({ rs: P.inkPath([[c.x, RULE_Y], [c.x + c.w * 0.5, RULE_Y - 2], [c.x + c.w, RULE_Y + 1]], { wobble: 1.4, seed: 51 + i, freq: 0.008 }), t0: heads[i].end, t1: heads[i].end + 0.3 }));
+    const entryT = [];
+    cols.forEach((c, ci) => { const start = (ci === 0 ? T.h1[1] : T.h2[1]) + 0.1; c.entries.forEach((e, i) => entryT.push({ ci, i, t0: start + i * 0.2, t1: start + i * 0.2 + 0.36 })); });
+    const closing = new P.Hand({ text: D.closing, x: L.x + 90, y: 880, size: 54, align: 'left', color: C.ink, t0: T.closing[0], t1: T.closing[1], seed: 'B-closing', pen: 0.088 });
+    const sig = new P.Hand({ text: '—— ' + D.signature, x: 1545, y: 880, size: 64, align: 'right', color: C.ink, t0: T.sig[0], t1: T.sig[1], seed: 'B-sig', pen: 0.085 });
+    Object.assign(S, { LAY, cols, heads, rules, entryT, closing, sig });
+  }
+  build();
+  const SEAL = { x: 1650, y: 874, s: 84 };
+  const sealSplat = P.splat({ seed: 'B-seal', t0: T.seal[0] + 0.06, n: 12, origin: [SEAL.x, SEAL.y + 30], speed: [60, 300], dir: [-175, -5], size: [3, 9], colors: [C.coral] });
+
+  /* ------------------------------------------------------------ drawing */
+  const clouds = [{ x: 300, y: 70, s: 54, v: 12, a: 0.9 }, { x: 1200, y: 40, s: 62, v: 9, a: 0.9 }, { x: 1800, y: 1010, s: 46, v: 15, a: 0.7 }];
+  function drawClouds(t) { for (const c of clouds) { const x = ((c.x - c.v * t + 3000) % (1920 + 600 + OX * 2)) - 300 - OX; P.drawCloud(ctx, x, c.y, c.s, { alpha: c.a }); } }
+
+  function sheetPath(cx, cy, w, h, r) { ctx.beginPath(); ctx.roundRect(cx - w / 2, cy - h / 2, w, h, r); }
+  function drawSheet(t) {
+    if (t < T.drop) return;
+    const open = t >= T.openX[0];
+    const pos = open ? { x: LC[0], y: LC[1], rot: 0 } : letterAt(t);
+    const { kx, ky } = sheetScale(t);
+    const w = L.w * kx, h = L.h * ky;
+    ctx.save(); ctx.translate(pos.x, pos.y); ctx.rotate(pos.rot);
+    // shadow
+    ctx.save(); ctx.shadowColor = 'rgba(60,40,20,0.28)'; ctx.shadowBlur = 26; ctx.shadowOffsetY = 12; ctx.fillStyle = '#F8F4EC'; sheetPath(0, 0, w, h, L.r); ctx.fill(); ctx.restore();
+    ctx.fillStyle = '#F8F4EC'; sheetPath(0, 0, w, h, L.r); ctx.fill();
+    // fold creases (thirds) once it is open enough
+    if (open) {
+      ctx.save(); ctx.strokeStyle = 'rgba(70,60,50,0.10)'; ctx.lineWidth = 2; ctx.beginPath();
+      for (const f of [1 / 3, 2 / 3]) { ctx.moveTo(-w / 2 + w * f, -h / 2 + 6); ctx.lineTo(-w / 2 + w * f, h / 2 - 6); ctx.moveTo(-w / 2 + 6, -h / 2 + h * f); ctx.lineTo(w / 2 - 6, -h / 2 + h * f); }
+      ctx.stroke(); ctx.restore();
+    }
+    // the wax seal on the folded letter (gone once it opens)
+    if (!open || t < T.openX[0] + 0.12) {
+      const a = open ? 1 - prog(t, T.openX[0], T.openX[0] + 0.12) : 1;
+      ctx.save(); ctx.globalAlpha = a; ctx.fillStyle = C.coral; ctx.beginPath();
+      for (let i = 0; i <= 24; i++) { const an = i / 24 * 6.2832, rr = 22 + 2.5 * Math.sin(an * 8); i ? ctx.lineTo(Math.cos(an) * rr, Math.sin(an) * rr) : ctx.moveTo(Math.cos(an) * rr, Math.sin(an) * rr); }
+      ctx.closePath(); ctx.fill();
+      ctx.fillStyle = '#F8F4EC'; ctx.font = "26px 'Ma Shan Zheng'"; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillText(D.signature[0] || '悠', 0, 2); ctx.restore();
+    }
+    ctx.restore();
+  }
+  function drawEntries(t) {
+    const { entryT, cols, LAY } = S;
+    ctx.textBaseline = 'middle';
+    for (const et of entryT) {
+      const p = E.outCubic(prog(t, et.t0, et.t1)); if (p <= 0) continue;
+      const c = cols[et.ci], e = c.entries[et.i], lh = LAY.lh, fs = LAY.fs;
+      ctx.save(); ctx.beginPath(); ctx.rect(c.x - 6, e.y - 6, (c.w + 12) * p, e.h + 12); ctx.clip();
+      if (c.kind === 'refs') {
+        ctx.fillStyle = C.coral; ctx.font = FONTS.fontNum.replace('%s', fs); ctx.textAlign = 'left'; ctx.fillText(e.num, c.x, e.y + lh / 2);
+        ctx.fillStyle = C.ink; ctx.font = FONTS.fontBody.replace('%s', fs);
+        e.lines.forEach((ln, i) => ctx.fillText(ln, c.x + e.numW, e.y + lh / 2 + i * lh));
+      } else {
+        if (e.label) { ctx.fillStyle = C.coral; ctx.font = FONTS.fontLabel.replace('%s', fs); ctx.textAlign = 'left'; ctx.fillText(e.label, c.x, e.y + lh / 2); }
+        ctx.fillStyle = C.ink; ctx.font = FONTS.fontBody.replace('%s', fs);
+        e.lines.forEach((ln, i) => ctx.fillText(ln, c.x + e.labelW, e.y + lh / 2 + i * lh));
+      }
+      ctx.restore();
+    }
+  }
+  function drawSeal(t) {
+    const u = prog(t, T.seal[0], T.seal[1]); if (u <= 0) return;
+    const k = u < 0.5 ? lerp(1.7, 0.95, E.outCubic(u / 0.5)) : lerp(0.95, 1, E.outCubic((u - 0.5) / 0.5));
+    ctx.save(); ctx.translate(SEAL.x, SEAL.y); ctx.rotate(0.1); ctx.scale(k, k); ctx.globalAlpha = Math.min(1, u * 4) * 0.9;
+    ctx.fillStyle = C.coral; ctx.beginPath(); ctx.roundRect(-SEAL.s / 2, -SEAL.s / 2, SEAL.s, SEAL.s, 6); ctx.fill();
+    ctx.strokeStyle = '#F8F4EC'; ctx.lineWidth = 2.5; ctx.beginPath(); ctx.roundRect(-SEAL.s / 2 + 7, -SEAL.s / 2 + 7, SEAL.s - 14, SEAL.s - 14, 3); ctx.stroke();
+    const chs = [...D.signature].slice(0, 2);
+    ctx.fillStyle = '#F8F4EC'; ctx.font = `${chs.length > 1 ? 30 : 46}px 'Ma Shan Zheng'`; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+    chs.forEach((ch, i) => ctx.fillText(ch, 0, chs.length > 1 ? -17 + i * 34 : 2));
+    ctx.restore();
+  }
+
+  function renderAt(t) {
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    ctx.drawImage(paper, 0, 0);
+    ctx.translate(OX, 0);
+    drawClouds(t);
+    drawSheet(t);
+    if (t >= T.openY[1] - 0.05) {
+      const { heads, rules, closing, sig } = S;
+      ctx.save(); sheetPath(LC[0], LC[1], L.w, L.h, L.r); ctx.clip();
+      heads.forEach(h => { if (t > h.t0) h.draw(ctx, t); });
+      rules.forEach(r => { if (t > r.t0) P.inkLine(ctx, null, { _rs: r.rs, width: 3.5, color: C.ink, p: E.outCubic(prog(t, r.t0, r.t1)) }); });
+      drawEntries(t);
+      if (t > closing.t0) closing.draw(ctx, t);
+      if (t > sig.t0) sig.draw(ctx, t);
+      drawSeal(t); sealSplat.draw(ctx, t);
+      ctx.restore();
+    }
+    const pl = planeAt(t);
+    P.drawPlane(ctx, pl.x, pl.y, pl.a, PS, pl.rest || t > T.fly[1] - 0.5 ? pl.y + 26 : null);
+  }
+  window.renderAt = renderAt;
+
+  P.fontsReady(["400 30px 'Noto Sans SC'", "600 30px 'Noto Sans SC'", "700 30px 'Noto Sans SC'", "60px 'Ma Shan Zheng'"]).then(() => { build(); window.__READY__ = true; renderAt(0); });
+})();
+</script>
+</body>
+</html>

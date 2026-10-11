@@ -1,0 +1,370 @@
+{
+  "number": 1001,
+  "title": "10月1日，鲸鱼娘带你看看AI圈发生了什么？",
+  "dir_name": "AI每日日报_1001",
+  "date": "2026-10-01",
+  "date_label": "10月1日",
+  "weekday": "周四",
+  "subtitle": "鲸鱼娘带你看看 AI 圈发生了什么",
+  "target_minutes": [
+    5,
+    6
+  ],
+  "question_scene": "S01",
+  "questions": [
+    {
+      "text": "DeepSeek 开源昇腾组件",
+      "scenes": [
+        "S02"
+      ]
+    },
+    {
+      "text": "Kimi K3 接入 Codex",
+      "scenes": [
+        "S03"
+      ]
+    },
+    {
+      "text": "OpenAI 做芯片设计模型",
+      "scenes": [
+        "S04"
+      ]
+    },
+    {
+      "text": "Codex 能做掌机游戏",
+      "scenes": [
+        "S05"
+      ]
+    },
+    {
+      "text": "DeepMind 给蛋白质加水印",
+      "scenes": [
+        "S06"
+      ]
+    },
+    {
+      "text": "微软发布生物研究系统",
+      "scenes": [
+        "S07"
+      ]
+    },
+    {
+      "text": "Reddit 停 RSS 和 API",
+      "scenes": [
+        "S08"
+      ]
+    }
+  ],
+  "chapters": {
+    "S01": "开场",
+    "S02": "DeepSeek 开源昇腾组件",
+    "S03": "Kimi K3 接入 Codex",
+    "S04": "OpenAI 做芯片设计模型",
+    "S05": "Codex 能做掌机游戏",
+    "S06": "DeepMind 给蛋白质加水印",
+    "S07": "微软发布生物研究系统",
+    "S08": "Reddit 停 RSS 和 API",
+    "S09": "回顾"
+  },
+  "bar_labels": {
+    "S01": "开场",
+    "S02": "DeepSeek 昇腾",
+    "S03": "Kimi K3",
+    "S04": "芯片设计模型",
+    "S05": "Game Studio",
+    "S06": "SynthID Bio",
+    "S07": "微软 Quine",
+    "S08": "Reddit",
+    "S09": "回顾"
+  },
+  "backgrounds": {
+    "S01": "01_深海气泡.png",
+    "S02": "02_星点.png",
+    "S03": "03_波纹.png",
+    "S04": "01_深海气泡.png",
+    "S05": "02_星点.png",
+    "S06": "03_波纹.png",
+    "S07": "01_深海气泡.png",
+    "S08": "02_星点.png",
+    "S09": "03_波纹.png"
+  },
+  "bg_alpha": 0.9,
+  "bg_blur": 0,
+  "intro_tagline": "",
+  "outro_items": [
+    {
+      "label": "新闻来源",
+      "value": "量子位 · IT之家 · Baseten · 36氪 · PR Newswire"
+    },
+    {
+      "label": "来源（续）",
+      "value": "The Decoder · The Shortcut · G"
+    },
+    {
+      "label": "形象",
+      "value": "大肥鱼同人 · 上善无形 / ZipZipPipe"
+    },
+    {
+      "label": "视频制作模型",
+      "value": "Opus 5.5"
+    }
+  ],
+  "outro_closing": "感谢大家看到最后",
+  "auto_gestures": false,
+  "presenter": {
+    "id": "whale",
+    "frames": "角色/动作帧"
+  },
+  "badge_html": "AI每日日报<span class=\"n\">10.01</span>",
+  "toc_kicker_html": "<b>今日要闻</b>TODAY",
+  "bar_colors": [
+    "#97C3F0",
+    "#F3C98C",
+    "#4A88DA",
+    "#C6E6FB"
+  ],
+  "news": [
+    {
+      "headline": "DeepSeek 开源昇腾组件",
+      "org": "DeepSeek",
+      "source": "量子位 · IT之家",
+      "source_short": "量子位",
+      "date": "9月30日",
+      "points": [
+        "和英伟达版一一对应",
+        "承载 V4 大部分算子",
+        "性能接近硬件上限",
+        "昇腾用户直接能用"
+      ],
+      "rundown_key": "DeepSeek 开源昇腾基础组件",
+      "line_points": [
+        null,
+        0,
+        null,
+        1,
+        2,
+        null,
+        3
+      ],
+      "refs": [
+        {
+          "name": "量子位",
+          "url": "https://www.qbitai.com/2026/09/499263.html"
+        },
+        {
+          "name": "IT之家",
+          "url": "https://www.ithome.com/1/008/604.htm"
+        }
+      ],
+      "snap": "../assets/snaps/news_01.png",
+      "snap_src": "ithome.com"
+    },
+    {
+      "headline": "Kimi K3 接入 Codex",
+      "org": "Baseten",
+      "source": "IT之家 · Baseten",
+      "source_short": "IT之家",
+      "date": "9月29日",
+      "points": [
+        "Baseten 进 OpenAI 市场",
+        "Codex 里能用 Kimi K3",
+        "从已有额度里扣费",
+        "中国模型首次进入"
+      ],
+      "rundown_key": "Kimi K3 接入 Codex 企业通道",
+      "line_points": [
+        null,
+        0,
+        1,
+        2,
+        3,
+        null,
+        null,
+        null
+      ],
+      "refs": [
+        {
+          "name": "IT之家",
+          "url": "https://www.ithome.com/1/008/864.htm"
+        },
+        {
+          "name": "Baseten",
+          "url": "https://www.baseten.co/blog/baseten-openai-partnership/"
+        },
+        {
+          "name": "36氪",
+          "url": "https://www.36kr.com/newsflashes/4005691489112198"
+        }
+      ],
+      "snap": "../assets/snaps/news_02.png",
+      "snap_src": "ithome.com"
+    },
+    {
+      "headline": "OpenAI 做芯片设计模型",
+      "org": "OpenAI",
+      "source": "PR Newswire · The Decoder",
+      "source_short": "PR Newswire",
+      "date": "9月30日",
+      "points": [
+        "专做芯片设计的模型",
+        "直接操作 EDA 软件",
+        "数据不拿来训练",
+        "上线时间未公布"
+      ],
+      "rundown_key": "OpenAI 和 Synopsys 做芯片设计模型",
+      "line_points": [
+        null,
+        0,
+        1,
+        null,
+        2,
+        3,
+        null,
+        null
+      ],
+      "refs": [
+        {
+          "name": "PR Newswire",
+          "url": "http://www.prnewswire.com/news-releases/openai-and-synopsys-announce-gpt-synopsys-frontier-intelligence-to-revolutionize-chip-design-302894874.html"
+        },
+        {
+          "name": "The Decoder",
+          "url": "https://the-decoder.com/openai-and-synopsys-team-up-to-build-an-ai-model-that-designs-chips-like-a-seasoned-engineer/"
+        }
+      ],
+      "snap": "../assets/snaps/news_03.png",
+      "snap_src": "prnewswire.com"
+    },
+    {
+      "headline": "Codex 能做掌机游戏",
+      "org": "OpenAI",
+      "source": "IT之家 · The Shortcut",
+      "source_short": "IT之家",
+      "date": "9月29日",
+      "points": [
+        "复古掌机 Chromatic",
+        "说需求，Codex 写代码",
+        "模拟器里先试玩",
+        "浏览器里也能玩"
+      ],
+      "rundown_key": "Codex 能做掌机游戏了",
+      "line_points": [
+        null,
+        0,
+        1,
+        2,
+        null,
+        3,
+        null,
+        null
+      ],
+      "refs": [
+        {
+          "name": "IT之家",
+          "url": "https://www.ithome.com/1/008/656.htm"
+        },
+        {
+          "name": "The Shortcut",
+          "url": "https://www.theshortcut.com/p/modretro-and-openai-team-up-on-new-chromatic-games-and-anyone-can-build-their-own"
+        }
+      ],
+      "snap": "../assets/snaps/news_04.png",
+      "snap_src": "ithome.com"
+    },
+    {
+      "headline": "DeepMind 给蛋白质加水印",
+      "org": "Google DeepMind",
+      "source": "Google DeepMind",
+      "source_short": "DeepMind",
+      "date": "9月30日",
+      "points": [
+        "水印看不出来",
+        "微调氨基酸的选择",
+        "三个靶点表现不变",
+        "代码和权重已开放"
+      ],
+      "rundown_key": "DeepMind 给蛋白质加水印",
+      "line_points": [
+        null,
+        0,
+        1,
+        null,
+        2,
+        null,
+        null,
+        3
+      ],
+      "refs": [
+        {
+          "name": "Google DeepMind",
+          "url": "https://deepmind.google/blog/introducing-synthid-bio/"
+        }
+      ]
+    },
+    {
+      "headline": "微软发布生物研究系统",
+      "org": "Microsoft",
+      "source": "Microsoft Research",
+      "source_short": "微软研究院",
+      "date": "9月29日",
+      "points": [
+        "博德研究所合作验证",
+        "五类数据一起学",
+        "一个周末排好优先级",
+        "目前只对研究者开放"
+      ],
+      "rundown_key": "微软发布生物研究系统 Quine",
+      "line_points": [
+        null,
+        0,
+        1,
+        null,
+        null,
+        2,
+        null,
+        3
+      ],
+      "refs": [
+        {
+          "name": "Microsoft Research",
+          "url": "https://www.microsoft.com/en-us/research/blog/introducing-quine-an-ai-research-system-designed-for-the-complexity-of-biology/"
+        }
+      ],
+      "snap": "../assets/snaps/news_06.png",
+      "snap_src": "microsoft.com"
+    },
+    {
+      "headline": "Reddit 停 RSS 和 API",
+      "org": "Reddit",
+      "source": "TechCrunch",
+      "source_short": "TechCrunch",
+      "date": "9月30日",
+      "points": [
+        "11 月 13 日停 RSS",
+        "2027 年 3 月关 API",
+        "应用要先注册",
+        "AI 授权收入在涨"
+      ],
+      "rundown_key": "Reddit 要停掉 RSS 和公共 API",
+      "line_points": [
+        null,
+        0,
+        1,
+        2,
+        null,
+        null,
+        3,
+        null
+      ],
+      "refs": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/09/30/reddit-is-killing-rss-feeds-ending-public-api-access-because-of-ai-bots/"
+        }
+      ],
+      "snap": "../assets/snaps/news_07.png",
+      "snap_src": "techcrunch.com"
+    }
+  ],
+  "style": "board"
+}

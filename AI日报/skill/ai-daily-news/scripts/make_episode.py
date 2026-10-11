@@ -10,8 +10,9 @@ Writes (never deletes; replaced files go to SERIES/_旧稿/):
 Then run build_script.py / chunk_voice.py / … with --series D:/大疆/AI日报 (daily.py does all of this).
 
 台本.json (written by Claude during the run; see SKILL.md):
-  {date: "2026-09-27", opening: [{text, tts?, expr?}], news: [{headline, org, source, source_short?, date, points[],
-   rundown_key?, lines: [{text, tts?, point?, expr?}], refs: [{name, url}]}], closing: [{text, tts?, expr?}]}
+  {date: "2026-09-27", opening: [{text, en, tts?, expr?, cuts?}], news: [{headline, org, source, source_short?, date, points[],
+   rundown_key?, lines: [{text, en, tts?, point?, expr?, cuts?}], refs: [{name, url}]}], closing: [{text, en, tts?, expr?, cuts?}]}
+  en = 这句的英文字幕（2026-10-02 起中英双语，项目统一标准；拆条和检查见 bilingual_subs.py）
 """
 import argparse
 import json
@@ -133,6 +134,33 @@ def validate(sc):
         need(cv.get("mood", "吃惊") in ("吃惊", "开心", "疑问", "认真"), "cover.mood 只能是 吃惊 / 开心 / 疑问 / 认真")
         if re.search(r"\d+\s*月\s*\d+\s*日|周[一二三四五六日天]", (cv.get("line1") or "") + (cv.get("line2") or "")):
             errs.append("封面文案里不写日期（用户 2026-09-28：和标题重复）")
+    # 竖屏版（用户 2026-10-05：之后日报都是竖屏、发四个平台；2026-10-06 起视频号不发）的可选字段：都只给提示，缺了 / 不合格会自动退回（见 make_vertical.py、daily.py platform_titles）
+    for i, n in enumerate(news, 1):
+        tag = f"第 {i} 条"
+        if n.get("vhook") and clen(n["vhook"]) > 15:
+            warns.append(f"{tag} vhook「{n['vhook']}」{clen(n['vhook']):g} 字宽，竖屏标题第二行放不下会缩小字号（≤15 字宽）")
+        for b in n.get("vbigs") or []:
+            ok = isinstance(b.get("line"), int) and 0 <= b["line"] < len(n.get("lines") or []) and b.get("n") and b.get("d")
+            if not ok:
+                warns.append(f"{tag} vbigs {b} 要有 line（第几句，0 起）、n（大数字）、d（一句说明），这条数字卡会被忽略")
+            elif clen(b["n"]) > 8 or clen(b["d"]) > 20:
+                warns.append(f"{tag} vbigs「{b['n']} / {b['d']}」太长（n ≤ 8 字宽、d ≤ 20 字宽），会缩小字号")
+    titles = sc.get("titles")
+    if titles is not None:
+        for key, lo, hi, nm in (("bilibili", 1, 80, "B 站"), ("douyin", 1, 30, "抖音"), ("xiaohongshu", 1, 20, "小红书")):
+            t = re.sub(r"\s+", " ", (titles.get(key) or "").strip())
+            if not t:
+                warns.append(f"titles.{key}（{nm}标题）没写，会用自动生成的")
+            elif not lo <= len(t) <= hi:
+                warns.append(f"titles.{key}（{nm}标题）「{t}」{len(t)} 字，要 {lo}–{hi} 字，会用自动生成的")
+    else:
+        warns.append("没有 titles：三个平台的标题会用自动生成的（SKILL.md 第 3 步有写法：B 站 ≤ 80 / 抖音 ≤ 30 / 小红书 ≤ 20）")
+    # 中英双语字幕（用户 2026-10-02：“改成双语，按统一标准来”）：每句要有 en，拆出来的每条中文 ≤ 约 28 字、英文 ≤ 约 90 字符
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    from bilingual_subs import check as check_bilingual
+    e2, w2 = check_bilingual(sc)
+    errs += e2
+    warns += w2
     if (sc.get("style") or STYLE_DEFAULT) == "board" and re.fullmatch(r"\d{4}-\d{2}-\d{2}", sc.get("date", "")):
         sys.path.insert(0, str(Path(__file__).resolve().parent))
         from hand_glyphs import collect
@@ -151,7 +179,22 @@ def row(ln, extra_note=""):
     return ("say", ln["text"].strip(), (ln.get("tts") or ln["text"]).strip(), note)
 
 
-def outro_sources(news):
+def outro_refs(news):
+    """片尾左栏「参考文献」（2026-10-03 起的信纸片尾，所有视频共用）：每条新闻一行 = 标题（来源名 / 来源名），最多 8 条"""
+    out = []
+    for n in news:
+        names = []
+        for r in n.get("refs") or []:
+            nm = (r.get("name") or "").strip()
+            if nm and nm not in names:
+                names.append(nm)
+        head = (n.get("headline") or "").strip()
+        if head:
+            out.append(f"{head}（{' / '.join(names)}）" if names else head)
+    return out[:8]
+
+
+def outro_sources(news):   # 2026-10-02 以前：来源名挤在片尾清单里两行（旧终端小票片尾）；现在来源进 outro_refs，这个留作参考
     names = []
     for n in news:
         for r in n.get("refs") or []:
@@ -234,7 +277,8 @@ def main():
         scenes.append(dict(id=ids[i + 1], title=n["headline"], rows=rows))
         news_ep.append({k: n.get(k) for k in ("headline", "org", "source", "source_short", "date", "points", "rundown_key") if n.get(k)}
                        | {"line_points": [ln.get("point") for ln in n["lines"]], "refs": n.get("refs") or []})
-    closing = [row(ln, "今日回顾卡") for ln in sc.get("closing") or [{"text": "来源都在简介里。"}]]
+    from bilingual_subs import DEFAULT_CLOSING
+    closing = [row(ln, "今日回顾卡") for ln in sc.get("closing") or DEFAULT_CLOSING]
     closing.append(("gap", 2.0, "今日回顾卡停留（结尾那句太短，不停一下卡片看不清）"))
     scenes.append(dict(id=ids[-1], title="回顾", rows=closing))
 
@@ -253,7 +297,8 @@ def main():
         "backgrounds": {sid: BACKGROUNDS[k % len(BACKGROUNDS)] for k, sid in enumerate(ids)},
         "bg_alpha": 0.9, "bg_blur": 0,
         "intro_tagline": "",
-        "outro_items": outro_sources(news) + OUTRO_FIXED,
+        "outro_references": outro_refs(news),     # 片尾左栏：参考文献（每条新闻 + 来源）
+        "outro_items": list(OUTRO_FIXED),          # 片尾右栏：致谢
         "outro_closing": "感谢大家看到最后",
         "auto_gestures": False,
         # 《原LAI如此》脚本的讲解员预设（epcommon.PRESENTERS["whale"]：自称鲸鱼娘、别名大肥鱼、音色苏晓晓）；
@@ -288,7 +333,8 @@ def main():
     shutil.copy2(ENGINE_TPL / ("scenes.board.js" if board else "scenes.news.js"), eng / "scenes.js")
     write_handdata(eng / "handdata.js", episode if board else None)
     print(f"-> {ep_json}\n-> {sd}\n-> {eng}（引擎 + scenes.js，{'白板手写版' if board else '深色卡片版'}）")
-    print(f"片尾清单：{'；'.join(it['label'].strip() + ' ' + it['value'] for it in episode['outro_items'])}")
+    print(f"片尾参考文献：{'；'.join(episode['outro_references'])}")
+    print(f"片尾致谢：{'；'.join(it['label'].strip() + ' ' + it['value'] for it in episode['outro_items'])}")
 
 
 if __name__ == "__main__":

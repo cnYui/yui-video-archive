@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<!-- 第 1 期封面（三选一）：window.__COVER__ = { v: 1|2|3|4, w: 1920|1440 }，高 1080。
+     用户 2026-10-01：标题“从0到1用Workbuddy搭建微信小程序”，封面要出现“新手AI小白也能做”和“我的形象”。
+     版式照《AI时代计算机专业研究生如何用AI》第 1 期封面：白底点阵、左上橙色标签、大字 + 橙色高亮、右边人像（白描边、淡蓝圆底）。
+     这期加一部手机：例一做出来的小程序首页（R1041 48 s，app_cut/app_home.png）。
+     三个方案版式一样，只换人像：1 说完拜拜后的微笑 / 2 平静正对镜头 / 3 微笑、嘴唇微开。4 = 选定版（选好后改 PICKED）。
+     第一版是举手挥手的帧，用户：“举手这个有点丑……换一个正常的图片就行”（旧图在 _旧/举手版_20261001/）。
+     人像按头部中心摆（face_cut/meta.js 由 cutout.py 算出），手机压在左肩前、不碰脸。
+     用户选定方案 1，又说：“封面图中要去除 新手小白也能做 顶部的workbuddy完整实操放到新手小白的位置。同时放大 workboddy的图标”
+     → 去掉贴纸，标签挪下来放大（.chip.big）；三选一的旧图在 _旧/三选一_20261001/。 -->
+<link rel="stylesheet" href="file:///D:/大疆/AI科普/素材/字体/fonts.css">
+<script src="face_cut/meta.js"></script>
+<style>
+:root { --ink:#1B1B1F; --gray:#6B7280; --orange:#FF4F1A; --marker:#FFD84D; --wx:#07C160; }
+* { box-sizing:border-box; margin:0; padding:0; }
+html, body { height:1080px; overflow:hidden; background:#fff; font-family:'Noto Sans SC', sans-serif; color:var(--ink); }
+#c { position:relative; height:1080px; overflow:hidden; background:#fff radial-gradient(#E6E9EE 2.2px, transparent 2.4px) 0 0 / 36px 36px; }
+.abs { position:absolute; white-space:nowrap; }
+.blob { position:absolute; border-radius:50%; }
+.person { position:absolute; bottom:0; filter:drop-shadow(0 18px 30px rgba(0,0,0,.20)); }
+.chip { display:inline-block; padding:8px 26px; border:5px solid var(--orange); color:var(--orange); border-radius:999px; font:900 40px 'Noto Sans SC'; background:#fff; }
+.mark { background:linear-gradient(transparent 60%, var(--marker) 60%, var(--marker) 94%, transparent 94%); }
+.o { color:var(--orange); }
+.sticker { display:inline-block; padding:14px 34px 18px; background:var(--orange); color:#fff; border-radius:22px; font:900 86px/1.1 'Noto Sans SC';
+           box-shadow:0 10px 0 #C2370B, 0 22px 36px rgba(0,0,0,.22); transform:rotate(-4deg); transform-origin:0 50%; }
+.sticker b { color:var(--marker); }
+.phone { position:absolute; padding:16px 14px; background:#1B1B1F; border-radius:46px; box-shadow:0 28px 50px rgba(0,0,0,.32); }
+.phone img { display:block; width:100%; height:100%; border-radius:32px; object-fit:cover; object-position:top; }
+.phone .notch { position:absolute; left:50%; top:16px; width:34%; height:24px; margin-left:-17%; background:#1B1B1F; border-radius:0 0 16px 16px; }
+.chip img { width:1.15em; height:1.15em; vertical-align:-0.24em; margin-right:12px; }
+/* 挪到原来贴纸位置的大标签：图标放大、上下探出标签一点 */
+.chip.big { display:inline-flex; align-items:center; gap:20px; padding:12px 38px 12px 22px; border-width:7px; font-size:66px; line-height:1.15; box-shadow:0 12px 28px rgba(0,0,0,.12); }
+.chip.big img { width:1.9em; height:1.9em; margin:-0.42em 0 -0.42em 0; vertical-align:initial; filter:drop-shadow(0 6px 10px rgba(0,0,0,.18)); }
+</style>
+</head>
+<body>
+<div id="c"></div>
+<script>
+const C = window.__COVER__ || { v: 1, w: 1920 };
+const W = C.w, H = 1080, WIDE = W >= 1900;
+const PICKED = 'smile';                                    // 选定版用哪张人像（默认方案 1，等用户确认）
+const FACE = { 1: 'smile', 2: 'calm', 3: 'smile2', 4: PICKED }[C.v];
+const ICON = '../../素材/图标/workbuddy.png';                // 本机 WorkBuddy 安装包自带的图标（第 1 期也用过）
+const root = document.getElementById('c');
+root.style.width = W + 'px'; document.body.style.width = W + 'px';
+function el(html, style = {}) { const d = document.createElement('div'); d.className = 'abs'; d.innerHTML = html; Object.assign(d.style, style); root.appendChild(d); return d; }
+// 人像：高 h，头部中心对准 x = cx（底边贴画面底）
+function person(file, h, cx) {
+  const m = FACEMETA[file], w = h * m.w / m.h;
+  const img = document.createElement('img'); img.src = `face_cut/${file}_outline.png`; img.className = 'person';
+  Object.assign(img.style, { height: h + 'px', width: w + 'px', left: (cx - m.fx * w) + 'px' });
+  root.appendChild(img); return img;
+}
+function blob(x, y, r, color) { const b = document.createElement('div'); b.className = 'blob'; Object.assign(b.style, { left: (x - r) + 'px', top: (y - r) + 'px', width: 2 * r + 'px', height: 2 * r + 'px', background: color }); root.appendChild(b); return b; }
+function phone(x, y, w, rot) {
+  const h = w * 1000 / 470;
+  const p = document.createElement('div'); p.className = 'phone';
+  Object.assign(p.style, { left: x + 'px', top: y + 'px', width: (w + 28) + 'px', height: (h + 32) + 'px', transform: `rotate(${rot}deg)` });
+  p.innerHTML = `<img src="app_cut/app_home.png"><div class="notch"></div>`;
+  root.appendChild(p); return p;
+}
+function fit(node, maxW) { let s = parseFloat(getComputedStyle(node).fontSize); while (node.scrollWidth > maxW && s > 40) { s -= 2; node.style.fontSize = s + 'px'; } }
+
+const X0 = WIDE ? 90 : 64;
+if (WIDE) {
+  // 手机从底部探出来，压在肩膀上、不碰脸（第一版 1080,470 贴到了脸颊）；标题缩到 134 px 给手机让位
+  blob(1560, 560, 420, '#DDEBFF');
+  person(FACE, 840, 1560);
+  phone(1050, 600, 236, 7);
+  // 用户选定方案 1 后：去掉“新手 AI 小白也能做”贴纸，顶部的「WorkBuddy · 完整实操」挪到贴纸的位置，图标放大
+  const a = el(`从<span class="o">0</span>到<span class="o">1</span>`, { left: X0 + 'px', top: '170px', font: "900 190px/1.08 'Noto Sans SC'" });
+  const b = el(`<span class="mark">搭建微信小程序</span>`, { left: X0 + 'px', top: '404px', font: "900 134px/1.1 'Noto Sans SC'" });
+  const s = el(`<span class="chip big"><img src="${ICON}">WorkBuddy · 完整实操</span>`, { left: (X0 + 4) + 'px', top: '660px' });
+  fit(a, 900); fit(b, 940); fit(s.firstChild, 900);         // 标签右端停在手机左边（手机左缘在这一高度约 x 1065）
+} else {
+  // 4:3（首页推荐）：标题横跨上半部分放大，人缩到右下角；手机放在左下、从底部探出来（第一版被贴纸压住）
+  blob(1150, 860, 290, '#DDEBFF');
+  person(FACE, 520, 1150);
+  phone(372, 808, 196, -6);
+  const a = el(`从<span class="o">0</span>到<span class="o">1</span>`, { left: X0 + 'px', top: '128px', font: "900 220px/1.08 'Noto Sans SC'" });
+  const b = el(`<span class="mark">搭建微信小程序</span>`, { left: X0 + 'px', top: '380px', font: "900 176px/1.1 'Noto Sans SC'" });
+  const s = el(`<span class="chip big" style="font-size:60px"><img src="${ICON}">WorkBuddy · 完整实操</span>`, { left: (X0 + 4) + 'px', top: '640px' });
+  fit(a, 1310); fit(b, 1310); fit(s.firstChild, 900);
+}
+window.__READY__ = false;
+Promise.all([document.fonts.ready, ...[...document.images].map(i => i.decode().catch(() => { throw new Error('图片加载失败 ' + i.src); }))]).then(() => { window.__READY__ = true; });
+</script>
+</body>
+</html>

@@ -9,6 +9,12 @@ body.board #subs { top: 918px; height: 72px; }
 body.board #subs .stroke { color: #FFFFFF; -webkit-text-stroke: 12px #FFFFFF; }
 body.board #subs .fill { color: #1A1A1A; }
 body.board #subs .fill .t { color: var(--orange); }
+/* 中英双语（#subs.bi，版式见 style.css）：项目统一标准的颜色——中文墨黑 #1B1B1F、英文灰 #4B5563，白边 10 / 6 px（露在字外 5 / 3 px） */
+body.board #subs.bi { top: 900px; height: 130px; }
+body.board #subs.bi .stroke { -webkit-text-stroke: 10px #FFFFFF; }
+body.board #subs.bi .en.stroke { -webkit-text-stroke: 6px #FFFFFF; }
+body.board #subs.bi .fill { color: #1B1B1F; }
+body.board #subs.bi .en.fill { color: #4B5563; }
 
 /* 右上目录：白卡片、细边、浅投影、顶部橙线（行的颜色由 core.js 按 style 设） */
 body.board #toc { background: rgba(255,255,255,.96); border-top: 3px solid var(--orange); border-left: 1px solid #E6E6E6;

@@ -11,13 +11,15 @@ outro lay out on the wider canvas themselves: centred, background / grain / crop
 full width), with the same encoder settings as before.
 Steps
   1. intro / outro rendered from SERIES/片头片尾/intro|outro/index.html at 30 fps; data written to
-     制作/build/intro_data.json ({name: 悠一, tagline: episode.intro_tagline, canvas}) and outro_data.json
-     ({items: outro_items, closing: outro_closing, signature: 悠一, canvas}); re-encoded to the common x264 settings
+     制作/build/intro_data.json ({name: 悠一, role: AI鼓励师, canvas}) and outro_data.json
+     ({references: outro_references, items: outro_items, closing: outro_closing, signature: 悠一, canvas}); re-encoded to the common x264 settings
      (name / signature come from 片头片尾/intro|outro/data.json; 悠一 since 2026-09-29, was UE)
   2. python 制作/engine/sync_assets.py --series SERIES (skip with --no-sync), then render_parallel.py -> 制作/build/main.mp4
      (--skip-main reuses an existing main.mp4)
   3. concat -> build/video.mp4, mux build/mix.wav (AAC 192k) ->
-     <episode_dir>/<dir_name>_成片.mp4, <dir_name>_字幕.srt, <dir_name>_章节.txt
+     <episode_dir>/<dir_name>_成片.mp4, <dir_name>_章节.txt and the subtitles: 中英双语的期（timeline segments[].subs，
+     episode.json "bilingual"，2026-10-02 起）→ <dir_name>_双语字幕.srt / _中文字幕.srt / _英文字幕.srt（项目统一标准，
+     时间 = 画面上的显示区间）；单语的期 → <dir_name>_字幕.srt
 Checks (the script stops instead of writing a short / broken video): episode.json canvas = timeline canvas (else
 re-run build_timeline), render_parallel exit code (1 = frames missing after retries, 2 = page errors), main.mp4
 frame count = round(main_duration * 30) (also catches a stale main.mp4 with --skip-main), every part and the final
@@ -53,7 +55,14 @@ def srt_time(t):
     return f"{h:02d}:{m:02d}:{s:02d},{ms:03d}"
 
 
-def write_srt(tl, path):
+def write_srt(tl, ep_dir, name):
+    """bilingual (build_timeline wrote segments[].subs): three SRTs by the project standard; else the old single one"""
+    if any(s.get("subs") for s in tl["segments"]):
+        from bilingual import B
+        rows = [(tl["intro"] + x["a"], tl["intro"] + x["b"], x["zh"], x["en"]) for s in tl["segments"] for x in s.get("subs") or []]
+        B.write_srts(str(ep_dir / name), rows)
+        return [ep_dir / f"{name}_{k}.srt" for k in ("双语字幕", "中文字幕", "英文字幕")]
+    path = ep_dir / f"{name}_字幕.srt"
     rows, i = [], 1
     for s in tl["segments"]:
         for ln in s["lines"]:
@@ -61,6 +70,7 @@ def write_srt(tl, path):
             rows.append(f"{i}\n{srt_time(a)} --> {srt_time(b)}\n{ln['text']}\n")
             i += 1
     path.write_text("\n".join(rows), encoding="utf-8")
+    return [path]
 
 
 def frame_size(path):
@@ -96,7 +106,9 @@ def pack_data(p, name, ep, canvas=C.CANVAS_DEFAULT):
     if name == "intro":
         base.update(name=base.get("name", "悠一"), tagline=ep.get("intro_tagline", "") or "")
     else:
-        base.update(items=ep["outro_items"], closing=ep["outro_closing"], signature=base.get("signature", "悠一"))
+        # 2026-10-03 起的信纸片尾：左栏参考文献（episode.json 的 outro_references，可以为空）、右栏致谢（outro_items）
+        base.update(references=ep.get("outro_references") or [], items=ep["outro_items"], closing=ep["outro_closing"],
+                    signature=base.get("signature", "悠一"))
     base["canvas"] = list(canvas)          # render.py opens the viewport at this size; the page lays out on it
     return base
 
@@ -191,7 +203,7 @@ def main():
          "-map", "0:v", "-map", "1:a", "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-ar", "48000",
          "-shortest", "-movflags", "+faststart", final])
 
-    write_srt(tl, p.ep / f"{name}_字幕.srt")
+    srts = write_srt(tl, p.ep, name)
     shutil.copy2(p.prod / "chapters_bilibili.txt", p.ep / f"{name}_章节.txt")
     probe = subprocess.check_output(["ffprobe", "-v", "error", "-show_entries",
                                      "format=duration:stream=codec_name,width,height,r_frame_rate",
@@ -200,7 +212,7 @@ def main():
     dur = float(subprocess.check_output(["ffprobe", "-v", "error", "-show_entries", "format=duration",
                                          "-of", "csv=p=0", str(final)]).decode().strip() or 0)
     print(f"duration {dur:.3f}s, expected total {tl['total_duration']}s; frame {frame_size(final)}, expected {canvas}")
-    print(f"-> {final}\n-> {p.ep / (name + '_字幕.srt')}\n-> {p.ep / (name + '_章节.txt')}")
+    print("\n".join(f"-> {x}" for x in [final, *srts, p.ep / (name + '_章节.txt')]))
     if abs(dur - tl["total_duration"]) > 0.1:
         sys.exit(f"成片时长 {dur:.3f}s 和时间轴 total_duration {tl['total_duration']}s 相差超过 0.1 s：不要交付，"
                  "检查 build/ 里 intro / main / outro 各段的帧数")

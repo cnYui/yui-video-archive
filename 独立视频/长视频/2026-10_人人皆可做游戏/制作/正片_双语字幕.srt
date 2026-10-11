@@ -1,0 +1,514 @@
+1
+00:00:04,040 --> 00:00:07,857
+嗨，大家好，欢迎来到人人皆可做游戏的时代。
+Hi everyone, welcome to the age when anyone can make a game.
+
+2
+00:00:07,877 --> 00:00:14,087
+这个银魂的剧情游戏，是我一开始从一个视频里长出来的。
+This Gintama story game first grew out of a video.
+
+3
+00:00:14,107 --> 00:00:17,357
+25 号的时候，我让 Claude 去做了一条像素动画，
+On the 25th I asked Claude to make a pixel animation,
+
+4
+00:00:17,377 --> 00:00:18,953
+叫《300 秒看完银魂》。
+called "Gintama in 300 Seconds."
+
+5
+00:00:18,973 --> 00:00:22,117
+我开了 Ultra Code 模式，用了 Opus 5.5 模型。
+I turned on Ultra Code mode and used the Opus 5.5 model.
+
+6
+00:00:22,137 --> 00:00:25,407
+和它说：做一个像素风银魂的经典场景，
+I told it: make a pixel-art Gintama of the classic scenes,
+
+7
+00:00:25,427 --> 00:00:28,433
+按顺序把经典场景列出来，然后去讲故事。
+list them in order, then tell the story.
+
+8
+00:00:28,453 --> 00:00:31,507
+它自己拆了 15 个场景，画了 42 个角色，
+It split the story into 15 scenes and drew 42 characters,
+
+9
+00:00:31,527 --> 00:00:33,883
+还有一系列角色的侧面图、动作等等，
+plus a whole series of side views, animations and more.
+
+10
+00:00:33,903 --> 00:00:36,423
+配乐和音效，也全是它自己写的。
+The music and sound effects were all written by it, too.
+
+11
+00:00:36,443 --> 00:00:38,013
+后来我看到它的素材，就在想，
+When I later looked at its assets, I started wondering,
+
+12
+00:00:38,033 --> 00:00:39,747
+这个是不是能做成游戏呢？
+could this become a game?
+
+13
+00:00:39,767 --> 00:00:41,337
+也有一些朋友想说玩一玩。
+Some friends also said they wanted to play it.
+
+14
+00:00:41,357 --> 00:00:43,713
+然后我就去复用它的素材，做了这个游戏。
+So I reused its assets and made this game.
+
+15
+00:00:43,733 --> 00:00:46,183
+一共是 15 章的剧情，有 600 多句台词，
+It has 15 chapters of story, over 600 lines of dialogue,
+
+16
+00:00:46,203 --> 00:00:48,473
+1 万多行代码，都是 AI 写的。
+and over 10,000 lines of code, all written by AI.
+
+17
+00:00:48,493 --> 00:00:52,290
+从一开始到最后 15 章全部写完，大概花了不到 20 个小时。
+From the very start to the last chapter took me under 20 hours.
+
+18
+00:00:52,310 --> 00:00:54,463
+等会儿可以看一下实际演示。
+In a moment you can see it in action.
+
+19
+00:00:54,483 --> 00:00:58,423
+然后在视频最后，我想说一个比这个游戏更重要的事情。
+And at the end of the video, I want to share something more important than this game.
+
+20
+00:00:59,410 --> 00:01:01,213
+好，我们看一下实际演示。
+OK, let's look at the actual gameplay.
+
+21
+00:01:01,233 --> 00:01:04,913
+里面有一些比较有意思的小巧思，
+It has some fun little touches,
+
+22
+00:01:04,933 --> 00:01:12,863
+比如给将军剪头发，骑小绵羊躲路障，打柏青哥，等等。
+like cutting the shogun's hair, dodging roadblocks on a scooter, playing pachinko.
+
+23
+00:01:12,883 --> 00:01:14,863
+我没有加很多技能，
+I didn't add many skills,
+
+24
+00:01:14,883 --> 00:01:19,573
+只给了角色一个普通的攻击和跳跃。
+just a basic attack and a jump for the character.
+
+25
+00:01:19,593 --> 00:01:24,060
+更多的是剧情上的、环境的对话，以及 NPC 的对话。
+Most of it is story, environmental dialogue, and NPC dialogue.
+
+26
+00:01:24,213 --> 00:01:28,307
+它是一个网页的代码文件，双击就可以玩，
+It's just a web page's code file: double-click and you can play.
+
+27
+00:01:28,327 --> 00:01:31,067
+之后准备看看能不能上架小红书，
+Later I want to see if I can put it on Xiaohongshu,
+
+28
+00:01:31,087 --> 00:01:34,443
+或者抖音那边的小程序、小工具，
+or as a mini-program or tool on Douyin,
+
+29
+00:01:34,463 --> 00:01:35,707
+让大家都能玩。
+so everyone can play it.
+
+30
+00:01:35,727 --> 00:01:39,513
+我是做的一个横版剧情打斗，有三连击、跳跃，
+It's a side-scrolling story brawler with a three-hit combo and a jump,
+
+31
+00:01:39,533 --> 00:01:40,697
+按住 L 防御。
+and you hold L to block.
+
+32
+00:01:40,717 --> 00:01:44,223
+场景都是可以交互的，可以随便逛，可以跟 NPC 聊天，
+The scenes are interactive: you can wander around and chat with NPCs,
+
+33
+00:01:44,243 --> 00:01:46,797
+有一些小剧情、小巧思，
+with small stories and little touches,
+
+34
+00:01:46,817 --> 00:01:47,407
+还有血条。
+and a health bar.
+
+35
+00:01:47,427 --> 00:01:50,953
+如果血条不够了，就要重新开始。
+If your health runs out, you start over.
+
+36
+00:01:51,300 --> 00:01:54,713
+那么，就可以看一下这个素材是从哪来的。
+So let's look at where these assets came from.
+
+37
+00:01:54,733 --> 00:01:57,347
+素材都是 AI 自己去画的，
+The art was all drawn by the AI itself.
+
+38
+00:01:57,367 --> 00:02:01,727
+一共画了 42 个角色，每个人有 31 个动作，11 种表情，
+It drew 42 characters, each with 31 actions and 11 expressions,
+
+39
+00:02:01,767 --> 00:02:03,930
+一共有 13124 帧。
+13,124 frames in total.
+
+40
+00:02:03,950 --> 00:02:05,407
+背景也是代码画的，
+The backgrounds were drawn in code, too,
+
+41
+00:02:05,427 --> 00:02:07,177
+我也没有给它参考图片。
+and I never gave it any reference images.
+
+42
+00:02:07,197 --> 00:02:11,130
+还有 12 首 8 位配乐，80 多个音效，
+There are also 12 pieces of 8-bit music and 80-plus sound effects,
+
+43
+00:02:11,150 --> 00:02:12,650
+都是它自己做的。
+all made by it.
+
+44
+00:02:12,893 --> 00:02:14,613
+然后就讲到了剧情设计。
+Next, the story design.
+
+45
+00:02:14,633 --> 00:02:20,477
+剧情设计，我是想着去从动漫的原片场景里，
+For the story design, I wanted to start from the scenes of the original anime,
+
+46
+00:02:20,497 --> 00:02:24,673
+一共有 15 个大的场景，每一个场景就是一章。
+There are 15 big scenes, and each scene is one chapter.
+
+47
+00:02:24,693 --> 00:02:27,313
+每一个章节，都有一个镜头表，
+Every chapter has a shot list:
+
+48
+00:02:27,333 --> 00:02:29,673
+哪一秒推进，哪个角色站哪边，
+which second to push in, which character stands where,
+
+49
+00:02:29,693 --> 00:02:33,150
+什么时候出现拟声字，
+when the sound-effect text pops up,
+
+50
+00:02:33,170 --> 00:02:35,350
+都有专门的文件记载。
+all recorded in dedicated files.
+
+51
+00:02:35,533 --> 00:02:37,773
+然后，名场面也是要有的，
+And the famous scenes had to be in there too,
+
+52
+00:02:37,793 --> 00:02:39,933
+比如说一些眼睛特写，
+like the eye close-ups,
+
+53
+00:02:39,953 --> 00:02:40,863
+打穿墙壁，
+punching through a wall,
+
+54
+00:02:40,883 --> 00:02:42,847
+还有“全江户，集结！”这些。
+and "All of Edo, assemble!"
+
+55
+00:02:42,867 --> 00:02:47,350
+小游戏、解谜，也是想致敬动漫里那些很抽象的场景。
+The mini-games and puzzles are a tribute to those wonderfully absurd anime scenes.
+
+56
+00:02:47,370 --> 00:02:49,510
+还有，比如说台词。
+And then there's the dialogue.
+
+57
+00:02:49,530 --> 00:02:51,970
+台词是 Claude 按照人物性格写的，
+Claude wrote it to fit each character's personality,
+
+58
+00:02:51,990 --> 00:02:54,107
+比如说，天然卷、洞爷湖，
+like "Natural Perm" and "Lake Toya,"
+
+59
+00:02:54,127 --> 00:02:55,683
+“不是假发，是桂！”
+"It's not a wig, it's Katsura!"
+
+60
+00:02:55,703 --> 00:02:57,907
+“ヅラじゃない、桂だ！”
+"Zura janai, Katsura da!"
+
+61
+00:02:57,927 --> 00:03:00,907
+还有一些口头禅什么的，我觉得还挺有意思。
+And some catchphrases, too. I think they're pretty fun.
+
+62
+00:03:01,227 --> 00:03:04,933
+比如说，第一章解谜，加上第二章家庭餐厅这里，
+Take chapter one's puzzle, plus chapter two, the family restaurant:
+
+63
+00:03:04,953 --> 00:03:08,510
+大街上有 8 个 NPC，有 10 个可以调查的地方。
+The street has 8 NPCs and 10 places you can investigate.
+
+64
+00:03:08,530 --> 00:03:10,913
+交不上房租的话，就得在事务所里面翻钱。
+If you can't pay the rent, you have to dig around the office for money.
+
+65
+00:03:10,933 --> 00:03:12,793
+沙发缝里面，就可以找到一张字条，
+In the sofa cushions you'll find a note:
+
+66
+00:03:12,813 --> 00:03:15,940
+重要的钱，藏在你最重视的东西后面。
+"The money that matters is hidden behind what you value most."
+
+67
+00:03:15,960 --> 00:03:18,593
+然后用户就要去找这个最重视的，
+Then the player has to go find what they value most,
+
+68
+00:03:18,613 --> 00:03:19,833
+就是“糖分”那两个字。
+which is those two characters, "Sugar."
+
+69
+00:03:19,853 --> 00:03:22,557
+后面发现 5000 日元，就可以交房租了。
+Behind it: 5,000 yen, enough to pay the rent.
+
+70
+00:03:22,577 --> 00:03:23,537
+但是发现钱还是不够，
+But it turns out that's still not enough,
+
+71
+00:03:23,557 --> 00:03:25,347
+然后就会被打飞出去。
+and you get knocked out the door.
+
+72
+00:03:36,633 --> 00:03:42,397
+高潮片段的话，我是设计了将近五分钟的一个打斗，
+For the climax, I designed a fight that runs nearly five minutes.
+
+73
+00:03:42,417 --> 00:03:45,737
+屋顶有三段混战，各路人马会一起杀进来，
+There are three brawls on the rooftop, and every faction piles in at once.
+
+74
+00:03:45,757 --> 00:03:48,970
+用户操纵的银时，会跟高杉背靠背，
+The player's Gintoki fights back to back with Takasugi,
+
+75
+00:03:48,990 --> 00:03:50,643
+一路撑到天亮，
+holding out until dawn,
+
+76
+00:03:50,663 --> 00:03:52,023
+然后就进入大结局。
+and then it goes into the finale.
+
+77
+00:03:52,043 --> 00:03:55,623
+大结局里还有一个定春去咬银时的头，
+In the finale, Sadaharu bites Gintoki's head,
+
+78
+00:03:55,643 --> 00:03:59,770
+去致敬刚开始，定春刚来到家里的时候，
+a nod to the beginning, when Sadaharu first came to the house,
+
+79
+00:03:59,790 --> 00:04:02,263
+然后银时最后会，就要把这个“完”字给踢飞。
+and in the end Gintoki has to kick that "END" away.
+
+80
+00:04:02,283 --> 00:04:03,790
+银魂永不完结。
+Gintama never ends.
+
+81
+00:04:03,810 --> 00:04:05,527
+还是蛮有意思的。
+It's a lot of fun.
+
+82
+00:04:05,547 --> 00:04:08,577
+做这个东西的话，其实并不是个很困难的事情，
+Making something like this isn't actually that hard,
+
+83
+00:04:08,597 --> 00:04:10,457
+因为我还做了很多其他的动漫视频，
+because I've also made many other anime videos,
+
+84
+00:04:10,477 --> 00:04:12,730
+比如巨人、火影、无职转生等等，
+like Attack on Titan, Naruto, and Mushoku Tensei,
+
+85
+00:04:12,750 --> 00:04:14,673
+这些素材都是可以复用的，
+and all those assets can be reused
+
+86
+00:04:14,693 --> 00:04:15,663
+可以做游戏。
+to make games.
+
+87
+00:04:15,683 --> 00:04:19,203
+那么就会有个问题：做游戏的门槛还剩什么？
+So the question is: what's left of the barrier to making games?
+
+88
+00:04:19,223 --> 00:04:22,140
+以前做游戏还要画画、要写代码、要作曲，
+Before, you had to draw, write code, and compose music,
+
+89
+00:04:22,160 --> 00:04:23,457
+可能还有个团队。
+and maybe have a whole team.
+
+90
+00:04:23,477 --> 00:04:25,657
+现在只需要自己想要什么，
+Now all you need is what you want,
+
+91
+00:04:25,677 --> 00:04:29,433
+然后就可以把这个东西说清楚，然后就能做出来。
+explain it clearly, and then it gets made.
+
+92
+00:04:29,453 --> 00:04:31,649
+当然，人是要看什么东西是好的、
+Of course, a person still has
+
+93
+00:04:31,669 --> 00:04:34,003
+什么东西是不好的，去做一个挑选。
+to judge what's good and what's not, and choose.
+
+94
+00:04:34,023 --> 00:04:35,763
+那可能不仅仅是游戏：
+And it may not be just games:
+
+95
+00:04:35,783 --> 00:04:39,703
+可能一篇文章、一个视频、一门课、一本漫画、一本小说，
+an article, a video, a course, a comic, a novel,
+
+96
+00:04:39,723 --> 00:04:44,873
+都可以把这个媒介转化成我能接受的、我愿意欣赏的媒介。
+any of them can become a medium I can accept and enjoy.
+
+97
+00:04:44,893 --> 00:04:48,313
+我不再需要为了看一个大部头，
+I no longer need to slog through a huge book
+
+98
+00:04:48,333 --> 00:04:51,380
+啃一个大部头，来消耗很多时间，而且很无聊。
+and burn a lot of time on it, which is boring, too.
+
+99
+00:04:51,400 --> 00:04:55,263
+完全可以通过这种 AI 工具，去把它做成视频，做成游戏，
+I can just use AI tools to turn it into a video, or a game,
+
+100
+00:04:55,283 --> 00:04:58,910
+然后我就可以更快速地，去了解里面的内容和内涵。
+and understand its content and meaning much faster.
+
+101
+00:04:58,930 --> 00:05:01,480
+以前，是人去适应知识的样子；
+Before, people adapted to the shape of knowledge;
+
+102
+00:05:01,500 --> 00:05:04,530
+现在，知识可以长成你喜欢的样子。
+now, knowledge can grow into the shape you like.
+
+103
+00:05:04,550 --> 00:05:07,380
+欢迎来到，人人皆可做游戏的时代。
+Welcome to the age when anyone can make a game.

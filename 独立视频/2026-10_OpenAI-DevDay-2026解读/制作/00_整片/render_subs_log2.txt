@@ -1,0 +1,50 @@
+=== V4 16:51:19
+[V4 w0] 0/931 (0s)
+[V4 w1] 0/931 (0s)
+[V4 w2] 0/931 (0s)
+[V4 w0] 600/931 (52s)
+[V4 w1] 600/931 (54s)
+[V4 w2] 600/931 (55s)
+[V4 w0] done 931 frames in 81s, errors: 0
+[V4 w1] done 931 frames in 83s, errors: 0
+[V4 w2] done 931 frames in 84s, errors: 0
+ok -> D:\大疆\独立视频\2026-10_OpenAI-DevDay-2026解读\制作\00_整片\out\V4\V4_整片.mp4  (2793 frames, 91s)
+=== V5 16:52:51
+[V5 w0] 0/864 (0s)
+[V5 w1] 0/865 (0s)
+[V5 w2] 0/864 (0s)
+[V5 w0] 600/864 (54s)
+[V5 w1] 600/865 (56s)
+[V5 w2] 600/864 (57s)
+[V5 w0] done 864 frames in 75s, errors: 0
+[V5 w1] done 865 frames in 79s, errors: 0
+[V5 w2] done 864 frames in 79s, errors: 0
+ok -> D:\大疆\独立视频\2026-10_OpenAI-DevDay-2026解读\制作\00_整片\out\V5\V5_整片.mp4  (2593 frames, 84s)
+=== V6 16:54:15
+[V6 w0] 0/889 (0s)
+[V6 w1] 0/888 (0s)
+[V6 w2] 0/889 (0s)
+[V6 w1] 600/888 (50s)
+[V6 w0] 600/889 (54s)
+[V6 w2] 600/889 (53s)
+[V6 w1] done 888 frames in 77s, errors: 0
+[V6 w0] done 889 frames in 81s, errors: 0
+[V6 w2] done 889 frames in 80s, errors: 0
+ok -> D:\大疆\独立视频\2026-10_OpenAI-DevDay-2026解读\制作\00_整片\out\V6\V6_整片.mp4  (2666 frames, 86s)
+RENDERED 16:55:41
+input 2340x1080 @ 30.0 fps, 93.1s, speech -16.0 LUFS -> music -3.0 dB; intro / outro page 2340x1080 at scale 1
+intro: 3.80s rendered
+outro: 4.80s rendered
+-> D:\大疆\独立视频\2026-10_OpenAI-DevDay-2026解读\成片\V4_Decisions-API和AI研究实习生_成片.mp4  (101.72s = 3.80 + 93.10 + 4.80)
+V4 -> D:\大疆\独立视频\2026-10_OpenAI-DevDay-2026解读\成片\V4_Decisions-API和AI研究实习生_成片.mp4 + 三份 SRT（25 条，时间含片头 3.80 s）
+input 2340x1080 @ 30.0 fps, 86.4s, speech -16.0 LUFS -> music -3.0 dB; intro / outro page 2340x1080 at scale 1
+intro: 3.80s rendered
+outro: 4.80s rendered
+-> D:\大疆\独立视频\2026-10_OpenAI-DevDay-2026解读\成片\V5_Codex上云和Agents-API_成片.mp4  (95.05s = 3.80 + 86.43 + 4.80)
+V5 -> D:\大疆\独立视频\2026-10_OpenAI-DevDay-2026解读\成片\V5_Codex上云和Agents-API_成片.mp4 + 三份 SRT（26 条，时间含片头 3.80 s）
+input 2340x1080 @ 30.0 fps, 88.9s, speech -16.0 LUFS -> music -3.0 dB; intro / outro page 2340x1080 at scale 1
+intro: 3.80s rendered
+outro: 4.80s rendered
+-> D:\大疆\独立视频\2026-10_OpenAI-DevDay-2026解读\成片\V6_登录插件和Marketplace_成片.mp4  (97.49s = 3.80 + 88.87 + 4.80)
+V6 -> D:\大疆\独立视频\2026-10_OpenAI-DevDay-2026解读\成片\V6_登录插件和Marketplace_成片.mp4 + 三份 SRT（27 条，时间含片头 3.80 s）
+ALLDONE 16:57:20

@@ -1,0 +1,101 @@
+{
+ "slug": "装好并跑第一个提示",
+ "title": "Claude官方教程 第2期｜装好 Claude Code，跑第一个提示",
+ "kicker": "<b>Claude官方教程</b> 第2期",
+ "hook": [
+  "装它只要一条命令",
+  "第一个提示先别动手"
+ ],
+ "lines": [
+  {
+   "id": "N01",
+   "zh": "装 Claude Code，三大系统都只要一条命令。",
+   "say": "装 Claude Code，三大系统都只要一条命令。",
+   "en": "Installing Claude Code takes one command on Windows, Mac and Linux."
+  },
+  {
+   "id": "N02",
+   "zh": "Mac 和 Linux 用 curl，Windows 用 PowerShell。",
+   "say": "Mac 和 Linux 用 curl，Windows 用 PowerShell。",
+   "en": "On Mac and Linux it's a curl command; on Windows, PowerShell."
+  },
+  {
+   "id": "N13",
+   "zh": "提示符带 PS 的是 PowerShell，不带的是 CMD，别敲错。",
+   "say": "提示符带 PS 的是 PowerShell，不带的是 CMD，别敲错。",
+   "en": "A prompt starting with PS is PowerShell; without it, it's CMD. Don't mix them up."
+  },
+  {
+   "id": "N03",
+   "zh": "Homebrew 和 winget 也能装，不过默认不会自动更新。",
+   "say": "Homebrew 和 Windows 的包管理器也能装，不过默认不会自动更新。",
+   "en": "Homebrew and winget work too, but they don't auto-update by default."
+  },
+  {
+   "id": "N14",
+   "zh": "装完开个新终端，运行 claude --version，能出版本号就成功。",
+   "say": "装完开个新终端，运行 claude 杠杠 version，能出版本号就成功。",
+   "en": "Open a new terminal and run claude --version. If a version number shows up, you're set."
+  },
+  {
+   "id": "N04",
+   "zh": "装完在项目目录里敲 claude，第一次运行要先登录。",
+   "say": "装完在项目目录里敲 claude，第一次运行要先登录。",
+   "en": "Run claude in your project folder. The first launch asks you to sign in."
+  },
+  {
+   "id": "N05",
+   "zh": "登录能用 Pro、Max、Team 或企业账号，也能用 API key。",
+   "say": "登录能用 Pro、Max、Team 或企业账号，也能用 API key。",
+   "en": "You can sign in with a Pro, Max, Team or Enterprise account, or use an API key."
+  },
+  {
+   "id": "N06",
+   "zh": "它能访问你启动的那个目录和所有子目录，目录之外的要经你许可。",
+   "say": "它能访问你启动的那个目录和所有子目录，目录之外的要经你许可。",
+   "en": "It can access the folder you launch it in and every subfolder; anything outside needs your permission."
+  },
+  {
+   "id": "N07",
+   "zh": "不想用终端也行：编辑器插件、桌面应用、网页版都能用。",
+   "say": "不想用终端也行：编辑器插件、桌面应用、网页版都能用。",
+   "en": "Prefer not to use the terminal? There are editor plugins, a desktop app, and a web version."
+  },
+  {
+   "id": "N08",
+   "zh": "不过终端的功能最全，有些功能只有终端里才有。",
+   "say": "不过终端的功能最全，有些功能只有终端里才有。",
+   "en": "Still, the terminal has the fullest feature set, and some features exist only there."
+  },
+  {
+   "id": "N09",
+   "zh": "第一个提示别急着动手：按 Shift+Tab，轮换到计划模式。",
+   "say": "第一个提示别急着动手：按 Shift 加 Tab，轮换到计划模式。",
+   "en": "For your first prompt, don't let it edit yet. Press Shift+Tab until the status bar shows plan mode."
+  },
+  {
+   "id": "N10",
+   "zh": "计划模式只研究、只提方案，不改你的源码，最后交一份计划。",
+   "say": "计划模式只研究、只提方案，不改你的源码，最后交一份计划。",
+   "en": "Plan mode researches and proposes without editing your source, then hands back a plan."
+  },
+  {
+   "id": "N15",
+   "zh": "计划出来后，按 Ctrl+G 能先改，再批准。",
+   "say": "计划出来后，按 Ctrl 加 G 能先改，再批准。",
+   "en": "Once the plan is up, press Ctrl+G to edit it before you approve."
+  },
+  {
+   "id": "N11",
+   "zh": "官方示例：整个应用要暗色模式，顶栏加个切换开关，再挑个对比度合适的颜色。",
+   "say": "官方示例：整个应用要暗色模式，顶栏加个切换开关，再挑个对比度合适的颜色。",
+   "en": "The official example: dark mode across the whole app, a toggle in the header, and a good contrast color."
+  },
+  {
+   "id": "N12",
+   "zh": "装它一条命令，用好它，从 Shift+Tab 开始。",
+   "say": "装它一条命令，用好它，从 Shift 加 Tab 开始。",
+   "en": "Installing it takes one command. Using it well starts with Shift+Tab."
+  }
+ ]
+}

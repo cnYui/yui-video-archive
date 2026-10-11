@@ -1,0 +1,784 @@
+1
+00:00:00,000 --> 00:00:03,632
+早上好，我是鲸鱼娘，今天是10月8日。
+Good morning, I'm Whale Girl. Today is October 7.
+
+2
+00:00:03,652 --> 00:00:04,452
+今天说七件事：
+Seven stories today:
+
+3
+00:00:04,472 --> 00:00:07,012
+Mistral 发布万亿参数模型，
+Mistral's trillion-parameter model,
+
+4
+00:00:07,032 --> 00:00:14,232
+Reflection 发布开放权重模型 Beam，
+Reflection's open-weight model Beam,
+
+5
+00:00:14,252 --> 00:00:14,552
+OpenAI 给 ChatGPT 文字加水印，
+OpenAI watermarks ChatGPT text,
+
+6
+00:00:14,572 --> 00:00:14,872
+Anthropic 送初创公司一年
+Anthropic gives startups a free year
+
+7
+00:00:14,757 --> 00:00:15,057
+Claude Team，
+of Claude Team,
+
+8
+00:00:14,872 --> 00:00:17,272
+Anthropic 扩大网络安全验证计划，
+Anthropic expands its cyber verification program,
+
+9
+00:00:17,292 --> 00:02:21,610
+Together Link
+Together Link
+
+10
+00:02:21,630 --> 00:02:36,600
+让 Claude Code 跑开源模型，
+runs open models in Claude Code,
+
+11
+00:02:36,620 --> 00:02:51,062
+还有谷歌的多模态嵌入模型。
+and Google's multimodal embedding model.
+
+12
+00:02:51,082 --> 00:02:51,866
+第一件，一个 1 万亿参数的模型，
+First, a one-trillion-parameter model
+
+13
+00:02:51,886 --> 00:02:52,603
+每个词只激活 49B。
+that activates only 49B for each token.
+
+14
+00:02:52,623 --> 00:02:54,653
+10 月 6 日，法国公司 Mistral
+On October 6, French company Mistral
+
+15
+00:02:54,673 --> 00:02:56,113
+发布了 Mistral Large 4，
+released Mistral Large 4
+
+16
+00:02:56,133 --> 00:02:57,735
+现在是公开预览，
+as a public preview,
+
+17
+00:02:57,755 --> 00:02:59,144
+API 能用。
+with API access.
+
+18
+00:02:59,164 --> 00:03:01,005
+它在欧洲自己的数据中心训练，
+It was trained in Mistral's own European
+
+19
+00:03:01,025 --> 00:03:02,370
+用了 3,800 块英伟达
+data centers on 3,800 NVIDIA
+
+20
+00:03:02,390 --> 00:03:04,293
+Grace Blackwell 芯片。
+Grace Blackwell GPUs.
+
+21
+00:03:04,313 --> 00:03:06,081
+模型权重要等到 10 月底，
+The weights won't come until the end of October,
+
+22
+00:03:06,101 --> 00:03:07,866
+许可证也到时才公布。
+and the license will be announced then.
+
+23
+00:03:07,886 --> 00:03:10,016
+官方最看重的是网络安全，
+Its headline claim is security work:
+
+24
+00:03:10,036 --> 00:03:12,920
+复现开源软件漏洞的测试里拿到 82%。
+82% on a test of reproducing open-source vulnerabilities.
+
+25
+00:03:12,940 --> 00:03:15,094
+The Decoder 称，Opus 5.5
+The Decoder says Opus 5.5
+
+26
+00:03:15,114 --> 00:03:17,515
+和 GPT-6 Astra 这项接近零分，
+and GPT-6 Astra score near zero
+
+27
+00:03:17,535 --> 00:03:19,645
+因为它们直接拒绝任务。
+on it because they refuse the task.
+
+28
+00:03:19,665 --> 00:03:22,571
+不过在综合指数上，它是 38 分，
+On the overall Intelligence Index, though, it scores 38
+
+29
+00:03:22,591 --> 00:03:24,664
+Opus 5.5 是 58 分。
+against Opus 5.5's 58.
+
+30
+00:03:24,684 --> 00:03:27,021
+能查漏洞，不等于什么都强，
+Finding bugs doesn't make it strong at everything.
+
+31
+00:03:27,041 --> 00:03:29,041
+等权重出来再看。
+Wait for the weights.
+
+32
+00:03:29,241 --> 00:03:32,162
+第二件，美国创业公司 Reflection AI
+Second, US startup Reflection AI
+
+33
+00:03:32,182 --> 00:03:35,063
+发布了第一个开放权重模型 Beam。
+released Beam, its first open-weight model.
+
+34
+00:03:35,083 --> 00:03:36,846
+它是混合专家结构，
+It's a mixture of experts
+
+35
+00:03:36,866 --> 00:03:39,834
+总参数 501B，每次激活 23B。
+with 501B total parameters and 23B active.
+
+36
+00:03:39,854 --> 00:03:40,924
+只处理文字，
+It handles text only,
+
+37
+00:03:40,944 --> 00:03:42,899
+上下文长度 1M token，
+with a one-million-token context window
+
+38
+00:03:42,919 --> 00:03:45,971
+预训练用了 23.8T token。
+and 23.8T tokens of pre-training.
+
+39
+00:03:45,991 --> 00:03:48,873
+权重和技术细节会在 10 月内放出，
+Weights and technical details will come in October
+
+40
+00:03:48,893 --> 00:03:50,791
+走大型云厂商渠道。
+through major cloud providers.
+
+41
+00:03:50,811 --> 00:03:53,671
+官方称，它和智谱 GLM-5.2 水平相当，
+Reflection says it matches Zhipu's GLM-5.2
+
+42
+00:03:53,691 --> 00:03:56,489
+推理算力少用 3 到 4 倍。
+while using 3 to 4 times less inference compute.
+
+43
+00:03:56,509 --> 00:03:58,891
+公司拿了英伟达、红杉等投资，
+It's backed by NVIDIA and Sequoia Capital,
+
+44
+00:03:58,911 --> 00:04:00,625
+累计约 47 亿美元。
+with about $4.7 billion raised.
+
+45
+00:04:00,645 --> 00:04:03,088
+这些性能数字目前都是公司自己说的，
+These performance numbers are all the company's own,
+
+46
+00:04:03,108 --> 00:04:04,352
+没有独立验证。
+not independently verified.
+
+47
+00:04:04,372 --> 00:04:07,526
+权重还没放出来，先别急着下结论。
+The weights aren't out yet, so hold off on conclusions.
+
+48
+00:04:07,726 --> 00:04:09,938
+第三件，OpenAI 要给 ChatGPT
+Third, OpenAI is adding to ChatGPT's
+
+49
+00:04:09,958 --> 00:04:12,187
+生成的文字加看不见的水印。
+text an invisible watermark.
+
+50
+00:04:12,207 --> 00:04:14,062
+10 月 5 日，OpenAI 宣布，
+On October 5, OpenAI announced
+
+51
+00:04:14,082 --> 00:04:16,277
+未来几周会先给欧盟用户的
+that in the coming weeks it will first give EU users'
+
+52
+00:04:16,297 --> 00:04:17,635
+文字加水印。
+text a watermark.
+
+53
+00:04:17,655 --> 00:04:19,823
+范围是 ChatGPT 和 Codex，
+It covers ChatGPT and Codex,
+
+54
+00:04:19,843 --> 00:04:22,305
+原因是要符合欧盟的 AI 法案。
+and the reason is compliance with the EU AI Act.
+
+55
+00:04:22,325 --> 00:04:24,017
+这个水印叫 textGrain，
+The watermark is called textGrain.
+
+56
+00:04:24,037 --> 00:04:25,571
+原理是微调模型选词，
+It subtly shapes word choices,
+
+57
+00:04:25,591 --> 00:04:29,155
+留下人看不出、检测器能认出的规律。
+leaving a pattern people can't see but a detector can.
+
+58
+00:04:29,175 --> 00:04:30,356
+API 开发者现在
+API developers
+
+59
+00:04:30,376 --> 00:04:33,042
+就能自己选择开启，不限地区。
+can opt in right now, anywhere.
+
+60
+00:04:33,062 --> 00:04:35,322
+但改几个词就能削弱它：
+But a few edits weaken it.
+
+61
+00:04:35,342 --> 00:04:37,538
+把 10% 的词换成同义词，
+Swapping 10% of words for synonyms
+
+62
+00:04:37,558 --> 00:04:40,272
+检出率从约 92% 降到 66%。
+cuts detection from about 92% to 66%.
+
+63
+00:04:40,292 --> 00:04:41,699
+短文本、数学答案
+Short passages, math answers
+
+64
+00:04:41,719 --> 00:04:44,269
+和翻译过的文字，更难检出。
+and translated text are harder to detect.
+
+65
+00:04:44,289 --> 00:04:45,448
+OpenAI 也说，
+OpenAI also says
+
+66
+00:04:45,468 --> 00:04:48,067
+没有水印不代表是人写的。
+that a missing watermark doesn't prove a human wrote it.
+
+67
+00:04:48,267 --> 00:04:50,070
+第四件，Anthropic 要
+Fourth, Anthropic
+
+68
+00:04:50,090 --> 00:04:53,531
+送初创公司一年的 Claude Team 套餐。
+is giving startups a free year of Claude Team.
+
+69
+00:04:53,551 --> 00:04:54,887
+10 月 6 日，Anthropic
+On October 6, Anthropic
+
+70
+00:04:54,907 --> 00:04:56,992
+扩大了 Claude for Startups 计划，
+expanded its Claude for Startups program:
+
+71
+00:04:57,012 --> 00:04:59,099
+免费用一年 Claude Team，
+a free year of Claude Team,
+
+72
+00:04:59,119 --> 00:05:00,516
+最多 5 个席位。
+with up to 5 seats.
+
+73
+00:05:00,536 --> 00:05:02,772
+另外送 1,000 美元的 API 额度。
+It also adds $1,000 in API credits.
+
+74
+00:05:02,792 --> 00:05:04,478
+还能用 Claude Marketplace
+Startups also get access to Claude Marketplace
+
+75
+00:05:04,498 --> 00:05:05,123
+开发插件，
+for building plugins,
+
+76
+00:05:05,143 --> 00:05:07,941
+参加应用 AI 团队的线上答疑。
+and virtual office hours with Anthropic's Applied AI team.
+
+77
+00:05:07,961 --> 00:05:10,456
+条件有两个，满足一个就行：
+There are two conditions, and meeting either is enough:
+
+78
+00:05:10,476 --> 00:05:12,138
+公司成立不到 5 年，
+founded within the last 5 years,
+
+79
+00:05:12,158 --> 00:05:14,442
+或者近 2 年拿到过融资。
+or funded within the last 2.
+
+80
+00:05:14,462 --> 00:05:15,933
+原文没有写地区限制，
+The article lists no regional limit.
+
+81
+00:05:15,953 --> 00:05:16,504
+申请入口
+Applications go
+
+82
+00:05:16,524 --> 00:05:19,213
+在 Claude for Startups 的项目页面。
+through the Claude for Startups program page.
+
+83
+00:05:19,233 --> 00:05:20,820
+Anthropic 的说法是，
+Anthropic's argument is that most people
+
+84
+00:05:20,840 --> 00:05:23,494
+多数人会通过基于模型做产品的公司，
+will get AI's benefits through the companies
+
+85
+00:05:23,514 --> 00:05:25,709
+享受到 AI 的好处。
+that build on top of models.
+
+86
+00:05:25,729 --> 00:05:26,913
+免费只有一年，
+The free ride lasts one year,
+
+87
+00:05:26,933 --> 00:05:29,203
+先想清楚拿它做什么。
+so decide what to build with it.
+
+88
+00:05:29,403 --> 00:05:30,750
+第五件，Anthropic
+Fifth, Anthropic merged
+
+89
+00:05:30,770 --> 00:05:33,033
+把两个网络安全项目合并成一个，
+two cyber programs into one,
+
+90
+00:05:33,053 --> 00:05:35,103
+开放给更多防守方。
+open to more defenders.
+
+91
+00:05:35,123 --> 00:05:36,430
+10 月 6 日，扩大后的
+October 6: the expanded
+
+92
+00:05:36,450 --> 00:05:38,339
+Cyber Verification Program
+Cyber Verification Program
+
+93
+00:05:38,359 --> 00:05:38,759
+上线，
+is live,
+
+94
+00:05:38,779 --> 00:05:40,802
+合并了 Project Glasswing
+combining Project Glasswing
+
+95
+00:05:40,822 --> 00:05:42,557
+和原来的验证计划。
+and the original verification program.
+
+96
+00:05:42,577 --> 00:05:44,024
+通过验证的安全人员，
+Verified security professionals
+
+97
+00:05:44,044 --> 00:05:45,637
+能用到更强的网络能力，
+get stronger cyber capabilities
+
+98
+00:05:45,657 --> 00:05:48,754
+模型的拦截分类器也会放松。
+and fewer blocking classifiers.
+
+99
+00:05:48,774 --> 00:05:50,294
+新方案分三档：
+There are three tiers:
+
+100
+00:05:50,314 --> 00:05:52,965
+防守、红队和特殊访问。
+Defense, Red Team and Specialized access.
+
+101
+00:05:52,985 --> 00:05:54,636
+防守档做应急响应、
+Defense is for work like incident response
+
+102
+00:05:54,656 --> 00:05:55,935
+恶意软件分析，
+and malware analysis.
+
+103
+00:05:55,955 --> 00:05:58,239
+个人研究者和开源维护者
+Individuals and open-source maintainers
+
+104
+00:05:58,259 --> 00:06:00,793
+也能申请，几天内回复。
+can apply, with a reply in a few days.
+
+105
+00:06:00,813 --> 00:06:03,085
+红队档加上授权渗透测试，
+Red Team adds authorized penetration testing.
+
+106
+00:06:03,105 --> 00:06:05,209
+只收机构，要等几周。
+It's for organizations only, with a wait of a few weeks.
+
+107
+00:06:05,229 --> 00:06:07,349
+特殊档面向飞行系统、
+Specialized access is for flight systems,
+
+108
+00:06:07,369 --> 00:06:10,172
+电网这类安全关键系统的测试，
+power grids and other safety-critical testing,
+
+109
+00:06:10,192 --> 00:06:11,291
+名额有限。
+with limited slots.
+
+110
+00:06:11,311 --> 00:06:13,368
+覆盖 Claude Opus 5.5、
+It covers Claude Opus 5.5,
+
+111
+00:06:13,388 --> 00:06:15,817
+Sonnet 5.5 和 Mythos 5.1，
+Sonnet 5.5 and Mythos 5.1,
+
+112
+00:06:15,837 --> 00:06:18,451
+以后的新模型也算。
+plus new models going forward.
+
+113
+00:06:18,471 --> 00:06:21,730
+做漏洞研究的人，先看自己属于哪一档。
+If you do vulnerability research, check which tier you fit.
+
+114
+00:06:21,930 --> 00:06:24,084
+第六件，用着 Claude Code，
+Sixth, you use Claude Code
+
+115
+00:06:24,104 --> 00:06:25,536
+后台却跑开源模型，
+but run open models behind it,
+
+116
+00:06:25,556 --> 00:06:27,603
+现在有现成工具了。
+and there's now a ready-made tool.
+
+117
+00:06:27,623 --> 00:06:29,508
+Together AI 推出 Together Link，
+Together AI released Together Link, a free,
+
+118
+00:06:29,528 --> 00:06:32,353
+免费、MIT 许可的命令行工具，
+MIT-licensed command-line tool
+
+119
+00:06:32,373 --> 00:06:34,018
+目前是测试版。
+that's now in beta.
+
+120
+00:06:34,038 --> 00:06:35,501
+它能连 Claude Code、
+It connects Claude Code,
+
+121
+00:06:35,521 --> 00:06:36,963
+Codex、OpenCode，
+Codex, OpenCode,
+
+122
+00:06:36,983 --> 00:06:40,260
+还有 Claude 和 ChatGPT 的桌面应用。
+and the Claude and ChatGPT desktop apps.
+
+123
+00:06:40,280 --> 00:06:41,121
+在 Claude Code 里，
+In Claude Code,
+
+124
+00:06:41,141 --> 00:06:43,414
+Opus 档换成 Kimi K3，
+the Opus tier runs Kimi K3
+
+125
+00:06:43,434 --> 00:06:45,818
+Fable 档是 GLM 5.3。
+and the Fable tier runs GLM 5.3.
+
+126
+00:06:45,838 --> 00:06:47,057
+默认的 auto 路由，
+By default, an auto router
+
+127
+00:06:47,077 --> 00:06:49,183
+简单请求交给 Together 的模型，
+sends simple requests to Together's models
+
+128
+00:06:49,203 --> 00:06:51,183
+难的交给 Claude Opus。
+and hard ones to Claude Opus.
+
+129
+00:06:51,203 --> 00:06:52,437
+转给 Opus 的前提，
+Routing to Opus requires
+
+130
+00:06:52,457 --> 00:06:55,100
+是你自己接了 Anthropic 的 API key。
+that you connect your own Anthropic API key.
+
+131
+00:06:55,120 --> 00:06:57,730
+要注意，工具免费，模型不免费：
+Note the tool is free, but the models aren't:
+
+132
+00:06:57,750 --> 00:06:59,331
+用 Together 的模型，
+Together's models are billed
+
+133
+00:06:59,351 --> 00:07:01,170
+按它的标准价格付费。
+at its standard rates.
+
+134
+00:07:01,190 --> 00:07:03,400
+目前只支持 macOS 和 Linux，
+It supports only macOS and Linux
+
+135
+00:07:03,420 --> 00:07:06,080
+还需要一个 Together 账号的 API key。
+for now, and needs a Together API key.
+
+136
+00:07:06,100 --> 00:07:07,663
+换模型能不能省钱，
+Does swapping models save money?
+
+137
+00:07:07,683 --> 00:07:09,025
+要自己算。
+Work it out.
+
+138
+00:07:09,225 --> 00:07:10,934
+第七件，谷歌 DeepMind
+Seventh, Google DeepMind
+
+139
+00:07:10,954 --> 00:07:12,840
+发布了一个 740M 参数的
+released a 740M-parameter
+
+140
+00:07:12,860 --> 00:07:15,217
+开放多模态嵌入模型。
+open multimodal embedding model.
+
+141
+00:07:15,237 --> 00:07:16,404
+嵌入模型的工作，
+An embedding model turns
+
+142
+00:07:16,424 --> 00:07:18,037
+是把内容变成一串数字，
+content into a list of numbers,
+
+143
+00:07:18,057 --> 00:07:20,281
+方便搜索和比较相似度。
+so it can be searched and compared.
+
+144
+00:07:20,301 --> 00:07:22,937
+EmbeddingGemma 2 把文字、图片、
+EmbeddingGemma 2 puts text, images,
+
+145
+00:07:22,957 --> 00:07:25,799
+视频和音频放进同一个向量空间。
+video and audio into one vector space.
+
+146
+00:07:25,819 --> 00:07:29,411
+输出是 768 维，也可以截短到 512、
+The output is 768 dimensions, and you can truncate it to 512,
+
+147
+00:07:29,431 --> 00:07:31,941
+256 或 128 维省空间。
+256 or 128 to save space.
+
+148
+00:07:31,961 --> 00:07:33,574
+基于 Gemma 4 搭建，
+It's built on Gemma 4,
+
+149
+00:07:33,594 --> 00:07:35,521
+上下文长度 8,192 token，
+with an 8,192-token context window and support
+
+150
+00:07:35,541 --> 00:07:37,359
+覆盖 100 多种语言。
+for more than 100 languages.
+
+151
+00:07:37,379 --> 00:07:39,049
+用 Apache 2.0 许可，
+It's under the Apache 2.0 license,
+
+152
+00:07:39,069 --> 00:07:40,832
+当天就放出了权重。
+with weights released the same day.
+
+153
+00:07:40,852 --> 00:07:43,132
+它设计给手机、笔记本这类普通设备用，
+It's designed for everyday devices like phones and laptops,
+
+154
+00:07:43,152 --> 00:07:46,260
+本地做多模态搜索会方便很多。
+which makes local multimodal search much easier.
+
+155
+00:07:46,280 --> 00:07:49,300
+做搜索和问答的人，可以直接拿来试。
+If you build search or Q&A, it's ready to try.
+
+156
+00:07:49,500 --> 00:07:52,150
+今天就这些，来源都在简介里。
+That's all for today. Sources are in the description.
+
+157
+00:07:52,170 --> 00:07:53,523
+我们明天见。
+See you tomorrow.

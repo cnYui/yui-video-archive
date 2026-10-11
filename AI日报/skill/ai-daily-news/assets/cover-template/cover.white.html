@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="{{FONTS_CSS}}">
 <style>
   /* 1920x1080，纯色底。参考：B 站「通俗解释」的封面——纯白底、两行大字（灰色铺垫 + 彩色钩子）、一个小人在底部。
-     4:3 封面是居中裁切 x 240..1680，所以文字和角色都要落在这个范围里。
+     4:3 封面是居中裁切 x 240..1680，所以文字和角色都要落在这个范围里；两行大字由 safe（x 300..1620）兜住，4:3 里左右各留 60 px。
      配色由 window.__DATA__.theme 给（make_cover_white.py 的 THEMES：橙 / 鲸鱼娘蓝 / 深海夜色）。 */
   :root { --bg: #FFFFFF; --lead: #8C8C8C; --accent: #F5A21D; --list: #5A5A5A; --more: #9A9A9A; --blue: #3D8BFF; }
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -49,6 +49,8 @@
     l1px: 168, l2px: 236, maxw: 1400, top: 62, gap: 6, textCx: 960,
     sprite: null, scale: 9, frame: [64, 64], footRow: 62, fishX: 672, foot: 1062,
     tag: '',
+    // safe: [左, 右]，两行大字整块不出这个范围（null = 不限）；maxw 不能大于 safe 的宽度
+    safe: null,
     // others: 其余新闻标题（小字），listX/listW 是清单的左边和宽度，listBottom 是清单底边；空数组 = 不显示
     others: [], othersHead: '', othersMore: '', listX: 270, listW: 760, listBottom: 1000, listPx: 46,
     // theme: 覆盖 :root 的颜色变量（bg lead accent list more）；glow = 角色背后的柔光颜色（深色底用，分开描边和底色）
@@ -96,13 +98,17 @@
     return size;
   }
   function place() {
-    // both lines centred on textCx（角色站在一侧时，文字中线往另一边挪一点，画面才平衡）
+    // both lines centred on textCx（角色站在一侧时，文字中线往另一边挪一点，画面才平衡）；
+    // 整块字超出 safe（4:3 裁切 x 240..1680 两边各留 60 px）时两行一起平移回来（2026-10-02：以前 4:3 版大字离左边只有 3–12 px）
+    const shown = [[l1, in1], [l2, in2]].filter(([line]) => line.style.display !== 'none');
+    const half = Math.max(...shown.map(([, inner]) => inner.getBoundingClientRect().width)) / 2;
+    let cx = D.textCx;
+    if (D.safe) cx = Math.min(Math.max(cx, D.safe[0] + half), D.safe[1] - half);
     let y = D.top;
-    for (const [line, inner] of [[l1, in1], [l2, in2]]) {
-      if (line.style.display === 'none') continue;
+    for (const [line, inner] of shown) {
       const w = inner.getBoundingClientRect().width, h = inner.getBoundingClientRect().height;
       line.style.top = px(y);
-      inner.style.marginLeft = px(D.textCx - w / 2 - (1920 - 1920) / 2);
+      inner.style.marginLeft = px(cx - w / 2);
       line.style.textAlign = 'left';
       y += h + D.gap;
     }

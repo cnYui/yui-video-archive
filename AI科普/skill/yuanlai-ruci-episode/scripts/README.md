@@ -27,6 +27,7 @@
 
 其他：
 - 网页版配音（2026-09-27 起停用，第 1、2 期用过）：`python S/fetch_check.py <期> C02 <url1> <url2>`（或 `--urls 文件`）下载网页版生成的录音并打分，`select_takes.py --hist` 找回历史记录里的录音。现在只在需要复查老期时用。
+- `bilingual.py`：中英双语字幕的共用部分（不是命令；2026-10-02 起）：检查英文（check_pair）、按项目统一标准拆条（import `D:\大疆\Way to AGI\skill\way-to-agi-episode\scripts\bilingual_std.py`）、按配音对齐的逐字时刻计时、显示区间。`build_script.py`、`build_timeline.py` 用它，《AI每日日报》的 `bilingual_subs.py` 也用它。
 - `uservoice.py`：自己录音的共用部分（4′、5、6 用，不是命令）：识别缓存、字幕原文和识别结果的全局对齐（跳过重读）、按停顿切句和修正识别时间。改切句规则只改这里。
 - `python S/render_parallel.py <html> --data timeline.json --workers 4 -o main.mp4 [--size WxH] [--stagger 0.7]` — assemble 用的底层正片渲染（尺寸 = 时间轴 canvas；各路相隔 --stagger 秒启动；卡住自动重启续渲，缺帧或尺寸不对退出码 1，页面报错退出码 2；加载失败带文件地址，引擎重试救回来的图片不算报错）。
 - `python S/add_to_video.py <视频.mp4> --outro-data <片尾清单.json> [-o 输出.mp4] [--no-music]` — 给真人素材等别的视频加片头片尾（名字 / 签名是悠一；BGM 用 `素材/音频/bgm.wav`），片尾清单先问用户。片头片尾按原视频尺寸渲染：16:9 用 1920×1080 页面按比例缩放（和以前一样），比 16:9 宽（2340×1080 等）开同比例的宽画布、构图居中铺满全宽。临时文件放在输出文件旁边（`_tmp_add_to_video_*`，跑完自动清掉），不用系统 / 会话临时目录。

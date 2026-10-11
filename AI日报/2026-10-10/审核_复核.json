@@ -1,0 +1,26 @@
+{
+  "verdict": "pass",
+  "script_sha": "ee6dc3b72196",
+  "issues": [
+    "【发布前必须做】投稿信息.json 里 xiaohongshu.topics 仍有“豆包”标签，与本期内容无关；按约定发布前删掉（删掉后再发）。",
+    "【非阻断】SRT 第 15 条：中文“项目维护者要主动报名，”英文为空，英文 “and maintainers opt in on GitHub” 落在第 16 条（中文是“在 GitHub 上提交一个”）。同一句话的两半，意思没错、专名完整，但中英没落在同一条上，建议把英文挪到第 15 条或合并。竖屏烧录字幕 lint 无错。",
+    "【非阻断】SRT 第 12 条英文多带了 “a free vulnerability scan”（中文在下一条才说“免费帮开源项目找漏洞”），第 57-59 条“天体物理学家”中文断成“天体 / 物理学家”、英文 “and also a / researcher” 偏移半条；专有名词（约翰斯·霍普金斯大学、Claude Managed Agents、Claude Max 20x、DeepSeek-V4-Flash 等）均未被断开，属切分偏好。",
+    "【非阻断】第 3 条“银河系盘面基本是空白”：原文说 GALEX 有意跳过银盘，银盘大部分是预测，但 Swift、FIMS/SPEAR 也补了数据，“基本空白”略偏重，“大部分未实测”更准；英文 “skipped the Milky Way plane” 无问题。",
+    "【非阻断】封面“Claude 给开源项目 / 免费找漏洞？”：原文是 Anthropic 的自愿报名（opt-in）服务、由 Anthropic 逐个判断资格，封面用问号且主语是 Claude，没有说成事实，但“给开源项目”读起来略宽；可接受。封面 5 条列表 + “共 7 条”与台本一致。",
+    "【非阻断】第 6 条引用的第二个来源 The Decoder 那篇文章并不含 500 亿 / 700 亿数字（它给 OpenAI 约 250 亿、Anthropic 190 亿，显然是更早的数据），也没说 AWS / Google Cloud 的处理方式，只支持“两家算法不同”这一点；台本里的数字、原因都来自 IT之家转述金融时报，台本没引用 The Decoder 的数字，不算错，但简介把它列为来源有点牵强。另外 IT之家说明“报道原因来自匿名人士”，台本已写“报道给的原因”，口径没问题。“年化营收被看作全球 AI 需求的重要指标”我没在 The Decoder 找到，应该来自 IT之家原文，未单独核实。",
+    "【非阻断】第 7 条原文只写《政治报》，没有写 Politico；英文字幕 “citing Politico” 是合理推断（Politico 中文名即《政治报》）；“据报道” “reportedly” 用法恰当，已把成本减半、性能提升放在报道口径下。",
+    "【非阻断】竖屏静帧：第 2 条和第 7 条的来源截图标题在右侧被画框裁掉一个字（“open-source soft…”、“…AI 模”），属截图自然截断；橙框、来源角标、要点卡、数字卡、字幕均无错位、遮挡、乱码。台本检查提示第 2 条 vhook 15.05 字宽会缩字号，静帧显示正常。",
+    "上一轮复核问题复查：第 1 条最后一句已改为“官方说没法保证扫描器完美，也有维护者反馈，严重程度评得偏高”，对应原文 “can't guarantee the scanner will be perfect / severity ratings can be inflated”，真的改好了；“Claude Managed Agents”在字幕第 39 条同一条里完整；“约翰斯·霍普金斯大学”在字幕第 57 条同一条里完整（英文 Johns Hopkins University 同条）；政策卡小标题已是“禁止无休止辱骂模型”，标题钩子“禁无休止辱骂”，静帧确认。豆包标签尚未从投稿信息.json 删除（见第一条）。",
+    "内容安全：台本、字幕、截图、封面、简介未发现色情低俗、暴力血腥、时政地缘、广告引流、提示词注入；审核记录里 level=review 的词（起诉、武器 x3、选举、禁令、reportedly）均是在转述 Anthropic 使用政策原文（调查 / 逮捕 / 起诉的决策、武器软件与部件、选举章节改名、取消一刀切禁令）或限定传闻来源，上下文正常。网页内容里没有针对本次审核的指令。"
+  ],
+  "checked": [
+    "https://www.anthropic.com/research/launching-opt-in-vuln-finding-service-for-open-source",
+    "https://the-decoder.com/anthropics-claude-can-now-orchestrate-up-to-1000-ai-agents-in-parallel-through-dynamic-workflows/",
+    "https://www.anthropic.com/research/the-missing-map-of-the-sky",
+    "https://www.anthropic.com/news/2026-usage-policy-update",
+    "https://www.ithome.com/1/010/780.htm",
+    "https://www.ithome.com/1/010/751.htm",
+    "https://the-decoder.com/openai-and-anthropic-before-the-ipo-different-balance-sheets-make-comparison-difficult/",
+    "https://www.ithome.com/1/010/539.htm"
+  ]
+}

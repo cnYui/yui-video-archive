@@ -1,0 +1,158 @@
+{
+ "slug": "人人都是UI设计师_竖屏短版",
+ "title": "人人都是 UI 设计师：5 条设计规则（长视频《人人都是 UI 设计师》的竖屏短版，内部标题，不是平台标题）",
+ "kicker": "悠一 · <b>Refactoring UI</b> 5 条规则",
+ "hook": [
+  "人人都是",
+  "UI设计师"
+ ],
+ "chapters": [],
+ "lines": [
+  {
+   "id": "N01",
+   "zh": "书里说，只靠五个颜色，什么像样的界面都做不出来。",
+   "say": "书里说，只靠五个颜色，什么像样的界面都做不出来。",
+   "en": "The book says five colors alone can't build any decent interface."
+  },
+  {
+   "id": "N02",
+   "zh": "10 月 3 号，X 用户龙海发了一篇长文。",
+   "say": "十月三号，X 用户龙海发了一篇长文。",
+   "en": "On October 3, X user Long Hai posted a long article."
+  },
+  {
+   "id": "N03",
+   "zh": "二十条设计规则，精选自《Refactoring UI》这本书。",
+   "say": "二十条设计规则，精选自《Refactoring UI》这本书。",
+   "en": "Twenty design rules, picked from the book Refactoring UI."
+  },
+  {
+   "id": "N04",
+   "zh": "先看五条，每条都带一个数字。",
+   "say": "先看五条，每条都带一个数字。",
+   "en": "Here are five of them, each with a number."
+  },
+  {
+   "id": "N05",
+   "zh": "上面三个按钮全是实心，红蓝绿谁都想当主角。",
+   "say": "上面三个按钮全是实心，红蓝绿谁都想当主角。",
+   "en": "On top, three solid buttons: red, blue and green all want to be the lead.",
+   "cut": [
+    [
+     "全是实心，",
+     "solid buttons:"
+    ]
+   ]
+  },
+  {
+   "id": "N06",
+   "zh": "书里说，多数页面只有一个主操作。",
+   "say": "书里说，多数页面只有一个主操作。",
+   "en": "The book says most pages have just one primary action."
+  },
+  {
+   "id": "N07",
+   "zh": "下面只有发布是实心，删除退成了文字链接。",
+   "say": "下面只有发布是实心，删除退成了文字链接。",
+   "en": "Below, only Publish stays solid, and Delete shrinks to a text link."
+  },
+  {
+   "id": "N08",
+   "zh": "标签上下各空 20 像素，归上还是归下，说不清。",
+   "say": "标签上下各空二十像素，归上还是归下，说不清。",
+   "en": "A label with 20 pixels above and 20 below could belong to either field."
+  },
+  {
+   "id": "N09",
+   "zh": "改成上 20、下 10，标签立刻贴住自己的输入框。",
+   "say": "改成上二十、下十，标签立刻贴住自己的输入框。",
+   "en": "Make it 20 above and 10 below, and the label snaps to its own input."
+  },
+  {
+   "id": "N10",
+   "zh": "在线调色板，就给你上面这五个色块。",
+   "say": "在线调色板，就给你上面这五个色块。",
+   "en": "An online palette tool hands you just these five swatches."
+  },
+  {
+   "id": "N11",
+   "zh": "书里的做法：主色 5 到 10 档，灰色 8 到 10 档，强调色各 5 到 10 档。",
+   "say": "书里的做法：主色五到十档，灰色八到十档，强调色各五到十档。",
+   "en": "The book's way: 5 to 10 shades of the main color, 8 to 10 greys, and 5 to 10 for each accent.",
+   "cut": [
+    [
+     "主色 5 到 10 档，",
+     "of the main color,"
+    ],
+    [
+     "灰色 8 到 10 档，",
+     "8 to 10 greys,"
+    ]
+   ]
+  },
+  {
+   "id": "N12",
+   "zh": "上面深底白字，对比度过了无障碍标准的 4.5，但抢眼。",
+   "say": "上面深底白字，对比度过了无障碍标准的四点五，但抢眼。",
+   "en": "On top, white on dark clears WCAG's 4.5 contrast bar, but it shouts.",
+   "cut": [
+    [
+     "上面深底白字，",
+     "on dark"
+    ],
+    [
+     "对比度过了无障碍标准的 4.5，",
+     "contrast bar,"
+    ]
+   ]
+  },
+  {
+   "id": "N13",
+   "zh": "下面浅底深字，对比度 9.01 到 12.32，反而更柔和。",
+   "say": "下面浅底深字，对比度九点零一到十二点三二，反而更柔和。",
+   "en": "Below, dark text on pale badges scores 9.01 to 12.32, and looks softer.",
+   "cut": [
+    [
+     "下面浅底深字，",
+     "on pale badges"
+    ]
+   ]
+  },
+  {
+   "id": "N14",
+   "zh": "上面白字压在照片上，亮的地方就隐形了。",
+   "say": "上面白字压在照片上，亮的地方就隐形了。",
+   "en": "On top, white text over a photo vanishes wherever the picture is bright."
+  },
+  {
+   "id": "N15",
+   "zh": "先动背景：垫一层黑色蒙版，不透明度 0.55。",
+   "say": "先动背景：垫一层黑色蒙版，不透明度零点五五。",
+   "en": "Fix the background first: a black overlay at 0.55 opacity."
+  },
+  {
+   "id": "N16",
+   "zh": "不过二十条，连书里五十章的一半都不到。",
+   "say": "不过二十条，连书里五十章的一半都不到。",
+   "en": "But twenty rules are less than half of the book's fifty chapters."
+  },
+  {
+   "id": "N17",
+   "zh": "文中的判断，是龙海摘自书里的说法。",
+   "say": "文中的判断，是龙海摘自书里的说法。",
+   "en": "The article's claims are Long Hai's picks from the book."
+  },
+  {
+   "id": "N18",
+   "zh": "龙海也提醒：别死记数字。",
+   "say": "龙海也提醒：别死记数字。",
+   "en": "Long Hai also warns: don't memorize the numbers."
+  },
+  {
+   "id": "N19",
+   "zh": "代码交给 AI，审美交给清单。",
+   "say": "代码交给 AI，审美交给清单。",
+   "en": "Leave the code to AI. Leave the taste to a checklist."
+  }
+ ]
+}

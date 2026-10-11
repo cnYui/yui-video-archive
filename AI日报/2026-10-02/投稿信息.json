@@ -1,0 +1,24 @@
+{
+  "title": "10月2日，鲸鱼娘带你看看AI圈发生了什么？",
+  "video": "D:\\大疆\\AI日报\\2026-10-02\\AI每日日报_1002_上传版.mp4",
+  "video_seconds": 328.5,
+  "cover_16x9": "D:\\大疆\\AI日报\\2026-10-02\\封面\\封面_16x9_1920x1080.png",
+  "cover_4x3": "D:\\大疆\\AI日报\\2026-10-02\\封面\\封面_4x3_1440x1080.png",
+  "partition": "人工智能",
+  "partition_fallback": "科技数码",
+  "tags": [
+    "AI资讯",
+    "人工智能",
+    "大模型",
+    "AI日报",
+    "谷歌",
+    "Anthropic",
+    "豆包",
+    "通义千问",
+    "鲸鱼娘",
+    "大肥鱼"
+  ],
+  "collection": "AI每日日报",
+  "declaration": "含AI生成内容",
+  "description": "AI每日日报 · 10月2日（周五）\n鲸鱼娘带你看看 AI 圈发生了什么。\n\n今日内容\n0:00 开场\n0:20 谷歌发布 Gemini 4 Argon\n1:19 Claude Code 支持 Mods\n2:08 Sonnet 4.5 定了退役日\n2:59 豆包能订票打车了\n3:42 Cohere 发布 Embed 5\n4:29 亚马逊开源决策小模型\n5:16 回顾\n\n来源\n① 谷歌发布 Gemini 4 Argon：Google 博客 https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/ ；The Decoder https://the-decoder.com/google-gemini-4-argon-closes-the-gap-with-openai-and-anthropic-but-doesnt-take-a-clear-lead/\n② Claude Code 支持 Mods：Claude 博客 https://claude.com/blog/claude-code-mods ；Claude Code 更新日志（GitHub） https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md\n③ Sonnet 4.5 定了退役日：Claude 模型弃用说明 https://platform.claude.com/docs/en/about-claude/model-deprecations\n④ 豆包能订票打车了：IT之家 https://www.ithome.com/1/008/646.htm ；中华网 https://tech.china.com/article/20260930/202609301963245.html\n⑤ Cohere 发布 Embed 5：Cohere https://cohere.com/blog/embed-5 ；MarkTechPost https://www.marktechpost.com/2026/10/01/cohere-releases-embed-5/\n⑥ 亚马逊开源决策小模型：Strands 博客 https://strandsagents.com/blog/introducing-strands-decider/ ；TechCrunch https://techcrunch.com/2026/10/01/amazon-releases-its-own-jev-clone-as-decision-models-flood-the-web/\n\n说明\n· 信息截至北京时间 2026-10-02 03:33，以各家官方发布为准。\n· 本期配音由 AI 合成（Fish Audio「苏晓晓」）；内容由 AI 整理，并自动核对来源，如有出入以原文为准。\n· 主播鲸鱼娘（像素素材包「大肥鱼」）是 DeepSeek 的网友拟人同人（原型：上善无形，CC BY-NC-SA 4.0；女仆造型：ZipZipPipe），与 DeepSeek 官方无关。"
+}

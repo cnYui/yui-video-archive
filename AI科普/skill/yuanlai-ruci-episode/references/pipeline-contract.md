@@ -7,7 +7,7 @@
 ```text
 SERIES\
   skill\yuanlai-ruci-episode\      本技能（SKILL.md、references\、scripts\、assets\engine-template\）
-  片头片尾\                          intro\index.html、outro\index.html、render.py（片头 3.8 s、片尾 4.8 s）
+  片头片尾\                          intro\、outro\（index.html + data.json）、common\、fonts\、render.py、pack_info.py（片头 4.8 s、片尾 9.0 s；所有视频必加）
   素材\
     字体\fonts.css + OFL 字体
     角色\山田凉像素素材包\            山田凉原始素材包（只读）
@@ -19,12 +19,12 @@ SERIES\
     音频\bgm.wav、sfx_pop.wav、sfx_tick.wav
   第NN期_<题目>\                      每一期（由 scripts\new_episode.py 创建）
     episode.json
-    台本\script_data.py → 台本.md、配音分段.json
+    台本\script_data.py → 台本.md、配音分段.json（双语的期还有 双语字幕.md：每句的中英拆条）
     配音\chunks.json（API 配音：整期一批 C01）、raw\（C01_v1.mp3…、api_takes.json、api_usage.jsonl）、selection.json、segments\<段号>.wav
     制作\engine\（index.html、core.js、style.css、components.js、sync_assets.py 来自模板；scenes.js 每期新写）
     制作\timeline.json、voice\durations.json、voice\alignment.json、build\
     封面\
-    第NN期_<题目>_成片.mp4 / _字幕.srt / _章节.txt
+    第NN期_<题目>_成片.mp4 / _双语字幕.srt、_中文字幕.srt、_英文字幕.srt（单语的旧期：_字幕.srt）/ _章节.txt
 ```
 
 引擎在 `制作\engine\index.html`，所以到 SERIES 的相对路径固定是 `../../../`（素材：`../../../素材/...`）。
@@ -49,6 +49,8 @@ SERIES\
   "layout": "center",
   "style": "board",
   "voice_source": "user",
+  "bilingual": true,
+  "cover_style": "chalk",
   "target_minutes": [5, 7],
   "question_scene": "S02",
   "questions": [
@@ -83,6 +85,8 @@ SERIES\
 - `style`：`"board"` = 白板手写版（2026-09-28 用户：“原LAI如此也用手写白板，字提前一秒出现，字幕也同步放大”；`new_episode.py` 默认写，`--style cards` 不写）。标题、要点、结论边说边手写（hand.js / board.js），画面比声音早 `board_lead` 秒（默认 1.0），字幕 56 px 墨黑字白边，右上目录白卡片，没写 `bg_color` 也是白底。`sync_assets.py` 另生成 `handdata.js`（本期可能手写的字的笔画）。**没有这一项 = 印刷体卡片版**（第 1–4 期，逐像素不变）。细节见 visuals.md「白板版」。改了要重跑 build_timeline 和 sync_assets。
 - `board_lead`（可选）：白板版画面比声音早几秒，默认 1.0；0 = 不提前。
 - `voice_source`：`"user"` = 用户自己配音（新增的文件：`配音\录音稿.md` / `录音稿.txt`、`配音\raw\C01_vN.wav`（+ 同名 `.json` 记导入来源）、`配音\raw\pickups\<段号>_vN.wav`（补录）、`配音\raw\asr_words.json`（识别缓存）、`配音\segments\report.json` / `report.txt`）（2026-09-28 用户：“原LAI如此配音之后需要我来配音，ai配音用来做每日日报”；`new_episode.py` 默认写，`--voice tts` 写 `"tts"`）。录音稿、导入、切句见 voice.md。没有这一项 = Fish Audio 合成（第 1–4 期；《AI每日日报》调用这些脚本时也是这样）。
+- `bilingual`：`true` = 中英双语字幕（2026-10-02 用户：“原LAI如此也改成双语”；`new_episode.py` 默认写，`--no-bilingual` 不写）。台本每个 say 行末尾要有 `dict(en=…)`（§3）；`build_script.py` 查英文、出 `台本\双语字幕.md`；`build_timeline.py` 按项目统一标准拆条、计时，写进 `segments[].subs`（§6）；引擎画两行字幕（§7）；`assemble.py` 出三份 SRT。缺英文或拆完放不下一行，`build_script.py` / `build_timeline.py` 报错停下。**没有这一项 = 只有中文字幕**（第 1–6 期，逐像素不变；台本里写了 en 也不用，会提醒）。改了要重跑 build_timeline 和 assemble（字幕烧在画面里，正片要重渲）。
+- `cover_style`：`"chalk"` = 黑板版封面（2026-10-02 用户三选一定的；`new_episode.py` 默认写）。只有 `make_cover.py` 读它（`封面/cover.json` 的 `"style"` 优先）；**没有这一项 = 按 `style` 选**：白板版 / 小票卡片版。第 1–6 期 2026-10-03 已换成黑板版，是在各期 `封面/cover.json` 里写的 `"style": "chalk"`（cover.json 优先）。见 cover.md。
 - `questions`：右上角「本期目录」的条目；`scenes` 是讲这一题的章节。讲到不属于任何一题的章节时所有条目不高亮；一题的最后一个章节结束时打勾。
 - `backgrounds`：每个章节一张（`素材\背景图库\` 里的文件名），进入新章节时交叉淡化切换。没写的章节按背景图库顺序轮换。有 `bg_color` 时视频不用它（可以空着）。
 - `outro_items`：**必须问用户**，不许用默认值。
@@ -102,6 +106,7 @@ SCENES = [
 ```
 
 - `("say", 字幕原文, TTS 文本, 画面说明)`；`("gap", 秒, 画面说明)`。
+- 中英双语的期（episode.json `"bilingual": true`）：say 行末尾多一个 dict：`("say", 字幕原文, TTS 文本, 画面说明, dict(en="English subtitle", cuts=[("中文锚点", "英文锚点")]))`。`en` = 这句的英文字幕（必填）；`cuts` 可选，手动指定中英拆条的断点（中文在这段文字之后断、英文在这段文字之后断，按出现先后找）。末尾是 dict 才算，所以和第 1 期的五元素写法 `("say", 段号, 字幕, TTS, 画面说明)` 分得开（`epcommon.normalise_row` / `row_extra`）。写法和翻译规则见 script.md「英文字幕」。
 - 开场白里的名字是本期讲解员（`presenter.name`），上例是山田凉那期的写法。
 - 段号按全片顺序生成：`S03-12`（场景号-全片序号两位）。
 - 动作写在画面说明里：`【动作：抬手】`，写法和词表见 §4。
@@ -190,6 +195,7 @@ v1（第 1 期就有，20 条，只追加不改）：`idle_m0/m1/m2`、`reach_m0
 - `segments[].actions`、`gaps[].actions`：type 有 `body`（reach、point、wave、count1/2/3、finger_up、think、shrug、thumb、chest、hold、hip、ear）、`expr`（surprised、determined、happy、look_r）、`pose`（huh、roger、yay）、`anim`（hop、walk）、`head`（nod2、shake）、`fx`（可选，直接放一层特效）、`auto`（off = 不动）。和开场走入重叠的显式动作会被推到走入结束以后（build_timeline 会打印）。
 - 自动层**不写进** timeline：引擎在 `buildScenes()` 之后自己算（要用 scenes.js 登记的内容提示点），结果在 `ENG.autoPlan`（`[{type: body|head|look|legs, name, start, end, src: "auto", key}]`），`check_layout.py` 会打印各通道的数量。
 - `segments[].pose` 保留（有「抬手」时为 `reach`），兼容第 1 期引擎。
+- 中英双语的期：`segments[].en` / `cuts`（台本里的），`segments[].subs` = `[{zh, en, s, e, a, b}]`：这一句按标准拆成的字幕条（`scripts/bilingual.py`：split_pair_aligned 拆，首字 / 末字的时刻取自这一句的 `lines`（按配音对齐过），`a` / `b` = 画面上的显示区间：开始前 0.1 s、结束后 0.45 s、不和下一条重叠）。引擎有 `subs` 就画它，不再画 `lines`；`assemble.py` 的 SRT 也用 `a` / `b`。
 - `mouth`：mix_audio.py 写入的每帧口型。
 - `chapters`、`scenes`、`intro`、`outro`、`main_duration`、`total_duration` 与第 1 期相同。
 
@@ -209,9 +215,10 @@ v1（第 1 期就有，20 条，只追加不改）：`idle_m0/m1/m2`、`reach_m0
 - 右上：本期目录（第 1 期样式：半透明深色卡片、「本期目录 CONTENTS」，进行中橙色编号 + 左侧橙竖条 + 稍放大，完成橙色 ✓ + 文字变暗 + 提示音，未开始灰色编号），贴画布右边（右边缘在 CW − 40）。在 `question_scene` 的最后一句结束时由疑问卡飞入。
 - 左下：本期讲解员 ×5（位置由她 anims.json 的 `anchor` / `stage` 算，默认画布 x 50、y 685、320×320，都是画布坐标），全片固定位置，不镜像。
 - 底部：字幕**按整个画布水平居中**（中心 x = CW / 2：1920 宽时 960，2340 宽时 1170），在章节进度条上方；单行最宽 1240（舞台 x 340–1580，和 1920 时一样）。
+- 中英双语（时间轴有 `segments[].subs`；`#subs.bi`，style.css / board.css）：中文一行 52 px（800，行高 66）+ 英文一行 30 px（600，行高 40，在带顶下 70 px），白板版中文墨黑 #1B1B1F、英文灰 #4B5563、白边 10 / 6 px，术语橙色照旧；字幕带从 y 900 起、高 130（项目标准是 y 922，这里让开进度条的标签）；一行最宽 `min(1560, CW − 780)`（2340 宽时 x 390–1950），按标准字号放不下的条缩字号兜底并记进 `ENG.subOverflow`（check_layout 报 `sub-wide`）；`ENG.SUB` = `{fs: 52, maxw, top: 900, h: 130, bilingual: true}`，所以 check_layout 的字幕区从 y 888 起；`#barTag`（进度条标签退成编号时上方的完整标题）不显示，那里是英文行。
 - 最底：《孤独摇滚！》四色章节进度条（整片时间，含片头片尾），全宽 CW。
 - 背景：有 `bg_color`（新一期默认 #FFFFFF）时 `#bg` 层整层涂这个颜色，不画图、没有暗角，开头 0.8 s 从深藏青淡入（片头收尾是墨黑，接得上）；没有时按章节切换（0.8 s 交叉淡化），cover 铺满整个画布，叠在深藏青 #1B2340 上，不透明度 `bg_alpha`（默认 0.22）、模糊 `bg_blur`（默认 10 px）、暗角 15%（按画布中心）。片尾前的淡出也是整个画布。
 - 白板版的章与章之间（core.js `boardPlan`）：每场分内容层（`S.root`）和标题层（`S.head`，board.js 的 `c.title` 画在这里）；标题在场景时刻 E − 0.36 擦（画面上早 LEAD 秒），内容留到最后一句说完 + 0.15 s（画面时刻，夹在 E − LEAD − 0.36 和 E − 0.36 之间）再淡出 0.3 s；下一场的内容层等上一场内容擦完再淡入；最后一场不自己淡出。疑问场 `ENG.tocInTime()` = 最后一句结束前 0.1 s（卡片版 0.75 s）。
 - 白板版（`style: "board"`；`body.board`，board.css）：白底；字幕 56 px 墨黑字白边（`#subs` 从 y 918 起，单行最宽 1500 px，`ENG.SUB`）；右上目录白卡片、行字墨黑；进度条上方白色渐变。场景层时钟比声音早 `ENG.LEAD` 秒（默认 1）：`renderAt(t)` 用 t + LEAD 求场景（最后一个场景停在淡出前，等声音到了再淡出），字幕、口型、进度条、目录高亮和打勾、片尾淡出用 t；目录在 `ENG.tocInTime() + 0.35 − LEAD` 出现。手写层见 visuals.md「白板版」。
 - 浅色主题（`bg_color` 够浅；`body.light`，style.css 末尾一节）：徽标、章节标题（`.hdr`）、`.note`、进度条章节名、`.chip.line`、步骤条、开场大字、疑问卡标题、总结落款换深色；章节标题和开场大字后面的深色光晕、进度条上方的深色渐变（`#barShade`）去掉；卡片 / chip 阴影减轻、加一圈细边；右上目录保留深色底板（加深到 .9）；字幕不变（纸白字墨黑描边）。scenes.js 里自己写的浅色字（`color: 'var(--paper)'`、浅色 rgba）要自己按 `ENG.LIGHT` 换。
-- 片头片尾（`SERIES\片头片尾\intro|outro\index.html`）读 data 的 `canvas`（或 `window.__CANVAS__`）：1920 时和原来逐像素一样；更宽时构图居中，纸色 / 墨色底、纹理、四角裁切标（画面 5% 安全区）、片头收尾的整屏墨黑铺满全宽。
+- 片头片尾（`SERIES\片头片尾\intro|outro\index.html`，2026-10-03 起 Claude 品牌色版，Canvas 绘制）读 data 的 `canvas`（或 `window.__CANVAS__`）：1920 舞台居中，更宽时米白背景铺满全宽；`device_scale_factor` > 1（4K 输入）按设备像素出图，不是放大。片头最后淡到 `endColor`（默认白）。

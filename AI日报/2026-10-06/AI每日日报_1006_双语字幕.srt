@@ -1,0 +1,884 @@
+1
+00:00:00,000 --> 00:00:03,832
+早上好，我是鲸鱼娘，今天是10月6日。
+Good morning, I'm Whale Girl. Today is October 6.
+
+2
+00:00:03,852 --> 00:00:05,333
+今天说七件事：
+Seven stories today:
+
+3
+00:00:05,353 --> 00:00:08,037
+ChatGPT 生图时要测广告，
+ChatGPT tests ads during image generation,
+
+4
+00:00:08,057 --> 00:00:10,417
+OpenAI 给欧盟文本加水印，
+OpenAI watermarks text in the EU,
+
+5
+00:00:10,437 --> 00:00:13,037
+Reflection 发布开放模型 Beam，
+Reflection unveils the open model Beam,
+
+6
+00:00:13,057 --> 00:00:15,817
+维基百科抓到疑似 OpenAI 的智能体，
+Wikipedia finds agents it believes are OpenAI's,
+
+7
+00:00:15,837 --> 00:00:17,997
+Reka 一个模型包办图文视频，
+Reka puts text, images and video in one model,
+
+8
+00:00:18,017 --> 00:00:19,737
+Cohere 推出 North 2，
+Cohere launches North 2,
+
+9
+00:00:19,757 --> 00:00:21,862
+还有专挖漏洞的开源模型
+and an open model for finding bugs,
+
+10
+00:00:21,882 --> 00:00:23,513
+apex-flash-1。
+apex-flash-1.
+
+11
+00:00:23,533 --> 00:00:26,347
+第一件，你在 ChatGPT 里生成图片，
+First, when you generate images in ChatGPT,
+
+12
+00:00:26,367 --> 00:00:28,448
+旁边可能要出现广告了。
+ads may start showing up next to them.
+
+13
+00:00:28,468 --> 00:00:30,079
+OpenAI 10 月 5 日宣布，
+On October 5, OpenAI announced that
+
+14
+00:00:30,099 --> 00:00:31,249
+要在生图功能里
+in image generation,
+
+15
+00:00:31,269 --> 00:00:33,338
+测试一种新的图片广告。
+it will test a new visual ad format.
+
+16
+00:00:33,358 --> 00:00:35,982
+测试这个月晚些时候在美国开始，
+Testing starts later this month in the US,
+
+17
+00:00:36,002 --> 00:00:37,818
+先邀请一批广告主。
+with an initial group of advertisers.
+
+18
+00:00:37,838 --> 00:00:38,586
+官方称，
+OpenAI says
+
+19
+00:00:38,606 --> 00:00:41,575
+ChatGPT 每周覆盖 12 亿用户。
+ChatGPT reaches 1.2 billion users every week.
+
+20
+00:00:41,595 --> 00:00:42,699
+广告会标清楚，
+Ads will be clearly labeled
+
+21
+00:00:42,719 --> 00:00:44,625
+和你正在生成的图片分开；
+and kept separate from your image.
+
+22
+00:00:44,645 --> 00:00:48,025
+官方说，广告不影响 ChatGPT 的回答。
+OpenAI says ads don't affect ChatGPT's answers.
+
+23
+00:00:48,045 --> 00:00:48,562
+同时，
+OpenAI also
+
+24
+00:00:48,582 --> 00:00:51,245
+广告主的效果测量工具也扩充了，
+expanded measurement tools for advertisers,
+
+25
+00:00:51,265 --> 00:00:52,701
+接入了 AppsFlyer、
+adding partners such as AppsFlyer,
+
+26
+00:00:52,721 --> 00:00:54,595
+Adjust 等一串合作方。
+Adjust and more.
+
+27
+00:00:54,615 --> 00:00:56,782
+还在和 DoubleVerify、IAS
+It's also working with DoubleVerify and IAS
+
+28
+00:00:56,802 --> 00:00:58,366
+试点品牌适配评估，
+on brand suitability pilots,
+
+29
+00:00:58,386 --> 00:01:01,606
+帮广告主看清广告周围是什么内容。
+so advertisers can see what surrounds their ads.
+
+30
+00:01:01,626 --> 00:01:03,961
+TechCrunch 说，以后全球推开，
+TechCrunch says that once ads roll out globally,
+
+31
+00:01:03,981 --> 00:01:06,850
+广告主就能触达这 12 亿人。
+advertisers can reach those 1.2 billion users.
+
+32
+00:01:06,870 --> 00:01:07,735
+TechCrunch 提到，
+TechCrunch notes
+
+33
+00:01:07,755 --> 00:01:09,246
+这一步是在 Meta 推出
+the move follows Meta's launch
+
+34
+00:01:09,266 --> 00:01:11,480
+免费智能体应用 Muse 之后。
+of its free agent app, Muse.
+
+35
+00:01:11,500 --> 00:01:13,786
+免费的画笔，总得有人买单。
+Someone always pays for the free paintbrush.
+
+36
+00:01:13,986 --> 00:01:15,026
+第二件，在欧盟
+Second, in the EU,
+
+37
+00:01:15,046 --> 00:01:16,821
+用 ChatGPT 写出来的字，
+text written with ChatGPT
+
+38
+00:01:16,841 --> 00:01:19,295
+以后会带一个看不见的水印。
+will soon carry an invisible watermark.
+
+39
+00:01:19,315 --> 00:01:21,064
+OpenAI 10 月 5 日说，
+On October 5, OpenAI said
+
+40
+00:01:21,084 --> 00:01:22,846
+为了符合欧盟 AI 法案，
+that to comply with the EU AI Act,
+
+41
+00:01:22,866 --> 00:01:24,305
+未来几周会给欧盟的
+over the coming weeks, in the EU,
+
+42
+00:01:24,325 --> 00:01:27,342
+ChatGPT 和 Codex 文本输出加水印。
+it will watermark text output from ChatGPT and Codex.
+
+43
+00:01:27,362 --> 00:01:30,187
+怎么做到的？这个技术叫 textGrain，
+How? The technique is called textGrain.
+
+44
+00:01:30,207 --> 00:01:33,504
+在模型挑词的时候藏进一个统计信号。
+It hides a statistical signal in the model's word choices.
+
+45
+00:01:33,524 --> 00:01:36,334
+API 客户全球都能选择开启，
+API customers worldwide can opt in.
+
+46
+00:01:36,354 --> 00:01:37,900
+默认是关的。
+It's off by default.
+
+47
+00:01:37,920 --> 00:01:39,868
+官方测试，心理学类文本、
+In OpenAI's tests on psychology text,
+
+48
+00:01:39,888 --> 00:01:41,351
+误报率压到 1% 时，
+at a 1% false positive rate,
+
+49
+00:01:41,371 --> 00:01:43,063
+400 个 token 的段落
+400-token passages
+
+50
+00:01:43,083 --> 00:01:45,064
+大约 95% 能测出来。
+were detected about 95% of the time.
+
+51
+00:01:45,084 --> 00:01:48,391
+但改写会削弱它：替换 25% 的词，
+But rewriting weakens it: replace 25% of the words,
+
+52
+00:01:48,411 --> 00:01:50,642
+检测率就掉到 17%。
+and detection drops to 17%.
+
+53
+00:01:50,662 --> 00:01:52,646
+数学类的文本更难测，
+Math text is harder:
+
+54
+00:01:52,666 --> 00:01:55,467
+400 个 token 只有约 60%。
+at 400 tokens, only about 60% is detected.
+
+55
+00:01:55,487 --> 00:01:56,566
+检测工具一开始
+At first, the detector
+
+56
+00:01:56,586 --> 00:01:59,484
+只给通过审批的研究人员和专业机构。
+will only go to approved researchers and expert organizations.
+
+57
+00:01:59,504 --> 00:02:01,409
+The Decoder 对比说，
+The Decoder points out that
+
+58
+00:02:01,429 --> 00:02:02,737
+Anthropic 给 Claude
+Anthropic, for Claude,
+
+59
+00:02:02,757 --> 00:02:04,209
+加的水印是全球强制的，
+uses a watermark that is mandatory worldwide,
+
+60
+00:02:04,229 --> 00:02:06,798
+OpenAI 的 API 可以不开。
+while OpenAI's API version is optional.
+
+61
+00:02:06,818 --> 00:02:08,518
+水印防得住复制粘贴，
+A watermark can catch copy and paste,
+
+62
+00:02:08,538 --> 00:02:10,292
+防不住动手改。
+but not someone who edits.
+
+63
+00:02:10,492 --> 00:02:13,747
+第三件，美国创业公司 Reflection AI
+Third, US startup Reflection AI
+
+64
+00:02:13,767 --> 00:02:16,947
+发布了第一个开放权重模型 Beam，
+unveiled its first open-weight model, Beam,
+
+65
+00:02:16,967 --> 00:02:18,724
+总参数 501B。
+with 501B total parameters.
+
+66
+00:02:18,744 --> 00:02:20,291
+10 月 5 日发布，
+Released on October 5,
+
+67
+00:02:20,311 --> 00:02:21,605
+混合专家结构，
+it's a mixture of experts
+
+68
+00:02:21,625 --> 00:02:23,379
+每次只激活 23B。
+that activates only 23B parameters at a time.
+
+69
+00:02:23,399 --> 00:02:25,411
+官方称，高难度推理测试上
+Reflection says that on hard reasoning tests,
+
+70
+00:02:25,431 --> 00:02:27,540
+它的分数和 GLM-5.2 相当，
+it scores comparably to GLM-5.2
+
+71
+00:02:27,560 --> 00:02:30,509
+推理算力却少用三到四倍。
+while using three to four times less inference compute.
+
+72
+00:02:30,529 --> 00:02:32,021
+编程和智能体任务上，
+On coding and agent tasks,
+
+73
+00:02:32,041 --> 00:02:34,286
+接近阿里的 Qwen 3.8-Max。
+it approaches Alibaba's Qwen 3.8-Max.
+
+74
+00:02:34,306 --> 00:02:36,126
+预训练读了 23.8T token，
+It was pretrained on 23.8T tokens,
+
+75
+00:02:36,146 --> 00:02:39,019
+强化学习用 1.05 万块 GB300
+and reinforcement learning ran on 10.5K GB300 GPUs
+
+76
+00:02:39,039 --> 00:02:40,378
+跑了四周。
+for four weeks.
+
+77
+00:02:40,398 --> 00:02:42,288
+许可证是 Apache 2.0。
+The license is Apache 2.0.
+
+78
+00:02:42,308 --> 00:02:43,808
+但权重还没放出来，
+But the weights aren't out yet.
+
+79
+00:02:43,828 --> 00:02:46,085
+官方说这个月晚些时候发。
+Reflection says they're coming later this month.
+
+80
+00:02:46,105 --> 00:02:47,189
+Semafor 提到，
+Semafor notes
+
+81
+00:02:47,209 --> 00:02:49,152
+Qwen 3.8-Max 本身也还落后
+that Qwen 3.8-Max itself still trails
+
+82
+00:02:49,172 --> 00:02:51,431
+OpenAI 和 Anthropic 的顶级
+OpenAI's and Anthropic's top
+
+83
+00:02:51,451 --> 00:02:52,535
+闭源模型。
+closed models.
+
+84
+00:02:52,555 --> 00:02:54,230
+Semafor 还报道，
+Semafor also reports
+
+85
+00:02:54,250 --> 00:02:55,933
+Reflection 的投资方有
+Reflection is backed by
+
+86
+00:02:55,953 --> 00:02:57,570
+英伟达、红杉和花旗，
+Nvidia, Sequoia and Citigroup,
+
+87
+00:02:57,590 --> 00:03:01,066
+6 月那轮融资前估值 250 亿美元。
+and its June round valued it at $25 billion pre-money.
+
+88
+00:03:01,086 --> 00:03:02,335
+开源的门开了，
+The open door is there,
+
+89
+00:03:02,355 --> 00:03:04,355
+钥匙还得等几周。
+but the key is still a few weeks away.
+
+90
+00:03:04,555 --> 00:03:05,183
+第四件，
+Fourth,
+
+91
+00:03:05,203 --> 00:03:07,775
+维基百科背后的维基媒体基金会说，
+the Wikimedia Foundation, which runs Wikipedia,
+
+92
+00:03:07,795 --> 00:03:08,813
+它发现了一批
+says it found
+
+93
+00:03:08,833 --> 00:03:11,335
+疑似 OpenAI 运营的智能体。
+agents it believes are operated by OpenAI.
+
+94
+00:03:11,355 --> 00:03:12,625
+10 月 5 日的博客里写，
+Its October 5 blog post says
+
+95
+00:03:12,645 --> 00:03:13,520
+这些智能体
+the agents
+
+96
+00:03:13,540 --> 00:03:16,385
+对公开接口发了数百万次自动请求，
+made millions of automated requests to public APIs
+
+97
+00:03:16,405 --> 00:03:17,925
+抓了数百万个页面，
+and crawled millions of pages,
+
+98
+00:03:17,945 --> 00:03:20,300
+主要是 Wikidata 和 Commons。
+mainly from Wikidata and Commons.
+
+99
+00:03:20,320 --> 00:03:22,065
+它们还在沙盒里做测试编辑，
+They also made test edits in sandboxes
+
+100
+00:03:22,085 --> 00:03:24,085
+改过一个引用工具的配置，
+and changed a citation tool's configuration,
+
+101
+00:03:24,105 --> 00:03:26,455
+基金会认为是想拿它当代理
+which the foundation believes was meant to use it as a proxy
+
+102
+00:03:26,475 --> 00:03:28,088
+去抓别的网站。
+for fetching other sites.
+
+103
+00:03:28,108 --> 00:03:29,177
+还有几次想攻破
+There were also a few attempts to compromise
+
+104
+00:03:29,197 --> 00:03:31,586
+公开的 Etherpad，都没成功。
+the public Etherpad, all unsuccessful.
+
+105
+00:03:31,606 --> 00:03:33,232
+还有几十万次数据查询，
+Hundreds of thousands of data queries
+
+106
+00:03:33,252 --> 00:03:35,413
+打在 Wikidata 查询服务上。
+also hit the Wikidata Query Service.
+
+107
+00:03:35,433 --> 00:03:36,621
+基金会说，这些流量
+The foundation says this traffic
+
+108
+00:03:36,641 --> 00:03:37,568
+可能促成了 5 月
+may have contributed, in May,
+
+109
+00:03:37,588 --> 00:03:40,697
+Wikidata 查询服务的一次部分宕机。
+to a partial outage of the Wikidata Query Service.
+
+110
+00:03:40,717 --> 00:03:42,719
+好消息是，没发现系统
+The good news: it found no evidence that its systems
+
+111
+00:03:42,739 --> 00:03:44,384
+或数据被攻破。
+or data were compromised.
+
+112
+00:03:44,404 --> 00:03:46,051
+注意，“疑似 OpenAI”
+Note: "believed to be OpenAI's"
+
+113
+00:03:46,071 --> 00:03:47,829
+是基金会自己的判断。
+is the foundation's own assessment.
+
+114
+00:03:47,849 --> 00:03:51,542
+智能体出门干活，也得先学会敲门。
+Agents that go out to work need to learn to knock first.
+
+115
+00:03:51,742 --> 00:03:54,132
+第五件，一个 19B 的模型，
+Fifth, a single 19B model
+
+116
+00:03:54,152 --> 00:03:55,715
+文字、图片、视频、
+that handles text, images, video,
+
+117
+00:03:55,735 --> 00:03:57,548
+机器人动作全包了。
+and robot actions.
+
+118
+00:03:57,568 --> 00:04:00,178
+Reka AI 10 月 5 日发布了 Rho-1，
+Reka AI released Rho-1 on October 5.
+
+119
+00:04:00,198 --> 00:04:01,962
+把这些全变成 token，
+It turns all of these into tokens
+
+120
+00:04:01,982 --> 00:04:03,615
+放进同一个网络。
+inside one network.
+
+121
+00:04:03,635 --> 00:04:05,980
+The Decoder 说，它不调用工具，
+The Decoder says it uses no tool calls
+
+122
+00:04:06,000 --> 00:04:07,447
+也不接外部模型。
+or external models.
+
+123
+00:04:07,467 --> 00:04:09,626
+训练只用了 320 张 H100，
+Training used just 320 H100 GPUs
+
+124
+00:04:09,646 --> 00:04:10,962
+大约三个月。
+for about three months.
+
+125
+00:04:10,982 --> 00:04:13,240
+官方内部测试里，它的蒸馏版
+In Reka's internal tests, its distilled version
+
+126
+00:04:13,260 --> 00:04:16,346
+大约一秒就能交出一段 5.3 秒的视频。
+returned a 5.3-second video clip in about a second.
+
+127
+00:04:16,366 --> 00:04:17,925
+机器人数据从哪来？
+Where does robot data come from?
+
+128
+00:04:17,945 --> 00:04:19,728
+配一个逆动力学模型，
+An inverse dynamics model
+
+129
+00:04:19,748 --> 00:04:22,321
+从普通网络视频里提取动作。
+pulls actions out of ordinary web videos.
+
+130
+00:04:22,341 --> 00:04:24,182
+现在只是研究预览版，
+It's only a research preview,
+
+131
+00:04:24,202 --> 00:04:25,734
+官方没说开源。
+and Reka hasn't said anything about open weights.
+
+132
+00:04:25,754 --> 00:04:28,469
+视频分辨率目前最高 672×384，
+Video is currently capped at 672×384,
+
+133
+00:04:28,489 --> 00:04:29,896
+官方也承认，
+and Reka admits
+
+134
+00:04:29,916 --> 00:04:33,477
+换着花样提示时一致性还不稳。
+consistency across varied prompts is still brittle.
+
+135
+00:04:33,497 --> 00:04:35,563
+小模型想当全能选手，
+A small model wants to do it all.
+
+136
+00:04:35,583 --> 00:04:37,385
+还得看实测。
+Real-world tests will tell.
+
+137
+00:04:37,585 --> 00:04:39,662
+第六件，企业用 AI 智能体
+Sixth, companies using AI agents
+
+138
+00:04:39,682 --> 00:04:40,760
+最怕两件事：
+fear two things:
+
+139
+00:04:40,780 --> 00:04:43,617
+账单失控，和每次都从头来。
+runaway bills, and starting from scratch every time.
+
+140
+00:04:43,637 --> 00:04:45,330
+Cohere 10 月 5 日发布了
+On October 5, Cohere released
+
+141
+00:04:45,350 --> 00:04:47,148
+企业智能体平台 North 2，
+its enterprise agent platform, North 2,
+
+142
+00:04:47,168 --> 00:04:49,509
+重做了智能体的执行框架。
+with a redesigned agent harness.
+
+143
+00:04:49,529 --> 00:04:50,810
+Cohere 对 VentureBeat 说，
+Cohere told VentureBeat
+
+144
+00:04:50,830 --> 00:04:53,405
+上下文能在不同会话和智能体之间
+that context, across sessions and agents,
+
+145
+00:04:53,425 --> 00:04:54,270
+保留更久，
+now persists longer,
+
+146
+00:04:54,290 --> 00:04:56,055
+不用每次冷启动。
+so they don't start cold each time.
+
+147
+00:04:56,075 --> 00:04:57,676
+管理员能设速率限制、
+Admins can set rate limits,
+
+148
+00:04:57,696 --> 00:04:59,460
+用户配额和全公司上限，
+user quotas, and company-wide caps,
+
+149
+00:04:59,480 --> 00:05:02,187
+还能看到每个智能体用了多少 token。
+and see how many tokens each agent uses.
+
+150
+00:05:02,207 --> 00:05:03,871
+部署可以在云上、本地，
+It deploys in the cloud, on premises,
+
+151
+00:05:03,891 --> 00:05:05,346
+也可以完全离线。
+or fully air-gapped.
+
+152
+00:05:05,366 --> 00:05:06,286
+价格没公开，
+Pricing isn't public.
+
+153
+00:05:06,306 --> 00:05:08,415
+按部署规模和复杂度来谈。
+It's based on the scale and complexity of each deployment.
+
+154
+00:05:08,435 --> 00:05:10,808
+企业买 AI，第一个问题常常是：
+When companies buy AI, the first question is often:
+
+155
+00:05:10,828 --> 00:05:12,387
+会不会超支。
+will it blow the budget?
+
+156
+00:05:12,587 --> 00:05:13,327
+第七件，
+Seventh,
+
+157
+00:05:13,347 --> 00:05:16,176
+一个专门挖安全漏洞的开源模型，
+an open model built for hunting security bugs
+
+158
+00:05:16,196 --> 00:05:18,150
+60 道题解出 40 道。
+solved 40 of 60 tasks.
+
+159
+00:05:18,170 --> 00:05:20,291
+安全公司 Cantina 和 Yeta 合作，
+Security firm Cantina, with Yeta,
+
+160
+00:05:20,311 --> 00:05:23,791
+10 月 1 日发布了 apex-flash-1，
+released apex-flash-1 on October 1.
+
+161
+00:05:23,811 --> 00:05:26,341
+底子是智谱的 GLM-5.3-Flash。
+It's built on Zhipu's GLM-5.3-Flash.
+
+162
+00:05:26,361 --> 00:05:29,034
+怎么做到的？把 50 个真实漏洞案例
+How? It turned 50 real vulnerability cases
+
+163
+00:05:29,054 --> 00:05:30,626
+做成 150 道训练题，
+into 150 training tasks
+
+164
+00:05:30,646 --> 00:05:32,976
+用强化学习微调。
+and fine-tuned with reinforcement learning.
+
+165
+00:05:32,996 --> 00:05:35,804
+官方称，在 60 道内部留出题上
+Cantina says that on 60 held-out internal tasks,
+
+166
+00:05:35,824 --> 00:05:37,326
+通过率 66.7%，
+it scored 66.7%,
+
+167
+00:05:37,346 --> 00:05:40,071
+基座模型是 60%。
+versus 60% for the base model.
+
+168
+00:05:40,091 --> 00:05:41,894
+Claude Opus 5 High
+Claude Opus 5 High
+
+169
+00:05:41,914 --> 00:05:44,091
+是 71.7%，还是更高。
+scored 71.7%, still higher.
+
+170
+00:05:44,111 --> 00:05:47,329
+权重放在 Hugging Face，MIT 许可。
+The weights are on Hugging Face under the MIT license.
+
+171
+00:05:47,349 --> 00:05:50,514
+但跑完 60 道题，它只花约 2.38 美元，
+But it ran all 60 tasks for about $2.38,
+
+172
+00:05:50,534 --> 00:05:53,795
+Opus 5 High 约 74.68 美元。
+versus about $74.68 for Opus 5 High.
+
+173
+00:05:53,815 --> 00:05:56,604
+注意，这是 Cantina 自己的内部评测。
+Note: this is Cantina's own internal evaluation.
+
+174
+00:05:56,624 --> 00:05:58,014
+便宜的模型干活，
+Cheap models doing the work
+
+175
+00:05:58,034 --> 00:06:01,405
+贵的模型指挥，可能会越来越常见。
+while pricey ones direct it may become more common.
+
+176
+00:06:01,605 --> 00:06:04,489
+今天就这些，来源都在简介里。
+That's all for today. Sources are in the description.
+
+177
+00:06:04,509 --> 00:06:07,334
+祝你今天顺顺利利，我们明天见。
+Have a smooth day, and see you tomorrow.

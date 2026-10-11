@@ -1,0 +1,201 @@
+{
+ "X_t1": {
+  "src": "pages/X_t1.png",
+  "w": 1096,
+  "h": 1532,
+  "url": "https://x.com/ClaudeDevs/status/2105721434807083061",
+  "bg": "#CFD9DE",
+  "marks": {
+   "You can now mod Claude Code": [
+    [
+     32,
+     140,
+     552,
+     54
+    ]
+   ],
+   "Change how it behaves": [
+    [
+     59,
+     236,
+     410,
+     54
+    ]
+   ],
+   "Customize the UI": [
+    [
+     59,
+     284,
+     302,
+     54
+    ]
+   ],
+   "Write one with a few lines of TypeScript": [
+    [
+     32,
+     428,
+     695,
+     54
+    ]
+   ],
+   "install them with /plugin": [
+    [
+     897,
+     476,
+     103,
+     54
+    ],
+    [
+     1000,
+     476,
+     11,
+     54
+    ],
+    [
+     32,
+     524,
+     316,
+     54
+    ]
+   ]
+  }
+ },
+ "T_intro": {
+  "src": "pages/T_intro.png",
+  "w": 1600,
+  "h": 1240,
+  "url": "https://claude.dev/blog/getting-started-with-claude-code-mods/",
+  "bg": "#FAF9F5",
+  "marks": {
+   "Mods go further": [
+    [
+     1042,
+     147,
+     274,
+     46
+    ]
+   ]
+  }
+ },
+ "T_how": {
+  "src": "pages/T_how.png",
+  "w": 1600,
+  "h": 1800,
+  "url": "https://claude.dev/blog/getting-started-with-claude-code-mods/",
+  "bg": "#FAF9F5",
+  "marks": {
+   "on(\"tool.call\"": [
+    [
+     74,
+     704,
+     1316,
+     348
+    ]
+   ]
+  }
+ },
+ "T_share": {
+  "src": "pages/T_share.png",
+  "w": 1600,
+  "h": 1520,
+  "url": "https://claude.dev/blog/getting-started-with-claude-code-mods/",
+  "bg": "#FAF9F5",
+  "marks": {
+   "only install from people you trust": [
+    [
+     1198,
+     1039,
+     180,
+     46
+    ],
+    [
+     72,
+     1100,
+     366,
+     46
+    ]
+   ]
+  }
+ },
+ "D_turn": {
+  "src": "pages/D_turn.png",
+  "w": 1600,
+  "h": 1800,
+  "url": "https://code.claude.com/docs/en/plugins/mods/overview",
+  "bg": "#FFFFFF",
+  "marks": {
+   "Mods require Claude Code v2.1.287 or later": [
+    [
+     40,
+     168,
+     638,
+     40
+    ]
+   ],
+   "on by default": [
+    [
+     868,
+     168,
+     196,
+     40
+    ]
+   ]
+  }
+ },
+ "D_builtin": {
+  "src": "pages/D_builtin.png",
+  "w": 1600,
+  "h": 2040,
+  "url": "https://code.claude.com/docs/en/plugins/mods/overview",
+  "bg": "#FFFFFF",
+  "marks": {
+   "cc-plugin-agents-md": [
+    [
+     56,
+     635,
+     247,
+     28
+    ],
+    [
+     56,
+     675,
+     29,
+     28
+    ]
+   ],
+   "cc-plugin-diff": [
+    [
+     56,
+     789,
+     204,
+     28
+    ]
+   ]
+  }
+ },
+ "D_reach": {
+  "src": "pages/D_reach.png",
+  "w": 1600,
+  "h": 1760,
+  "url": "https://code.claude.com/docs/en/plugins/mods/overview",
+  "bg": "#FFFFFF",
+  "marks": {
+   "A mod runs with your permissions": [
+    [
+     40,
+     152,
+     508,
+     40
+    ]
+   ],
+   "Mods aren": [
+    [
+     40,
+     928,
+     159,
+     40
+    ]
+   ]
+  }
+ }
+}

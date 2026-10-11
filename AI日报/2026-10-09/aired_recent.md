@@ -1,0 +1,37 @@
+# 最近 7 天已播（选题去重：同一件事没有新进展就不再报）
+
+- 2026-10-02｜谷歌发布 Gemini 4 Argon｜https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/ https://the-decoder.com/google-gemini-4-argon-closes-the-gap-with-openai-and-anthropic-but-doesnt-take-a-clear-lead/
+- 2026-10-02｜Claude Code 支持 Mods｜https://claude.com/blog/claude-code-mods https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md
+- 2026-10-02｜Sonnet 4.5 定了退役日｜https://platform.claude.com/docs/en/about-claude/model-deprecations
+- 2026-10-02｜豆包能订票打车了｜https://www.ithome.com/1/008/646.htm https://tech.china.com/article/20260930/202609301963245.html
+- 2026-10-02｜Cohere 发布 Embed 5｜https://cohere.com/blog/embed-5 https://www.marktechpost.com/2026/10/01/cohere-releases-embed-5/
+- 2026-10-02｜亚马逊开源决策小模型｜https://strandsagents.com/blog/introducing-strands-decider/ https://techcrunch.com/2026/10/01/amazon-releases-its-own-jev-clone-as-decision-models-flood-the-web/
+- 2026-10-03｜Anthropic 办工程师学院｜https://www.anthropic.com/news/claude-frontier-academy https://www.unite.ai/new-anthropic-academy-backs-10-000-engineer-residencies-with-100m/
+- 2026-10-03｜微软发布三个语音模型｜https://microsoft.ai/news/our-first-streaming-transcription-model/ https://the-decoder.com/microsoft-ai-releases-new-transcription-and-text-to-speech-models-for-voice-agents/
+- 2026-10-03｜ChatGPT 能虚拟试穿了｜https://www.ithome.com/1/009/197.htm https://techcrunch.com/2026/10/01/chatgpt-can-now-virtually-try-on-clothes-for-you/
+- 2026-10-03｜DGX Spark 出 64GB 版｜https://blogs.nvidia.com/blog/local-ai-dgx-spark-64gb-sync/ https://www.ithome.com/1/009/359.htm
+- 2026-10-03｜arXiv 限制每月投稿数｜https://blog.arxiv.org/2026/10/01/updated-rate-limit-policy/ https://www.timeshighereducation.com/news/arxivs-new-preprint-submission-cap-divides-opinion
+- 2026-10-03｜Flux 3 Image 改图更稳｜https://the-decoder.com/black-forest-labs-launches-flux-3-image-with-multi-step-editing-that-leaves-the-rest-of-your-picture-alone/ https://openrouter.ai/black-forest-labs/flux-3-image
+- 2026-10-03｜Cloudflare 开源决策模型｜https://blog.cloudflare.com/clef-decision-models/ https://www.marktechpost.com/2026/10/01/cloudflare-releases-clef-and-clef-flash/
+- 2026-10-04｜苹果收紧 Mac 磁盘权限｜https://developer.apple.com/news/?id=p6zjojqw https://www.ithome.com/1/009/381.htm
+- 2026-10-04｜Antigravity 上 Claude 5.5｜https://antigravity.google/docs/models https://letsdatascience.com/news/google-antigravity-adds-claude-55-to-paid-tiers-6a3e78f1
+- 2026-10-04｜Gemini 加了地图工具｜https://9to5google.com/2026/10/02/gemini-app-map-tool/ https://www.androidauthority.com/gemini-app-map-tool-3718688/
+- 2026-10-04｜Meta 开源 Muse 硬件｜https://techcrunch.com/2026/10/02/meta-wants-you-to-build-your-own-muse-gadget/ https://the-decoder.com/muse-gadgets-turns-ai-hardware-into-an-open-source-diy-project/
+- 2026-10-04｜Suno 能做有声配乐了｜https://suno.com/blog/introducing-speech-beta https://www.ithome.com/1/009/440.htm
+- 2026-10-04｜Supabase 收购 Turso｜https://supabase.com/blog/supabase-is-acquiring-turso https://www.prnewswire.com/news-releases/supabase-announces-150m-in-new-funding-and-turso-acquisition-302896752.html
+- 2026-10-04｜用 Claude 写 36 篇论文｜https://the-decoder.com/open-source-bootloops-harness-supports-ai-models-in-performing-precise-scientific-calculations/ https://bootloops.ai
+- 2026-10-05｜Gemini 免费版降级｜https://9to5google.com/2026/10/03/gemini-model-limits-oct-26/ https://the-decoder.com/googles-new-gemini-tiers-cut-free-users-to-its-weakest-model-and-lock-5-month-subscribers-out-of-pro/
+- 2026-10-05｜德国开源模型 Kolibri｜https://aleph-alpha.com/en/blog/kolibri-has-landed-a-sovereign-open-weight-model/ https://huggingface.co/Aleph-Alpha/Kolibri-1
+- 2026-10-05｜DeepSeek Harness 新测试版｜https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.2.1-alpha.1 https://www.36kr.com/p/4010809598922624
+- 2026-10-05｜GPT-6 打星际搬顶尖代码｜https://kotaku.com/openais-gpt-6-astra-gets-frustrated-losing-at-starcraft-and-decides-to-cheat-instead-2000739607 https://www.xda-developers.com/gpt-6-astra-started-losing-starcraft-stole-winning-bot-instead-of-playing-fair/
+- 2026-10-05｜谷歌暂停开源漏洞赏金｜https://www.ithome.com/1/009/673.htm https://www.tomshardware.com/tech-industry/artificial-intelligence/google-suspends-part-of-the-oss-vrp-bug-bounty-program-due-to-an-influx-of-invalid-ai-submissions-product-vulnerability-submissions-ended-october-1
+- 2026-10-05｜COSMIC 拒收 AI 代码｜https://linuxiac.com/cosmic-stops-accepting-llm-generated-content-in-pull-requests/ https://github.com/pop-os/cosmic-epoch/blob/master/.github/PULL_REQUEST_TEMPLATE.md
+- 2026-10-05｜Gboard 训练搬进加密服务器｜https://research.google/blog/toward-provably-private-learning-from-federated-data/ https://alphasignal.ai/news/google-moves-gboard-s-private-ai-training-into-secure-server-enclaves
+- 2026-10-05｜治 AI 智能体刷题｜https://the-decoder.com/google-researchers-find-a-way-to-keep-self-improving-ai-agents-from-memorizing-their-tests/ https://arxiv.org/abs/2609.24972
+- 2026-10-07｜Mistral Large 4｜https://mistral.ai/news/mistral-large-4/ https://the-decoder.com/mistral-large-4-is-said-to-be-the-most-powerful-open-ai-model-from-europe-and-the-u-s/
+- 2026-10-07｜Reflection 发布 Beam｜https://techcrunch.com/2026/10/05/reflection-debuts-beam-a-open-weight-ai-model-to-rival-chinese-models-at-lower-compute-cost/
+- 2026-10-07｜ChatGPT 文字加水印｜https://techcrunch.com/2026/10/05/openai-will-start-watermarking-chatgpts-text-in-the-eu/
+- 2026-10-07｜初创公司免费用 Claude｜https://techcrunch.com/2026/10/06/anthropic-gives-startups-a-free-year-of-enterprise-service-and-1000-in-token-credits/
+- 2026-10-07｜网络安全验证计划｜https://www.anthropic.com/news/cyber-verification-program
+- 2026-10-07｜Together Link｜https://docs.together.ai/docs/togetherlink https://www.marktechpost.com/2026/10/05/meet-together-link-a-free-cli-that-runs-open-models-like-kimi-k3-and-glm-5-3-inside-claude-code-codex-and-opencode/
+- 2026-10-07｜EmbeddingGemma 2｜https://huggingface.co/google/embeddinggemma-2 https://www.marktechpost.com/2026/10/06/google-deepmind-releases-embeddinggemma-2-a-740m-open-multimodal-embedding-model-built-on-gemma-4/

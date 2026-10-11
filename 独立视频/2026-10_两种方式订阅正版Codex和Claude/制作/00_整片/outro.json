@@ -1,0 +1,12 @@
+{
+  "items": [
+    { "label": "拍摄", "value": "Pocket 4P" },
+    { "label": "录屏", "value": "OpenScreen" },
+    { "label": "配音", "value": "悠一" },
+    { "label": "剪辑", "value": "Claude Code" },
+    { "label": "视频剪辑模型", "value": "Opus 5.5" },
+    { "label": "安卓教程参考", "value": "AI引导世界" }
+  ],
+  "closing": "感谢大家看到最后",
+  "signature": "悠一"
+}

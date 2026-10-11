@@ -1,0 +1,546 @@
+[
+  {
+    "id": "S01-01",
+    "scene": "S01",
+    "text": "早上好，我是鲸鱼娘，今天是10月6日。",
+    "tts_text": "早上好，我是鲸鱼娘，今天是十月六日。",
+    "est_seconds": 3.1,
+    "start": 0.0
+  },
+  {
+    "id": "S01-02",
+    "scene": "S01",
+    "text": "今天说七件事：ChatGPT 生图时要测广告，OpenAI 给欧盟文本加水印，Reflection 发布开放模型 Beam，维基百科抓到疑似 OpenAI 的智能体，Reka 一个模型包办图文视频，Cohere 推出 North 2，还有专挖漏洞的开源模型 apex-flash-1。",
+    "tts_text": "今天说七件事：ChatGPT 生图时要测广告，OpenAI 给欧盟文本加水印，Reflection 发布开放模型 Beam，维基百科抓到疑似 OpenAI 的智能体，Reka 一个模型包办图文视频，Cohere 推出 North 2，还有专挖漏洞的开源模型 apex flash 1。",
+    "est_seconds": 15.7,
+    "start": 3.4
+  },
+  {
+    "id": "S02-03",
+    "scene": "S02",
+    "text": "第一件，你在 ChatGPT 里生成图片，旁边可能要出现广告了。",
+    "tts_text": "第一件，你在 ChatGPT 里生成图片，旁边可能要出现广告了。",
+    "est_seconds": 4.4,
+    "start": 19.3
+  },
+  {
+    "id": "S02-04",
+    "scene": "S02",
+    "text": "OpenAI 10 月 5 日宣布，要在生图功能里测试一种新的图片广告。",
+    "tts_text": "OpenAI 十月五日宣布，要在生图功能里测试一种新的图片广告。",
+    "est_seconds": 5.0,
+    "start": 24.0
+  },
+  {
+    "id": "S02-05",
+    "scene": "S02",
+    "text": "测试这个月晚些时候在美国开始，先邀请一批广告主。",
+    "tts_text": "测试这个月晚些时候在美国开始，先邀请一批广告主。",
+    "est_seconds": 4.4,
+    "start": 29.2
+  },
+  {
+    "id": "S02-06",
+    "scene": "S02",
+    "text": "官方称，ChatGPT 每周覆盖 12 亿用户。",
+    "tts_text": "官方称，ChatGPT 每周覆盖十二亿用户。",
+    "est_seconds": 2.9,
+    "start": 33.9
+  },
+  {
+    "id": "S02-07",
+    "scene": "S02",
+    "text": "广告会标清楚，和你正在生成的图片分开；官方说，广告不影响 ChatGPT 的回答。",
+    "tts_text": "广告会标清楚，和你正在生成的图片分开；官方说，广告不影响 ChatGPT 的回答。",
+    "est_seconds": 5.9,
+    "start": 37.0
+  },
+  {
+    "id": "S02-08",
+    "scene": "S02",
+    "text": "同时，广告主的效果测量工具也扩充了，接入了 AppsFlyer、Adjust 等一串合作方。",
+    "tts_text": "同时，广告主的效果测量工具也扩充了，接入了 Apps Flyer、Adjust 等一串合作方。",
+    "est_seconds": 5.9,
+    "start": 43.1
+  },
+  {
+    "id": "S02-09",
+    "scene": "S02",
+    "text": "还在和 DoubleVerify、IAS 试点品牌适配评估，帮广告主看清广告周围是什么内容。",
+    "tts_text": "还在和 Double Verify、I A S 试点品牌适配评估，帮广告主看清广告周围是什么内容。",
+    "est_seconds": 6.5,
+    "start": 49.3
+  },
+  {
+    "id": "S02-10",
+    "scene": "S02",
+    "text": "TechCrunch 说，以后全球推开，广告主就能触达这 12 亿人。",
+    "tts_text": "TechCrunch 说，以后全球推开，广告主就能触达这十二亿人。",
+    "est_seconds": 4.4,
+    "start": 56.0
+  },
+  {
+    "id": "S02-11",
+    "scene": "S02",
+    "text": "TechCrunch 提到，这一步是在 Meta 推出免费智能体应用 Muse 之后。",
+    "tts_text": "TechCrunch 提到，这一步是在 Meta 推出免费智能体应用 Muse 之后。",
+    "est_seconds": 4.6,
+    "start": 60.7
+  },
+  {
+    "id": "S02-12",
+    "scene": "S02",
+    "text": "免费的画笔，总得有人买单。",
+    "tts_text": "免费的画笔，总得有人买单。",
+    "est_seconds": 2.3,
+    "start": 65.5
+  },
+  {
+    "id": "S03-13",
+    "scene": "S03",
+    "text": "第二件，在欧盟用 ChatGPT 写出来的字，以后会带一个看不见的水印。",
+    "tts_text": "第二件，在欧盟用 ChatGPT 写出来的字，以后会带一个看不见的水印。",
+    "est_seconds": 5.2,
+    "start": 68.6
+  },
+  {
+    "id": "S03-14",
+    "scene": "S03",
+    "text": "OpenAI 10 月 5 日说，为了符合欧盟 AI 法案，未来几周会给欧盟的 ChatGPT 和 Codex 文本输出加水印。",
+    "tts_text": "OpenAI 十月五日说，为了符合欧盟 AI 法案，未来几周会给欧盟的 ChatGPT 和 Codex 文本输出加水印。",
+    "est_seconds": 7.4,
+    "start": 74.0
+  },
+  {
+    "id": "S03-15",
+    "scene": "S03",
+    "text": "怎么做到的？这个技术叫 textGrain，在模型挑词的时候藏进一个统计信号。",
+    "tts_text": "怎么做到的？这个技术叫 text Grain，在模型挑词的时候藏进一个统计信号。",
+    "est_seconds": 6.0,
+    "start": 81.7
+  },
+  {
+    "id": "S03-16",
+    "scene": "S03",
+    "text": "API 客户全球都能选择开启，默认是关的。",
+    "tts_text": "API 客户全球都能选择开启，默认是关的。",
+    "est_seconds": 3.6,
+    "start": 88.0
+  },
+  {
+    "id": "S03-17",
+    "scene": "S03",
+    "text": "官方测试，心理学类文本、误报率压到 1% 时，400 个 token 的段落大约 95% 能测出来。",
+    "tts_text": "官方测试，心理学类文本、误报率压到百分之一时，四百个 token 的段落大约百分之九十五能测出来。",
+    "est_seconds": 7.8,
+    "start": 91.8
+  },
+  {
+    "id": "S03-18",
+    "scene": "S03",
+    "text": "但改写会削弱它：替换 25% 的词，检测率就掉到 17%。",
+    "tts_text": "但改写会削弱它：替换百分之二十五的词，检测率就掉到百分之十七。",
+    "est_seconds": 5.5,
+    "start": 99.8
+  },
+  {
+    "id": "S03-19",
+    "scene": "S03",
+    "text": "数学类的文本更难测，400 个 token 只有约 60%。",
+    "tts_text": "数学类的文本更难测，四百个 token 只有约百分之六十。",
+    "est_seconds": 4.4,
+    "start": 105.6
+  },
+  {
+    "id": "S03-20",
+    "scene": "S03",
+    "text": "检测工具一开始只给通过审批的研究人员和专业机构。",
+    "tts_text": "检测工具一开始只给通过审批的研究人员和专业机构。",
+    "est_seconds": 4.6,
+    "start": 110.2
+  },
+  {
+    "id": "S03-21",
+    "scene": "S03",
+    "text": "The Decoder 对比说，Anthropic 给 Claude 加的水印是全球强制的，OpenAI 的 API 可以不开。",
+    "tts_text": "The Decoder 对比说，Anthropic 给 Claude 加的水印是全球强制的，OpenAI 的 API 可以不开。",
+    "est_seconds": 6.3,
+    "start": 115.1
+  },
+  {
+    "id": "S03-22",
+    "scene": "S03",
+    "text": "水印防得住复制粘贴，防不住动手改。",
+    "tts_text": "水印防得住复制粘贴，防不住动手改。",
+    "est_seconds": 3.1,
+    "start": 121.6
+  },
+  {
+    "id": "S04-23",
+    "scene": "S04",
+    "text": "第三件，美国创业公司 Reflection AI 发布了第一个开放权重模型 Beam，总参数 501B。",
+    "tts_text": "第三件，美国创业公司 Reflection AI 发布了第一个开放权重模型 Beam，总参数五千零一十亿。",
+    "est_seconds": 7.0,
+    "start": 125.5
+  },
+  {
+    "id": "S04-24",
+    "scene": "S04",
+    "text": "10 月 5 日发布，混合专家结构，每次只激活 23B。",
+    "tts_text": "十月五日发布，混合专家结构，每次只激活二百三十亿。",
+    "est_seconds": 4.4,
+    "start": 132.8
+  },
+  {
+    "id": "S04-25",
+    "scene": "S04",
+    "text": "官方称，高难度推理测试上它的分数和 GLM-5.2 相当，推理算力却少用三到四倍。",
+    "tts_text": "官方称，高难度推理测试上它的分数和 GLM 五点二相当，推理算力却少用三到四倍。",
+    "est_seconds": 6.9,
+    "start": 137.4
+  },
+  {
+    "id": "S04-26",
+    "scene": "S04",
+    "text": "编程和智能体任务上，接近阿里的 Qwen 3.8-Max。",
+    "tts_text": "编程和智能体任务上，接近阿里的 Qwen 三点八 Max。",
+    "est_seconds": 3.8,
+    "start": 144.6
+  },
+  {
+    "id": "S04-27",
+    "scene": "S04",
+    "text": "预训练读了 23.8T token，强化学习用 1.05 万块 GB300 跑了四周。",
+    "tts_text": "预训练读了二十三点八 T 的 token，强化学习用一万零五百块 GB 三百跑了四周。",
+    "est_seconds": 6.5,
+    "start": 148.6
+  },
+  {
+    "id": "S04-28",
+    "scene": "S04",
+    "text": "许可证是 Apache 2.0。",
+    "tts_text": "许可证是 Apache 二点零。",
+    "est_seconds": 1.9,
+    "start": 155.4
+  },
+  {
+    "id": "S04-29",
+    "scene": "S04",
+    "text": "但权重还没放出来，官方说这个月晚些时候发。",
+    "tts_text": "但权重还没放出来，官方说这个月晚些时候发。",
+    "est_seconds": 3.8,
+    "start": 157.5
+  },
+  {
+    "id": "S04-30",
+    "scene": "S04",
+    "text": "Semafor 提到，Qwen 3.8-Max 本身也还落后 OpenAI 和 Anthropic 的顶级闭源模型。",
+    "tts_text": "Semafor 提到，Qwen 三点八 Max 本身也还落后 OpenAI 和 Anthropic 的顶级闭源模型。",
+    "est_seconds": 5.5,
+    "start": 161.6
+  },
+  {
+    "id": "S04-31",
+    "scene": "S04",
+    "text": "Semafor 还报道，Reflection 的投资方有英伟达、红杉和花旗，6 月那轮融资前估值 250 亿美元。",
+    "tts_text": "Semafor 还报道，Reflection 的投资方有英伟达、红杉和花旗，六月那轮融资前估值二百五十亿美元。",
+    "est_seconds": 7.2,
+    "start": 167.3
+  },
+  {
+    "id": "S04-32",
+    "scene": "S04",
+    "text": "开源的门开了，钥匙还得等几周。",
+    "tts_text": "开源的门开了，钥匙还得等几周。",
+    "est_seconds": 2.7,
+    "start": 174.8
+  },
+  {
+    "id": "S05-33",
+    "scene": "S05",
+    "text": "第四件，维基百科背后的维基媒体基金会说，它发现了一批疑似 OpenAI 运营的智能体。",
+    "tts_text": "第四件，维基百科背后的维基媒体基金会说，它发现了一批疑似 OpenAI 运营的智能体。",
+    "est_seconds": 6.7,
+    "start": 178.2
+  },
+  {
+    "id": "S05-34",
+    "scene": "S05",
+    "text": "10 月 5 日的博客里写，这些智能体对公开接口发了数百万次自动请求，抓了数百万个页面，主要是 Wikidata 和 Commons。",
+    "tts_text": "十月五日的博客里写，这些智能体对公开接口发了数百万次自动请求，抓了数百万个页面，主要是 Wikidata 和 Commons。",
+    "est_seconds": 8.9,
+    "start": 185.2
+  },
+  {
+    "id": "S05-35",
+    "scene": "S05",
+    "text": "它们还在沙盒里做测试编辑，改过一个引用工具的配置，基金会认为是想拿它当代理去抓别的网站。",
+    "tts_text": "它们还在沙盒里做测试编辑，改过一个引用工具的配置，基金会认为是想拿它当代理去抓别的网站。",
+    "est_seconds": 8.0,
+    "start": 194.3
+  },
+  {
+    "id": "S05-36",
+    "scene": "S05",
+    "text": "还有几次想攻破公开的 Etherpad，都没成功。",
+    "tts_text": "还有几次想攻破公开的 Etherpad，都没成功。",
+    "est_seconds": 3.5,
+    "start": 202.6
+  },
+  {
+    "id": "S05-37",
+    "scene": "S05",
+    "text": "还有几十万次数据查询，打在 Wikidata 查询服务上。",
+    "tts_text": "还有几十万次数据查询，打在 Wikidata 查询服务上。",
+    "est_seconds": 4.0,
+    "start": 206.3
+  },
+  {
+    "id": "S05-38",
+    "scene": "S05",
+    "text": "基金会说，这些流量可能促成了 5 月 Wikidata 查询服务的一次部分宕机。",
+    "tts_text": "基金会说，这些流量可能促成了五月 Wikidata 查询服务的一次部分宕机。",
+    "est_seconds": 5.7,
+    "start": 210.6
+  },
+  {
+    "id": "S05-39",
+    "scene": "S05",
+    "text": "好消息是，没发现系统或数据被攻破。",
+    "tts_text": "好消息是，没发现系统或数据被攻破。",
+    "est_seconds": 3.1,
+    "start": 216.5
+  },
+  {
+    "id": "S05-40",
+    "scene": "S05",
+    "text": "注意，“疑似 OpenAI”是基金会自己的判断。",
+    "tts_text": "注意，“疑似 OpenAI”是基金会自己的判断。",
+    "est_seconds": 3.1,
+    "start": 219.8
+  },
+  {
+    "id": "S05-41",
+    "scene": "S05",
+    "text": "智能体出门干活，也得先学会敲门。",
+    "tts_text": "智能体出门干活，也得先学会敲门。",
+    "est_seconds": 2.9,
+    "start": 223.2
+  },
+  {
+    "id": "S06-42",
+    "scene": "S06",
+    "text": "第五件，一个 19B 的模型，文字、图片、视频、机器人动作全包了。",
+    "tts_text": "第五件，一个一百九十亿参数的模型，文字、图片、视频、机器人动作全包了。",
+    "est_seconds": 5.7,
+    "start": 226.8
+  },
+  {
+    "id": "S06-43",
+    "scene": "S06",
+    "text": "Reka AI 10 月 5 日发布了 Rho-1，把这些全变成 token，放进同一个网络。",
+    "tts_text": "Reka AI 十月五日发布了 Rho 1，把这些全变成 token，放进同一个网络。",
+    "est_seconds": 5.3,
+    "start": 232.8
+  },
+  {
+    "id": "S06-44",
+    "scene": "S06",
+    "text": "The Decoder 说，它不调用工具，也不接外部模型。",
+    "tts_text": "The Decoder 说，它不调用工具，也不接外部模型。",
+    "est_seconds": 3.5,
+    "start": 238.3
+  },
+  {
+    "id": "S06-45",
+    "scene": "S06",
+    "text": "训练只用了 320 张 H100，大约三个月。",
+    "tts_text": "训练只用了三百二十张 H 一百，大约三个月。",
+    "est_seconds": 3.6,
+    "start": 242.1
+  },
+  {
+    "id": "S06-46",
+    "scene": "S06",
+    "text": "官方内部测试里，它的蒸馏版大约一秒就能交出一段 5.3 秒的视频。",
+    "tts_text": "官方内部测试里，它的蒸馏版大约一秒就能交出一段五点三秒的视频。",
+    "est_seconds": 5.7,
+    "start": 245.9
+  },
+  {
+    "id": "S06-47",
+    "scene": "S06",
+    "text": "机器人数据从哪来？配一个逆动力学模型，从普通网络视频里提取动作。",
+    "tts_text": "机器人数据从哪来？配一个逆动力学模型，从普通网络视频里提取动作。",
+    "est_seconds": 6.0,
+    "start": 251.9
+  },
+  {
+    "id": "S06-48",
+    "scene": "S06",
+    "text": "现在只是研究预览版，官方没说开源。",
+    "tts_text": "现在只是研究预览版，官方没说开源。",
+    "est_seconds": 3.1,
+    "start": 258.1
+  },
+  {
+    "id": "S06-49",
+    "scene": "S06",
+    "text": "视频分辨率目前最高 672×384，官方也承认，换着花样提示时一致性还不稳。",
+    "tts_text": "视频分辨率目前最高六百七十二乘三百八十四，官方也承认，换着花样提示时一致性还不稳。",
+    "est_seconds": 7.4,
+    "start": 261.5
+  },
+  {
+    "id": "S06-50",
+    "scene": "S06",
+    "text": "小模型想当全能选手，还得看实测。",
+    "tts_text": "小模型想当全能选手，还得看实测。",
+    "est_seconds": 2.9,
+    "start": 269.1
+  },
+  {
+    "id": "S07-51",
+    "scene": "S07",
+    "text": "第六件，企业用 AI 智能体最怕两件事：账单失控，和每次都从头来。",
+    "tts_text": "第六件，企业用 AI 智能体最怕两件事：账单失控，和每次都从头来。",
+    "est_seconds": 5.3,
+    "start": 272.8
+  },
+  {
+    "id": "S07-52",
+    "scene": "S07",
+    "text": "Cohere 10 月 5 日发布了企业智能体平台 North 2，重做了智能体的执行框架。",
+    "tts_text": "Cohere 十月五日发布了企业智能体平台 North 2，重做了智能体的执行框架。",
+    "est_seconds": 5.9,
+    "start": 278.3
+  },
+  {
+    "id": "S07-53",
+    "scene": "S07",
+    "text": "Cohere 对 VentureBeat 说，上下文能在不同会话和智能体之间保留更久，不用每次冷启动。",
+    "tts_text": "Cohere 对 VentureBeat 说，上下文能在不同会话和智能体之间保留更久，不用每次冷启动。",
+    "est_seconds": 6.7,
+    "start": 284.5
+  },
+  {
+    "id": "S07-54",
+    "scene": "S07",
+    "text": "管理员能设速率限制、用户配额和全公司上限，还能看到每个智能体用了多少 token。",
+    "tts_text": "管理员能设速率限制、用户配额和全公司上限，还能看到每个智能体用了多少 token。",
+    "est_seconds": 6.7,
+    "start": 291.4
+  },
+  {
+    "id": "S07-55",
+    "scene": "S07",
+    "text": "部署可以在云上、本地，也可以完全离线。",
+    "tts_text": "部署可以在云上、本地，也可以完全离线。",
+    "est_seconds": 3.3,
+    "start": 298.4
+  },
+  {
+    "id": "S07-56",
+    "scene": "S07",
+    "text": "价格没公开，按部署规模和复杂度来谈。",
+    "tts_text": "价格没公开，按部署规模和复杂度来谈。",
+    "est_seconds": 3.3,
+    "start": 301.9
+  },
+  {
+    "id": "S07-57",
+    "scene": "S07",
+    "text": "企业买 AI，第一个问题常常是：会不会超支。",
+    "tts_text": "企业买 AI，第一个问题常常是：会不会超支。",
+    "est_seconds": 3.6,
+    "start": 305.5
+  },
+  {
+    "id": "S08-58",
+    "scene": "S08",
+    "text": "第七件，一个专门挖安全漏洞的开源模型，60 道题解出 40 道。",
+    "tts_text": "第七件，一个专门挖安全漏洞的开源模型，六十道题解出四十道。",
+    "est_seconds": 5.2,
+    "start": 309.8
+  },
+  {
+    "id": "S08-59",
+    "scene": "S08",
+    "text": "安全公司 Cantina 和 Yeta 合作，10 月 1 日发布了 apex-flash-1，底子是智谱的 GLM-5.3-Flash。",
+    "tts_text": "安全公司 Cantina 和 Yeta 合作，十月一日发布了 apex flash 1，底子是智谱的 GLM 五点三 Flash。",
+    "est_seconds": 6.9,
+    "start": 315.3
+  },
+  {
+    "id": "S08-60",
+    "scene": "S08",
+    "text": "怎么做到的？把 50 个真实漏洞案例做成 150 道训练题，用强化学习微调。",
+    "tts_text": "怎么做到的？把五十个真实漏洞案例做成一百五十道训练题，用强化学习微调。",
+    "est_seconds": 6.5,
+    "start": 322.4
+  },
+  {
+    "id": "S08-61",
+    "scene": "S08",
+    "text": "官方称，在 60 道内部留出题上通过率 66.7%，基座模型是 60%。",
+    "tts_text": "官方称，在六十道内部留出题上通过率百分之六十六点七，基座模型是百分之六十。",
+    "est_seconds": 6.7,
+    "start": 329.2
+  },
+  {
+    "id": "S08-62",
+    "scene": "S08",
+    "text": "Claude Opus 5 High 是 71.7%，还是更高。",
+    "tts_text": "Claude Opus 五 High 是百分之七十一点七，还是更高。",
+    "est_seconds": 3.6,
+    "start": 336.1
+  },
+  {
+    "id": "S08-63",
+    "scene": "S08",
+    "text": "权重放在 Hugging Face，MIT 许可。",
+    "tts_text": "权重放在 Hugging Face，M I T 许可。",
+    "est_seconds": 2.5,
+    "start": 340.0
+  },
+  {
+    "id": "S08-64",
+    "scene": "S08",
+    "text": "但跑完 60 道题，它只花约 2.38 美元，Opus 5 High 约 74.68 美元。",
+    "tts_text": "但跑完六十道题，它只花约二点三八美元，Opus 五 High 约七十四点六八美元。",
+    "est_seconds": 5.7,
+    "start": 342.7
+  },
+  {
+    "id": "S08-65",
+    "scene": "S08",
+    "text": "注意，这是 Cantina 自己的内部评测。",
+    "tts_text": "注意，这是 Cantina 自己的内部评测。",
+    "est_seconds": 2.7,
+    "start": 348.7
+  },
+  {
+    "id": "S08-66",
+    "scene": "S08",
+    "text": "便宜的模型干活，贵的模型指挥，可能会越来越常见。",
+    "tts_text": "便宜的模型干活，贵的模型指挥，可能会越来越常见。",
+    "est_seconds": 4.2,
+    "start": 351.6
+  },
+  {
+    "id": "S09-67",
+    "scene": "S09",
+    "text": "今天就这些，来源都在简介里。",
+    "tts_text": "今天就这些，来源都在简介里。",
+    "est_seconds": 2.5,
+    "start": 356.6
+  },
+  {
+    "id": "S09-68",
+    "scene": "S09",
+    "text": "祝你今天顺顺利利，我们明天见。",
+    "tts_text": "祝你今天顺顺利利，我们明天见。",
+    "est_seconds": 2.7,
+    "start": 359.3
+  }
+]

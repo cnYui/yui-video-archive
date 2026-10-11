@@ -64,10 +64,8 @@ if (C.v === 1) {
   photo(`${SHOW}/gintama/f_0031.jpg`, X0, WIDE ? 640 : 620, pw, ph, -5);
   photo(`${SHOW}/naruto/f_0068.jpg`, X0 + (WIDE ? 300 : 230), WIDE ? 760 : 740, pw, ph, 3);
   photo(`${SHOW}/jojo/f_0120.jpg`, X0 + (WIDE ? 610 : 40), WIDE ? 640 : 836, pw, ph, -2);
-  el(`像素风 · 一帧一帧画出来`, { left: X0 + 'px', top: WIDE ? '990px' : '1010px', font: `900 ${WIDE ? 40 : 34}px 'Noto Sans SC'`, color: 'var(--ink2)', display: WIDE ? 'none' : 'block' });
 } else if (C.v === 4) {
   // ---- 选定（用户 2026-09-28：“用方案三的形象，去除deepseek形象，然后用方案一的标题”）：方案三的人像和蓝底、不要鲸鱼娘、方案一的标题
-  const STEPS = `<span class="step">台本</span><span class="arr">→</span><span class="step">配音</span><span class="arr">→</span><span class="step">画面</span><span class="arr">→</span><span class="step">渲染</span>`;
   if (WIDE) {
     blob(1420, 540, 450, '#DDEBFF');
     person('talk', 860, -110);
@@ -75,7 +73,6 @@ if (C.v === 1) {
     const a = el(`用 Claude 做视频`, { left: X0 + 'px', top: '176px', font: "900 118px 'Noto Sans SC'", whiteSpace: 'nowrap' });
     const b = el(`几乎<span class="o mark">零成本</span>`, { left: X0 + 'px', top: '330px', font: "900 210px/1.1 'Noto Sans SC'", whiteSpace: 'nowrap' });
     fit(a, 960); fit(b, 960);
-    el(STEPS, { left: X0 + 'px', top: '660px', whiteSpace: 'nowrap' });
   } else {
     // 4:3（首页推荐）：用户 2026-09-28“上面的封面字可以再大一点，人可以再小一点” → 标题横跨上半部分放大，人缩到右下角
     blob(1060, 830, 330, '#DDEBFF');
@@ -84,7 +81,6 @@ if (C.v === 1) {
     const a = el(`用 Claude 做视频`, { left: X0 + 'px', top: '150px', font: "900 124px 'Noto Sans SC'", whiteSpace: 'nowrap' });
     const b = el(`几乎<span class="o mark">零成本</span>`, { left: X0 + 'px', top: '290px', font: "900 216px/1.1 'Noto Sans SC'", whiteSpace: 'nowrap' });
     fit(a, 1310); fit(b, 1310);
-    el(STEPS, { left: X0 + 'px', top: '700px', whiteSpace: 'nowrap', transform: 'scale(0.95)', transformOrigin: '0 0' });
   }
 } else {
   // ---- 方案 3：讲解脸 + 手把手教程

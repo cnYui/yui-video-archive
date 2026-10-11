@@ -1,0 +1,779 @@
+1
+00:00:00,000 --> 00:00:01,600
+早上好，我是鲸鱼娘，
+Good morning, I'm Whale Girl.
+
+2
+00:00:01,620 --> 00:00:03,293
+今天是10月10日。
+Today is October 10.
+
+3
+00:00:03,313 --> 00:00:04,486
+今天说七件事：
+Seven stories today:
+
+4
+00:00:04,506 --> 00:00:07,249
+Anthropic 给开源项目免费查漏洞，
+Anthropic's free vulnerability scans for open source,
+
+5
+00:00:07,269 --> 00:00:09,922
+Claude 智能体最多并行一千个，
+Claude agents running up to a thousand in parallel,
+
+6
+00:00:09,942 --> 00:00:11,869
+Claude 画出紫外天图，
+a Claude-made UV sky map,
+
+7
+00:00:11,889 --> 00:00:13,836
+Anthropic 更新使用政策，
+Anthropic's new Usage Policy,
+
+8
+00:00:13,856 --> 00:00:16,169
+字节找到 DeepSeek 抽风原因，
+ByteDance's explanation for DeepSeek's erratic behavior,
+
+9
+00:00:16,189 --> 00:00:18,630
+OpenAI 年化营收少了两百亿，
+OpenAI's $20 billion revenue gap,
+
+10
+00:00:18,650 --> 00:00:21,069
+还有 Ecosia 放弃 Mistral。
+and Ecosia dropping Mistral.
+
+11
+00:00:21,089 --> 00:00:21,571
+第一件，
+First,
+
+12
+00:00:21,591 --> 00:00:23,555
+Anthropic 推出了 OSS Scanner，
+Anthropic launched OSS Scanner, a free vulnerability scan
+
+13
+00:00:23,575 --> 00:00:25,775
+免费帮开源项目找漏洞。
+for open-source projects.
+
+14
+00:00:25,795 --> 00:00:27,010
+10 月 8 日发布，
+It was announced on October 8,
+
+15
+00:00:27,030 --> 00:00:28,825
+项目维护者要主动报名，
+
+
+16
+00:00:28,845 --> 00:00:30,444
+在 GitHub 上提交一个
+and maintainers opt in on GitHub
+
+17
+00:00:30,464 --> 00:00:31,825
+拉取请求就行。
+by submitting a pull request.
+
+18
+00:00:31,845 --> 00:00:34,511
+报告全部由模型生成，没有人工审核，
+Reports are fully model-generated with no human review,
+
+19
+00:00:34,531 --> 00:00:36,469
+用的是 Anthropic 最强的模型，
+from Anthropic's strongest models,
+
+20
+00:00:36,489 --> 00:00:38,161
+包括 Claude Mythos。
+including Claude Mythos.
+
+21
+00:00:38,181 --> 00:00:40,373
+每份报告都带可复现的验证代码
+Each report comes with a reproducer
+
+22
+00:00:40,393 --> 00:00:41,321
+和漏洞解释，
+and an explanation,
+
+23
+00:00:41,341 --> 00:00:43,315
+有的还附修补建议。
+and a candidate patch when available.
+
+24
+00:00:43,335 --> 00:00:45,049
+过去半年，Anthropic 找到超过
+Over the last six months, Anthropic found over
+
+25
+00:00:45,069 --> 00:00:46,216
+29,000 个候选漏洞，
+29,000 candidate vulnerabilities
+
+26
+00:00:46,236 --> 00:00:48,826
+人工筛了大约 6,000 个。
+and manually triaged about 6,000.
+
+27
+00:00:48,846 --> 00:00:50,737
+在 wolfSSL 的 74 份报告里，
+Of 74 reports at wolfSSL,
+
+28
+00:00:50,757 --> 00:00:52,695
+除了两份，其余都成立，
+all but two were valid,
+
+29
+00:00:52,715 --> 00:00:55,147
+其中五个拿到了 CVE 编号。
+and five became CVEs.
+
+30
+00:00:55,167 --> 00:00:56,957
+申请资格和谷歌 OSS-Fuzz
+Eligibility is similar to Google's OSS-Fuzz
+
+31
+00:00:56,977 --> 00:00:58,018
+的标准差不多，
+criteria,
+
+32
+00:00:58,038 --> 00:01:00,068
+由 Anthropic 逐个判断。
+and Anthropic decides case by case.
+
+33
+00:01:00,088 --> 00:01:02,183
+另有一个 Claude for OSS 计划，
+A separate Claude for OSS program offers
+
+34
+00:01:02,203 --> 00:01:04,665
+给开源项目免费送 Claude Max 20x
+open-source projects free Claude Max 20x
+
+35
+00:01:04,685 --> 00:01:06,313
+订阅，用来修漏洞。
+subscriptions to help fix bugs.
+
+36
+00:01:06,333 --> 00:01:08,478
+官方说没法保证扫描器完美，
+Anthropic says it can't guarantee the scanner is perfect,
+
+37
+00:01:08,498 --> 00:01:12,032
+也有维护者反馈，严重程度评得偏高。
+and some maintainers say severity ratings run high.
+
+38
+00:01:12,232 --> 00:01:12,853
+第二件，
+Second,
+
+39
+00:01:12,873 --> 00:01:15,780
+Claude 托管智能体加了动态工作流。
+Claude Managed Agents added dynamic workflows.
+
+40
+00:01:15,800 --> 00:01:17,429
+10 月 9 日的报道说，
+As reported on October 9,
+
+41
+00:01:17,449 --> 00:01:18,995
+主智能体先拆计划，
+a lead agent makes a plan,
+
+42
+00:01:19,015 --> 00:01:21,832
+再分给子智能体，最后合并结果。
+hands tasks to sub-agents and merges the results.
+
+43
+00:01:21,852 --> 00:01:23,433
+一次运行最多可以同时跑
+In one execution, up to
+
+44
+00:01:23,453 --> 00:01:24,987
+1,000 个子智能体。
+1,000 sub-agents can run in parallel.
+
+45
+00:01:25,007 --> 00:01:27,562
+Anthropic 在 116,000 行代码里
+In 116,000 lines of code, Anthropic
+
+46
+00:01:27,582 --> 00:01:29,692
+藏了 70 个漏洞来测试。
+hid 70 bugs to test it.
+
+47
+00:01:29,712 --> 00:01:32,287
+单个智能体每次只找到 14 到 27 个，
+A single agent caught 14 to 27 per run,
+
+48
+00:01:32,307 --> 00:01:35,097
+动态工作流稳定找到 66 个。
+while the dynamic workflow consistently caught 66.
+
+49
+00:01:35,117 --> 00:01:36,837
+文章没有给价格。
+The article gives no pricing.
+
+50
+00:01:36,857 --> 00:01:39,640
+不过文章提醒，这会消耗大量 token，
+The article warns it can use a lot of tokens,
+
+51
+00:01:39,660 --> 00:01:41,522
+建议从小任务开始试。
+so start small.
+
+52
+00:01:41,542 --> 00:01:43,328
+而且这是 Anthropic 自己的测试，
+It is Anthropic's own test, and the gains
+
+53
+00:01:43,348 --> 00:01:46,348
+换成别的任务，效果不一定一样。
+may not hold across other task types.
+
+54
+00:01:46,548 --> 00:01:49,428
+第三件，Anthropic 用 Claude Science
+Third, Anthropic used Claude Science
+
+55
+00:01:49,448 --> 00:01:52,091
+画出了第一张完整的紫外天图。
+to produce the first complete map of the sky in UV light.
+
+56
+00:01:52,111 --> 00:01:53,478
+10 月 8 日发布，
+Published on October 8
+
+57
+00:01:53,498 --> 00:01:56,444
+作者是约翰斯·霍普金斯大学的天体
+by an astrophysicist at Johns Hopkins University
+
+58
+00:01:56,464 --> 00:01:57,243
+物理学家，
+and also a
+
+59
+00:01:57,263 --> 00:01:59,799
+同时也是 Anthropic 的研究员。
+researcher at Anthropic.
+
+60
+00:01:59,819 --> 00:02:02,018
+美国航天局的 GALEX 望远镜
+NASA's GALEX telescope covered
+
+61
+00:02:02,038 --> 00:02:04,290
+只测到大约三分之二的天空，
+only about two-thirds of the sky
+
+62
+00:02:04,310 --> 00:02:06,810
+银河系盘面基本是空白。
+and skipped the Milky Way plane.
+
+63
+00:02:06,830 --> 00:02:08,042
+剩下大约三分之一，
+About one-third of the map
+
+64
+00:02:08,062 --> 00:02:10,350
+是 Claude Science 预测出来的。
+was predicted with Claude Science.
+
+65
+00:02:10,370 --> 00:02:11,752
+它先让多个智能体
+Agents first searched
+
+66
+00:02:11,772 --> 00:02:13,855
+去找公开的紫外巡天数据，
+for public UV surveys,
+
+67
+00:02:13,875 --> 00:02:16,285
+去掉星光干扰，再统一校准。
+removed starlight glare and cross-calibrated them.
+
+68
+00:02:16,305 --> 00:02:18,021
+团队把已知区域遮住来验证，
+The team hid known regions to validate it,
+
+69
+00:02:18,041 --> 00:02:19,507
+预测和真实测量
+and predictions matched real UV
+
+70
+00:02:19,527 --> 00:02:21,329
+相差大约 10%。
+measurements to within about 10%.
+
+71
+00:02:21,349 --> 00:02:24,173
+整个过程做了十几个版本，花了好几天。
+It took more than a dozen versions over several days.
+
+72
+00:02:24,193 --> 00:02:27,205
+地图上每个像素都标了是实测还是预测，
+Every pixel is labeled measured or predicted,
+
+73
+00:02:27,225 --> 00:02:29,123
+还附上不确定度。
+with uncertainty estimates.
+
+74
+00:02:29,323 --> 00:02:30,562
+第四件，Anthropic
+Fourth, Anthropic published
+
+75
+00:02:30,582 --> 00:02:32,213
+发布了新版使用政策。
+a new version of its Usage Policy.
+
+76
+00:02:32,233 --> 00:02:33,429
+10 月 8 日公布，
+It was announced on October 8
+
+77
+00:02:33,449 --> 00:02:34,992
+11 月 12 日生效。
+and takes effect on November 12.
+
+78
+00:02:35,012 --> 00:02:36,423
+最受关注的一条是，
+The line that drew attention
+
+79
+00:02:36,443 --> 00:02:38,012
+禁止对模型做持续的、
+bans sustained and needless abusive
+
+80
+00:02:38,032 --> 00:02:40,112
+不必要的辱骂或残忍行为。
+or cruel behavior toward its models.
+
+81
+00:02:40,132 --> 00:02:42,558
+官方说这是留给极端情况的，
+Anthropic says it is meant for extreme cases,
+
+82
+00:02:42,578 --> 00:02:44,161
+普通的发火、反驳、
+and ordinary frustration, pushback,
+
+83
+00:02:44,181 --> 00:02:46,727
+黑暗题材创作和测试都不算。
+dark creative themes and testing do not count.
+
+84
+00:02:46,747 --> 00:02:49,208
+监控方面，不能未经同意追踪个人，
+On surveillance, you cannot track people without consent,
+
+85
+00:02:49,228 --> 00:02:51,296
+也不能让 Claude 决定该调查、
+and Claude cannot decide who to investigate,
+
+86
+00:02:51,316 --> 00:02:52,594
+逮捕或起诉谁。
+arrest or charge.
+
+87
+00:02:52,614 --> 00:02:54,131
+武器一条扩大到让武器
+The weapons rule now covers the software
+
+88
+00:02:54,151 --> 00:02:55,515
+运转的软件和部件，
+and components that make weapons work,
+
+89
+00:02:55,535 --> 00:02:57,665
+包括给无人机装武器。
+including arming drones.
+
+90
+00:02:57,685 --> 00:02:59,060
+会自主动手的硬件，
+Hardware that acts on its own needs
+
+91
+00:02:59,080 --> 00:03:01,386
+必须有合格的操作员能让它停下，
+a qualified operator who can stop it,
+
+92
+00:03:01,406 --> 00:03:04,276
+Claude 断线时还要保持安全状态。
+and it must hold a safe state if Claude disconnects.
+
+93
+00:03:04,296 --> 00:03:05,821
+选举那一节改名了，
+The elections section was renamed,
+
+94
+00:03:05,841 --> 00:03:07,545
+也删掉了对投票的个性化
+and the blanket ban on personalized
+
+95
+00:03:07,565 --> 00:03:09,526
+定向的一刀切禁令。
+vote targeting was removed.
+
+96
+00:03:09,726 --> 00:03:12,624
+第五件，字节 Seed 团队给 DeepSeek
+Fifth, ByteDance's Seed team has proposed a reason DeepSeek
+
+97
+00:03:12,644 --> 00:03:14,291
+时好时坏，找了个原因。
+can seem erratic on long inputs.
+
+98
+00:03:14,311 --> 00:03:17,598
+论文 9 月底发在 arXiv 上，10 月 9 日
+The paper went on arXiv in late September, and on October 9,
+
+99
+00:03:17,618 --> 00:03:19,440
+IT之家做了报道。
+IT Home covered it.
+
+100
+00:03:19,460 --> 00:03:21,486
+问题出在分块 KV 缓存压缩：
+The issue is chunked KV cache compression,
+
+101
+00:03:21,506 --> 00:03:22,921
+每隔固定步幅，
+which squeezes each window
+
+102
+00:03:22,941 --> 00:03:26,041
+把一段词压成更少的缓存条目。
+of tokens into fewer cache entries at a fixed stride.
+
+103
+00:03:26,061 --> 00:03:27,976
+这样每个词多了一个“相位”，
+That gives each token a phase:
+
+104
+00:03:27,996 --> 00:03:30,162
+就是它离压缩窗口边界有多远。
+how far it sits from the window boundary.
+
+105
+00:03:30,182 --> 00:03:33,157
+同一条信息，在某个相位容易被找到，
+The same information is easy to retrieve at one phase
+
+106
+00:03:33,177 --> 00:03:34,817
+换个相位就很难。
+and hard at another.
+
+107
+00:03:34,837 --> 00:03:36,956
+论文说，长文本检索准确率
+The paper says long-context
+
+108
+00:03:36,976 --> 00:03:38,382
+在不同相位之间，
+retrieval accuracy
+
+109
+00:03:38,402 --> 00:03:40,442
+最多能差 40 个百分点。
+can differ by up to 40 percentage points across phases.
+
+110
+00:03:40,462 --> 00:03:43,557
+平均分数看不出这个周期性的短板。
+Average benchmark scores can hide this periodic weakness.
+
+111
+00:03:43,577 --> 00:03:46,127
+测试的是 DeepSeek-V4-Flash、
+The models tested were DeepSeek-V4-Flash,
+
+112
+00:03:46,147 --> 00:03:48,282
+V4-Pro 和 V4.1-Flash。
+V4-Pro and V4.1-Flash.
+
+113
+00:03:48,302 --> 00:03:49,438
+这是预印本论文，
+It is a preprint,
+
+114
+00:03:49,458 --> 00:03:51,741
+报道里也没写具体怎么修。
+and the report does not describe a fix.
+
+115
+00:03:51,941 --> 00:03:54,126
+第六件，OpenAI 的年化营收，
+Sixth, OpenAI's annualized revenue
+
+116
+00:03:54,146 --> 00:03:57,010
+比外界之前传的少了大约 200 亿美元。
+is about $20 billion below what had been signaled earlier.
+
+117
+00:03:57,030 --> 00:03:59,250
+10 月 9 日，据金融时报报道，
+On October 9, the Financial Times reported
+
+118
+00:03:59,270 --> 00:04:01,522
+OpenAI 给投资者的最新财务文件
+that a new document for OpenAI investors shows
+
+119
+00:04:01,542 --> 00:04:02,903
+显示，截至 9 月底，
+that at the end of September,
+
+120
+00:04:02,923 --> 00:04:05,680
+年化营收接近 500 亿美元。
+annualized revenue is near $50 billion.
+
+121
+00:04:05,700 --> 00:04:07,633
+上个月主流媒体报道的数字，
+Mainstream media had reported
+
+122
+00:04:07,653 --> 00:04:09,123
+高达 700 亿美元。
+as much as $70 billion the month before.
+
+123
+00:04:09,143 --> 00:04:10,143
+报道给的原因是，
+The report says investors
+
+124
+00:04:10,163 --> 00:04:12,113
+投资者把它直接和 Anthropic 比，
+compared it directly with Anthropic,
+
+125
+00:04:12,133 --> 00:04:14,192
+但两家的算法不一样。
+but the two count revenue differently.
+
+126
+00:04:14,212 --> 00:04:15,941
+Anthropic 把通过 AWS、
+Anthropic counts revenue sold
+
+127
+00:04:15,961 --> 00:04:17,431
+Google Cloud 这些云
+through cloud partners
+
+128
+00:04:17,451 --> 00:04:19,419
+伙伴卖出去的收入算进去，
+like AWS and Google Cloud,
+
+129
+00:04:19,439 --> 00:04:20,812
+OpenAI 不算。
+and OpenAI does not.
+
+130
+00:04:20,832 --> 00:04:22,269
+年化营收被看作全球
+Annualized revenue is treated
+
+131
+00:04:22,289 --> 00:04:24,013
+AI 需求的重要指标。
+as a key indicator of global AI demand.
+
+132
+00:04:24,033 --> 00:04:25,375
+两边口径不一样，
+The two use different definitions,
+
+133
+00:04:25,395 --> 00:04:27,328
+直接比数字会有偏差。
+so comparing the raw numbers can mislead.
+
+134
+00:04:27,348 --> 00:04:29,426
+这是媒体转述的投资者文件，
+This comes from press reports of an investor document,
+
+135
+00:04:29,446 --> 00:04:31,954
+不是 OpenAI 的公开声明。
+not a public statement from OpenAI.
+
+136
+00:04:32,154 --> 00:04:33,771
+第七件，德国搜索引擎
+Seventh, the German search
+
+137
+00:04:33,791 --> 00:04:35,881
+Ecosia 不用 Mistral 了。
+engine Ecosia has dropped Mistral.
+
+138
+00:04:35,901 --> 00:04:38,346
+据 IT之家 10 月 8 日转述《政治报》，
+According to IT Home on October 8, citing Politico,
+
+139
+00:04:38,366 --> 00:04:40,876
+Ecosia 改用中国的开源模型。
+Ecosia has switched to Chinese open-source models.
+
+140
+00:04:40,896 --> 00:04:41,680
+今年 5 月，
+Back in May,
+
+141
+00:04:41,700 --> 00:04:44,131
+它刚从 OpenAI 换到 Mistral。
+it had just moved from OpenAI to Mistral.
+
+142
+00:04:44,151 --> 00:04:47,121
+创始人兼 CEO 克里斯蒂安·克罗尔说，
+Founder and CEO Christian Kroll said he was disappointed
+
+143
+00:04:47,141 --> 00:04:48,858
+对 Mistral 的质量失望，
+with Mistral's quality,
+
+144
+00:04:48,878 --> 00:04:51,171
+说它已经落后对手整整一年。
+calling it a full year behind its competitors.
+
+145
+00:04:51,191 --> 00:04:53,397
+Ecosia 还提到服务器经常过载，
+Ecosia also cited frequent server overload,
+
+146
+00:04:53,417 --> 00:04:55,737
+也怀疑 Mistral 够不够中立。
+and questioned whether Mistral is truly neutral.
+
+147
+00:04:55,757 --> 00:04:57,040
+现在它通过 Melious，
+It now works with Melious
+
+148
+00:04:57,060 --> 00:04:58,226
+用阿里的 Qwen、
+to use Alibaba's Qwen,
+
+149
+00:04:58,246 --> 00:05:00,688
+智谱的 GLM 和月之暗面的 Kimi。
+Zhipu's GLM and Moonshot AI's Kimi.
+
+150
+00:05:00,708 --> 00:05:03,315
+据报道，这次切换让成本降了一半，
+The switch reportedly cut costs in half
+
+151
+00:05:03,335 --> 00:05:04,714
+性能也有提升。
+and brought performance gains.
+
+152
+00:05:04,734 --> 00:05:06,550
+报道没有给具体的性能数字，
+The report gives no performance figures,
+
+153
+00:05:06,570 --> 00:05:07,823
+一家公司的说法，
+so one company's view
+
+154
+00:05:07,843 --> 00:05:10,143
+不能直接当成模型排名。
+is not a model ranking.
+
+155
+00:05:10,343 --> 00:05:12,728
+今天就这些，来源都在简介里。
+That's all for today. Sources are in the description.
+
+156
+00:05:12,748 --> 00:05:14,081
+我们明天见。
+See you tomorrow.

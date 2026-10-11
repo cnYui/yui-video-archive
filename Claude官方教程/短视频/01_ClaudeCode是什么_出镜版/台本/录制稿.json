@@ -1,0 +1,755 @@
+{
+ "slug": "ClaudeCode是什么_出镜版",
+ "title": "Claude官方教程 第1期｜Claude Code 是什么、怎么工作",
+ "kicker": "<b>Claude官方教程</b> 第1期",
+ "hook": [
+  "Claude Code 是什么",
+  "怎么干活，一个视频讲清楚"
+ ],
+ "lines": [
+  {
+   "id": "T01",
+   "zh": "嗨，大家好。",
+   "say": "嗨，大家好。",
+   "en": "Hi, everyone."
+  },
+  {
+   "id": "T02",
+   "zh": "今天这个系列，我会带着大家从零开始入门使用 Claude Code。",
+   "say": "今天这个系列，我会带着大家从零开始入门使用 Claude Code。",
+   "en": "In this series, I'll take you from zero to getting started with Claude Code."
+  },
+  {
+   "id": "T03",
+   "zh": "我相信点进来的朋友，多多少少对 AI 有一些自己的使用经验，",
+   "say": "我相信点进来的朋友，多多少少对 AI 有一些自己的使用经验，",
+   "en": "I'm sure those of you who clicked in already have some experience using AI,"
+  },
+  {
+   "id": "T04",
+   "zh": "而这期视频，就会带着大家系统地把使用 AI 的方法过一遍。",
+   "say": "而这期视频，就会带着大家系统地把使用 AI 的方法过一遍。",
+   "en": "and this video will walk you through how to use AI, systematically."
+  },
+  {
+   "id": "T05",
+   "zh": "AI 就是工具，只有知道怎么用工具，才能更好地使用工具。",
+   "say": "AI 就是工具，只有知道怎么用工具，才能更好地使用工具。",
+   "en": "AI is a tool, and you can only use a tool well once you know how to use it."
+  },
+  {
+   "id": "T06",
+   "zh": "当前所有的资料，都来源于 Anthropic 官网提供的免费资料，",
+   "say": "当前所有的资料，都来源于 Anthropic 官网提供的免费资料，",
+   "en": "All the material here comes from the free resources on Anthropic's website,"
+  },
+  {
+   "id": "T07",
+   "zh": "可以像图中这样，去找到它的原始的内容。",
+   "say": "可以像图中这样，去找到它的原始的内容。",
+   "en": "and you can find the original content the way you see on screen."
+  },
+  {
+   "id": "T08",
+   "zh": "好，那我们开始。",
+   "say": "好，那我们开始。",
+   "en": "Alright, let's begin."
+  },
+  {
+   "id": "T09",
+   "zh": "第一个概念，Claude Code 和 Claude Cowork，之后统称为 Claude。",
+   "say": "第一个概念，Claude Code 和 Claude Cowork，之后统称为 Claude。",
+   "en": "First concept: Claude Code and Claude Cowork. From here on I'll just call them Claude."
+  },
+  {
+   "id": "T10",
+   "zh": "这两个有什么区别？",
+   "say": "这两个有什么区别？",
+   "en": "What's the difference between these two?"
+  },
+  {
+   "id": "T11",
+   "zh": "那网页版的聊天窗口里的那个 Claude 呢，它是一个 chatbox。",
+   "say": "那网页版的聊天窗口里的那个 Claude 呢，它是一个 chatbox。",
+   "en": "The Claude in the web chat window is a chatbox."
+  },
+  {
+   "id": "T12",
+   "zh": "它可以回答问题，但是它没有办法修改电脑里的文件，也就是没有办法把双手伸到电脑里。",
+   "say": "它可以回答问题，但是它没有办法修改电脑里的文件，也就是没有办法把双手伸到电脑里。",
+   "en": "It can answer questions, but it can't modify the files on your computer. It can't reach its hands into your machine."
+  },
+  {
+   "id": "T13",
+   "zh": "写完代码之后，我得自己去复制粘贴和运行。",
+   "say": "写完代码之后，我得自己去复制粘贴和运行。",
+   "en": "After it writes code, I have to copy, paste and run it myself."
+  },
+  {
+   "id": "T14",
+   "zh": "一旦代码有错，我得贴回去再问它。",
+   "say": "一旦代码有错，我得贴回去再问它。",
+   "en": "If the code has an error, I have to paste it back and ask again."
+  },
+  {
+   "id": "T15",
+   "zh": "前几年的 AI 是这样的一个形式，而 Claude Code，就是把这只手伸进了我的电脑的操作系统中。",
+   "say": "前几年的 AI 是这样的一个形式，而 Claude Code，就是把这只手伸进了我的电脑的操作系统中。",
+   "en": "That's what AI looked like a few years ago. Claude Code puts that hand into my computer's operating system."
+  },
+  {
+   "id": "T16",
+   "zh": "它能够创建、修改、删除整个电脑上的任何内容，任何文件。",
+   "say": "它能够创建、修改、删除整个电脑上的任何内容，任何文件。",
+   "en": "It can create, modify and delete anything on the whole computer, any file."
+  },
+  {
+   "id": "T17",
+   "zh": "那么 Claude Code，它是什么呢？",
+   "say": "那么 Claude Code，它是什么呢？",
+   "en": "So what is Claude Code?"
+  },
+  {
+   "id": "T18",
+   "zh": "Claude Code 是 Anthropic 官方做的一个 AI 助手。",
+   "say": "Claude Code 是 Anthropic 官方做的一个 AI 助手。",
+   "en": "Claude Code is an AI assistant made by Anthropic."
+  },
+  {
+   "id": "T19",
+   "zh": "它能在你的电脑上，自己动手干活。",
+   "say": "它能在你的电脑上，自己动手干活。",
+   "en": "It works on your computer and does the work itself."
+  },
+  {
+   "id": "T20",
+   "zh": "我们可以举一个例子，比如说聊天窗口，它就像请一个顾问，隔着电话去给我出主意。",
+   "say": "我们可以举一个例子，比如说聊天窗口，它就像请一个顾问，隔着电话去给我出主意。",
+   "en": "Take an example: a chat window is like hiring a consultant who gives me advice over the phone."
+  },
+  {
+   "id": "T21",
+   "zh": "我问的一些问题呢，它会给我回答，但是我必须要粘贴。",
+   "say": "我问的一些问题呢，它会给我回答，但是我必须要粘贴。",
+   "en": "It answers the questions I ask, but I have to paste things in."
+  },
+  {
+   "id": "T22",
+   "zh": "如果有报错的话，我得粘贴到它这个窗口里去问它。",
+   "say": "如果有报错的话，我得粘贴到它这个窗口里去问它。",
+   "en": "If there's an error, I have to paste it into that window and ask."
+  },
+  {
+   "id": "T23",
+   "zh": "而 Claude Code 呢，就像请了一个助手，请了一个同事，他直接坐在了你的电脑前面，",
+   "say": "而 Claude Code 呢，就像请了一个助手，请了一个同事，他直接坐在了你的电脑前面，",
+   "en": "Claude Code is like hiring an assistant, a colleague, who sits right at your computer"
+  },
+  {
+   "id": "T24",
+   "zh": "去在你的项目文件里，去找代码，改代码，跑命令，搜索整个项目，创建文件，删除文件。",
+   "say": "去在你的项目文件里，去找代码，改代码，跑命令，搜索整个项目，创建文件，删除文件。",
+   "en": "and finds code in your project files, edits code, runs commands, searches the whole project, creates and deletes files."
+  },
+  {
+   "id": "T25",
+   "zh": "它的活动范围，默认是这个文件夹里的子文件夹。",
+   "say": "它的活动范围，默认是这个文件夹里的子文件夹。",
+   "en": "By default it only works inside this folder and its subfolders."
+  },
+  {
+   "id": "T26",
+   "zh": "如果想要去碰别的地方的话，必须要经过你的同意。",
+   "say": "如果想要去碰别的地方的话，必须要经过你的同意。",
+   "en": "If it wants to touch anywhere else, it needs your permission."
+  },
+  {
+   "id": "T27",
+   "zh": "那么我如何去启动 Claude 呢？",
+   "say": "那么我如何去启动 Claude 呢？",
+   "en": "So how do I start Claude?"
+  },
+  {
+   "id": "T28",
+   "zh": "就是在终端里，去输入 Claude 这个命令，它就启动了。",
+   "say": "就是在终端里，去输入 Claude 这个命令，它就启动了。",
+   "en": "You type the claude command in a terminal, and it starts."
+  },
+  {
+   "id": "T29",
+   "zh": "那终端是什么？终端是那个只能敲命令的窗口，白底黑字的那个窗口。",
+   "say": "那终端是什么？终端是那个只能敲命令的窗口，白底黑字的那个窗口。",
+   "en": "What's a terminal? It's the window where you can only type commands, the one with black text on a white background."
+  },
+  {
+   "id": "T30",
+   "zh": "那有朋友就会觉得很陌生，可能他就会觉得有些劝退，",
+   "say": "那有朋友就会觉得很陌生，可能他就会觉得有些劝退，",
+   "en": "Some of you may find that unfamiliar, maybe even a bit off-putting,"
+  },
+  {
+   "id": "T31",
+   "zh": "但是不用担心，你只要敲了 Claude 这个命令之后，你用自然语言去跟它沟通，其实就可以了。",
+   "say": "但是不用担心，你只要敲了 Claude 这个命令之后，你用自然语言去跟它沟通，其实就可以了。",
+   "en": "but don't worry. Once you've typed the claude command, you just talk to it in plain language."
+  },
+  {
+   "id": "T32",
+   "zh": "这样一个能看环境，能动手，能一步一步完成目标的软件，业内叫智能体，英文名叫 AI Agent。",
+   "say": "这样一个能看环境，能动手，能一步一步完成目标的软件，业内叫智能体，英文名叫 AI Agent。",
+   "en": "Software that can see its environment, take action and reach a goal step by step is called an agent in the industry. In English, an AI Agent."
+  },
+  {
+   "id": "T33",
+   "zh": "而 Claude Code，它就是一个典型的智能体的一个框架。",
+   "say": "而 Claude Code，它就是一个典型的智能体的一个框架。",
+   "en": "Claude Code is a typical agent framework."
+  },
+  {
+   "id": "T34",
+   "zh": "名字里有一个 Code，但是它不是只是用来写代码的，",
+   "say": "名字里有一个 Code，但是它不是只是用来写代码的，",
+   "en": "It has \"Code\" in the name, but it isn't only for writing code."
+  },
+  {
+   "id": "T35",
+   "zh": "它可以去写文档，跑程序，搜文件，查资料，都可以。",
+   "say": "它可以去写文档，跑程序，搜文件，查资料，都可以。",
+   "en": "It can write documents, run programs, search files, look things up, all of it."
+  },
+  {
+   "id": "T36",
+   "zh": "所以它真正的本事，是替你动手。",
+   "say": "所以它真正的本事，是替你动手。",
+   "en": "So its real skill is doing the work for you."
+  },
+  {
+   "id": "T37",
+   "zh": "好，刚刚我们知道了它是什么之后，那它具体能干什么呢？",
+   "say": "好，刚刚我们知道了它是什么之后，那它具体能干什么呢？",
+   "en": "OK, now that we know what it is, what can it actually do?"
+  },
+  {
+   "id": "T38",
+   "zh": "它第一点，可以读项目。",
+   "say": "它第一点，可以读项目。",
+   "en": "First, it can read a project."
+  },
+  {
+   "id": "T39",
+   "zh": "比如说你可以问它，这个项目是干什么的？它自己去翻文件，然后讲给你听。",
+   "say": "比如说你可以问它，这个项目是干什么的？它自己去翻文件，然后讲给你听。",
+   "en": "For example, ask it what this project does. It goes through the files itself and explains it to you."
+  },
+  {
+   "id": "T40",
+   "zh": "你还可以跟它说，讲得详细一点，或者讲得简略一点，或者讲得用大白话的语言讲一遍。",
+   "say": "你还可以跟它说，讲得详细一点，或者讲得简略一点，或者讲得用大白话的语言讲一遍。",
+   "en": "You can also ask for more detail, or a shorter version, or an explanation in plain language."
+  },
+  {
+   "id": "T41",
+   "zh": "第二个就是改代码。",
+   "say": "第二个就是改代码。",
+   "en": "Second, it edits code."
+  },
+  {
+   "id": "T42",
+   "zh": "用户提出了自己想要的效果和需求，比如说我要做一个非常炫酷的网页，",
+   "say": "用户提出了自己想要的效果和需求，比如说我要做一个非常炫酷的网页，",
+   "en": "The user states the effect and requirements they want, say, a really cool web page,"
+  },
+  {
+   "id": "T43",
+   "zh": "它就能根据你的需求，作为它的目标，自己去联网找这种动效库，自己去找本地的文件，然后会改好给你。",
+   "say": "它就能根据你的需求，作为它的目标，自己去联网找这种动效库，自己去找本地的文件，然后会改好给你。",
+   "en": "and it takes your request as its goal, finds animation libraries online by itself, finds the local files itself, and gives you the finished edit."
+  },
+  {
+   "id": "T44",
+   "zh": "第三点就是跑命令，你要装一个软件，卸载一个软件，跑一个程序，跑一下检查，想要看到一个结果，",
+   "say": "第三点就是跑命令，你要装一个软件，卸载一个软件，跑一个程序，跑一下检查，想要看到一个结果，",
+   "en": "Third, it runs commands: install a program, uninstall one, run a program, run a check, whatever result you want to see."
+  },
+  {
+   "id": "T45",
+   "zh": "它就会去跑这些命令，然后给你回答。",
+   "say": "它就会去跑这些命令，然后给你回答。",
+   "en": "It runs those commands and then gives you the answer."
+  },
+  {
+   "id": "T46",
+   "zh": "第四点就是上网查资料，比如说我会做一些新闻聚合的内容，",
+   "say": "第四点就是上网查资料，比如说我会做一些新闻聚合的内容，",
+   "en": "Fourth, it looks things up online. For example, I make news-roundup content,"
+  },
+  {
+   "id": "T47",
+   "zh": "它就会每天定时定点地去搜这些新闻，然后把它整理好，创建一个新的文档，来给我看。",
+   "say": "它就会每天定时定点地去搜这些新闻，然后把它整理好，创建一个新的文档，来给我看。",
+   "en": "and it searches the news at a set time every day, organizes it, and creates a new document for me to read."
+  },
+  {
+   "id": "T48",
+   "zh": "这些事情不需要一件件自己指挥，你只要去提前写好之后，告诉它目标，先干哪个，再干哪个，它就会自己去做。",
+   "say": "这些事情不需要一件件自己指挥，你只要去提前写好之后，告诉它目标，先干哪个，再干哪个，它就会自己去做。",
+   "en": "You don't need to direct these one by one. Write it up in advance, tell it the goal and what to do first and next, and it does it by itself."
+  },
+  {
+   "id": "T49",
+   "zh": "那么它是怎么去干活的呢？",
+   "say": "那么它是怎么去干活的呢？",
+   "en": "So how does it do its work?"
+  },
+  {
+   "id": "T50",
+   "zh": "这里就要提到一个循环的概念。",
+   "say": "这里就要提到一个循环的概念。",
+   "en": "This is where a loop comes in."
+  },
+  {
+   "id": "T51",
+   "zh": "这个多轮的一个操作，叫 agent loop，",
+   "say": "这个多轮的一个操作，叫 agent loop，",
+   "en": "This multi-round process is called the agent loop."
+  },
+  {
+   "id": "T52",
+   "zh": "它会先把你的要求，你的 prompt，作为它必须要完成的目标，然后经过多轮的思考和操作，来达成这个目标。",
+   "say": "它会先把你的要求，你的 prompt，作为它必须要完成的目标，然后经过多轮的思考和操作，来达成这个目标。",
+   "en": "It takes your request, your prompt, as the goal it must complete, then goes through several rounds of thinking and acting to reach it."
+  },
+  {
+   "id": "T53",
+   "zh": "这个也就是常说的代理循环。",
+   "say": "这个也就是常说的代理循环。",
+   "en": "That's what people call the agentic loop."
+  },
+  {
+   "id": "T54",
+   "zh": "那举个例子嘛，比如说你跟他说了，我做了一个网页，有一个页面登录页，我点了没反应，然后你帮我修一下，发给它。",
+   "say": "那举个例子嘛，比如说你跟他说了，我做了一个网页，有一个页面登录页，我点了没反应，然后你帮我修一下，发给它。",
+   "en": "Let's take an example. Say you tell it: I built a web page, the login page doesn't respond when I click, please fix it, and you send that."
+  },
+  {
+   "id": "T55",
+   "zh": "然后 Claude 收到你的需求之后，它就会列为它必须完成的目标。",
+   "say": "然后 Claude 收到你的需求之后，它就会列为它必须完成的目标。",
+   "en": "When Claude receives your request, it lists it as a goal it must complete."
+  },
+  {
+   "id": "T56",
+   "zh": "然后 Claude 就会用命令行，也就是它的工具，去查看代码文件。",
+   "say": "然后 Claude 就会用命令行，也就是它的工具，去查看代码文件。",
+   "en": "Then Claude uses the command line, which is its tool, to look at the code files."
+  },
+  {
+   "id": "T57",
+   "zh": "而这些都不用太担心，因为这只是作为了解而已。",
+   "say": "而这些都不用太担心，因为这只是作为了解而已。",
+   "en": "You don't need to worry about any of this; it's just for understanding."
+  },
+  {
+   "id": "T58",
+   "zh": "这些 Claude 它会自己去完成这些事情，我们只需要了解就可以了。",
+   "say": "这些 Claude 它会自己去完成这些事情，我们只需要了解就可以了。",
+   "en": "Claude does these things by itself; we only need to understand them."
+  },
+  {
+   "id": "T59",
+   "zh": "Claude 它用它的命令去查看了代码文件，然后找到了跟代码登录页面相关的代码，然后去读了这个报错，然后去动手改，",
+   "say": "Claude 它用它的命令去查看了代码文件，然后找到了跟代码登录页面相关的代码，然后去读了这个报错，然后去动手改，",
+   "en": "Claude uses its commands to look at the code files, finds the code related to the login page, reads the error, and then goes to edit it."
+  },
+  {
+   "id": "T60",
+   "zh": "改了判断出了毛病在哪里，把这个文件改了之后再去跑。",
+   "say": "改了判断出了毛病在哪里，把这个文件改了之后再去跑。",
+   "en": "It works out where the problem is, edits the file, and then runs it."
+  },
+  {
+   "id": "T61",
+   "zh": "跑了之后看看有没有修好，如果修好了，它就达成了这个目标。",
+   "say": "跑了之后看看有没有修好，如果修好了，它就达成了这个目标。",
+   "en": "After running it, it checks whether it's fixed. If it is, it has reached the goal."
+  },
+  {
+   "id": "T62",
+   "zh": "如果没有修好，你就再回到第一步，再重新地去修改代码，再转一圈，一直转，直到目标达成。",
+   "say": "如果没有修好，你就再回到第一步，再重新地去修改代码，再转一圈，一直转，直到目标达成。",
+   "en": "If it isn't, go back to step one, edit the code again, go around once more, and keep going until the goal is met."
+  },
+  {
+   "id": "T63",
+   "zh": "这三步不是死板的流水线，会混在一起。",
+   "say": "这三步不是死板的流水线，会混在一起。",
+   "en": "These three steps aren't a rigid assembly line; they blend together."
+  },
+  {
+   "id": "T64",
+   "zh": "有的时候问一个问题呢，它可能只需要转半圈，",
+   "say": "有的时候问一个问题呢，它可能只需要转半圈，",
+   "en": "Sometimes you ask one question and it only needs half a loop."
+  },
+  {
+   "id": "T65",
+   "zh": "比如说它完成了一个任务，一步它就完成了，那就没有这个循环。",
+   "say": "比如说它完成了一个任务，一步它就完成了，那就没有这个循环。",
+   "en": "If it finishes a task in one step, there's no loop at all."
+  },
+  {
+   "id": "T66",
+   "zh": "那如果有一个毛病比较难，它会常常都会反复地去修改，反复地去执行命令，",
+   "say": "那如果有一个毛病比较难，它会常常都会反复地去修改，反复地去执行命令，",
+   "en": "If a problem is harder, it usually edits over and over and runs commands over and over."
+  },
+  {
+   "id": "T67",
+   "zh": "它能连着做几十步，一边做，它能一边纠正自己。",
+   "say": "它能连着做几十步，一边做，它能一边纠正自己。",
+   "en": "It can chain dozens of steps, correcting itself as it goes."
+  },
+  {
+   "id": "T68",
+   "zh": "还有一点就很关键，就是如果你发现它有一些地方做错了，或者说你有新的想法，你就可以随时地打断它。",
+   "say": "还有一点就很关键，就是如果你发现它有一些地方做错了，或者说你有新的想法，你就可以随时地打断它。",
+   "en": "One more key point: if you see it getting something wrong, or you have a new idea, you can interrupt it at any time."
+  },
+  {
+   "id": "T69",
+   "zh": "你就可以按 ESC，让它停止。",
+   "say": "你就可以按 ESC，让它停止。",
+   "en": "Press ESC to make it stop."
+  },
+  {
+   "id": "T70",
+   "zh": "或者你想要在它的循环里去插一些你自己的新的内容，你就可以去回车，把你的内容打字出来，然后回车发给它。",
+   "say": "或者你想要在它的循环里去插一些你自己的新的内容，你就可以去回车，把你的内容打字出来，然后回车发给它。",
+   "en": "Or if you want to add something of your own into its loop, type it out and press Enter to send it."
+  },
+  {
+   "id": "T71",
+   "zh": "当它把手头的这批内容执行完之后，就会读到你的话，然后去进行调整。",
+   "say": "当它把手头的这批内容执行完之后，就会读到你的话，然后去进行调整。",
+   "en": "When it finishes the batch it's working on, it reads what you wrote and adjusts."
+  },
+  {
+   "id": "T72",
+   "zh": "那么第四点就是，这个循环是怎么跑起来的？",
+   "say": "那么第四点就是，这个循环是怎么跑起来的？",
+   "en": "Fourth point: how does this loop actually run?"
+  },
+  {
+   "id": "T73",
+   "zh": "这里就要说到四个点。",
+   "say": "这里就要说到四个点。",
+   "en": "That brings us to four things."
+  },
+  {
+   "id": "T74",
+   "zh": "第一个就是大脑，第二个是双手，第三个是它的记忆，第四个就是钥匙。",
+   "say": "第一个就是大脑，第二个是双手，第三个是它的记忆，第四个就是钥匙。",
+   "en": "First, the brain. Second, the hands. Third, its memory. Fourth, the key."
+  },
+  {
+   "id": "T75",
+   "zh": "先说大脑的话，它的大脑就是 Claude 模型。",
+   "say": "先说大脑的话，它的大脑就是 Claude 模型。",
+   "en": "Start with the brain: its brain is the Claude model."
+  },
+  {
+   "id": "T76",
+   "zh": "Claude 模型不是在本地，是在云端的。",
+   "say": "Claude 模型不是在本地，是在云端的。",
+   "en": "The Claude model isn't local; it's in the cloud."
+  },
+  {
+   "id": "T77",
+   "zh": "这个模型呢，它能听懂你的话，能看懂代码，决定下一步做什么，",
+   "say": "这个模型呢，它能听懂你的话，能看懂代码，决定下一步做什么，",
+   "en": "The model understands what you say, reads code, and decides what to do next,"
+  },
+  {
+   "id": "T78",
+   "zh": "但是它没有办法在本地执行这些任务，执行这些命令。",
+   "say": "但是它没有办法在本地执行这些任务，执行这些命令。",
+   "en": "but it can't carry out these tasks or run these commands locally."
+  },
+  {
+   "id": "T79",
+   "zh": "那它的双手，也就是它的工具，是用来执行这些命令的。",
+   "say": "那它的双手，也就是它的工具，是用来执行这些命令的。",
+   "en": "Its hands, meaning its tools, are what run those commands."
+  },
+  {
+   "id": "T80",
+   "zh": "它的双手并不知道要执行什么，所以是通过它的大脑，去告诉它的双手，去执行什么命令，它才能修改本地的内容。",
+   "say": "它的双手并不知道要执行什么，所以是通过它的大脑，去告诉它的双手，去执行什么命令，它才能修改本地的内容。",
+   "en": "The hands don't know what to run, so the brain tells the hands which commands to execute, and only then can it change local content."
+  },
+  {
+   "id": "T81",
+   "zh": "比如说本地有一个代码，然后你提出了这样一个修复代码的需求，",
+   "say": "比如说本地有一个代码，然后你提出了这样一个修复代码的需求，",
+   "en": "Say you have some code locally and you ask it to fix something."
+  },
+  {
+   "id": "T82",
+   "zh": "你的这个 prompt 就会发给云端的 Claude 模型，",
+   "say": "你的这个 prompt 就会发给云端的 Claude 模型，",
+   "en": "Your prompt is sent to the Claude model in the cloud."
+  },
+  {
+   "id": "T83",
+   "zh": "Claude 模型就会说，我要找一下这个 bug 是哪些文件里的，然后他就会发到本地，去让 Claude Code 去用工具，来查看包含这个 bug 的代码，",
+   "say": "Claude 模型就会说，我要找一下这个 bug 是哪些文件里的，然后他就会发到本地，去让 Claude Code 去用工具，来查看包含这个 bug 的代码，",
+   "en": "The model says: I need to find which files this bug is in. It sends that to your machine, so Claude Code uses tools to look at the code containing the bug."
+  },
+  {
+   "id": "T84",
+   "zh": "然后你的请求，再加上你的这个代码，再发给他的 Claude 模型这个大脑，",
+   "say": "然后你的请求，再加上你的这个代码，再发给他的 Claude 模型这个大脑，",
+   "en": "Then your request plus that code goes back to the Claude model, the brain."
+  },
+  {
+   "id": "T85",
+   "zh": "大脑去做了一些修改代码的判断之后，",
+   "say": "大脑去做了一些修改代码的判断之后，",
+   "en": "After the brain decides how to change the code,"
+  },
+  {
+   "id": "T86",
+   "zh": "本地去调用工具，把代码修改之后，跑出来，如果说跑通了，再发回他的大脑，他大脑说，OK，这个任务完成了，",
+   "say": "本地去调用工具，把代码修改之后，跑出来，如果说跑通了，再发回他的大脑，他大脑说，OK，这个任务完成了，",
+   "en": "the local side calls the tools, edits the code and runs it. If it passes, that's sent back to the brain, which says: OK, the task is done."
+  },
+  {
+   "id": "T87",
+   "zh": "他就会把已经完成了这个任务，再发到本地，这样你就能看到他的这样一个结果。",
+   "say": "他就会把已经完成了这个任务，再发到本地，这样你就能看到他的这样一个结果。",
+   "en": "It sends the completed result back to your machine, and that's how you see the outcome."
+  },
+  {
+   "id": "T88",
+   "zh": "那么第三点就是记忆，学名叫上下文窗口，",
+   "say": "那么第三点就是记忆，学名叫上下文窗口，",
+   "en": "The third thing is memory, formally called the context window."
+  },
+  {
+   "id": "T89",
+   "zh": "你说过的 prompt，他读过的文件，以及命令跑出来的结果，都在他的记忆里。",
+   "say": "你说过的 prompt，他读过的文件，以及命令跑出来的结果，都在他的记忆里。",
+   "en": "The prompts you wrote, the files it read, and the results of the commands it ran are all in its memory."
+  },
+  {
+   "id": "T90",
+   "zh": "但是模型的记忆大小是有限的，就跟存储一样，满了的话呢，",
+   "say": "但是模型的记忆大小是有限的，就跟存储一样，满了的话呢，",
+   "en": "But a model's memory is limited, just like storage, and when it fills up,"
+  },
+  {
+   "id": "T91",
+   "zh": "模型他会自动地去压缩，自动地把旧的命令给清除掉。",
+   "say": "模型他会自动地去压缩，自动地把旧的命令给清除掉。",
+   "en": "the model automatically compresses, and automatically clears out old commands."
+  },
+  {
+   "id": "T92",
+   "zh": "他的代价就是很早之前交代的细节就没有了，就比如说你一开始发的内容，他可能就不知道是什么了。",
+   "say": "他的代价就是很早之前交代的细节就没有了，就比如说你一开始发的内容，他可能就不知道是什么了。",
+   "en": "The cost is that details you gave long ago are gone. For instance, what you sent at the very beginning, it may no longer know."
+  },
+  {
+   "id": "T93",
+   "zh": "然后每开一个新的对话呢，也就是新开了一场对话，他的记忆就是空的，",
+   "say": "然后每开一个新的对话呢，也就是新开了一场对话，他的记忆就是空的，",
+   "en": "And every time you open a new conversation, its memory is empty;"
+  },
+  {
+   "id": "T94",
+   "zh": "他就不会带着另一个窗口的聊天内容，他这些都是独立的，",
+   "say": "他就不会带着另一个窗口的聊天内容，他这些都是独立的，",
+   "en": "it won't carry over the chat from another window; they're all independent."
+  },
+  {
+   "id": "T95",
+   "zh": "如果说你想让他每次都去遵守一个规则，你就要去把它写到 CLAUDE.md 这个文件里，",
+   "say": "如果说你想让他每次都去遵守一个规则，你就要去把它写到 CLAUDE.md 这个文件里，",
+   "en": "If you want it to follow a rule every time, write it into a file called CLAUDE.md."
+  },
+  {
+   "id": "T96",
+   "zh": "他每次在开启一个新的 session，开启一个新的会话的时候，都会先读这个文件，",
+   "say": "他每次在开启一个新的 session，开启一个新的会话的时候，都会先读这个文件，",
+   "en": "Every time it starts a new session, a new conversation, it reads that file first."
+  },
+  {
+   "id": "T97",
+   "zh": "这个文件很重要，我们之后的视频会专门地去讲这个文件。",
+   "say": "这个文件很重要，我们之后的视频会专门地去讲这个文件。",
+   "en": "That file is important; a later video will cover it in detail."
+  },
+  {
+   "id": "T98",
+   "zh": "第四点就是钥匙，也就是权限。",
+   "say": "第四点就是钥匙，也就是权限。",
+   "en": "The fourth is the key, which means permissions."
+  },
+  {
+   "id": "T99",
+   "zh": "Claude Code 他要改你本地的文件的时候呢，你是可以设定权限的，",
+   "say": "Claude Code 他要改你本地的文件的时候呢，你是可以设定权限的，",
+   "en": "When Claude Code wants to change your local files, you can set permissions:"
+  },
+  {
+   "id": "T100",
+   "zh": "他可以改什么，不可以改什么。",
+   "say": "他可以改什么，不可以改什么。",
+   "en": "what it may change and what it may not."
+  },
+  {
+   "id": "T101",
+   "zh": "比如说他分为手动档，手动档就是改文件的时候，他会先问你，",
+   "say": "比如说他分为手动档，手动档就是改文件的时候，他会先问你，",
+   "en": "For example, there's manual mode, where it asks you first whenever it changes a file."
+  },
+  {
+   "id": "T102",
+   "zh": "然后能够接受编辑档，就是在项目文件夹里改文件，不问你，",
+   "say": "然后能够接受编辑档，就是在项目文件夹里改文件，不问你，",
+   "en": "Then there's accept-edits mode, where it edits files in the project folder without asking you,"
+  },
+  {
+   "id": "T103",
+   "zh": "建立文件夹、移动、删除这几类常见的文件操作也不问，",
+   "say": "建立文件夹、移动、删除这几类常见的文件操作也不问，",
+   "en": "and doesn't ask about common file operations like creating a folder, moving, or deleting either;"
+  },
+  {
+   "id": "T104",
+   "zh": "别的命令他还是会问。",
+   "say": "别的命令他还是会问。",
+   "en": "other commands it still asks about."
+  },
+  {
+   "id": "T105",
+   "zh": "Plan，这个计划档，就是只研究出方案，不碰你的代码，",
+   "say": "Plan，这个计划档，就是只研究出方案，不碰你的代码，",
+   "en": "Plan mode only works out a plan and doesn't touch your code."
+  },
+  {
+   "id": "T106",
+   "zh": "自动呢，就是让他放手去做，后台会有一道安全检查，专门拦一些删除的危险操作，",
+   "say": "自动呢，就是让他放手去做，后台会有一道安全检查，专门拦一些删除的危险操作，",
+   "en": "Auto lets it go ahead on its own, with a safety check in the background that blocks dangerous operations like deletions."
+  },
+  {
+   "id": "T107",
+   "zh": "还有一个就是能把这些命令执行询问你的这个全部关掉的模式，就是全部放开，",
+   "say": "还有一个就是能把这些命令执行询问你的这个全部关掉的模式，就是全部放开，",
+   "en": "And there's a mode that turns off all of that asking, which means everything is allowed,"
+  },
+  {
+   "id": "T108",
+   "zh": "但是这个不建议新手开。",
+   "say": "但是这个不建议新手开。",
+   "en": "but I don't recommend beginners turn it on."
+  },
+  {
+   "id": "T109",
+   "zh": "那么有了这四个工具，有了大脑，有了双手，记忆和你的这个权限钥匙，",
+   "say": "那么有了这四个工具，有了大脑，有了双手，记忆和你的这个权限钥匙，",
+   "en": "With these four things, the brain, the hands, the memory and the permission key,"
+  },
+  {
+   "id": "T110",
+   "zh": "那它就是一个能够去按照你的要求，去完成你的这样一个任务的本地的智能体。",
+   "say": "那它就是一个能够去按照你的要求，去完成你的这样一个任务的本地的智能体。",
+   "en": "it becomes a local agent that can complete your task the way you ask."
+  },
+  {
+   "id": "T111",
+   "zh": "那么说完了这么好用的这样一个好处，那么不好是什么呢？",
+   "say": "那么说完了这么好用的这样一个好处，那么不好是什么呢？",
+   "en": "We've covered the good side, so what's the bad side?"
+  },
+  {
+   "id": "T112",
+   "zh": "就是有点泼冷水的意思。",
+   "say": "就是有点泼冷水的意思。",
+   "en": "This is a bit of a cold shower."
+  },
+  {
+   "id": "T113",
+   "zh": "就是它这个东西，它是会有幻觉的，它是一个概率模型，它可能会有 bug。",
+   "say": "就是它这个东西，它是会有幻觉的，它是一个概率模型，它可能会有 bug。",
+   "en": "It can hallucinate, it's a probabilistic model, and it can have bugs."
+  },
+  {
+   "id": "T114",
+   "zh": "但是随着模型越来越强，这个 bug 越来越少，但是它也会说，",
+   "say": "但是随着模型越来越强，这个 bug 越来越少，但是它也会说，",
+   "en": "As models get stronger there are fewer and fewer bugs, but still,"
+  },
+  {
+   "id": "T115",
+   "zh": "比如说社交媒体上，有的时候也会有朋友发一些这种，哎呀，它把我的某一个文件给删除了，这样一个问题。",
+   "say": "比如说社交媒体上，有的时候也会有朋友发一些这种，哎呀，它把我的某一个文件给删除了，这样一个问题。",
+   "en": "on social media, sometimes a friend posts something like: oh no, it deleted one of my files."
+  },
+  {
+   "id": "T116",
+   "zh": "就是它还是有一定的风险，所以平时这个权限的命令还是要注意一下，不要开最大。",
+   "say": "就是它还是有一定的风险，所以平时这个权限的命令还是要注意一下，不要开最大。",
+   "en": "So there's still some risk. Be careful with permission commands day to day, and don't turn it all the way up."
+  },
+  {
+   "id": "T117",
+   "zh": "那么最后是怎么用上它的呢？",
+   "say": "那么最后是怎么用上它的呢？",
+   "en": "Finally, how do you get to use it?"
+  },
+  {
+   "id": "T118",
+   "zh": "刚刚也说了一种方法，就是在终端里用，你输入 Claude 这个命令，然后回车，它会安装，然后会启动，然后你登录你的账号就可以用。",
+   "say": "刚刚也说了一种方法，就是在终端里用，你输入 Claude 这个命令，然后回车，它会安装，然后会启动，然后你登录你的账号就可以用。",
+   "en": "I mentioned one way already: use it in the terminal. Type the claude command and press Enter; it installs and starts, then you log into your account and you can use it."
+  },
+  {
+   "id": "T119",
+   "zh": "那么它还可以在你的这个代码编辑器里面去插件，去用它的插件，然后桌面也有一个应用，然后它可以用它的网页版。",
+   "say": "那么它还可以在你的这个代码编辑器里面去插件，去用它的插件，然后桌面也有一个应用，然后它可以用它的网页版。",
+   "en": "It also has a plugin for your code editor, a desktop app, and a web version."
+  },
+  {
+   "id": "T120",
+   "zh": "OK，当前这期 Claude 入门视频就先到这里。",
+   "say": "OK，当前这期 Claude 入门视频就先到这里。",
+   "en": "OK, that's it for this beginner's video on Claude."
+  },
+  {
+   "id": "T121",
+   "zh": "我提两点建议，第一点就是用的时候，先看状态栏，先确认它的权限，",
+   "say": "我提两点建议，第一点就是用的时候，先看状态栏，先确认它的权限，",
+   "en": "I have two suggestions. First, when you use it, check the status bar first and confirm its permission mode."
+  },
+  {
+   "id": "T122",
+   "zh": "第二点的时候就是，你可以先尝试着问一问它，比如说先问这个项目是干什么的，或者说这个概念是什么意思，然后再去深入地去让它去改东西。",
+   "say": "第二点的时候就是，你可以先尝试着问一问它，比如说先问这个项目是干什么的，或者说这个概念是什么意思，然后再去深入地去让它去改东西。",
+   "en": "Second, try asking it questions first, like what this project does or what a concept means, and only then dig in and have it change things."
+  },
+  {
+   "id": "T123",
+   "zh": "用着用着其实就会用了，边用边学嘛。",
+   "say": "用着用着其实就会用了，边用边学嘛。",
+   "en": "You'll get the hang of it as you go; learn while you use it."
+  },
+  {
+   "id": "T124",
+   "zh": "好，我们下期再见。",
+   "say": "好，我们下期再见。",
+   "en": "Alright, see you in the next one."
+  }
+ ]
+}

@@ -1,0 +1,99 @@
+1
+00:00:00,000 --> 00:00:01,853
+Every new Claude Code session starts
+
+2
+00:00:01,873 --> 00:00:04,300
+with a fresh context, like day one on the job.
+
+3
+00:00:04,320 --> 00:00:06,625
+The course says that without CLAUDE.md, it re-explores
+
+4
+00:00:06,645 --> 00:00:09,490
+your structure, dependencies and finished features.
+
+5
+00:00:09,510 --> 00:00:11,814
+The fix is a Markdown file in your project root,
+
+6
+00:00:11,834 --> 00:00:14,390
+read automatically at the start of every session.
+
+7
+00:00:14,410 --> 00:00:17,590
+Anthropic's analogy: an onboarding script for your codebase.
+
+8
+00:00:17,610 --> 00:00:19,908
+What goes in? Commands
+
+9
+00:00:19,928 --> 00:00:22,060
+and style rules it can't guess from the code,
+
+10
+00:00:22,080 --> 00:00:23,950
+and keep each file under 200 lines.
+
+11
+00:00:23,970 --> 00:00:26,520
+The project file goes into version control for the team;
+
+12
+00:00:26,540 --> 00:00:29,430
+the user file lives in your config folder, just for you.
+
+13
+00:00:29,450 --> 00:00:32,900
+They stack when read; one doesn't override another.
+
+14
+00:00:32,920 --> 00:00:34,979
+Correct the same mistake twice and it's time to write it down,
+
+15
+00:00:34,999 --> 00:00:36,730
+like use server actions instead of API routes.
+
+16
+00:00:36,750 --> 00:00:37,993
+To get it into the file,
+
+17
+00:00:38,013 --> 00:00:39,603
+say add this to CLAUDE.md.
+
+18
+00:00:39,623 --> 00:00:42,370
+Just saying remember saves it to Claude's own memory.
+
+19
+00:00:42,390 --> 00:00:44,428
+Reference project docs with @ and a path,
+
+20
+00:00:44,448 --> 00:00:46,834
+though they still load in full at launch
+
+21
+00:00:46,854 --> 00:00:48,780
+and don't save context.
+
+22
+00:00:48,800 --> 00:00:51,539
+The course also suggests starting without one,
+
+23
+00:00:51,559 --> 00:00:55,080
+seeing where you keep correcting it, then running /init.
+
+24
+00:00:55,100 --> 00:00:57,275
+But it's context, not enforced configuration.
+
+25
+00:00:57,295 --> 00:01:00,100
+Rules that must always hold belong in a hook.

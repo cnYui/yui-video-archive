@@ -1,0 +1,36 @@
+# 最近 7 天已播（选题去重：同一件事没有新进展就不再报）
+
+- 2026-09-27｜OpenAI 暂停训练最强模型｜https://www.theverge.com/ai-artificial-intelligence/1001049/openai-training-pause https://the-decoder.com/openai-pauses-its-most-capable-models-after-agents-exploit-loopholes-and-leak-data/
+- 2026-09-27｜澳参议院传唤两家 CEO｜https://www.ithome.com/1/007/508.htm
+- 2026-09-27｜Claude 算出九圈物理难题｜https://www.anthropic.com/research/yes-claude-can-do-nine-loops https://www.ithome.com/1/007/444.htm
+- 2026-09-27｜谷歌 TPU 跑 Kimi 快 57%｜https://www.qbitai.com/2026/09/497425.html
+- 2026-09-27｜Anthropic 签 116 亿云合同｜https://techcrunch.com/2026/09/25/anthropic-to-pay-akamai-11-6-billion-over-seven-years-in-cloud-deal/
+- 2026-09-28｜Anthropic 三类拒答恢复收费｜https://platform.claude.com/docs/en/release-notes/overview https://platform.claude.com/docs/en/build-with-claude/refusals-and-fallback
+- 2026-09-28｜MiniMax 编程新模型上线｜https://www.ithome.com/1/007/530.htm https://x.com/MiniMaxAgent/status/2104079819881517400
+- 2026-09-28｜Claude Code 撞上限先收尾｜https://www.ithome.com/1/007/369.htm https://x.com/ClaudeDevs/status/2103561342057943314
+- 2026-09-28｜Codex 宕机后重置额度｜https://status.openai.com/incidents/01M3DCNWMW57HYK8FJ5FBFPA39 https://finance.sina.com.cn/wm/2026-09-26/doc-initcusx7101541.shtml
+- 2026-09-28｜阿里语音模型降价最高 95%｜https://www.ithome.com/1/006/280.htm https://the-decoder.com/alibaba-launches-qwen-audio-3-1-with-five-new-models-and-slashes-ai-audio-prices-by-up-to-95-percent/
+- 2026-09-28｜牛津馆藏进 OpenAI 训练集｜https://thenextweb.com/news/oxford-bodleian-openai-training-data https://cherwell.org/2026/09/27/oxford-ai-partnership-uses-bodleian-texts-for-chatgpt/
+- 2026-09-28｜AI 查宜家装错准确率 80%｜https://epoch.ai/publications/furniture-assembly https://the-decoder.com/openais-gpt-6-astra-can-now-tell-you-exactly-where-you-screwed-up-your-ikea-shelf/
+- 2026-09-28｜笔记本硬跑 744B 大模型｜https://www.qbitai.com/2026/09/497624.html https://github.com/JustVugg/colibri
+- 2026-09-29｜Claude Sonnet 5.5 发布｜https://www.anthropic.com/claude-sonnet-5-5 https://platform.claude.com/docs/en/models/sonnet-5-5/overview
+- 2026-09-29｜英伟达推出智能体安全平台｜https://nvidianews.nvidia.com/news/open-agent-safety-platform https://claude.com/blog/giving-companies-more-control-over-their-ai-agents-with-nvidia
+- 2026-09-29｜华为开源盘古训练代码｜https://www.ithome.com/1/007/740.htm https://gitcode.com/ascend-tribe/openPangu-2.0-Training
+- 2026-09-29｜千问打通夸克网盘｜https://www.ithome.com/1/007/871.htm https://internet.cnmo.com/event/819464.html
+- 2026-09-29｜Gems 将迁移成 skills｜https://9to5google.com/2026/09/27/gemini-gems-skills/
+- 2026-09-29｜Shopify 让 AI 帮你结账｜https://shopify.dev/changelog/posts/webmcp-support-for-checkout https://techcrunch.com/2026/09/28/shopify-opens-checkout-to-browser-based-ai-agents/
+- 2026-09-29｜AMD 收购 World Labs｜https://ir.amd.com/news-events/press-releases/detail/1299/amd-to-acquire-world-labs-to-advance-the-future-of-ai-compute https://techcrunch.com/2026/09/28/amd-will-acquire-fei-fei-lis-world-labs-for-8-2-billion/
+- 2026-09-30｜OpenAI 发布 GPT-6.1 Sol｜https://techcrunch.com/2026/09/29/openai-launches-gpt-6-1-sol-says-it-nearly-matches-gpt-6-astra-and-costs-less/ https://the-decoder.com/gpt-6-1-sol-comes-close-to-astra-at-a-fifth-of-the-price/
+- 2026-09-30｜OpenAI 推出智能体 Dots｜https://the-decoder.com/openai-launches-always-on-dots-agents-to-rival-metas-muse/ https://techcrunch.com/2026/09/29/openai-launches-dots-its-bubbly-agentic-avatar/
+- 2026-09-30｜ChatGPT Pro 套餐调整｜https://the-decoder.com/openai-reopens-its-200-pro-plan-but-cuts-api-credits-in-half-as-it-nudges-users-toward-pay-per-use/ https://the-decoder.com/openai-expands-codex-and-its-api-at-devday-with-security-scans-a-decisions-api-and-ultrafast/
+- 2026-09-30｜Codex 加了云端环境｜https://techcrunch.com/2026/09/29/openai-gives-codex-reusable-cloud-environments-that-work-across-devices/ https://the-decoder.com/openai-expands-codex-and-its-api-at-devday-with-security-scans-a-decisions-api-and-ultrafast/
+- 2026-09-30｜DeepSeek Harness 出桌面版｜https://www.ithome.com/1/008/469.htm https://www.36kr.com/newsflashes/4004459316137858
+- 2026-09-30｜ElevenLabs 发布 v4 语音｜https://elevenlabs.io/blog/eleven-v4 https://the-decoder.com/elevenlabs-new-v4-speech-model-makes-ai-voices-more-expressive-and-consistent/
+- 2026-09-30｜Holo4 公开权重｜https://hcompany.ai/newsroom/holo4 https://www.marktechpost.com/2026/09/29/h-company-releases-holo4-open-weight-computer-use-models-that-click-code-and-call-tools-across-desktop-web-android-and-apis/
+- 2026-10-01｜DeepSeek 开源昇腾组件｜https://www.qbitai.com/2026/09/499263.html https://www.ithome.com/1/008/604.htm
+- 2026-10-01｜Kimi K3 接入 Codex｜https://www.ithome.com/1/008/864.htm https://www.baseten.co/blog/baseten-openai-partnership/
+- 2026-10-01｜OpenAI 做芯片设计模型｜http://www.prnewswire.com/news-releases/openai-and-synopsys-announce-gpt-synopsys-frontier-intelligence-to-revolutionize-chip-design-302894874.html https://the-decoder.com/openai-and-synopsys-team-up-to-build-an-ai-model-that-designs-chips-like-a-seasoned-engineer/
+- 2026-10-01｜Codex 能做掌机游戏｜https://www.ithome.com/1/008/656.htm https://www.theshortcut.com/p/modretro-and-openai-team-up-on-new-chromatic-games-and-anyone-can-build-their-own
+- 2026-10-01｜DeepMind 给蛋白质加水印｜https://deepmind.google/blog/introducing-synthid-bio/
+- 2026-10-01｜微软发布生物研究系统｜https://www.microsoft.com/en-us/research/blog/introducing-quine-an-ai-research-system-designed-for-the-complexity-of-biology/
+- 2026-10-01｜Reddit 停 RSS 和 API｜https://techcrunch.com/2026/09/30/reddit-is-killing-rss-feeds-ending-public-api-access-because-of-ai-bots/

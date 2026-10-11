@@ -1,0 +1,53 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8"><link rel="stylesheet" href="file:///D:/%E5%A4%A7%E7%96%86/AI%E7%A7%91%E6%99%AE/%E7%B4%A0%E6%9D%90/%E5%AD%97%E4%BD%93/fonts.css"><style>
+* { box-sizing:border-box; margin:0; padding:0; }
+html, body { width:1080px; height:2340px; overflow:hidden; font-family:'Noto Sans SC', sans-serif; color:#141413; background:#FAF9F5 url('file:///D:/%E5%A4%A7%E7%96%86/%E7%9F%AD%E8%A7%86%E9%A2%91/skill/short-video/assets/backgrounds/pattern_orange.png') 0 0 / 1080px 2340px no-repeat; }
+.abs { position:absolute; }
+#head { position:absolute; left:40px; right:40px; top:280px; height:290px; text-align:center; }
+#kicker { font:700 30px 'Noto Sans SC'; letter-spacing:.18em; color:#6B7280; white-space:nowrap; }
+#kicker b { color:#FF4F1A; font-weight:800; }
+#t1 { margin-top:22px; font:900 76px/1.22 'Noto Sans SC'; color:#141413; white-space:nowrap; }
+#t2 { margin-top:10px; font:800 60px/1.25 'Noto Sans SC'; color:#FF4F1A; white-space:nowrap; }
+#t2 span { background:linear-gradient(transparent 62%, #FFD84D 62%, #FFD84D 94%, transparent 94%); padding:0 6px; }
+/* 边框 6：7 px 黑描边 + 橙色硬阴影 14 px + 右上角黄贴纸 */
+.frame { position:absolute; background:#141413; border:7px solid #141413; border-radius:14px; box-shadow:14px 14px 0 #FF4F1A; }
+.frame::after { content:attr(data-tag); position:absolute; right:-8px; top:-40px; background:#FFD84D; color:#141413; border:5px solid #141413; border-radius:10px; padding:0 16px; font:900 26px/38px 'Noto Sans SC'; transform:rotate(3deg); white-space:nowrap; z-index:6; }
+.frame[data-tag='']::after, .frame:not([data-tag])::after { display:none; }
+.frame .inner { position:relative; width:100%; height:100%; border-radius:4px; overflow:hidden; background:#fff; }
+.snap { position:absolute; left:0; top:0; width:100%; display:block; }
+.hl { position:absolute; border:6px solid #FF4F1A; border-radius:10px; box-shadow:0 0 0 7px rgba(255,79,26,.2); z-index:4; }
+/* 字幕（项目标准：中文 52 + 英文 30，居中，描边和背景同色） */
+#subs { position:absolute; left:0; width:1080px; height:112px; z-index:30; }
+#subZh { position:absolute; left:0; right:0; top:0; text-align:center; font:800 52px/66px 'Noto Sans SC'; color:#141413; -webkit-text-stroke:10px #FAF9F5; paint-order:stroke fill; white-space:nowrap; }
+#subEn { position:absolute; left:0; right:0; top:70px; text-align:center; font:600 30px/40px 'Noto Sans SC'; color:#4B5563; -webkit-text-stroke:6px #FAF9F5; paint-order:stroke fill; white-space:nowrap; }
+/* 数字卡 / 要点卡 */
+.bigcard { position:absolute; text-align:center; background:#fff; border:1px solid #E5E7EB; border-top:8px solid #FF4F1A; border-radius:22px; box-shadow:0 16px 40px rgba(0,0,0,.12); padding:14px 30px 18px; }
+.bigcard .n { font:900 92px/1.05 'Space Grotesk','Noto Sans SC'; color:#FF4F1A; white-space:nowrap; }
+.bigcard .n small { font:800 42px 'Noto Sans SC'; color:#141413; margin-left:8px; }
+.bigcard .d { margin-top:4px; font:700 34px/1.4 'Noto Sans SC'; color:#374151; white-space:nowrap; }
+.pts { position:absolute; background:#fff; border:1px solid #E5E7EB; border-top:8px solid #FF4F1A; border-radius:22px; box-shadow:0 16px 40px rgba(0,0,0,.12); padding:14px 16px; display:grid; grid-template-columns:1fr 1fr; gap:10px 10px; }
+.pts .pt { display:flex; align-items:center; gap:10px; padding:10px 12px; border-radius:14px; font:800 31px/1.2 'Noto Sans SC'; color:#374151; white-space:nowrap; }
+.pts .pt i { flex:none; width:38px; height:38px; border-radius:50%; background:#E5E7EB; color:#6B7280; font:900 24px/38px 'Noto Sans SC'; text-align:center; font-style:normal; }
+.pts .pt.cur { background:#FFE98A; color:#141413; }
+.pts .pt.cur i { background:#FF4F1A; color:#fff; }
+.pts .pt.done i { background:#141413; color:#fff; }
+/* 鲸鱼娘 */
+.whale { position:absolute; image-rendering:pixelated; z-index:12; }
+.wshadow { position:absolute; border-radius:50%; background:radial-gradient(closest-side, rgba(0,0,0,.22), rgba(0,0,0,0)); z-index:11; }
+/* 进度：开场 + 8 条 + 回顾 共 10 段，已播 = 黑、当前 = 橙、未播 = 灰 */
+.prog { position:absolute; left:60px; width:960px; display:flex; gap:8px; z-index:20; }
+.prog i { flex:1; height:14px; border-radius:7px; background:rgba(20,20,19,.16); }
+.prog i.done { background:#141413; }
+.prog i.cur { background:#FF4F1A; box-shadow:0 0 0 3px #FAF9F5; }
+/* 清单（开场 / 回顾：8 条各一张来源截图缩略图 + 短标题，4 行 × 2 列） */
+.agenda { position:absolute; inset:0; display:grid; grid-template-columns:1fr 1fr; grid-template-rows:repeat(4,1fr); gap:8px; padding:8px; background:#EEF0F3; }
+.agenda .row { display:flex; background:#fff; border-radius:8px; overflow:hidden; border:1px solid #DCDFE4; }
+.agenda .th { position:relative; flex:none; width:42%; overflow:hidden; background:#fff; border-right:1px solid #DCDFE4; }
+.agenda .th img { position:absolute; left:0; top:0; width:100%; }
+.agenda .th s { position:absolute; right:6px; bottom:2px; text-decoration:none; font:900 46px/1 'Noto Sans SC'; color:#16A34A; text-shadow:0 0 0 #fff, 0 3px 0 #fff, 3px 0 0 #fff, -3px 0 0 #fff, 0 -3px 0 #fff, 3px 3px 0 #fff, -3px -3px 0 #fff, 3px -3px 0 #fff, -3px 3px 0 #fff; }
+.agenda .tx { flex:1; display:flex; align-items:center; gap:10px; padding:0 10px 0 10px; min-width:0; }
+.agenda .tx b { flex:none; width:42px; height:42px; border-radius:50%; background:#FF4F1A; color:#fff; font:900 26px/42px 'Noto Sans SC'; text-align:center; }
+.agenda .tx span { font:800 27px/1.22 'Noto Sans SC'; color:#141413; }
+.agenda.sm .tx { gap:8px; padding:0 8px; }
+.agenda.sm .tx b { width:36px; height:36px; font-size:22px; line-height:36px; }
+.agenda.sm .tx span { font-size:23px; }
+</style></head><body><div id="head"><div id="kicker">AI每日日报 · <b>10.05</b> · 第 <b>2</b> / 8 条</div><div id="t1">德国开源模型 Kolibri</div><div id="t2"><span>78B 参数，每词只动 3.46B</span></div></div><div class="frame" style="left:40px;top:770px;width:1000px;height:569px" data-tag="来源 · Aleph Alpha"><div class="inner"><img class="snap" src="file:///D:/%E5%A4%A7%E7%96%86/AI%E6%97%A5%E6%8A%A5/2026-10-05/%E5%88%B6%E4%BD%9C/assets/snaps/news_02.png"><div class="hl" style="left:1.83%;top:431px;width:69.08%;height:78px"></div></div></div><div id="subs" style="top:1498px"><div id="subZh">每层 384 个专家，</div><div id="subEn">384 experts per layer,</div></div><div class="bigcard" style="left:250px;top:1660px;width:740px"><div class="n">3.46B<small>活跃参数</small></div><div class="d">总参数 78B · Apache 2.0 开源</div></div><div class="wshadow" style="left:63px;top:1823px;width:146px;height:19px"></div><img class="whale" src="file:///D:/%E5%A4%A7%E7%96%86/AI%E7%A7%91%E6%99%AE/%E7%B4%A0%E6%9D%90/%E8%A7%92%E8%89%B2/%E5%A4%A7%E8%82%A5%E9%B1%BC%E5%83%8F%E7%B4%A0%E7%B4%A0%E6%9D%90%E5%8C%85/%E7%B4%A0%E6%9D%90/sprites/expressions/expr_06_talk_m1.png" style="width:192px;left:40px;top:1650px"><div class="prog" style="top:1912px"><i class="done"></i><i class="done"></i><i class="cur"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></div></body></html>

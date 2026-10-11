@@ -1,0 +1,11 @@
+{
+  "orange": "#D97757",
+  "orange_deep": "#C15F3C",
+  "ivory": "#FAF9F5",
+  "dark": "#141413",
+  "dark_raised": "#1A1A18",
+  "helmet": "#D1CFC4",
+  "sparkle": "#F5DB9A",
+  "source": "claude.dev 深色主题（2026-10-02 读的 CSS 变量和 getComputedStyle）；宇航员颜色取样自 assets/scene_src/s6_0.png",
+  "rule": "封面上只用 orange / ivory / dark 三个主色，加宇航员自带的 helmet 灰和 sparkle 黄；不要引入别的色相"
+}

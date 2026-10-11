@@ -1,0 +1,15 @@
+{
+  "layout": "single",
+  "plan": [
+    {"id": "H0", "type": "clip", "kind": "demo", "overlay": "clip", "name": "钩子", "credit": "来源 · 平台",
+     "ranges": [{"src": "d1", "in": 0.0, "out": 6.0}],
+     "lines": [{"id": "N01", "a": 0.0}]},
+
+    {"id": "P1", "type": "card", "kind": "page", "overlay": "page", "name": "官方页面", "dur": 5.0,
+     "lines": [{"id": "N02", "a": 0.1}]},
+
+    {"id": "D1", "type": "clip", "kind": "demo", "overlay": "clip", "name": "怎么做到的", "credit": "来源 · 平台",
+     "ranges": [{"src": "d1", "in": 12.0, "out": 18.0}, {"src": "d1", "in": 18.0, "hold": 2.0}],
+     "lines": [{"id": "N03", "a": 0.1}, {"id": "N04", "a": 4.0}]}
+  ]
+}

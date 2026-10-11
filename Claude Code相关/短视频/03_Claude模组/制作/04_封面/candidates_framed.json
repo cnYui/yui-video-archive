@@ -1,0 +1,59 @@
+{
+  "candidates": [
+    {
+      "id": "A",
+      "note": "Blast Radius 拦截面板 + 钩子“Claude 能装 / 模组了”",
+      "recommend": true,
+      "video": "D:\\大疆\\Claude Code相关\\01_Claude Code模组发布\\素材\\X平台视频_ClaudeDevs\\ClaudeDevs_2105721434807083061.mp4",
+      "t": 33.0,
+      "crop": [
+        0.2,
+        0.03,
+        0.8,
+        0.87
+      ],
+      "big": [
+        "Claude 能装",
+        "模组了"
+      ],
+      "accent_line": 1,
+      "sticker": "@ClaudeDevs · X"
+    },
+    {
+      "id": "B",
+      "note": "Replay Theater 回放面板 + 钩子“Claude 改了啥 / 按 R 回放”",
+      "video": "D:\\大疆\\Claude Code相关\\01_Claude Code模组发布\\素材\\X平台视频_ClaudeDevs\\ClaudeDevs_2105721434807083061.mp4",
+      "t": 61.5,
+      "crop": [
+        0.06,
+        0.07,
+        0.94,
+        0.8
+      ],
+      "big": [
+        "Claude 改了啥",
+        "按 R 回放"
+      ],
+      "accent_line": 1,
+      "sticker": "@ClaudeDevs · X"
+    },
+    {
+      "id": "C",
+      "note": "Token Weather 终端（天气预报那一行）+ 数字钩子“80 行代码 / 写个模组”",
+      "video": "D:\\大疆\\Claude Code相关\\01_Claude Code模组发布\\素材\\X平台视频_ClaudeDevs\\ClaudeDevs_2105721436270993609.mp4",
+      "t": 21.5,
+      "crop": [
+        0.0,
+        0.62,
+        0.42,
+        1.0
+      ],
+      "big": [
+        "80 行代码",
+        "写个模组"
+      ],
+      "accent_line": 0,
+      "sticker": "@ClaudeDevs · X"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+ "file": "pattern_ink.png",
+ "pool": [
+  "pattern_color.png",
+  "pattern_ink.png",
+  "pattern_orange.png"
+ ],
+ "note": "短视频技能：每期随机挑一张"
+}

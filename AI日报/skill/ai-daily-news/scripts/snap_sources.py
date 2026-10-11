@@ -9,7 +9,7 @@ headline + byline + the first lines. Pictures are hidden on purpose: we quote th
 we do not reproduce news photos. Pages that block headless browsers, or have no <h1>, are skipped; that scene
 then uses the plain one-column layout.
 
-Writes 制作/assets/snaps/news_NN.png + snaps.json, and patches episode.json news[i].snap / snap_src
+Writes 制作/assets/snaps/news_NN.png + snaps.json (h1box = 标题在截图里的位置 [x, y, w, h]，PNG 像素；竖屏版圈框用), and patches episode.json news[i].snap / snap_src
 (paths relative to 制作/engine/, where the page runs). Re-runs keep existing shots of unchanged URLs (--force redoes).
 Run after make_episode.py (daily.py build does), before build_timeline.py.
 """
@@ -54,6 +54,7 @@ HIDE_OVERLAYS_JS = """() => {
 }"""
 BLOCKED = ("just a moment", "access denied", "attention required", "are you a robot", "verify you are human", "请完成安全验证")
 CLIP_W, CLIP_H = 1000, 560
+SCALE = 1.5                                  # device_scale_factor
 
 
 def shoot(page, url, out_png):
@@ -92,7 +93,10 @@ def shoot(page, url, out_png):
     page.evaluate(HIDE_OVERLAYS_JS)              # 截图前再藏一次：同意框常常过几秒才弹出来
     page.wait_for_timeout(200)
     page.screenshot(path=str(out_png), clip={"x": x, "y": y, "width": w, "height": CLIP_H})
-    return (h1.inner_text() or "").strip()[:80]
+    # 竖屏版（make_vertical.py）用橙框圈出原文标题：h1 在截图里的位置，单位 = PNG 像素（device_scale_factor 1.5），截图本身可能被裁，框夹在图里
+    k = SCALE
+    h1box = [round((box["x"] - x) * k), round((box["y"] - y) * k), round(box["width"] * k), round(box["height"] * k)]
+    return (h1.inner_text() or "").strip()[:80], h1box
 
 
 def main():
@@ -127,8 +131,8 @@ def main():
                 page = ctx.new_page()
                 t0 = time.time()
                 try:
-                    h1 = shoot(page, url, png)
-                    res = {"ok": True, "url": url, "h1": h1, "file": png.name, "domain": urlsplit(url).netloc.removeprefix("www."),
+                    h1, h1box = shoot(page, url, png)
+                    res = {"ok": True, "url": url, "h1": h1, "h1box": h1box, "file": png.name, "domain": urlsplit(url).netloc.removeprefix("www."),
                            "sha": hashlib.sha1(png.read_bytes()).hexdigest()[:10]}
                     print(f"  {i}. ✓ {res['domain']}（{time.time() - t0:.1f}s）「{h1[:40]}」")
                     break

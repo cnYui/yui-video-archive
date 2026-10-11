@@ -1,0 +1,9 @@
+0:00 开场
+0:26 DeepSeek 开源昇腾组件
+1:16 Kimi K3 接入 Codex
+2:07 OpenAI 做芯片设计模型
+2:51 Codex 能做掌机游戏
+3:36 DeepMind 给蛋白质加水印
+4:24 微软发布生物研究系统
+5:11 Reddit 停 RSS 和 API
+5:52 回顾

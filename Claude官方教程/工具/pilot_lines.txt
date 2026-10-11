@@ -1,0 +1,17 @@
+官方入门课第一课，五月发布，出镜的是 Lewis Menelaws。
+官方课说：没有 CLAUDE.md，结构、依赖、功能都得重新摸。
+官方课说：没有 Claude 点 md，结构、依赖、功能都得重新摸。
+技能是个文件夹，里面放 SKILL.md：名称、描述，加上步骤。
+第三档是项目：写进 .mcp.json 提交进版本库，全队拿到同一套服务器。
+第三档是项目：写进 mcp 点 json，提交进版本库，全队拿到同一套服务器。
+PreToolUse，在工具调用之前触发，能在事情发生前把它拦下来。
+压缩后补上下文，别用 PostCompact，用 SessionStart。
+Mac 和 Linux 用 curl，Windows 用 PowerShell。Homebrew 和 winget 也能装。
+子代理就是带 YAML 头的 Markdown 文件，必填只有两个：名字和描述。
+项目文档用 @ 加路径引用，不过引用的内容照样一启动就全载入。
+项目文档用艾特加路径引用，不过引用的内容照样一启动就全载入。
+Anthropic 官方入门课专门有一课，讲怎么管这块“记忆”。
+自带几个子代理：Explore 只读搜代码，Plan 做计划调研。
+团队用 Linear 管项目？加个 MCP 服务器，就能直接读工单。要查依赖的最新文档，有 Context7 这类文档服务器。
+用 claude mcp add 添加，常用 HTTP 和 stdio 两种。有现成命令行的，比如 gh、aws，更省。
+按 Shift 加 Tab，轮换到计划模式。装上 Claude in Chrome，它能自己测界面。

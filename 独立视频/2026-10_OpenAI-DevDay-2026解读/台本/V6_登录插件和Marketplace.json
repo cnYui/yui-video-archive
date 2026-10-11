@@ -1,0 +1,37 @@
+{
+  "id": "V6",
+  "no": 6,
+  "batch": "A",
+  "title": "OpenAI 开发者怎么赚钱：用 ChatGPT 登录、插件扩展和 OpenAI Marketplace",
+  "short": "OpenAI DevDay 2026 · 开发者怎么赚钱",
+  "kicker": "OPENAI DEVDAY 2026 · 解读 06",
+  "chapters": ["12 亿人的入口", "插件扩展", "Marketplace"],
+  "lines": [
+    {"id": "V6-N01", "kind": "vo", "ch": 0, "zh": "每周 12 亿人用 ChatGPT，你做的产品，怎么挤进去？", "say": "每周十二亿人用ChatGPT，你做的产品，怎么挤进去？", "en": "1.2 billion people use ChatGPT every week. How does the product you build get in?"},
+    {"id": "V6-N02", "kind": "vo", "ch": 0, "zh": "发布会最后一块，讲怎么在这个入口上做生意。", "say": "发布会最后一块，讲怎么在这个入口上做生意。", "en": "The last part of the keynote is about doing business through that front door."},
+    {"id": "V6-N03", "kind": "vo", "ch": 0, "zh": "OpenAI 承认以前试过，效果参差不齐，这次给你的是自家做 ChatGPT 用的同一批工具。", "say": "OpenAI承认以前试过，效果参差不齐，这次给你的是自家做ChatGPT用的同一批工具。", "en": "OpenAI admits earlier attempts were hit and miss; this time you get the same tools it uses to build ChatGPT itself."},
+    {"id": "V6-N04", "kind": "vo", "ch": 0, "zh": "第一，用 ChatGPT 登录：用户把自己的 ChatGPT 订阅带进你的产品，直接用套餐里的 token。", "say": "第一，用ChatGPT登录：用户把自己的ChatGPT订阅带进你的产品，直接用套餐里的token。", "en": "First, sign in with ChatGPT: users bring their ChatGPT subscription into your product and use the tokens in their plan directly."},
+    {"id": "V6-N05", "kind": "vo", "ch": 0, "zh": "他们本来就在付订阅费，你不用替他们垫成本。首批有 16 家合作伙伴。", "say": "他们本来就在付订阅费，你不用替他们垫成本。首批有十六家合作伙伴。", "en": "They're already paying for the subscription, so you don't have to cover their costs. 16 partners at launch."},
+    {"id": "V6-N06", "kind": "vo", "ch": 1, "zh": "第二，插件扩展：开发者能做出整套应用，用起来像 ChatGPT 原生的，通过 OpenAI 分发。", "say": "第二，插件扩展：开发者能做出整套应用，用起来像ChatGPT原生的，通过OpenAI分发。", "en": "Second, plugin extensions: developers can build full apps that feel native to ChatGPT, distributed through OpenAI."},
+    {"id": "V6-N07", "kind": "vo", "ch": 1, "zh": "编辑器、仪表盘、整个工作区，都能直接做进 ChatGPT 和 Codex。", "say": "编辑器、仪表盘、整个工作区，都能直接做进ChatGPT和Codex。", "en": "Editors, dashboards, whole workspaces can be built straight into ChatGPT and Codex."},
+    {"id": "V6-N08", "kind": "vo", "ch": 1, "zh": "现场例子：会议应用，一点“做笔记”，笔记页就变成 Space，队友和 Dots 一起跟进。", "say": "现场例子：会议应用，一点“做笔记”，笔记页就变成Space，队友和Dots一起跟进。", "en": "Live example: in a meetings app, one click on \"take notes\" turns the notes page into a Space, where teammates and Dots follow up together.", "cut": [["会议应用，", "meetings app,"], ["变成 Space，", "into a Space,"]]},
+    {"id": "V6-N09", "kind": "vo", "ch": 1, "zh": "Figma 把设计带进对话，看团队评论，让 ChatGPT 改稿。", "say": "Figma把设计带进对话，看团队评论，让ChatGPT改稿。", "en": "Figma brings design into the conversation: see team comments, and have ChatGPT revise the design."},
+    {"id": "V6-N10", "kind": "vo", "ch": 1, "zh": "Adobe 把 Photoshop 的功能搬进来。数十家合作伙伴在做。", "say": "Adobe把Photoshop的功能搬进来。数十家合作伙伴在做。", "en": "Adobe brings Photoshop's features in. Dozens of partners are building."},
+    {"id": "V6-N11", "kind": "vo", "ch": 1, "zh": "用户问问题时，ChatGPT 会判断你的插件能不能帮上忙，当场就能连上。", "say": "用户问问题时，ChatGPT会判断你的插件能不能帮上忙，当场就能连上。", "en": "When a user asks a question, ChatGPT judges whether your plugin can help, and connects on the spot."},
+    {"id": "V6-N12", "kind": "vo", "ch": 1, "zh": "提交流程也简化了：能看审核进度，能申请人工复核，更新工具不用重新提交。", "say": "提交流程也简化了：能看审核进度，能申请人工复核，更新工具不用重新提交。", "en": "Submission is simpler too: you can see review progress, request a human re-review, and update tools without resubmitting."},
+    {"id": "V6-N13", "kind": "vo", "ch": 2, "zh": "最后，OpenAI Marketplace 今天上线，首发合作伙伴 30 多家，有 CodeRabbit、Notion、Vercel 等。", "say": "最后，OpenAI Marketplace今天上线，首发合作伙伴三十多家，有CodeRabbit、Notion、Vercel等。", "en": "Finally, the OpenAI Marketplace launches today, with 30-plus launch partners including CodeRabbit, Notion and Vercel."},
+    {"id": "V6-N14", "kind": "vo", "ch": 2, "zh": "企业客户可以拿已有的 OpenAI 采购额度买你的产品；通过 Baseten，还能直接用开源模型。", "say": "企业客户可以拿已有的OpenAI采购额度买你的产品；通过Baseten，还能直接用开源模型。", "en": "Enterprise customers can buy your product with their existing OpenAI commitment; through Baseten, they can even use open-source models directly."}
+  ],
+  "plan": [
+    {"type": "vclip", "id": "S1", "ch": 0, "from": "V6-N01", "to": "V6-N01", "in": 2649.3, "what": "每周 12 亿人用 ChatGPT", "callouts": [{"t": 0.3, "d": 10, "hook": true, "text": "每周 **12 亿**人在用<br>你的产品怎么上？"}]},
+    {"type": "vclip", "id": "S2", "ch": 0, "from": "V6-N02", "to": "V6-N03", "in": 2654.2, "what": "舞台大屏：每周 12 亿人用 ChatGPT"},
+    {"type": "vclip", "id": "S3", "ch": 0, "from": "V6-N04", "to": "V6-N05", "in": 2672.5, "what": "用 ChatGPT 登录", "callouts": [{"t": 7.0, "d": 4.5, "text": "首批合作伙伴：**16** 家", "pos": "tl"}]},
+    {"type": "vclip", "id": "S4a", "ch": 1, "from": "V6-N06", "to": "V6-N07", "in": 2709.0, "what": "插件扩展"},
+    {"type": "vclip", "id": "S4b", "ch": 1, "from": "V6-N08", "to": "V6-N08", "in": 2729.7, "what": "插件例子：会议应用"},
+    {"type": "vclip", "id": "S4c", "ch": 1, "from": "V6-N09", "to": "V6-N09", "in": 2746.5, "what": "插件例子：Figma"},
+    {"type": "vclip", "id": "S4d", "ch": 1, "from": "V6-N10", "to": "V6-N10", "in": 2757.0, "what": "插件例子：Adobe"},
+    {"type": "vclip", "id": "S5a", "ch": 1, "from": "V6-N11", "to": "V6-N11", "in": 2803.0, "what": "对话里被发现"},
+    {"type": "vclip", "id": "S5b", "ch": 1, "from": "V6-N12", "to": "V6-N12", "in": 2821.0, "what": "简化提交流程"},
+    {"type": "vclip", "id": "S6", "ch": 2, "from": "V6-N13", "to": "V6-N14", "in": 2838.8, "what": "舞台大屏：OpenAI Marketplace", "callouts": [{"t": 0.8, "d": 4, "text": "首发合作伙伴 **30+**", "pos": "tl"}]}
+  ]
+}

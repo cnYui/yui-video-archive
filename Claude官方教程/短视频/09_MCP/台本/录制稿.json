@@ -1,0 +1,83 @@
+{
+ "slug": "MCP",
+ "title": "Claude官方教程 第9期｜MCP：把代码库之外的工具接进 Claude Code",
+ "kicker": "<b>Claude官方教程</b> 第9期",
+ "hook": [
+  "代码库之外的信息",
+  "靠 MCP 接进来"
+ ],
+ "lines": [
+  {
+   "id": "N01",
+   "zh": "很多上下文，其实不在代码库里：在数据库、协作软件、公开仓库里。",
+   "say": "很多上下文，其实不在代码库里：在数据库、协作软件、公开仓库里。",
+   "en": "A lot of your context lives outside your codebase: in databases, productivity apps, public repos."
+  },
+  {
+   "id": "N02",
+   "zh": "MCP，模型上下文协议，就是把外部工具接进 Claude Code 的桥。",
+   "say": "MCP，模型上下文协议，就是把外部工具接进 Claude Code 的桥。",
+   "en": "MCP, the Model Context Protocol, is the bridge that connects those tools to Claude Code."
+  },
+  {
+   "id": "N03",
+   "zh": "团队用 Linear 管项目？加个 MCP 服务器，就能直接读工单。",
+   "say": "团队用 Linear 管项目？加个 MCP 服务器，就能直接读工单。",
+   "en": "If your team tracks work in Linear, add a Linear MCP server and Claude can read the issues itself."
+  },
+  {
+   "id": "N04",
+   "zh": "要查依赖的最新文档，有 Context7 这类文档服务器。",
+   "say": "要查依赖的最新文档，有 Context7 这类文档服务器。",
+   "en": "Need up-to-date docs for a dependency? A docs server like Context7 can provide them."
+  },
+  {
+   "id": "N05",
+   "zh": "用 claude mcp add 添加，常用 HTTP 和 stdio 两种。",
+   "say": "用 claude mcp add 添加，常用 HTTP 和 stdio 两种。",
+   "en": "Add a server with claude mcp add. The two common types: HTTP for remote services, stdio for local processes."
+  },
+  {
+   "id": "N06",
+   "zh": "会话里敲 /mcp，能看连接状态，不用的直接关掉，配置不会丢。",
+   "say": "会话里敲斜杠 mcp，能看连接状态，不用的直接关掉，配置不会丢。",
+   "en": "Inside a session, /mcp shows what's connected and lets you disable what you don't need, keeping its config."
+  },
+  {
+   "id": "N07",
+   "zh": "范围有三档：本地，只有你、只在这个项目；用户，你的所有项目。",
+   "say": "范围有三档：本地，只有你、只在这个项目；用户，你的所有项目。",
+   "en": "There are three scopes: local, just you in this project; user, across all your projects."
+  },
+  {
+   "id": "N08",
+   "zh": "第三档是项目：写进 .mcp.json 提交进版本库，全队拿到同一套服务器。",
+   "say": "第三档是项目：写进 mcp 点 json 提交进版本库，全队拿到同一套服务器。",
+   "en": "The third is project: a .mcp.json checked into version control, so everyone gets the same servers."
+  },
+  {
+   "id": "N09",
+   "zh": "要记住代价：每个服务器的工具名和说明，每个会话都要载入，会占一点上下文。",
+   "say": "要记住代价：每个服务器的工具名和说明，每个会话都要载入，会占一点上下文。",
+   "en": "Mind the cost: each server's tool names and instructions load every session and take a little context."
+  },
+  {
+   "id": "N10",
+   "zh": "有现成命令行的，比如 gh、aws，更省；技能管怎么用，和 MCP 互补。",
+   "say": "有现成命令行的，比如 gh、aws，更省；技能管怎么用，和 MCP 互补。",
+   "en": "If a CLI exists, like gh or aws, it's more context-efficient. Skills teach how to use tools, and complement MCP."
+  },
+  {
+   "id": "N11",
+   "zh": "默认只先放工具名，用到才加载。用第三方中转的，默认可能是关着的。",
+   "say": "默认只先放工具名，用到才加载。用第三方中转的，默认可能是关着的。",
+   "en": "By default only tool names load first, and the rest on demand. Behind a third-party gateway, that default may be off."
+  },
+  {
+   "id": "N12",
+   "zh": "多接一个，就多占一点上下文，不用的，关掉。",
+   "say": "多接一个，就多占一点上下文，不用的，关掉。",
+   "en": "Every server you add costs a little context. Disable the ones you don't use."
+  }
+ ]
+}

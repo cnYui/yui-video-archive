@@ -1,0 +1,151 @@
+{
+ "layout": "single",
+ "plan": [
+  {
+   "id": "A1",
+   "type": "card",
+   "kind": "page",
+   "overlay": "page",
+   "name": "语言列表多了中文",
+   "dur": 0.5,
+   "lines": [
+    {
+     "id": "N01",
+     "a": 0.23
+    }
+   ]
+  },
+  {
+   "id": "A2",
+   "type": "card",
+   "kind": "page",
+   "overlay": "page",
+   "name": "怎么选",
+   "dur": 0.5,
+   "lines": [
+    {
+     "id": "N02",
+     "a": 0.64
+    }
+   ]
+  },
+  {
+   "id": "A3",
+   "type": "card",
+   "kind": "page",
+   "overlay": "page",
+   "name": "之前一直不支持中文",
+   "dur": 0.5,
+   "lines": [
+    {
+     "id": "N03",
+     "a": 1.1
+    }
+   ]
+  },
+  {
+   "id": "A4",
+   "type": "card",
+   "kind": "page",
+   "overlay": "page",
+   "name": "官方：大规模封号",
+   "dur": 0.5,
+   "lines": [
+    {
+     "id": "N04",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "A5",
+   "type": "card",
+   "kind": "page",
+   "overlay": "page",
+   "name": "官方帮助页只有 11 种",
+   "dur": 0.5,
+   "lines": [
+    {
+     "id": "N05",
+     "a": 0.64
+    },
+    {
+     "id": "N06",
+     "a": 3.16
+    },
+    {
+     "id": "N07",
+     "a": 7.28
+    }
+   ]
+  },
+  {
+   "id": "A6",
+   "type": "card",
+   "kind": "page",
+   "overlay": "page",
+   "name": "钓鱼执法？",
+   "dur": 0.5,
+   "lines": [
+    {
+     "id": "N08",
+     "a": 0.42
+    },
+    {
+     "id": "N09",
+     "a": 3.34
+    }
+   ]
+  },
+  {
+   "id": "A7",
+   "type": "card",
+   "kind": "page",
+   "overlay": "page",
+   "name": "语言不等于地区",
+   "dur": 0.5,
+   "lines": [
+    {
+     "id": "N10",
+     "a": 0.6
+    },
+    {
+     "id": "N11",
+     "a": 5.08
+    }
+   ]
+  },
+  {
+   "id": "A8",
+   "type": "card",
+   "kind": "page",
+   "overlay": "page",
+   "name": "官方封号理由",
+   "dur": 0.5,
+   "lines": [
+    {
+     "id": "N12",
+     "a": 0.8
+    }
+   ]
+  },
+  {
+   "id": "A9",
+   "type": "card",
+   "kind": "page",
+   "overlay": "page",
+   "name": "拜托 Claude",
+   "dur": 0.5,
+   "lines": [
+    {
+     "id": "N13",
+     "a": 2.0
+    },
+    {
+     "id": "N14",
+     "a": 5.06
+    }
+   ]
+  }
+ ]
+}

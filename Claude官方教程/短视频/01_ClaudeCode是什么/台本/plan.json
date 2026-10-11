@@ -1,0 +1,441 @@
+{
+ "layout": "dual",
+ "plan": [
+  {
+   "id": "S1",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "钩子：三步",
+   "credit": "官方教程 第1期",
+   "ranges": [
+    {
+     "src": "b",
+     "in": 14.4,
+     "out": 16.575,
+     "mute": true
+    },
+    {
+     "src": "b",
+     "in": 5.2,
+     "out": 7.375,
+     "mute": true
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "b",
+     "in": 48.7,
+     "out": 52.9,
+     "mute": true,
+     "speed": 0.966
+    }
+   ],
+   "lines": [
+    {
+     "id": "N01",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "S2",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "背书：官方入门课",
+   "credit": "官方教程 第1期",
+   "ranges": [
+    {
+     "src": "a",
+     "in": 5.15,
+     "out": 7.18,
+     "mute": true,
+     "speed": 0.938
+    },
+    {
+     "src": "a",
+     "in": 11.6,
+     "out": 13.8,
+     "mute": true,
+     "speed": 0.938
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "a",
+     "in": 7.45,
+     "out": 11.3,
+     "mute": true,
+     "speed": 0.854
+    }
+   ],
+   "lines": [
+    {
+     "id": "N02",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "S3",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "和聊天窗口的差别",
+   "credit": "官方教程 第1期",
+   "ranges": [
+    {
+     "src": "a",
+     "in": 30.28,
+     "out": 31.836,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 35.4,
+     "out": 38.097,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 45.75,
+     "out": 46.498,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 51.63,
+     "out": 54.409,
+     "mute": true
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "a",
+     "in": 39.28,
+     "out": 43.844,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 47.0,
+     "out": 50.216,
+     "mute": true
+    }
+   ],
+   "lines": [
+    {
+     "id": "N03",
+     "a": 0.0
+    },
+    {
+     "id": "N04",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "S4",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "三步循环",
+   "credit": "官方教程 第1期",
+   "ranges": [
+    {
+     "src": "b",
+     "in": 30.4,
+     "out": 33.135,
+     "mute": true
+    },
+    {
+     "src": "b",
+     "in": 33.9,
+     "out": 36.865,
+     "mute": true
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "b",
+     "in": 17.15,
+     "out": 20.474,
+     "mute": true
+    },
+    {
+     "src": "b",
+     "in": 24.65,
+     "out": 26.021,
+     "mute": true
+    },
+    {
+     "src": "b",
+     "in": 27.77,
+     "out": 28.775,
+     "mute": true
+    }
+   ],
+   "lines": [
+    {
+     "id": "N05",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "S5",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "循环 + 随时打断",
+   "credit": "官方教程 第1期",
+   "ranges": [
+    {
+     "src": "b",
+     "in": 7.5,
+     "out": 10.043,
+     "mute": true
+    },
+    {
+     "src": "b",
+     "in": 53.0,
+     "out": 60.861,
+     "mute": true
+    },
+    {
+     "src": "b",
+     "in": 107.48,
+     "out": 110.042,
+     "mute": true
+    },
+    {
+     "src": "b",
+     "in": 112.9,
+     "out": 115.085,
+     "mute": true
+    },
+    {
+     "src": "b",
+     "in": 150.06,
+     "out": 152.535,
+     "mute": true
+    },
+    {
+     "src": "b",
+     "in": 152.86,
+     "out": 153.953,
+     "mute": true
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "b",
+     "in": 37.65,
+     "out": 44.252,
+     "mute": true
+    },
+    {
+     "src": "b",
+     "in": 45.65,
+     "out": 47.839,
+     "mute": true
+    },
+    {
+     "src": "b",
+     "in": 97.88,
+     "out": 102.778,
+     "mute": true
+    },
+    {
+     "src": "b",
+     "in": 143.64,
+     "out": 145.193,
+     "mute": true
+    },
+    {
+     "src": "b",
+     "in": 145.64,
+     "out": 146.752,
+     "mute": true
+    },
+    {
+     "src": "b",
+     "in": 147.14,
+     "out": 149.505,
+     "mute": true
+    }
+   ],
+   "lines": [
+    {
+     "id": "N06",
+     "a": 0.0
+    },
+    {
+     "id": "N13",
+     "a": 0.0
+    },
+    {
+     "id": "N07",
+     "a": 0.0
+    },
+    {
+     "id": "N14",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "S6",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "四个零件",
+   "credit": "官方教程 第1期",
+   "ranges": [
+    {
+     "src": "b",
+     "in": 73.11,
+     "out": 75.219,
+     "mute": true
+    },
+    {
+     "src": "b",
+     "in": 83.62,
+     "out": 84.679,
+     "mute": true
+    },
+    {
+     "src": "b",
+     "in": 87.25,
+     "out": 93.913,
+     "mute": true
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "b",
+     "in": 64.94,
+     "out": 69.352,
+     "mute": true
+    },
+    {
+     "src": "b",
+     "in": 75.86,
+     "out": 80.043,
+     "mute": true
+    },
+    {
+     "src": "b",
+     "in": 95.42,
+     "out": 96.655,
+     "mute": true
+    }
+   ],
+   "lines": [
+    {
+     "id": "N08",
+     "a": 0.0
+    },
+    {
+     "id": "N09",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "S7",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "在哪用",
+   "credit": "官方教程 第1期",
+   "ranges": [
+    {
+     "src": "c",
+     "in": 114.5,
+     "out": 118.3,
+     "mute": true
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "c",
+     "in": 65.2,
+     "out": 69.0,
+     "mute": true
+    }
+   ],
+   "lines": [
+    {
+     "id": "N10",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "S8",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "泼冷水 + 收尾",
+   "credit": "官方教程 第1期",
+   "ranges": [
+    {
+     "src": "a",
+     "in": 141.93,
+     "out": 146.579,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 156.03,
+     "out": 157.609,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 163.28,
+     "out": 164.118,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 167.87,
+     "out": 169.954,
+     "mute": true
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "a",
+     "in": 149.44,
+     "out": 153.76,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 158.74,
+     "out": 161.665,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 164.83,
+     "out": 166.735,
+     "mute": true
+    }
+   ],
+   "lines": [
+    {
+     "id": "N11",
+     "a": 0.0
+    },
+    {
+     "id": "N12",
+     "a": 0.0
+    }
+   ]
+  }
+ ]
+}

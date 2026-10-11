@@ -1,0 +1,39 @@
+{
+  "id": "V5",
+  "no": 5,
+  "batch": "A",
+  "title": "OpenAI把Codex搬上云端，手机开任务电脑接着干，Agents API开放公测",
+  "short": "OpenAI DevDay 2026 · Codex 上云",
+  "kicker": "OPENAI DEVDAY 2026 · 解读 05",
+  "chapters": ["Codex 上云", "Agents API", "隐私稳定性"],
+  "lines": [
+    {"id": "V5-N01", "kind": "vo", "ch": 0, "zh": "合上笔记本，任务照样跑。Codex 现在整个搬到云上了。", "say": "合上笔记本，任务照样跑。Codex现在整个搬到云上了。", "en": "Close the laptop and the task keeps running. Codex has now moved entirely to the cloud."},
+    {"id": "V5-K1a", "kind": "dub", "who": "Sam", "zh": "Codex 现在完全在云上了。", "say": "Codex现在完全在云上了。", "en": "Codex is now fully in the cloud."},
+    {"id": "V5-K1b", "kind": "dub", "who": "Sam", "zh": "在手机上开个任务，回到浏览器或桌面端，接着上次的地方干，不会丢线程。", "say": "在手机上开个任务，回到浏览器或桌面端，接着上次的地方干，不会丢线程。", "en": "So this means you can start a task on your phone, pick it up on your browser or your desktop, right where you left off, no more lost threads.", "cut": [["开个任务，", "on your phone,"], ["桌面端，", "your desktop,"]]},
+    {"id": "V5-K1c", "kind": "dub", "who": "Sam", "zh": "跑到一半合上笔记本也不用担心，智能体会一直干下去。", "say": "跑到一半合上笔记本也不用担心，智能体会一直干下去。", "en": "You don't have to worry about closing your laptop in the middle of a run. Your agents just keep working wherever you are."},
+    {"id": "V5-N02", "kind": "vo", "ch": 0, "zh": "现场演示：新建任务时选“云端”，一句话下指令：把整个后端用 Rust 重写。", "say": "现场演示：新建任务时选“云端”，一句话下指令：把整个后端用Rust重写。", "en": "Live demo: create a new task, pick \"cloud,\" and give one instruction: rewrite the entire backend in Rust."},
+    {"id": "V5-N03", "kind": "vo", "ch": 0, "zh": "这活要跑很久，没关系，丢给云端，回头再看，路上还能从手机继续加想法。", "say": "这活要跑很久，没关系，丢给云端，回头再看，路上还能从手机继续加想法。", "en": "It's a long job, but that's fine: hand it to the cloud, check back later, and keep adding ideas from your phone on the way."},
+    {"id": "V5-N04", "kind": "vo", "ch": 0, "zh": "云上还多了 Codex Security Cloud：持续找漏洞，准备好验证过的修复，等你来审。", "say": "云上还多了Codex Security Cloud：持续找漏洞，准备好验证过的修复，等你来审。", "en": "The cloud also gets Codex Security Cloud: it keeps finding vulnerabilities and prepares verified fixes for you to review."},
+    {"id": "V5-N05", "kind": "vo", "ch": 0, "zh": "新增了自动去重、定时扫描和新界面，今天就能用。", "say": "新增了自动去重、定时扫描和新界面，今天就能用。", "en": "It adds automatic deduplication, scheduled scans and a new interface, available today."},
+    {"id": "V5-N06", "kind": "vo", "ch": 1, "zh": "Agents API 开放公测：Codex 和 Dots 背后的这套技术，现在给开发者用。", "say": "Agents API开放公测：Codex和Dots背后的这套技术，现在给开发者用。", "en": "The Agents API opens in public beta: the technology behind Codex and Dots is now available to developers."},
+    {"id": "V5-N07", "kind": "vo", "ch": 1, "zh": "里面有 harness、托管记忆、多智能体控制，还加上了电脑操作：比如让智能体打开浏览器，把网站的流程点一遍来测试。", "say": "里面有harness、托管记忆、多智能体控制，还加上了电脑操作：比如让智能体打开浏览器，把网站的流程点一遍来测试。", "en": "It includes the harness, managed memory and multi-agent control, plus computer use: for example, an agent opens a browser and clicks through your site's flow to test it."},
+    {"id": "V5-N08", "kind": "vo", "ch": 1, "zh": "AWS 上也能用：OpenAI 的智能体可以直接跑在亚马逊云上，挨着你原有的应用和数据。", "say": "AWS上也能用：OpenAI的智能体可以直接跑在亚马逊云上，挨着你原有的应用和数据。", "en": "It works on AWS too: OpenAI's agents can run directly on Amazon's cloud, right next to your existing apps and data."},
+    {"id": "V5-N09", "kind": "vo", "ch": 2, "zh": "OpenAI Private Intelligence 开放预览：零数据保留，加上私有安全处理，内容完全不存在 OpenAI 的服务器上。", "say": "OpenAI Private Intelligence开放预览：零数据保留，加上私有安全处理，内容完全不存在OpenAI的服务器上。", "en": "OpenAI Private Intelligence opens in preview: zero data retention plus private secure processing, so your content never sits on OpenAI's servers."},
+    {"id": "V5-N10", "kind": "vo", "ch": 2, "zh": "稳定性也有数：Responses API 一年增长 100 倍，首个 token 快了 45%，工具调用快了 30% 以上。", "say": "稳定性也有数：Responses API一年增长一百倍，首个token快了百分之四十五，工具调用快了百分之三十以上。", "en": "Reliability has numbers too: the Responses API grew 100x in a year, time to first token is 45% faster, and tool calls are over 30% faster."}
+  ],
+  "plan": [
+    {"type": "vclip", "id": "S1", "ch": 0, "from": "V5-N01", "to": "V5-N01", "in": 1692.5, "what": "Codex 搬到云上", "callouts": [{"t": 0.3, "d": 10, "hook": true, "text": "合上笔记本<br>**任务照样跑**"}]},
+    {"type": "clip", "id": "S2a", "ch": 0, "in": 1694.3, "out": 1697.2, "what": "Codex 现在完全在云上", "where": "主题演讲",
+     "lines": [{"id": "V5-K1a", "a": 0.46}]},
+    {"type": "clip", "id": "S2b", "ch": 0, "in": 1702.3, "out": 1714.0, "what": "手机、浏览器、桌面接着干", "where": "主题演讲",
+     "lines": [{"id": "V5-K1b", "a": 0.36}, {"id": "V5-K1c", "a": 6.72}]},
+    {"type": "vclip", "id": "S3", "ch": 0, "from": "V5-N02", "to": "V5-N03", "in": 2431.0, "what": "Romain 演示：云端重写后端", "where": "Romain · 现场演示"},
+    {"type": "vclip", "id": "S4", "ch": 0, "from": "V5-N04", "to": "V5-N05", "in": 1724.0, "what": "舞台大屏：Codex Security Cloud"},
+    {"type": "vclip", "id": "S5a", "ch": 1, "from": "V5-N06", "to": "V5-N06", "in": 1748.2, "what": "舞台大屏：Agents API"},
+    {"type": "vclip", "id": "S5c", "ch": 1, "from": "V5-N07", "to": "V5-N07", "in": 1761.6, "what": "舞台大屏：Agents API 的组成和电脑操作"},
+    {"type": "vclip", "id": "S5b", "ch": 1, "from": "V5-N08", "to": "V5-N08", "in": 1792.5, "what": "舞台大屏：OpenAI × AWS"},
+    {"type": "vclip", "id": "S6a", "ch": 2, "from": "V5-N09", "to": "V5-N09", "in": 1826.0, "what": "舞台大屏：Private Intelligence"},
+    {"type": "vclip", "id": "S6b", "ch": 2, "from": "V5-N10", "to": "V5-N10", "in": 1861.0, "what": "舞台大屏：最快的 API",
+     "callouts": [{"t": 4.0, "d": 4, "text": "首个 token **−45%** · 工具调用 **+30%** 更快", "pos": "tl"}]}
+  ]
+}

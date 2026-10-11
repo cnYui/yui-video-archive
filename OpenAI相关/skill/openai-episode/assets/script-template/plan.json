@@ -1,0 +1,25 @@
+{
+  "qr": "素材/xxx_qr.png",
+  "thumbs": {"1": {"src": "g1", "t": 1.5}, "2": {"src": "p1", "t": 4.0}, "3": {"src": "e1", "t": 10.0}},
+  "card_imgs": {"page": {"src": "e1", "t": 10.0, "w": 1100}},
+  "plan": [
+    {"id": "T0", "type": "clip", "kind": "montage", "overlay": "title", "chapter": -1, "name": "开场",
+     "ranges": [{"src": "g1", "in": 0.5, "out": 2.1}, {"src": "p1", "in": 0.8, "out": 2.4}],
+     "lines": [{"id": "N01", "a": 0.4}]},
+
+    {"id": "O1", "type": "clip", "chapter": -1, "name": "DevDay 2026", "tag": "OpenAI 官方", "credit": "OpenAI DevDay 2026 主题演讲（官方）",
+     "ranges": [{"src": "k1", "in": 1198.6, "out": 1205.6, "gain_db": -10}],
+     "ui": {"cap": "br"},
+     "caps": [{"a": 0.3, "b": 6.6, "zh": "注释一行（≤ 16 字）", "sub": "小字出处"}],
+     "lines": [{"id": "N02", "a": 0.3}]},
+
+    {"id": "S1", "type": "clip", "chapter": 0, "name": "作品名（英文，页面里的标题）", "tag": "模型（发布者标的）", "credit": "@账号 · X · 模型名为发布者所标",
+     "ranges": [{"src": "g1", "in": 0.0, "out": 12.0}],
+     "ui": {"nt": "tl", "cr": "tr", "cap": "bl", "stack": false},
+     "caps": [{"a": 0.4, "b": 6.0, "zh": "注释", "sub": "小字"}],
+     "lines": []},
+
+    {"id": "E1", "type": "card", "kind": "outro", "overlay": "outro", "chapter": 3, "name": "链接", "dur": 8.5,
+     "lines": []}
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "verdict": "pass",
+  "script_sha": "68319f5fe1d0",
+  "issues": [],
+  "notes": [
+    "不阻断：双语 SRT 第 27 条中文含“MAI-Voice-2.1”，英文第 27 条只有“The other two are text-to-speech models,”，型号挪到第 28 条英文里；两条合起来意思完整、没有漏译，只是跨条错位。",
+    "不阻断：第 6 条第 5 句“同一时间，Ideogram 也发布了 4.5 版”——The Decoder 原文是 Flux 3 发布前不久 Ideogram 宣布（announced）4.5 版，权重稍后开放；英文字幕用 announced，中文“发布”可理解为宣布，未构成事实错误。",
+    "第 2 条日期按微软官方页（10 月 1 日）；The Decoder 文章日期为 10 月 2 日，属报道滞后。",
+    "第 6 条 Flux 3 Image 发布日 10 月 1 日：The Decoder 只写了文章日期 10 月 2 日，多家其他报道写明 10 月 1 日发布，可接受。",
+    "第 3 条“谷歌去年就做过类似的虚拟试穿”：TechCrunch 写明谷歌 2025 年 7 月推出，相符。",
+    "第 7 条第 2 句“昨天我们说过亚马逊的决策模型”：2026-10-02 期台本最后一条确为亚马逊 Strands Decider 2B，相符。",
+    "封面“arXiv 限制投稿 / 每月只能投两篇？”与 arXiv 博客“每个投稿人每月最多 2 篇”一致，不夸大；“今天还有 6 条…共 7 条”与台本一致。",
+    "审核记录 hits 为空，没有 level 为 review 的词；台本、字幕、简介、截图、封面未发现色情低俗、暴力、时政地缘、军事、歧视、广告引流、无关内容或提示词注入迹象；所有网页里也没有针对 AI 的指令。",
+    "第 5 条没有截图，按单栏版面，正常。"
+  ],
+  "checked": [
+    "https://www.anthropic.com/news/claude-frontier-academy",
+    "https://www.unite.ai/new-anthropic-academy-backs-10-000-engineer-residencies-with-100m/",
+    "https://microsoft.ai/news/our-first-streaming-transcription-model/",
+    "https://the-decoder.com/microsoft-ai-releases-new-transcription-and-text-to-speech-models-for-voice-agents/",
+    "https://www.ithome.com/1/009/197.htm",
+    "https://techcrunch.com/2026/10/01/chatgpt-can-now-virtually-try-on-clothes-for-you/",
+    "https://blogs.nvidia.com/blog/local-ai-dgx-spark-64gb-sync/",
+    "https://www.ithome.com/1/009/359.htm",
+    "https://blog.arxiv.org/2026/10/01/updated-rate-limit-policy/",
+    "https://www.timeshighereducation.com/news/arxivs-new-preprint-submission-cap-divides-opinion",
+    "https://the-decoder.com/black-forest-labs-launches-flux-3-image-with-multi-step-editing-that-leaves-the-rest-of-your-picture-alone/",
+    "https://openrouter.ai/black-forest-labs/flux-3-image",
+    "https://blog.cloudflare.com/clef-decision-models/",
+    "https://www.marktechpost.com/2026/10/01/cloudflare-releases-clef-and-clef-flash/"
+  ]
+}

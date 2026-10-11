@@ -1,0 +1,67 @@
+=== V1 16:29:20
+[V1 w0] 0/785 (0s)
+[V1 w1] 0/786 (0s)
+[V1 w2] 0/785 (0s)
+[V1 w0] 600/785 (77s)
+[V1 w2] 600/785 (76s)
+[V1 w1] 600/786 (78s)
+[V1 w0] done 785 frames in 94s, errors: 0
+[V1 w2] done 785 frames in 92s, errors: 0
+[V1 w1] done 786 frames in 95s, errors: 0
+ok -> D:\大疆\独立视频\2026-10_OpenAI-DevDay-2026解读\制作\00_整片\out\V1\V1_整片.mp4  (2356 frames, 100s)
+=== V2 16:31:00
+[V2 w0] 0/883 (0s)
+[V2 w1] 0/884 (0s)
+[V2 w2] 0/883 (0s)
+[V2 w1] 600/884 (74s)
+[V2 w2] 600/883 (76s)
+[V2 w0] 600/883 (79s)
+[V2 w2] done 883 frames in 108s, errors: 0
+[V2 w1] done 884 frames in 110s, errors: 0
+[V2 w0] done 883 frames in 114s, errors: 0
+ok -> D:\大疆\独立视频\2026-10_OpenAI-DevDay-2026解读\制作\00_整片\out\V2\V2_整片.mp4  (2650 frames, 118s)
+=== V3 16:32:59
+[V3 w0] 0/801 (0s)
+[V3 w1] 0/802 (0s)
+[V3 w2] 0/801 (0s)
+[V3 w1] 600/802 (70s)
+[V3 w2] 600/801 (71s)
+[V3 w0] 600/801 (73s)
+[V3 w2] done 801 frames in 94s, errors: 0
+[V3 w1] done 802 frames in 98s, errors: 0
+[V3 w0] done 801 frames in 99s, errors: 0
+ok -> D:\大疆\独立视频\2026-10_OpenAI-DevDay-2026解读\制作\00_整片\out\V3\V3_整片.mp4  (2404 frames, 104s)
+=== V4 16:34:42
+[V4 w0] 0/931 (0s)
+[V4 w1] 0/931 (0s)
+[V4 w2] 0/931 (0s)
+[V4 w0] 600/931 (64s)
+[V4 w1] 600/931 (65s)
+[V4 w2] 600/931 (66s)
+[V4 w0] done 931 frames in 95s, errors: 0
+[V4 w1] done 931 frames in 95s, errors: 0
+[V4 w2] done 931 frames in 98s, errors: 0
+ok -> D:\大疆\独立视频\2026-10_OpenAI-DevDay-2026解读\制作\00_整片\out\V4\V4_整片.mp4  (2793 frames, 103s)
+=== V5 16:36:26
+[V5 w0] 0/864 (0s)
+[V5 w1] 0/865 (0s)
+[V5 w2] 0/864 (0s)
+[V5 w0] 600/864 (67s)
+[V5 w1] 600/865 (69s)
+[V5 w2] 600/864 (71s)
+[V5 w0] done 864 frames in 99s, errors: 0
+[V5 w2] done 864 frames in 101s, errors: 0
+[V5 w1] done 865 frames in 103s, errors: 0
+ok -> D:\大疆\独立视频\2026-10_OpenAI-DevDay-2026解读\制作\00_整片\out\V5\V5_整片.mp4  (2593 frames, 107s)
+=== V6 16:38:14
+[V6 w0] 0/889 (0s)
+[V6 w1] 0/888 (0s)
+[V6 w2] 0/889 (0s)
+[V6 w1] 600/888 (60s)
+[V6 w0] 600/889 (64s)
+[V6 w2] 600/889 (62s)
+[V6 w1] done 888 frames in 91s, errors: 0
+[V6 w0] done 889 frames in 92s, errors: 0
+[V6 w2] done 889 frames in 91s, errors: 0
+ok -> D:\大疆\独立视频\2026-10_OpenAI-DevDay-2026解读\制作\00_整片\out\V6\V6_整片.mp4  (2666 frames, 97s)
+ALLDONE 16:39:51

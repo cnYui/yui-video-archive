@@ -1,0 +1,1183 @@
+{
+  "qr": "素材/tavus_griffin_qr.png",
+  "thumbs": {
+    "1": {
+      "src": "gr",
+      "t": 42.9
+    },
+    "2": {
+      "img": "g_study",
+      "crop": [
+        0.03,
+        0.172,
+        0.66,
+        0.45
+      ]
+    },
+    "3": {
+      "src": "el",
+      "t": 7.4
+    }
+  },
+  "card_imgs": {
+    "page": {
+      "img": "g_hero",
+      "crop": [
+        0,
+        0.03,
+        1,
+        0.915
+      ],
+      "w": 1100
+    }
+  },
+  "plan": [
+    {
+      "id": "T0",
+      "type": "clip",
+      "kind": "montage",
+      "overlay": "title",
+      "chapter": -1,
+      "name": "开场",
+      "ranges": [
+        {
+          "src": "gr",
+          "in": 39.3,
+          "out": 41.1,
+          "mute": true
+        },
+        {
+          "src": "gr",
+          "in": 42.3,
+          "out": 44.1,
+          "mute": true
+        },
+        {
+          "src": "gr",
+          "in": 46.4,
+          "out": 48.2,
+          "mute": true
+        },
+        {
+          "src": "gr",
+          "in": 88.0,
+          "out": 89.8,
+          "mute": true
+        }
+      ],
+      "lines": [
+        {
+          "id": "N01",
+          "a": 0.3
+        },
+        {
+          "id": "N02",
+          "a": 0
+        },
+        {
+          "id": "N03",
+          "a": 0
+        }
+      ],
+      "ui": {
+        "titleAt": 3.4
+      }
+    },
+    {
+      "id": "D1",
+      "type": "clip",
+      "chapter": 0,
+      "name": "Griffin 发布视频",
+      "tag": "官方演示",
+      "credit": "画面：@tavus · X（2026-10-01）",
+      "ranges": [
+        {
+          "src": "gr",
+          "in": 27.85,
+          "out": 44.95
+        }
+      ],
+      "ui": {
+        "cap": "tl2"
+      },
+      "caps": [
+        {
+          "a": 3.2,
+          "b": 8.4,
+          "zh": "右边的 Vanessa 是 AI",
+          "sub": "左边是 Tavus 联合创始人兼 CEO Hassaan Raza"
+        }
+      ],
+      "dlg": [
+        {
+          "id": "D01",
+          "src": "gr",
+          "a": 28.55,
+          "b": 30.62,
+          "who": "Hassaan",
+          "zh": "你觉得，他们会相信你是 AI 吗？",
+          "en": "Do you think they'll believe that you're AI?"
+        },
+        {
+          "id": "D02",
+          "src": "gr",
+          "a": 31.1,
+          "b": 32.66,
+          "who": "Vanessa",
+          "cls": "ai",
+          "zh": "这不就是重点吗？",
+          "en": "I think that's the whole point, isn't it?"
+        },
+        {
+          "id": "D03",
+          "src": "gr",
+          "a": 34.05,
+          "b": 36.65,
+          "who": "Vanessa",
+          "cls": "ai",
+          "zh": "只要足够好，他们根本不用去想。",
+          "en": "If it's good enough, they won't even have to think about it."
+        },
+        {
+          "id": "D04",
+          "src": "gr",
+          "a": 38.42,
+          "b": 39.85,
+          "who": "Hassaan",
+          "zh": "那就来个最简单的，比个大拇指？",
+          "en": "Now, how about just a thumbs up?"
+        },
+        {
+          "id": "D05",
+          "src": "gr",
+          "a": 41.85,
+          "b": 44.3,
+          "who": "Vanessa",
+          "cls": "ai",
+          "zh": "好啊，一个大拇指，马上来。必须的！",
+          "en": "Sure. One thumbs up, coming right up. Hell, yeah."
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "type": "shot",
+      "chapter": 0,
+      "name": "Griffin 官网首屏",
+      "tag": "官方页面",
+      "credit": "来源：tavus.io/griffin",
+      "img": "g_hero",
+      "dur": 8.0,
+      "ui": {
+        "cap": "br"
+      },
+      "cam": [
+        {
+          "t": 0,
+          "z": 1.0,
+          "x": 0.5,
+          "y": 0.5
+        },
+        {
+          "t": 0.9,
+          "z": 1.55,
+          "x": 0.5,
+          "y": 0.33
+        },
+        {
+          "t": 5.0,
+          "z": 1.55,
+          "x": 0.5,
+          "y": 0.33
+        },
+        {
+          "t": 6.0,
+          "z": 1.55,
+          "x": 0.5,
+          "y": 0.657
+        }
+      ],
+      "hl": [
+        {
+          "a": 1.1,
+          "b": 4.9,
+          "key": "The First Human Interaction Model",
+          "label": "第一个人类交互模型（HIM）",
+          "pad": 14
+        },
+        {
+          "a": 6.4,
+          "b": 7.9,
+          "key": "48%",
+          "label": "48% 以为是真人",
+          "pad": 12
+        },
+        {
+          "a": 6.6,
+          "b": 7.9,
+          "key": "#1",
+          "label": "NVIDIA 评测第一",
+          "pad": 12
+        }
+      ],
+      "lines": [
+        {
+          "id": "N04",
+          "a": 0.5
+        }
+      ]
+    },
+    {
+      "id": "C",
+      "type": "shot",
+      "chapter": 0,
+      "name": "全双工 vs 接力",
+      "tag": "官方页面",
+      "credit": "来源：tavus.io/griffin · 04.2",
+      "img": "g_duplex",
+      "dur": 9.5,
+      "ui": {
+        "cap": "tl2"
+      },
+      "cam": [
+        {
+          "t": 0,
+          "z": 1.0,
+          "x": 0.5,
+          "y": 0.5
+        },
+        {
+          "t": 0.8,
+          "z": 1.5,
+          "x": 0.5,
+          "y": 0.5
+        }
+      ],
+      "hl": [
+        {
+          "a": [
+            "N05",
+            "老办法",
+            0.1
+          ],
+          "b": [
+            "N06",
+            "Griffin",
+            -0.15
+          ],
+          "box": [
+            0.608,
+            0.478,
+            0.942,
+            0.517
+          ],
+          "label": "接力：识别 → 大模型 → 合成 → 头像",
+          "pad": 12
+        },
+        {
+          "a": [
+            "N06",
+            "Griffin",
+            0.1
+          ],
+          "b": "end",
+          "box": [
+            0.368,
+            0.708,
+            0.942,
+            0.742
+          ],
+          "label": "Griffin：点头、嗯一声、没说完就开口",
+          "pad": 12
+        }
+      ],
+      "caps": [
+        {
+          "a": 0.5,
+          "b": "end",
+          "zh": "官方示意图",
+          "sub": "官网注明：图里的时间仅为示意，不是实测"
+        }
+      ],
+      "lines": [
+        {
+          "id": "N05",
+          "a": 0.6
+        },
+        {
+          "id": "N06",
+          "a": 0
+        }
+      ]
+    },
+    {
+      "id": "D2",
+      "type": "clip",
+      "chapter": 0,
+      "name": "Griffin 发布视频",
+      "tag": "官方演示",
+      "credit": "画面：@tavus · X（2026-10-01）",
+      "ranges": [
+        {
+          "src": "gr",
+          "in": 51.45,
+          "out": 60.75
+        }
+      ],
+      "ui": {
+        "cap": "tl2"
+      },
+      "caps": [
+        {
+          "a": 0.2,
+          "b": 3.4,
+          "zh": "她看到了旁边多出来的人",
+          "sub": "官方：Griffin 会结合视频画面来回应"
+        }
+      ],
+      "dlg": [
+        {
+          "id": "D07",
+          "src": "gr",
+          "a": 51.55,
+          "b": 53.2,
+          "who": "Vanessa",
+          "cls": "ai",
+          "zh": "哎，那个穿丑毛衣的是谁？",
+          "en": "Oh. Who's that with the ugly sweater?"
+        },
+        {
+          "id": "D08",
+          "src": "gr",
+          "a": 55.6,
+          "b": 57.4,
+          "who": "旁边的人",
+          "zh": "我淘来的。",
+          "en": "I thrifted this."
+        },
+        {
+          "id": "D09",
+          "src": "gr",
+          "a": 58.95,
+          "b": 60.45,
+          "who": "Vanessa",
+          "cls": "ai",
+          "zh": "嗯，一看就是。",
+          "en": "Yeah, it definitely looks like it."
+        }
+      ]
+    },
+    {
+      "id": "D3",
+      "type": "clip",
+      "chapter": 0,
+      "name": "Griffin 发布视频",
+      "tag": "官方演示",
+      "credit": "画面：@tavus · X（2026-10-01）",
+      "ranges": [
+        {
+          "src": "gr",
+          "in": 61.8,
+          "out": 73.3
+        }
+      ],
+      "dlg": [
+        {
+          "id": "D11",
+          "src": "gr",
+          "a": 61.9,
+          "b": 64.58,
+          "who": "Vanessa",
+          "cls": "ai",
+          "zh": "才 1%？你这是在走钢丝啊，Hassaan。真的。",
+          "en": "One percent? You're living on the edge, Hassaan. Truly."
+        },
+        {
+          "id": "D12",
+          "src": "gr",
+          "a": 64.76,
+          "b": 69.14,
+          "who": "Vanessa",
+          "cls": "ai",
+          "zh": "我会保持呼吸平稳，免得更快耗光你的 CPU。",
+          "en": "I'll keep my breathing steady so I don't drain your CPU any faster."
+        },
+        {
+          "id": "D13",
+          "src": "gr",
+          "a": 70.05,
+          "b": 72.45,
+          "who": "Hassaan",
+          "zh": "哇，你真的放慢了呼吸。",
+          "en": "Wow, you actually did slow down your breathing."
+        }
+      ]
+    },
+    {
+      "id": "E",
+      "type": "shot",
+      "chapter": 1,
+      "name": "面对面实验",
+      "tag": "官方页面",
+      "credit": "来源：tavus.io/griffin · 05.3",
+      "img": "g_study",
+      "dur": 10.0,
+      "ui": {
+        "cap": "tr"
+      },
+      "cam": [
+        {
+          "t": 0,
+          "z": 1.0,
+          "x": 0.5,
+          "y": 0.5
+        },
+        {
+          "t": [
+            "N10",
+            "54",
+            -0.4
+          ],
+          "z": 1.45,
+          "x": 0.5,
+          "y": 0.37
+        },
+        {
+          "t": [
+            "N11",
+            "26",
+            -0.5
+          ],
+          "z": 2.3,
+          "x": 0.5,
+          "y": 0.33
+        },
+        {
+          "t": [
+            "N11b",
+            "41",
+            -0.6
+          ],
+          "z": 2.3,
+          "x": 0.5,
+          "y": 0.6
+        },
+        {
+          "t": [
+            "N12",
+            "注意",
+            -0.3
+          ],
+          "z": 1.8,
+          "x": 0.5,
+          "y": 0.72
+        }
+      ],
+      "hl": [
+        {
+          "a": [
+            "N11",
+            "26",
+            -0.2
+          ],
+          "b": [
+            "N11b",
+            "41",
+            -0.5
+          ],
+          "box": [
+            0.3,
+            0.262,
+            0.6,
+            0.4
+          ],
+          "label": "26 / 54 = 48% 以为是真人",
+          "pad": 12
+        },
+        {
+          "a": [
+            "N11b",
+            "41",
+            -0.3
+          ],
+          "b": [
+            "N12",
+            "注意",
+            -0.4
+          ],
+          "box": [
+            0.3,
+            0.512,
+            0.62,
+            0.647
+          ],
+          "label": "上一代系统：1 / 41 = 2.4%",
+          "pad": 12
+        },
+        {
+          "a": [
+            "N12",
+            "注意",
+            0.0
+          ],
+          "b": [
+            "N12",
+            "做的",
+            1.2
+          ],
+          "box": [
+            0.041,
+            0.836,
+            0.959,
+            0.966
+          ],
+          "label": "Tavus 自己设计、自己执行",
+          "pad": 10
+        }
+      ],
+      "lines": [
+        {
+          "id": "N10",
+          "a": 0.4
+        },
+        {
+          "id": "N11",
+          "a": 0
+        },
+        {
+          "id": "N11b",
+          "a": 0
+        },
+        {
+          "id": "N12",
+          "a": 0
+        }
+      ],
+      "caps": [
+        {
+          "a": 0.3,
+          "b": "end",
+          "zh": "测的是 Griffin-Lite（研究预览版）",
+          "sub": "“上一代”= Phoenix-4.5 + Sparrow-2 + Raven-1"
+        }
+      ]
+    },
+    {
+      "id": "F1",
+      "type": "shot",
+      "chapter": 1,
+      "name": "NVIDIA VideoFDB · 生成",
+      "tag": "官方页面",
+      "credit": "来源：tavus.io/griffin · 05.2",
+      "img": "g_fdb_gen",
+      "dur": 7.0,
+      "ui": {
+        "cap": "br"
+      },
+      "cam": [
+        {
+          "t": 0,
+          "z": 1.0,
+          "x": 0.5,
+          "y": 0.5
+        },
+        {
+          "t": 0.7,
+          "z": 1.35,
+          "x": 0.5,
+          "y": 0.55
+        }
+      ],
+      "hl": [
+        {
+          "a": [
+            "N14",
+            "生成赛道",
+            0.0
+          ],
+          "b": "end",
+          "box": [
+            0.035,
+            0.396,
+            0.967,
+            0.443
+          ],
+          "label": "Griffin 3.83",
+          "pad": 10
+        },
+        {
+          "a": [
+            "N14",
+            "3.92",
+            -0.4
+          ],
+          "b": "end",
+          "box": [
+            0.035,
+            0.326,
+            0.967,
+            0.382
+          ],
+          "label": "真人参照 3.92",
+          "pad": 10
+        }
+      ],
+      "caps": [
+        {
+          "a": 0.5,
+          "b": "end",
+          "zh": "次优：Gemini 2.5 + Anam 2.80（NVIDIA 拼的方案）",
+          "sub": "榜单页可查 · AI 评审打分 · 生成赛道只有两个拼接对手"
+        }
+      ],
+      "lines": [
+        {
+          "id": "N13",
+          "a": 0.5
+        },
+        {
+          "id": "N14",
+          "a": 0
+        }
+      ]
+    },
+    {
+      "id": "F2",
+      "type": "shot",
+      "chapter": 1,
+      "name": "NVIDIA VideoFDB · 感知",
+      "tag": "官方页面",
+      "credit": "来源：tavus.io/griffin · 05.2",
+      "img": "g_fdb_perc",
+      "dur": 4.6,
+      "ui": {
+        "cap": "br"
+      },
+      "cam": [
+        {
+          "t": 0,
+          "z": 1.5,
+          "x": 0.5,
+          "y": 0.45
+        },
+        {
+          "t": 4.6,
+          "z": 1.5,
+          "x": 0.5,
+          "y": 0.5
+        }
+      ],
+      "hl": [
+        {
+          "a": 0.5,
+          "b": "end",
+          "box": [
+            0.035,
+            0.33,
+            0.967,
+            0.37
+          ],
+          "label": "Griffin 3.73",
+          "pad": 10
+        }
+      ],
+      "caps": [
+        {
+          "a": 0.4,
+          "b": "end",
+          "zh": "感知赛道：Griffin 3.73 · 次优 3.44（仅音频）· 真人 4.20",
+          "sub": "同样由 AI 评审打分"
+        }
+      ]
+    },
+    {
+      "id": "G",
+      "type": "shot",
+      "chapter": 1,
+      "name": "Phoenix 4.5 盲测",
+      "tag": "官方图",
+      "credit": "来源：@tavus · X（2026-09-29）",
+      "img": "x_benchmark",
+      "fit": 1.0,
+      "dur": 7.0,
+      "ui": {
+        "nt": "none",
+        "cap": "br"
+      },
+      "cam": [
+        {
+          "t": 0,
+          "z": 1.0,
+          "x": 0.5,
+          "y": 0.5
+        },
+        {
+          "t": 7.0,
+          "z": 1.08,
+          "x": 0.55,
+          "y": 0.5
+        }
+      ],
+      "hl": [
+        {
+          "a": [
+            "N15",
+            "盲测",
+            0.2
+          ],
+          "b": "end",
+          "box": [
+            0.5975,
+            0.316,
+            0.965,
+            0.427
+          ],
+          "label": "",
+          "pad": 10,
+          "in": true
+        },
+        {
+          "a": [
+            "N15",
+            "盲测",
+            0.5
+          ],
+          "b": "end",
+          "box": [
+            0.5975,
+            0.484,
+            0.965,
+            0.596
+          ],
+          "label": "",
+          "pad": 10,
+          "in": true
+        },
+        {
+          "a": [
+            "N15",
+            "盲测",
+            0.8
+          ],
+          "b": "end",
+          "box": [
+            0.5975,
+            0.653,
+            0.965,
+            0.764
+          ],
+          "label": "",
+          "pad": 10,
+          "in": true
+        }
+      ],
+      "caps": [
+        {
+          "a": 0.4,
+          "b": "end",
+          "zh": "309 人参加盲测，评了 3037 组视频",
+          "sub": "Tavus 自己设计并执行 · 只比画面自然度 · 不是 Griffin"
+        }
+      ],
+      "lines": [
+        {
+          "id": "N15",
+          "a": 0.5
+        }
+      ]
+    },
+    {
+      "id": "H",
+      "type": "shot",
+      "chapter": 2,
+      "name": "安全与发布",
+      "tag": "官方页面",
+      "credit": "来源：tavus.io/griffin · 06",
+      "img": "g_safety",
+      "dur": 8.0,
+      "ui": {
+        "cap": "br"
+      },
+      "cam": [
+        {
+          "t": 0,
+          "z": 1.0,
+          "x": 0.5,
+          "y": 0.5
+        },
+        {
+          "t": 0.7,
+          "z": 1.5,
+          "x": 0.5,
+          "y": 0.55
+        }
+      ],
+      "hl": [
+        {
+          "a": [
+            "N16",
+            "不过",
+            0.1
+          ],
+          "b": [
+            "N17",
+            "官方",
+            -0.1
+          ],
+          "key": "will not be available for use for customers at this time",
+          "label": "不对客户开放，只给受信任的测试者",
+          "pad": 12
+        },
+        {
+          "a": [
+            "N17",
+            "官方",
+            0.1
+          ],
+          "b": "end",
+          "key": "deceive a human",
+          "label": "也可能让人误以为对面不是 AI",
+          "pad": 12
+        }
+      ],
+      "lines": [
+        {
+          "id": "N16",
+          "a": 0.6
+        },
+        {
+          "id": "N17",
+          "a": 0
+        }
+      ]
+    },
+    {
+      "id": "I1",
+      "type": "clip",
+      "chapter": 2,
+      "name": "Elevare 客户案例 · 不是 Griffin",
+      "tag": "官方视频",
+      "credit": "画面：@tavus · X（2026-09-29）",
+      "ranges": [
+        {
+          "src": "el",
+          "in": 74.45,
+          "out": 78.9,
+          "mute": true
+        },
+        {
+          "src": "el",
+          "in": 83.75,
+          "out": 86.3,
+          "mute": true
+        },
+        {
+          "src": "el",
+          "in": 53.45,
+          "out": 55.3,
+          "mute": true
+        }
+      ],
+      "ui": {
+        "cap": "tl2"
+      },
+      "caps": [
+        {
+          "a": [
+            "N18",
+            "Phoenix",
+            -0.2
+          ],
+          "b": [
+            "N19",
+            "比如",
+            -0.1
+          ],
+          "zh": "Phoenix 出脸 · Raven 看懂你 · Sparrow 管轮到谁说",
+          "sub": "官网对三个模型的分工"
+        },
+        {
+          "a": [
+            "N19",
+            "比如",
+            0.0
+          ],
+          "b": "end",
+          "zh": "Elevare 用的是 Raven-1 和 Sparrow-2",
+          "sub": "不是 Griffin · 案例页没给出 Elevare 自己的成效数字"
+        }
+      ],
+      "lines": [
+        {
+          "id": "N18",
+          "a": 0.4
+        },
+        {
+          "id": "N19",
+          "a": 0
+        }
+      ]
+    },
+    {
+      "id": "I2",
+      "type": "clip",
+      "chapter": 2,
+      "name": "Elevare 客户案例 · 不是 Griffin",
+      "tag": "官方视频",
+      "credit": "画面：@tavus · X（2026-09-29）",
+      "ranges": [
+        {
+          "src": "el",
+          "in": 25.7,
+          "out": 34.3
+        }
+      ],
+      "ui": {
+        "cap": "tl2"
+      },
+      "caps": [
+        {
+          "a": 0.2,
+          "b": 3.4,
+          "zh": "Kayla Walsh",
+          "sub": "Elevare 创始人兼 CEO（字幕牌原文）"
+        }
+      ],
+      "dlg": [
+        {
+          "id": "E01",
+          "src": "el",
+          "a": 26.15,
+          "b": 28.7,
+          "who": "Kayla",
+          "zh": "我们很兴奋，能带来这样的技术和陪伴：",
+          "en": "We're excited to bring technology and a care presence"
+        },
+        {
+          "id": "E02",
+          "src": "el",
+          "a": 28.75,
+          "b": 33.95,
+          "who": "Kayla",
+          "zh": "永远耐心、随时都在，还有长期记忆。",
+          "en": "that's infinitely patient, always available, and has longitudinal memory."
+        }
+      ]
+    },
+    {
+      "id": "I3",
+      "type": "clip",
+      "chapter": 2,
+      "name": "Elevare 客户案例 · 不是 Griffin",
+      "tag": "官方视频",
+      "credit": "画面：@tavus · X（2026-09-29）",
+      "ranges": [
+        {
+          "src": "el",
+          "in": 103.0,
+          "out": 114.2
+        }
+      ],
+      "ui": {
+        "cap": "tl2"
+      },
+      "caps": [
+        {
+          "a": 0.2,
+          "b": 3.6,
+          "zh": "Parisa Ghanad Torshizi",
+          "sub": "字幕牌：Virtual Human Systems"
+        }
+      ],
+      "dlg": [
+        {
+          "id": "E03",
+          "src": "el",
+          "a": 103.35,
+          "b": 105.4,
+          "who": "Parisa",
+          "zh": "Tavus 提供的感知模块，",
+          "en": "Tavus, while providing the perception module,"
+        },
+        {
+          "id": "E04",
+          "src": "el",
+          "a": 105.85,
+          "b": 111.55,
+          "who": "Parisa",
+          "zh": "能读出妈妈们没有说出口的信息，",
+          "en": "can infer information that these mothers are not reporting verbally"
+        },
+        {
+          "id": "E05",
+          "src": "el",
+          "a": 111.6,
+          "b": 113.85,
+          "who": "Parisa",
+          "zh": "从她们的表情或语气里。",
+          "en": "from their facial expression or tone of speech"
+        }
+      ]
+    },
+    {
+      "id": "J",
+      "type": "clip",
+      "chapter": 2,
+      "name": "Memories 记忆功能 · 不是 Griffin",
+      "tag": "官方视频",
+      "credit": "画面：@tavus · X（2026-09-16）",
+      "ranges": [
+        {
+          "src": "me",
+          "in": 0.4,
+          "out": 10.0
+        },
+        {
+          "src": "me",
+          "in": 10.3,
+          "out": 16.8,
+          "mute": true
+        }
+      ],
+      "ui": {
+        "cap": "tl2"
+      },
+      "caps": [
+        {
+          "a": [
+            "N20",
+            "长期记忆",
+            -0.2
+          ],
+          "b": "end",
+          "zh": "LongMemEval 93.4%（467 / 500 题）",
+          "sub": "Tavus 自己跑的 · 逐题答案已公开 · 不是 Griffin"
+        }
+      ],
+      "dlg": [
+        {
+          "id": "M01",
+          "src": "me",
+          "a": 0.45,
+          "b": 2.7,
+          "who": "Elisa",
+          "zh": "你和 PAL 聊得很好，",
+          "en": "You could have a great conversation with a PAL,"
+        },
+        {
+          "id": "M02",
+          "src": "me",
+          "a": 3.05,
+          "b": 6.75,
+          "who": "Elisa",
+          "zh": "三天后再来，让那次对话变好的背景已经没了。",
+          "en": "come back three days later, and the context that made it great was gone."
+        },
+        {
+          "id": "M03",
+          "src": "me",
+          "a": 7.15,
+          "b": 9.95,
+          "who": "Elisa",
+          "zh": "所以我们围绕“关系”本身，重做了记忆。",
+          "en": "So we rebuilt memory around the relationship itself."
+        }
+      ],
+      "lines": [
+        {
+          "id": "N20",
+          "a": 10.0
+        }
+      ]
+    },
+    {
+      "id": "K",
+      "type": "clip",
+      "chapter": 3,
+      "name": "Griffin 发布视频",
+      "tag": "官方演示",
+      "credit": "画面：@tavus · X（2026-10-01）",
+      "ranges": [
+        {
+          "src": "gr",
+          "in": 86.0,
+          "out": 99.8
+        },
+        {
+          "src": "gr",
+          "in": 102.0,
+          "out": 103.6
+        }
+      ],
+      "ui": {
+        "cap": "tl2"
+      },
+      "dlg": [
+        {
+          "id": "D14",
+          "src": "gr",
+          "a": 86.45,
+          "b": 89.15,
+          "who": "Vanessa",
+          "cls": "ai",
+          "zh": "但说真的，如果想让大家看到",
+          "en": "But honestly, if we want people to see"
+        },
+        {
+          "id": "D14b",
+          "src": "gr",
+          "a": 89.2,
+          "b": 92.0,
+          "who": "Vanessa",
+          "cls": "ai",
+          "zh": "这场模拟里“人”的那一面，",
+          "en": "the human part of the simulation,"
+        },
+        {
+          "id": "D15",
+          "src": "gr",
+          "a": 92.05,
+          "b": 93.95,
+          "who": "Vanessa",
+          "cls": "ai",
+          "zh": "也许这就是我们能给他们看的最真实的东西。",
+          "en": "maybe that's the most real thing we could show them."
+        },
+        {
+          "id": "D16",
+          "src": "gr",
+          "a": 94.84,
+          "b": 96.3,
+          "who": "Vanessa",
+          "cls": "ai",
+          "zh": "你怎么看？会不会太过了？",
+          "en": "What do you think? Is it too much?"
+        },
+        {
+          "id": "D17",
+          "src": "gr",
+          "a": 96.7,
+          "b": 99.6,
+          "who": "Hassaan",
+          "zh": "不会不会。我觉得……就是它了。",
+          "en": "No, no. I... I think this is it."
+        }
+      ]
+    },
+    {
+      "id": "O",
+      "type": "card",
+      "kind": "outro",
+      "overlay": "outro",
+      "chapter": 3,
+      "name": "链接",
+      "dur": 6.2,
+      "lines": [
+        {
+          "id": "N21",
+          "a": 0.9
+        }
+      ]
+    }
+  ]
+}

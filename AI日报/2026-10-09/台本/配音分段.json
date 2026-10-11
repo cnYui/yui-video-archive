@@ -1,0 +1,506 @@
+[
+  {
+    "id": "S01-01",
+    "scene": "S01",
+    "text": "早上好，我是鲸鱼娘，今天是10月9日。",
+    "tts_text": "早上好，我是鲸鱼娘，今天是十月九日。",
+    "est_seconds": 3.1,
+    "start": 0.0
+  },
+  {
+    "id": "S01-02",
+    "scene": "S01",
+    "text": "今天说七件事：Haiku 5.5 大降价，ChatGPT 回答变成互动界面，Claude 能做仪表盘和动画，Anthropic 更新使用政策，Anthropic 向科研计划投 1.5 亿美元，OpenAI 公开 722 篇数学稿件，还有 Ecosia 放弃 Mistral。",
+    "tts_text": "今天说七件事：Haiku 5.5 大降价，ChatGPT 回答变成互动界面，Claude 能做仪表盘和动画，Anthropic 更新使用政策，Anthropic 向科研计划投一点五亿美元，OpenAI 公开七百二十二篇数学稿件，还有 Ecosia 放弃 Mistral。",
+    "est_seconds": 15.2,
+    "start": 3.4
+  },
+  {
+    "id": "S02-03",
+    "scene": "S02",
+    "text": "第一件，Anthropic 发布了小模型 Claude Haiku 5.5。",
+    "tts_text": "第一件，Anthropic 发布了小模型 Claude Haiku 5.5。",
+    "est_seconds": 3.6,
+    "start": 18.8
+  },
+  {
+    "id": "S02-04",
+    "scene": "S02",
+    "text": "10 月 7 日上线，官方称它是 Anthropic 迄今最便宜、最快的小模型。",
+    "tts_text": "十月七日上线，官方称它是 Anthropic 迄今最便宜、最快的小模型。",
+    "est_seconds": 5.0,
+    "start": 22.7
+  },
+  {
+    "id": "S02-05",
+    "scene": "S02",
+    "text": "价格是每百万输入词元 0.10 美元，输出 0.50 美元，针对 10 万词元以内的请求。",
+    "tts_text": "价格是每百万输入词元零点一美元，输出零点五美元，针对十万词元以内的请求。",
+    "est_seconds": 6.5,
+    "start": 27.9
+  },
+  {
+    "id": "S02-06",
+    "scene": "S02",
+    "text": "上一代 Haiku 4.5 是 1 美元和 5 美元，等于便宜了九成。",
+    "tts_text": "上一代 Haiku 4.5 是一美元和五美元，等于便宜了九成。",
+    "est_seconds": 4.4,
+    "start": 34.7
+  },
+  {
+    "id": "S02-07",
+    "scene": "S02",
+    "text": "超过 10 万词元的请求，价格是 0.50 美元和 2.50 美元。",
+    "tts_text": "超过十万词元的请求，价格是零点五美元和二点五美元。",
+    "est_seconds": 4.6,
+    "start": 39.3
+  },
+  {
+    "id": "S02-08",
+    "scene": "S02",
+    "text": "官方放出的成绩里，它在 OSWorld 2.1 离线子集拿了 72.4%，Haiku 4.5 是 15.7%。",
+    "tts_text": "官方放出的成绩里，它在 OSWorld 2.1 离线子集拿了百分之七十二点四，Haiku 4.5 是百分之十五点七。",
+    "est_seconds": 7.8,
+    "start": 44.2
+  },
+  {
+    "id": "S02-09",
+    "scene": "S02",
+    "text": "它还第一次给 Haiku 级别的模型加了可调的推理力度，AWS、谷歌云和 Azure 上都能用。",
+    "tts_text": "它还第一次给 Haiku 级别的模型加了可调的推理力度，AWS、谷歌云和 Azure 上都能用。",
+    "est_seconds": 6.9,
+    "start": 52.2
+  },
+  {
+    "id": "S02-10",
+    "scene": "S02",
+    "text": "这些分数是官方自己报的，真要上生产，先拿自己的任务跑一遍。",
+    "tts_text": "这些分数是官方自己报的，真要上生产，先拿自己的任务跑一遍。",
+    "est_seconds": 5.2,
+    "start": 59.4
+  },
+  {
+    "id": "S03-11",
+    "scene": "S03",
+    "text": "第二件，ChatGPT 的回答不再只有文字了。",
+    "tts_text": "第二件，ChatGPT 的回答不再只有文字了。",
+    "est_seconds": 3.1,
+    "start": 65.3
+  },
+  {
+    "id": "S03-12",
+    "scene": "S03",
+    "text": "10 月 7 日，OpenAI 带着 GPT-6 推出了 Intelligent UI。",
+    "tts_text": "十月七日，OpenAI 带着 GPT-6 推出了 Intelligent UI。",
+    "est_seconds": 4.2,
+    "start": 68.6
+  },
+  {
+    "id": "S03-13",
+    "scene": "S03",
+    "text": "回答里可以出现图表、按钮、表单这类能点的元素。",
+    "tts_text": "回答里可以出现图表、按钮、表单这类能点的元素。",
+    "est_seconds": 4.0,
+    "start": 73.1
+  },
+  {
+    "id": "S03-14",
+    "scene": "S03",
+    "text": "比如比较两样东西，会并排摆；讲一个概念，可能给你一张能互动的图。",
+    "tts_text": "比如比较两样东西，会并排摆；讲一个概念，可能给你一张能互动的图。",
+    "est_seconds": 5.5,
+    "start": 77.3
+  },
+  {
+    "id": "S03-15",
+    "scene": "S03",
+    "text": "你还能在聊天里让它做小工具，像储蓄计算器，或者一个小游戏。",
+    "tts_text": "你还能在聊天里让它做小工具，像储蓄计算器，或者一个小游戏。",
+    "est_seconds": 5.2,
+    "start": 83.1
+  },
+  {
+    "id": "S03-16",
+    "scene": "S03",
+    "text": "Plus、Pro、Business 和 Enterprise 用户先用上，用的是 GPT-6 Sol。",
+    "tts_text": "Plus、Pro、Business 和 Enterprise 用户先用上，用的是 GPT-6 Sol。",
+    "est_seconds": 4.4,
+    "start": 88.5
+  },
+  {
+    "id": "S03-17",
+    "scene": "S03",
+    "text": "免费版和 Go 用户晚一天，用的是 GPT-6 Luna。",
+    "tts_text": "免费版和 Go 用户晚一天，用的是 GPT-6 Luna。",
+    "est_seconds": 3.6,
+    "start": 93.2
+  },
+  {
+    "id": "S03-18",
+    "scene": "S03",
+    "text": "OpenAI 还说，模型能边想边答，等待时间少了 44%。",
+    "tts_text": "OpenAI 还说，模型能边想边答，等待时间少了百分之四十四。",
+    "est_seconds": 4.6,
+    "start": 97.0
+  },
+  {
+    "id": "S03-19",
+    "scene": "S03",
+    "text": "这个数字是官方说的，还没有第三方实测，好不好用，自己试了才知道。",
+    "tts_text": "这个数字是官方说的，还没有第三方实测，好不好用，自己试了才知道。",
+    "est_seconds": 5.5,
+    "start": 101.9
+  },
+  {
+    "id": "S04-20",
+    "scene": "S04",
+    "text": "第三件，Claude 多了仪表盘和动画讲解两个新功能。",
+    "tts_text": "第三件，Claude 多了仪表盘和动画讲解两个新功能。",
+    "est_seconds": 4.0,
+    "start": 108.1
+  },
+  {
+    "id": "S04-21",
+    "scene": "S04",
+    "text": "10 月 8 日，Claude Dashboards 和 Claude Motion 进入测试。",
+    "tts_text": "十月八日，Claude Dashboards 和 Claude Motion 进入测试。",
+    "est_seconds": 3.6,
+    "start": 112.4
+  },
+  {
+    "id": "S04-22",
+    "scene": "S04",
+    "text": "Dashboards 能把公司数据做成会随数据更新的仪表盘，付费计划可用。",
+    "tts_text": "Dashboards 能把公司数据做成会随数据更新的仪表盘，付费计划可用。",
+    "est_seconds": 5.3,
+    "start": 116.2
+  },
+  {
+    "id": "S04-23",
+    "scene": "S04",
+    "text": "它能连 Snowflake、BigQuery、Databricks 这些数据仓库，每个数字都链接到背后的查询。",
+    "tts_text": "它能连 Snowflake、BigQuery、Databricks 这些数据仓库，每个数字都链接到背后的查询。",
+    "est_seconds": 6.1,
+    "start": 121.8
+  },
+  {
+    "id": "S04-24",
+    "scene": "S04",
+    "text": "Motion 是一句提示词生成一段短动画讲解，只给 Team 和企业版。",
+    "tts_text": "Motion 是一句提示词生成一段短动画讲解，只给 Team 和企业版。",
+    "est_seconds": 4.8,
+    "start": 128.1
+  },
+  {
+    "id": "S04-25",
+    "scene": "S04",
+    "text": "它不是视频生成模型，输出是可编辑的代码，能下载成 MP4。",
+    "tts_text": "它不是视频生成模型，输出是可编辑的代码，能下载成 MP4。",
+    "est_seconds": 5.0,
+    "start": 133.2
+  },
+  {
+    "id": "S04-26",
+    "scene": "S04",
+    "text": "另外，Docs、Slides 和 Design 结束测试，所有计划都能用，包括免费版。",
+    "tts_text": "另外，Docs、Slides 和 Design 结束测试，所有计划都能用，包括免费版。",
+    "est_seconds": 4.8,
+    "start": 138.4
+  },
+  {
+    "id": "S04-27",
+    "scene": "S04",
+    "text": "官方说，Claude 里已经做出超过 4500 万份文档、幻灯片和设计。",
+    "tts_text": "官方说，Claude 里已经做出超过四千五百万份文档、幻灯片和设计。",
+    "est_seconds": 5.2,
+    "start": 143.5
+  },
+  {
+    "id": "S04-28",
+    "scene": "S04",
+    "text": "企业管理员要注意，Dashboards 和 Motion 默认是关的，要自己去设置里开。",
+    "tts_text": "企业管理员要注意，Dashboards 和 Motion 默认是关的，要自己去设置里开。",
+    "est_seconds": 5.3,
+    "start": 148.9
+  },
+  {
+    "id": "S05-29",
+    "scene": "S05",
+    "text": "第四件，Anthropic 发布了新版使用政策。",
+    "tts_text": "第四件，Anthropic 发布了新版使用政策。",
+    "est_seconds": 3.1,
+    "start": 155.0
+  },
+  {
+    "id": "S05-30",
+    "scene": "S05",
+    "text": "10 月 8 日公布，11 月 12 日生效。",
+    "tts_text": "十月八日公布，十一月十二日生效。",
+    "est_seconds": 2.9,
+    "start": 158.3
+  },
+  {
+    "id": "S05-31",
+    "scene": "S05",
+    "text": "最受关注的一条是，禁止对模型做持续的、不必要的辱骂或残忍行为。",
+    "tts_text": "最受关注的一条是，禁止对模型做持续的、不必要的辱骂或残忍行为。",
+    "est_seconds": 5.5,
+    "start": 161.5
+  },
+  {
+    "id": "S05-32",
+    "scene": "S05",
+    "text": "官方说这是留给极端情况的，普通的发火、反驳、黑暗题材创作和测试都不算。",
+    "tts_text": "官方说这是留给极端情况的，普通的发火、反驳、黑暗题材创作和测试都不算。",
+    "est_seconds": 6.1,
+    "start": 167.2
+  },
+  {
+    "id": "S05-33",
+    "scene": "S05",
+    "text": "监控方面，不能未经同意追踪个人，也不能让 Claude 决定该调查、逮捕或起诉谁。",
+    "tts_text": "监控方面，不能未经同意追踪个人，也不能让 Claude 决定该调查、逮捕或起诉谁。",
+    "est_seconds": 6.1,
+    "start": 173.6
+  },
+  {
+    "id": "S05-34",
+    "scene": "S05",
+    "text": "武器一条扩大到让武器运转的软件和部件，包括给无人机装武器。",
+    "tts_text": "武器一条扩大到让武器运转的软件和部件，包括给无人机装武器。",
+    "est_seconds": 5.3,
+    "start": 179.9
+  },
+  {
+    "id": "S05-35",
+    "scene": "S05",
+    "text": "会自主动手的硬件，必须有合格的操作员能让它停下，Claude 断线时还要保持安全状态。",
+    "tts_text": "会自主动手的硬件，必须有合格的操作员能让它停下，Claude 断线时还要保持安全状态。",
+    "est_seconds": 6.9,
+    "start": 185.5
+  },
+  {
+    "id": "S05-36",
+    "scene": "S05",
+    "text": "选举那一节改名了，也删掉了对投票的个性化定向的一刀切禁令。",
+    "tts_text": "选举那一节改名了，也删掉了对投票的个性化定向的一刀切禁令。",
+    "est_seconds": 5.3,
+    "start": 192.7
+  },
+  {
+    "id": "S06-37",
+    "scene": "S06",
+    "text": "第五件，Anthropic 要在三年里向美国的科研计划投入 1.5 亿美元。",
+    "tts_text": "第五件，Anthropic 要在三年里向美国的科研计划投入 1.5 亿美元。",
+    "est_seconds": 5.2,
+    "start": 198.7
+  },
+  {
+    "id": "S06-38",
+    "scene": "S06",
+    "text": "10 月 8 日，在白宫科技政策办公室办的科学峰会上，Anthropic 宣布了对 Genesis Mission 的承诺。",
+    "tts_text": "十月八日，在白宫科技政策办公室办的科学峰会上，Anthropic 宣布了对 Genesis Mission 的承诺。",
+    "est_seconds": 6.9,
+    "start": 204.2
+  },
+  {
+    "id": "S06-39",
+    "scene": "S06",
+    "text": "Genesis Mission 是一个联邦计划，目标是用 AI 加快科学和技术发现。",
+    "tts_text": "Genesis Mission 是一个联邦计划，目标是用 AI 加快科学和技术发现。",
+    "est_seconds": 5.2,
+    "start": 211.3
+  },
+  {
+    "id": "S06-40",
+    "scene": "S06",
+    "text": "钱会用来让超过 15 个机构用上 Claude，官方点名了 NASA、美国国家卫生研究院和国家科学基金会。",
+    "tts_text": "钱会用来让超过十五个机构用上 Claude，官方点名了 NASA、美国国家卫生研究院和国家科学基金会。",
+    "est_seconds": 8.2,
+    "start": 216.8
+  },
+  {
+    "id": "S06-41",
+    "scene": "S06",
+    "text": "内容包括给几百个科研项目的 Claude、Claude Code 和 API 额度。",
+    "tts_text": "内容包括给几百个科研项目的 Claude、Claude Code 和 API 额度。",
+    "est_seconds": 4.8,
+    "start": 225.2
+  },
+  {
+    "id": "S06-42",
+    "scene": "S06",
+    "text": "还会和国家实验室合作，重点是聚变能源和量子计算。",
+    "tts_text": "还会和国家实验室合作，重点是聚变能源和量子计算。",
+    "est_seconds": 4.4,
+    "start": 230.2
+  },
+  {
+    "id": "S06-43",
+    "scene": "S06",
+    "text": "另外提供培训和技术支持，帮新加入的机构做第一个项目。",
+    "tts_text": "另外提供培训和技术支持，帮新加入的机构做第一个项目。",
+    "est_seconds": 4.8,
+    "start": 234.9
+  },
+  {
+    "id": "S06-44",
+    "scene": "S06",
+    "text": "这是官方承诺，具体每个项目拿多少额度，原文没写。",
+    "tts_text": "这是官方承诺，具体每个项目拿多少额度，原文没写。",
+    "est_seconds": 4.2,
+    "start": 240.0
+  },
+  {
+    "id": "S07-45",
+    "scene": "S07",
+    "text": "第六件，OpenAI 公开了 722 篇数学稿件，数学界有人不满意。",
+    "tts_text": "第六件，OpenAI 公开了 722 篇数学稿件，数学界有人不满意。",
+    "est_seconds": 4.8,
+    "start": 244.9
+  },
+  {
+    "id": "S07-46",
+    "scene": "S07",
+    "text": "10 月 6 日，OpenAI 在 GitHub 上放出这批稿件，来自一个还没发布的内部模型。",
+    "tts_text": "十月六日，OpenAI 在 GitHub 上放出这批稿件，来自一个还没发布的内部模型。",
+    "est_seconds": 5.7,
+    "start": 250.0
+  },
+  {
+    "id": "S07-47",
+    "scene": "S07",
+    "text": "它们分成 372 个系列，是从大约 4000 道题里挑出来的。",
+    "tts_text": "它们分成 372 个系列，是从大约 4000 道题里挑出来的。",
+    "est_seconds": 5.0,
+    "start": 255.9
+  },
+  {
+    "id": "S07-48",
+    "scene": "S07",
+    "text": "仓库用的是 Apache-2.0 许可，里面有稿件、Lean 形式化验证，还有 10 份推理摘要。",
+    "tts_text": "仓库用的是 Apache 二点零许可，里面有稿件、Lean 形式化验证，还有十份推理摘要。",
+    "est_seconds": 6.1,
+    "start": 261.1
+  },
+  {
+    "id": "S07-49",
+    "scene": "S07",
+    "text": "不过不是每篇都有 Lean 验证，OpenAI 自己提醒，没验证的结果可能有问题。",
+    "tts_text": "不过不是每篇都有 Lean 验证，OpenAI 自己提醒，没验证的结果可能有问题。",
+    "est_seconds": 5.5,
+    "start": 267.5
+  },
+  {
+    "id": "S07-50",
+    "scene": "S07",
+    "text": "9 月 29 日，高等研究院的数学与 AI 顾问组发过负责任发布建议。",
+    "tts_text": "九月二十九日，高等研究院的数学与 AI 顾问组发过负责任发布建议。",
+    "est_seconds": 5.7,
+    "start": 273.2
+  },
+  {
+    "id": "S07-51",
+    "scene": "S07",
+    "text": "里面说，实验室不该把公布成果当成营销，结果应该放进不受 AI 公司控制的仓库。",
+    "tts_text": "里面说，实验室不该把公布成果当成营销，结果应该放进不受 AI 公司控制的仓库。",
+    "est_seconds": 6.7,
+    "start": 279.2
+  },
+  {
+    "id": "S07-52",
+    "scene": "S07",
+    "text": "OpenAI 说，正在考虑符合这些指南的社区托管方案。",
+    "tts_text": "OpenAI 说，正在考虑符合这些指南的社区托管方案。",
+    "est_seconds": 4.0,
+    "start": 286.1
+  },
+  {
+    "id": "S07-53",
+    "scene": "S07",
+    "text": "稿件对不对，要等数学家一篇篇验证。",
+    "tts_text": "稿件对不对，要等数学家一篇篇验证。",
+    "est_seconds": 3.1,
+    "start": 290.4
+  },
+  {
+    "id": "S08-54",
+    "scene": "S08",
+    "text": "第七件，德国搜索引擎 Ecosia 不用 Mistral 了。",
+    "tts_text": "第七件，德国搜索引擎 Ecosia 不用 Mistral 了。",
+    "est_seconds": 3.3,
+    "start": 294.2
+  },
+  {
+    "id": "S08-55",
+    "scene": "S08",
+    "text": "据 IT之家 10 月 8 日转述《政治报》，Ecosia 改用中国的开源模型。",
+    "tts_text": "据 IT之家十月八日转述《政治报》，Ecosia 改用中国的开源模型。",
+    "est_seconds": 5.0,
+    "start": 297.8
+  },
+  {
+    "id": "S08-56",
+    "scene": "S08",
+    "text": "今年 5 月，它刚从 OpenAI 换到 Mistral。",
+    "tts_text": "今年五月，它刚从 OpenAI 换到 Mistral。",
+    "est_seconds": 2.7,
+    "start": 303.1
+  },
+  {
+    "id": "S08-57",
+    "scene": "S08",
+    "text": "创始人兼 CEO 克里斯蒂安·克罗尔说，对 Mistral 的质量失望，说它已经落后对手整整一年。",
+    "tts_text": "创始人兼 C E O 克里斯蒂安·克罗尔说，对 Mistral 的质量失望，说它已经落后对手整整一年。",
+    "est_seconds": 7.0,
+    "start": 306.0
+  },
+  {
+    "id": "S08-58",
+    "scene": "S08",
+    "text": "Ecosia 还提到服务器经常过载，也怀疑 Mistral 够不够中立。",
+    "tts_text": "Ecosia 还提到服务器经常过载，也怀疑 Mistral 够不够中立。",
+    "est_seconds": 4.4,
+    "start": 313.2
+  },
+  {
+    "id": "S08-59",
+    "scene": "S08",
+    "text": "现在它通过 Melious，用阿里的 Qwen、智谱的 GLM 和月之暗面的 Kimi。",
+    "tts_text": "现在它通过 Melious，用阿里的 Qwen、智谱的 GLM 和月之暗面的 Kimi。",
+    "est_seconds": 5.0,
+    "start": 317.9
+  },
+  {
+    "id": "S08-60",
+    "scene": "S08",
+    "text": "据报道，这次切换让成本降了一半，性能也有提升。",
+    "tts_text": "据报道，这次切换让成本降了一半，性能也有提升。",
+    "est_seconds": 4.0,
+    "start": 323.1
+  },
+  {
+    "id": "S08-61",
+    "scene": "S08",
+    "text": "报道没有给具体的性能数字，一家公司的说法，不能直接当成模型排名。",
+    "tts_text": "报道没有给具体的性能数字，一家公司的说法，不能直接当成模型排名。",
+    "est_seconds": 5.7,
+    "start": 327.4
+  },
+  {
+    "id": "S09-62",
+    "scene": "S09",
+    "text": "今天就这些，来源都在简介里。",
+    "tts_text": "今天就这些，来源都在简介里。",
+    "est_seconds": 2.5,
+    "start": 333.8
+  },
+  {
+    "id": "S09-63",
+    "scene": "S09",
+    "text": "我们明天见。",
+    "tts_text": "我们明天见。",
+    "est_seconds": 1.2,
+    "start": 336.6
+  }
+]

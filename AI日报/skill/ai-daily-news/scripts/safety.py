@@ -87,6 +87,8 @@ def scan_episode(sc, info, srt_text):
     for part in ("opening", "closing"):
         for k, ln in enumerate(sc.get(part) or [], 1):
             hits += scan_text(ln.get("text", ""), f"{part} 第 {k} 句", spoken=True)
+            if ln.get("en"):
+                hits += scan_text(ln["en"], f"{part} 第 {k} 句（英文字幕）", spoken=True)
             if ln.get("tts"):
                 hits += scan_text(ln["tts"], f"{part} 第 {k} 句（配音文本）", spoken=True)
     for i, n in enumerate(sc.get("news") or [], 1):
@@ -98,6 +100,8 @@ def scan_episode(sc, info, srt_text):
             hits += scan_text(p, f"{tag} 要点 {j}", spoken=True)
         for k, ln in enumerate(n.get("lines") or [], 1):
             hits += scan_text(ln.get("text", ""), f"{tag} 第 {k} 句", spoken=True)
+            if ln.get("en"):
+                hits += scan_text(ln["en"], f"{tag} 第 {k} 句（英文字幕）", spoken=True)
             if ln.get("tts"):
                 hits += scan_text(ln["tts"], f"{tag} 第 {k} 句（配音文本）", spoken=True)
         for r in n.get("refs") or []:

@@ -1,0 +1,115 @@
+{
+ "slug": "上下文管理",
+ "title": "Claude官方教程 第4期｜上下文管理：/compact、/clear、/context",
+ "kicker": "<b>Claude官方教程</b> 第4期",
+ "hook": [
+  "提示越含糊",
+  "越费上下文"
+ ],
+ "lines": [
+  {
+   "id": "N01",
+   "zh": "目标明确的活，提示写得越含糊，Claude 越费上下文。",
+   "say": "目标明确的活，提示写得越含糊，Claude 越费上下文。",
+   "en": "When the goal is clear, the vaguer your prompt, the more context Claude burns."
+  },
+  {
+   "id": "N02",
+   "zh": "Anthropic 官方入门课专门有一课，讲怎么管这块“记忆”。",
+   "say": "Anthropic 官方入门课专门有一课，讲怎么管这块“记忆”。",
+   "en": "Anthropic's intro course has a whole lesson on managing this memory."
+  },
+  {
+   "id": "N03",
+   "zh": "上下文窗口，是 Claude 这次会话的工作记忆。",
+   "say": "上下文窗口，是 Claude 这次会话的工作记忆。",
+   "en": "The context window is Claude's working memory for the session."
+  },
+  {
+   "id": "N04",
+   "zh": "你的提示、读过的文件、命令的输出，全都占位。",
+   "say": "你的提示、读过的文件、命令的输出，全都占位。",
+   "en": "Your prompts, the files it has read, command outputs: all of it takes up space."
+  },
+  {
+   "id": "N05",
+   "zh": "装满了会自动压缩：先清掉旧的工具输出，不够再总结对话。",
+   "say": "装满了会自动压缩：先清掉旧的工具输出，不够再总结对话。",
+   "en": "When it fills up, Claude Code compacts automatically: it clears old tool output first, then summarizes the conversation."
+  },
+  {
+   "id": "N06",
+   "zh": "代价是，早期的详细指令可能丢。",
+   "say": "代价是，早期的详细指令可能丢。",
+   "en": "The catch: detailed instructions from early on may be lost."
+  },
+  {
+   "id": "N07",
+   "zh": "三个命令：/compact 压成摘要，/clear 清空对话，/context 看占用。",
+   "say": "三个命令管它：斜杠 compact 压成摘要，斜杠 clear 清空对话，斜杠 context 看占用。",
+   "en": "Three commands: /compact summarizes and carries on, /clear empties the conversation, /context shows what takes the most space.",
+   "cut": [
+    [
+     "压成摘要，",
+     "carries on,"
+    ],
+    [
+     "清空对话，",
+     "conversation,"
+    ]
+   ]
+  },
+  {
+   "id": "N08",
+   "zh": "同一个功能做到快满，用 /compact。开新功能，用 /clear。",
+   "say": "同一个功能做到快满，用 compact。开新功能，用 clear。",
+   "en": "Use /compact when a feature runs you near the limit. Use /clear when you start a new one."
+  },
+  {
+   "id": "N13",
+   "zh": "同一个问题纠正两次还不对，就清空重来。",
+   "say": "同一个问题纠正两次还不对，就清空重来。",
+   "en": "Corrected the same issue twice and it's still wrong? Clear and start over."
+  },
+  {
+   "id": "N14",
+   "zh": "小问题想问一句，用 /btw，答案不占上下文。",
+   "say": "小问题想问一句，用斜杠 B T W，答案不占上下文。",
+   "en": "For a quick side question, use /btw. The answer never enters the conversation."
+  },
+  {
+   "id": "N09",
+   "zh": "要跨会话记住的事，写进 CLAUDE.md：压缩之后，它会从磁盘重新读一遍。",
+   "say": "要跨会话记住的事，写进 Claude 点 md：压缩之后，它会从磁盘重新读一遍。",
+   "en": "For anything to remember across sessions, put it in CLAUDE.md. After a compact, it's re-read from disk.",
+   "cut": [
+    [
+     "要跨会话记住的事，",
+     "across sessions,"
+    ],
+    [
+     "压缩之后，",
+     "After a compact,"
+    ]
+   ]
+  },
+  {
+   "id": "N10",
+   "zh": "还有个反直觉的：目标明确的活，提示写得越具体，越省上下文。",
+   "say": "还有个反直觉的：目标明确的活，提示写得越具体，越省上下文。",
+   "en": "One counterintuitive tip: when the goal is clear, the more specific the prompt, the less context it uses."
+  },
+  {
+   "id": "N11",
+   "zh": "含糊的提示看着短，它却得自己到处翻代码、自己推理，反而更费。",
+   "say": "含糊的提示看着短，它却得自己到处翻代码、自己推理，反而更费。",
+   "en": "A vague prompt looks short, but Claude has to explore and reason on its own, which costs more."
+  },
+  {
+   "id": "N12",
+   "zh": "上下文是预算，不是仓库。",
+   "say": "上下文是预算，不是仓库。",
+   "en": "Context is a budget, not a warehouse."
+  }
+ ]
+}

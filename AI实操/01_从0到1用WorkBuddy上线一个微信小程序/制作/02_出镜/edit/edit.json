@@ -1,0 +1,7877 @@
+{
+ "fps": 30,
+ "frames": 21998,
+ "total": 733.267,
+ "chapters": [
+  "开场：为什么用 WorkBuddy",
+  "两个提醒：开发者工具 CLI / CloudBase CLI",
+  "准备：装两个软件、注册 AppID",
+  "例一：本地小程序（测试号）",
+  "报错了？截图发给 AI",
+  "例二：上了云的小程序",
+  "总结"
+ ],
+ "segs": [
+  {
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 0,
+   "head": 0.3,
+   "tail": 0.6
+  },
+  {
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 0,
+   "head": 0.3,
+   "tail": 0.3
+  },
+  {
+   "take": "V1",
+   "layout": "A",
+   "chapter": 0,
+   "head": 0.25,
+   "tail": 0.35
+  },
+  {
+   "take": "V4",
+   "layout": "A",
+   "chapter": 1,
+   "head": 0.2,
+   "tail": 0.35
+  },
+  {
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 1,
+   "head": 0.0,
+   "tail": 0.6
+  },
+  {
+   "take": "V3",
+   "layout": "B",
+   "chapter": 1,
+   "head": 0.15,
+   "tail": 0.3,
+   "scr_freeze": [
+    "R1046",
+    0.05
+   ]
+  },
+  {
+   "take": "R1046",
+   "layout": "B",
+   "chapter": 1,
+   "head": 0.0,
+   "tail": 0.5
+  },
+  {
+   "take": "R0948",
+   "layout": "B",
+   "chapter": 2,
+   "head": 0.4,
+   "tail": 0.8
+  },
+  {
+   "take": "R0945",
+   "layout": "B",
+   "chapter": 2,
+   "head": 0.6,
+   "tail": 0.8
+  },
+  {
+   "take": "R1013",
+   "layout": "B",
+   "chapter": 3,
+   "head": 0.3,
+   "tail": [
+    "to",
+    390.0
+   ]
+  },
+  {
+   "take": "R1029",
+   "layout": "B",
+   "chapter": 4,
+   "head": 0.4,
+   "tail": [
+    "to",
+    99.5
+   ]
+  },
+  {
+   "take": "R1036",
+   "layout": "B",
+   "chapter": 4,
+   "head": 0.4,
+   "tail": [
+    "to",
+    104.5
+   ]
+  },
+  {
+   "take": "R1041",
+   "layout": "B",
+   "chapter": 4,
+   "head": 0.4,
+   "tail": 0.6
+  },
+  {
+   "take": "R1041",
+   "layout": "B",
+   "chapter": 5,
+   "head": 0.6,
+   "tail": 0.8
+  },
+  {
+   "take": "R1046",
+   "layout": "A",
+   "chapter": 6,
+   "head": 0.3,
+   "tail": 1.0
+  }
+ ],
+ "clips": [
+  {
+   "seg": 0,
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 0,
+   "kind": "head",
+   "scr_freeze": null,
+   "m0": 0.38,
+   "speed": 1.0,
+   "n": 9,
+   "aud": [
+    "0162",
+    0.38000000000000006
+   ],
+   "cues": [],
+   "cam_m0": 0.38,
+   "out0": 0
+  },
+  {
+   "seg": 0,
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 0,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 0.68,
+   "speed": 1.0,
+   "n": 172,
+   "aud": [
+    "0162",
+    0.68
+   ],
+   "cues": [
+    "O01",
+    "O02",
+    "O03"
+   ],
+   "cam_m0": 0.68,
+   "out0": 9
+  },
+  {
+   "seg": 0,
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 0,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 6.43,
+   "speed": 1.0,
+   "n": 19,
+   "aud": [
+    "0162",
+    6.43
+   ],
+   "cues": [],
+   "cam_m0": 6.43,
+   "out0": 181
+  },
+  {
+   "seg": 0,
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 0,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 7.06,
+   "speed": 1.0,
+   "n": 437,
+   "aud": [
+    "0162",
+    7.0600000000000005
+   ],
+   "cues": [
+    "O03",
+    "O04",
+    "O05",
+    "O06",
+    "O07"
+   ],
+   "cam_m0": 7.06,
+   "out0": 200
+  },
+  {
+   "seg": 0,
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 0,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 21.83,
+   "speed": 1.0,
+   "n": 9,
+   "aud": [
+    "0162",
+    21.83
+   ],
+   "cues": [],
+   "cam_m0": 21.83,
+   "out0": 637
+  },
+  {
+   "seg": 0,
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 0,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 22.91,
+   "speed": 1.0,
+   "n": 167,
+   "aud": [
+    "0162",
+    22.91
+   ],
+   "cues": [
+    "O08",
+    "O09"
+   ],
+   "cam_m0": 22.91,
+   "out0": 646
+  },
+  {
+   "seg": 0,
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 0,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 28.89,
+   "speed": 1.0,
+   "n": 9,
+   "aud": [
+    "0162",
+    28.89
+   ],
+   "cues": [],
+   "cam_m0": 28.89,
+   "out0": 813
+  },
+  {
+   "seg": 0,
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 0,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 29.605,
+   "speed": 1.0,
+   "n": 100,
+   "aud": [
+    "0162",
+    29.605
+   ],
+   "cues": [
+    "O09",
+    "O10"
+   ],
+   "cam_m0": 29.605,
+   "out0": 822
+  },
+  {
+   "seg": 0,
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 0,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 33.58,
+   "speed": 1.0,
+   "n": 9,
+   "aud": [
+    "0162",
+    33.58
+   ],
+   "cues": [],
+   "cam_m0": 33.58,
+   "out0": 922
+  },
+  {
+   "seg": 0,
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 0,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 35.8,
+   "speed": 1.0,
+   "n": 168,
+   "aud": [
+    "0162",
+    35.8
+   ],
+   "cues": [
+    "O11",
+    "O12"
+   ],
+   "cam_m0": 35.8,
+   "out0": 931
+  },
+  {
+   "seg": 0,
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 0,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 42.12,
+   "speed": 1.0,
+   "n": 9,
+   "aud": [
+    "0162",
+    42.12
+   ],
+   "cues": [],
+   "cam_m0": 42.12,
+   "out0": 1099
+  },
+  {
+   "seg": 0,
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 0,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 42.42,
+   "speed": 1.0,
+   "n": 46,
+   "aud": [
+    "0162",
+    42.42
+   ],
+   "cues": [
+    "O13"
+   ],
+   "cam_m0": 42.42,
+   "out0": 1108
+  },
+  {
+   "seg": 0,
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 0,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 43.94,
+   "speed": 1.0,
+   "n": 11,
+   "aud": [
+    "0162",
+    43.94
+   ],
+   "cues": [],
+   "cam_m0": 43.94,
+   "out0": 1154
+  },
+  {
+   "seg": 0,
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 0,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 44.31,
+   "speed": 1.0,
+   "n": 225,
+   "aud": [
+    "0162",
+    44.309999999999995
+   ],
+   "cues": [
+    "O13",
+    "O14"
+   ],
+   "cam_m0": 44.31,
+   "out0": 1165
+  },
+  {
+   "seg": 0,
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 0,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 51.85,
+   "speed": 1.0,
+   "n": 9,
+   "aud": [
+    "0162",
+    51.85
+   ],
+   "cues": [],
+   "cam_m0": 51.85,
+   "out0": 1390
+  },
+  {
+   "seg": 0,
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 0,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 53.75,
+   "speed": 1.0,
+   "n": 160,
+   "aud": [
+    "0162",
+    53.75
+   ],
+   "cues": [
+    "O15",
+    "O16",
+    "O17"
+   ],
+   "cam_m0": 53.75,
+   "out0": 1399
+  },
+  {
+   "seg": 0,
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 0,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 59.09,
+   "speed": 1.0,
+   "n": 11,
+   "aud": [
+    "0162",
+    59.089999999999996
+   ],
+   "cues": [],
+   "cam_m0": 59.09,
+   "out0": 1559
+  },
+  {
+   "seg": 0,
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 0,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 59.46,
+   "speed": 1.0,
+   "n": 64,
+   "aud": [
+    "0162",
+    59.46
+   ],
+   "cues": [
+    "O17"
+   ],
+   "cam_m0": 59.46,
+   "out0": 1570
+  },
+  {
+   "seg": 0,
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 0,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 61.61,
+   "speed": 1.0,
+   "n": 9,
+   "aud": [
+    "0162",
+    61.61
+   ],
+   "cues": [],
+   "cam_m0": 61.61,
+   "out0": 1634
+  },
+  {
+   "seg": 0,
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 0,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 62.44,
+   "speed": 1.0,
+   "n": 59,
+   "aud": [
+    "0162",
+    62.44
+   ],
+   "cues": [
+    "O17"
+   ],
+   "cam_m0": 62.44,
+   "out0": 1643
+  },
+  {
+   "seg": 0,
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 0,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 64.95,
+   "speed": 1.0,
+   "n": 9,
+   "aud": [
+    "0162",
+    64.95
+   ],
+   "cues": [],
+   "cam_m0": 64.95,
+   "out0": 1702
+  },
+  {
+   "seg": 0,
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 0,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 66.73,
+   "speed": 1.0,
+   "n": 82,
+   "aud": [
+    "0162",
+    66.73
+   ],
+   "cues": [
+    "O17",
+    "O18"
+   ],
+   "cam_m0": 66.73,
+   "out0": 1711
+  },
+  {
+   "seg": 0,
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 0,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 70.54,
+   "speed": 1.0,
+   "n": 9,
+   "aud": [
+    "0162",
+    70.54
+   ],
+   "cues": [],
+   "cam_m0": 70.54,
+   "out0": 1793
+  },
+  {
+   "seg": 0,
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 0,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 71.14,
+   "speed": 1.0,
+   "n": 141,
+   "aud": [
+    "0162",
+    71.14
+   ],
+   "cues": [
+    "O18"
+   ],
+   "cam_m0": 71.14,
+   "out0": 1802
+  },
+  {
+   "seg": 0,
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 0,
+   "kind": "tail",
+   "scr_freeze": null,
+   "m0": 75.83,
+   "speed": 1.0,
+   "n": 18,
+   "aud": [
+    "0162",
+    75.83
+   ],
+   "cues": [],
+   "cam_m0": 75.83,
+   "out0": 1943
+  },
+  {
+   "seg": 1,
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 0,
+   "kind": "head",
+   "scr_freeze": null,
+   "m0": 159.17,
+   "speed": 1.0,
+   "n": 9,
+   "aud": [
+    "0162",
+    159.17
+   ],
+   "cues": [],
+   "cam_m0": 159.17,
+   "out0": 1961
+  },
+  {
+   "seg": 1,
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 0,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 159.47,
+   "speed": 1.0,
+   "n": 67,
+   "aud": [
+    "0162",
+    159.47
+   ],
+   "cues": [
+    "O41"
+   ],
+   "cam_m0": 159.47,
+   "out0": 1970
+  },
+  {
+   "seg": 1,
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 0,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 161.7,
+   "speed": 1.0,
+   "n": 15,
+   "aud": [
+    "0162",
+    161.7
+   ],
+   "cues": [],
+   "cam_m0": 161.7,
+   "out0": 2037
+  },
+  {
+   "seg": 1,
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 0,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 162.2,
+   "speed": 1.0,
+   "n": 45,
+   "aud": [
+    "0162",
+    162.20000000000002
+   ],
+   "cues": [
+    "O41"
+   ],
+   "cam_m0": 162.2,
+   "out0": 2052
+  },
+  {
+   "seg": 1,
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 0,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 163.69,
+   "speed": 1.0,
+   "n": 9,
+   "aud": [
+    "0162",
+    163.69
+   ],
+   "cues": [],
+   "cam_m0": 163.69,
+   "out0": 2097
+  },
+  {
+   "seg": 1,
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 0,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 164.49,
+   "speed": 1.0,
+   "n": 57,
+   "aud": [
+    "0162",
+    164.49
+   ],
+   "cues": [
+    "O41"
+   ],
+   "cam_m0": 164.49,
+   "out0": 2106
+  },
+  {
+   "seg": 1,
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 0,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 166.6,
+   "speed": 1.0,
+   "n": 9,
+   "aud": [
+    "0162",
+    166.6
+   ],
+   "cues": [],
+   "cam_m0": 166.6,
+   "out0": 2163
+  },
+  {
+   "seg": 1,
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 0,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 167.25,
+   "speed": 1.0,
+   "n": 98,
+   "aud": [
+    "0162",
+    167.25
+   ],
+   "cues": [
+    "O42"
+   ],
+   "cam_m0": 167.25,
+   "out0": 2172
+  },
+  {
+   "seg": 1,
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 0,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 171.07,
+   "speed": 1.0,
+   "n": 9,
+   "aud": [
+    "0162",
+    171.07
+   ],
+   "cues": [],
+   "cam_m0": 171.07,
+   "out0": 2270
+  },
+  {
+   "seg": 1,
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 0,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 172.02,
+   "speed": 1.0,
+   "n": 183,
+   "aud": [
+    "0162",
+    172.02
+   ],
+   "cues": [
+    "O42",
+    "O43",
+    "O44",
+    "O45"
+   ],
+   "cam_m0": 172.02,
+   "out0": 2279
+  },
+  {
+   "seg": 1,
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 0,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 178.12,
+   "speed": 1.0,
+   "n": 15,
+   "aud": [
+    "0162",
+    178.11999999999998
+   ],
+   "cues": [],
+   "cam_m0": 178.12,
+   "out0": 2462
+  },
+  {
+   "seg": 1,
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 0,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 178.62,
+   "speed": 1.0,
+   "n": 71,
+   "aud": [
+    "0162",
+    178.62
+   ],
+   "cues": [
+    "O45"
+   ],
+   "cam_m0": 178.62,
+   "out0": 2477
+  },
+  {
+   "seg": 1,
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 0,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 180.99,
+   "speed": 1.0,
+   "n": 16,
+   "aud": [
+    "0162",
+    180.98999999999998
+   ],
+   "cues": [],
+   "cam_m0": 180.99,
+   "out0": 2548
+  },
+  {
+   "seg": 1,
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 0,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 181.53,
+   "speed": 1.0,
+   "n": 25,
+   "aud": [
+    "0162",
+    181.53
+   ],
+   "cues": [
+    "O45"
+   ],
+   "cam_m0": 181.53,
+   "out0": 2564
+  },
+  {
+   "seg": 1,
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 0,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 182.91,
+   "speed": 1.0,
+   "n": 9,
+   "aud": [
+    "0162",
+    182.91
+   ],
+   "cues": [],
+   "cam_m0": 182.91,
+   "out0": 2589
+  },
+  {
+   "seg": 1,
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 0,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 183.76,
+   "speed": 1.0,
+   "n": 24,
+   "aud": [
+    "0162",
+    183.76000000000002
+   ],
+   "cues": [
+    "O45"
+   ],
+   "cam_m0": 183.76,
+   "out0": 2598
+  },
+  {
+   "seg": 1,
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 0,
+   "kind": "tail",
+   "scr_freeze": null,
+   "m0": 184.56,
+   "speed": 1.0,
+   "n": 9,
+   "aud": [
+    "0162",
+    184.55999999999997
+   ],
+   "cues": [],
+   "cam_m0": 184.56,
+   "out0": 2622
+  },
+  {
+   "seg": 2,
+   "take": "V1",
+   "layout": "A",
+   "chapter": 0,
+   "kind": "head",
+   "scr_freeze": null,
+   "m0": -0.25,
+   "speed": 1.0,
+   "n": 8,
+   "aud": null,
+   "cues": [],
+   "cam_m0": -0.25,
+   "out0": 2631
+  },
+  {
+   "seg": 2,
+   "take": "V1",
+   "layout": "A",
+   "chapter": 0,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 0.0,
+   "speed": 1.0,
+   "n": 264,
+   "aud": [
+    "V1",
+    0.0
+   ],
+   "cues": [
+    "V01",
+    "V02",
+    "V03",
+    "V04"
+   ],
+   "cam_m0": 0.0,
+   "out0": 2639
+  },
+  {
+   "seg": 2,
+   "take": "V1",
+   "layout": "A",
+   "chapter": 0,
+   "kind": "tail",
+   "scr_freeze": null,
+   "m0": 8.8,
+   "speed": 1.0,
+   "n": 10,
+   "aud": null,
+   "cues": [],
+   "cam_m0": 8.8,
+   "out0": 2903
+  },
+  {
+   "seg": 3,
+   "take": "V4",
+   "layout": "A",
+   "chapter": 1,
+   "kind": "head",
+   "scr_freeze": null,
+   "m0": -0.2,
+   "speed": 1.0,
+   "n": 6,
+   "aud": null,
+   "cues": [],
+   "cam_m0": -0.2,
+   "out0": 2913
+  },
+  {
+   "seg": 3,
+   "take": "V4",
+   "layout": "A",
+   "chapter": 1,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 0.0,
+   "speed": 1.0,
+   "n": 104,
+   "aud": [
+    "V4",
+    0.0
+   ],
+   "cues": [
+    "V06"
+   ],
+   "cam_m0": 0.0,
+   "out0": 2919
+  },
+  {
+   "seg": 3,
+   "take": "V4",
+   "layout": "A",
+   "chapter": 1,
+   "kind": "tail",
+   "scr_freeze": null,
+   "m0": 3.46,
+   "speed": 1.0,
+   "n": 10,
+   "aud": null,
+   "cues": [],
+   "cam_m0": 3.46,
+   "out0": 3023
+  },
+  {
+   "seg": 4,
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 1,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 80.62,
+   "speed": 1.0,
+   "n": 278,
+   "aud": [
+    "0162",
+    80.62
+   ],
+   "cues": [
+    "O20",
+    "O21",
+    "O22"
+   ],
+   "cam_m0": 80.62,
+   "out0": 3033
+  },
+  {
+   "seg": 4,
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 1,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 89.89,
+   "speed": 1.0,
+   "n": 13,
+   "aud": [
+    "0162",
+    89.89
+   ],
+   "cues": [],
+   "cam_m0": 89.89,
+   "out0": 3311
+  },
+  {
+   "seg": 4,
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 1,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 90.32,
+   "speed": 1.0,
+   "n": 50,
+   "aud": [
+    "0162",
+    90.32000000000001
+   ],
+   "cues": [
+    "O22",
+    "O23"
+   ],
+   "cam_m0": 90.32,
+   "out0": 3324
+  },
+  {
+   "seg": 4,
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 1,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 93.93,
+   "speed": 1.0,
+   "n": 9,
+   "aud": [
+    "0162",
+    93.93
+   ],
+   "cues": [],
+   "cam_m0": 93.93,
+   "out0": 3374
+  },
+  {
+   "seg": 4,
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 1,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 94.23,
+   "speed": 1.0,
+   "n": 68,
+   "aud": [
+    "0162",
+    94.23
+   ],
+   "cues": [
+    "O23"
+   ],
+   "cam_m0": 94.23,
+   "out0": 3383
+  },
+  {
+   "seg": 4,
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 1,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 96.86,
+   "speed": 1.0,
+   "n": 9,
+   "aud": [
+    "0162",
+    96.86
+   ],
+   "cues": [],
+   "cam_m0": 96.86,
+   "out0": 3451
+  },
+  {
+   "seg": 4,
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 1,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 97.59,
+   "speed": 1.0,
+   "n": 90,
+   "aud": [
+    "0162",
+    97.59
+   ],
+   "cues": [
+    "O23",
+    "O24"
+   ],
+   "cam_m0": 97.59,
+   "out0": 3460
+  },
+  {
+   "seg": 4,
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 1,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 101.66,
+   "speed": 1.0,
+   "n": 9,
+   "aud": [
+    "0162",
+    101.66
+   ],
+   "cues": [],
+   "cam_m0": 101.66,
+   "out0": 3550
+  },
+  {
+   "seg": 4,
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 1,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 102.82,
+   "speed": 1.0,
+   "n": 142,
+   "aud": [
+    "0162",
+    102.82000000000001
+   ],
+   "cues": [
+    "O24",
+    "O25",
+    "O26"
+   ],
+   "cam_m0": 102.82,
+   "out0": 3559
+  },
+  {
+   "seg": 4,
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 1,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 107.55,
+   "speed": 1.0,
+   "n": 12,
+   "aud": [
+    "0162",
+    107.55
+   ],
+   "cues": [],
+   "cam_m0": 107.55,
+   "out0": 3701
+  },
+  {
+   "seg": 4,
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 1,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 107.95,
+   "speed": 1.0,
+   "n": 46,
+   "aud": [
+    "0162",
+    107.95
+   ],
+   "cues": [
+    "O26"
+   ],
+   "cam_m0": 107.95,
+   "out0": 3713
+  },
+  {
+   "seg": 4,
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 1,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 109.48,
+   "speed": 1.0,
+   "n": 9,
+   "aud": [
+    "0162",
+    109.48
+   ],
+   "cues": [],
+   "cam_m0": 109.48,
+   "out0": 3759
+  },
+  {
+   "seg": 4,
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 1,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 110.63,
+   "speed": 1.0,
+   "n": 194,
+   "aud": [
+    "0162",
+    110.63000000000001
+   ],
+   "cues": [
+    "O26",
+    "O27",
+    "O28"
+   ],
+   "cam_m0": 110.63,
+   "out0": 3768
+  },
+  {
+   "seg": 4,
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 1,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 117.11,
+   "speed": 1.0,
+   "n": 13,
+   "aud": [
+    "0162",
+    117.11
+   ],
+   "cues": [],
+   "cam_m0": 117.11,
+   "out0": 3962
+  },
+  {
+   "seg": 4,
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 1,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 117.54,
+   "speed": 1.0,
+   "n": 178,
+   "aud": [
+    "0162",
+    117.54
+   ],
+   "cues": [
+    "O28",
+    "O29",
+    "O30"
+   ],
+   "cam_m0": 117.54,
+   "out0": 3975
+  },
+  {
+   "seg": 4,
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 1,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 123.46,
+   "speed": 1.0,
+   "n": 13,
+   "aud": [
+    "0162",
+    123.46000000000001
+   ],
+   "cues": [],
+   "cam_m0": 123.46,
+   "out0": 4153
+  },
+  {
+   "seg": 4,
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 1,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 123.88,
+   "speed": 1.0,
+   "n": 86,
+   "aud": [
+    "0162",
+    123.88000000000001
+   ],
+   "cues": [
+    "O30",
+    "O31",
+    "O32"
+   ],
+   "cam_m0": 123.88,
+   "out0": 4166
+  },
+  {
+   "seg": 4,
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 1,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 126.76,
+   "speed": 1.0,
+   "n": 14,
+   "aud": [
+    "0162",
+    126.76
+   ],
+   "cues": [],
+   "cam_m0": 126.76,
+   "out0": 4252
+  },
+  {
+   "seg": 4,
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 1,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 127.23,
+   "speed": 1.0,
+   "n": 22,
+   "aud": [
+    "0162",
+    127.23
+   ],
+   "cues": [
+    "O32"
+   ],
+   "cam_m0": 127.23,
+   "out0": 4266
+  },
+  {
+   "seg": 4,
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 1,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 127.96,
+   "speed": 1.0,
+   "n": 15,
+   "aud": [
+    "0162",
+    127.96000000000001
+   ],
+   "cues": [],
+   "cam_m0": 127.96,
+   "out0": 4288
+  },
+  {
+   "seg": 4,
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 1,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 128.45,
+   "speed": 1.0,
+   "n": 49,
+   "aud": [
+    "0162",
+    128.45000000000002
+   ],
+   "cues": [
+    "O32",
+    "O33"
+   ],
+   "cam_m0": 128.45,
+   "out0": 4303
+  },
+  {
+   "seg": 4,
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 1,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 130.08,
+   "speed": 1.0,
+   "n": 12,
+   "aud": [
+    "0162",
+    130.07999999999998
+   ],
+   "cues": [],
+   "cam_m0": 130.08,
+   "out0": 4352
+  },
+  {
+   "seg": 4,
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 1,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 130.47,
+   "speed": 1.0,
+   "n": 17,
+   "aud": [
+    "0162",
+    130.47
+   ],
+   "cues": [
+    "O33"
+   ],
+   "cam_m0": 130.47,
+   "out0": 4364
+  },
+  {
+   "seg": 4,
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 1,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 131.04,
+   "speed": 1.0,
+   "n": 11,
+   "aud": [
+    "0162",
+    131.04
+   ],
+   "cues": [],
+   "cam_m0": 131.04,
+   "out0": 4381
+  },
+  {
+   "seg": 4,
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 1,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 131.42,
+   "speed": 1.0,
+   "n": 148,
+   "aud": [
+    "0162",
+    131.42000000000002
+   ],
+   "cues": [
+    "O33"
+   ],
+   "cam_m0": 131.42,
+   "out0": 4392
+  },
+  {
+   "seg": 4,
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 1,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 136.35,
+   "speed": 1.0,
+   "n": 16,
+   "aud": [
+    "0162",
+    136.35
+   ],
+   "cues": [],
+   "cam_m0": 136.35,
+   "out0": 4540
+  },
+  {
+   "seg": 4,
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 1,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 136.88,
+   "speed": 1.0,
+   "n": 157,
+   "aud": [
+    "0162",
+    136.88
+   ],
+   "cues": [
+    "O34",
+    "O35",
+    "O36"
+   ],
+   "cam_m0": 136.88,
+   "out0": 4556
+  },
+  {
+   "seg": 4,
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 1,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 142.11,
+   "speed": 1.0,
+   "n": 18,
+   "aud": [
+    "0162",
+    142.10999999999999
+   ],
+   "cues": [],
+   "cam_m0": 142.11,
+   "out0": 4713
+  },
+  {
+   "seg": 4,
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 1,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 142.7,
+   "speed": 1.0,
+   "n": 255,
+   "aud": [
+    "0162",
+    142.70000000000002
+   ],
+   "cues": [
+    "O37",
+    "O38",
+    "O39",
+    "O40"
+   ],
+   "cam_m0": 142.7,
+   "out0": 4731
+  },
+  {
+   "seg": 4,
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 1,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 151.19,
+   "speed": 1.0,
+   "n": 14,
+   "aud": [
+    "0162",
+    151.19
+   ],
+   "cues": [],
+   "cam_m0": 151.19,
+   "out0": 4986
+  },
+  {
+   "seg": 4,
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 1,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 151.64,
+   "speed": 1.0,
+   "n": 83,
+   "aud": [
+    "0162",
+    151.64000000000001
+   ],
+   "cues": [
+    "O40"
+   ],
+   "cam_m0": 151.64,
+   "out0": 5000
+  },
+  {
+   "seg": 4,
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 1,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 154.4,
+   "speed": 1.0,
+   "n": 18,
+   "aud": [
+    "0162",
+    154.39999999999998
+   ],
+   "cues": [],
+   "cam_m0": 154.4,
+   "out0": 5083
+  },
+  {
+   "seg": 4,
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 1,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 155.0,
+   "speed": 1.0,
+   "n": 64,
+   "aud": [
+    "0162",
+    155.0
+   ],
+   "cues": [
+    "O40"
+   ],
+   "cam_m0": 155.0,
+   "out0": 5101
+  },
+  {
+   "seg": 4,
+   "take": "T0162",
+   "layout": "A",
+   "chapter": 1,
+   "kind": "tail",
+   "scr_freeze": null,
+   "m0": 157.12,
+   "speed": 1.0,
+   "n": 18,
+   "aud": [
+    "0162",
+    157.11999999999998
+   ],
+   "cues": [],
+   "cam_m0": 157.12,
+   "out0": 5165
+  },
+  {
+   "seg": 5,
+   "take": "V3",
+   "layout": "B",
+   "chapter": 1,
+   "kind": "head",
+   "scr_freeze": [
+    "R1046",
+    0.05
+   ],
+   "m0": -0.15,
+   "speed": 1.0,
+   "n": 4,
+   "aud": null,
+   "cues": [],
+   "cam_m0": -0.15,
+   "out0": 5183
+  },
+  {
+   "seg": 5,
+   "take": "V3",
+   "layout": "B",
+   "chapter": 1,
+   "kind": "speech",
+   "scr_freeze": [
+    "R1046",
+    0.05
+   ],
+   "m0": 0.0,
+   "speed": 1.0,
+   "n": 203,
+   "aud": [
+    "V3",
+    0.0
+   ],
+   "cues": [
+    "V07",
+    "V08"
+   ],
+   "cam_m0": 0.0,
+   "out0": 5187
+  },
+  {
+   "seg": 5,
+   "take": "V3",
+   "layout": "B",
+   "chapter": 1,
+   "kind": "tail",
+   "scr_freeze": [
+    "R1046",
+    0.05
+   ],
+   "m0": 6.76,
+   "speed": 1.0,
+   "n": 9,
+   "aud": null,
+   "cues": [],
+   "cam_m0": 6.76,
+   "out0": 5390
+  },
+  {
+   "seg": 6,
+   "take": "R1046",
+   "layout": "B",
+   "chapter": 1,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 1.8725,
+   "speed": 1.0,
+   "n": 47,
+   "aud": [
+    "0161",
+    7.04
+   ],
+   "cues": [
+    "T02"
+   ],
+   "cam_m0": 1.8725,
+   "out0": 5399
+  },
+  {
+   "seg": 6,
+   "take": "R1046",
+   "layout": "B",
+   "chapter": 1,
+   "kind": "fast",
+   "scr_freeze": null,
+   "m0": 3.4525,
+   "speed": 2.2192,
+   "n": 63,
+   "aud": null,
+   "cues": [],
+   "cam_m0": 3.4525,
+   "out0": 5446
+  },
+  {
+   "seg": 6,
+   "take": "R1046",
+   "layout": "B",
+   "chapter": 1,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 8.1325,
+   "speed": 1.0,
+   "n": 206,
+   "aud": [
+    "0161",
+    13.3
+   ],
+   "cues": [
+    "T03"
+   ],
+   "cam_m0": 8.1325,
+   "out0": 5509
+  },
+  {
+   "seg": 6,
+   "take": "R1046",
+   "layout": "B",
+   "chapter": 1,
+   "kind": "fast",
+   "scr_freeze": null,
+   "m0": 15.4,
+   "speed": 1.6547,
+   "n": 11,
+   "aud": null,
+   "cues": [],
+   "cam_m0": 15.4,
+   "out0": 5715
+  },
+  {
+   "seg": 6,
+   "take": "R1046",
+   "layout": "B",
+   "chapter": 1,
+   "kind": "fast",
+   "scr_freeze": null,
+   "m0": 18.9,
+   "speed": 1.6547,
+   "n": 31,
+   "aud": null,
+   "cues": [],
+   "cam_m0": 18.9,
+   "out0": 5726
+  },
+  {
+   "seg": 6,
+   "take": "R1046",
+   "layout": "B",
+   "chapter": 1,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 20.6725,
+   "speed": 1.0,
+   "n": 172,
+   "aud": [
+    "0161",
+    25.84
+   ],
+   "cues": [
+    "T04",
+    "T05"
+   ],
+   "cam_m0": 20.6725,
+   "out0": 5757
+  },
+  {
+   "seg": 6,
+   "take": "R1046",
+   "layout": "B",
+   "chapter": 1,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 26.3925,
+   "speed": 1.0,
+   "n": 8,
+   "aud": [
+    "0161",
+    31.56
+   ],
+   "cues": [],
+   "cam_m0": 26.3925,
+   "out0": 5929
+  },
+  {
+   "seg": 6,
+   "take": "R1046",
+   "layout": "B",
+   "chapter": 1,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 26.6425,
+   "speed": 1.0,
+   "n": 251,
+   "aud": [
+    "0161",
+    31.81
+   ],
+   "cues": [
+    "T06",
+    "T07",
+    "T08"
+   ],
+   "cam_m0": 26.6425,
+   "out0": 5937
+  },
+  {
+   "seg": 6,
+   "take": "R1046",
+   "layout": "B",
+   "chapter": 1,
+   "kind": "gap",
+   "scr_freeze": null,
+   "m0": 35.0025,
+   "speed": 1.0,
+   "n": 33,
+   "aud": [
+    "0161",
+    40.17
+   ],
+   "cues": [],
+   "cam_m0": 35.0025,
+   "out0": 6188
+  },
+  {
+   "seg": 6,
+   "take": "R1046",
+   "layout": "B",
+   "chapter": 1,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 36.1325,
+   "speed": 1.0,
+   "n": 35,
+   "aud": [
+    "0161",
+    41.3
+   ],
+   "cues": [
+    "T09"
+   ],
+   "cam_m0": 36.1325,
+   "out0": 6221
+  },
+  {
+   "seg": 6,
+   "take": "R1046",
+   "layout": "B",
+   "chapter": 1,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 37.2875,
+   "speed": 1.0,
+   "n": 8,
+   "aud": null,
+   "cues": [],
+   "cam_m0": 37.2875,
+   "out0": 6256
+  },
+  {
+   "seg": 6,
+   "take": "R1046",
+   "layout": "B",
+   "chapter": 1,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 41.1682,
+   "speed": 1.0,
+   "n": 315,
+   "aud": [
+    "0161",
+    46.225
+   ],
+   "cues": [
+    "T09",
+    "T10"
+   ],
+   "cam_m0": 41.1682,
+   "out0": 6264
+  },
+  {
+   "seg": 6,
+   "take": "R1046",
+   "layout": "B",
+   "chapter": 1,
+   "kind": "fast",
+   "scr_freeze": null,
+   "m0": 51.6832,
+   "speed": 2.4342,
+   "n": 78,
+   "aud": null,
+   "cues": [],
+   "cam_m0": 51.6832,
+   "out0": 6579
+  },
+  {
+   "seg": 6,
+   "take": "R1046",
+   "layout": "B",
+   "chapter": 1,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 58.0632,
+   "speed": 1.0,
+   "n": 132,
+   "aud": [
+    "0161",
+    63.12
+   ],
+   "cues": [
+    "T11",
+    "T12"
+   ],
+   "cam_m0": 58.0632,
+   "out0": 6657
+  },
+  {
+   "seg": 6,
+   "take": "R1046",
+   "layout": "B",
+   "chapter": 1,
+   "kind": "gap",
+   "scr_freeze": null,
+   "m0": 62.4732,
+   "speed": 1.0,
+   "n": 34,
+   "aud": [
+    "0161",
+    67.53
+   ],
+   "cues": [],
+   "cam_m0": 62.4732,
+   "out0": 6789
+  },
+  {
+   "seg": 6,
+   "take": "R1046",
+   "layout": "B",
+   "chapter": 1,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 63.6432,
+   "speed": 1.0,
+   "n": 8,
+   "aud": [
+    "0161",
+    68.7
+   ],
+   "cues": [
+    "T12"
+   ],
+   "cam_m0": 63.6432,
+   "out0": 6823
+  },
+  {
+   "seg": 6,
+   "take": "R1046",
+   "layout": "B",
+   "chapter": 1,
+   "kind": "gap",
+   "scr_freeze": null,
+   "m0": 63.9232,
+   "speed": 1.0,
+   "n": 23,
+   "aud": [
+    "0161",
+    68.98
+   ],
+   "cues": [],
+   "cam_m0": 63.9232,
+   "out0": 6831
+  },
+  {
+   "seg": 6,
+   "take": "R1046",
+   "layout": "B",
+   "chapter": 1,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 64.7432,
+   "speed": 1.0,
+   "n": 10,
+   "aud": [
+    "0161",
+    69.80000000000001
+   ],
+   "cues": [
+    "T12"
+   ],
+   "cam_m0": 64.7432,
+   "out0": 6854
+  },
+  {
+   "seg": 6,
+   "take": "R1046",
+   "layout": "B",
+   "chapter": 1,
+   "kind": "fast",
+   "scr_freeze": null,
+   "m0": 65.0932,
+   "speed": 1.9294,
+   "n": 50,
+   "aud": null,
+   "cues": [],
+   "cam_m0": 65.0932,
+   "out0": 6864
+  },
+  {
+   "seg": 6,
+   "take": "R1046",
+   "layout": "B",
+   "chapter": 1,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 68.3232,
+   "speed": 1.0,
+   "n": 22,
+   "aud": [
+    "0161",
+    73.38000000000001
+   ],
+   "cues": [
+    "T12"
+   ],
+   "cam_m0": 68.3232,
+   "out0": 6914
+  },
+  {
+   "seg": 6,
+   "take": "R1046",
+   "layout": "B",
+   "chapter": 1,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 69.0432,
+   "speed": 1.0,
+   "n": 11,
+   "aud": [
+    "0161",
+    74.10000000000001
+   ],
+   "cues": [],
+   "cam_m0": 69.0432,
+   "out0": 6936
+  },
+  {
+   "seg": 6,
+   "take": "R1046",
+   "layout": "B",
+   "chapter": 1,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 69.4232,
+   "speed": 1.0,
+   "n": 8,
+   "aud": [
+    "0161",
+    74.48
+   ],
+   "cues": [
+    "T12"
+   ],
+   "cam_m0": 69.4232,
+   "out0": 6947
+  },
+  {
+   "seg": 6,
+   "take": "R1046",
+   "layout": "B",
+   "chapter": 1,
+   "kind": "fast",
+   "scr_freeze": null,
+   "m0": 69.7032,
+   "speed": 2.0646,
+   "n": 55,
+   "aud": null,
+   "cues": [],
+   "cam_m0": 69.7032,
+   "out0": 6955
+  },
+  {
+   "seg": 6,
+   "take": "R1046",
+   "layout": "B",
+   "chapter": 1,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 73.5632,
+   "speed": 1.0,
+   "n": 32,
+   "aud": [
+    "0161",
+    78.62
+   ],
+   "cues": [
+    "T12"
+   ],
+   "cam_m0": 73.5632,
+   "out0": 7010
+  },
+  {
+   "seg": 6,
+   "take": "R1046",
+   "layout": "B",
+   "chapter": 1,
+   "kind": "fast",
+   "scr_freeze": null,
+   "m0": 74.6232,
+   "speed": 2.4796,
+   "n": 23,
+   "aud": null,
+   "cues": [],
+   "cam_m0": 74.6232,
+   "out0": 7042
+  },
+  {
+   "seg": 6,
+   "take": "R1046",
+   "layout": "B",
+   "chapter": 1,
+   "kind": "fast",
+   "scr_freeze": null,
+   "m0": 77.1,
+   "speed": 2.4796,
+   "n": 51,
+   "aud": null,
+   "cues": [],
+   "cam_m0": 77.1,
+   "out0": 7065
+  },
+  {
+   "seg": 6,
+   "take": "R1046",
+   "layout": "B",
+   "chapter": 1,
+   "kind": "fast",
+   "scr_freeze": null,
+   "m0": 82.0,
+   "speed": 2.4796,
+   "n": 8,
+   "aud": null,
+   "cues": [],
+   "cam_m0": 82.0,
+   "out0": 7116
+  },
+  {
+   "seg": 6,
+   "take": "R1046",
+   "layout": "B",
+   "chapter": 1,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 82.7632,
+   "speed": 1.0,
+   "n": 585,
+   "aud": [
+    "0161",
+    87.82000000000001
+   ],
+   "cues": [
+    "T13",
+    "T14",
+    "T15",
+    "T16",
+    "T17",
+    "T18"
+   ],
+   "cam_m0": 82.7632,
+   "out0": 7124
+  },
+  {
+   "seg": 6,
+   "take": "R1046",
+   "layout": "B",
+   "chapter": 1,
+   "kind": "gap",
+   "scr_freeze": null,
+   "m0": 102.2532,
+   "speed": 1.0,
+   "n": 28,
+   "aud": [
+    "0161",
+    107.31
+   ],
+   "cues": [],
+   "cam_m0": 102.2532,
+   "out0": 7709
+  },
+  {
+   "seg": 6,
+   "take": "R1046",
+   "layout": "B",
+   "chapter": 1,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 103.2932,
+   "speed": 1.0,
+   "n": 207,
+   "aud": [
+    "0161",
+    108.35000000000001
+   ],
+   "cues": [
+    "T19",
+    "T20",
+    "T21"
+   ],
+   "cam_m0": 103.2932,
+   "out0": 7737
+  },
+  {
+   "seg": 6,
+   "take": "R1046",
+   "layout": "B",
+   "chapter": 1,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 110.1832,
+   "speed": 1.0,
+   "n": 11,
+   "aud": [
+    "0161",
+    115.24
+   ],
+   "cues": [],
+   "cam_m0": 110.1832,
+   "out0": 7944
+  },
+  {
+   "seg": 6,
+   "take": "R1046",
+   "layout": "B",
+   "chapter": 1,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 110.5632,
+   "speed": 1.0,
+   "n": 526,
+   "aud": [
+    "0161",
+    115.62
+   ],
+   "cues": [
+    "T21",
+    "T22",
+    "T23",
+    "T24",
+    "T25"
+   ],
+   "cam_m0": 110.5632,
+   "out0": 7955
+  },
+  {
+   "seg": 6,
+   "take": "R1046",
+   "layout": "B",
+   "chapter": 1,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 128.0832,
+   "speed": 1.0,
+   "n": 17,
+   "aud": [
+    "0161",
+    133.14
+   ],
+   "cues": [],
+   "cam_m0": 128.0832,
+   "out0": 8481
+  },
+  {
+   "seg": 6,
+   "take": "R1046",
+   "layout": "B",
+   "chapter": 1,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 128.6332,
+   "speed": 1.0,
+   "n": 8,
+   "aud": [
+    "0161",
+    133.69
+   ],
+   "cues": [
+    "T26"
+   ],
+   "cam_m0": 128.6332,
+   "out0": 8498
+  },
+  {
+   "seg": 6,
+   "take": "R1046",
+   "layout": "B",
+   "chapter": 1,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 128.9032,
+   "speed": 1.0,
+   "n": 13,
+   "aud": [
+    "0161",
+    133.95999999999998
+   ],
+   "cues": [],
+   "cam_m0": 128.9032,
+   "out0": 8506
+  },
+  {
+   "seg": 6,
+   "take": "R1046",
+   "layout": "B",
+   "chapter": 1,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 129.3332,
+   "speed": 1.0,
+   "n": 27,
+   "aud": [
+    "0161",
+    134.39000000000001
+   ],
+   "cues": [
+    "T26"
+   ],
+   "cam_m0": 129.3332,
+   "out0": 8519
+  },
+  {
+   "seg": 6,
+   "take": "R1046",
+   "layout": "B",
+   "chapter": 1,
+   "kind": "gap",
+   "scr_freeze": null,
+   "m0": 130.2432,
+   "speed": 1.0,
+   "n": 17,
+   "aud": [
+    "0161",
+    135.29999999999998
+   ],
+   "cues": [],
+   "cam_m0": 130.2432,
+   "out0": 8546
+  },
+  {
+   "seg": 6,
+   "take": "R1046",
+   "layout": "B",
+   "chapter": 1,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 130.8932,
+   "speed": 1.0,
+   "n": 169,
+   "aud": [
+    "0161",
+    135.95000000000002
+   ],
+   "cues": [
+    "T26",
+    "T26b",
+    "T27"
+   ],
+   "cam_m0": 130.8932,
+   "out0": 8563
+  },
+  {
+   "seg": 6,
+   "take": "R1046",
+   "layout": "B",
+   "chapter": 1,
+   "kind": "tail",
+   "scr_freeze": null,
+   "m0": 136.5332,
+   "speed": 1.0,
+   "n": 15,
+   "aud": [
+    "0161",
+    141.58999999999997
+   ],
+   "cues": [],
+   "cam_m0": 136.5332,
+   "out0": 8732
+  },
+  {
+   "seg": 7,
+   "take": "R0948",
+   "layout": "B",
+   "chapter": 2,
+   "kind": "head",
+   "scr_freeze": null,
+   "m0": 1.4,
+   "speed": 1.0,
+   "n": 12,
+   "aud": [
+    "R0948",
+    1.4
+   ],
+   "cues": [],
+   "cam_m0": 1.4,
+   "out0": 8747
+  },
+  {
+   "seg": 7,
+   "take": "R0948",
+   "layout": "B",
+   "chapter": 2,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 1.8,
+   "speed": 1.0,
+   "n": 183,
+   "aud": [
+    "R0948",
+    1.7999999999999998
+   ],
+   "cues": [
+    "B01",
+    "B02",
+    "B03"
+   ],
+   "cam_m0": 1.8,
+   "out0": 8759
+  },
+  {
+   "seg": 7,
+   "take": "R0948",
+   "layout": "B",
+   "chapter": 2,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 7.9,
+   "speed": 1.0,
+   "n": 12,
+   "aud": [
+    "R0948",
+    7.9
+   ],
+   "cues": [],
+   "cam_m0": 7.9,
+   "out0": 8942
+  },
+  {
+   "seg": 7,
+   "take": "R0948",
+   "layout": "B",
+   "chapter": 2,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 8.29,
+   "speed": 1.0,
+   "n": 320,
+   "aud": [
+    "R0948",
+    8.290000000000001
+   ],
+   "cues": [
+    "B04",
+    "B05",
+    "B06",
+    "B07",
+    "B07b",
+    "B08"
+   ],
+   "cam_m0": 8.29,
+   "out0": 8954
+  },
+  {
+   "seg": 7,
+   "take": "R0948",
+   "layout": "B",
+   "chapter": 2,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 18.96,
+   "speed": 1.0,
+   "n": 14,
+   "aud": [
+    "R0948",
+    18.96
+   ],
+   "cues": [],
+   "cam_m0": 18.96,
+   "out0": 9274
+  },
+  {
+   "seg": 7,
+   "take": "R0948",
+   "layout": "B",
+   "chapter": 2,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 19.43,
+   "speed": 1.0,
+   "n": 169,
+   "aud": [
+    "R0948",
+    19.43
+   ],
+   "cues": [
+    "B08",
+    "B09",
+    "B10"
+   ],
+   "cam_m0": 19.43,
+   "out0": 9288
+  },
+  {
+   "seg": 7,
+   "take": "R0948",
+   "layout": "B",
+   "chapter": 2,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 25.05,
+   "speed": 1.0,
+   "n": 12,
+   "aud": [
+    "R0948",
+    25.05
+   ],
+   "cues": [],
+   "cam_m0": 25.05,
+   "out0": 9457
+  },
+  {
+   "seg": 7,
+   "take": "R0948",
+   "layout": "B",
+   "chapter": 2,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 25.46,
+   "speed": 1.0,
+   "n": 53,
+   "aud": [
+    "R0948",
+    25.459999999999997
+   ],
+   "cues": [
+    "B10"
+   ],
+   "cam_m0": 25.46,
+   "out0": 9469
+  },
+  {
+   "seg": 7,
+   "take": "R0948",
+   "layout": "B",
+   "chapter": 2,
+   "kind": "gap",
+   "scr_freeze": null,
+   "m0": 27.23,
+   "speed": 1.0,
+   "n": 23,
+   "aud": [
+    "R0948",
+    27.23
+   ],
+   "cues": [],
+   "cam_m0": 27.23,
+   "out0": 9522
+  },
+  {
+   "seg": 7,
+   "take": "R0948",
+   "layout": "B",
+   "chapter": 2,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 28.03,
+   "speed": 1.0,
+   "n": 58,
+   "aud": [
+    "R0948",
+    28.029999999999998
+   ],
+   "cues": [
+    "B10",
+    "B11"
+   ],
+   "cam_m0": 28.03,
+   "out0": 9545
+  },
+  {
+   "seg": 7,
+   "take": "R0948",
+   "layout": "B",
+   "chapter": 2,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 29.97,
+   "speed": 1.0,
+   "n": 15,
+   "aud": [
+    "R0948",
+    29.970000000000002
+   ],
+   "cues": [],
+   "cam_m0": 29.97,
+   "out0": 9603
+  },
+  {
+   "seg": 7,
+   "take": "R0948",
+   "layout": "B",
+   "chapter": 2,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 30.47,
+   "speed": 1.0,
+   "n": 91,
+   "aud": [
+    "R0948",
+    30.47
+   ],
+   "cues": [
+    "B11"
+   ],
+   "cam_m0": 30.47,
+   "out0": 9618
+  },
+  {
+   "seg": 7,
+   "take": "R0948",
+   "layout": "B",
+   "chapter": 2,
+   "kind": "tail",
+   "scr_freeze": null,
+   "m0": 33.5,
+   "speed": 1.0,
+   "n": 24,
+   "aud": [
+    "R0948",
+    33.49999999999999
+   ],
+   "cues": [],
+   "cam_m0": 33.5,
+   "out0": 9709
+  },
+  {
+   "seg": 8,
+   "take": "R0945",
+   "layout": "B",
+   "chapter": 2,
+   "kind": "head",
+   "scr_freeze": null,
+   "m0": 2.19,
+   "speed": 1.0,
+   "n": 18,
+   "aud": [
+    "R0945",
+    2.19
+   ],
+   "cues": [],
+   "cam_m0": 2.19,
+   "out0": 9733
+  },
+  {
+   "seg": 8,
+   "take": "R0945",
+   "layout": "B",
+   "chapter": 2,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 2.79,
+   "speed": 1.0,
+   "n": 283,
+   "aud": [
+    "R0945",
+    2.79
+   ],
+   "cues": [
+    "A01",
+    "A02",
+    "A03"
+   ],
+   "cam_m0": 2.79,
+   "out0": 9751
+  },
+  {
+   "seg": 8,
+   "take": "R0945",
+   "layout": "B",
+   "chapter": 2,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 12.22,
+   "speed": 1.0,
+   "n": 15,
+   "aud": [
+    "R0945",
+    12.22
+   ],
+   "cues": [],
+   "cam_m0": 12.22,
+   "out0": 10034
+  },
+  {
+   "seg": 8,
+   "take": "R0945",
+   "layout": "B",
+   "chapter": 2,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 12.72,
+   "speed": 1.0,
+   "n": 41,
+   "aud": [
+    "R0945",
+    12.72
+   ],
+   "cues": [
+    "A03"
+   ],
+   "cam_m0": 12.72,
+   "out0": 10049
+  },
+  {
+   "seg": 8,
+   "take": "R0945",
+   "layout": "B",
+   "chapter": 2,
+   "kind": "fast",
+   "scr_freeze": null,
+   "m0": 14.08,
+   "speed": 1.9815,
+   "n": 2,
+   "aud": null,
+   "cues": [],
+   "cam_m0": 14.08,
+   "out0": 10090
+  },
+  {
+   "seg": 8,
+   "take": "R0945",
+   "layout": "B",
+   "chapter": 2,
+   "kind": "fast",
+   "scr_freeze": null,
+   "m0": 16.3,
+   "speed": 1.9815,
+   "n": 20,
+   "aud": null,
+   "cues": [],
+   "cam_m0": 16.3,
+   "out0": 10092
+  },
+  {
+   "seg": 8,
+   "take": "R0945",
+   "layout": "B",
+   "chapter": 2,
+   "kind": "fast",
+   "scr_freeze": null,
+   "m0": 19.7,
+   "speed": 1.9815,
+   "n": 30,
+   "aud": null,
+   "cues": [],
+   "cam_m0": 19.7,
+   "out0": 10112
+  },
+  {
+   "seg": 8,
+   "take": "R0945",
+   "layout": "B",
+   "chapter": 2,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 21.72,
+   "speed": 1.0,
+   "n": 137,
+   "aud": [
+    "R0945",
+    21.72
+   ],
+   "cues": [
+    "A04"
+   ],
+   "cam_m0": 21.72,
+   "out0": 10142
+  },
+  {
+   "seg": 8,
+   "take": "R0945",
+   "layout": "B",
+   "chapter": 2,
+   "kind": "gap",
+   "scr_freeze": null,
+   "m0": 26.28,
+   "speed": 1.0,
+   "n": 40,
+   "aud": [
+    "R0945",
+    26.28
+   ],
+   "cues": [],
+   "cam_m0": 26.28,
+   "out0": 10279
+  },
+  {
+   "seg": 8,
+   "take": "R0945",
+   "layout": "B",
+   "chapter": 2,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 27.66,
+   "speed": 1.0,
+   "n": 8,
+   "aud": [
+    "R0945",
+    27.66
+   ],
+   "cues": [
+    "A05"
+   ],
+   "cam_m0": 27.66,
+   "out0": 10319
+  },
+  {
+   "seg": 8,
+   "take": "R0945",
+   "layout": "B",
+   "chapter": 2,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 27.93,
+   "speed": 1.0,
+   "n": 13,
+   "aud": [
+    "R0945",
+    27.930000000000003
+   ],
+   "cues": [],
+   "cam_m0": 27.93,
+   "out0": 10327
+  },
+  {
+   "seg": 8,
+   "take": "R0945",
+   "layout": "B",
+   "chapter": 2,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 28.37,
+   "speed": 1.0,
+   "n": 123,
+   "aud": [
+    "R0945",
+    28.369999999999997
+   ],
+   "cues": [
+    "A05",
+    "A06"
+   ],
+   "cam_m0": 28.37,
+   "out0": 10340
+  },
+  {
+   "seg": 8,
+   "take": "R0945",
+   "layout": "B",
+   "chapter": 2,
+   "kind": "gap",
+   "scr_freeze": null,
+   "m0": 32.46,
+   "speed": 1.0,
+   "n": 31,
+   "aud": [
+    "R0945",
+    32.459999999999994
+   ],
+   "cues": [],
+   "cam_m0": 32.46,
+   "out0": 10463
+  },
+  {
+   "seg": 8,
+   "take": "R0945",
+   "layout": "B",
+   "chapter": 2,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 33.59,
+   "speed": 1.0,
+   "n": 31,
+   "aud": [
+    "R0945",
+    33.589999999999996
+   ],
+   "cues": [
+    "A06"
+   ],
+   "cam_m0": 33.59,
+   "out0": 10494
+  },
+  {
+   "seg": 8,
+   "take": "R0945",
+   "layout": "B",
+   "chapter": 2,
+   "kind": "fast",
+   "scr_freeze": null,
+   "m0": 34.63,
+   "speed": 1.3905,
+   "n": 34,
+   "aud": null,
+   "cues": [],
+   "cam_m0": 34.63,
+   "out0": 10525
+  },
+  {
+   "seg": 8,
+   "take": "R0945",
+   "layout": "B",
+   "chapter": 2,
+   "kind": "fast",
+   "scr_freeze": null,
+   "m0": 37.5,
+   "speed": 1.3905,
+   "n": 2,
+   "aud": null,
+   "cues": [],
+   "cam_m0": 37.5,
+   "out0": 10559
+  },
+  {
+   "seg": 8,
+   "take": "R0945",
+   "layout": "B",
+   "chapter": 2,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 40.16,
+   "speed": 1.0,
+   "n": 191,
+   "aud": [
+    "R0945",
+    40.16
+   ],
+   "cues": [
+    "A07",
+    "A08",
+    "A09"
+   ],
+   "cam_m0": 40.16,
+   "out0": 10561
+  },
+  {
+   "seg": 8,
+   "take": "R0945",
+   "layout": "B",
+   "chapter": 2,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 46.51,
+   "speed": 1.0,
+   "n": 11,
+   "aud": [
+    "R0945",
+    46.51
+   ],
+   "cues": [],
+   "cam_m0": 46.51,
+   "out0": 10752
+  },
+  {
+   "seg": 8,
+   "take": "R0945",
+   "layout": "B",
+   "chapter": 2,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 46.89,
+   "speed": 1.0,
+   "n": 69,
+   "aud": [
+    "R0945",
+    46.89
+   ],
+   "cues": [
+    "A09"
+   ],
+   "cam_m0": 46.89,
+   "out0": 10763
+  },
+  {
+   "seg": 8,
+   "take": "R0945",
+   "layout": "B",
+   "chapter": 2,
+   "kind": "fast",
+   "scr_freeze": null,
+   "m0": 49.2,
+   "speed": 1.875,
+   "n": 46,
+   "aud": null,
+   "cues": [],
+   "cam_m0": 49.2,
+   "out0": 10832
+  },
+  {
+   "seg": 8,
+   "take": "R0945",
+   "layout": "B",
+   "chapter": 2,
+   "kind": "fast",
+   "scr_freeze": null,
+   "m0": 53.7,
+   "speed": 1.875,
+   "n": 2,
+   "aud": null,
+   "cues": [],
+   "cam_m0": 53.7,
+   "out0": 10878
+  },
+  {
+   "seg": 8,
+   "take": "R0945",
+   "layout": "B",
+   "chapter": 2,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 54.71,
+   "speed": 1.0,
+   "n": 105,
+   "aud": [
+    "R0945",
+    54.71
+   ],
+   "cues": [
+    "A10"
+   ],
+   "cam_m0": 54.71,
+   "out0": 10880
+  },
+  {
+   "seg": 8,
+   "take": "R0945",
+   "layout": "B",
+   "chapter": 2,
+   "kind": "tail",
+   "scr_freeze": null,
+   "m0": 58.2,
+   "speed": 1.0,
+   "n": 24,
+   "aud": [
+    "R0945",
+    58.199999999999996
+   ],
+   "cues": [],
+   "cam_m0": 58.2,
+   "out0": 10985
+  },
+  {
+   "seg": 9,
+   "take": "R1013",
+   "layout": "B",
+   "chapter": 3,
+   "kind": "head",
+   "scr_freeze": null,
+   "m0": 2.0196,
+   "speed": 1.0,
+   "n": 9,
+   "aud": [
+    "R1013",
+    2.0196
+   ],
+   "cues": [],
+   "cam_m0": 2.0196,
+   "out0": 11009
+  },
+  {
+   "seg": 9,
+   "take": "R1013",
+   "layout": "B",
+   "chapter": 3,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 2.3196,
+   "speed": 1.0,
+   "n": 55,
+   "aud": [
+    "0155",
+    0.15
+   ],
+   "cues": [
+    "C01"
+   ],
+   "cam_m0": 2.3196,
+   "out0": 11018
+  },
+  {
+   "seg": 9,
+   "take": "R1013",
+   "layout": "B",
+   "chapter": 3,
+   "kind": "gap",
+   "scr_freeze": null,
+   "m0": 4.1396,
+   "speed": 1.0,
+   "n": 26,
+   "aud": [
+    "0155",
+    1.9699999999999998
+   ],
+   "cues": [],
+   "cam_m0": 4.1396,
+   "out0": 11073
+  },
+  {
+   "seg": 9,
+   "take": "R1013",
+   "layout": "B",
+   "chapter": 3,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 5.0796,
+   "speed": 1.0,
+   "n": 80,
+   "aud": [
+    "0155",
+    2.9099999999999997
+   ],
+   "cues": [
+    "C01",
+    "C02"
+   ],
+   "cam_m0": 5.0796,
+   "out0": 11099
+  },
+  {
+   "seg": 9,
+   "take": "R1013",
+   "layout": "B",
+   "chapter": 3,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 7.7396,
+   "speed": 1.0,
+   "n": 17,
+   "aud": [
+    "0155",
+    5.57
+   ],
+   "cues": [],
+   "cam_m0": 7.7396,
+   "out0": 11179
+  },
+  {
+   "seg": 9,
+   "take": "R1013",
+   "layout": "B",
+   "chapter": 3,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 8.3196,
+   "speed": 1.0,
+   "n": 171,
+   "aud": [
+    "0155",
+    6.15
+   ],
+   "cues": [
+    "C02",
+    "C03",
+    "C04"
+   ],
+   "cam_m0": 8.3196,
+   "out0": 11196
+  },
+  {
+   "seg": 9,
+   "take": "R1013",
+   "layout": "B",
+   "chapter": 3,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 14.0296,
+   "speed": 1.0,
+   "n": 12,
+   "aud": [
+    "0155",
+    11.86
+   ],
+   "cues": [],
+   "cam_m0": 14.0296,
+   "out0": 11367
+  },
+  {
+   "seg": 9,
+   "take": "R1013",
+   "layout": "B",
+   "chapter": 3,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 14.4296,
+   "speed": 1.0,
+   "n": 138,
+   "aud": [
+    "0155",
+    12.26
+   ],
+   "cues": [
+    "C04",
+    "C05"
+   ],
+   "cam_m0": 14.4296,
+   "out0": 11379
+  },
+  {
+   "seg": 9,
+   "take": "R1013",
+   "layout": "B",
+   "chapter": 3,
+   "kind": "gap",
+   "scr_freeze": null,
+   "m0": 19.0296,
+   "speed": 1.0,
+   "n": 2,
+   "aud": null,
+   "cues": [],
+   "cam_m0": 19.0296,
+   "out0": 11517
+  },
+  {
+   "seg": 9,
+   "take": "R1013",
+   "layout": "B",
+   "chapter": 3,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 35.7396,
+   "speed": 1.0,
+   "n": 35,
+   "aud": [
+    "0155",
+    33.57
+   ],
+   "cues": [
+    "C11"
+   ],
+   "cam_m0": 35.7396,
+   "out0": 11519
+  },
+  {
+   "seg": 9,
+   "take": "R1013",
+   "layout": "B",
+   "chapter": 3,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 37.3596,
+   "speed": 1.0,
+   "n": 67,
+   "aud": [
+    "0155",
+    35.19
+   ],
+   "cues": [
+    "C11"
+   ],
+   "cam_m0": 37.3596,
+   "out0": 11554
+  },
+  {
+   "seg": 9,
+   "take": "R1013",
+   "layout": "B",
+   "chapter": 3,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 39.5796,
+   "speed": 1.0,
+   "n": 13,
+   "aud": [
+    "0155",
+    37.41
+   ],
+   "cues": [],
+   "cam_m0": 39.5796,
+   "out0": 11621
+  },
+  {
+   "seg": 9,
+   "take": "R1013",
+   "layout": "B",
+   "chapter": 3,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 39.9996,
+   "speed": 1.0,
+   "n": 116,
+   "aud": [
+    "0155",
+    37.83
+   ],
+   "cues": [
+    "C12",
+    "C13"
+   ],
+   "cam_m0": 39.9996,
+   "out0": 11634
+  },
+  {
+   "seg": 9,
+   "take": "R1013",
+   "layout": "B",
+   "chapter": 3,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 43.8796,
+   "speed": 1.0,
+   "n": 11,
+   "aud": [
+    "0155",
+    41.709999999999994
+   ],
+   "cues": [],
+   "cam_m0": 43.8796,
+   "out0": 11750
+  },
+  {
+   "seg": 9,
+   "take": "R1013",
+   "layout": "B",
+   "chapter": 3,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 44.2496,
+   "speed": 1.0,
+   "n": 74,
+   "aud": [
+    "0155",
+    42.08
+   ],
+   "cues": [
+    "C13"
+   ],
+   "cam_m0": 44.2496,
+   "out0": 11761
+  },
+  {
+   "seg": 9,
+   "take": "R1013",
+   "layout": "B",
+   "chapter": 3,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 46.7296,
+   "speed": 1.0,
+   "n": 16,
+   "aud": [
+    "0155",
+    44.559999999999995
+   ],
+   "cues": [],
+   "cam_m0": 46.7296,
+   "out0": 11835
+  },
+  {
+   "seg": 9,
+   "take": "R1013",
+   "layout": "B",
+   "chapter": 3,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 47.2496,
+   "speed": 1.0,
+   "n": 36,
+   "aud": [
+    "0155",
+    45.08
+   ],
+   "cues": [
+    "C13"
+   ],
+   "cam_m0": 47.2496,
+   "out0": 11851
+  },
+  {
+   "seg": 9,
+   "take": "R1013",
+   "layout": "B",
+   "chapter": 3,
+   "kind": "gap",
+   "scr_freeze": null,
+   "m0": 48.4396,
+   "speed": 1.0,
+   "n": 35,
+   "aud": [
+    "0155",
+    46.269999999999996
+   ],
+   "cues": [],
+   "cam_m0": 48.4396,
+   "out0": 11887
+  },
+  {
+   "seg": 9,
+   "take": "R1013",
+   "layout": "B",
+   "chapter": 3,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 49.6596,
+   "speed": 1.0,
+   "n": 48,
+   "aud": [
+    "0155",
+    47.49
+   ],
+   "cues": [
+    "C14"
+   ],
+   "cam_m0": 49.6596,
+   "out0": 11922
+  },
+  {
+   "seg": 9,
+   "take": "R1013",
+   "layout": "B",
+   "chapter": 3,
+   "kind": "gap",
+   "scr_freeze": null,
+   "m0": 51.2496,
+   "speed": 1.0,
+   "n": 38,
+   "aud": [
+    "0155",
+    49.07999999999999
+   ],
+   "cues": [],
+   "cam_m0": 51.2496,
+   "out0": 11970
+  },
+  {
+   "seg": 9,
+   "take": "R1013",
+   "layout": "B",
+   "chapter": 3,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 52.5196,
+   "speed": 1.0,
+   "n": 130,
+   "aud": [
+    "0155",
+    50.35
+   ],
+   "cues": [
+    "C14",
+    "C15"
+   ],
+   "cam_m0": 52.5196,
+   "out0": 12008
+  },
+  {
+   "seg": 9,
+   "take": "R1013",
+   "layout": "B",
+   "chapter": 3,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 56.8596,
+   "speed": 1.0,
+   "n": 11,
+   "aud": [
+    "0155",
+    54.69
+   ],
+   "cues": [],
+   "cam_m0": 56.8596,
+   "out0": 12138
+  },
+  {
+   "seg": 9,
+   "take": "R1013",
+   "layout": "B",
+   "chapter": 3,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 57.2396,
+   "speed": 1.0,
+   "n": 71,
+   "aud": [
+    "0155",
+    55.07
+   ],
+   "cues": [
+    "C15"
+   ],
+   "cam_m0": 57.2396,
+   "out0": 12149
+  },
+  {
+   "seg": 9,
+   "take": "R1013",
+   "layout": "B",
+   "chapter": 3,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 59.6196,
+   "speed": 1.0,
+   "n": 16,
+   "aud": [
+    "0155",
+    57.449999999999996
+   ],
+   "cues": [],
+   "cam_m0": 59.6196,
+   "out0": 12220
+  },
+  {
+   "seg": 9,
+   "take": "R1013",
+   "layout": "B",
+   "chapter": 3,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 60.1596,
+   "speed": 1.0,
+   "n": 9,
+   "aud": [
+    "0155",
+    57.99
+   ],
+   "cues": [
+    "C15"
+   ],
+   "cam_m0": 60.1596,
+   "out0": 12236
+  },
+  {
+   "seg": 9,
+   "take": "R1013",
+   "layout": "B",
+   "chapter": 3,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 60.4496,
+   "speed": 1.0,
+   "n": 10,
+   "aud": [
+    "0155",
+    58.279999999999994
+   ],
+   "cues": [],
+   "cam_m0": 60.4496,
+   "out0": 12245
+  },
+  {
+   "seg": 9,
+   "take": "R1013",
+   "layout": "B",
+   "chapter": 3,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 60.7896,
+   "speed": 1.0,
+   "n": 66,
+   "aud": [
+    "0155",
+    58.62
+   ],
+   "cues": [
+    "C15"
+   ],
+   "cam_m0": 60.7896,
+   "out0": 12255
+  },
+  {
+   "seg": 9,
+   "take": "R1013",
+   "layout": "B",
+   "chapter": 3,
+   "kind": "fast",
+   "scr_freeze": null,
+   "m0": 62.9796,
+   "speed": 2.1817,
+   "n": 61,
+   "aud": null,
+   "cues": [],
+   "cam_m0": 62.9796,
+   "out0": 12321
+  },
+  {
+   "seg": 9,
+   "take": "R1013",
+   "layout": "B",
+   "chapter": 3,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 67.4996,
+   "speed": 1.0,
+   "n": 43,
+   "aud": [
+    "0155",
+    65.33000000000001
+   ],
+   "cues": [
+    "C16"
+   ],
+   "cam_m0": 67.4996,
+   "out0": 12382
+  },
+  {
+   "seg": 9,
+   "take": "R1013",
+   "layout": "B",
+   "chapter": 3,
+   "kind": "fast",
+   "scr_freeze": null,
+   "m0": 68.9196,
+   "speed": 1.5303,
+   "n": 39,
+   "aud": null,
+   "cues": [],
+   "cam_m0": 68.9196,
+   "out0": 12425
+  },
+  {
+   "seg": 9,
+   "take": "R1013",
+   "layout": "B",
+   "chapter": 3,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 70.9496,
+   "speed": 1.0,
+   "n": 86,
+   "aud": [
+    "0155",
+    68.78
+   ],
+   "cues": [
+    "C17"
+   ],
+   "cam_m0": 70.9496,
+   "out0": 12464
+  },
+  {
+   "seg": 9,
+   "take": "R1013",
+   "layout": "B",
+   "chapter": 3,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 73.8096,
+   "speed": 1.0,
+   "n": 18,
+   "aud": [
+    "0155",
+    71.64
+   ],
+   "cues": [],
+   "cam_m0": 73.8096,
+   "out0": 12550
+  },
+  {
+   "seg": 9,
+   "take": "R1013",
+   "layout": "B",
+   "chapter": 3,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 74.4096,
+   "speed": 1.0,
+   "n": 72,
+   "aud": [
+    "0155",
+    72.24000000000001
+   ],
+   "cues": [
+    "C17",
+    "C18"
+   ],
+   "cam_m0": 74.4096,
+   "out0": 12568
+  },
+  {
+   "seg": 9,
+   "take": "R1013",
+   "layout": "B",
+   "chapter": 3,
+   "kind": "fast",
+   "scr_freeze": null,
+   "m0": 76.7996,
+   "speed": 2.1429,
+   "n": 59,
+   "aud": null,
+   "cues": [],
+   "cam_m0": 76.7996,
+   "out0": 12640
+  },
+  {
+   "seg": 9,
+   "take": "R1013",
+   "layout": "B",
+   "chapter": 3,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 81.0596,
+   "speed": 1.0,
+   "n": 233,
+   "aud": [
+    "0155",
+    78.89
+   ],
+   "cues": [
+    "C19",
+    "C20",
+    "C21"
+   ],
+   "cam_m0": 81.0596,
+   "out0": 12699
+  },
+  {
+   "seg": 9,
+   "take": "R1013",
+   "layout": "B",
+   "chapter": 3,
+   "kind": "gap",
+   "scr_freeze": null,
+   "m0": 88.8396,
+   "speed": 1.0,
+   "n": 20,
+   "aud": [
+    "0155",
+    86.67
+   ],
+   "cues": [],
+   "cam_m0": 88.8396,
+   "out0": 12932
+  },
+  {
+   "seg": 9,
+   "take": "R1013",
+   "layout": "B",
+   "chapter": 3,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 89.5596,
+   "speed": 1.0,
+   "n": 167,
+   "aud": [
+    "0155",
+    87.39
+   ],
+   "cues": [
+    "C22",
+    "C23",
+    "C24"
+   ],
+   "cam_m0": 89.5596,
+   "out0": 12952
+  },
+  {
+   "seg": 9,
+   "take": "R1013",
+   "layout": "B",
+   "chapter": 3,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 95.1196,
+   "speed": 1.0,
+   "n": 16,
+   "aud": [
+    "0155",
+    92.95
+   ],
+   "cues": [],
+   "cam_m0": 95.1196,
+   "out0": 13119
+  },
+  {
+   "seg": 9,
+   "take": "R1013",
+   "layout": "B",
+   "chapter": 3,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 95.6496,
+   "speed": 1.0,
+   "n": 45,
+   "aud": [
+    "0155",
+    93.48
+   ],
+   "cues": [
+    "C24"
+   ],
+   "cam_m0": 95.6496,
+   "out0": 13135
+  },
+  {
+   "seg": 9,
+   "take": "R1013",
+   "layout": "B",
+   "chapter": 3,
+   "kind": "fast",
+   "scr_freeze": null,
+   "m0": 97.1496,
+   "speed": 1.7075,
+   "n": 43,
+   "aud": null,
+   "cues": [],
+   "cam_m0": 97.1496,
+   "out0": 13180
+  },
+  {
+   "seg": 9,
+   "take": "R1013",
+   "layout": "B",
+   "chapter": 3,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 99.6496,
+   "speed": 1.0,
+   "n": 223,
+   "aud": [
+    "0155",
+    97.48
+   ],
+   "cues": [
+    "C25",
+    "C26",
+    "C27"
+   ],
+   "cam_m0": 99.6496,
+   "out0": 13223
+  },
+  {
+   "seg": 9,
+   "take": "R1013",
+   "layout": "B",
+   "chapter": 3,
+   "kind": "fast",
+   "scr_freeze": null,
+   "m0": 107.0896,
+   "speed": 1.4563,
+   "n": 37,
+   "aud": null,
+   "cues": [],
+   "cam_m0": 107.0896,
+   "out0": 13446
+  },
+  {
+   "seg": 9,
+   "take": "R1013",
+   "layout": "B",
+   "chapter": 3,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 108.9996,
+   "speed": 1.0,
+   "n": 98,
+   "aud": [
+    "0155",
+    106.83000000000001
+   ],
+   "cues": [
+    "C28"
+   ],
+   "cam_m0": 108.9996,
+   "out0": 13483
+  },
+  {
+   "seg": 9,
+   "take": "R1013",
+   "layout": "B",
+   "chapter": 3,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 112.2746,
+   "speed": 1.0,
+   "n": 8,
+   "aud": null,
+   "cues": [],
+   "cam_m0": 112.2746,
+   "out0": 13581
+  },
+  {
+   "seg": 9,
+   "take": "R1013",
+   "layout": "B",
+   "chapter": 3,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 126.4096,
+   "speed": 1.0,
+   "n": 36,
+   "aud": [
+    "0155",
+    124.24000000000001
+   ],
+   "cues": [
+    "C28"
+   ],
+   "cam_m0": 126.4096,
+   "out0": 13589
+  },
+  {
+   "seg": 9,
+   "take": "R1013",
+   "layout": "B",
+   "chapter": 3,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 127.6196,
+   "speed": 1.0,
+   "n": 8,
+   "aud": null,
+   "cues": [],
+   "cam_m0": 127.6196,
+   "out0": 13625
+  },
+  {
+   "seg": 9,
+   "take": "R1013",
+   "layout": "B",
+   "chapter": 3,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 130.6596,
+   "speed": 1.0,
+   "n": 119,
+   "aud": [
+    "0155",
+    128.49
+   ],
+   "cues": [
+    "C29"
+   ],
+   "cam_m0": 130.6596,
+   "out0": 13633
+  },
+  {
+   "seg": 9,
+   "take": "R1013",
+   "layout": "B",
+   "chapter": 3,
+   "kind": "gap",
+   "scr_freeze": null,
+   "m0": 134.6396,
+   "speed": 1.0,
+   "n": 26,
+   "aud": [
+    "0155",
+    132.47
+   ],
+   "cues": [],
+   "cam_m0": 134.6396,
+   "out0": 13752
+  },
+  {
+   "seg": 9,
+   "take": "R1013",
+   "layout": "B",
+   "chapter": 3,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 135.5596,
+   "speed": 1.0,
+   "n": 83,
+   "aud": [
+    "0155",
+    133.39000000000001
+   ],
+   "cues": [
+    "C30"
+   ],
+   "cam_m0": 135.5596,
+   "out0": 13778
+  },
+  {
+   "seg": 9,
+   "take": "R1013",
+   "layout": "B",
+   "chapter": 3,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 138.3296,
+   "speed": 1.0,
+   "n": 12,
+   "aud": [
+    "0155",
+    136.16
+   ],
+   "cues": [],
+   "cam_m0": 138.3296,
+   "out0": 13861
+  },
+  {
+   "seg": 9,
+   "take": "R1013",
+   "layout": "B",
+   "chapter": 3,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 138.7396,
+   "speed": 1.0,
+   "n": 79,
+   "aud": [
+    "0155",
+    136.57
+   ],
+   "cues": [
+    "C30"
+   ],
+   "cam_m0": 138.7396,
+   "out0": 13873
+  },
+  {
+   "seg": 9,
+   "take": "R1013",
+   "layout": "B",
+   "chapter": 3,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 141.3796,
+   "speed": 1.0,
+   "n": 18,
+   "aud": [
+    "0155",
+    139.20999999999998
+   ],
+   "cues": [],
+   "cam_m0": 141.3796,
+   "out0": 13952
+  },
+  {
+   "seg": 9,
+   "take": "R1013",
+   "layout": "B",
+   "chapter": 3,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 141.9696,
+   "speed": 1.0,
+   "n": 77,
+   "aud": [
+    "0155",
+    139.8
+   ],
+   "cues": [
+    "C30",
+    "C31"
+   ],
+   "cam_m0": 141.9696,
+   "out0": 13970
+  },
+  {
+   "seg": 9,
+   "take": "R1013",
+   "layout": "B",
+   "chapter": 3,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 144.5396,
+   "speed": 1.0,
+   "n": 13,
+   "aud": [
+    "0155",
+    142.36999999999998
+   ],
+   "cues": [],
+   "cam_m0": 144.5396,
+   "out0": 14047
+  },
+  {
+   "seg": 9,
+   "take": "R1013",
+   "layout": "B",
+   "chapter": 3,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 144.9696,
+   "speed": 1.0,
+   "n": 179,
+   "aud": [
+    "0155",
+    142.8
+   ],
+   "cues": [
+    "C31",
+    "C32"
+   ],
+   "cam_m0": 144.9696,
+   "out0": 14060
+  },
+  {
+   "seg": 9,
+   "take": "R1013",
+   "layout": "B",
+   "chapter": 3,
+   "kind": "fast",
+   "scr_freeze": null,
+   "m0": 150.9296,
+   "speed": 15.5813,
+   "n": 6,
+   "aud": null,
+   "cues": [],
+   "cam_m0": 150.9296,
+   "out0": 14239
+  },
+  {
+   "seg": 9,
+   "take": "R1013",
+   "layout": "B",
+   "chapter": 3,
+   "kind": "fast",
+   "scr_freeze": null,
+   "m0": 156.8,
+   "speed": 15.5813,
+   "n": 180,
+   "aud": null,
+   "cues": [],
+   "cam_m0": 156.8,
+   "out0": 14245
+  },
+  {
+   "seg": 9,
+   "take": "R1013",
+   "layout": "B",
+   "chapter": 3,
+   "kind": "fast",
+   "scr_freeze": null,
+   "m0": 255.9,
+   "speed": 15.5813,
+   "n": 13,
+   "aud": null,
+   "cues": [],
+   "cam_m0": 255.9,
+   "out0": 14425
+  },
+  {
+   "seg": 9,
+   "take": "R1013",
+   "layout": "B",
+   "chapter": 3,
+   "kind": "fast",
+   "scr_freeze": null,
+   "m0": 265.9,
+   "speed": 15.5813,
+   "n": 1,
+   "aud": null,
+   "cues": [],
+   "cam_m0": 265.9,
+   "out0": 14438
+  },
+  {
+   "seg": 9,
+   "take": "R1013",
+   "layout": "B",
+   "chapter": 3,
+   "kind": "fast",
+   "scr_freeze": null,
+   "m0": 279.8,
+   "speed": 15.5813,
+   "n": 41,
+   "aud": null,
+   "cues": [],
+   "cam_m0": 279.8,
+   "out0": 14439
+  },
+  {
+   "seg": 9,
+   "take": "R1013",
+   "layout": "B",
+   "chapter": 3,
+   "kind": "fast",
+   "scr_freeze": null,
+   "m0": 382.5,
+   "speed": 15.5813,
+   "n": 14,
+   "aud": null,
+   "cues": [],
+   "cam_m0": 382.5,
+   "out0": 14480
+  },
+  {
+   "seg": 10,
+   "take": "R1029",
+   "layout": "B",
+   "chapter": 4,
+   "kind": "head",
+   "scr_freeze": null,
+   "m0": 1.8163,
+   "speed": 1.0,
+   "n": 12,
+   "aud": [
+    "0156",
+    17.05
+   ],
+   "cues": [],
+   "cam_m0": 1.8163,
+   "out0": 14494
+  },
+  {
+   "seg": 10,
+   "take": "R1029",
+   "layout": "B",
+   "chapter": 4,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 2.2163,
+   "speed": 1.0,
+   "n": 107,
+   "aud": [
+    "0156",
+    17.45
+   ],
+   "cues": [
+    "D01"
+   ],
+   "cam_m0": 2.2163,
+   "out0": 14506
+  },
+  {
+   "seg": 10,
+   "take": "R1029",
+   "layout": "B",
+   "chapter": 4,
+   "kind": "fast",
+   "scr_freeze": null,
+   "m0": 5.7663,
+   "speed": 2.149,
+   "n": 55,
+   "aud": null,
+   "cues": [],
+   "cam_m0": 5.7663,
+   "out0": 14613
+  },
+  {
+   "seg": 10,
+   "take": "R1029",
+   "layout": "B",
+   "chapter": 4,
+   "kind": "fast",
+   "scr_freeze": null,
+   "m0": 10.3,
+   "speed": 2.149,
+   "n": 4,
+   "aud": null,
+   "cues": [],
+   "cam_m0": 10.3,
+   "out0": 14668
+  },
+  {
+   "seg": 10,
+   "take": "R1029",
+   "layout": "B",
+   "chapter": 4,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 10.6063,
+   "speed": 1.0,
+   "n": 275,
+   "aud": [
+    "0156",
+    25.84
+   ],
+   "cues": [
+    "D02",
+    "D03",
+    "D04",
+    "D05"
+   ],
+   "cam_m0": 10.6063,
+   "out0": 14672
+  },
+  {
+   "seg": 10,
+   "take": "R1029",
+   "layout": "B",
+   "chapter": 4,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 19.7663,
+   "speed": 1.0,
+   "n": 12,
+   "aud": [
+    "0156",
+    34.99999999999999
+   ],
+   "cues": [],
+   "cam_m0": 19.7663,
+   "out0": 14947
+  },
+  {
+   "seg": 10,
+   "take": "R1029",
+   "layout": "B",
+   "chapter": 4,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 20.1663,
+   "speed": 1.0,
+   "n": 48,
+   "aud": [
+    "0156",
+    35.4
+   ],
+   "cues": [
+    "D05"
+   ],
+   "cam_m0": 20.1663,
+   "out0": 14959
+  },
+  {
+   "seg": 10,
+   "take": "R1029",
+   "layout": "B",
+   "chapter": 4,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 21.7563,
+   "speed": 1.0,
+   "n": 11,
+   "aud": [
+    "0156",
+    36.989999999999995
+   ],
+   "cues": [],
+   "cam_m0": 21.7563,
+   "out0": 15007
+  },
+  {
+   "seg": 10,
+   "take": "R1029",
+   "layout": "B",
+   "chapter": 4,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 22.1263,
+   "speed": 1.0,
+   "n": 95,
+   "aud": [
+    "0156",
+    37.36
+   ],
+   "cues": [
+    "D06"
+   ],
+   "cam_m0": 22.1263,
+   "out0": 15018
+  },
+  {
+   "seg": 10,
+   "take": "R1029",
+   "layout": "B",
+   "chapter": 4,
+   "kind": "gap",
+   "scr_freeze": null,
+   "m0": 25.3063,
+   "speed": 1.0,
+   "n": 39,
+   "aud": [
+    "0156",
+    40.53999999999999
+   ],
+   "cues": [],
+   "cam_m0": 25.3063,
+   "out0": 15113
+  },
+  {
+   "seg": 10,
+   "take": "R1029",
+   "layout": "B",
+   "chapter": 4,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 26.6563,
+   "speed": 1.0,
+   "n": 64,
+   "aud": [
+    "0156",
+    41.89
+   ],
+   "cues": [
+    "D07"
+   ],
+   "cam_m0": 26.6563,
+   "out0": 15152
+  },
+  {
+   "seg": 10,
+   "take": "R1029",
+   "layout": "B",
+   "chapter": 4,
+   "kind": "gap",
+   "scr_freeze": null,
+   "m0": 28.8063,
+   "speed": 1.0,
+   "n": 30,
+   "aud": [
+    "0156",
+    44.03999999999999
+   ],
+   "cues": [],
+   "cam_m0": 28.8063,
+   "out0": 15216
+  },
+  {
+   "seg": 10,
+   "take": "R1029",
+   "layout": "B",
+   "chapter": 4,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 29.8163,
+   "speed": 1.0,
+   "n": 131,
+   "aud": [
+    "0156",
+    45.05
+   ],
+   "cues": [
+    "D08",
+    "D09"
+   ],
+   "cam_m0": 29.8163,
+   "out0": 15246
+  },
+  {
+   "seg": 10,
+   "take": "R1029",
+   "layout": "B",
+   "chapter": 4,
+   "kind": "fast",
+   "scr_freeze": null,
+   "m0": 34.1763,
+   "speed": 2.0492,
+   "n": 55,
+   "aud": null,
+   "cues": [],
+   "cam_m0": 34.1763,
+   "out0": 15377
+  },
+  {
+   "seg": 10,
+   "take": "R1029",
+   "layout": "B",
+   "chapter": 4,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 38.5263,
+   "speed": 1.0,
+   "n": 76,
+   "aud": [
+    "0156",
+    53.76
+   ],
+   "cues": [
+    "D10"
+   ],
+   "cam_m0": 38.5263,
+   "out0": 15432
+  },
+  {
+   "seg": 10,
+   "take": "R1029",
+   "layout": "B",
+   "chapter": 4,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 41.0763,
+   "speed": 1.0,
+   "n": 17,
+   "aud": [
+    "0156",
+    56.309999999999995
+   ],
+   "cues": [],
+   "cam_m0": 41.0763,
+   "out0": 15508
+  },
+  {
+   "seg": 10,
+   "take": "R1029",
+   "layout": "B",
+   "chapter": 4,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 41.6463,
+   "speed": 1.0,
+   "n": 43,
+   "aud": [
+    "0156",
+    56.879999999999995
+   ],
+   "cues": [
+    "D10"
+   ],
+   "cam_m0": 41.6463,
+   "out0": 15525
+  },
+  {
+   "seg": 10,
+   "take": "R1029",
+   "layout": "B",
+   "chapter": 4,
+   "kind": "gap",
+   "scr_freeze": null,
+   "m0": 43.0763,
+   "speed": 1.0,
+   "n": 22,
+   "aud": [
+    "0156",
+    58.309999999999995
+   ],
+   "cues": [],
+   "cam_m0": 43.0763,
+   "out0": 15568
+  },
+  {
+   "seg": 10,
+   "take": "R1029",
+   "layout": "B",
+   "chapter": 4,
+   "kind": "gap",
+   "scr_freeze": null,
+   "m0": 44.6,
+   "speed": 1.0,
+   "n": 6,
+   "aud": [
+    "0156",
+    59.8337
+   ],
+   "cues": [],
+   "cam_m0": 44.6,
+   "out0": 15590
+  },
+  {
+   "seg": 10,
+   "take": "R1029",
+   "layout": "B",
+   "chapter": 4,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 44.8063,
+   "speed": 1.0,
+   "n": 66,
+   "aud": [
+    "0156",
+    60.04
+   ],
+   "cues": [
+    "D11"
+   ],
+   "cam_m0": 44.8063,
+   "out0": 15596
+  },
+  {
+   "seg": 10,
+   "take": "R1029",
+   "layout": "B",
+   "chapter": 4,
+   "kind": "gap",
+   "scr_freeze": null,
+   "m0": 47.0063,
+   "speed": 1.0,
+   "n": 30,
+   "aud": [
+    "0156",
+    62.239999999999995
+   ],
+   "cues": [],
+   "cam_m0": 47.0063,
+   "out0": 15662
+  },
+  {
+   "seg": 10,
+   "take": "R1029",
+   "layout": "B",
+   "chapter": 4,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 48.0663,
+   "speed": 1.0,
+   "n": 61,
+   "aud": [
+    "0156",
+    63.3
+   ],
+   "cues": [
+    "D11"
+   ],
+   "cam_m0": 48.0663,
+   "out0": 15692
+  },
+  {
+   "seg": 10,
+   "take": "R1029",
+   "layout": "B",
+   "chapter": 4,
+   "kind": "fast",
+   "scr_freeze": null,
+   "m0": 50.0863,
+   "speed": 1.6228,
+   "n": 37,
+   "aud": null,
+   "cues": [],
+   "cam_m0": 50.0863,
+   "out0": 15753
+  },
+  {
+   "seg": 10,
+   "take": "R1029",
+   "layout": "B",
+   "chapter": 4,
+   "kind": "fast",
+   "scr_freeze": null,
+   "m0": 52.7,
+   "speed": 1.6228,
+   "n": 2,
+   "aud": null,
+   "cues": [],
+   "cam_m0": 52.7,
+   "out0": 15790
+  },
+  {
+   "seg": 10,
+   "take": "R1029",
+   "layout": "B",
+   "chapter": 4,
+   "kind": "fast",
+   "scr_freeze": null,
+   "m0": 53.7,
+   "speed": 1.6228,
+   "n": 2,
+   "aud": null,
+   "cues": [],
+   "cam_m0": 53.7,
+   "out0": 15792
+  },
+  {
+   "seg": 10,
+   "take": "R1029",
+   "layout": "B",
+   "chapter": 4,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 53.8163,
+   "speed": 1.0,
+   "n": 75,
+   "aud": [
+    "0156",
+    69.05000000000001
+   ],
+   "cues": [
+    "D11"
+   ],
+   "cam_m0": 53.8163,
+   "out0": 15794
+  },
+  {
+   "seg": 10,
+   "take": "R1029",
+   "layout": "B",
+   "chapter": 4,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 56.3163,
+   "speed": 1.0,
+   "n": 17,
+   "aud": [
+    "0156",
+    71.55
+   ],
+   "cues": [],
+   "cam_m0": 56.3163,
+   "out0": 15869
+  },
+  {
+   "seg": 10,
+   "take": "R1029",
+   "layout": "B",
+   "chapter": 4,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 56.8663,
+   "speed": 1.0,
+   "n": 141,
+   "aud": [
+    "0156",
+    72.10000000000001
+   ],
+   "cues": [
+    "D12",
+    "D13"
+   ],
+   "cam_m0": 56.8663,
+   "out0": 15886
+  },
+  {
+   "seg": 10,
+   "take": "R1029",
+   "layout": "B",
+   "chapter": 4,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 61.5713,
+   "speed": 1.0,
+   "n": 8,
+   "aud": null,
+   "cues": [],
+   "cam_m0": 61.5713,
+   "out0": 16027
+  },
+  {
+   "seg": 10,
+   "take": "R1029",
+   "layout": "B",
+   "chapter": 4,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 62.8413,
+   "speed": 1.0,
+   "n": 36,
+   "aud": [
+    "0156",
+    78.07499999999999
+   ],
+   "cues": [
+    "D13"
+   ],
+   "cam_m0": 62.8413,
+   "out0": 16035
+  },
+  {
+   "seg": 10,
+   "take": "R1029",
+   "layout": "B",
+   "chapter": 4,
+   "kind": "fast",
+   "scr_freeze": null,
+   "m0": 64.0463,
+   "speed": 1.7418,
+   "n": 44,
+   "aud": null,
+   "cues": [],
+   "cam_m0": 64.0463,
+   "out0": 16071
+  },
+  {
+   "seg": 10,
+   "take": "R1029",
+   "layout": "B",
+   "chapter": 4,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 66.6863,
+   "speed": 1.0,
+   "n": 46,
+   "aud": [
+    "0156",
+    81.92
+   ],
+   "cues": [
+    "D14"
+   ],
+   "cam_m0": 66.6863,
+   "out0": 16115
+  },
+  {
+   "seg": 10,
+   "take": "R1029",
+   "layout": "B",
+   "chapter": 4,
+   "kind": "gap",
+   "scr_freeze": null,
+   "m0": 68.2363,
+   "speed": 1.0,
+   "n": 23,
+   "aud": [
+    "0156",
+    83.47
+   ],
+   "cues": [],
+   "cam_m0": 68.2363,
+   "out0": 16161
+  },
+  {
+   "seg": 10,
+   "take": "R1029",
+   "layout": "B",
+   "chapter": 4,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 69.0463,
+   "speed": 1.0,
+   "n": 59,
+   "aud": [
+    "0156",
+    84.28
+   ],
+   "cues": [
+    "D14"
+   ],
+   "cam_m0": 69.0463,
+   "out0": 16184
+  },
+  {
+   "seg": 10,
+   "take": "R1029",
+   "layout": "B",
+   "chapter": 4,
+   "kind": "fast",
+   "scr_freeze": null,
+   "m0": 71.0163,
+   "speed": 5.1167,
+   "n": 117,
+   "aud": null,
+   "cues": [],
+   "cam_m0": 71.0163,
+   "out0": 16243
+  },
+  {
+   "seg": 10,
+   "take": "R1029",
+   "layout": "B",
+   "chapter": 4,
+   "kind": "fast",
+   "scr_freeze": null,
+   "m0": 95.2,
+   "speed": 5.1167,
+   "n": 25,
+   "aud": null,
+   "cues": [],
+   "cam_m0": 95.2,
+   "out0": 16360
+  },
+  {
+   "seg": 11,
+   "take": "R1036",
+   "layout": "B",
+   "chapter": 4,
+   "kind": "head",
+   "scr_freeze": null,
+   "m0": 4.8772,
+   "speed": 1.0,
+   "n": 12,
+   "aud": [
+    "R1036",
+    4.877199999999999
+   ],
+   "cues": [],
+   "cam_m0": 4.8772,
+   "out0": 16385
+  },
+  {
+   "seg": 11,
+   "take": "R1036",
+   "layout": "B",
+   "chapter": 4,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 5.2772,
+   "speed": 1.0,
+   "n": 170,
+   "aud": [
+    "0158",
+    0.21
+   ],
+   "cues": [
+    "F01",
+    "F02"
+   ],
+   "cam_m0": 5.2772,
+   "out0": 16397
+  },
+  {
+   "seg": 11,
+   "take": "R1036",
+   "layout": "B",
+   "chapter": 4,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 10.9372,
+   "speed": 1.0,
+   "n": 11,
+   "aud": [
+    "0158",
+    5.870000000000001
+   ],
+   "cues": [],
+   "cam_m0": 10.9372,
+   "out0": 16567
+  },
+  {
+   "seg": 11,
+   "take": "R1036",
+   "layout": "B",
+   "chapter": 4,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 11.2972,
+   "speed": 1.0,
+   "n": 12,
+   "aud": [
+    "0158",
+    6.23
+   ],
+   "cues": [
+    "F02"
+   ],
+   "cam_m0": 11.2972,
+   "out0": 16578
+  },
+  {
+   "seg": 11,
+   "take": "R1036",
+   "layout": "B",
+   "chapter": 4,
+   "kind": "fast",
+   "scr_freeze": null,
+   "m0": 11.6872,
+   "speed": 1.3111,
+   "n": 28,
+   "aud": null,
+   "cues": [],
+   "cam_m0": 11.6872,
+   "out0": 16590
+  },
+  {
+   "seg": 11,
+   "take": "R1036",
+   "layout": "B",
+   "chapter": 4,
+   "kind": "fast",
+   "scr_freeze": null,
+   "m0": 13.4,
+   "speed": 1.3111,
+   "n": 2,
+   "aud": null,
+   "cues": [],
+   "cam_m0": 13.4,
+   "out0": 16618
+  },
+  {
+   "seg": 11,
+   "take": "R1036",
+   "layout": "B",
+   "chapter": 4,
+   "kind": "fast",
+   "scr_freeze": null,
+   "m0": 14.6,
+   "speed": 1.3111,
+   "n": 5,
+   "aud": null,
+   "cues": [],
+   "cam_m0": 14.6,
+   "out0": 16620
+  },
+  {
+   "seg": 11,
+   "take": "R1036",
+   "layout": "B",
+   "chapter": 4,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 14.8072,
+   "speed": 1.0,
+   "n": 42,
+   "aud": [
+    "0158",
+    9.74
+   ],
+   "cues": [
+    "F02"
+   ],
+   "cam_m0": 14.8072,
+   "out0": 16625
+  },
+  {
+   "seg": 11,
+   "take": "R1036",
+   "layout": "B",
+   "chapter": 4,
+   "kind": "fast",
+   "scr_freeze": null,
+   "m0": 16.2172,
+   "speed": 4.0829,
+   "n": 136,
+   "aud": null,
+   "cues": [],
+   "cam_m0": 16.2172,
+   "out0": 16667
+  },
+  {
+   "seg": 11,
+   "take": "R1036",
+   "layout": "B",
+   "chapter": 4,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 34.7272,
+   "speed": 1.0,
+   "n": 169,
+   "aud": [
+    "0158",
+    29.66
+   ],
+   "cues": [
+    "F03",
+    "F04"
+   ],
+   "cam_m0": 34.7272,
+   "out0": 16803
+  },
+  {
+   "seg": 11,
+   "take": "R1036",
+   "layout": "B",
+   "chapter": 4,
+   "kind": "fast",
+   "scr_freeze": null,
+   "m0": 40.3672,
+   "speed": 2.1838,
+   "n": 61,
+   "aud": null,
+   "cues": [],
+   "cam_m0": 40.3672,
+   "out0": 16972
+  },
+  {
+   "seg": 11,
+   "take": "R1036",
+   "layout": "B",
+   "chapter": 4,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 44.8272,
+   "speed": 1.0,
+   "n": 205,
+   "aud": [
+    "0158",
+    39.76
+   ],
+   "cues": [
+    "F05",
+    "F06"
+   ],
+   "cam_m0": 44.8272,
+   "out0": 17033
+  },
+  {
+   "seg": 11,
+   "take": "R1036",
+   "layout": "B",
+   "chapter": 4,
+   "kind": "fast",
+   "scr_freeze": null,
+   "m0": 51.6672,
+   "speed": 2.694,
+   "n": 109,
+   "aud": null,
+   "cues": [],
+   "cam_m0": 51.6672,
+   "out0": 17238
+  },
+  {
+   "seg": 11,
+   "take": "R1036",
+   "layout": "B",
+   "chapter": 4,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 61.5972,
+   "speed": 1.0,
+   "n": 74,
+   "aud": [
+    "0158",
+    56.53
+   ],
+   "cues": [
+    "F07"
+   ],
+   "cam_m0": 61.5972,
+   "out0": 17347
+  },
+  {
+   "seg": 11,
+   "take": "R1036",
+   "layout": "B",
+   "chapter": 4,
+   "kind": "fast",
+   "scr_freeze": null,
+   "m0": 64.0772,
+   "speed": 2.4551,
+   "n": 80,
+   "aud": null,
+   "cues": [],
+   "cam_m0": 64.0772,
+   "out0": 17421
+  },
+  {
+   "seg": 11,
+   "take": "R1036",
+   "layout": "B",
+   "chapter": 4,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 70.6572,
+   "speed": 1.0,
+   "n": 74,
+   "aud": [
+    "0158",
+    65.59
+   ],
+   "cues": [
+    "F08"
+   ],
+   "cam_m0": 70.6572,
+   "out0": 17501
+  },
+  {
+   "seg": 11,
+   "take": "R1036",
+   "layout": "B",
+   "chapter": 4,
+   "kind": "fast",
+   "scr_freeze": null,
+   "m0": 73.1272,
+   "speed": 6.3022,
+   "n": 149,
+   "aud": null,
+   "cues": [],
+   "cam_m0": 73.1272,
+   "out0": 17575
+  },
+  {
+   "seg": 12,
+   "take": "R1041",
+   "layout": "B",
+   "chapter": 4,
+   "kind": "head",
+   "scr_freeze": null,
+   "m0": 2.5063,
+   "speed": 1.0,
+   "n": 12,
+   "aud": [
+    "0159",
+    0.6099999999999999
+   ],
+   "cues": [],
+   "cam_m0": 2.5063,
+   "out0": 17724
+  },
+  {
+   "seg": 12,
+   "take": "R1041",
+   "layout": "B",
+   "chapter": 4,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 2.9063,
+   "speed": 1.0,
+   "n": 106,
+   "aud": [
+    "0159",
+    1.01
+   ],
+   "cues": [
+    "G01",
+    "G02"
+   ],
+   "cam_m0": 2.9063,
+   "out0": 17736
+  },
+  {
+   "seg": 12,
+   "take": "R1041",
+   "layout": "B",
+   "chapter": 4,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 6.4363,
+   "speed": 1.0,
+   "n": 11,
+   "aud": [
+    "0159",
+    4.54
+   ],
+   "cues": [],
+   "cam_m0": 6.4363,
+   "out0": 17842
+  },
+  {
+   "seg": 12,
+   "take": "R1041",
+   "layout": "B",
+   "chapter": 4,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 6.8163,
+   "speed": 1.0,
+   "n": 280,
+   "aud": [
+    "0159",
+    4.92
+   ],
+   "cues": [
+    "G02",
+    "G03",
+    "G04"
+   ],
+   "cam_m0": 6.8163,
+   "out0": 17853
+  },
+  {
+   "seg": 12,
+   "take": "R1041",
+   "layout": "B",
+   "chapter": 4,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 16.1463,
+   "speed": 1.0,
+   "n": 11,
+   "aud": [
+    "0159",
+    14.25
+   ],
+   "cues": [],
+   "cam_m0": 16.1463,
+   "out0": 18133
+  },
+  {
+   "seg": 12,
+   "take": "R1041",
+   "layout": "B",
+   "chapter": 4,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 16.5163,
+   "speed": 1.0,
+   "n": 64,
+   "aud": [
+    "0159",
+    14.620000000000001
+   ],
+   "cues": [
+    "G04"
+   ],
+   "cam_m0": 16.5163,
+   "out0": 18144
+  },
+  {
+   "seg": 12,
+   "take": "R1041",
+   "layout": "B",
+   "chapter": 4,
+   "kind": "fast",
+   "scr_freeze": null,
+   "m0": 18.6363,
+   "speed": 3.8306,
+   "n": 134,
+   "aud": null,
+   "cues": [],
+   "cam_m0": 18.6363,
+   "out0": 18208
+  },
+  {
+   "seg": 12,
+   "take": "R1041",
+   "layout": "B",
+   "chapter": 4,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 35.8163,
+   "speed": 1.0,
+   "n": 211,
+   "aud": [
+    "0159",
+    33.92
+   ],
+   "cues": [
+    "G05",
+    "G06",
+    "G07"
+   ],
+   "cam_m0": 35.8163,
+   "out0": 18342
+  },
+  {
+   "seg": 12,
+   "take": "R1041",
+   "layout": "B",
+   "chapter": 4,
+   "kind": "gap",
+   "scr_freeze": null,
+   "m0": 42.8563,
+   "speed": 1.0,
+   "n": 22,
+   "aud": [
+    "0159",
+    40.959999999999994
+   ],
+   "cues": [],
+   "cam_m0": 42.8563,
+   "out0": 18553
+  },
+  {
+   "seg": 12,
+   "take": "R1041",
+   "layout": "B",
+   "chapter": 4,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 43.6463,
+   "speed": 1.0,
+   "n": 60,
+   "aud": [
+    "0159",
+    41.75
+   ],
+   "cues": [
+    "G08",
+    "G09"
+   ],
+   "cam_m0": 43.6463,
+   "out0": 18575
+  },
+  {
+   "seg": 12,
+   "take": "R1041",
+   "layout": "B",
+   "chapter": 4,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 45.6363,
+   "speed": 1.0,
+   "n": 11,
+   "aud": [
+    "0159",
+    43.739999999999995
+   ],
+   "cues": [],
+   "cam_m0": 45.6363,
+   "out0": 18635
+  },
+  {
+   "seg": 12,
+   "take": "R1041",
+   "layout": "B",
+   "chapter": 4,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 45.9963,
+   "speed": 1.0,
+   "n": 149,
+   "aud": [
+    "0159",
+    44.1
+   ],
+   "cues": [
+    "G09",
+    "G10"
+   ],
+   "cam_m0": 45.9963,
+   "out0": 18646
+  },
+  {
+   "seg": 12,
+   "take": "R1041",
+   "layout": "B",
+   "chapter": 4,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 50.9763,
+   "speed": 1.0,
+   "n": 14,
+   "aud": [
+    "0159",
+    49.08
+   ],
+   "cues": [],
+   "cam_m0": 50.9763,
+   "out0": 18795
+  },
+  {
+   "seg": 12,
+   "take": "R1041",
+   "layout": "B",
+   "chapter": 4,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 51.4563,
+   "speed": 1.0,
+   "n": 40,
+   "aud": [
+    "0159",
+    49.559999999999995
+   ],
+   "cues": [
+    "G10"
+   ],
+   "cam_m0": 51.4563,
+   "out0": 18809
+  },
+  {
+   "seg": 12,
+   "take": "R1041",
+   "layout": "B",
+   "chapter": 4,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 52.7863,
+   "speed": 1.0,
+   "n": 11,
+   "aud": [
+    "0159",
+    50.89
+   ],
+   "cues": [],
+   "cam_m0": 52.7863,
+   "out0": 18849
+  },
+  {
+   "seg": 12,
+   "take": "R1041",
+   "layout": "B",
+   "chapter": 4,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 53.1463,
+   "speed": 1.0,
+   "n": 29,
+   "aud": [
+    "0159",
+    51.25
+   ],
+   "cues": [
+    "G10"
+   ],
+   "cam_m0": 53.1463,
+   "out0": 18860
+  },
+  {
+   "seg": 12,
+   "take": "R1041",
+   "layout": "B",
+   "chapter": 4,
+   "kind": "gap",
+   "scr_freeze": null,
+   "m0": 54.1063,
+   "speed": 1.0,
+   "n": 18,
+   "aud": [
+    "0159",
+    52.209999999999994
+   ],
+   "cues": [],
+   "cam_m0": 54.1063,
+   "out0": 18889
+  },
+  {
+   "seg": 12,
+   "take": "R1041",
+   "layout": "B",
+   "chapter": 4,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 54.7663,
+   "speed": 1.0,
+   "n": 141,
+   "aud": [
+    "0159",
+    52.87
+   ],
+   "cues": [
+    "G10",
+    "G11"
+   ],
+   "cam_m0": 54.7663,
+   "out0": 18907
+  },
+  {
+   "seg": 12,
+   "take": "R1041",
+   "layout": "B",
+   "chapter": 4,
+   "kind": "gap",
+   "scr_freeze": null,
+   "m0": 59.4663,
+   "speed": 1.0,
+   "n": 31,
+   "aud": [
+    "0159",
+    57.56999999999999
+   ],
+   "cues": [],
+   "cam_m0": 59.4663,
+   "out0": 19048
+  },
+  {
+   "seg": 12,
+   "take": "R1041",
+   "layout": "B",
+   "chapter": 4,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 60.5463,
+   "speed": 1.0,
+   "n": 22,
+   "aud": [
+    "0159",
+    58.65
+   ],
+   "cues": [
+    "G12"
+   ],
+   "cam_m0": 60.5463,
+   "out0": 19079
+  },
+  {
+   "seg": 12,
+   "take": "R1041",
+   "layout": "B",
+   "chapter": 4,
+   "kind": "gap",
+   "scr_freeze": null,
+   "m0": 61.2863,
+   "speed": 1.0,
+   "n": 18,
+   "aud": [
+    "0159",
+    59.39
+   ],
+   "cues": [],
+   "cam_m0": 61.2863,
+   "out0": 19101
+  },
+  {
+   "seg": 12,
+   "take": "R1041",
+   "layout": "B",
+   "chapter": 4,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 61.9763,
+   "speed": 1.0,
+   "n": 32,
+   "aud": [
+    "0159",
+    60.08
+   ],
+   "cues": [
+    "G12"
+   ],
+   "cam_m0": 61.9763,
+   "out0": 19119
+  },
+  {
+   "seg": 12,
+   "take": "R1041",
+   "layout": "B",
+   "chapter": 4,
+   "kind": "gap",
+   "scr_freeze": null,
+   "m0": 63.0563,
+   "speed": 1.0,
+   "n": 4,
+   "aud": [
+    "0159",
+    61.16
+   ],
+   "cues": [],
+   "cam_m0": 63.0563,
+   "out0": 19151
+  },
+  {
+   "seg": 12,
+   "take": "R1041",
+   "layout": "B",
+   "chapter": 4,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 63.7363,
+   "speed": 1.0,
+   "n": 40,
+   "aud": [
+    "0159",
+    61.839999999999996
+   ],
+   "cues": [
+    "G12"
+   ],
+   "cam_m0": 63.7363,
+   "out0": 19155
+  },
+  {
+   "seg": 12,
+   "take": "R1041",
+   "layout": "B",
+   "chapter": 4,
+   "kind": "tail",
+   "scr_freeze": null,
+   "m0": 65.0763,
+   "speed": 1.0,
+   "n": 18,
+   "aud": [
+    "0159",
+    63.17999999999999
+   ],
+   "cues": [],
+   "cam_m0": 65.0763,
+   "out0": 19195
+  },
+  {
+   "seg": 13,
+   "take": "R1041",
+   "layout": "B",
+   "chapter": 5,
+   "kind": "head",
+   "scr_freeze": null,
+   "m0": 78.0063,
+   "speed": 1.0,
+   "n": 18,
+   "aud": [
+    "0159",
+    76.11000000000001
+   ],
+   "cues": [],
+   "cam_m0": 78.0063,
+   "out0": 19213
+  },
+  {
+   "seg": 13,
+   "take": "R1041",
+   "layout": "B",
+   "chapter": 5,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 78.6063,
+   "speed": 1.0,
+   "n": 8,
+   "aud": [
+    "0159",
+    76.71000000000001
+   ],
+   "cues": [
+    "H01"
+   ],
+   "cam_m0": 78.6063,
+   "out0": 19231
+  },
+  {
+   "seg": 13,
+   "take": "R1041",
+   "layout": "B",
+   "chapter": 5,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 78.8763,
+   "speed": 1.0,
+   "n": 14,
+   "aud": [
+    "0159",
+    76.98
+   ],
+   "cues": [],
+   "cam_m0": 78.8763,
+   "out0": 19239
+  },
+  {
+   "seg": 13,
+   "take": "R1041",
+   "layout": "B",
+   "chapter": 5,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 79.3463,
+   "speed": 1.0,
+   "n": 161,
+   "aud": [
+    "0159",
+    77.45
+   ],
+   "cues": [
+    "H01",
+    "H02"
+   ],
+   "cam_m0": 79.3463,
+   "out0": 19253
+  },
+  {
+   "seg": 13,
+   "take": "R1041",
+   "layout": "B",
+   "chapter": 5,
+   "kind": "fast",
+   "scr_freeze": null,
+   "m0": 84.7263,
+   "speed": 1.8949,
+   "n": 49,
+   "aud": null,
+   "cues": [],
+   "cam_m0": 84.7263,
+   "out0": 19414
+  },
+  {
+   "seg": 13,
+   "take": "R1041",
+   "layout": "B",
+   "chapter": 5,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 87.8963,
+   "speed": 1.0,
+   "n": 22,
+   "aud": [
+    "0159",
+    86.0
+   ],
+   "cues": [
+    "H03"
+   ],
+   "cam_m0": 87.8963,
+   "out0": 19463
+  },
+  {
+   "seg": 13,
+   "take": "R1041",
+   "layout": "B",
+   "chapter": 5,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 88.6463,
+   "speed": 1.0,
+   "n": 15,
+   "aud": [
+    "0159",
+    86.75
+   ],
+   "cues": [],
+   "cam_m0": 88.6463,
+   "out0": 19485
+  },
+  {
+   "seg": 13,
+   "take": "R1041",
+   "layout": "B",
+   "chapter": 5,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 89.1563,
+   "speed": 1.0,
+   "n": 111,
+   "aud": [
+    "0159",
+    87.26
+   ],
+   "cues": [
+    "H03"
+   ],
+   "cam_m0": 89.1563,
+   "out0": 19500
+  },
+  {
+   "seg": 13,
+   "take": "R1041",
+   "layout": "B",
+   "chapter": 5,
+   "kind": "gap",
+   "scr_freeze": null,
+   "m0": 92.8663,
+   "speed": 1.0,
+   "n": 28,
+   "aud": [
+    "0159",
+    90.97
+   ],
+   "cues": [],
+   "cam_m0": 92.8663,
+   "out0": 19611
+  },
+  {
+   "seg": 13,
+   "take": "R1041",
+   "layout": "B",
+   "chapter": 5,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 93.8263,
+   "speed": 1.0,
+   "n": 138,
+   "aud": [
+    "0159",
+    91.93
+   ],
+   "cues": [
+    "H04",
+    "H05"
+   ],
+   "cam_m0": 93.8263,
+   "out0": 19639
+  },
+  {
+   "seg": 13,
+   "take": "R1041",
+   "layout": "B",
+   "chapter": 5,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 98.4163,
+   "speed": 1.0,
+   "n": 12,
+   "aud": [
+    "0159",
+    96.52
+   ],
+   "cues": [],
+   "cam_m0": 98.4163,
+   "out0": 19777
+  },
+  {
+   "seg": 13,
+   "take": "R1041",
+   "layout": "B",
+   "chapter": 5,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 98.8063,
+   "speed": 1.0,
+   "n": 145,
+   "aud": [
+    "0159",
+    96.91000000000001
+   ],
+   "cues": [
+    "H05"
+   ],
+   "cam_m0": 98.8063,
+   "out0": 19789
+  },
+  {
+   "seg": 13,
+   "take": "R1041",
+   "layout": "B",
+   "chapter": 5,
+   "kind": "gap",
+   "scr_freeze": null,
+   "m0": 103.6563,
+   "speed": 1.0,
+   "n": 40,
+   "aud": [
+    "0159",
+    101.76
+   ],
+   "cues": [],
+   "cam_m0": 103.6563,
+   "out0": 19934
+  },
+  {
+   "seg": 13,
+   "take": "R1041",
+   "layout": "B",
+   "chapter": 5,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 105.0063,
+   "speed": 1.0,
+   "n": 26,
+   "aud": [
+    "0159",
+    103.11
+   ],
+   "cues": [
+    "H06"
+   ],
+   "cam_m0": 105.0063,
+   "out0": 19974
+  },
+  {
+   "seg": 13,
+   "take": "R1041",
+   "layout": "B",
+   "chapter": 5,
+   "kind": "gap",
+   "scr_freeze": null,
+   "m0": 105.8763,
+   "speed": 1.0,
+   "n": 40,
+   "aud": [
+    "0159",
+    103.98
+   ],
+   "cues": [],
+   "cam_m0": 105.8763,
+   "out0": 20000
+  },
+  {
+   "seg": 13,
+   "take": "R1041",
+   "layout": "B",
+   "chapter": 5,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 107.2363,
+   "speed": 1.0,
+   "n": 96,
+   "aud": [
+    "0159",
+    105.34
+   ],
+   "cues": [
+    "H06"
+   ],
+   "cam_m0": 107.2363,
+   "out0": 20040
+  },
+  {
+   "seg": 13,
+   "take": "R1041",
+   "layout": "B",
+   "chapter": 5,
+   "kind": "fast",
+   "scr_freeze": null,
+   "m0": 158.6,
+   "speed": 2.3404,
+   "n": 70,
+   "aud": null,
+   "cues": [],
+   "cam_m0": 158.6,
+   "out0": 20136
+  },
+  {
+   "seg": 13,
+   "take": "R1041",
+   "layout": "B",
+   "chapter": 5,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 164.1584,
+   "speed": 1.0,
+   "n": 65,
+   "aud": [
+    "0160",
+    0.66
+   ],
+   "cues": [
+    "H07"
+   ],
+   "cam_m0": 164.1584,
+   "out0": 20206
+  },
+  {
+   "seg": 13,
+   "take": "R1041",
+   "layout": "B",
+   "chapter": 5,
+   "kind": "gap",
+   "scr_freeze": null,
+   "m0": 166.3384,
+   "speed": 1.0,
+   "n": 35,
+   "aud": [
+    "0160",
+    2.8400000000000034
+   ],
+   "cues": [],
+   "cam_m0": 166.3384,
+   "out0": 20271
+  },
+  {
+   "seg": 13,
+   "take": "R1041",
+   "layout": "B",
+   "chapter": 5,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 167.5184,
+   "speed": 1.0,
+   "n": 50,
+   "aud": [
+    "0160",
+    4.0200000000000005
+   ],
+   "cues": [
+    "H08"
+   ],
+   "cam_m0": 167.5184,
+   "out0": 20306
+  },
+  {
+   "seg": 13,
+   "take": "R1041",
+   "layout": "B",
+   "chapter": 5,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 169.1884,
+   "speed": 1.0,
+   "n": 8,
+   "aud": null,
+   "cues": [],
+   "cam_m0": 169.1884,
+   "out0": 20356
+  },
+  {
+   "seg": 13,
+   "take": "R1041",
+   "layout": "B",
+   "chapter": 5,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 170.7784,
+   "speed": 1.0,
+   "n": 43,
+   "aud": [
+    "0160",
+    7.28
+   ],
+   "cues": [
+    "H08"
+   ],
+   "cam_m0": 170.7784,
+   "out0": 20364
+  },
+  {
+   "seg": 13,
+   "take": "R1041",
+   "layout": "B",
+   "chapter": 5,
+   "kind": "fast",
+   "scr_freeze": null,
+   "m0": 172.2084,
+   "speed": 1.4924,
+   "n": 38,
+   "aud": null,
+   "cues": [],
+   "cam_m0": 172.2084,
+   "out0": 20407
+  },
+  {
+   "seg": 13,
+   "take": "R1041",
+   "layout": "B",
+   "chapter": 5,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 174.1884,
+   "speed": 1.0,
+   "n": 136,
+   "aud": [
+    "0160",
+    10.69
+   ],
+   "cues": [
+    "H09",
+    "H10"
+   ],
+   "cam_m0": 174.1884,
+   "out0": 20445
+  },
+  {
+   "seg": 13,
+   "take": "R1041",
+   "layout": "B",
+   "chapter": 5,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 178.7084,
+   "speed": 1.0,
+   "n": 18,
+   "aud": [
+    "0160",
+    15.210000000000008
+   ],
+   "cues": [],
+   "cam_m0": 178.7084,
+   "out0": 20581
+  },
+  {
+   "seg": 13,
+   "take": "R1041",
+   "layout": "B",
+   "chapter": 5,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 179.3184,
+   "speed": 1.0,
+   "n": 162,
+   "aud": [
+    "0160",
+    15.82
+   ],
+   "cues": [
+    "H10",
+    "H11"
+   ],
+   "cam_m0": 179.3184,
+   "out0": 20599
+  },
+  {
+   "seg": 13,
+   "take": "R1041",
+   "layout": "B",
+   "chapter": 5,
+   "kind": "tail",
+   "scr_freeze": null,
+   "m0": 184.7284,
+   "speed": 1.0,
+   "n": 24,
+   "aud": [
+    "0160",
+    21.22999999999999
+   ],
+   "cues": [],
+   "cam_m0": 184.7284,
+   "out0": 20761
+  },
+  {
+   "seg": 14,
+   "take": "R1046",
+   "layout": "A",
+   "chapter": 6,
+   "kind": "head",
+   "scr_freeze": null,
+   "m0": 137.6032,
+   "speed": 1.0,
+   "n": 9,
+   "aud": [
+    "0161",
+    142.66
+   ],
+   "cues": [],
+   "cam_m0": 137.6032,
+   "out0": 20785
+  },
+  {
+   "seg": 14,
+   "take": "R1046",
+   "layout": "A",
+   "chapter": 6,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 137.9032,
+   "speed": 1.0,
+   "n": 24,
+   "aud": [
+    "0161",
+    142.96
+   ],
+   "cues": [
+    "E01"
+   ],
+   "cam_m0": 137.9032,
+   "out0": 20794
+  },
+  {
+   "seg": 14,
+   "take": "R1046",
+   "layout": "A",
+   "chapter": 6,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 138.7132,
+   "speed": 1.0,
+   "n": 11,
+   "aud": [
+    "0161",
+    143.76999999999998
+   ],
+   "cues": [],
+   "cam_m0": 138.7132,
+   "out0": 20818
+  },
+  {
+   "seg": 14,
+   "take": "R1046",
+   "layout": "A",
+   "chapter": 6,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 139.0732,
+   "speed": 1.0,
+   "n": 241,
+   "aud": [
+    "0161",
+    144.13
+   ],
+   "cues": [
+    "E01",
+    "E02"
+   ],
+   "cam_m0": 139.0732,
+   "out0": 20829
+  },
+  {
+   "seg": 14,
+   "take": "R1046",
+   "layout": "A",
+   "chapter": 6,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 147.1232,
+   "speed": 1.0,
+   "n": 11,
+   "aud": [
+    "0161",
+    152.17999999999998
+   ],
+   "cues": [],
+   "cam_m0": 147.1232,
+   "out0": 21070
+  },
+  {
+   "seg": 14,
+   "take": "R1046",
+   "layout": "A",
+   "chapter": 6,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 147.5032,
+   "speed": 1.0,
+   "n": 215,
+   "aud": [
+    "0161",
+    152.56
+   ],
+   "cues": [
+    "E03",
+    "E04"
+   ],
+   "cam_m0": 147.5032,
+   "out0": 21081
+  },
+  {
+   "seg": 14,
+   "take": "R1046",
+   "layout": "A",
+   "chapter": 6,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 155.6032,
+   "speed": 1.0,
+   "n": 9,
+   "aud": [
+    "0161",
+    160.66
+   ],
+   "cues": [],
+   "cam_m0": 155.6032,
+   "out0": 21296
+  },
+  {
+   "seg": 14,
+   "take": "R1046",
+   "layout": "A",
+   "chapter": 6,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 156.8632,
+   "speed": 1.0,
+   "n": 254,
+   "aud": [
+    "0161",
+    161.92000000000002
+   ],
+   "cues": [
+    "E05",
+    "E06",
+    "E07"
+   ],
+   "cam_m0": 156.8632,
+   "out0": 21305
+  },
+  {
+   "seg": 14,
+   "take": "R1046",
+   "layout": "A",
+   "chapter": 6,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 166.1032,
+   "speed": 1.0,
+   "n": 9,
+   "aud": [
+    "0161",
+    171.16
+   ],
+   "cues": [],
+   "cam_m0": 166.1032,
+   "out0": 21559
+  },
+  {
+   "seg": 14,
+   "take": "R1046",
+   "layout": "A",
+   "chapter": 6,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 166.5232,
+   "speed": 1.0,
+   "n": 102,
+   "aud": [
+    "0161",
+    171.58
+   ],
+   "cues": [
+    "E08"
+   ],
+   "cam_m0": 166.5232,
+   "out0": 21568
+  },
+  {
+   "seg": 14,
+   "take": "R1046",
+   "layout": "A",
+   "chapter": 6,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 171.1832,
+   "speed": 1.0,
+   "n": 9,
+   "aud": [
+    "0161",
+    176.24
+   ],
+   "cues": [],
+   "cam_m0": 171.1832,
+   "out0": 21670
+  },
+  {
+   "seg": 14,
+   "take": "R1046",
+   "layout": "A",
+   "chapter": 6,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 173.4882,
+   "speed": 1.0,
+   "n": 96,
+   "aud": [
+    "0161",
+    178.545
+   ],
+   "cues": [
+    "E09"
+   ],
+   "cam_m0": 173.4882,
+   "out0": 21679
+  },
+  {
+   "seg": 14,
+   "take": "R1046",
+   "layout": "A",
+   "chapter": 6,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 178.0732,
+   "speed": 1.0,
+   "n": 9,
+   "aud": [
+    "0161",
+    183.13
+   ],
+   "cues": [],
+   "cam_m0": 178.0732,
+   "out0": 21775
+  },
+  {
+   "seg": 14,
+   "take": "R1046",
+   "layout": "A",
+   "chapter": 6,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 178.7232,
+   "speed": 1.0,
+   "n": 132,
+   "aud": [
+    "0161",
+    183.78
+   ],
+   "cues": [
+    "E10"
+   ],
+   "cam_m0": 178.7232,
+   "out0": 21784
+  },
+  {
+   "seg": 14,
+   "take": "R1046",
+   "layout": "A",
+   "chapter": 6,
+   "kind": "pause",
+   "scr_freeze": null,
+   "m0": 184.0932,
+   "speed": 1.0,
+   "n": 9,
+   "aud": [
+    "0161",
+    189.15
+   ],
+   "cues": [],
+   "cam_m0": 184.0932,
+   "out0": 21916
+  },
+  {
+   "seg": 14,
+   "take": "R1046",
+   "layout": "A",
+   "chapter": 6,
+   "kind": "speech",
+   "scr_freeze": null,
+   "m0": 185.9832,
+   "speed": 1.0,
+   "n": 43,
+   "aud": [
+    "0161",
+    191.04
+   ],
+   "cues": [
+    "E11"
+   ],
+   "cam_m0": 185.9832,
+   "out0": 21925
+  },
+  {
+   "seg": 14,
+   "take": "R1046",
+   "layout": "A",
+   "chapter": 6,
+   "kind": "tail",
+   "scr_freeze": null,
+   "m0": 187.4332,
+   "speed": 1.0,
+   "n": 30,
+   "aud": [
+    "0161",
+    192.48999999999998
+   ],
+   "cues": [],
+   "cam_m0": 187.4332,
+   "out0": 21968
+  }
+ ],
+ "cues": [
+  {
+   "id": "O01",
+   "zh": "Hello，大家好，我是悠一。",
+   "seg": 0,
+   "out_s": 0.4,
+   "out_e": 1.26
+  },
+  {
+   "id": "O02",
+   "zh": "今天想给大家带来一个从 0 到 1，用 AI 工具，",
+   "seg": 0,
+   "out_s": 1.5,
+   "out_e": 5.22
+  },
+  {
+   "id": "O03",
+   "zh": "或者说 WorkBuddy，上线一个微信小程序。",
+   "seg": 0,
+   "out_s": 5.38,
+   "out_e": 9.057
+  },
+  {
+   "id": "O04",
+   "zh": "我用 WorkBuddy 是因为发现很多朋友，",
+   "seg": 0,
+   "out_s": 9.247,
+   "out_e": 11.687
+  },
+  {
+   "id": "O05",
+   "zh": "他并不知道怎么去使用和下载 Codex 和 Claude Code。",
+   "seg": 0,
+   "out_s": 11.907,
+   "out_e": 15.657
+  },
+  {
+   "id": "O06",
+   "zh": "所以我用了国内现在比较火的 WorkBuddy 来做，",
+   "seg": 0,
+   "out_s": 16.067,
+   "out_e": 18.557
+  },
+  {
+   "id": "O07",
+   "zh": "而且 WorkBuddy 它提供了很多免费的额度。",
+   "seg": 0,
+   "out_s": 19.027,
+   "out_e": 21.057
+  },
+  {
+   "id": "O08",
+   "zh": "用 WorkBuddy 去做一个小程序，其实门槛很低。",
+   "seg": 0,
+   "out_s": 21.633,
+   "out_e": 24.023
+  },
+  {
+   "id": "O09",
+   "zh": "我们只需要知道，小程序它也是一个像 App 一样的应用程序，",
+   "seg": 0,
+   "out_s": 24.283,
+   "out_e": 28.655
+  },
+  {
+   "id": "O10",
+   "zh": "它有前端、后端和数据库。",
+   "seg": 0,
+   "out_s": 28.845,
+   "out_e": 30.545
+  },
+  {
+   "id": "O11",
+   "zh": "一个应用程序，如果别人想要使用的话，",
+   "seg": 0,
+   "out_s": 31.133,
+   "out_e": 33.013
+  },
+  {
+   "id": "O12",
+   "zh": "那它的数据库以及它的东西，都是要上云的。",
+   "seg": 0,
+   "out_s": 33.233,
+   "out_e": 36.433
+  },
+  {
+   "id": "O13",
+   "zh": "在开发微信小程序的时候，我们要使用的软件，",
+   "seg": 0,
+   "out_s": 37.173,
+   "out_e": 42.483
+  },
+  {
+   "id": "O14",
+   "zh": "有 WorkBuddy，有微信开发者工具。",
+   "seg": 0,
+   "out_s": 42.723,
+   "out_e": 46.123
+  },
+  {
+   "id": "O15",
+   "zh": "在微信开发者工具里，如果你想要使用云环境的话，",
+   "seg": 0,
+   "out_s": 46.943,
+   "out_e": 50.023
+  },
+  {
+   "id": "O16",
+   "zh": "你就要先去注册 AppID，",
+   "seg": 0,
+   "out_s": 50.233,
+   "out_e": 51.683
+  },
+  {
+   "id": "O17",
+   "zh": "然后就可以去在设置里面，去选择云环境，",
+   "seg": 0,
+   "out_s": 52.433,
+   "out_e": 57.483
+  },
+  {
+   "id": "O18",
+   "zh": "就可以看到你创建的一些后端的函数，以及数据库的集合。",
+   "seg": 0,
+   "out_s": 57.723,
+   "out_e": 64.427
+  },
+  {
+   "id": "O41",
+   "zh": "那我们下面就给大家带来，两种不同微信小程序的一个实操：",
+   "seg": 1,
+   "out_s": 65.767,
+   "out_e": 71.83
+  },
+  {
+   "id": "O42",
+   "zh": "一个是本地部署的一个项目，",
+   "seg": 1,
+   "out_s": 72.77,
+   "out_e": 76.227
+  },
+  {
+   "id": "O43",
+   "zh": "还有一个是我开发到现在，上了云环境的一个项目，",
+   "seg": 1,
+   "out_s": 76.407,
+   "out_e": 80.547
+  },
+  {
+   "id": "O44",
+   "zh": "两个都给大家介绍一下。",
+   "seg": 1,
+   "out_s": 80.767,
+   "out_e": 81.867
+  },
+  {
+   "id": "O45",
+   "zh": "相信大家会或多或少有一些了解。",
+   "seg": 1,
+   "out_s": 82.667,
+   "out_e": 87.14
+  },
+  {
+   "id": "V01",
+   "zh": "先说明一下：我的实名认证已经注册过很多个小程序了，",
+   "seg": 2,
+   "out_s": 87.95,
+   "out_e": 91.407
+  },
+  {
+   "id": "V02",
+   "zh": "没办法再新建 AppID。",
+   "seg": 2,
+   "out_s": 91.427,
+   "out_e": 92.807
+  },
+  {
+   "id": "V03",
+   "zh": "所以本地这个例子用的是测试号，",
+   "seg": 2,
+   "out_s": 92.867,
+   "out_e": 94.827
+  },
+  {
+   "id": "V04",
+   "zh": "没法带大家一起上线，非常抱歉。",
+   "seg": 2,
+   "out_s": 94.847,
+   "out_e": 96.747
+  },
+  {
+   "id": "V06",
+   "zh": "下面有两个步骤，是你在开发之前需要打开的。",
+   "seg": 3,
+   "out_s": 97.3,
+   "out_e": 100.6
+  },
+  {
+   "id": "O20",
+   "zh": "微信开发者工具里面的设置，里面的安全设置里面，",
+   "seg": 4,
+   "out_s": 101.2,
+   "out_e": 105.4
+  },
+  {
+   "id": "O21",
+   "zh": "你可以去打开它的服务端口和 CLI 访问令牌，",
+   "seg": 4,
+   "out_s": 105.84,
+   "out_e": 110.06
+  },
+  {
+   "id": "O22",
+   "zh": "还有 MCP 配置。",
+   "seg": 4,
+   "out_s": 110.9,
+   "out_e": 111.64
+  },
+  {
+   "id": "O23",
+   "zh": "因为现在微信开发者工具，它是支持用 AI 工具去调用的。",
+   "seg": 4,
+   "out_s": 111.88,
+   "out_e": 116.503
+  },
+  {
+   "id": "O24",
+   "zh": "如果你打开了这样一个设置的话，",
+   "seg": 4,
+   "out_s": 116.763,
+   "out_e": 119.033
+  },
+  {
+   "id": "O25",
+   "zh": "你就不用去把它的页面挂到屏幕上，",
+   "seg": 4,
+   "out_s": 119.273,
+   "out_e": 123.113
+  },
+  {
+   "id": "O26",
+   "zh": "AI 它会自己去调试，能看到它。",
+   "seg": 4,
+   "out_s": 123.867,
+   "out_e": 126.81
+  },
+  {
+   "id": "O27",
+   "zh": "AI 它自己写完前端，自己可以截图，",
+   "seg": 4,
+   "out_s": 127.07,
+   "out_e": 129.57
+  },
+  {
+   "id": "O28",
+   "zh": "自己能看到写的这个小程序的界面是什么样子的，",
+   "seg": 4,
+   "out_s": 129.79,
+   "out_e": 133.56
+  },
+  {
+   "id": "O29",
+   "zh": "或者小程序在运行的时候报错了，",
+   "seg": 4,
+   "out_s": 133.78,
+   "out_e": 135.3
+  },
+  {
+   "id": "O30",
+   "zh": "AI 也能直接通过这样一个 CLI 的工具，",
+   "seg": 4,
+   "out_s": 135.52,
+   "out_e": 139.067
+  },
+  {
+   "id": "O31",
+   "zh": "来拿到微信开发者工具里面的报错。",
+   "seg": 4,
+   "out_s": 139.307,
+   "out_e": 141.447
+  },
+  {
+   "id": "O32",
+   "zh": "等于说开启了这个功能，",
+   "seg": 4,
+   "out_s": 142.3,
+   "out_e": 144.243
+  },
+  {
+   "id": "O33",
+   "zh": "等于在调试的软件和 AI 助手中间，加了一个桥梁，",
+   "seg": 4,
+   "out_s": 144.483,
+   "out_e": 150.54
+  },
+  {
+   "id": "O34",
+   "zh": "还是很方便的。",
+   "seg": 4,
+   "out_s": 151.967,
+   "out_e": 152.667
+  },
+  {
+   "id": "O35",
+   "zh": "而且如果要上云环境的话，就要使用 CloudBase CLI，",
+   "seg": 4,
+   "out_s": 152.887,
+   "out_e": 155.787
+  },
+  {
+   "id": "O36",
+   "zh": "它也是一个 CLI。",
+   "seg": 4,
+   "out_s": 156.037,
+   "out_e": 156.937
+  },
+  {
+   "id": "O37",
+   "zh": "AI 它能够通过这不同的 CLI、不同的工具，",
+   "seg": 4,
+   "out_s": 157.8,
+   "out_e": 159.98
+  },
+  {
+   "id": "O38",
+   "zh": "去获得前端、后端、数据库之间的报错，",
+   "seg": 4,
+   "out_s": 160.22,
+   "out_e": 163.62
+  },
+  {
+   "id": "O39",
+   "zh": "来更方便地去进行联调，",
+   "seg": 4,
+   "out_s": 164.04,
+   "out_e": 165.86
+  },
+  {
+   "id": "O40",
+   "zh": "来极大程度地解放人的这个想象力和自主性。",
+   "seg": 4,
+   "out_s": 166.887,
+   "out_e": 171.533
+  },
+  {
+   "id": "V07",
+   "zh": "当我们把微信开发者助手 CLI 和 CloudBase CLI 打开后，",
+   "seg": 5,
+   "out_s": 172.9,
+   "out_e": 176.6
+  },
+  {
+   "id": "V08",
+   "zh": "你就可以询问 AI，看看它是否能够使用。",
+   "seg": 5,
+   "out_s": 176.7,
+   "out_e": 179.5
+  },
+  {
+   "id": "T02",
+   "zh": "比如说我这里就可以问：",
+   "seg": 6,
+   "out_s": 180.087,
+   "out_e": 181.227
+  },
+  {
+   "id": "T03",
+   "zh": "“你可以使用微信开发助手 CLI 吗？”",
+   "seg": 6,
+   "out_s": 183.733,
+   "out_e": 190.333
+  },
+  {
+   "id": "T04",
+   "zh": "还有，比如说我们如果配置了云端的环境的话，",
+   "seg": 6,
+   "out_s": 192.0,
+   "out_e": 195.38
+  },
+  {
+   "id": "T05",
+   "zh": "我们就可以安装 CloudBase CLI。",
+   "seg": 6,
+   "out_s": 195.58,
+   "out_e": 197.46
+  },
+  {
+   "id": "T06",
+   "zh": "CLI 是什么？我在上期视频中有说过，",
+   "seg": 6,
+   "out_s": 198.0,
+   "out_e": 200.15
+  },
+  {
+   "id": "T07",
+   "zh": "CLI 是一个能够让 AI 调用的一个工具，可以这么理解。",
+   "seg": 6,
+   "out_s": 200.39,
+   "out_e": 203.95
+  },
+  {
+   "id": "T08",
+   "zh": "比如说我这里就可以问它：",
+   "seg": 6,
+   "out_s": 204.19,
+   "out_e": 206.04
+  },
+  {
+   "id": "T09",
+   "zh": "“你可以通过 CloudBase CLI，",
+   "seg": 6,
+   "out_s": 207.467,
+   "out_e": 212.335
+  },
+  {
+   "id": "T10",
+   "zh": "查看当前数据库的字段以及云函数吗？”",
+   "seg": 6,
+   "out_s": 212.355,
+   "out_e": 219.155
+  },
+  {
+   "id": "T11",
+   "zh": "如果想要用微信开发者工具 CLI 的话，",
+   "seg": 6,
+   "out_s": 222.0,
+   "out_e": 224.98
+  },
+  {
+   "id": "T12",
+   "zh": "我们需要在设置这里，",
+   "seg": 6,
+   "out_s": 225.2,
+   "out_e": 234.487
+  },
+  {
+   "id": "T13",
+   "zh": "要打开这里的安全设置，这里有一个服务端口 35324。",
+   "seg": 6,
+   "out_s": 238.307,
+   "out_e": 241.887
+  },
+  {
+   "id": "T14",
+   "zh": "打开之后这里就会说：“工具的服务端口已开启，",
+   "seg": 6,
+   "out_s": 242.387,
+   "out_e": 244.967
+  },
+  {
+   "id": "T15",
+   "zh": "命令行和 HTTP 均可调用工具”。",
+   "seg": 6,
+   "out_s": 245.207,
+   "out_e": 247.227
+  },
+  {
+   "id": "T16",
+   "zh": "这样它就变成了一个 AI 能够调用的工具。",
+   "seg": 6,
+   "out_s": 247.727,
+   "out_e": 250.487
+  },
+  {
+   "id": "T17",
+   "zh": "这样每次编译小程序的时候，就不用我们自己去看，",
+   "seg": 6,
+   "out_s": 250.707,
+   "out_e": 253.707
+  },
+  {
+   "id": "T18",
+   "zh": "AI 它就能看到到底哪里有报错，就可以了。",
+   "seg": 6,
+   "out_s": 253.947,
+   "out_e": 256.797
+  },
+  {
+   "id": "T19",
+   "zh": "而且微信开发者工具，它是可以去上传版本的。",
+   "seg": 6,
+   "out_s": 258.0,
+   "out_e": 261.57
+  },
+  {
+   "id": "T20",
+   "zh": "就是当前这个程序会分：",
+   "seg": 6,
+   "out_s": 261.85,
+   "out_e": 264.47
+  },
+  {
+   "id": "T21",
+   "zh": "比如说开发版、内测版以及公开版，",
+   "seg": 6,
+   "out_s": 265.527,
+   "out_e": 268.487
+  },
+  {
+   "id": "T22",
+   "zh": "这些我们都可以通过自然语言，在跟 AI 聊天去告诉它，",
+   "seg": 6,
+   "out_s": 268.707,
+   "out_e": 272.667
+  },
+  {
+   "id": "T23",
+   "zh": "然后它就会帮我们推到微信公众平台上面的版本，",
+   "seg": 6,
+   "out_s": 272.907,
+   "out_e": 277.147
+  },
+  {
+   "id": "T24",
+   "zh": "然后我们在微信公众平台去进行版本的选择，",
+   "seg": 6,
+   "out_s": 277.367,
+   "out_e": 281.047
+  },
+  {
+   "id": "T25",
+   "zh": "以及发布就可以了。",
+   "seg": 6,
+   "out_s": 281.267,
+   "out_e": 282.207
+  },
+  {
+   "id": "T26",
+   "zh": "这里的 CloudBase CLI，",
+   "seg": 6,
+   "out_s": 284.067,
+   "out_e": 286.283
+  },
+  {
+   "id": "T26b",
+   "zh": "也是可以看到数据库相关的内容的，",
+   "seg": 6,
+   "out_s": 286.523,
+   "out_e": 288.203
+  },
+  {
+   "id": "T27",
+   "zh": "这里的集合，它也是可以打印出来的。",
+   "seg": 6,
+   "out_s": 288.443,
+   "out_e": 290.913
+  },
+  {
+   "id": "B01",
+   "zh": "在我们正式开发微信小程序之前，",
+   "seg": 7,
+   "out_s": 292.067,
+   "out_e": 294.507
+  },
+  {
+   "id": "B02",
+   "zh": "我们需要准备两个软件。",
+   "seg": 7,
+   "out_s": 294.687,
+   "out_e": 296.127
+  },
+  {
+   "id": "B03",
+   "zh": "第一个就是腾讯的 WorkBuddy，",
+   "seg": 7,
+   "out_s": 296.407,
+   "out_e": 297.907
+  },
+  {
+   "id": "B04",
+   "zh": "去进入它的官网之后，点击下载。",
+   "seg": 7,
+   "out_s": 298.567,
+   "out_e": 300.897
+  },
+  {
+   "id": "B05",
+   "zh": "因为我已经下载过了，我就不重复下载了。",
+   "seg": 7,
+   "out_s": 301.117,
+   "out_e": 302.897
+  },
+  {
+   "id": "B06",
+   "zh": "然后也是不需要去付费的，",
+   "seg": 7,
+   "out_s": 303.437,
+   "out_e": 304.837
+  },
+  {
+   "id": "B07",
+   "zh": "因为当前的混元 4 模型和 DeepSeek V4.1，",
+   "seg": 7,
+   "out_s": 305.057,
+   "out_e": 307.637
+  },
+  {
+   "id": "B07b",
+   "zh": "它都是免费使用的，",
+   "seg": 7,
+   "out_s": 307.877,
+   "out_e": 308.897
+  },
+  {
+   "id": "B08",
+   "zh": "这个对于我们来讲已经完全够了。",
+   "seg": 7,
+   "out_s": 309.71,
+   "out_e": 311.45
+  },
+  {
+   "id": "B09",
+   "zh": "第二个就是微信小程序开发使用到的微信开发者工具，",
+   "seg": 7,
+   "out_s": 311.85,
+   "out_e": 315.03
+  },
+  {
+   "id": "B10",
+   "zh": "去搜索开发者工具之后，去下载对应的版本即可。",
+   "seg": 7,
+   "out_s": 315.733,
+   "out_e": 319.837
+  },
+  {
+   "id": "B11",
+   "zh": "然后本地运行，因为我是 Windows，我已经下载好了。",
+   "seg": 7,
+   "out_s": 320.7,
+   "out_e": 323.25
+  },
+  {
+   "id": "A01",
+   "zh": "我们在跳转到小程序 AppID 注册的时候，",
+   "seg": 8,
+   "out_s": 325.133,
+   "out_e": 328.203
+  },
+  {
+   "id": "A02",
+   "zh": "这里去填写你的邮箱，然后点击激活邮箱，",
+   "seg": 8,
+   "out_s": 328.883,
+   "out_e": 332.103
+  },
+  {
+   "id": "A03",
+   "zh": "去收你的验证码，设置密码，就可以点击注册。",
+   "seg": 8,
+   "out_s": 332.423,
+   "out_e": 336.027
+  },
+  {
+   "id": "A04",
+   "zh": "这里去登记一下，你需要写的相关的小程序的种类，",
+   "seg": 8,
+   "out_s": 338.167,
+   "out_e": 342.267
+  },
+  {
+   "id": "A05",
+   "zh": "比如说我们今天就写一个游戏，",
+   "seg": 8,
+   "out_s": 344.767,
+   "out_e": 346.097
+  },
+  {
+   "id": "A06",
+   "zh": "其他的话，其实你也可以去修改。",
+   "seg": 8,
+   "out_s": 346.277,
+   "out_e": 350.21
+  },
+  {
+   "id": "A07",
+   "zh": "我这里选个人，如果是企业就可以选择企业，",
+   "seg": 8,
+   "out_s": 352.133,
+   "out_e": 356.153
+  },
+  {
+   "id": "A08",
+   "zh": "你们可以选适合自己的。",
+   "seg": 8,
+   "out_s": 356.393,
+   "out_e": 358.073
+  },
+  {
+   "id": "A09",
+   "zh": "这里是需要真实的实名注册的。",
+   "seg": 8,
+   "out_s": 358.867,
+   "out_e": 360.837
+  },
+  {
+   "id": "A10",
+   "zh": "全部注册完之后，就可以获得一个 AppID。",
+   "seg": 8,
+   "out_s": 362.767,
+   "out_e": 365.837
+  },
+  {
+   "id": "C01",
+   "zh": "OK，我们这里注册好 AppID 之后，",
+   "seg": 9,
+   "out_s": 367.677,
+   "out_e": 371.657
+  },
+  {
+   "id": "C02",
+   "zh": "各位可以填在这个地方。",
+   "seg": 9,
+   "out_s": 371.997,
+   "out_e": 374.45
+  },
+  {
+   "id": "C03",
+   "zh": "因为我现在已经注册过了很多个，我已经没有办法注册了，",
+   "seg": 9,
+   "out_s": 375.23,
+   "out_e": 378.65
+  },
+  {
+   "id": "C04",
+   "zh": "然后我这里就先使用测试号。",
+   "seg": 9,
+   "out_s": 379.4,
+   "out_e": 380.76
+  },
+  {
+   "id": "C05",
+   "zh": "使用测试号的时候，是没有办法使用云服务的，",
+   "seg": 9,
+   "out_s": 381.0,
+   "out_e": 383.66
+  },
+  {
+   "id": "C11",
+   "zh": "所以现在我们先给大家做一个不用云服务的演示。",
+   "seg": 9,
+   "out_s": 384.067,
+   "out_e": 387.103
+  },
+  {
+   "id": "C12",
+   "zh": "然后我们这里点击创建，",
+   "seg": 9,
+   "out_s": 387.9,
+   "out_e": 389.03
+  },
+  {
+   "id": "C13",
+   "zh": "名字其实都可以去修改一下，中文的也可以。",
+   "seg": 9,
+   "out_s": 389.27,
+   "out_e": 395.953
+  },
+  {
+   "id": "C14",
+   "zh": "然后我们把它放到我们对应放代码的地方，",
+   "seg": 9,
+   "out_s": 397.5,
+   "out_e": 401.877
+  },
+  {
+   "id": "C15",
+   "zh": "我们创建一个新的文件夹，叫微信小程序。",
+   "seg": 9,
+   "out_s": 402.117,
+   "out_e": 410.14
+  },
+  {
+   "id": "C16",
+   "zh": "好，我们点击创建。",
+   "seg": 9,
+   "out_s": 412.833,
+   "out_e": 413.663
+  },
+  {
+   "id": "C17",
+   "zh": "这就是一个默认的微信小程序的一个框架。",
+   "seg": 9,
+   "out_s": 415.567,
+   "out_e": 419.173
+  },
+  {
+   "id": "C18",
+   "zh": "然后我们去打开我们的 WorkBuddy，",
+   "seg": 9,
+   "out_s": 419.413,
+   "out_e": 421.053
+  },
+  {
+   "id": "C19",
+   "zh": "新建一个任务，选择一个工作空间，",
+   "seg": 9,
+   "out_s": 423.4,
+   "out_e": 425.61
+  },
+  {
+   "id": "C20",
+   "zh": "打开本地文件夹，打开我们刚刚选择的那个，",
+   "seg": 9,
+   "out_s": 426.01,
+   "out_e": 428.93
+  },
+  {
+   "id": "C21",
+   "zh": "创建的那个新的文件夹。",
+   "seg": 9,
+   "out_s": 429.43,
+   "out_e": 430.92
+  },
+  {
+   "id": "C22",
+   "zh": "这样它修改的代码，就会同步在微信开发者工具里面，",
+   "seg": 9,
+   "out_s": 431.833,
+   "out_e": 435.383
+  },
+  {
+   "id": "C23",
+   "zh": "去同步地编译。",
+   "seg": 9,
+   "out_s": 435.603,
+   "out_e": 437.063
+  },
+  {
+   "id": "C24",
+   "zh": "好，我们选择之后，",
+   "seg": 9,
+   "out_s": 437.933,
+   "out_e": 438.813
+  },
+  {
+   "id": "C25",
+   "zh": "现在它已经打开了。",
+   "seg": 9,
+   "out_s": 441.367,
+   "out_e": 442.447
+  },
+  {
+   "id": "C26",
+   "zh": "因为现在的模型都是免费的，我们可以选一个混元 4 的模型，",
+   "seg": 9,
+   "out_s": 442.687,
+   "out_e": 445.747
+  },
+  {
+   "id": "C27",
+   "zh": "然后输入我们的指令。",
+   "seg": 9,
+   "out_s": 446.247,
+   "out_e": 447.747
+  },
+  {
+   "id": "C28",
+   "zh": "我们的指令是来自于微信公众号里的这一段提示词。",
+   "seg": 9,
+   "out_s": 449.533,
+   "out_e": 453.807
+  },
+  {
+   "id": "C29",
+   "zh": "好，我们发给 AI，然后让它运行就可以。",
+   "seg": 9,
+   "out_s": 454.863,
+   "out_e": 458.163
+  },
+  {
+   "id": "C30",
+   "zh": "我这里虽然说是要做一个有云端数据库存储这样一个任务，",
+   "seg": 9,
+   "out_s": 459.367,
+   "out_e": 465.907
+  },
+  {
+   "id": "C31",
+   "zh": "但是我这里使用的是本地环境，所以它应该是创建不了的。",
+   "seg": 9,
+   "out_s": 466.087,
+   "out_e": 470.787
+  },
+  {
+   "id": "C32",
+   "zh": "所以我们可以看一下它的这个思考过程是怎么样。",
+   "seg": 9,
+   "out_s": 471.027,
+   "out_e": 474.287
+  },
+  {
+   "id": "V05",
+   "zh": "好，它开始写代码了。这一步要等一会儿，我们快进一下。",
+   "seg": 9,
+   "out_s": 474.937,
+   "out_e": 478.323,
+   "vo": true
+  },
+  {
+   "id": "D01",
+   "zh": "好，我们发现它已经全部写完了。",
+   "seg": 10,
+   "out_s": 483.633,
+   "out_e": 486.403
+  },
+  {
+   "id": "D02",
+   "zh": "它是做了五个页面、三个组件。",
+   "seg": 10,
+   "out_s": 489.167,
+   "out_e": 491.107
+  },
+  {
+   "id": "D03",
+   "zh": "然后我们可以发现，左侧这里呢，",
+   "seg": 10,
+   "out_s": 491.347,
+   "out_e": 493.307
+  },
+  {
+   "id": "D04",
+   "zh": "小程序报错了，没有办法展示。",
+   "seg": 10,
+   "out_s": 493.747,
+   "out_e": 496.027
+  },
+  {
+   "id": "D05",
+   "zh": "我们就点击这里的小扫把，全部清除，",
+   "seg": 10,
+   "out_s": 496.567,
+   "out_e": 499.893
+  },
+  {
+   "id": "D06",
+   "zh": "然后点击这个刷新加号，重新编译。",
+   "seg": 10,
+   "out_s": 500.7,
+   "out_e": 503.2
+  },
+  {
+   "id": "D07",
+   "zh": "这里它会自己编译。",
+   "seg": 10,
+   "out_s": 505.457,
+   "out_e": 506.997
+  },
+  {
+   "id": "D08",
+   "zh": "如果有报错的话，我们发给 AI 就可以了，",
+   "seg": 10,
+   "out_s": 508.3,
+   "out_e": 509.99
+  },
+  {
+   "id": "D09",
+   "zh": "因为现在 AI 确实非常的厉害，非常方便。",
+   "seg": 10,
+   "out_s": 510.23,
+   "out_e": 512.35
+  },
+  {
+   "id": "D10",
+   "zh": "好，它这里还是报错，我们就截图告诉它：",
+   "seg": 10,
+   "out_s": 514.5,
+   "out_e": 518.5
+  },
+  {
+   "id": "D11",
+   "zh": "“当前四个页面都是白屏，无法显示内容”。",
+   "seg": 10,
+   "out_s": 519.967,
+   "out_e": 528.337
+  },
+  {
+   "id": "D12",
+   "zh": "然后我这里换了一下 DeepSeek V4.1 这个模型，",
+   "seg": 10,
+   "out_s": 529.733,
+   "out_e": 532.493
+  },
+  {
+   "id": "D13",
+   "zh": "因为发现混元的模型，好像有点点笨。",
+   "seg": 10,
+   "out_s": 532.733,
+   "out_e": 535.425
+  },
+  {
+   "id": "D14",
+   "zh": "然后我们等它修一遍，再来看一下结果。",
+   "seg": 10,
+   "out_s": 537.267,
+   "out_e": 541.247
+  },
+  {
+   "id": "F01",
+   "zh": "OK，这里它又写好了，",
+   "seg": 11,
+   "out_s": 546.857,
+   "out_e": 548.477
+  },
+  {
+   "id": "F02",
+   "zh": "我们再重新去清除它的代码，重新编译一下。",
+   "seg": 11,
+   "out_s": 548.657,
+   "out_e": 555.347
+  },
+  {
+   "id": "F03",
+   "zh": "这里还是报错，",
+   "seg": 11,
+   "out_s": 560.44,
+   "out_e": 561.34
+  },
+  {
+   "id": "F04",
+   "zh": "我们就去调试器这里，复制代码报错发给它。",
+   "seg": 11,
+   "out_s": 561.56,
+   "out_e": 564.94
+  },
+  {
+   "id": "F05",
+   "zh": "其实还是模型的问题了，",
+   "seg": 11,
+   "out_s": 568.007,
+   "out_e": 569.287
+  },
+  {
+   "id": "F06",
+   "zh": "如果模型能力更强的话，它肯定不会出这么多的报错。",
+   "seg": 11,
+   "out_s": 569.507,
+   "out_e": 573.807
+  },
+  {
+   "id": "F07",
+   "zh": "对，这里就看到了真正的问题是什么。",
+   "seg": 11,
+   "out_s": 578.333,
+   "out_e": 580.503
+  },
+  {
+   "id": "F08",
+   "zh": "我们再稍等一下，等它做完。",
+   "seg": 11,
+   "out_s": 583.467,
+   "out_e": 585.477
+  },
+  {
+   "id": "G01",
+   "zh": "OK，它这里也是终于调试好了，把页面写好了。",
+   "seg": 12,
+   "out_s": 591.3,
+   "out_e": 594.51
+  },
+  {
+   "id": "G02",
+   "zh": "这个是一个前端页面，具体的后端逻辑现在还是跑在本地的，",
+   "seg": 12,
+   "out_s": 595.2,
+   "out_e": 598.84
+  },
+  {
+   "id": "G03",
+   "zh": "因为我并没有上云环境。",
+   "seg": 12,
+   "out_s": 599.0,
+   "out_e": 600.3
+  },
+  {
+   "id": "G04",
+   "zh": "然后如果说朋友上了云环境的话，可以在设置这里去看一下。",
+   "seg": 12,
+   "out_s": 600.82,
+   "out_e": 606.42
+  },
+  {
+   "id": "G05",
+   "zh": "这里有一个云开发，现在没有打开，",
+   "seg": 12,
+   "out_s": 611.5,
+   "out_e": 614.06
+  },
+  {
+   "id": "G06",
+   "zh": "是因为我现在本地并不是云开发的环境，",
+   "seg": 12,
+   "out_s": 614.3,
+   "out_e": 616.26
+  },
+  {
+   "id": "G07",
+   "zh": "等会我们可以去另外一个项目里去看一下。",
+   "seg": 12,
+   "out_s": 616.5,
+   "out_e": 618.28
+  },
+  {
+   "id": "G08",
+   "zh": "OK，这里已经写好了。",
+   "seg": 12,
+   "out_s": 619.267,
+   "out_e": 620.137
+  },
+  {
+   "id": "G09",
+   "zh": "其实现在它的这个微信小程序的前端页面就已经 OK 了，",
+   "seg": 12,
+   "out_s": 621.893,
+   "out_e": 625.233
+  },
+  {
+   "id": "G10",
+   "zh": "然后一些相关的这种页面，其实都已经写好了。",
+   "seg": 12,
+   "out_s": 625.493,
+   "out_e": 631.223
+  },
+  {
+   "id": "G11",
+   "zh": "现在缺的只是后端的能力，和云端数据库的存储能力。",
+   "seg": 12,
+   "out_s": 631.663,
+   "out_e": 634.763
+  },
+  {
+   "id": "G12",
+   "zh": "我们可以看一下另外一个项目。",
+   "seg": 12,
+   "out_s": 636.067,
+   "out_e": 639.68
+  },
+  {
+   "id": "H01",
+   "zh": "在这个项目里面，我们就先不具体地去看运行了，",
+   "seg": 13,
+   "out_s": 641.867,
+   "out_e": 644.737
+  },
+  {
+   "id": "H02",
+   "zh": "我们先看一下它的云开发环境。",
+   "seg": 13,
+   "out_s": 644.977,
+   "out_e": 646.937
+  },
+  {
+   "id": "H03",
+   "zh": "如果用户注册了 AppID，如果选择了云开发的话，",
+   "seg": 13,
+   "out_s": 650.1,
+   "out_e": 653.46
+  },
+  {
+   "id": "H04",
+   "zh": "就可以去腾讯云这边的 CloudBase，去申请一个云服务。",
+   "seg": 13,
+   "out_s": 655.003,
+   "out_e": 659.043
+  },
+  {
+   "id": "H05",
+   "zh": "然后只要跟 AI 说，想要使用云环境开发，",
+   "seg": 13,
+   "out_s": 659.733,
+   "out_e": 664.243
+  },
+  {
+   "id": "H06",
+   "zh": "然后把 CloudBase CLI 去连接本地就可以了。",
+   "seg": 13,
+   "out_s": 665.9,
+   "out_e": 671.03
+  },
+  {
+   "id": "H07",
+   "zh": "比如说我们这里可以看一下这个，",
+   "seg": 13,
+   "out_s": 673.633,
+   "out_e": 675.293
+  },
+  {
+   "id": "H08",
+   "zh": "用了云函数和数据库的这样一个项目，",
+   "seg": 13,
+   "out_s": 676.967,
+   "out_e": 679.94
+  },
+  {
+   "id": "H09",
+   "zh": "可以看到这里是可以看到数据库相关的字段，",
+   "seg": 13,
+   "out_s": 681.6,
+   "out_e": 684.73
+  },
+  {
+   "id": "H10",
+   "zh": "以及我们写的一些后端的云函数。",
+   "seg": 13,
+   "out_s": 685.05,
+   "out_e": 688.233
+  },
+  {
+   "id": "H11",
+   "zh": "云函数其实就是后端的代码，只不过是在云服务上跑的。",
+   "seg": 13,
+   "out_s": 688.633,
+   "out_e": 691.883
+  },
+  {
+   "id": "E01",
+   "zh": "所以现在开发一个小程序，门槛其实是很低的。",
+   "seg": 14,
+   "out_s": 694.4,
+   "out_e": 697.33
+  },
+  {
+   "id": "E02",
+   "zh": "你只要了解到有哪些工具，然后怎么去用这些工具就可以了，",
+   "seg": 14,
+   "out_s": 697.79,
+   "out_e": 702.19
+  },
+  {
+   "id": "E03",
+   "zh": "你就可以做任何你想做的内容。",
+   "seg": 14,
+   "out_s": 702.8,
+   "out_e": 705.84
+  },
+  {
+   "id": "E04",
+   "zh": "因为所有的程序，无非就是前端、后端和数据库这三个东西。",
+   "seg": 14,
+   "out_s": 706.08,
+   "out_e": 709.66
+  },
+  {
+   "id": "E05",
+   "zh": "后端和数据库上云，那就用 CloudBase；",
+   "seg": 14,
+   "out_s": 710.267,
+   "out_e": 712.407
+  },
+  {
+   "id": "E06",
+   "zh": "前端的话，在本地 AI 可以写得很好，",
+   "seg": 14,
+   "out_s": 712.827,
+   "out_e": 714.687
+  },
+  {
+   "id": "E07",
+   "zh": "你可以用更厉害的模型，去做更精美的设计。",
+   "seg": 14,
+   "out_s": 714.907,
+   "out_e": 718.467
+  },
+  {
+   "id": "E08",
+   "zh": "不知道大家看完这期视频，有没有收获？",
+   "seg": 14,
+   "out_s": 719.853,
+   "out_e": 722.113
+  },
+  {
+   "id": "E09",
+   "zh": "我觉得开发一个微信小程序，其实现在是很简单的。",
+   "seg": 14,
+   "out_s": 722.733,
+   "out_e": 725.668
+  },
+  {
+   "id": "E10",
+   "zh": "希望大家能自己动手，自己上手来试一试。",
+   "seg": 14,
+   "out_s": 726.233,
+   "out_e": 730.353
+  },
+  {
+   "id": "E11",
+   "zh": "谢谢大家，拜拜！",
+   "seg": 14,
+   "out_s": 730.933,
+   "out_e": 731.893
+  }
+ ],
+ "vox": [
+  {
+   "id": "V05",
+   "src": "V2",
+   "out_s": 474.787,
+   "out_e": 478.523
+  }
+ ],
+ "levels_db": {
+  "0162": -3.7,
+  "V1": 1.2,
+  "V4": -0.8,
+  "V3": -0.5,
+  "0161": -2.9,
+  "R0948": 20.5,
+  "R0945": 21.1,
+  "R1013": 27.2,
+  "0155": -0.4,
+  "0156": -0.0,
+  "R1036": 26.5,
+  "0158": 1.2,
+  "0159": -2.7,
+  "0160": -3.0,
+  "V2": -1.5
+ }
+}

@@ -1,0 +1,68 @@
+{
+ "size": [
+  1920,
+  1080
+ ],
+ "scheme": "night",
+ "line1": "别漏看重点",
+ "line2": "Claude 新插件",
+ "font_size": 170,
+ "text_boxes": {
+  "t1": [
+   128,
+   150,
+   969.5,
+   320
+  ],
+  "t2": [
+   128,
+   334,
+   1257.140625,
+   504
+  ]
+ },
+ "safe_x": [
+  96,
+  1824
+ ],
+ "colors": {
+  "bg": "#141413",
+  "t1": "#FAF9F5",
+  "t2": "#D97757"
+ },
+ "mascot": {
+  "pose": "float2",
+  "flip": false,
+  "eyes": null,
+  "cell": 16,
+  "origin": [
+   1120,
+   491
+  ],
+  "bbox": [
+   1248,
+   507,
+   1632,
+   875
+  ],
+  "width_frac": 0.2,
+  "body_width_frac": 0.2,
+  "shifted": [
+   0,
+   0
+  ]
+ },
+ "background": {
+  "mode": "scene",
+  "seed": 1,
+  "scale": 3.0,
+  "anchor": [
+   0.72,
+   0.64
+  ],
+  "shift": [
+   0.0,
+   0.0
+  ]
+ }
+}

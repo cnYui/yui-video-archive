@@ -1,0 +1,154 @@
+1
+00:00:00,000 --> 00:00:01,456
+做 6 分钟的视频，
+A six-minute video
+
+2
+00:00:01,476 --> 00:00:04,830
+Google Veo 3.1 标准版要 144 美元。
+on Google's Veo 3.1 Standard costs $144.
+
+3
+00:00:04,850 --> 00:00:07,072
+Claude 只用掉悠一 20x 套餐
+Claude used just 5–10% of Yui's
+
+4
+00:00:07,092 --> 00:00:09,300
+一周额度的 5% 到 10%。
+weekly 20x plan quota.
+
+5
+00:00:09,320 --> 00:00:10,572
+9 月 28 日的教程，
+Yui's September 28 tutorial uses Opus 5.5,
+
+6
+00:00:10,592 --> 00:00:13,530
+用的是 9 月 22 日发布的 Opus 5.5。
+released on September 22.
+
+7
+00:00:13,820 --> 00:00:15,289
+Claude 不会生成图片，
+Claude can't generate images,
+
+8
+00:00:15,309 --> 00:00:16,890
+官方文档写得很明白。
+and the official docs say so plainly.
+
+9
+00:00:16,910 --> 00:00:18,751
+那视频怎么来？Claude 说：
+So where do videos come from?
+
+10
+00:00:18,771 --> 00:00:21,090
+每个像素，都是它自己画的。
+Claude says it draws every pixel itself.
+
+11
+00:00:21,110 --> 00:00:23,900
+一秒 30 张图，20 秒就是 600 张。
+Thirty images a second, so 20 seconds is 600 images.
+
+12
+00:00:23,920 --> 00:00:25,400
+放进 HTML 页面，
+They go into an HTML page,
+
+13
+00:00:25,420 --> 00:00:27,420
+用 ffmpeg 合成视频。
+and ffmpeg stitches them into a video.
+
+14
+00:00:27,440 --> 00:00:29,034
+画完还会自己截图、
+Then it screenshots and samples frames
+
+15
+00:00:29,054 --> 00:00:30,330
+抽帧检查。
+to check its own work.
+
+16
+00:00:30,350 --> 00:00:32,716
+银魂、火影、JoJo 的像素动画，
+The Gintama, Naruto and JoJo pixel animations
+
+17
+00:00:32,736 --> 00:00:34,870
+都是一段提示词做出来的。
+each came from a single prompt.
+
+18
+00:00:34,890 --> 00:00:36,205
+连角色嘴巴的开合，
+Even the character's mouth opening and closing,
+
+19
+00:00:36,225 --> 00:00:37,940
+它也自己截图确认。
+it checked by taking screenshots.
+
+20
+00:00:37,960 --> 00:00:40,318
+角色素材画一次，下次直接用，
+Draw the character assets once, reuse them,
+
+21
+00:00:40,338 --> 00:00:42,790
+还能做成 skill 批量出片。
+and turn it all into a skill for batch videos.
+
+22
+00:00:42,810 --> 00:00:45,314
+144 美元，是按每一秒都一次成功
+That $144 assumes every second works on the first try;
+
+23
+00:00:45,334 --> 00:00:47,340
+算的，重来要另外付钱。
+retries cost extra.
+
+24
+00:00:47,360 --> 00:00:48,912
+Veo 3.1 的 Fast 版，
+Veo 3.1 Fast is $0.12 a second,
+
+25
+00:00:48,932 --> 00:00:52,020
+每秒 0.12 美元，6 分钟约 43 美元。
+about $43 for six minutes.
+
+26
+00:00:52,040 --> 00:00:53,620
+但现在画的是像素风，
+But for now it draws pixel art;
+
+27
+00:00:53,640 --> 00:00:55,560
+真人风格得等模型升级。
+realistic human styles must wait for better models.
+
+28
+00:00:55,580 --> 00:00:57,189
+3D 渲染、游戏过场，
+Yui says diffusion models fit better
+
+29
+00:00:57,209 --> 00:01:00,020
+悠一自己也说该交给扩散模型。
+for 3D rendering and game cutscenes.
+
+30
+00:01:00,040 --> 00:01:01,457
+视频模型按秒收费，
+Video models charge by the second;
+
+31
+00:01:01,477 --> 00:01:03,860
+Claude 画一次，反复用。
+Claude draws once and reuses it.

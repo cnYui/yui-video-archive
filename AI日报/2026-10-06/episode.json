@@ -1,0 +1,406 @@
+{
+  "number": 1006,
+  "title": "10月6日，鲸鱼娘带你看看AI圈发生了什么？",
+  "dir_name": "AI每日日报_1006",
+  "date": "2026-10-06",
+  "date_label": "10月6日",
+  "weekday": "周二",
+  "subtitle": "鲸鱼娘带你看看 AI 圈发生了什么",
+  "target_minutes": [
+    5,
+    6
+  ],
+  "question_scene": "S01",
+  "questions": [
+    {
+      "text": "ChatGPT 生图时插广告",
+      "scenes": [
+        "S02"
+      ]
+    },
+    {
+      "text": "ChatGPT 欧盟文本加水印",
+      "scenes": [
+        "S03"
+      ]
+    },
+    {
+      "text": "Reflection 发布 Beam",
+      "scenes": [
+        "S04"
+      ]
+    },
+    {
+      "text": "维基抓到疑似 OpenAI 智能体",
+      "scenes": [
+        "S05"
+      ]
+    },
+    {
+      "text": "Reka 发布全能模型 Rho-1",
+      "scenes": [
+        "S06"
+      ]
+    },
+    {
+      "text": "Cohere 推出 North 2",
+      "scenes": [
+        "S07"
+      ]
+    },
+    {
+      "text": "挖漏洞的开源模型 apex",
+      "scenes": [
+        "S08"
+      ]
+    }
+  ],
+  "chapters": {
+    "S01": "开场",
+    "S02": "ChatGPT 生图时插广告",
+    "S03": "ChatGPT 欧盟文本加水印",
+    "S04": "Reflection 发布 Beam",
+    "S05": "维基抓到疑似 OpenAI 智能体",
+    "S06": "Reka 发布全能模型 Rho-1",
+    "S07": "Cohere 推出 North 2",
+    "S08": "挖漏洞的开源模型 apex",
+    "S09": "回顾"
+  },
+  "bar_labels": {
+    "S01": "开场",
+    "S02": "ChatGPT 广告",
+    "S03": "欧盟水印",
+    "S04": "Beam 模型",
+    "S05": "维基百科",
+    "S06": "Reka Rho-1",
+    "S07": "North 2",
+    "S08": "apex-flash-1",
+    "S09": "回顾"
+  },
+  "backgrounds": {
+    "S01": "01_深海气泡.png",
+    "S02": "02_星点.png",
+    "S03": "03_波纹.png",
+    "S04": "01_深海气泡.png",
+    "S05": "02_星点.png",
+    "S06": "03_波纹.png",
+    "S07": "01_深海气泡.png",
+    "S08": "02_星点.png",
+    "S09": "03_波纹.png"
+  },
+  "bg_alpha": 0.9,
+  "bg_blur": 0,
+  "intro_tagline": "",
+  "outro_references": [
+    "ChatGPT 生图时插广告（OpenAI / TechCrunch / IT之家）",
+    "ChatGPT 欧盟文本加水印（OpenAI / The Decoder / IT之家）",
+    "Reflection 发布 Beam（Reflection AI / Semafor）",
+    "维基抓到疑似 OpenAI 智能体（Wikimedia Foundation / The Verge）",
+    "Reka 发布全能模型 Rho-1（Reka AI / The Decoder）",
+    "Cohere 推出 North 2（Cohere / VentureBeat / SiliconANGLE）",
+    "挖漏洞的开源模型 apex（Hugging Face / Cantina / RuntimeWire）"
+  ],
+  "outro_items": [
+    {
+      "label": "形象",
+      "value": "大肥鱼同人 · 上善无形 / ZipZipPipe"
+    },
+    {
+      "label": "视频制作模型",
+      "value": "Opus 5.5"
+    }
+  ],
+  "outro_closing": "感谢大家看到最后",
+  "auto_gestures": false,
+  "presenter": {
+    "id": "whale",
+    "frames": "角色/动作帧"
+  },
+  "badge_html": "AI每日日报<span class=\"n\">10.06</span>",
+  "toc_kicker_html": "<b>今日要闻</b>TODAY",
+  "bar_colors": [
+    "#97C3F0",
+    "#F3C98C",
+    "#4A88DA",
+    "#C6E6FB"
+  ],
+  "news": [
+    {
+      "headline": "ChatGPT 生图时插广告",
+      "org": "OpenAI",
+      "source": "OpenAI · TechCrunch",
+      "source_short": "TechCrunch",
+      "date": "10月5日",
+      "points": [
+        "生图时测试图片广告",
+        "本月晚些在美国测",
+        "每周 12 亿用户",
+        "广告和图片分开"
+      ],
+      "rundown_key": "ChatGPT 生图时要测广告",
+      "line_points": [
+        0,
+        null,
+        1,
+        2,
+        3,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "refs": [
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/new-chatgpt-ads-format-and-measurement/"
+        },
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/10/05/openai-launches-visual-ads-that-appear-alongside-image-generation-results/"
+        },
+        {
+          "name": "IT之家",
+          "url": "https://www.ithome.com/1/009/901.htm"
+        }
+      ],
+      "snap": "../assets/snaps/news_01.png",
+      "snap_src": "techcrunch.com"
+    },
+    {
+      "headline": "ChatGPT 欧盟文本加水印",
+      "org": "OpenAI",
+      "source": "OpenAI · The Decoder",
+      "source_short": "The Decoder",
+      "date": "10月5日",
+      "points": [
+        "欧盟文本加隐形水印",
+        "API 全球可选开启",
+        "心理学文本约 95%",
+        "改写 25% 剩 17%"
+      ],
+      "rundown_key": "OpenAI 给欧盟文本加水印",
+      "line_points": [
+        0,
+        null,
+        null,
+        1,
+        2,
+        3,
+        null,
+        null,
+        null,
+        null
+      ],
+      "refs": [
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/eu-text-provenance/"
+        },
+        {
+          "name": "The Decoder",
+          "url": "https://the-decoder.com/openai-will-watermark-chatgpt-text-in-the-eu-but-makes-it-optional-for-api-users-worldwide/"
+        },
+        {
+          "name": "IT之家",
+          "url": "https://www.ithome.com/1/009/903.htm"
+        }
+      ],
+      "snap": "../assets/snaps/news_02.png",
+      "snap_src": "the-decoder.com"
+    },
+    {
+      "headline": "Reflection 发布 Beam",
+      "org": "Reflection AI",
+      "source": "Reflection AI · Semafor",
+      "source_short": "Reflection AI",
+      "date": "10月5日",
+      "points": [
+        "总参数 501B",
+        "每次激活 23B",
+        "Apache 2.0 许可",
+        "权重本月晚些放出"
+      ],
+      "rundown_key": "Reflection 发布开放模型 Beam",
+      "line_points": [
+        0,
+        1,
+        null,
+        null,
+        null,
+        2,
+        3,
+        null,
+        null,
+        null
+      ],
+      "refs": [
+        {
+          "name": "Reflection AI",
+          "url": "https://reflection.ai/blog/introducing-beam"
+        },
+        {
+          "name": "Semafor",
+          "url": "https://www.semafor.com/article/10/05/2026/reflection-ai-unveils-an-open-source-answer-to-chinese-labs"
+        }
+      ],
+      "snap": "../assets/snaps/news_03.png",
+      "snap_src": "reflection.ai"
+    },
+    {
+      "headline": "维基抓到疑似 OpenAI 智能体",
+      "org": "Wikimedia",
+      "source": "Wikimedia Foundation · The Verge",
+      "source_short": "Wikimedia",
+      "date": "10月5日",
+      "points": [
+        "数百万次自动请求",
+        "想攻破 Etherpad 没成",
+        "可能拖累 5 月宕机",
+        "没发现数据被攻破"
+      ],
+      "rundown_key": "维基百科抓到疑似 OpenAI 的智能体",
+      "line_points": [
+        null,
+        0,
+        null,
+        1,
+        null,
+        2,
+        3,
+        null,
+        null
+      ],
+      "refs": [
+        {
+          "name": "Wikimedia Foundation",
+          "url": "https://wikimediafoundation.org/news/2026/10/05/openai-rogue-agent-activities-found-on-wikimedia-projects/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/news/1004929/wikipedia-openai-rogue-bots-wikimedia-foundation-outage"
+        }
+      ],
+      "snap": "../assets/snaps/news_04.png",
+      "snap_src": "wikimediafoundation.org"
+    },
+    {
+      "headline": "Reka 发布全能模型 Rho-1",
+      "org": "Reka AI",
+      "source": "Reka AI · The Decoder",
+      "source_short": "Reka AI",
+      "date": "10月5日",
+      "points": [
+        "19B 一个模型全包",
+        "不调工具不接外部模型",
+        "320 张 H100 训三个月",
+        "研究预览版"
+      ],
+      "rundown_key": "Reka 一个模型包办图文视频",
+      "line_points": [
+        0,
+        null,
+        1,
+        2,
+        null,
+        null,
+        3,
+        null,
+        null
+      ],
+      "refs": [
+        {
+          "name": "Reka AI",
+          "url": "https://reka.ai/news/rho-1-collapsing-the-multimodal-stack"
+        },
+        {
+          "name": "The Decoder",
+          "url": "https://the-decoder.com/reka-ais-omni-model-rho-1-handles-text-images-video-and-robot-control-in-a-single-model/"
+        }
+      ],
+      "snap": "../assets/snaps/news_05.png",
+      "snap_src": "reka.ai"
+    },
+    {
+      "headline": "Cohere 推出 North 2",
+      "org": "Cohere",
+      "source": "Cohere · VentureBeat",
+      "source_short": "Cohere",
+      "date": "10月5日",
+      "points": [
+        "重做智能体框架",
+        "跨会话保留上下文",
+        "配额和花费上限",
+        "可完全离线部署"
+      ],
+      "rundown_key": "Cohere 推出 North 2",
+      "line_points": [
+        null,
+        0,
+        1,
+        2,
+        3,
+        null,
+        null
+      ],
+      "refs": [
+        {
+          "name": "Cohere",
+          "url": "https://cohere.com/blog/introducing-north-2"
+        },
+        {
+          "name": "VentureBeat",
+          "url": "https://venturebeat.com/orchestration/coheres-north-2-puts-ai-agents-on-a-budget-and-gives-them-a-memory"
+        },
+        {
+          "name": "SiliconANGLE",
+          "url": "https://siliconangle.com/2026/10/05/cohere-unveils-north-2-ai-agent-platform-with-rebuilt-orchestration-and-token-spending-caps/"
+        }
+      ],
+      "snap": "../assets/snaps/news_06.png",
+      "snap_src": "cohere.com"
+    },
+    {
+      "headline": "挖漏洞的开源模型 apex",
+      "org": "Cantina",
+      "source": "Cantina · Hugging Face",
+      "source_short": "Hugging Face",
+      "date": "10月1日",
+      "points": [
+        "60 题解出 40 题",
+        "基于 GLM-5.3-Flash",
+        "MIT 许可开源",
+        "60 题约 2.38 美元"
+      ],
+      "rundown_key": "专挖漏洞的开源模型 apex-flash-1",
+      "line_points": [
+        0,
+        1,
+        null,
+        null,
+        null,
+        2,
+        3,
+        null,
+        null
+      ],
+      "refs": [
+        {
+          "name": "Hugging Face",
+          "url": "https://huggingface.co/cantina-security/apex-flash-1"
+        },
+        {
+          "name": "Cantina",
+          "url": "https://www.cantina.security/apex-flash"
+        },
+        {
+          "name": "RuntimeWire",
+          "url": "https://runtimewire.com/article/cantina-apex-flash-open-weights-security-model"
+        }
+      ],
+      "snap": "../assets/snaps/news_07.png",
+      "snap_src": "huggingface.co"
+    }
+  ],
+  "style": "board"
+}

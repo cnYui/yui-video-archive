@@ -1,0 +1,538 @@
+{
+  "date": "2026-10-03",
+  "opening": [
+    {
+      "text": "早上好，我是鲸鱼娘，今天是10月3日。",
+      "en": "Good morning, I'm Whale Girl. Today is October 3.",
+      "tts": "早上好，我是鲸鱼娘，今天是十月三日。",
+      "expr": "开心"
+    },
+    {
+      "text": "今天说七件事：Anthropic 办了个工程师学院，微软发布三个语音模型，ChatGPT 能虚拟试穿了，DGX Spark 出了 64GB 版，arXiv 限制每月投稿，Flux 3 Image 改图更稳，还有 Cloudflare 开源了决策模型。",
+      "en": "Seven stories today: Anthropic opens an engineer academy, Microsoft releases three voice models, ChatGPT gets virtual try-on, DGX Spark gets a 64GB version, arXiv limits monthly submissions, Flux 3 Image makes steadier edits, and Cloudflare open-sources decision models.",
+      "tts": "今天说七件事：Anthropic 办了个工程师学院，微软发布三个语音模型，ChatGPT 能虚拟试穿了，DGX Spark 出了六十四 G B 版，arXiv 限制每月投稿，Flux 三 Image 改图更稳，还有 Cloudflare 开源了决策模型。"
+    }
+  ],
+  "news": [
+    {
+      "headline": "Anthropic 办工程师学院",
+      "bar_label": "Claude 学院",
+      "org": "Anthropic",
+      "source": "Anthropic · Unite.AI",
+      "source_short": "Anthropic",
+      "date": "10月2日",
+      "rundown_key": "Anthropic 办了个工程师学院",
+      "points": [
+        "一亿美元培训 1 万人",
+        "像住院医师一样学",
+        "要公司推荐才能报",
+        "先在三座城市开课"
+      ],
+      "lines": [
+        {
+          "text": "第一件，10 月 2 日，Anthropic 宣布成立 Claude Frontier Academy，专门培训在企业里落地 AI 的工程师。",
+          "en": "First, on October 2, Anthropic launched Claude Frontier Academy, a program for engineers who deploy AI inside companies.",
+          "tts": "第一件，十月二日，Anthropic 宣布成立 Claude Frontier Academy，专门培训在企业里落地 AI 的工程师。",
+          "expr": "开心",
+          "cuts": [
+            [
+              "10 月 2 日，",
+              "October 2,"
+            ],
+            [
+              "Academy，",
+              "Academy,"
+            ]
+          ]
+        },
+        {
+          "text": "它投入一亿美元，目标是到 2027 年底，培训出 1 万名“前线部署工程师”。",
+          "en": "It's putting in $100 million, and by the end of 2027, it aims to train 10,000 Frontier Deployed Engineers.",
+          "tts": "它投入一亿美元，目标是到二零二七年底，培训出一万名前线部署工程师。",
+          "point": 0,
+          "cuts": [
+            [
+              "2027 年底，",
+              "end of 2027,"
+            ]
+          ]
+        },
+        {
+          "text": "培训方式学的是医生的住院医师制度：先上几天线下集训，再做模拟的企业部署项目，然后考试。",
+          "en": "It works like a medical residency: a multi-day in-person bootcamp, then simulated enterprise deployments, then a graded test.",
+          "point": 1
+        },
+        {
+          "text": "考过以后，学员回到自己公司，带一个真实的 Claude 项目，做满 12 周，最后再考一次，拿到认证。",
+          "en": "After that, residents lead a real Claude project at their own company, run it for 12 weeks, then take a final test to get certified.",
+          "tts": "考过以后，学员回到自己公司，带一个真实的 Claude 项目，做满十二周，最后再考一次，拿到认证。",
+          "cuts": [
+            [
+              "Claude 项目，",
+              "own company,"
+            ]
+          ]
+        },
+        {
+          "text": "报名要由公司推荐，第一批合作方有埃森哲、德勤、麦肯锡、摩根士丹利等。",
+          "en": "Participants must be nominated by their company. First cohort partners include Accenture, Deloitte, McKinsey and Morgan Stanley.",
+          "point": 2
+        },
+        {
+          "text": "不要求以前做过 AI 智能体，但要是动手写代码的工程师。",
+          "en": "Prior AI agent experience isn't required, but you need to be a hands-on software engineer."
+        },
+        {
+          "text": "课程先在旧金山、纽约和伦敦开，第一批工程师预计 2027 年初出炉。国内用户暂时只能先看看。",
+          "en": "Cohorts run in San Francisco, New York and London, and the first engineers are expected in early 2027. Users in China can only watch for now.",
+          "tts": "课程先在旧金山、纽约和伦敦开，第一批工程师预计二零二七年初出炉。国内用户暂时只能先看看。",
+          "point": 3
+        }
+      ],
+      "refs": [
+        {
+          "name": "Anthropic",
+          "url": "https://www.anthropic.com/news/claude-frontier-academy"
+        },
+        {
+          "name": "Unite.AI",
+          "url": "https://www.unite.ai/new-anthropic-academy-backs-10-000-engineer-residencies-with-100m/"
+        }
+      ],
+      "snap_url": "https://www.unite.ai/new-anthropic-academy-backs-10-000-engineer-residencies-with-100m/"
+    },
+    {
+      "headline": "微软发布三个语音模型",
+      "bar_label": "微软语音",
+      "org": "Microsoft",
+      "source": "Microsoft AI · The Decoder",
+      "source_short": "Microsoft AI",
+      "date": "10月1日",
+      "rundown_key": "微软发布三个语音模型",
+      "points": [
+        "实时转写 60 种语言",
+        "100 多毫秒出字",
+        "语音合成 23 种语言",
+        "几秒录音就能克隆"
+      ],
+      "lines": [
+        {
+          "text": "第二件，10 月 1 日，微软 AI 一口气发布了三个语音模型。",
+          "en": "Second, on October 1, Microsoft AI released three voice models at once.",
+          "tts": "第二件，十月一日，微软 AI 一口气发布了三个语音模型。",
+          "expr": "吃惊"
+        },
+        {
+          "text": "第一个是实时转写模型 MAI-Transcribe-2-Streaming，支持 60 种语言，一边说一边出字。",
+          "en": "The first is MAI-Transcribe-2-Streaming, a real-time transcription model for 60 languages that shows text as you speak.",
+          "tts": "第一个是实时转写模型 M A I Transcribe 二 Streaming，支持六十种语言，一边说一边出字。",
+          "point": 0
+        },
+        {
+          "text": "官方说，开口后 100 多毫秒就能出第一段字，在 Artificial Analysis 的准确率排名里排第一。",
+          "en": "Microsoft says first words appear in just over 100 ms, and it ranks first for accuracy on Artificial Analysis.",
+          "tts": "官方说，开口后一百多毫秒就能出第一段字，在 Artificial Analysis 的准确率排名里排第一。",
+          "point": 1
+        },
+        {
+          "text": "价格是每小时 0.54 美元，这是今年年底前的优惠价。",
+          "en": "It costs $0.54 per hour, an introductory price through the end of this year.",
+          "tts": "价格是每小时零点五四美元，这是今年年底前的优惠价。"
+        },
+        {
+          "text": "另外两个是语音合成模型：MAI-Voice-2.1，和更快的 MAI-Voice-2.1-Flash，都支持 23 种语言。",
+          "en": "The other two are text-to-speech models, MAI-Voice-2.1 and the faster MAI-Voice-2.1-Flash, both covering 23 languages.",
+          "tts": "另外两个是语音合成模型：M A I Voice 二点一，和更快的 M A I Voice 二点一 Flash，都支持二十三种语言。",
+          "point": 2
+        },
+        {
+          "text": "Flash 版端到端延迟 150 毫秒，每百万字符 15 美元；标准版是 22 美元。",
+          "en": "Flash has 150 ms end-to-end latency and costs $15 per million characters. The standard version costs $22.",
+          "tts": "Flash 版端到端延迟一百五十毫秒，每百万字符十五美元；标准版是二十二美元。"
+        },
+        {
+          "text": "它们还能用几秒钟的录音克隆声音，官方说加了征得本人同意的限制。",
+          "en": "They can also clone a voice from a few seconds of audio, with consent safeguards, Microsoft says.",
+          "point": 3
+        },
+        {
+          "text": "三个模型都能在微软的 Foundry 平台上调用，两个语音合成模型在 OpenRouter 上也有。",
+          "en": "All three are on Microsoft Foundry, and the two voice models are also on OpenRouter."
+        }
+      ],
+      "refs": [
+        {
+          "name": "Microsoft AI",
+          "url": "https://microsoft.ai/news/our-first-streaming-transcription-model/"
+        },
+        {
+          "name": "The Decoder",
+          "url": "https://the-decoder.com/microsoft-ai-releases-new-transcription-and-text-to-speech-models-for-voice-agents/"
+        }
+      ],
+      "snap_url": "https://the-decoder.com/microsoft-ai-releases-new-transcription-and-text-to-speech-models-for-voice-agents/"
+    },
+    {
+      "headline": "ChatGPT 能虚拟试穿了",
+      "bar_label": "虚拟试穿",
+      "org": "OpenAI",
+      "source": "IT之家 · TechCrunch",
+      "source_short": "IT之家",
+      "date": "10月1日",
+      "rundown_key": "ChatGPT 能虚拟试穿了",
+      "points": [
+        "上传自拍就能试穿",
+        "商品截图也能换装",
+        "基于 Images 2.5",
+        "收藏和试穿图放一起"
+      ],
+      "lines": [
+        {
+          "text": "第三件，10 月 1 日，OpenAI 给 ChatGPT 加了两个购物功能：虚拟试穿和收藏。",
+          "en": "Third, on October 1, OpenAI added two shopping features to ChatGPT: virtual try-on and Favorites.",
+          "tts": "第三件，十月一日，OpenAI 给 ChatGPT 加了两个购物功能：虚拟试穿和收藏。",
+          "expr": "开心"
+        },
+        {
+          "text": "试穿是这样用的：上传一张自拍或者全身照，在购物结果里点“试穿”，就能看到衣服、配饰穿在自己身上的效果。",
+          "en": "Here's how try-on works: upload a selfie or full-body photo, tap Try On in shopping results, and see clothes or accessories on yourself.",
+          "point": 0
+        },
+        {
+          "text": "也可以直接上传商品截图，让它把这件衣服换到你身上。",
+          "en": "You can also upload a product screenshot and ask it to put that item on you.",
+          "point": 1
+        },
+        {
+          "text": "还能描述你想要的风格，让它挑齐一整套；或者上传明星照片，找同款。",
+          "en": "You can describe a style and have it pick a full outfit, or upload a celebrity photo to find similar items."
+        },
+        {
+          "text": "两个功能都基于新推出的 ChatGPT Images 2.5 模型。",
+          "en": "Both features are built on the newly launched ChatGPT Images 2.5 model.",
+          "tts": "两个功能都基于新推出的 ChatGPT Images 二点五模型。",
+          "point": 2
+        },
+        {
+          "text": "收藏功能可以把看中的商品存进资料库，和试穿图片放在一起，之后再看。",
+          "en": "Favorites saves products to your Library, next to your try-on images, so you can come back later.",
+          "point": 3
+        },
+        {
+          "text": "两个功能都是全球上线。谷歌去年就做过类似的虚拟试穿。",
+          "en": "Both are launching globally. Google launched a similar virtual try-on last year."
+        }
+      ],
+      "refs": [
+        {
+          "name": "IT之家",
+          "url": "https://www.ithome.com/1/009/197.htm"
+        },
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/10/01/chatgpt-can-now-virtually-try-on-clothes-for-you/"
+        }
+      ],
+      "snap_url": "https://www.ithome.com/1/009/197.htm"
+    },
+    {
+      "headline": "DGX Spark 出 64GB 版",
+      "bar_label": "DGX Spark",
+      "org": "NVIDIA",
+      "source": "NVIDIA 博客 · IT之家",
+      "source_short": "NVIDIA",
+      "date": "10月2日",
+      "rundown_key": "DGX Spark 出了 64GB 版",
+      "points": [
+        "4,999 美元起",
+        "最大跑 1000 亿参数",
+        "两台组网合成 128GB",
+        "双机最快 1.7 倍"
+      ],
+      "lines": [
+        {
+          "text": "第四件，10 月 2 日，英伟达推出 DGX Spark 的 64GB 版本。这是一台放在桌上、专门跑 AI 的小主机。",
+          "en": "Fourth, on October 2, NVIDIA announced a 64GB version of DGX Spark, a small desktop machine built for running AI.",
+          "tts": "第四件，十月二日，英伟达推出 DGX Spark 的六十四 G B 版本。这是一台放在桌上、专门跑 AI 的小主机。",
+          "expr": "认真"
+        },
+        {
+          "text": "起售价 4,999 美元，10 月 23 日开卖，宏碁、华硕、戴尔、惠普、微星等厂商都会出。",
+          "en": "It starts at $4,999 and goes on sale October 23, with versions from Acer, ASUS, Dell, HP, MSI and others.",
+          "tts": "起售价四千九百九十九美元，十月二十三日开卖，宏碁、华硕、戴尔、惠普、微星等厂商都会出。",
+          "point": 0
+        },
+        {
+          "text": "芯片和 128GB 版一样，都是 GB10 Grace Blackwell，只是内存少一半，能跑最大 1000 亿参数的模型。",
+          "en": "It has the same GB10 Grace Blackwell chip as the 128GB model, just half the memory, and runs models up to 100 billion parameters.",
+          "tts": "芯片和一百二十八 G B 版一样，都是 G B 十 Grace Blackwell，只是内存少一半，能跑最大一千亿参数的模型。",
+          "point": 1
+        },
+        {
+          "text": "IT之家说，128GB 的版本是 6,950 美元。",
+          "en": "According to IT Home, the 128GB version costs $6,950.",
+          "tts": "IT之家说，一百二十八 G B 的版本是六千九百五十美元。"
+        },
+        {
+          "text": "这次还出了一个组网助手：两台 64GB 用线连起来，内存合成 128GB，能跑 2000 亿参数的模型。",
+          "en": "There's also a new cluster assistant: link two 64GB units with a cable to pool 128GB of memory and run models up to 200 billion parameters.",
+          "tts": "这次还出了一个组网助手：两台六十四 G B 用线连起来，内存合成一百二十八 G B，能跑两千亿参数的模型。",
+          "point": 2
+        },
+        {
+          "text": "助手会自动识别连上的机器，配好 ConnectX-7 网络，不用自己折腾。",
+          "en": "The assistant detects connected units and configures the ConnectX-7 network for you.",
+          "tts": "助手会自动识别连上的机器，配好 ConnectX 七网络，不用自己折腾。"
+        },
+        {
+          "text": "英伟达自己测，两台一起跑 Qwen 3.8 27B，速度最高是一台的 1.7 倍。",
+          "en": "In NVIDIA's own test with Qwen 3.8 27B, two units ran up to 1.7x as fast as one.",
+          "tts": "英伟达自己测，两台一起跑 Qwen 三点八 二十七 B，速度最高是一台的一点七倍。",
+          "point": 3
+        }
+      ],
+      "refs": [
+        {
+          "name": "NVIDIA 博客",
+          "url": "https://blogs.nvidia.com/blog/local-ai-dgx-spark-64gb-sync/"
+        },
+        {
+          "name": "IT之家",
+          "url": "https://www.ithome.com/1/009/359.htm"
+        }
+      ],
+      "snap_url": "https://www.ithome.com/1/009/359.htm"
+    },
+    {
+      "headline": "arXiv 限制每月投稿数",
+      "bar_label": "arXiv 限投",
+      "org": "arXiv",
+      "source": "arXiv 博客 · Times Higher Education",
+      "source_short": "arXiv",
+      "date": "10月1日",
+      "rundown_key": "arXiv 限制每月投稿",
+      "points": [
+        "每月最多投 2 篇",
+        "9 月投稿近翻倍",
+        "AI 写的论文变多",
+        "被拒的也算名额"
+      ],
+      "lines": [
+        {
+          "text": "第五件，论文预印本网站 arXiv，从 10 月 1 日起限制投稿数量。",
+          "en": "Fifth, the preprint site arXiv, starting October 1, is limiting how many papers people can submit.",
+          "tts": "第五件，论文预印本网站 arXiv，从十月一日起限制投稿数量。",
+          "expr": "吃惊",
+          "cuts": [
+            [
+              "arXiv，",
+              "arXiv,"
+            ]
+          ]
+        },
+        {
+          "text": "每个投稿人每个月最多投 2 篇，同时在处理的稿件最多 3 篇，所有学科都一样。",
+          "en": "Each submitter can send at most 2 papers per month, with at most 3 active submissions at a time, across all categories.",
+          "tts": "每个投稿人每个月最多投两篇，同时在处理的稿件最多三篇，所有学科都一样。",
+          "point": 0
+        },
+        {
+          "text": "原因是稿子太多了：今年 9 月收到 40,363 篇，2024 年 9 月是 20,569 篇，两年差不多翻了一倍。",
+          "en": "The reason is volume: 40,363 submissions this September, versus 20,569 in September 2024, nearly double in two years.",
+          "tts": "原因是稿子太多了：今年九月收到四万零三百六十三篇，二零二四年九月是两万零五百六十九篇，两年差不多翻了一倍。",
+          "point": 1
+        },
+        {
+          "text": "再往前看，2016 年 9 月只有 9,869 篇。",
+          "en": "Go back further, and September 2016 had just 9,869.",
+          "tts": "再往前看，二零一六年九月只有九千八百六十九篇。"
+        },
+        {
+          "text": "其中 cs.AI 这个分类，两年里投稿涨了 6 倍多。",
+          "en": "In the cs.AI category alone, submissions grew more than 6x in two years.",
+          "tts": "其中 C S 点 A I 这个分类，两年里投稿涨了六倍多。"
+        },
+        {
+          "text": "arXiv 说，内容单薄的论文、把一项工作拆成好几篇来投的论文，还有 AI 写的论文，都明显变多了。",
+          "en": "arXiv says it's seeing more thin papers, more single works split into several papers, and more AI-written papers.",
+          "point": 2,
+          "cuts": [
+            [
+              "单薄的论文、",
+              "thin papers,"
+            ],
+            [
+              "来投的论文，",
+              "several papers,"
+            ]
+          ]
+        },
+        {
+          "text": "被拒的稿子也算进每月的名额；限制只针对提交的人，合著者不受影响。",
+          "en": "Rejected papers count toward the monthly limit. The limit applies only to the submitter, not co-authors.",
+          "point": 3
+        }
+      ],
+      "refs": [
+        {
+          "name": "arXiv 博客",
+          "url": "https://blog.arxiv.org/2026/10/01/updated-rate-limit-policy/"
+        },
+        {
+          "name": "Times Higher Education",
+          "url": "https://www.timeshighereducation.com/news/arxivs-new-preprint-submission-cap-divides-opinion"
+        }
+      ],
+      "snap_url": "https://www.timeshighereducation.com/news/arxivs-new-preprint-submission-cap-divides-opinion"
+    },
+    {
+      "headline": "Flux 3 Image 改图更稳",
+      "bar_label": "Flux 3",
+      "org": "Black Forest Labs",
+      "source": "The Decoder · OpenRouter",
+      "source_short": "The Decoder",
+      "date": "10月1日",
+      "rundown_key": "Flux 3 Image 改图更稳",
+      "points": [
+        "只改指定的地方",
+        "用框摆放画面",
+        "10 张参考图、4K 输出",
+        "开放权重几周内到"
+      ],
+      "lines": [
+        {
+          "text": "第六件，10 月 1 日，做图像模型的 Black Forest Labs，发布了 Flux 3 Image。",
+          "en": "Sixth, on October 1, image model maker Black Forest Labs released Flux 3 Image.",
+          "tts": "第六件，十月一日，做图像模型的 Black Forest Labs，发布了 Flux 三 Image。",
+          "expr": "开心"
+        },
+        {
+          "text": "它的特点是改图很稳：可以一步一步地改，只动你指定的地方，其他部分保持不变。",
+          "en": "Its strength is stable editing: you can edit step by step, changing only what you pick and leaving the rest alone.",
+          "point": 0
+        },
+        {
+          "text": "做法是用框来摆画面：每个元素画一个框，写上描述，之后可以单独改其中一个框。",
+          "en": "You lay out the scene with boxes: one box per element with a description, and later you can edit any single box.",
+          "point": 1
+        },
+        {
+          "text": "最多能放 10 张参考图，最高输出 4K。",
+          "en": "It takes up to 10 reference images and outputs up to 4K.",
+          "tts": "最多能放十张参考图，最高输出四 K。",
+          "point": 2
+        },
+        {
+          "text": "同一时间，Ideogram 也发布了 4.5 版，同样主打局部改图。",
+          "en": "Around the same time, Ideogram announced version 4.5, also focused on selective edits.",
+          "tts": "同一时间，Ideogram 也发布了四点五版，同样主打局部改图。"
+        },
+        {
+          "text": "现在有免费的在线试用，API 到 10 月 8 日打五折。",
+          "en": "There's a free online demo, and the API is 50% off through October 8.",
+          "tts": "现在有免费的在线试用，A P I 到十月八日打五折。"
+        },
+        {
+          "text": "据 The Decoder 报道，开放权重的版本预计几周内推出。",
+          "en": "According to The Decoder, an open-weight version is expected in the coming weeks.",
+          "point": 3
+        }
+      ],
+      "refs": [
+        {
+          "name": "The Decoder",
+          "url": "https://the-decoder.com/black-forest-labs-launches-flux-3-image-with-multi-step-editing-that-leaves-the-rest-of-your-picture-alone/"
+        },
+        {
+          "name": "OpenRouter",
+          "url": "https://openrouter.ai/black-forest-labs/flux-3-image"
+        }
+      ],
+      "snap_url": "https://the-decoder.com/black-forest-labs-launches-flux-3-image-with-multi-step-editing-that-leaves-the-rest-of-your-picture-alone/"
+    },
+    {
+      "headline": "Cloudflare 开源决策模型",
+      "bar_label": "Clef",
+      "org": "Cloudflare",
+      "source": "Cloudflare 博客 · MarkTechPost",
+      "source_short": "Cloudflare",
+      "date": "10月1日",
+      "rundown_key": "Cloudflare 开源了决策模型",
+      "points": [
+        "只给概率不写文字",
+        "基于 Qwen 改的",
+        "Flash 中位 38.8 毫秒",
+        "Apache 2.0 开源"
+      ],
+      "lines": [
+        {
+          "text": "最后一件，10 月 1 日，Cloudflare 开源了两个决策模型：Clef 和 Clef-flash。",
+          "en": "Last one: on October 1, Cloudflare open-sourced two decision models, Clef and Clef-flash.",
+          "tts": "最后一件，十月一日，Cloudflare 开源了两个决策模型：Clef 和 Clef flash。",
+          "expr": "认真"
+        },
+        {
+          "text": "昨天我们说过亚马逊的决策模型。这类模型不写文字，只回答是或否、在选项里挑一个，或者打分，并给出概率。",
+          "en": "Yesterday we covered Amazon's decision model. Models like this don't write text. They answer yes or no, pick an option, or give a score, with probabilities.",
+          "point": 0
+        },
+        {
+          "text": "Clef 基于阿里的 Qwen3.8-27B，Clef-flash 基于 Qwen3.5-9B。",
+          "en": "Clef is built on Alibaba's Qwen3.8-27B, and Clef-flash on Qwen3.5-9B.",
+          "tts": "Clef 基于阿里的 Qwen 三点八 二十七 B，Clef flash 基于 Qwen 三点五 九 B。",
+          "point": 1
+        },
+        {
+          "text": "官方测的中位延迟：Clef-flash 38.8 毫秒，Clef 209.3 毫秒，对手 Jev 是 524.1 毫秒。",
+          "en": "Cloudflare's median latency: 38.8 ms for Clef-flash, 209.3 ms for Clef, and 524.1 ms for rival Jev.",
+          "tts": "官方测的中位延迟：Clef flash 三十八点八毫秒，Clef 二百零九点三毫秒，对手 Jev 是五百二十四点一毫秒。",
+          "point": 2
+        },
+        {
+          "text": "两个模型都能看图，上下文 64K，是 Jev 的 32K 的两倍。",
+          "en": "Both can read images and have a 64K context, twice Jev's 32K.",
+          "tts": "两个模型都能看图，上下文六十四 K，是 Jev 的三十二 K 的两倍。"
+        },
+        {
+          "text": "用的是 Apache 2.0 许可，权重放在 Hugging Face，也能直接在 Cloudflare 的 Workers AI 上调用。",
+          "en": "They use the Apache 2.0 license, with weights on Hugging Face, and you can call them on Cloudflare Workers AI.",
+          "tts": "用的是 Apache 二点零许可，权重放在 Hugging Face，也能直接在 Cloudflare 的 Workers AI 上调用。",
+          "point": 3
+        },
+        {
+          "text": "Cloudflare 还宣布了强化学习微调服务，一开始会有工程师手把手帮忙。",
+          "en": "Cloudflare also announced a reinforcement learning fine-tuning service, with hands-on help from its engineers at first."
+        }
+      ],
+      "refs": [
+        {
+          "name": "Cloudflare 博客",
+          "url": "https://blog.cloudflare.com/clef-decision-models/"
+        },
+        {
+          "name": "MarkTechPost",
+          "url": "https://www.marktechpost.com/2026/10/01/cloudflare-releases-clef-and-clef-flash/"
+        }
+      ],
+      "snap_url": "https://blog.cloudflare.com/clef-decision-models/"
+    }
+  ],
+  "closing": [
+    {
+      "text": "今天就这些，来源都在简介里。",
+      "en": "That's all for today. Sources are in the description.",
+      "expr": "开心"
+    },
+    {
+      "text": "国庆假期还没过完，好好休息，我们明天见。",
+      "en": "The National Day holiday isn't over yet. Get some rest, and see you tomorrow.",
+      "expr": "开心"
+    }
+  ],
+  "cover": {
+    "item": 5,
+    "line1": "arXiv 限制投稿",
+    "line2": "每月只能投两篇？",
+    "mood": "吃惊"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "line1": "GPT-6 打星际输了",
+  "line2": "直接搬别人代码？",
+  "l1px": 168,
+  "l2px": 236,
+  "maxw": 1320,
+  "safe": [
+    300,
+    1620
+  ],
+  "textCx": 900,
+  "scale": 9,
+  "frame": [
+    64,
+    64
+  ],
+  "footRow": 62,
+  "fishX": 1074,
+  "foot": 1062,
+  "tag": "",
+  "theme": {
+    "bg": "#FFFFFF",
+    "lead": "#8A93AD",
+    "accent": "#4A88DA",
+    "list": "#4D5670",
+    "more": "#9AA2B8"
+  },
+  "_theme": "blue",
+  "_pose": "pose_huh",
+  "_eyes": "",
+  "_fx": "",
+  "_qmark": false,
+  "_place": "right",
+  "others": [
+    "Gemini 免费版降级",
+    "德国开源模型 Kolibri",
+    "DeepSeek Harness 新测试版",
+    "谷歌暂停开源漏洞赏金",
+    "COSMIC 拒收 AI 代码"
+  ],
+  "othersHead": "今天还有 7 条",
+  "othersMore": "……共 8 条",
+  "listX": 300,
+  "listW": 740,
+  "listBottom": 1000
+}

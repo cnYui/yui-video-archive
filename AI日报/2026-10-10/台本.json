@@ -1,0 +1,621 @@
+{
+ "date": "2026-10-10",
+ "opening": [
+  {
+   "text": "早上好，我是鲸鱼娘，今天是10月10日。",
+   "en": "Good morning, I'm Whale Girl. Today is October 10.",
+   "tts": "早上好，我是鲸鱼娘，今天是十月十日。",
+   "expr": "开心"
+  },
+  {
+   "text": "今天说七件事：Anthropic 给开源项目免费查漏洞，Claude 智能体最多并行一千个，Claude 画出紫外天图，Anthropic 更新使用政策，字节找到 DeepSeek 抽风原因，OpenAI 年化营收少了两百亿，还有 Ecosia 放弃 Mistral。",
+   "en": "Seven stories today: Anthropic's free vulnerability scans for open source, Claude agents running up to a thousand in parallel, a Claude-made UV sky map, Anthropic's new Usage Policy, ByteDance's explanation for DeepSeek's erratic behavior, OpenAI's $20 billion revenue gap, and Ecosia dropping Mistral."
+  }
+ ],
+ "news": [
+  {
+   "headline": "Anthropic 免费查开源漏洞",
+   "bar_label": "OSS Scanner",
+   "org": "Anthropic",
+   "source": "Anthropic · 官方研究",
+   "source_short": "Anthropic",
+   "date": "10月8日",
+   "rundown_key": "Anthropic 给开源项目免费查漏洞",
+   "vhook": "半年找出 29,000 个候选漏洞",
+   "points": [
+    "开源项目自愿报名",
+    "报告全由模型生成",
+    "附复现代码和补丁"
+   ],
+   "lines": [
+    {
+     "text": "第一件，Anthropic 推出了 OSS Scanner，免费帮开源项目找漏洞。",
+     "en": "First, Anthropic launched OSS Scanner, a free vulnerability scan for open-source projects.",
+     "expr": "认真"
+    },
+    {
+     "text": "10 月 8 日发布，项目维护者要主动报名，在 GitHub 上提交一个拉取请求就行。",
+     "en": "It was announced on October 8, and maintainers opt in on GitHub by submitting a pull request.",
+     "tts": "十月八日发布，项目维护者要主动报名，在 GitHub 上提交一个拉取请求就行。",
+     "point": 0
+    },
+    {
+     "text": "报告全部由模型生成，没有人工审核，用的是 Anthropic 最强的模型，包括 Claude Mythos。",
+     "en": "Reports are fully model-generated with no human review, from Anthropic's strongest models, including Claude Mythos.",
+     "point": 1
+    },
+    {
+     "text": "每份报告都带可复现的验证代码和漏洞解释，有的还附修补建议。",
+     "en": "Each report comes with a reproducer and an explanation, and a candidate patch when available.",
+     "point": 2
+    },
+    {
+     "text": "过去半年，Anthropic 找到超过 29,000 个候选漏洞，人工筛了大约 6,000 个。",
+     "en": "Over the last six months, Anthropic found over 29,000 candidate vulnerabilities and manually triaged about 6,000.",
+     "tts": "过去半年，Anthropic 找到超过两万九千个候选漏洞，人工筛了大约六千个。"
+    },
+    {
+     "text": "在 wolfSSL 的 74 份报告里，除了两份，其余都成立，其中五个拿到了 CVE 编号。",
+     "en": "Of 74 reports at wolfSSL, all but two were valid, and five became CVEs.",
+     "tts": "在 wolfSSL 的七十四份报告里，除了两份，其余都成立，其中五个拿到了 C V E 编号。"
+    },
+    {
+     "text": "申请资格和谷歌 OSS-Fuzz 的标准差不多，由 Anthropic 逐个判断。",
+     "en": "Eligibility is similar to Google's OSS-Fuzz criteria, and Anthropic decides case by case."
+    },
+    {
+     "text": "另有一个 Claude for OSS 计划，给开源项目免费送 Claude Max 20x 订阅，用来修漏洞。",
+     "en": "A separate Claude for OSS program offers open-source projects free Claude Max 20x subscriptions to help fix bugs.",
+     "tts": "另有一个 Claude for OSS 计划，给开源项目免费送 Claude Max 二十倍订阅，用来修漏洞。"
+    },
+    {
+     "text": "官方说没法保证扫描器完美，也有维护者反馈，严重程度评得偏高。",
+     "en": "Anthropic says it can't guarantee the scanner is perfect, and some maintainers say severity ratings run high."
+    }
+   ],
+   "vbigs": [
+    {
+     "line": 4,
+     "n": "29,000+",
+     "small": "候选漏洞",
+     "d": "半年里找到，人工筛了约 6,000 个"
+    }
+   ],
+   "refs": [
+    {
+     "name": "Anthropic",
+     "url": "https://www.anthropic.com/research/launching-opt-in-vuln-finding-service-for-open-source"
+    }
+   ],
+   "snap_url": "https://www.anthropic.com/research/launching-opt-in-vuln-finding-service-for-open-source"
+  },
+  {
+   "headline": "Claude 智能体并行 1000 个",
+   "bar_label": "动态工作流",
+   "org": "Anthropic",
+   "source": "The Decoder · Anthropic",
+   "source_short": "The Decoder",
+   "date": "10月9日",
+   "rundown_key": "Claude 智能体最多并行一千个",
+   "vhook": "测试找到 66 个，单个 14 到 27",
+   "points": [
+    "主智能体先拆任务",
+    "最多 1,000 个子智能体",
+    "测试找到 66 个漏洞"
+   ],
+   "lines": [
+    {
+     "text": "第二件，Claude 托管智能体加了动态工作流。",
+     "en": "Second, Claude Managed Agents added dynamic workflows.",
+     "expr": "认真"
+    },
+    {
+     "text": "10 月 9 日的报道说，主智能体先拆计划，再分给子智能体，最后合并结果。",
+     "en": "As reported on October 9, a lead agent makes a plan, hands tasks to sub-agents and merges the results.",
+     "tts": "十月九日的报道说，主智能体先拆计划，再分给子智能体，最后合并结果。",
+     "point": 0
+    },
+    {
+     "text": "一次运行最多可以同时跑 1,000 个子智能体。",
+     "en": "In one execution, up to 1,000 sub-agents can run in parallel.",
+     "tts": "一次运行最多可以同时跑一千个子智能体。",
+     "point": 1
+    },
+    {
+     "text": "Anthropic 在 116,000 行代码里藏了 70 个漏洞来测试。",
+     "en": "In 116,000 lines of code, Anthropic hid 70 bugs to test it.",
+     "tts": "Anthropic 在十一万六千行代码里藏了七十个漏洞来测试。",
+     "point": 2
+    },
+    {
+     "text": "单个智能体每次只找到 14 到 27 个，动态工作流稳定找到 66 个。",
+     "en": "A single agent caught 14 to 27 per run, while the dynamic workflow consistently caught 66.",
+     "tts": "单个智能体每次只找到十四到二十七个，动态工作流稳定找到六十六个。"
+    },
+    {
+     "text": "文章没有给价格。",
+     "en": "The article gives no pricing."
+    },
+    {
+     "text": "不过文章提醒，这会消耗大量 token，建议从小任务开始试。",
+     "en": "The article warns it can use a lot of tokens, so start small."
+    },
+    {
+     "text": "而且这是 Anthropic 自己的测试，换成别的任务，效果不一定一样。",
+     "en": "It is Anthropic's own test, and the gains may not hold across other task types."
+    }
+   ],
+   "vbigs": [
+    {
+     "line": 4,
+     "n": "66 / 70",
+     "small": "找到的漏洞数",
+     "d": "单个智能体每次只找到 14 到 27 个"
+    }
+   ],
+   "refs": [
+    {
+     "name": "The Decoder",
+     "url": "https://the-decoder.com/anthropics-claude-can-now-orchestrate-up-to-1000-ai-agents-in-parallel-through-dynamic-workflows/"
+    }
+   ],
+   "snap_url": "https://the-decoder.com/anthropics-claude-can-now-orchestrate-up-to-1000-ai-agents-in-parallel-through-dynamic-workflows/"
+  },
+  {
+   "headline": "Claude 画出紫外天图",
+   "bar_label": "紫外天图",
+   "org": "Anthropic",
+   "source": "Anthropic · 官方研究",
+   "source_short": "Anthropic",
+   "date": "10月8日",
+   "rundown_key": "Claude 画出紫外天图",
+   "vhook": "三分之一天空靠预测补全",
+   "points": [
+    "第一张完整紫外天图",
+    "三分之一靠预测",
+    "每个像素标来源"
+   ],
+   "lines": [
+    {
+     "text": "第三件，Anthropic 用 Claude Science 画出了第一张完整的紫外天图。",
+     "en": "Third, Anthropic used Claude Science to produce the first complete map of the sky in UV light.",
+     "expr": "吃惊"
+    },
+    {
+     "text": "10 月 8 日发布，作者是约翰斯·霍普金斯大学的天体物理学家，同时也是 Anthropic 的研究员。",
+     "en": "Published on October 8 by an astrophysicist at Johns Hopkins University and also a researcher at Anthropic.",
+     "tts": "十月八日发布，作者是约翰斯·霍普金斯大学的天体物理学家，同时也是 Anthropic 的研究员。",
+     "point": 0
+    },
+    {
+     "text": "美国航天局的 GALEX 望远镜只测到大约三分之二的天空，银河系盘面基本是空白。",
+     "en": "NASA's GALEX telescope covered only about two-thirds of the sky and skipped the Milky Way plane.",
+     "point": 1
+    },
+    {
+     "text": "剩下大约三分之一，是 Claude Science 预测出来的。",
+     "en": "About one-third of the map was predicted with Claude Science.",
+     "point": 2
+    },
+    {
+     "text": "它先让多个智能体去找公开的紫外巡天数据，去掉星光干扰，再统一校准。",
+     "en": "Agents first searched for public UV surveys, removed starlight glare and cross-calibrated them."
+    },
+    {
+     "text": "团队把已知区域遮住来验证，预测和真实测量相差大约 10%。",
+     "en": "The team hid known regions to validate it, and predictions matched real UV measurements to within about 10%.",
+     "tts": "团队把已知区域遮住来验证，预测和真实测量相差大约百分之十。"
+    },
+    {
+     "text": "整个过程做了十几个版本，花了好几天。",
+     "en": "It took more than a dozen versions over several days."
+    },
+    {
+     "text": "地图上每个像素都标了是实测还是预测，还附上不确定度。",
+     "en": "Every pixel is labeled measured or predicted, with uncertainty estimates."
+    }
+   ],
+   "vbigs": [
+    {
+     "line": 5,
+     "n": "10%",
+     "small": "预测误差",
+     "d": "遮住已知区域验证的结果"
+    }
+   ],
+   "refs": [
+    {
+     "name": "Anthropic",
+     "url": "https://www.anthropic.com/research/the-missing-map-of-the-sky"
+    }
+   ],
+   "snap_url": "https://www.anthropic.com/research/the-missing-map-of-the-sky"
+  },
+  {
+   "headline": "Anthropic 更新使用政策",
+   "bar_label": "使用政策",
+   "org": "Anthropic",
+   "source": "Anthropic · 官方新闻",
+   "source_short": "Anthropic",
+   "date": "10月8日",
+   "rundown_key": "Anthropic 更新使用政策",
+   "vhook": "11 月 12 日生效，禁无休止辱骂",
+   "points": [
+    "11月12日生效",
+    "禁止无休止辱骂模型",
+    "禁止无同意的追踪",
+    "机器人要能停下"
+   ],
+   "lines": [
+    {
+     "text": "第四件，Anthropic 发布了新版使用政策。",
+     "en": "Fourth, Anthropic published a new version of its Usage Policy.",
+     "expr": "认真"
+    },
+    {
+     "text": "10 月 8 日公布，11 月 12 日生效。",
+     "en": "It was announced on October 8 and takes effect on November 12.",
+     "tts": "十月八日公布，十一月十二日生效。",
+     "point": 0
+    },
+    {
+     "text": "最受关注的一条是，禁止对模型做持续的、不必要的辱骂或残忍行为。",
+     "en": "The line that drew attention bans sustained and needless abusive or cruel behavior toward its models.",
+     "point": 1
+    },
+    {
+     "text": "官方说这是留给极端情况的，普通的发火、反驳、黑暗题材创作和测试都不算。",
+     "en": "Anthropic says it is meant for extreme cases, and ordinary frustration, pushback, dark creative themes and testing do not count.",
+     "point": 1
+    },
+    {
+     "text": "监控方面，不能未经同意追踪个人，也不能让 Claude 决定该调查、逮捕或起诉谁。",
+     "en": "On surveillance, you cannot track people without consent, and Claude cannot decide who to investigate, arrest or charge.",
+     "point": 2
+    },
+    {
+     "text": "武器一条扩大到让武器运转的软件和部件，包括给无人机装武器。",
+     "en": "The weapons rule now covers the software and components that make weapons work, including arming drones."
+    },
+    {
+     "text": "会自主动手的硬件，必须有合格的操作员能让它停下，Claude 断线时还要保持安全状态。",
+     "en": "Hardware that acts on its own needs a qualified operator who can stop it, and it must hold a safe state if Claude disconnects.",
+     "point": 3
+    },
+    {
+     "text": "选举那一节改名了，也删掉了对投票的个性化定向的一刀切禁令。",
+     "en": "The elections section was renamed, and the blanket ban on personalized vote targeting was removed."
+    }
+   ],
+   "vbigs": [
+    {
+     "line": 1,
+     "n": "11月12日",
+     "small": "新政策生效",
+     "d": "10月8日公布"
+    }
+   ],
+   "refs": [
+    {
+     "name": "Anthropic",
+     "url": "https://www.anthropic.com/news/2026-usage-policy-update"
+    }
+   ],
+   "snap_url": "https://www.anthropic.com/news/2026-usage-policy-update"
+  },
+  {
+   "headline": "DeepSeek 抽风的原因",
+   "bar_label": "DeepSeek 抽风",
+   "org": "字节 Seed",
+   "source": "IT之家 · 字节 Seed",
+   "source_short": "IT之家",
+   "date": "10月9日",
+   "rundown_key": "字节找到 DeepSeek 抽风原因",
+   "vhook": "检索准确率最多差 40 个百分点",
+   "points": [
+    "字节 Seed 团队的论文",
+    "分块 KV 缓存压缩",
+    "不同相位差 40 个点"
+   ],
+   "lines": [
+    {
+     "text": "第五件，字节 Seed 团队给 DeepSeek 时好时坏，找了个原因。",
+     "en": "Fifth, ByteDance's Seed team has proposed a reason DeepSeek can seem erratic on long inputs.",
+     "expr": "认真"
+    },
+    {
+     "text": "论文 9 月底发在 arXiv 上，10 月 9 日 IT之家做了报道。",
+     "en": "The paper went on arXiv in late September, and on October 9, IT Home covered it.",
+     "tts": "论文九月底发在 arXiv 上，十月九日 IT之家做了报道。",
+     "point": 0
+    },
+    {
+     "text": "问题出在分块 KV 缓存压缩：每隔固定步幅，把一段词压成更少的缓存条目。",
+     "en": "The issue is chunked KV cache compression, which squeezes each window of tokens into fewer cache entries at a fixed stride.",
+     "tts": "问题出在分块 K V 缓存压缩：每隔固定步幅，把一段词压成更少的缓存条目。",
+     "point": 1
+    },
+    {
+     "text": "这样每个词多了一个“相位”，就是它离压缩窗口边界有多远。",
+     "en": "That gives each token a phase: how far it sits from the window boundary."
+    },
+    {
+     "text": "同一条信息，在某个相位容易被找到，换个相位就很难。",
+     "en": "The same information is easy to retrieve at one phase and hard at another.",
+     "point": 2
+    },
+    {
+     "text": "论文说，长文本检索准确率在不同相位之间，最多能差 40 个百分点。",
+     "en": "The paper says long-context retrieval accuracy can differ by up to 40 percentage points across phases.",
+     "tts": "论文说，长文本检索准确率在不同相位之间，最多能差四十个百分点。"
+    },
+    {
+     "text": "平均分数看不出这个周期性的短板。",
+     "en": "Average benchmark scores can hide this periodic weakness."
+    },
+    {
+     "text": "测试的是 DeepSeek-V4-Flash、V4-Pro 和 V4.1-Flash。",
+     "en": "The models tested were DeepSeek-V4-Flash, V4-Pro and V4.1-Flash."
+    },
+    {
+     "text": "这是预印本论文，报道里也没写具体怎么修。",
+     "en": "It is a preprint, and the report does not describe a fix."
+    }
+   ],
+   "vbigs": [
+    {
+     "line": 5,
+     "n": "40 个百分点",
+     "small": "不同相位的差距",
+     "d": "长文本检索准确率，最多"
+    }
+   ],
+   "refs": [
+    {
+     "name": "IT之家",
+     "url": "https://www.ithome.com/1/010/780.htm"
+    }
+   ],
+   "snap_url": "https://www.ithome.com/1/010/780.htm"
+  },
+  {
+   "headline": "OpenAI 年化营收少 200 亿",
+   "bar_label": "OpenAI 营收",
+   "org": "OpenAI",
+   "source": "IT之家 · 金融时报",
+   "source_short": "IT之家",
+   "date": "10月9日",
+   "rundown_key": "OpenAI 年化营收少了两百亿",
+   "vhook": "近 500 亿，之前传 700 亿",
+   "points": [
+    "年化营收近 500 亿美元",
+    "比之前传的少约 200 亿",
+    "两家算法不一样"
+   ],
+   "lines": [
+    {
+     "text": "第六件，OpenAI 的年化营收，比外界之前传的少了大约 200 亿美元。",
+     "en": "Sixth, OpenAI's annualized revenue is about $20 billion below what had been signaled earlier.",
+     "expr": "吃惊"
+    },
+    {
+     "text": "10 月 9 日，据金融时报报道，OpenAI 给投资者的最新财务文件显示，截至 9 月底，年化营收接近 500 亿美元。",
+     "en": "On October 9, the Financial Times reported that a new document for OpenAI investors shows that at the end of September, annualized revenue is near $50 billion.",
+     "tts": "十月九日，据金融时报报道，OpenAI 给投资者的最新财务文件显示，截至九月底，年化营收接近五百亿美元。",
+     "point": 0
+    },
+    {
+     "text": "上个月主流媒体报道的数字，高达 700 亿美元。",
+     "en": "Mainstream media had reported as much as $70 billion the month before.",
+     "tts": "上个月主流媒体报道的数字，高达七百亿美元。",
+     "point": 1
+    },
+    {
+     "text": "报道给的原因是，投资者把它直接和 Anthropic 比，但两家的算法不一样。",
+     "en": "The report says investors compared it directly with Anthropic, but the two count revenue differently.",
+     "point": 2
+    },
+    {
+     "text": "Anthropic 把通过 AWS、Google Cloud 这些云伙伴卖出去的收入算进去，OpenAI 不算。",
+     "en": "Anthropic counts revenue sold through cloud partners like AWS and Google Cloud, and OpenAI does not.",
+     "tts": "Anthropic 把通过 A W S、Google Cloud 这些云伙伴卖出去的收入算进去，OpenAI 不算。"
+    },
+    {
+     "text": "年化营收被看作全球 AI 需求的重要指标。",
+     "en": "Annualized revenue is treated as a key indicator of global AI demand."
+    },
+    {
+     "text": "两边口径不一样，直接比数字会有偏差。",
+     "en": "The two use different definitions, so comparing the raw numbers can mislead."
+    },
+    {
+     "text": "这是媒体转述的投资者文件，不是 OpenAI 的公开声明。",
+     "en": "This comes from press reports of an investor document, not a public statement from OpenAI."
+    }
+   ],
+   "vbigs": [
+    {
+     "line": 1,
+     "n": "近 500 亿",
+     "small": "年化营收（美元）",
+     "d": "截至 9 月底，据金融时报"
+    }
+   ],
+   "refs": [
+    {
+     "name": "IT之家",
+     "url": "https://www.ithome.com/1/010/751.htm"
+    },
+    {
+     "name": "The Decoder",
+     "url": "https://the-decoder.com/openai-and-anthropic-before-the-ipo-different-balance-sheets-make-comparison-difficult/"
+    }
+   ],
+   "snap_url": "https://www.ithome.com/1/010/751.htm"
+  },
+  {
+   "headline": "Ecosia 换中国模型",
+   "bar_label": "Ecosia 换模型",
+   "org": "Ecosia",
+   "source": "IT之家 · 政治报",
+   "source_short": "IT之家",
+   "date": "10月8日",
+   "rundown_key": "Ecosia 放弃 Mistral",
+   "vhook": "成本减半，改用 Qwen、Kimi",
+   "points": [
+    "放弃法国 Mistral",
+    "改用 Qwen、GLM、Kimi",
+    "成本降一半"
+   ],
+   "lines": [
+    {
+     "text": "第七件，德国搜索引擎 Ecosia 不用 Mistral 了。",
+     "en": "Seventh, the German search engine Ecosia has dropped Mistral.",
+     "expr": "吃惊"
+    },
+    {
+     "text": "据 IT之家 10 月 8 日转述《政治报》，Ecosia 改用中国的开源模型。",
+     "en": "According to IT Home on October 8, citing Politico, Ecosia has switched to Chinese open-source models.",
+     "tts": "据 IT之家十月八日转述《政治报》，Ecosia 改用中国的开源模型。",
+     "point": 0
+    },
+    {
+     "text": "今年 5 月，它刚从 OpenAI 换到 Mistral。",
+     "en": "Back in May, it had just moved from OpenAI to Mistral.",
+     "tts": "今年五月，它刚从 OpenAI 换到 Mistral。"
+    },
+    {
+     "text": "创始人兼 CEO 克里斯蒂安·克罗尔说，对 Mistral 的质量失望，说它已经落后对手整整一年。",
+     "en": "Founder and CEO Christian Kroll said he was disappointed with Mistral's quality, calling it a full year behind its competitors.",
+     "tts": "创始人兼 C E O 克里斯蒂安·克罗尔说，对 Mistral 的质量失望，说它已经落后对手整整一年。"
+    },
+    {
+     "text": "Ecosia 还提到服务器经常过载，也怀疑 Mistral 够不够中立。",
+     "en": "Ecosia also cited frequent server overload, and questioned whether Mistral is truly neutral."
+    },
+    {
+     "text": "现在它通过 Melious，用阿里的 Qwen、智谱的 GLM 和月之暗面的 Kimi。",
+     "en": "It now works with Melious to use Alibaba's Qwen, Zhipu's GLM and Moonshot AI's Kimi.",
+     "point": 1
+    },
+    {
+     "text": "据报道，这次切换让成本降了一半，性能也有提升。",
+     "en": "The switch reportedly cut costs in half and brought performance gains.",
+     "point": 2
+    },
+    {
+     "text": "报道没有给具体的性能数字，一家公司的说法，不能直接当成模型排名。",
+     "en": "The report gives no performance figures, so one company's view is not a model ranking."
+    }
+   ],
+   "vbigs": [
+    {
+     "line": 6,
+     "n": "-50%",
+     "small": "成本",
+     "d": "据报道，切换后"
+    }
+   ],
+   "refs": [
+    {
+     "name": "IT之家",
+     "url": "https://www.ithome.com/1/010/539.htm"
+    }
+   ],
+   "snap_url": "https://www.ithome.com/1/010/539.htm"
+  }
+ ],
+ "closing": [
+  {
+   "text": "今天就这些，来源都在简介里。",
+   "en": "That's all for today. Sources are in the description.",
+   "expr": "开心"
+  },
+  {
+   "text": "我们明天见。",
+   "en": "See you tomorrow.",
+   "expr": "开心"
+  }
+ ],
+ "cover": {
+  "item": 1,
+  "line1": "Claude 给开源项目",
+  "line2": "免费找漏洞？",
+  "mood": "吃惊"
+ },
+ "titles": {
+  "bilibili": "10月10日AI圈7件事：Anthropic推出OSS Scanner免费扫开源漏洞，Claude动态工作流最多并行1000个智能体",
+  "douyin": "Anthropic免费扫开源漏洞，智能体并行1000个",
+  "xiaohongshu": "AI圈7件事：Anthropic扫漏洞"
+ },
+ "vertical": {
+  "cuts": {
+   "第一件，Anthropic 推出了 OSS Scanner，": [
+    [
+     "第一件，",
+     "First,"
+    ]
+   ],
+   "10 月 8 日发布，项目维护者要主动报名，": [
+    [
+     "10 月 8 日发布，",
+     "It was announced on October 8,"
+    ]
+   ],
+   "过去半年，Anthropic 找到超过 29,000 个候选漏洞，": [
+    [
+     "过去半年，Anthropic 找到超过",
+     "Over the last six months, Anthropic found over"
+    ]
+   ],
+   "在 wolfSSL 的 74 份报告里，除了两份，其余都成立，": [
+    [
+     "在 wolfSSL 的 74 份报告里，",
+     "Of 74 reports at wolfSSL,"
+    ]
+   ],
+   "申请资格和谷歌 OSS-Fuzz 的标准差不多，": [
+    [
+     "申请资格和谷歌 OSS-Fuzz",
+     "Eligibility is similar to Google's OSS-Fuzz"
+    ]
+   ],
+   "给开源项目免费送 Claude Max 20x 订阅，用来修漏洞。": [
+    [
+     "给开源项目免费送 Claude Max 20x",
+     "open-source projects free Claude Max 20x"
+    ]
+   ],
+   "一次运行最多可以同时跑 1,000 个子智能体。": [
+    [
+     "一次运行最多可以同时跑",
+     "In one execution, up to"
+    ]
+   ],
+   "Anthropic 在 116,000 行代码里藏了 70 个漏洞来测试。": [
+    [
+     "Anthropic 在 116,000 行代码里",
+     "In 116,000 lines of code, Anthropic"
+    ]
+   ],
+   "10 月 8 日发布，作者是约翰斯·霍普金斯大学的天体": [
+    [
+     "10 月 8 日发布，",
+     "Published on October 8"
+    ]
+   ],
+   "第二件，Claude 托管智能体加了动态工作流。": [
+    [
+     "第二件，",
+     "Second,"
+    ]
+   ],
+   "论文 9 月底发在 arXiv 上，10 月 9 日 IT之家做了报道。": [
+    [
+     "论文 9 月底发在 arXiv 上，10 月 9 日",
+     "The paper went on arXiv in late September, and on October 9,"
+    ]
+   ]
+  }
+ }
+}

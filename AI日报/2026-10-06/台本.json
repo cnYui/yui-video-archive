@@ -1,0 +1,1075 @@
+{
+  "date": "2026-10-06",
+  "opening": [
+    {
+      "text": "早上好，我是鲸鱼娘，今天是10月6日。",
+      "en": "Good morning, I'm Whale Girl. Today is October 6.",
+      "tts": "早上好，我是鲸鱼娘，今天是十月六日。",
+      "expr": "开心"
+    },
+    {
+      "text": "今天说七件事：ChatGPT 生图时要测广告，OpenAI 给欧盟文本加水印，Reflection 发布开放模型 Beam，维基百科抓到疑似 OpenAI 的智能体，Reka 一个模型包办图文视频，Cohere 推出 North 2，还有专挖漏洞的开源模型 apex-flash-1。",
+      "en": "Seven stories today: ChatGPT tests ads during image generation, OpenAI watermarks text in the EU, Reflection unveils the open model Beam, Wikipedia finds agents it believes are OpenAI's, Reka puts text, images and video in one model, Cohere launches North 2, and an open model for finding bugs, apex-flash-1.",
+      "tts": "今天说七件事：ChatGPT 生图时要测广告，OpenAI 给欧盟文本加水印，Reflection 发布开放模型 Beam，维基百科抓到疑似 OpenAI 的智能体，Reka 一个模型包办图文视频，Cohere 推出 North 2，还有专挖漏洞的开源模型 apex flash 1。",
+      "cuts": [
+        [
+          "测广告，",
+          "image generation,"
+        ],
+        [
+          "加水印，",
+          "in the EU,"
+        ],
+        [
+          "Beam，",
+          "Beam,"
+        ],
+        [
+          "智能体，",
+          "OpenAI's,"
+        ],
+        [
+          "图文视频，",
+          "one model,"
+        ],
+        [
+          "North 2，",
+          "North 2,"
+        ]
+      ]
+    }
+  ],
+  "news": [
+    {
+      "headline": "ChatGPT 生图时插广告",
+      "bar_label": "ChatGPT 广告",
+      "org": "OpenAI",
+      "source": "OpenAI · TechCrunch",
+      "source_short": "TechCrunch",
+      "date": "10月5日",
+      "rundown_key": "ChatGPT 生图时要测广告",
+      "vhook": "本月晚些在美国开测",
+      "vbigs": [
+        {
+          "line": 3,
+          "n": "12 亿",
+          "small": "每周用户",
+          "d": "官方称 ChatGPT 每周覆盖人数"
+        }
+      ],
+      "points": [
+        "生图时测试图片广告",
+        "本月晚些在美国测",
+        "每周 12 亿用户",
+        "广告和图片分开"
+      ],
+      "lines": [
+        {
+          "text": "第一件，你在 ChatGPT 里生成图片，旁边可能要出现广告了。",
+          "en": "First, when you generate images in ChatGPT, ads may start showing up next to them.",
+          "expr": "吃惊",
+          "point": 0
+        },
+        {
+          "text": "OpenAI 10 月 5 日宣布，要在生图功能里测试一种新的图片广告。",
+          "en": "On October 5, OpenAI announced that in image generation, it will test a new visual ad format.",
+          "tts": "OpenAI 十月五日宣布，要在生图功能里测试一种新的图片广告。",
+          "cuts": [
+            [
+              "宣布，",
+              "announced that"
+            ]
+          ]
+        },
+        {
+          "text": "测试这个月晚些时候在美国开始，先邀请一批广告主。",
+          "en": "Testing starts later this month in the US, with an initial group of advertisers.",
+          "point": 1
+        },
+        {
+          "text": "官方称，ChatGPT 每周覆盖 12 亿用户。",
+          "en": "OpenAI says ChatGPT reaches 1.2 billion users every week.",
+          "tts": "官方称，ChatGPT 每周覆盖十二亿用户。",
+          "point": 2
+        },
+        {
+          "text": "广告会标清楚，和你正在生成的图片分开；官方说，广告不影响 ChatGPT 的回答。",
+          "en": "Ads will be clearly labeled and kept separate from your image. OpenAI says ads don't affect ChatGPT's answers.",
+          "point": 3,
+          "cuts": [
+            [
+              "图片分开；",
+              "your image."
+            ]
+          ]
+        },
+        {
+          "text": "同时，广告主的效果测量工具也扩充了，接入了 AppsFlyer、Adjust 等一串合作方。",
+          "en": "OpenAI also expanded measurement tools for advertisers, adding partners such as AppsFlyer, Adjust and more.",
+          "tts": "同时，广告主的效果测量工具也扩充了，接入了 Apps Flyer、Adjust 等一串合作方。",
+          "cuts": [
+            [
+              "也扩充了，",
+              "advertisers,"
+            ]
+          ]
+        },
+        {
+          "text": "还在和 DoubleVerify、IAS 试点品牌适配评估，帮广告主看清广告周围是什么内容。",
+          "en": "It's also working with DoubleVerify and IAS on brand suitability pilots, so advertisers can see what surrounds their ads.",
+          "tts": "还在和 Double Verify、I A S 试点品牌适配评估，帮广告主看清广告周围是什么内容。",
+          "cuts": [
+            [
+              "适配评估，",
+              "suitability pilots,"
+            ]
+          ]
+        },
+        {
+          "text": "TechCrunch 说，以后全球推开，广告主就能触达这 12 亿人。",
+          "en": "TechCrunch says that once ads roll out globally, advertisers can reach those 1.2 billion users.",
+          "tts": "TechCrunch 说，以后全球推开，广告主就能触达这十二亿人。"
+        },
+        {
+          "text": "TechCrunch 提到，这一步是在 Meta 推出免费智能体应用 Muse 之后。",
+          "en": "TechCrunch notes the move follows Meta's launch of its free agent app, Muse.",
+          "cuts": [
+            [
+              "TechCrunch 提到，",
+              "TechCrunch notes"
+            ]
+          ]
+        },
+        {
+          "text": "免费的画笔，总得有人买单。",
+          "en": "Someone always pays for the free paintbrush."
+        }
+      ],
+      "refs": [
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/new-chatgpt-ads-format-and-measurement/"
+        },
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/10/05/openai-launches-visual-ads-that-appear-alongside-image-generation-results/"
+        },
+        {
+          "name": "IT之家",
+          "url": "https://www.ithome.com/1/009/901.htm"
+        }
+      ],
+      "snap_url": "https://techcrunch.com/2026/10/05/openai-launches-visual-ads-that-appear-alongside-image-generation-results/"
+    },
+    {
+      "headline": "ChatGPT 欧盟文本加水印",
+      "bar_label": "欧盟水印",
+      "org": "OpenAI",
+      "source": "OpenAI · The Decoder",
+      "source_short": "The Decoder",
+      "date": "10月5日",
+      "rundown_key": "OpenAI 给欧盟文本加水印",
+      "vhook": "改写 25%，检测率剩 17%",
+      "vbigs": [
+        {
+          "line": 4,
+          "n": "95%",
+          "small": "检测率",
+          "d": "心理学文本 · 400 token · 1% 误报率"
+        },
+        {
+          "line": 5,
+          "n": "17%",
+          "small": "改写之后",
+          "d": "替换 25% 的词后还能测出的比例"
+        }
+      ],
+      "points": [
+        "欧盟文本加隐形水印",
+        "API 全球可选开启",
+        "心理学文本约 95%",
+        "改写 25% 剩 17%"
+      ],
+      "lines": [
+        {
+          "text": "第二件，在欧盟用 ChatGPT 写出来的字，以后会带一个看不见的水印。",
+          "en": "Second, in the EU, text written with ChatGPT will soon carry an invisible watermark.",
+          "expr": "吃惊",
+          "point": 0,
+          "cuts": [
+            [
+              "写出来的字，",
+              "with ChatGPT"
+            ]
+          ]
+        },
+        {
+          "text": "OpenAI 10 月 5 日说，为了符合欧盟 AI 法案，未来几周会给欧盟的 ChatGPT 和 Codex 文本输出加水印。",
+          "en": "On October 5, OpenAI said that to comply with the EU AI Act, over the coming weeks, in the EU, it will watermark text output from ChatGPT and Codex.",
+          "tts": "OpenAI 十月五日说，为了符合欧盟 AI 法案，未来几周会给欧盟的 ChatGPT 和 Codex 文本输出加水印。",
+          "cuts": [
+            [
+              "AI 法案，",
+              "EU AI Act,"
+            ]
+          ]
+        },
+        {
+          "text": "怎么做到的？这个技术叫 textGrain，在模型挑词的时候藏进一个统计信号。",
+          "en": "How? The technique is called textGrain. It hides a statistical signal in the model's word choices.",
+          "tts": "怎么做到的？这个技术叫 text Grain，在模型挑词的时候藏进一个统计信号。",
+          "cuts": [
+            [
+              "textGrain，",
+              "textGrain."
+            ]
+          ]
+        },
+        {
+          "text": "API 客户全球都能选择开启，默认是关的。",
+          "en": "API customers worldwide can opt in. It's off by default.",
+          "point": 1
+        },
+        {
+          "text": "官方测试，心理学类文本、误报率压到 1% 时，400 个 token 的段落大约 95% 能测出来。",
+          "en": "In OpenAI's tests on psychology text, at a 1% false positive rate, 400-token passages were detected about 95% of the time.",
+          "tts": "官方测试，心理学类文本、误报率压到百分之一时，四百个 token 的段落大约百分之九十五能测出来。",
+          "point": 2,
+          "cuts": [
+            [
+              "压到 1% 时，",
+              "false positive rate,"
+            ]
+          ]
+        },
+        {
+          "text": "但改写会削弱它：替换 25% 的词，检测率就掉到 17%。",
+          "en": "But rewriting weakens it: replace 25% of the words, and detection drops to 17%.",
+          "tts": "但改写会削弱它：替换百分之二十五的词，检测率就掉到百分之十七。",
+          "point": 3
+        },
+        {
+          "text": "数学类的文本更难测，400 个 token 只有约 60%。",
+          "en": "Math text is harder: at 400 tokens, only about 60% is detected.",
+          "tts": "数学类的文本更难测，四百个 token 只有约百分之六十。"
+        },
+        {
+          "text": "检测工具一开始只给通过审批的研究人员和专业机构。",
+          "en": "At first, the detector will only go to approved researchers and expert organizations."
+        },
+        {
+          "text": "The Decoder 对比说，Anthropic 给 Claude 加的水印是全球强制的，OpenAI 的 API 可以不开。",
+          "en": "The Decoder points out that Anthropic, for Claude, uses a watermark that is mandatory worldwide, while OpenAI's API version is optional.",
+          "cuts": [
+            [
+              "对比说，",
+              "points out that"
+            ],
+            [
+              "全球强制的，",
+              "mandatory worldwide,"
+            ]
+          ]
+        },
+        {
+          "text": "水印防得住复制粘贴，防不住动手改。",
+          "en": "A watermark can catch copy and paste, but not someone who edits."
+        }
+      ],
+      "refs": [
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/eu-text-provenance/"
+        },
+        {
+          "name": "The Decoder",
+          "url": "https://the-decoder.com/openai-will-watermark-chatgpt-text-in-the-eu-but-makes-it-optional-for-api-users-worldwide/"
+        },
+        {
+          "name": "IT之家",
+          "url": "https://www.ithome.com/1/009/903.htm"
+        }
+      ],
+      "snap_url": "https://the-decoder.com/openai-will-watermark-chatgpt-text-in-the-eu-but-makes-it-optional-for-api-users-worldwide/"
+    },
+    {
+      "headline": "Reflection 发布 Beam",
+      "bar_label": "Beam 模型",
+      "org": "Reflection AI",
+      "source": "Reflection AI · Semafor",
+      "source_short": "Reflection AI",
+      "date": "10月5日",
+      "rundown_key": "Reflection 发布开放模型 Beam",
+      "vhook": "501B 参数，每次只动 23B",
+      "vbigs": [
+        {
+          "line": 0,
+          "n": "501B",
+          "small": "总参数",
+          "d": "混合专家 · 每次只激活 23B"
+        }
+      ],
+      "points": [
+        "总参数 501B",
+        "每次激活 23B",
+        "Apache 2.0 许可",
+        "权重本月晚些放出"
+      ],
+      "lines": [
+        {
+          "text": "第三件，美国创业公司 Reflection AI 发布了第一个开放权重模型 Beam，总参数 501B。",
+          "en": "Third, US startup Reflection AI unveiled its first open-weight model, Beam, with 501B total parameters.",
+          "tts": "第三件，美国创业公司 Reflection AI 发布了第一个开放权重模型 Beam，总参数五千零一十亿。",
+          "expr": "吃惊",
+          "point": 0,
+          "cuts": [
+            [
+              "Reflection AI ",
+              "Reflection AI "
+            ],
+            [
+              "Beam，",
+              "Beam,"
+            ]
+          ]
+        },
+        {
+          "text": "10 月 5 日发布，混合专家结构，每次只激活 23B。",
+          "en": "Released on October 5, it's a mixture of experts that activates only 23B parameters at a time.",
+          "tts": "十月五日发布，混合专家结构，每次只激活二百三十亿。",
+          "point": 1
+        },
+        {
+          "text": "官方称，高难度推理测试上它的分数和 GLM-5.2 相当，推理算力却少用三到四倍。",
+          "en": "Reflection says that on hard reasoning tests, it scores comparably to GLM-5.2 while using three to four times less inference compute.",
+          "tts": "官方称，高难度推理测试上它的分数和 GLM 五点二相当，推理算力却少用三到四倍。",
+          "cuts": [
+            [
+              "相当，",
+              "GLM-5.2"
+            ]
+          ]
+        },
+        {
+          "text": "编程和智能体任务上，接近阿里的 Qwen 3.8-Max。",
+          "en": "On coding and agent tasks, it approaches Alibaba's Qwen 3.8-Max.",
+          "tts": "编程和智能体任务上，接近阿里的 Qwen 三点八 Max。"
+        },
+        {
+          "text": "预训练读了 23.8T token，强化学习用 1.05 万块 GB300 跑了四周。",
+          "en": "It was pretrained on 23.8T tokens, and reinforcement learning ran on 10.5K GB300 GPUs for four weeks.",
+          "tts": "预训练读了二十三点八 T 的 token，强化学习用一万零五百块 GB 三百跑了四周。",
+          "cuts": [
+            [
+              "token，",
+              "tokens,"
+            ]
+          ]
+        },
+        {
+          "text": "许可证是 Apache 2.0。",
+          "en": "The license is Apache 2.0.",
+          "tts": "许可证是 Apache 二点零。",
+          "point": 2
+        },
+        {
+          "text": "但权重还没放出来，官方说这个月晚些时候发。",
+          "en": "But the weights aren't out yet. Reflection says they're coming later this month.",
+          "point": 3
+        },
+        {
+          "text": "Semafor 提到，Qwen 3.8-Max 本身也还落后 OpenAI 和 Anthropic 的顶级闭源模型。",
+          "en": "Semafor notes that Qwen 3.8-Max itself still trails OpenAI's and Anthropic's top closed models.",
+          "tts": "Semafor 提到，Qwen 三点八 Max 本身也还落后 OpenAI 和 Anthropic 的顶级闭源模型。",
+          "cuts": [
+            [
+              "本身也还落后",
+              "itself still trails"
+            ]
+          ]
+        },
+        {
+          "text": "Semafor 还报道，Reflection 的投资方有英伟达、红杉和花旗，6 月那轮融资前估值 250 亿美元。",
+          "en": "Semafor also reports Reflection is backed by Nvidia, Sequoia and Citigroup, and its June round valued it at $25 billion pre-money.",
+          "tts": "Semafor 还报道，Reflection 的投资方有英伟达、红杉和花旗，六月那轮融资前估值二百五十亿美元。",
+          "cuts": [
+            [
+              "Semafor 还报道，",
+              "Semafor also reports"
+            ],
+            [
+              "红杉和花旗，",
+              "Citigroup,"
+            ]
+          ]
+        },
+        {
+          "text": "开源的门开了，钥匙还得等几周。",
+          "en": "The open door is there, but the key is still a few weeks away."
+        }
+      ],
+      "refs": [
+        {
+          "name": "Reflection AI",
+          "url": "https://reflection.ai/blog/introducing-beam"
+        },
+        {
+          "name": "Semafor",
+          "url": "https://www.semafor.com/article/10/05/2026/reflection-ai-unveils-an-open-source-answer-to-chinese-labs"
+        }
+      ],
+      "snap_url": "https://reflection.ai/blog/introducing-beam"
+    },
+    {
+      "headline": "维基抓到疑似 OpenAI 智能体",
+      "bar_label": "维基百科",
+      "org": "Wikimedia",
+      "source": "Wikimedia Foundation · The Verge",
+      "source_short": "Wikimedia",
+      "date": "10月5日",
+      "rundown_key": "维基百科抓到疑似 OpenAI 的智能体",
+      "vhook": "数百万次自动请求",
+      "points": [
+        "数百万次自动请求",
+        "想攻破 Etherpad 没成",
+        "可能拖累 5 月宕机",
+        "没发现数据被攻破"
+      ],
+      "lines": [
+        {
+          "text": "第四件，维基百科背后的维基媒体基金会说，它发现了一批疑似 OpenAI 运营的智能体。",
+          "en": "Fourth, the Wikimedia Foundation, which runs Wikipedia, says it found agents it believes are operated by OpenAI.",
+          "expr": "认真",
+          "cuts": [
+            [
+              "基金会说，",
+              "Wikipedia,"
+            ]
+          ]
+        },
+        {
+          "text": "10 月 5 日的博客里写，这些智能体对公开接口发了数百万次自动请求，抓了数百万个页面，主要是 Wikidata 和 Commons。",
+          "en": "Its October 5 blog post says the agents made millions of automated requests to public APIs and crawled millions of pages, mainly from Wikidata and Commons.",
+          "tts": "十月五日的博客里写，这些智能体对公开接口发了数百万次自动请求，抓了数百万个页面，主要是 Wikidata 和 Commons。",
+          "point": 0,
+          "cuts": [
+            [
+              "博客里写，",
+              "blog post says"
+            ],
+            [
+              "自动请求，",
+              "public APIs"
+            ],
+            [
+              "页面，",
+              "pages,"
+            ]
+          ]
+        },
+        {
+          "text": "它们还在沙盒里做测试编辑，改过一个引用工具的配置，基金会认为是想拿它当代理去抓别的网站。",
+          "en": "They also made test edits in sandboxes and changed a citation tool's configuration, which the foundation believes was meant to use it as a proxy for fetching other sites.",
+          "cuts": [
+            [
+              "测试编辑，",
+              "sandboxes"
+            ],
+            [
+              "配置，",
+              "configuration,"
+            ]
+          ]
+        },
+        {
+          "text": "还有几次想攻破公开的 Etherpad，都没成功。",
+          "en": "There were also a few attempts to compromise the public Etherpad, all unsuccessful.",
+          "point": 1
+        },
+        {
+          "text": "还有几十万次数据查询，打在 Wikidata 查询服务上。",
+          "en": "Hundreds of thousands of data queries also hit the Wikidata Query Service."
+        },
+        {
+          "text": "基金会说，这些流量可能促成了 5 月 Wikidata 查询服务的一次部分宕机。",
+          "en": "The foundation says this traffic may have contributed, in May, to a partial outage of the Wikidata Query Service.",
+          "tts": "基金会说，这些流量可能促成了五月 Wikidata 查询服务的一次部分宕机。",
+          "point": 2,
+          "cuts": [
+            [
+              "5 月",
+              "in May,"
+            ]
+          ]
+        },
+        {
+          "text": "好消息是，没发现系统或数据被攻破。",
+          "en": "The good news: it found no evidence that its systems or data were compromised.",
+          "point": 3
+        },
+        {
+          "text": "注意，“疑似 OpenAI”是基金会自己的判断。",
+          "en": "Note: \"believed to be OpenAI's\" is the foundation's own assessment."
+        },
+        {
+          "text": "智能体出门干活，也得先学会敲门。",
+          "en": "Agents that go out to work need to learn to knock first."
+        }
+      ],
+      "refs": [
+        {
+          "name": "Wikimedia Foundation",
+          "url": "https://wikimediafoundation.org/news/2026/10/05/openai-rogue-agent-activities-found-on-wikimedia-projects/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/news/1004929/wikipedia-openai-rogue-bots-wikimedia-foundation-outage"
+        }
+      ],
+      "snap_url": "https://wikimediafoundation.org/news/2026/10/05/openai-rogue-agent-activities-found-on-wikimedia-projects/"
+    },
+    {
+      "headline": "Reka 发布全能模型 Rho-1",
+      "bar_label": "Reka Rho-1",
+      "org": "Reka AI",
+      "source": "Reka AI · The Decoder",
+      "source_short": "Reka AI",
+      "date": "10月5日",
+      "rundown_key": "Reka 一个模型包办图文视频",
+      "vhook": "蒸馏版一秒出 5.3 秒视频",
+      "vbigs": [
+        {
+          "line": 0,
+          "n": "19B",
+          "small": "参数",
+          "d": "文字、图像、视频、机器人动作一个模型"
+        }
+      ],
+      "points": [
+        "19B 一个模型全包",
+        "不调工具不接外部模型",
+        "320 张 H100 训三个月",
+        "研究预览版"
+      ],
+      "lines": [
+        {
+          "text": "第五件，一个 19B 的模型，文字、图片、视频、机器人动作全包了。",
+          "en": "Fifth, a single 19B model that handles text, images, video, and robot actions.",
+          "tts": "第五件，一个一百九十亿参数的模型，文字、图片、视频、机器人动作全包了。",
+          "expr": "吃惊",
+          "point": 0
+        },
+        {
+          "text": "Reka AI 10 月 5 日发布了 Rho-1，把这些全变成 token，放进同一个网络。",
+          "en": "Reka AI released Rho-1 on October 5. It turns all of these into tokens inside one network.",
+          "tts": "Reka AI 十月五日发布了 Rho 1，把这些全变成 token，放进同一个网络。"
+        },
+        {
+          "text": "The Decoder 说，它不调用工具，也不接外部模型。",
+          "en": "The Decoder says it uses no tool calls or external models.",
+          "point": 1
+        },
+        {
+          "text": "训练只用了 320 张 H100，大约三个月。",
+          "en": "Training used just 320 H100 GPUs for about three months.",
+          "tts": "训练只用了三百二十张 H 一百，大约三个月。",
+          "point": 2
+        },
+        {
+          "text": "官方内部测试里，它的蒸馏版大约一秒就能交出一段 5.3 秒的视频。",
+          "en": "In Reka's internal tests, its distilled version returned a 5.3-second video clip in about a second.",
+          "tts": "官方内部测试里，它的蒸馏版大约一秒就能交出一段五点三秒的视频。",
+          "cuts": [
+            [
+              "蒸馏版",
+              "distilled version"
+            ]
+          ]
+        },
+        {
+          "text": "机器人数据从哪来？配一个逆动力学模型，从普通网络视频里提取动作。",
+          "en": "Where does robot data come from? An inverse dynamics model pulls actions out of ordinary web videos.",
+          "cuts": [
+            [
+              "从哪来？",
+              "come from?"
+            ]
+          ]
+        },
+        {
+          "text": "现在只是研究预览版，官方没说开源。",
+          "en": "It's only a research preview, and Reka hasn't said anything about open weights.",
+          "point": 3
+        },
+        {
+          "text": "视频分辨率目前最高 672×384，官方也承认，换着花样提示时一致性还不稳。",
+          "en": "Video is currently capped at 672×384, and Reka admits consistency across varied prompts is still brittle.",
+          "tts": "视频分辨率目前最高六百七十二乘三百八十四，官方也承认，换着花样提示时一致性还不稳。",
+          "cuts": [
+            [
+              "672×384，",
+              "672×384,"
+            ]
+          ]
+        },
+        {
+          "text": "小模型想当全能选手，还得看实测。",
+          "en": "A small model wants to do it all. Real-world tests will tell."
+        }
+      ],
+      "refs": [
+        {
+          "name": "Reka AI",
+          "url": "https://reka.ai/news/rho-1-collapsing-the-multimodal-stack"
+        },
+        {
+          "name": "The Decoder",
+          "url": "https://the-decoder.com/reka-ais-omni-model-rho-1-handles-text-images-video-and-robot-control-in-a-single-model/"
+        }
+      ],
+      "snap_url": "https://reka.ai/news/rho-1-collapsing-the-multimodal-stack"
+    },
+    {
+      "headline": "Cohere 推出 North 2",
+      "bar_label": "North 2",
+      "org": "Cohere",
+      "source": "Cohere · VentureBeat",
+      "source_short": "Cohere",
+      "date": "10月5日",
+      "rundown_key": "Cohere 推出 North 2",
+      "vhook": "用户配额加全公司上限",
+      "points": [
+        "重做智能体框架",
+        "跨会话保留上下文",
+        "配额和花费上限",
+        "可完全离线部署"
+      ],
+      "lines": [
+        {
+          "text": "第六件，企业用 AI 智能体最怕两件事：账单失控，和每次都从头来。",
+          "en": "Sixth, companies using AI agents fear two things: runaway bills, and starting from scratch every time.",
+          "expr": "认真",
+          "cuts": [
+            [
+              "两件事：",
+              "two things:"
+            ]
+          ]
+        },
+        {
+          "text": "Cohere 10 月 5 日发布了企业智能体平台 North 2，重做了智能体的执行框架。",
+          "en": "On October 5, Cohere released its enterprise agent platform, North 2, with a redesigned agent harness.",
+          "tts": "Cohere 十月五日发布了企业智能体平台 North 2，重做了智能体的执行框架。",
+          "point": 0,
+          "cuts": [
+            [
+              "North 2，",
+              "North 2,"
+            ]
+          ]
+        },
+        {
+          "text": "Cohere 对 VentureBeat 说，上下文能在不同会话和智能体之间保留更久，不用每次冷启动。",
+          "en": "Cohere told VentureBeat that context, across sessions and agents, now persists longer, so they don't start cold each time.",
+          "point": 1,
+          "cuts": [
+            [
+              "VentureBeat 说，",
+              "VentureBeat"
+            ],
+            [
+              "保留更久，",
+              "persists longer,"
+            ]
+          ]
+        },
+        {
+          "text": "管理员能设速率限制、用户配额和全公司上限，还能看到每个智能体用了多少 token。",
+          "en": "Admins can set rate limits, user quotas, and company-wide caps, and see how many tokens each agent uses.",
+          "point": 2,
+          "cuts": [
+            [
+              "全公司上限，",
+              "company-wide caps,"
+            ]
+          ]
+        },
+        {
+          "text": "部署可以在云上、本地，也可以完全离线。",
+          "en": "It deploys in the cloud, on premises, or fully air-gapped.",
+          "point": 3
+        },
+        {
+          "text": "价格没公开，按部署规模和复杂度来谈。",
+          "en": "Pricing isn't public. It's based on the scale and complexity of each deployment."
+        },
+        {
+          "text": "企业买 AI，第一个问题常常是：会不会超支。",
+          "en": "When companies buy AI, the first question is often: will it blow the budget?"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Cohere",
+          "url": "https://cohere.com/blog/introducing-north-2"
+        },
+        {
+          "name": "VentureBeat",
+          "url": "https://venturebeat.com/orchestration/coheres-north-2-puts-ai-agents-on-a-budget-and-gives-them-a-memory"
+        },
+        {
+          "name": "SiliconANGLE",
+          "url": "https://siliconangle.com/2026/10/05/cohere-unveils-north-2-ai-agent-platform-with-rebuilt-orchestration-and-token-spending-caps/"
+        }
+      ],
+      "snap_url": "https://cohere.com/blog/introducing-north-2"
+    },
+    {
+      "headline": "挖漏洞的开源模型 apex",
+      "bar_label": "apex-flash-1",
+      "org": "Cantina",
+      "source": "Cantina · Hugging Face",
+      "source_short": "Hugging Face",
+      "date": "10月1日",
+      "rundown_key": "专挖漏洞的开源模型 apex-flash-1",
+      "vhook": "跑完 60 题只花 2.38 美元",
+      "vbigs": [
+        {
+          "line": 0,
+          "n": "40/60",
+          "small": "解出题数",
+          "d": "Cantina 内部留出题"
+        },
+        {
+          "line": 6,
+          "n": "$2.38",
+          "small": "跑完 60 题",
+          "d": "Opus 5 High 约 74.68 美元"
+        }
+      ],
+      "points": [
+        "60 题解出 40 题",
+        "基于 GLM-5.3-Flash",
+        "MIT 许可开源",
+        "60 题约 2.38 美元"
+      ],
+      "lines": [
+        {
+          "text": "第七件，一个专门挖安全漏洞的开源模型，60 道题解出 40 道。",
+          "en": "Seventh, an open model built for hunting security bugs solved 40 of 60 tasks.",
+          "tts": "第七件，一个专门挖安全漏洞的开源模型，六十道题解出四十道。",
+          "expr": "吃惊",
+          "point": 0
+        },
+        {
+          "text": "安全公司 Cantina 和 Yeta 合作，10 月 1 日发布了 apex-flash-1，底子是智谱的 GLM-5.3-Flash。",
+          "en": "Security firm Cantina, with Yeta, released apex-flash-1 on October 1. It's built on Zhipu's GLM-5.3-Flash.",
+          "tts": "安全公司 Cantina 和 Yeta 合作，十月一日发布了 apex flash 1，底子是智谱的 GLM 五点三 Flash。",
+          "point": 1,
+          "cuts": [
+            [
+              "合作，",
+              "with Yeta,"
+            ],
+            [
+              "apex-flash-1，",
+              "October 1."
+            ]
+          ]
+        },
+        {
+          "text": "怎么做到的？把 50 个真实漏洞案例做成 150 道训练题，用强化学习微调。",
+          "en": "How? It turned 50 real vulnerability cases into 150 training tasks and fine-tuned with reinforcement learning.",
+          "tts": "怎么做到的？把五十个真实漏洞案例做成一百五十道训练题，用强化学习微调。",
+          "cuts": [
+            [
+              "训练题，",
+              "training tasks"
+            ]
+          ]
+        },
+        {
+          "text": "官方称，在 60 道内部留出题上通过率 66.7%，基座模型是 60%。",
+          "en": "Cantina says that on 60 held-out internal tasks, it scored 66.7%, versus 60% for the base model.",
+          "tts": "官方称，在六十道内部留出题上通过率百分之六十六点七，基座模型是百分之六十。"
+        },
+        {
+          "text": "Claude Opus 5 High 是 71.7%，还是更高。",
+          "en": "Claude Opus 5 High scored 71.7%, still higher.",
+          "tts": "Claude Opus 五 High 是百分之七十一点七，还是更高。"
+        },
+        {
+          "text": "权重放在 Hugging Face，MIT 许可。",
+          "en": "The weights are on Hugging Face under the MIT license.",
+          "tts": "权重放在 Hugging Face，M I T 许可。",
+          "point": 2
+        },
+        {
+          "text": "但跑完 60 道题，它只花约 2.38 美元，Opus 5 High 约 74.68 美元。",
+          "en": "But it ran all 60 tasks for about $2.38, versus about $74.68 for Opus 5 High.",
+          "tts": "但跑完六十道题，它只花约二点三八美元，Opus 五 High 约七十四点六八美元。",
+          "point": 3,
+          "cuts": [
+            [
+              "2.38 美元，",
+              "$2.38,"
+            ]
+          ]
+        },
+        {
+          "text": "注意，这是 Cantina 自己的内部评测。",
+          "en": "Note: this is Cantina's own internal evaluation."
+        },
+        {
+          "text": "便宜的模型干活，贵的模型指挥，可能会越来越常见。",
+          "en": "Cheap models doing the work while pricey ones direct it may become more common."
+        }
+      ],
+      "refs": [
+        {
+          "name": "Hugging Face",
+          "url": "https://huggingface.co/cantina-security/apex-flash-1"
+        },
+        {
+          "name": "Cantina",
+          "url": "https://www.cantina.security/apex-flash"
+        },
+        {
+          "name": "RuntimeWire",
+          "url": "https://runtimewire.com/article/cantina-apex-flash-open-weights-security-model"
+        }
+      ],
+      "snap_url": "https://huggingface.co/cantina-security/apex-flash-1"
+    }
+  ],
+  "closing": [
+    {
+      "text": "今天就这些，来源都在简介里。",
+      "en": "That's all for today. Sources are in the description.",
+      "expr": "开心"
+    },
+    {
+      "text": "祝你今天顺顺利利，我们明天见。",
+      "en": "Have a smooth day, and see you tomorrow.",
+      "expr": "开心"
+    }
+  ],
+  "cover": {
+    "item": 1,
+    "line1": "ChatGPT 生图插广告",
+    "line2": "免费画笔谁买单？",
+    "mood": "吃惊"
+  },
+  "titles": {
+    "bilibili": "10月6日AI圈7件事：ChatGPT生图时测试图片广告，OpenAI给欧盟文本加隐形水印",
+    "douyin": "ChatGPT生图测广告，欧盟文本加水印",
+    "xiaohongshu": "ChatGPT生图要插广告！AI圈7件事",
+    "weixin_channels": "ChatGPT测试生图广告"
+  },
+  "vertical": {
+    "cuts": {
+      "还有专挖漏洞的开源模型 apex-flash-1。": [
+        [
+          "开源模型",
+          "finding bugs,"
+        ]
+      ],
+      "接入了 AppsFlyer、Adjust 等一串合作方。": [
+        [
+          "AppsFlyer、",
+          "AppsFlyer,"
+        ]
+      ],
+      "还在和 DoubleVerify、IAS 试点品牌适配评估，": [
+        [
+          "IAS",
+          "IAS"
+        ]
+      ],
+      "第二件，在欧盟用 ChatGPT 写出来的字，": [
+        [
+          "在欧盟",
+          "in the EU,"
+        ]
+      ],
+      "400 个 token 的段落大约 95% 能测出来。": [
+        [
+          "的段落",
+          "passages"
+        ]
+      ],
+      "数学类的文本更难测，400 个 token 只有约 60%。": [
+        [
+          "更难测，",
+          "harder:"
+        ]
+      ],
+      "官方称，高难度推理测试上它的分数和 GLM-5.2 相当，": [
+        [
+          "测试上",
+          "reasoning tests,"
+        ]
+      ],
+      "OpenAI 和 Anthropic 的顶级闭源模型。": [
+        [
+          "的顶级",
+          "top"
+        ]
+      ],
+      "Reflection 的投资方有英伟达、红杉和花旗，": [
+        [
+          "投资方有",
+          "backed by"
+        ]
+      ],
+      "第四件，维基百科背后的维基媒体基金会说，": [
+        [
+          "第四件，",
+          "Fourth,"
+        ]
+      ],
+      "它发现了一批疑似 OpenAI 运营的智能体。": [
+        [
+          "一批",
+          "found"
+        ]
+      ],
+      "这些智能体对公开接口发了数百万次自动请求，": [
+        [
+          "这些智能体",
+          "the agents"
+        ]
+      ],
+      "还有几次想攻破公开的 Etherpad，都没成功。": [
+        [
+          "想攻破",
+          "to compromise"
+        ]
+      ],
+      "配一个逆动力学模型，从普通网络视频里提取动作。": [
+        [
+          "模型，",
+          "dynamics model"
+        ]
+      ],
+      "官方也承认，换着花样提示时一致性还不稳。": [
+        [
+          "官方也承认，",
+          "admits"
+        ]
+      ],
+      "第六件，企业用 AI 智能体最怕两件事：": [
+        [
+          "企业用 AI 智能体",
+          "AI agents"
+        ]
+      ],
+      "Cohere 10 月 5 日发布了企业智能体平台 North 2，": [
+        [
+          "发布了",
+          "released"
+        ]
+      ],
+      "第七件，一个专门挖安全漏洞的开源模型，60 道题解出 40 道。": [
+        [
+          "第七件，",
+          "Seventh,"
+        ],
+        [
+          "开源模型，",
+          "security bugs"
+        ]
+      ],
+      "Claude Opus 5 High 是 71.7%，还是更高。": [
+        [
+          "High",
+          "High"
+        ]
+      ],
+      "官方称，在 60 道内部留出题上通过率 66.7%，": [
+        [
+          "留出题上",
+          "internal tasks,"
+        ]
+      ],
+      "要在生图功能里测试一种新的图片广告。": [
+        [
+          "生图功能里",
+          "image generation,"
+        ]
+      ],
+      "官方称，ChatGPT 每周覆盖 12 亿用户。": [
+        [
+          "官方称，",
+          "OpenAI says"
+        ]
+      ],
+      "同时，广告主的效果测量工具也扩充了，": [
+        [
+          "同时，",
+          "also"
+        ]
+      ],
+      "这一步是在 Meta 推出免费智能体应用 Muse 之后。": [
+        [
+          "推出",
+          "Meta's launch"
+        ]
+      ],
+      "未来几周会给欧盟的 ChatGPT 和 Codex 文本输出加水印。": [
+        [
+          "欧盟的",
+          "in the EU,"
+        ]
+      ],
+      "检测工具一开始只给通过审批的研究人员和专业机构。": [
+        [
+          "一开始",
+          "the detector"
+        ]
+      ],
+      "Anthropic 给 Claude 加的水印是全球强制的，": [
+        [
+          "Claude",
+          "for Claude,"
+        ]
+      ],
+      "强化学习用 1.05 万块 GB300 跑了四周。": [
+        [
+          "GB300",
+          "GPUs"
+        ]
+      ],
+      "基金会说，这些流量可能促成了 5 月": [
+        [
+          "这些流量",
+          "this traffic"
+        ]
+      ],
+      "文字、图片、视频、机器人动作全包了。": [
+        [
+          "视频、",
+          "video,"
+        ]
+      ],
+      "把这些全变成 token，放进同一个网络。": [
+        [
+          "token，",
+          "tokens"
+        ]
+      ],
+      "训练只用了 320 张 H100，大约三个月。": [
+        [
+          "H100，",
+          "GPUs"
+        ]
+      ],
+      "上下文能在不同会话和智能体之间保留更久，": [
+        [
+          "智能体之间",
+          "and agents,"
+        ]
+      ]
+    }
+  }
+}

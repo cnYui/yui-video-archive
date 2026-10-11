@@ -1,0 +1,368 @@
+[
+ {
+  "id": "N01",
+  "scene": "S01",
+  "zh": "同一个 Claude Code，用得越久，越容易犯糊涂。",
+  "optional": false
+ },
+ {
+  "id": "N02",
+  "scene": "S01",
+  "zh": "不是它变笨了，是桌子堆满了。",
+  "optional": false
+ },
+ {
+  "id": "N03",
+  "scene": "S01",
+  "zh": "官方最佳实践里写：大部分建议，都围绕一个限制。",
+  "optional": false
+ },
+ {
+  "id": "N04",
+  "scene": "S01",
+  "zh": "上下文窗口填得很快，越满，表现越差。",
+  "optional": false
+ },
+ {
+  "id": "N05",
+  "scene": "S01",
+  "zh": "这期讲三个命令：/compact，/clear，/context。",
+  "optional": false
+ },
+ {
+  "id": "N06",
+  "scene": "S01",
+  "zh": "看懂它们，用量也能省下来。",
+  "optional": false
+ },
+ {
+  "id": "N07",
+  "scene": "S02",
+  "zh": "这期的内容，出自官方入门课的“上下文管理”那一课，加上官方文档。",
+  "optional": false
+ },
+ {
+  "id": "N08",
+  "scene": "S03",
+  "zh": "先复习一下：Claude 有一张书桌，学名叫上下文窗口。",
+  "optional": false
+ },
+ {
+  "id": "N09",
+  "scene": "S03",
+  "zh": "官方术语表管它叫“工作记忆”。",
+  "optional": false
+ },
+ {
+  "id": "N10",
+  "scene": "S03",
+  "zh": "你说的话，它读的文件，命令的输出，全都摆在桌上。",
+  "optional": false
+ },
+ {
+  "id": "N11",
+  "scene": "S03",
+  "zh": "而且你还没开口，桌上就已经不是空的了。",
+  "optional": false
+ },
+ {
+  "id": "N12",
+  "scene": "S03",
+  "zh": "CLAUDE.md、它自己记的笔记、技能的说明，开工前就先摆上了。",
+  "optional": false
+ },
+ {
+  "id": "N13",
+  "scene": "S03",
+  "zh": "想知道桌上到底摆了什么？后面有命令。",
+  "optional": false
+ },
+ {
+  "id": "N14",
+  "scene": "S04",
+  "zh": "桌子是有限的。装满了怎么办？",
+  "optional": false
+ },
+ {
+  "id": "N15",
+  "scene": "S04",
+  "zh": "它会自动收拾，官方叫自动压缩。",
+  "optional": false
+ },
+ {
+  "id": "N16",
+  "scene": "S04",
+  "zh": "先把旧的命令输出清掉；不够，再把整段对话总结成摘要。",
+  "optional": false
+ },
+ {
+  "id": "N17",
+  "scene": "S04",
+  "zh": "你的请求和关键代码会留下，但很早交代的详细指令，可能就丢了。",
+  "optional": false
+ },
+ {
+  "id": "N18",
+  "scene": "S04",
+  "zh": "所以，聊得越长，越要提防它“忘事”。",
+  "optional": false
+ },
+ {
+  "id": "N19",
+  "scene": "S04",
+  "zh": "而且你每发一句话，它都要带着整段对话再看一遍。",
+  "optional": false
+ },
+ {
+  "id": "N20",
+  "scene": "S04",
+  "zh": "桌子越满，用量也涨得越快。",
+  "optional": false
+ },
+ {
+  "id": "N21",
+  "scene": "S05",
+  "zh": "第一个命令，/compact，手动收拾。",
+  "optional": false
+ },
+ {
+  "id": "N22",
+  "scene": "S05",
+  "zh": "它把到目前为止的对话，压成一份摘要，接着干。",
+  "optional": false
+ },
+ {
+  "id": "N23",
+  "scene": "S05",
+  "zh": "好处是，你可以告诉它留什么。",
+  "optional": false
+ },
+ {
+  "id": "N24",
+  "scene": "S05",
+  "zh": "比如 bug 已经查完，现在只关心 API 的改动。",
+  "optional": false
+ },
+ {
+  "id": "N25",
+  "scene": "S05",
+  "zh": "就写：/compact 重点留 API 的改动。",
+  "optional": false
+ },
+ {
+  "id": "N26",
+  "scene": "S05",
+  "zh": "官方进阶课管这个叫：给上下文握方向盘。",
+  "optional": false
+ },
+ {
+  "id": "N27",
+  "scene": "S05",
+  "zh": "只想压一部分？连按两下 Esc，选 Summarize from here。",
+  "optional": true
+ },
+ {
+  "id": "N28",
+  "scene": "S05",
+  "zh": "想每次都留住某些东西，在 CLAUDE.md 里写“压缩时的要求”。",
+  "optional": true
+ },
+ {
+  "id": "N29",
+  "scene": "S05",
+  "zh": "注意，压缩是摘要，不是原样保留。",
+  "optional": false
+ },
+ {
+  "id": "N30",
+  "scene": "S06",
+  "zh": "第二个，/clear，直接换一张空桌子。",
+  "optional": false
+ },
+ {
+  "id": "N31",
+  "scene": "S06",
+  "zh": "对话清零，CLAUDE.md 照常加载。",
+  "optional": false
+ },
+ {
+  "id": "N32",
+  "scene": "S06",
+  "zh": "旧的对话没删，/resume 能找回来。",
+  "optional": false
+ },
+ {
+  "id": "N33",
+  "scene": "S06",
+  "zh": "什么时候用？开始一个新功能，别让上一段对话带偏它。",
+  "optional": false
+ },
+ {
+  "id": "N34",
+  "scene": "S06",
+  "zh": "还有一种情况：同一个问题纠正了两次，它还是不对。",
+  "optional": false
+ },
+ {
+  "id": "N35",
+  "scene": "S06",
+  "zh": "桌上全是失败的尝试，别再纠正了：/clear，换个更具体的提示重来。",
+  "optional": false
+ },
+ {
+  "id": "N36",
+  "scene": "S07",
+  "zh": "第三个，/context，看看桌上摆了什么。",
+  "optional": false
+ },
+ {
+  "id": "N37",
+  "scene": "S07",
+  "zh": "它画一张彩色格子图，告诉你用了多少，哪一类占得最多。",
+  "optional": false
+ },
+ {
+  "id": "N38",
+  "scene": "S07",
+  "zh": "还会给优化建议，比如哪个工具、哪份记忆文件太占地方。",
+  "optional": false
+ },
+ {
+  "id": "N39",
+  "scene": "S07",
+  "zh": "别和 /usage 搞混：/usage 看花了多少钱和额度。",
+  "optional": false
+ },
+ {
+  "id": "N40",
+  "scene": "S07",
+  "zh": "/context 看的是，桌子上摆了什么。",
+  "optional": false
+ },
+ {
+  "id": "N41",
+  "scene": "S08",
+  "zh": "记个口诀：快满了，还要接着干，/compact。",
+  "optional": false
+ },
+ {
+  "id": "N42",
+  "scene": "S08",
+  "zh": "换新活，/clear。要跨对话记住的，写进 CLAUDE.md。",
+  "optional": false
+ },
+ {
+  "id": "N43",
+  "scene": "S08",
+  "zh": "临时问一句，用 /btw，答案不进对话，不占桌子。",
+  "optional": false
+ },
+ {
+  "id": "N44",
+  "scene": "S09",
+  "zh": "再送你四个省桌子的小窍门。",
+  "optional": false
+ },
+ {
+  "id": "N45",
+  "scene": "S09",
+  "zh": "第一，提示写具体。",
+  "optional": false
+ },
+ {
+  "id": "N46",
+  "scene": "S09",
+  "zh": "含糊的提示，Claude 会满项目翻文件，桌子一下就满。",
+  "optional": false
+ },
+ {
+  "id": "N47",
+  "scene": "S09",
+  "zh": "比如“改进这个项目”，不如“给登录函数加输入校验”。",
+  "optional": false
+ },
+ {
+  "id": "N48",
+  "scene": "S09",
+  "zh": "第二，不用的 MCP 服务器，用 /mcp 关掉。",
+  "optional": false
+ },
+ {
+  "id": "N49",
+  "scene": "S09",
+  "zh": "第三，偶尔才用的长说明，做成技能，别全塞进 CLAUDE.md。",
+  "optional": false
+ },
+ {
+  "id": "N50",
+  "scene": "S09",
+  "zh": "第四，翻很多文件的杂活，交给子代理。",
+  "optional": false
+ },
+ {
+  "id": "N51",
+  "scene": "S09",
+  "zh": "它在自己的桌子上翻，只把结论带回来。",
+  "optional": false
+ },
+ {
+  "id": "N52",
+  "scene": "S09",
+  "zh": "想随时盯着用量？可以配一条自定义状态栏，一直显示窗口用了多少。",
+  "optional": true
+ },
+ {
+  "id": "N53",
+  "scene": "S10",
+  "zh": "泼点冷水。",
+  "optional": false
+ },
+ {
+  "id": "N54",
+  "scene": "S10",
+  "zh": "压缩会丢细节，早期交代的规矩，别指望摘要都记得。",
+  "optional": false
+ },
+ {
+  "id": "N55",
+  "scene": "S10",
+  "zh": "重要的规矩写进 CLAUDE.md，压缩后它会从磁盘重新读一遍。",
+  "optional": false
+ },
+ {
+  "id": "N56",
+  "scene": "S10",
+  "zh": "也别见面就 /clear。",
+  "optional": false
+ },
+ {
+  "id": "N57",
+  "scene": "S10",
+  "zh": "一个复杂问题越做越深，前面的历史，就是价值。",
+  "optional": false
+ },
+ {
+  "id": "N58",
+  "scene": "S10",
+  "zh": "官方也说：有时候，就该让上下文积累。",
+  "optional": false
+ },
+ {
+  "id": "N59",
+  "scene": "S11",
+  "zh": "上下文是预算，不是仓库。",
+  "optional": false
+ },
+ {
+  "id": "N60",
+  "scene": "S11",
+  "zh": "快满了就收拾，换新活就清空，随时看一眼。",
+  "optional": false
+ },
+ {
+  "id": "N61",
+  "scene": "S11",
+  "zh": "下一期，讲 CLAUDE.md：给 Claude 写一份入职手册。",
+  "optional": false
+ }
+]

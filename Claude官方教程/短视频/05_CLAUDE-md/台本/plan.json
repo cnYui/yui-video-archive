@@ -1,0 +1,361 @@
+{
+ "layout": "dual",
+ "plan": [
+  {
+   "id": "S1",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "每次从零开始",
+   "credit": "官方教程 第5期",
+   "ranges": [
+    {
+     "src": "a",
+     "in": 9.46,
+     "out": 10.927,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 14.65,
+     "out": 18.313,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 76.95,
+     "out": 81.43,
+     "mute": true
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "a",
+     "in": 4.15,
+     "out": 5.539,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 19.06,
+     "out": 27.281,
+     "mute": true
+    }
+   ],
+   "lines": [
+    {
+     "id": "N01",
+     "a": 0.0
+    },
+    {
+     "id": "N02",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "S2",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "一个文件 + 入职手册",
+   "credit": "官方教程 第5期",
+   "ranges": [
+    {
+     "src": "a",
+     "in": 28.07,
+     "out": 30.579,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 35.15,
+     "out": 40.741,
+     "mute": true
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "a",
+     "in": 31.4,
+     "out": 34.591,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 41.51,
+     "out": 42.992,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 43.25,
+     "out": 46.678,
+     "mute": true
+    }
+   ],
+   "lines": [
+    {
+     "id": "N03",
+     "a": 0.0
+    },
+    {
+     "id": "N04",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "S3",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "里面写什么",
+   "credit": "官方教程 第5期",
+   "ranges": [
+    {
+     "src": "a",
+     "in": 49.13,
+     "out": 53.068,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 55.9,
+     "out": 56.924,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 64.47,
+     "out": 65.868,
+     "mute": true
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "a",
+     "in": 57.18,
+     "out": 63.54,
+     "mute": true
+    }
+   ],
+   "lines": [
+    {
+     "id": "N05",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "S4",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "项目级和用户级",
+   "credit": "官方教程 第5期",
+   "ranges": [
+    {
+     "src": "a",
+     "in": 89.59,
+     "out": 90.45,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 95.9,
+     "out": 98.105,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 101.64,
+     "out": 103.094,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 115.65,
+     "out": 120.08,
+     "mute": true
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "a",
+     "in": 82.29,
+     "out": 88.766,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 98.65,
+     "out": 101.124,
+     "mute": true
+    }
+   ],
+   "lines": [
+    {
+     "id": "N06",
+     "a": 0.0
+    },
+    {
+     "id": "N07",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "S5",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "纠正过的存进记忆",
+   "credit": "官方教程 第5期",
+   "ranges": [
+    {
+     "src": "a",
+     "in": 91.34,
+     "out": 92.864,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 122.15,
+     "out": 126.049,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 130.47,
+     "out": 134.517,
+     "mute": true
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "a",
+     "in": 65.99,
+     "out": 71.969,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 126.33,
+     "out": 129.821,
+     "mute": true
+    }
+   ],
+   "lines": [
+    {
+     "id": "N08",
+     "a": 0.0
+    },
+    {
+     "id": "N09",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "S6",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "@ 引用",
+   "credit": "官方教程 第5期",
+   "ranges": [
+    {
+     "src": "a",
+     "in": 134.8,
+     "out": 137.138,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 141.43,
+     "out": 145.502,
+     "mute": true
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "a",
+     "in": 137.63,
+     "out": 141.011,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 146.18,
+     "out": 149.209,
+     "mute": true
+    }
+   ],
+   "lines": [
+    {
+     "id": "N10",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "S7",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "先别写 + 硬规矩交给 hook",
+   "credit": "官方教程 第5期",
+   "ranges": [
+    {
+     "src": "a",
+     "in": 149.81,
+     "out": 153.031,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 159.49,
+     "out": 163.595,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 170.25,
+     "out": 174.075,
+     "mute": true
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "a",
+     "in": 153.48,
+     "out": 155.016,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 155.28,
+     "out": 159.215,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 164.28,
+     "out": 169.959,
+     "mute": true
+    }
+   ],
+   "lines": [
+    {
+     "id": "N11",
+     "a": 0.0
+    },
+    {
+     "id": "N12",
+     "a": 0.0
+    }
+   ]
+  }
+ ]
+}

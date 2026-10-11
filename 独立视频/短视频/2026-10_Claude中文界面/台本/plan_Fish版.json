@@ -1,0 +1,133 @@
+{
+ "layout": "single",
+ "plan": [
+  {
+   "id": "A1",
+   "type": "card",
+   "kind": "page",
+   "overlay": "page",
+   "name": "语言列表多了中文",
+   "dur": 1.0,
+   "lines": [
+    {
+     "id": "N01",
+     "a": 0.1
+    }
+   ]
+  },
+  {
+   "id": "A2",
+   "type": "card",
+   "kind": "page",
+   "overlay": "page",
+   "name": "KC 晒出选择框",
+   "dur": 1.0,
+   "lines": [
+    {
+     "id": "N02",
+     "a": 0.1
+    }
+   ]
+  },
+  {
+   "id": "A3",
+   "type": "card",
+   "kind": "page",
+   "overlay": "page",
+   "name": "怎么选",
+   "dur": 1.0,
+   "lines": [
+    {
+     "id": "N03",
+     "a": 0.1
+    }
+   ]
+  },
+  {
+   "id": "A4",
+   "type": "card",
+   "kind": "page",
+   "overlay": "page",
+   "name": "官方帮助页只有 11 种",
+   "dur": 1.0,
+   "lines": [
+    {
+     "id": "N04",
+     "a": 0.1
+    },
+    {
+     "id": "N05",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "A5",
+   "type": "card",
+   "kind": "page",
+   "overlay": "page",
+   "name": "KC：重新支持",
+   "dur": 1.0,
+   "lines": [
+    {
+     "id": "N06",
+     "a": 0.1
+    }
+   ]
+  },
+  {
+   "id": "A6",
+   "type": "card",
+   "kind": "page",
+   "overlay": "page",
+   "name": "网友玩笑：钓鱼执法",
+   "dur": 1.0,
+   "lines": [
+    {
+     "id": "N07",
+     "a": 0.1
+    },
+    {
+     "id": "N08",
+     "a": 0.0
+    },
+    {
+     "id": "N09",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "A7",
+   "type": "card",
+   "kind": "page",
+   "overlay": "page",
+   "name": "语言不等于地区",
+   "dur": 1.0,
+   "lines": [
+    {
+     "id": "N10",
+     "a": 0.1
+    },
+    {
+     "id": "N11",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "A8",
+   "type": "card",
+   "kind": "page",
+   "overlay": "page",
+   "name": "收尾",
+   "dur": 1.0,
+   "lines": [
+    {
+     "id": "N12",
+     "a": 0.1
+    }
+   ]
+  }
+ ]
+}

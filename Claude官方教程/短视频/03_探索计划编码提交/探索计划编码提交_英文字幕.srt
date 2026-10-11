@@ -1,0 +1,115 @@
+1
+00:00:00,000 --> 00:00:01,508
+Before Claude writes a line of code,
+
+2
+00:00:01,528 --> 00:00:03,610
+the best thing you can do is stop it from writing any.
+
+3
+00:00:03,630 --> 00:00:06,717
+The standard workflow in Anthropic's intro course
+
+4
+00:00:06,737 --> 00:00:09,311
+has four steps: explore, plan, code, commit.
+
+5
+00:00:09,331 --> 00:00:10,964
+The first two happen in plan mode:
+
+6
+00:00:10,984 --> 00:00:12,617
+it reads the relevant files,
+
+7
+00:00:12,637 --> 00:00:15,271
+researches and proposes, but doesn't edit your source.
+
+8
+00:00:15,291 --> 00:00:16,515
+Read the plan before anything runs,
+
+9
+00:00:16,535 --> 00:00:18,631
+and tell it exactly which part to change.
+
+10
+00:00:18,651 --> 00:00:19,900
+This is the cheapest moment to correct course,
+
+11
+00:00:19,920 --> 00:00:21,491
+because no code exists yet.
+
+12
+00:00:21,511 --> 00:00:24,851
+Press Ctrl+G to edit the plan right in your editor.
+
+13
+00:00:24,871 --> 00:00:26,710
+In the coding phase, give it three things:
+
+14
+00:00:26,730 --> 00:00:28,569
+a success criterion, the right tools,
+
+15
+00:00:28,589 --> 00:00:30,321
+and tests it can run repeatedly.
+
+16
+00:00:30,341 --> 00:00:32,010
+Install the Claude in Chrome extension and it can open pages
+
+17
+00:00:32,030 --> 00:00:34,801
+and test your interface itself, on a direct Anthropic plan.
+
+18
+00:00:34,821 --> 00:00:37,176
+The course also warns: the tests have to be trustworthy,
+
+19
+00:00:37,196 --> 00:00:39,781
+and Claude shouldn't weaken them just to pass.
+
+20
+00:00:39,801 --> 00:00:41,951
+Before committing, have a subagent review the work:
+
+21
+00:00:41,971 --> 00:00:44,301
+it didn't write the code, so it brings fresh eyes.
+
+22
+00:00:44,321 --> 00:00:45,659
+The course also lists three things
+
+23
+00:00:45,679 --> 00:00:47,470
+to check before committing: changes you didn't ask for,
+
+24
+00:00:47,490 --> 00:00:49,461
+weakened tests, and hard-coded values.
+
+25
+00:00:49,481 --> 00:00:51,366
+Want a fixed commit message format?
+
+26
+00:00:51,386 --> 00:00:54,571
+Put the convention in CLAUDE.md.
+
+27
+00:00:54,591 --> 00:00:57,058
+Anthropic also says: if you can describe the diff in one
+
+28
+00:00:57,078 --> 00:00:58,481
+sentence, skip the plan.
+
+29
+00:00:58,501 --> 00:01:00,781
+Look before you change; review before you ship.

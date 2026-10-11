@@ -1,0 +1,474 @@
+[
+  {
+    "id": "S01-01",
+    "scene": "S01",
+    "text": "早上好，我是鲸鱼娘，今天是10月1日。",
+    "tts_text": "早上好，我是鲸鱼娘，今天是十月一日。",
+    "est_seconds": 3.1,
+    "start": 0.0
+  },
+  {
+    "id": "S01-02",
+    "scene": "S01",
+    "text": "今天说七件事：DeepSeek 开源昇腾基础组件，Kimi K3 接入 Codex 企业通道，OpenAI 和 Synopsys 做芯片设计模型，Codex 能做掌机游戏了，DeepMind 给蛋白质加水印，微软发布生物研究系统 Quine，还有 Reddit 要停掉 RSS 和公共 API。",
+    "tts_text": "今天说七件事：DeepSeek 开源昇腾基础组件，Kimi K 三接入 Codex 企业通道，OpenAI 和 Synopsys 做芯片设计模型，Codex 能做掌机游戏了，DeepMind 给蛋白质加水印，微软发布生物研究系统 Quine，还有 Reddit 要停掉 R S S 和公共 A P I。",
+    "est_seconds": 16.9,
+    "start": 3.4
+  },
+  {
+    "id": "S02-03",
+    "scene": "S02",
+    "text": "第一件，9 月 30 日，DeepSeek 开源了一批面向华为昇腾芯片的基础组件。",
+    "tts_text": "第一件，九月三十日，DeepSeek 开源了一批面向华为昇腾芯片的基础组件。",
+    "est_seconds": 5.7,
+    "start": 20.5
+  },
+  {
+    "id": "S02-04",
+    "scene": "S02",
+    "text": "包括 TileLang 编译工具、计算库和分布式通信库，和它之前给英伟达平台开源的组件一一对应。",
+    "tts_text": "包括 TileLang 编译工具、计算库和分布式通信库，和它之前给英伟达平台开源的组件一一对应。",
+    "est_seconds": 7.4,
+    "start": 26.4
+  },
+  {
+    "id": "S02-05",
+    "scene": "S02",
+    "text": "比如做矩阵运算的 DeepGEMM、做跨卡通信的 DeepEP，还有稀疏注意力算子 FlashMLA，都有了昇腾版。",
+    "tts_text": "比如做矩阵运算的 Deep GEMM、做跨卡通信的 Deep E P，还有稀疏注意力算子 Flash M L A，都有了昇腾版。",
+    "est_seconds": 8.2,
+    "start": 34.1
+  },
+  {
+    "id": "S02-06",
+    "scene": "S02",
+    "text": "IT之家的报道说，TileLang 已经承载了 DeepSeek V4 系列训练里大部分算子的实现。",
+    "tts_text": "IT之家的报道说，TileLang 已经承载了 DeepSeek V 四系列训练里大部分算子的实现。",
+    "est_seconds": 6.7,
+    "start": 42.5
+  },
+  {
+    "id": "S02-07",
+    "scene": "S02",
+    "text": "官方说，在多项关键测试里，这些组件的计算和通信性能已经接近硬件上限。",
+    "tts_text": "官方说，在多项关键测试里，这些组件的计算和通信性能已经接近硬件上限。",
+    "est_seconds": 6.1,
+    "start": 49.5
+  },
+  {
+    "id": "S02-08",
+    "scene": "S02",
+    "text": "量子位列出的一组测试数据是：在他们的测试配置下，每个 token 输出间隔 5 毫秒时，每张卡每秒能输出 2469 个 token。",
+    "tts_text": "量子位列出的一组测试数据是：在他们的测试配置下，每个 token 输出间隔五毫秒时，每张卡每秒能输出两千四百六十九个 token。",
+    "est_seconds": 10.1,
+    "start": 55.9
+  },
+  {
+    "id": "S02-09",
+    "scene": "S02",
+    "text": "对国内开发者来说，用昇腾卡跑大模型，现在可以直接用上这套开源工具。",
+    "tts_text": "对国内开发者来说，用昇腾卡跑大模型，现在可以直接用上这套开源工具。",
+    "est_seconds": 5.9,
+    "start": 66.2
+  },
+  {
+    "id": "S03-10",
+    "scene": "S03",
+    "text": "第二件，美国 AI 基础设施公司 Baseten 9 月 29 日宣布，和 OpenAI 达成合作。",
+    "tts_text": "第二件，美国 A I 基础设施公司 Baseten 九月二十九日宣布，和 OpenAI 达成合作。",
+    "est_seconds": 5.9,
+    "start": 72.9
+  },
+  {
+    "id": "S03-11",
+    "scene": "S03",
+    "text": "它成了 OpenAI 企业市场里，首批提供开源模型推理的服务商之一。",
+    "tts_text": "它成了 OpenAI 企业市场里，首批提供开源模型推理的服务商之一。",
+    "est_seconds": 5.2,
+    "start": 79.0
+  },
+  {
+    "id": "S03-12",
+    "scene": "S03",
+    "text": "据 IT之家和 36氪报道，OpenAI 的企业客户，现在能在 Codex 或者 Responses API 里，调用 Kimi K3 等开源模型。",
+    "tts_text": "据 IT之家和三十六氪报道，OpenAI 的企业客户，现在能在 Codex 或者 Responses A P I 里，调用 Kimi K 三等开源模型。",
+    "est_seconds": 8.6,
+    "start": 84.5
+  },
+  {
+    "id": "S03-13",
+    "scene": "S03",
+    "text": "费用直接计入企业已有的 OpenAI 采购承诺额度，不用再走一遍新供应商的采购流程。",
+    "tts_text": "费用直接计入企业已有的 OpenAI 采购承诺额度，不用再走一遍新供应商的采购流程。",
+    "est_seconds": 6.7,
+    "start": 93.3
+  },
+  {
+    "id": "S03-14",
+    "scene": "S03",
+    "text": "IT之家说，这是中国开源模型第一次进入 OpenAI 的企业采购体系。",
+    "tts_text": "IT之家说，这是中国开源模型第一次进入 OpenAI 的企业采购体系。",
+    "est_seconds": 5.3,
+    "start": 100.3
+  },
+  {
+    "id": "S03-15",
+    "scene": "S03",
+    "text": "Kimi K3 是月之暗面的模型，参数规模 2.8 万亿，上下文 100 万 token，原生支持视觉。",
+    "tts_text": "Kimi K 三是月之暗面的模型，参数规模二点八万亿，上下文一百万 token，原生支持视觉。",
+    "est_seconds": 6.7,
+    "start": 105.8
+  },
+  {
+    "id": "S03-16",
+    "scene": "S03",
+    "text": "Baseten 说，这些模型跑在美国的服务器上，所有提示词都零数据保留。",
+    "tts_text": "Baseten 说，这些模型跑在美国的服务器上，所有提示词都零数据保留。",
+    "est_seconds": 5.3,
+    "start": 112.8
+  },
+  {
+    "id": "S03-17",
+    "scene": "S03",
+    "text": "这次面向的是 OpenAI 的企业客户，个人订阅里还看不到。",
+    "tts_text": "这次面向的是 OpenAI 的企业客户，个人订阅里还看不到。",
+    "est_seconds": 4.4,
+    "start": 118.3
+  },
+  {
+    "id": "S04-18",
+    "scene": "S04",
+    "text": "第三件，OpenAI 和芯片设计软件公司 Synopsys，9 月 30 日宣布签下多年合作。",
+    "tts_text": "第三件，OpenAI 和芯片设计软件公司 Synopsys，九月三十日宣布签下多年合作。",
+    "est_seconds": 5.9,
+    "start": 123.5
+  },
+  {
+    "id": "S04-19",
+    "scene": "S04",
+    "text": "两家一起做了一个专门设计芯片的模型，叫 GPT-Synopsys。",
+    "tts_text": "两家一起做了一个专门设计芯片的模型，叫 G P T Synopsys。",
+    "est_seconds": 4.8,
+    "start": 129.6
+  },
+  {
+    "id": "S04-20",
+    "scene": "S04",
+    "text": "它能像资深工程师一样，直接操作 Synopsys 的 EDA 设计软件。",
+    "tts_text": "它能像资深工程师一样，直接操作 Synopsys 的 E D A 设计软件。",
+    "est_seconds": 5.0,
+    "start": 134.7
+  },
+  {
+    "id": "S04-21",
+    "scene": "S04",
+    "text": "具体来说，它能优化芯片的功耗、性能和面积，做时序和验证收敛，再根据工具的输出一轮轮改设计。",
+    "tts_text": "具体来说，它能优化芯片的功耗、性能和面积，做时序和验证收敛，再根据工具的输出一轮轮改设计。",
+    "est_seconds": 7.8,
+    "start": 139.9
+  },
+  {
+    "id": "S04-22",
+    "scene": "S04",
+    "text": "客户的设计数据会加密，不拿来训练模型。",
+    "tts_text": "客户的设计数据会加密，不拿来训练模型。",
+    "est_seconds": 3.5,
+    "start": 148.0
+  },
+  {
+    "id": "S04-23",
+    "scene": "S04",
+    "text": "现在已经和几家头部半导体客户开始早期合作，但上线时间和测试数据都没有公布。",
+    "tts_text": "现在已经和几家头部半导体客户开始早期合作，但上线时间和测试数据都没有公布。",
+    "est_seconds": 6.9,
+    "start": 151.7
+  },
+  {
+    "id": "S04-24",
+    "scene": "S04",
+    "text": "OpenAI 总裁 Greg Brockman 说，希望帮工程师试更多设计，更快做出能用的芯片。",
+    "tts_text": "OpenAI 总裁 Greg Brockman 说，希望帮工程师试更多设计，更快做出能用的芯片。",
+    "est_seconds": 5.7,
+    "start": 158.9
+  },
+  {
+    "id": "S04-25",
+    "scene": "S04",
+    "text": "两家公司会分成，一起把这个模型推给全球的客户。",
+    "tts_text": "两家公司会分成，一起把这个模型推给全球的客户。",
+    "est_seconds": 4.2,
+    "start": 164.8
+  },
+  {
+    "id": "S05-26",
+    "scene": "S05",
+    "text": "第四件轻松一点。OpenAI 在 9 月 29 日的开发者大会上，和掌机厂商 ModRetro 合作，给 Codex 出了个插件，叫 Game Studio。",
+    "tts_text": "第四件轻松一点。OpenAI 在九月二十九日的开发者大会上，和掌机厂商 Mod Retro 合作，给 Codex 出了个插件，叫 Game Studio。",
+    "est_seconds": 9.0,
+    "start": 169.8
+  },
+  {
+    "id": "S05-27",
+    "scene": "S05",
+    "text": "ModRetro 的 Chromatic 是一台复古掌机，外观、分辨率和按键都参考 Game Boy Color，还能插原版卡带。",
+    "tts_text": "Mod Retro 的 Chromatic 是一台复古掌机，外观、分辨率和按键都参考 Game Boy Color，还能插原版卡带。",
+    "est_seconds": 7.0,
+    "start": 179.0
+  },
+  {
+    "id": "S05-28",
+    "scene": "S05",
+    "text": "用法很简单：你用大白话描述想要的游戏，Codex 帮你写程序。",
+    "tts_text": "用法很简单：你用大白话描述想要的游戏，Codex 帮你写程序。",
+    "est_seconds": 4.8,
+    "start": 186.3
+  },
+  {
+    "id": "S05-29",
+    "scene": "S05",
+    "text": "写好以后，先在电脑上用内置的 Chromatic 模拟器试玩，再串流到真机上。",
+    "tts_text": "写好以后，先在电脑上用内置的 Chromatic 模拟器试玩，再串流到真机上。",
+    "est_seconds": 5.5,
+    "start": 191.3
+  },
+  {
+    "id": "S05-30",
+    "scene": "S05",
+    "text": "最后还能写进专用卡带，做成实体游戏。",
+    "tts_text": "最后还能写进专用卡带，做成实体游戏。",
+    "est_seconds": 3.3,
+    "start": 197.1
+  },
+  {
+    "id": "S05-31",
+    "scene": "S05",
+    "text": "没有掌机也行，做好的游戏可以在浏览器里玩，或者下载成 ROM 文件。",
+    "tts_text": "没有掌机也行，做好的游戏可以在浏览器里玩，或者下载成 R O M 文件。",
+    "est_seconds": 5.7,
+    "start": 200.6
+  },
+  {
+    "id": "S05-32",
+    "scene": "S05",
+    "text": "大会现场还给参会的人发了透明版的 Chromatic。",
+    "tts_text": "大会现场还给参会的人发了透明版的 Chromatic。",
+    "est_seconds": 3.8,
+    "start": 206.6
+  },
+  {
+    "id": "S05-33",
+    "scene": "S05",
+    "text": "官方示例里有一个像 Flappy Bird 的小游戏，叫 FlapGPT。",
+    "tts_text": "官方示例里有一个像 Flappy Bird 的小游戏，叫 Flap G P T。",
+    "est_seconds": 4.2,
+    "start": 210.6
+  },
+  {
+    "id": "S06-34",
+    "scene": "S06",
+    "text": "第五件，Google DeepMind 9 月 30 日发布了 SynthID Bio，给 AI 设计的蛋白质和 DNA 序列加水印。",
+    "tts_text": "第五件，Google DeepMind 九月三十日发布了 SynthID Bio，给 A I 设计的蛋白质和 D N A 序列加水印。",
+    "est_seconds": 7.2,
+    "start": 215.6
+  },
+  {
+    "id": "S06-35",
+    "scene": "S06",
+    "text": "这个水印人看不出来，也不影响生物功能。",
+    "tts_text": "这个水印人看不出来，也不影响生物功能。",
+    "est_seconds": 3.5,
+    "start": 223.0
+  },
+  {
+    "id": "S06-36",
+    "scene": "S06",
+    "text": "做法是，生成序列时悄悄调整氨基酸的选择；预测 3D 结构时，微调原子坐标。",
+    "tts_text": "做法是，生成序列时悄悄调整氨基酸的选择；预测三 D 结构时，微调原子坐标。",
+    "est_seconds": 6.1,
+    "start": 226.8
+  },
+  {
+    "id": "S06-37",
+    "scene": "S06",
+    "text": "他们还微调了 AlphaFold 3，把可检测的标记放进模型本身，预测准确度基本不受影响。",
+    "tts_text": "他们还微调了 AlphaFold 三，把可检测的标记放进模型本身，预测准确度基本不受影响。",
+    "est_seconds": 6.7,
+    "start": 233.1
+  },
+  {
+    "id": "S06-38",
+    "scene": "S06",
+    "text": "官方在三个蛋白靶点上做了测试，加了水印的设计，结合能力、命中率和多样性，和没加水印的差不多。",
+    "tts_text": "官方在三个蛋白靶点上做了测试，加了水印的设计，结合能力、命中率和多样性，和没加水印的差不多。",
+    "est_seconds": 8.0,
+    "start": 240.1
+  },
+  {
+    "id": "S06-39",
+    "scene": "S06",
+    "text": "和斯坦福、Arc Institute 合作的早期实验也证实，加了水印的噬菌体照样能正常工作。",
+    "tts_text": "和斯坦福、Arc Institute 合作的早期实验也证实，加了水印的噬菌体照样能正常工作。",
+    "est_seconds": 6.5,
+    "start": 248.3
+  },
+  {
+    "id": "S06-40",
+    "scene": "S06",
+    "text": "这样做的目的，是让 AI 设计能追溯到模型开发者，方便做生物安全。",
+    "tts_text": "这样做的目的，是让 A I 设计能追溯到模型开发者，方便做生物安全。",
+    "est_seconds": 5.5,
+    "start": 255.1
+  },
+  {
+    "id": "S06-41",
+    "scene": "S06",
+    "text": "论文、代码、实验数据和模型权重，都已经向研究社区开放。",
+    "tts_text": "论文、代码、实验数据和模型权重，都已经向研究社区开放。",
+    "est_seconds": 4.6,
+    "start": 260.8
+  },
+  {
+    "id": "S07-42",
+    "scene": "S07",
+    "text": "第六件，微软研究院 9 月 29 日发布了 Quine，一个做生物研究的 AI 系统。",
+    "tts_text": "第六件，微软研究院九月二十九日发布了 Quine，一个做生物研究的 A I 系统。",
+    "est_seconds": 6.1,
+    "start": 266.2
+  },
+  {
+    "id": "S07-43",
+    "scene": "S07",
+    "text": "微软把它叫作生物学的世界模型。胰腺癌实验这部分，是和哈佛、麻省理工的博德研究所合作验证的。",
+    "tts_text": "微软把它叫作生物学的世界模型。胰腺癌实验这部分，是和哈佛、麻省理工的博德研究所合作验证的。",
+    "est_seconds": 8.2,
+    "start": 272.5
+  },
+  {
+    "id": "S07-44",
+    "scene": "S07",
+    "text": "它把基因组、蛋白质、化学、细胞状态和生物成像放在一起学，能跨领域分析。",
+    "tts_text": "它把基因组、蛋白质、化学、细胞状态和生物成像放在一起学，能跨领域分析。",
+    "est_seconds": 5.9,
+    "start": 281.0
+  },
+  {
+    "id": "S07-45",
+    "scene": "S07",
+    "text": "再配上一套调度和推理的框架，把科研工具、文献和研究人员连起来。",
+    "tts_text": "再配上一套调度和推理的框架，把科研工具、文献和研究人员连起来。",
+    "est_seconds": 5.5,
+    "start": 287.1
+  },
+  {
+    "id": "S07-46",
+    "scene": "S07",
+    "text": "测试里，研究人员拿胰腺导管腺癌的细胞系来试。",
+    "tts_text": "测试里，研究人员拿胰腺导管腺癌的细胞系来试。",
+    "est_seconds": 4.0,
+    "start": 292.9
+  },
+  {
+    "id": "S07-47",
+    "scene": "S07",
+    "text": "它只用了一个周末，就从几千个化合物里，排出最可能让肿瘤细胞从经典型转向基底样型的那几个。",
+    "tts_text": "它只用了一个周末，就从几千个化合物里，排出最可能让肿瘤细胞从经典型转向基底样型的那几个。",
+    "est_seconds": 8.0,
+    "start": 297.1
+  },
+  {
+    "id": "S07-48",
+    "scene": "S07",
+    "text": "实验结果里，它挑出来的化合物带来的变化最大。",
+    "tts_text": "实验结果里，它挑出来的化合物带来的变化最大。",
+    "est_seconds": 4.0,
+    "start": 305.4
+  },
+  {
+    "id": "S07-49",
+    "scene": "S07",
+    "text": "现在只开放给 Quine Fellows 项目申请，以后会通过 Microsoft Discovery 扩大范围。",
+    "tts_text": "现在只开放给 Quine Fellows 项目申请，以后会通过 Microsoft Discovery 扩大范围。",
+    "est_seconds": 5.7,
+    "start": 309.6
+  },
+  {
+    "id": "S08-50",
+    "scene": "S08",
+    "text": "最后一件，据 TechCrunch 9 月 30 日报道，Reddit 要停掉 RSS 订阅，还要关闭公共 API。",
+    "tts_text": "最后一件，据 TechCrunch 九月三十日报道，Reddit 要停掉 R S S 订阅，还要关闭公共 A P I。",
+    "est_seconds": 6.7,
+    "start": 316.1
+  },
+  {
+    "id": "S08-51",
+    "scene": "S08",
+    "text": "RSS 在 11 月 13 日就停。",
+    "tts_text": "R S S 在十一月十三日就停。",
+    "est_seconds": 2.5,
+    "start": 323.0
+  },
+  {
+    "id": "S08-52",
+    "scene": "S08",
+    "text": "公共 API 在 2027 年 3 月关闭。",
+    "tts_text": "公共 A P I 在二零二七年三月关闭。",
+    "est_seconds": 3.1,
+    "start": 325.8
+  },
+  {
+    "id": "S08-53",
+    "scene": "S08",
+    "text": "第三方应用和机器人，要在 2027 年 1 月 12 日前去官方开发者平台注册，才能继续用。",
+    "tts_text": "第三方应用和机器人，要在二零二七年一月十二日前去官方开发者平台注册，才能继续用。",
+    "est_seconds": 7.2,
+    "start": 329.1
+  },
+  {
+    "id": "S08-54",
+    "scene": "S08",
+    "text": "Reddit 的理由是，RSS 已经成了大规模抓取和自动化滥用的常见入口。",
+    "tts_text": "Reddit 的理由是，R S S 已经成了大规模抓取和自动化滥用的常见入口。",
+    "est_seconds": 5.7,
+    "start": 336.6
+  },
+  {
+    "id": "S08-55",
+    "scene": "S08",
+    "text": "想要 Reddit 数据的公司，以后得和 Reddit 谈商业合作。",
+    "tts_text": "想要 Reddit 数据的公司，以后得和 Reddit 谈商业合作。",
+    "est_seconds": 4.0,
+    "start": 342.5
+  },
+  {
+    "id": "S08-56",
+    "scene": "S08",
+    "text": "TechCrunch 提到，Reddit 广告以外的其他收入，二季度同比涨了 24%，主要靠 AI 数据授权。",
+    "tts_text": "TechCrunch 提到，Reddit 广告以外的其他收入，二季度同比涨了百分之二十四，主要靠 A I 数据授权。",
+    "est_seconds": 7.4,
+    "start": 346.8
+  },
+  {
+    "id": "S08-57",
+    "scene": "S08",
+    "text": "平时用 RSS 订阅 Reddit 的朋友，得早点换办法了。",
+    "tts_text": "平时用 R S S 订阅 Reddit 的朋友，得早点换办法了。",
+    "est_seconds": 4.0,
+    "start": 354.4
+  },
+  {
+    "id": "S09-58",
+    "scene": "S09",
+    "text": "今天就这些，来源都在简介里。",
+    "tts_text": "今天就这些，来源都在简介里。",
+    "est_seconds": 2.5,
+    "start": 359.1
+  },
+  {
+    "id": "S09-59",
+    "scene": "S09",
+    "text": "祝你今天过得开心，我们明天见。",
+    "tts_text": "祝你今天过得开心，我们明天见。",
+    "est_seconds": 2.7,
+    "start": 361.9
+  }
+]

@@ -1,0 +1,36 @@
+{
+  "title": "Tavus 发布新模型 Griffin：官方称它是第一个通过视频图灵测试的 AI",
+  "title_note": "草稿，用户定；封面字“这是AI！”（封面 D：用户 2026-10-03 点名的版式——成片截图 + 箭头指 Vanessa + 这四个字），标题写完整一句、不抄封面；旧候选 A（48% 以为是真人 / 她是 AI）、B（第一个人类交互模型）、C（对面是 AI 还是真人？）用户都不满意，已作废，在 制作/04_封面/_旧稿/",
+  "bvid": null,
+  "submitted_at": null,
+  "video": "D:\\大疆\\独立视频\\2026-10_Tavus-Griffin模型介绍\\Tavus-Griffin模型介绍_成片.mp4",
+  "cover_16x9": "D:\\大疆\\独立视频\\2026-10_Tavus-Griffin模型介绍\\制作\\04_封面\\封面_选定_16x9.png",
+  "cover_4x3": "D:\\大疆\\独立视频\\2026-10_Tavus-Griffin模型介绍\\制作\\04_封面\\封面_选定_4x3.png",
+  "cover_options": "D（现行，已复制成 封面_选定_*）：用户贴的那张截图（成片 29.63 s，Vanessa 竖大拇指那一帧；回原片抽的高清版，引擎渲出方框 + 官方演示小标签 + 画面来源）+ 粉色块状箭头指向 Vanessa + 粉色衬线大字“这是AI！”（墨黑描边 + 硬投影）；16:9 方框收在 x 96–1824（B 站切 16:10 不丢标签），4:3 单独排版（字在上）。生成脚本 制作/04_封面/make_cover_ai.py。A / B / C（make_covers.py）用户不满意，已作废，png 在 _旧稿/",
+  "partition": "人工智能",
+  "ai_declaration": "含AI生成内容",
+  "season": null,
+  "tags": [
+    "Tavus",
+    "Griffin",
+    "人工智能",
+    "AI",
+    "AI数字人",
+    "图灵测试",
+    "AI视频",
+    "NVIDIA",
+    "AI新模型",
+    "大模型"
+  ],
+  "tags_note": "草稿；“Claude”这类话题专用词不适用；英文标签手敲带大写可能被拒，被丢的话点推荐标签里的同名项；没选话题、没选合集（独立视频）、没开定时",
+  "desc": "这条视频整理了 Tavus 在 10 月 1 日发布的新模型 Griffin（官方发的是 Griffin-Lite 研究预览版）：画面是 Tavus 官方账号在 X 上发的视频和官网、官方博客的页面，数据逐条标了出处。\n\n【官方说的】（2026-10-03 对照官网原文核对）\n· Tavus 把 Griffin 叫做“第一个人类交互模型（HIM）”：一个视频到视频、全双工的模型，一边听、一边看、一边说，每隔不到一秒重新判断一次是点头、嗯一声，还是直接开口。\n· 官方称它是第一个通过实时视频图灵测试的模型（官网只有一处加了“据我们所知”）。\n· 官方实验：54 人和它视频通话 1 分钟，26 人（48%）事后认为对方是真人；Tavus 上一代系统（Phoenix-4.5 + Sparrow-2 + Raven-1）是 41 人里 1 人（2.4%）。\n· NVIDIA 研究院的 VideoFDB 榜单页上有 “Tavus Griffin Lite”：生成赛道 3.83 分（真人参照 3.92，次高 2.80），感知赛道 3.73 分（真人参照 4.20，次高 3.44，仅音频）。\n· 目前只有少数受信任的测试者能用研究预览版，不对客户开放，也没上 Tavus 平台；官方说解决安全问题（逼真到可能让人误以为对面不是 AI）之后会很快发布，没有给日期和价格。\n\n【几处要说明】\n· 48% 的实验是 Tavus 自己设计和执行的，只有 54 人，参与者事先被告知对方是“另一位参与者”，官方页面没提真人对照组；它不是经典的三方图灵测试，48% 是“认为对方是真人”的比例。\n· VideoFDB 的分数由 AI 评审（语言模型）打出；榜单上 Griffin 是唯一的端到端音视频模型，生成赛道只有两个由 NVIDIA 用 Gemini 2.5 + 数字人拼出来的对比方案；榜单里 Griffin 的响应延迟中位数仍比真人慢。官网写的 0.43 秒只是画面生成器“音频到画面”的延迟，不是整体回复延迟。\n· 视频里后半段的 Phoenix 4.5 盲测（309 人，只比画面自然度）、Memories 的 LongMemEval 93.4%（467/500，逐题结果官方已公开）、Elevare 客户案例，都发生在 Griffin 之前，用的是 Phoenix / Raven / Sparrow，不是 Griffin；盲测和 93.4% 同样是 Tavus 自己做的，93.4% 低于 Mem0 自报的 94.4%，对比数字都是各家自报。\n· 外界反应：不少媒体和网友指出样本小、自家实验、“通过图灵测试”的说法偏强，也有人担心被拿去行骗。视频里和 CEO 对话的 Vanessa 是跑在 Griffin 上的 AI（Tavus 新闻稿的说法）。\n\n【画面和来源】\n· Griffin 发布视频：https://x.com/tavus/status/2105704169009246248\n· 盲测图：https://x.com/tavus/status/2105066342630248877\n· Elevare 案例视频：https://x.com/tavus/status/2104998304279048334\n· Memories / LongMemEval：https://x.com/tavus/status/2101064674410434862\n· 官网：https://www.tavus.io/griffin\n· 9 月基准博客：https://www.tavus.io/blog/september-2026-benchmarks\n· Elevare 案例页：https://www.tavus.io/customers/postpartum-care-elevare-health\n· Memories：https://www.tavus.io/blog/memories\n· NVIDIA VideoFDB：https://research.nvidia.com/labs/amri/projects/video-fdb/\n\n【声明】配音为 AI 生成（曼波声线）；画面来自 Tavus 官方账号和网站，版权归原作者，如有问题请联系，立即处理；数据以官方原文为准，会变化。",
+  "todo_user": [
+    "听配音（Tavus / Griffin / Sparrow / Elevare / Long Mem Eval 的读音，N01 的“视频通话”、N11 的“上一代”、N16 的“少数测试者用”）；读歪了我做第二版（专名改中文音译，稿子已写好，需要 Chrome 窗口可见）",
+    "确认片尾清单（制作/00_整片/outro.json 是草稿）",
+    "定标题（封面已定：封面_选定_16x9.png / _4x3.png，字“这是AI！”，箭头指 Vanessa）",
+    "决定要不要加官网的 5 段 Griffin 能力演示视频（Simon says、魔方、焊接…，我没下载）",
+    "决定要不要加一小段“外界争议（诈骗 / 伦理担忧）”",
+    "把 mp4 拖进 B 站投稿页后我用插件填表；“立即投稿”由你点（或明说发布）"
+  ],
+  "cover_confirmed": "2026-10-03 用户确认：贴回 16:9 的成图，说“用这个作为封面”（封面 D；4:3 同版式，封面_选定_4x3.png）"
+}

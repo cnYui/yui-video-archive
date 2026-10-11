@@ -1,4 +1,7 @@
-"""Put the UE intro in front of a video and the UE outro after it, keeping the video's own quality.
+"""Put the 悠一 intro in front of a video and the 悠一 outro after it, keeping the video's own quality.
+
+2026-10-03 起：用户要求**所有生成的视频都要加片头片尾**；模板是 SERIES/片头片尾/intro|outro（Claude 品牌色「对话气泡」片头
+4.8 s、信纸片尾 9.0 s，时长以页面的 window.DURATION 为准，SERIES/片头片尾/pack_info.py 可以读）。
 
   python add_to_video.py <input.mp4> [-o output.mp4] [--outro-data data.json] [--intro-data data.json]
                          [--no-music] [--series D:/大疆/AI科普]
@@ -10,14 +13,15 @@ intro / outro from assemble.py instead. So this tool takes a video file, not an 
   and are rendered at the input's own resolution and frame rate
   (a 3840x2160 input is rendered with device scale 2, not upscaled from 1080p). An input wider than 16:9
   (e.g. 2340x1080 = 19.5:9, 3120x1440) gets a page as wide as its aspect (canvas W x 1080, device scale h / 1080,
-  passed to the page as "canvas"): the intro / outro lay themselves out centred on it, background, grain, crop marks
-  and the closing ink across the full width -- no stretching, no blank side bars. Narrower inputs (4:3, portrait)
+  passed to the page as "canvas"): the intro / outro lay themselves out centred on it, background across the full
+  width -- no stretching, no blank side bars. Narrower inputs (4:3, portrait)
   keep the 1920x1080 page scaled to the input size, as before.
 - The main video is NOT re-encoded: all three parts are converted to MPEG-TS with identical audio
   settings and joined with stream copy, so the original picture is untouched.
 - Under the intro / outro goes a short piece of the series BGM (SERIES/素材/音频/bgm.wav),
   levelled about 7 dB below the input's speech loudness; --no-music gives silence instead.
-- The outro credits (--outro-data items / closing) must be confirmed with the user for every video.
+- The outro data (--outro-data: references = 参考文献 strings, items / thanks = 致谢 {label, value}, closing, signature;
+  example: SERIES/片头片尾/outro/data.example.json) must be confirmed with the user for every video.
 """
 import argparse
 import json
@@ -143,8 +147,8 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("input", help="H.264 input video")
     ap.add_argument("-o", "--output", help="default: <input>_片头片尾.mp4 next to the input")
-    ap.add_argument("--intro-data", help="intro JSON {name, tagline} (default: 片头片尾/intro/data.json)")
-    ap.add_argument("--outro-data", help="outro JSON {items, closing, signature} (default: 片头片尾/outro/data.json)")
+    ap.add_argument("--intro-data", help="intro JSON {name, role, endColor} (default: 片头片尾/intro/data.json)")
+    ap.add_argument("--outro-data", help="outro JSON {references, items, closing, signature} (default: 片头片尾/outro/data.json)")
     ap.add_argument("--no-music", action="store_true", help="silence under intro / outro instead of the BGM")
     ap.add_argument("--series", default=str(SERIES_DEFAULT), help=f"系列根目录，默认 {SERIES_DEFAULT}")
     args = ap.parse_args()

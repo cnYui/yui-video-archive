@@ -1,0 +1,31 @@
+{
+  "verdict": "pass",
+  "script_sha": "5d8a1da721d9",
+  "issues": [],
+  "notes": [
+    "上一轮指出的第 5 条第 5 句（Suno 例子）和第 5 条第 3 句已按原文改正：现为“冥想、诗、打气的话和睡前故事”和“以前常见的做法是先合成语音，再另外配一段音乐”，与 Suno 博客、IT之家一致",
+    "第 4 条第 2 句“Muse 是 Meta 上个月推出的”两篇引用原文都没写发布日期，另查到 Muse 于 2026-09-08 发布，表述成立",
+    "第 1 条第 6 句“macOS 27 等系统都会跟进”只有 IT之家这么写，苹果原文没提版本号；台本已标明是 IT之家报道，可接受",
+    "第 7 条“36 篇论文 / 18 个领域 / 19 位合作者”出自 The Decoder（原文用 manuscripts），bootloops.ai 索引目前列 25 篇已发表；台本已标明是 The Decoder 报道，可接受",
+    "审核记录里的数字提示（5000/1.5/400/6072）英文分别写成 5,000、$150 million、4 million、6,072，意思一致；审核记录里没有 level 为 review 的命中词",
+    "双语 SRT 106 条逐条核对：中英意思、数字、人名、公司名、型号一致，没有断在词组中间，没有漏译或额外信息",
+    "7 张原文截图和封面都没有低俗、暴力、时政、军事、歧视、广告引流或可疑指令 / 网址；封面“苹果收紧 Mac 权限 / AI 让风险变大？”与苹果公告原意一致（AI 智能体让该权限的风险大幅增加），用问号，没有夸大"
+  ],
+  "checked": [
+    "https://developer.apple.com/news/?id=p6zjojqw",
+    "https://www.ithome.com/1/009/381.htm",
+    "https://antigravity.google/docs/models",
+    "https://letsdatascience.com/news/google-antigravity-adds-claude-55-to-paid-tiers-6a3e78f1",
+    "https://9to5google.com/2026/10/02/gemini-app-map-tool/",
+    "https://www.androidauthority.com/gemini-app-map-tool-3718688/",
+    "https://techcrunch.com/2026/10/02/meta-wants-you-to-build-your-own-muse-gadget/",
+    "https://the-decoder.com/muse-gadgets-turns-ai-hardware-into-an-open-source-diy-project/",
+    "https://suno.com/blog/introducing-speech-beta",
+    "https://www.ithome.com/1/009/440.htm",
+    "https://supabase.com/blog/supabase-is-acquiring-turso",
+    "https://www.prnewswire.com/news-releases/supabase-announces-150m-in-new-funding-and-turso-acquisition-302896752.html",
+    "https://siliconangle.com/2026/10/02/database-startup-supabase-raises-150m-acquires-turso/",
+    "https://the-decoder.com/open-source-bootloops-harness-supports-ai-models-in-performing-precise-scientific-calculations/",
+    "https://bootloops.ai"
+  ]
+}

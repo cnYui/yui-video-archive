@@ -9,6 +9,10 @@ Examples:
   python render.py intro/index.html --sheet out/intro_sheet.png            # contact sheet only
   python render.py intro/index.html --stills 0.5,1.2,3.0 --stills-dir out/  # individual frames
   python render.py outro/index.html -o out/outro_alpha.mov --alpha         # ProRes 4444 with transparency
+  python render.py intro/index.html --data intro/data.json --width 2340 -o out/intro_2340.mp4   # 19.5:9 frame
+
+Frame width: --width > "canvas": [W, H] in the --data JSON > 1920 (height stays 1080). The page gets it as
+window.__CANVAS__ (the same contract as add_to_video.py / assemble.py).
 """
 import argparse
 import io
@@ -31,7 +35,7 @@ SEEK_JS = """(t) => {
 def open_page(p, html, data, alpha):
     browser = p.chromium.launch(args=["--force-color-profile=srgb", "--disable-lcd-text", "--font-render-hinting=none"])
     page = browser.new_page(viewport={"width": W, "height": H}, device_scale_factor=1)
-    init = "window.__CAPTURE__ = true;"
+    init = f"window.__CAPTURE__ = true; window.__CANVAS__ = [{W}, {H}];"
     if data is not None:
         init += f"window.__DATA__ = {json.dumps(data, ensure_ascii=False)};"
     if alpha:
@@ -60,7 +64,7 @@ def frame_at(page, t, alpha):
 
 
 def contact_sheet(frames, path, cols=4):
-    tw, th = 480, 270
+    tw, th = 480, round(480 * H / W)
     rows = (len(frames) + cols - 1) // cols
     sheet = Image.new("RGB", (cols * tw, rows * (th + 28)), (24, 24, 24))
     draw = ImageDraw.Draw(sheet)
@@ -84,6 +88,7 @@ def main():
     ap.add_argument("-o", "--out", help="output .mp4 (H.264) or .mov (ProRes 4444 when --alpha)")
     ap.add_argument("--data", help="JSON file exposed as window.__DATA__")
     ap.add_argument("--fps", type=int, default=60)
+    ap.add_argument("--width", type=int, help="frame width (e.g. 2340); default: the data's canvas, else 1920")
     ap.add_argument("--alpha", action="store_true", help="transparent background (needs .mov output)")
     ap.add_argument("--audio", help="optional audio file to mux")
     ap.add_argument("--sheet", help="write a contact sheet PNG")
@@ -93,6 +98,9 @@ def main():
     args = ap.parse_args()
 
     data = json.loads(Path(args.data).read_text(encoding="utf-8")) if args.data else None
+    global W
+    canvas = (data or {}).get("canvas") if isinstance(data, dict) else None
+    W = args.width or (int(canvas[0]) if isinstance(canvas, list) and canvas else 1920)
 
     with sync_playwright() as p:
         browser, page, duration, errors = open_page(p, args.html, data, args.alpha)

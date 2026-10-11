@@ -1,0 +1,68 @@
+{
+ "size": [
+  1920,
+  1080
+ ],
+ "scheme": "ivory",
+ "line1": "它替你盯着",
+ "line2": "Claude 的输出",
+ "font_size": 168,
+ "text_boxes": {
+  "t1": [
+   128,
+   150,
+   959.609375,
+   318
+  ],
+  "t2": [
+   128,
+   331,
+   1243.859375,
+   499
+  ]
+ },
+ "safe_x": [
+  96,
+  1824
+ ],
+ "colors": {
+  "bg": "#FAF9F5",
+  "t1": "#141413",
+  "t2": "#C15F3C"
+ },
+ "mascot": {
+  "pose": "stand",
+  "flip": false,
+  "eyes": null,
+  "cell": 16,
+  "origin": [
+   1232,
+   491
+  ],
+  "bbox": [
+   1248,
+   507,
+   1632,
+   875
+  ],
+  "width_frac": 0.2,
+  "body_width_frac": 0.2,
+  "shifted": [
+   0,
+   0
+  ]
+ },
+ "background": {
+  "mode": "pixel",
+  "seed": 2,
+  "scale": 3.0,
+  "anchor": [
+   0.72,
+   0.64
+  ],
+  "shift": [
+   0.0,
+   0.0
+  ]
+ }
+}

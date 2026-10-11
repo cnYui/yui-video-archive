@@ -1,0 +1,9 @@
+0:00 开场
+0:25 Anthropic 免费查开源漏洞
+1:17 Claude 智能体并行 1000 个
+1:51 Claude 画出紫外天图
+2:34 Anthropic 更新使用政策
+3:14 DeepSeek 抽风的原因
+3:56 OpenAI 年化营收少 200 亿
+4:37 Ecosia 换中国模型
+5:15 回顾

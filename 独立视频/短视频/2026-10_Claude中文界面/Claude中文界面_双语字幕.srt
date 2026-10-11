@@ -1,0 +1,129 @@
+1
+00:00:00,130 --> 00:00:02,786
+今天早上Claude的语言列表里面突然
+This morning, Claude's language list suddenly added Chinese —
+
+2
+00:00:02,806 --> 00:00:05,340
+多了中文，简体繁体都有。
+both Simplified and Traditional.
+
+3
+00:00:05,430 --> 00:00:07,100
+然后在Claude的官网和APP
+On Claude's website and in the app,
+
+4
+00:00:07,120 --> 00:00:10,080
+里面去点击左下角选语言就可以看到。
+tap the bottom-left corner and choose Language to see it.
+
+5
+00:00:10,630 --> 00:00:12,014
+但是Claude之前一直
+But Claude has always had
+
+6
+00:00:12,034 --> 00:00:13,850
+都是很明确的反华的态度，
+a very clearly anti-China attitude,
+
+7
+00:00:13,870 --> 00:00:16,406
+无论是它大规模封号还是它的软件
+whether it's the mass account bans, or the fact
+
+8
+00:00:16,426 --> 00:00:19,020
+和网页从来都不支持中文。
+that its app and website never supported Chinese.
+
+9
+00:00:19,110 --> 00:00:20,738
+然后我看了一下8月份的那一版
+Then I looked at August's version
+
+10
+00:00:20,758 --> 00:00:21,610
+Claude的更新，
+of Claude's update.
+
+11
+00:00:21,630 --> 00:00:22,859
+它只写了更新11种
+It only listed 11 languages,
+
+12
+00:00:22,879 --> 00:00:24,960
+语言并没有包含中文。
+and Chinese wasn't among them.
+
+13
+00:00:25,750 --> 00:00:27,871
+到目前为止它的官方博客官方
+So far, its official blog and official
+
+14
+00:00:27,891 --> 00:00:31,090
+推特到现在都没有提语言更新这件事。
+Twitter haven't mentioned the language update at all.
+
+15
+00:00:31,110 --> 00:00:33,780
+我很担心这会不会是钓鱼执法，
+I'm worried — could this be entrapment?
+
+16
+00:00:34,030 --> 00:00:36,291
+让中文用户先选择中文之后，
+Let Chinese users pick Chinese first, then IP-location
+
+17
+00:00:36,311 --> 00:00:39,520
+IP位置检测加语言直接封号清算。
+checks plus language lead straight to bans and purges.
+
+18
+00:00:39,570 --> 00:00:40,990
+不过现在语言能选，
+Still, even though the language
+
+19
+00:00:41,010 --> 00:00:43,640
+在国内也是没有办法使用的。
+can now be picked, it can't be used in China.
+
+20
+00:00:44,050 --> 00:00:45,494
+官方支持地区名单里面
+The official supported-regions list
+
+21
+00:00:45,514 --> 00:00:48,260
+没有包含中国大陆、香港和澳门。
+doesn't include mainland China, Hong Kong or Macao.
+
+22
+00:00:48,510 --> 00:00:52,100
+如果使用的方法不当的话就会封号。
+If it's used the wrong way, you'll get banned.
+
+23
+00:00:53,550 --> 00:00:55,081
+我真的想拜托Claude什么
+I really want to ask Claude
+
+24
+00:00:55,101 --> 00:00:56,590
+时候能学一学ChatGPT，
+to learn from ChatGPT someday —
+
+25
+00:00:56,610 --> 00:00:59,411
+虽然GPT在国内也不支持使用和注册，
+Although GPT isn't supported or open for sign-up in China
+
+26
+00:00:59,431 --> 00:01:02,340
+但是它并没有那么严重的封号。
+either, it doesn't ban nearly as severely.

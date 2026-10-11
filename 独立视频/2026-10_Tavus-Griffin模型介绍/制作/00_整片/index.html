@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<!-- Tavus 版视频引擎（从 OpenAI相关 的引擎模板改：配色、版式照 tavus.io 官网）：2340×1080，30 fps。renderAt(t) 画出第 t 秒（同一个 t 永远是同一帧）。
+     数据：timeline.js（build_timeline.py）、frames.js（prep_frames.py）。
+     官网的配色（取自站点 CSS 变量，2026-10-03）：奶油底 #F7F4EF（--themes--background）、墨黑 #140206（terminal-black，边框 / 投影）、正文 #28292A（hardware-gray-9）、
+     亮粉 #FF6183（bubbletech-4，主按钮 / Griffin 的颜色）、淡紫 #B0A8D1（floppy-fog-3）、荧光绿 #38F261（neon-field-2，编号小标签的绿点）、橙 #FF9626（atomic-glow-2）。
+     官网版式：直角方框 + 1–3 px 墨黑边 + 硬投影（不虚化）、大号衬线标题、等宽大写小标签；字体官网用的是 Suisse / Perfectly Nineties（商用字体），这里用 OFL 的 Noto Sans SC / Space Grotesk / JetBrains Mono / Instrument Serif / Noto Serif SC。
+     版式：全程画外音、不放出镜框；左栏“本期目录”（≤ 3 条，缩略图 + 名字，说到哪条亮哪条）；右边演示区 1508×863（内容 1474×829，不缩放；为了让出 y 922 以下的字幕带）放素材画面 / 官网页面截图；
+     字幕按项目的中英双语标准：y 922 以下，中文一行 52 px + 英文一行 30 px，居中（颜色换成官网的墨黑 / 暖灰，描边换成奶油色）。 -->
+<link rel="stylesheet" href="file:///D:/大疆/AI科普/素材/字体/fonts.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Noto+Serif+SC:wght@600;900&display=block">
+<style>
+:root { --cream:#F7F4EF; --sand:#EAE5DE; --sand2:#E4DDD2; --sand3:#D9D0C2; --ink:#140206; --ink2:#28292A; --gray:#5E5850; --gray2:#8C857B; --line:#D9D0C2;
+        --pink:#FF6183; --pink2:#FF8BA6; --pink3:#FFB4C5; --lilac:#B0A8D1; --green:#1BD944; --green2:#00D22E; --orange:#FF9626; --yellow:#FFDA95; }
+* { box-sizing:border-box; margin:0; padding:0; }
+html, body { width:2340px; height:1080px; overflow:hidden; font-family:'Noto Sans SC', sans-serif; color:var(--ink);
+  background-color:var(--cream); background-image:radial-gradient(circle, rgba(20,2,6,.055) 1.6px, transparent 2px); background-size:30px 30px; }
+.abs { position:absolute; }
+.serif { font-family:'Instrument Serif', 'Noto Serif SC', serif; }
+.mono { font-family:'JetBrains Mono', monospace; }
+
+/* 演示区：官网的方框 + 硬投影。内容 1474×829（边框 3 + 内边距 14）。下沿 40 + 863 = 903 ≤ 字幕带 922 − 10；投影再往下 12 px 到 915 */
+.frame { position:absolute; background:#fff; padding:14px; border:3px solid var(--ink); box-shadow:12px 12px 0 var(--ink); }
+.frame .inner { position:relative; width:100%; height:100%; overflow:hidden; background:var(--ink); }
+.chip { display:inline-flex; align-items:center; gap:10px; padding:6px 16px; background:var(--ink); color:var(--cream); font:700 24px 'JetBrains Mono','Noto Sans SC'; letter-spacing:.06em; white-space:nowrap; }
+.chip i { display:block; width:12px; height:12px; background:var(--green); }
+.chip.pink { background:var(--pink); color:var(--ink); } .chip.pink i { background:var(--ink); }
+.mark { background:linear-gradient(transparent 58%, var(--pink3) 58%, var(--pink3) 92%, transparent 92%); }
+
+/* 左栏：本期目录（官网的白底方框 + 硬投影；当前一条涂亮粉） */
+#toc { position:absolute; left:118px; top:470px; transform:translateY(-50%); width:560px; padding:24px 28px 16px; background:#fff; border:3px solid var(--ink); box-shadow:10px 10px 0 var(--ink); }
+#toc .hd { display:flex; align-items:center; justify-content:space-between; margin-bottom:12px; }
+#toc .hd .t { font:800 34px 'Noto Sans SC'; white-space:nowrap; }
+#toc .hd .chip { font-size:20px; padding:5px 12px; }
+#toc .sub { font:600 20px 'JetBrains Mono','Noto Sans SC'; color:var(--gray2); letter-spacing:.04em; margin:-4px 0 10px; white-space:nowrap; }
+#toc .it { display:flex; align-items:center; gap:18px; padding:10px 14px; margin:0 -14px; border-top:2px solid #E9E3D9; }
+#toc .it .th { flex:none; position:relative; width:176px; height:99px; border:2px solid var(--ink); overflow:hidden; background:var(--sand2); opacity:.5; filter:grayscale(.85); }
+#toc .it .th img { display:block; width:100%; height:100%; object-fit:cover; }
+#toc .it .tx { min-width:0; }
+#toc .it .n { font:700 20px 'JetBrains Mono','Noto Sans SC'; color:var(--gray2); white-space:nowrap; letter-spacing:.06em; }
+#toc .it .nm { font:800 30px/1.3 'Noto Sans SC'; color:var(--gray2); margin-top:4px; white-space:nowrap; }
+#toc .it.done .th { opacity:.85; filter:grayscale(.4); }
+#toc .it.done .nm { color:var(--gray); }
+#toc .it.done .nm::after { content:'  ✓'; color:var(--green2); font-weight:900; }
+#toc .it.now { background:var(--pink); }
+#toc .it.now .th { opacity:1; filter:none; }
+#toc .it.now .n { color:var(--ink); }
+#toc .it.now .nm { color:var(--ink); }
+
+/* 演示区里的东西 */
+#demo { left:718px; top:40px; width:1508px; height:863px; }
+#demoin { position:absolute; left:0; top:0; width:1474px; height:829px; }
+#cardbg { position:absolute; inset:0; background:var(--sand2); }
+#scrimg { position:absolute; left:0; top:0; width:100%; height:100%; display:block; visibility:hidden; background:#000; }
+#ovB { position:absolute; inset:0; }
+.nametag { position:absolute; left:22px; top:20px; display:flex; align-items:stretch; border:3px solid var(--ink); box-shadow:5px 5px 0 var(--ink); z-index:5; }
+.nametag .m { background:var(--pink); color:var(--ink); font:800 27px 'Noto Sans SC'; padding:7px 18px; white-space:nowrap; }
+.nametag .e { background:var(--cream); color:var(--ink); font:700 24px 'Space Grotesk','Noto Sans SC'; padding:7px 18px; white-space:nowrap; letter-spacing:.03em; display:flex; align-items:center; }
+.credit { position:absolute; right:22px; top:20px; background:var(--ink); color:var(--cream); font:700 25px 'Noto Sans SC'; padding:8px 20px; white-space:nowrap; z-index:5; border:3px solid var(--ink); box-shadow:5px 5px 0 var(--pink); }
+.cappill { position:absolute; left:22px; bottom:26px; background:#fff; border:3px solid var(--ink); border-left:16px solid var(--pink); box-shadow:6px 6px 0 var(--ink); padding:8px 24px 9px 20px; z-index:5; }
+.cappill b { display:block; font:800 32px/1.3 'Noto Sans SC'; color:var(--ink); white-space:nowrap; }
+.cappill small { display:block; font:600 22px/1.35 'Noto Sans SC'; color:var(--gray); white-space:nowrap; }
+.credit.br { top:auto; bottom:26px; }
+.cappill.br { left:auto; right:22px; border-left:3px solid var(--ink); border-right:16px solid var(--pink); padding:8px 20px 9px 24px; text-align:right; }
+.cappill.tl { bottom:auto; top:20px; }
+.cappill.tl2 { bottom:auto; top:92px; max-width:1000px; }
+.cappill.tr { left:auto; right:22px; bottom:auto; top:92px; border-left:3px solid var(--ink); border-right:16px solid var(--pink); text-align:right; max-width:1000px; }
+
+/* 官网页面截图镜头：浅沙色桌面 + 一张纸（硬投影）+ 相机推拉 + 高亮框 */
+.shotstage { position:absolute; inset:0; overflow:hidden; background-color:var(--sand2); background-image:radial-gradient(circle, rgba(20,2,6,.09) 1.6px, transparent 2px); background-size:30px 30px; }
+.shotimg { position:absolute; display:block; background:var(--cream); box-shadow:12px 12px 0 rgba(20,2,6,.92); }
+.hl { position:absolute; border:5px solid var(--ink); background:rgba(255,97,131,.14); box-shadow:7px 7px 0 var(--pink); }
+.hl .tag { position:absolute; left:-5px; bottom:calc(100% + 9px); background:var(--ink); color:var(--cream); font:800 27px 'Noto Sans SC'; padding:5px 16px; white-space:nowrap; }
+.hl .tag.in { bottom:auto; top:calc(100% + 9px); }
+
+/* 开场标题（盖在快剪上） */
+.dim { position:absolute; inset:0; background:radial-gradient(ellipse at 50% 55%, rgba(20,2,6,.50), rgba(20,2,6,.82)); }
+.ttl { position:absolute; left:0; right:0; text-align:center; color:var(--cream); white-space:nowrap; }
+.ttl .k { display:inline-flex; align-items:center; gap:14px; font:700 28px 'JetBrains Mono','Noto Sans SC'; letter-spacing:.28em; color:var(--pink); }
+.ttl .k i { display:block; width:14px; height:14px; background:var(--green); }
+.ttl .a { font:900 108px/1.1 'Noto Serif SC'; letter-spacing:.01em; text-shadow:0 6px 30px rgba(0,0,0,.5); }
+.ttl .b { font:900 196px/1.02 'Noto Serif SC'; color:var(--pink); letter-spacing:-.01em; text-shadow:0 8px 40px rgba(0,0,0,.55); }
+.ttl .chip { font:800 30px 'Noto Sans SC'; letter-spacing:.02em; margin:0 8px; border:3px solid var(--cream); }
+.ttl .chip.fill { background:var(--pink); color:var(--ink); border-color:var(--pink); }
+
+/* 收尾卡片 */
+.kick { font:700 26px 'JetBrains Mono','Noto Sans SC'; letter-spacing:.24em; color:var(--pink); white-space:nowrap; }
+.h1 { font:900 66px/1.25 'Noto Serif SC'; white-space:nowrap; color:var(--ink); }
+.cap { position:absolute; font:700 28px/1.45 'Noto Sans SC'; color:var(--gray); }
+.photo { position:absolute; background:#fff; padding:9px; border:3px solid var(--ink); box-shadow:10px 10px 0 var(--ink); }
+.photo img { display:block; width:100%; height:auto; }
+.qrtile { position:absolute; background:#fff; padding:22px; border:3px solid var(--ink); box-shadow:10px 10px 0 var(--pink); }
+.qrtile img { display:block; width:100%; height:100%; image-rendering:pixelated; }
+.urlpill { position:absolute; left:0; right:0; margin:0 auto; width:max-content; background:var(--ink); color:var(--cream); font:800 40px 'Space Grotesk','Noto Sans SC'; letter-spacing:.01em; padding:12px 32px; white-space:nowrap; box-shadow:8px 8px 0 var(--pink); }
+.credits { position:absolute; left:60px; right:60px; text-align:center; font:600 22px/1.5 'Noto Sans SC'; color:var(--gray); }
+
+/* 字幕：项目的中英双语标准（y 922 起，中文一行 52 px + 英文一行 30 px，居中）；颜色换成官网的墨黑 / 暖灰，描边是奶油色 */
+#subs { position:absolute; left:0; top:922px; width:2340px; height:130px; z-index:30; pointer-events:none; }
+#subZh { position:absolute; left:0; right:0; top:0; text-align:center; font:800 52px/66px 'Noto Sans SC'; color:var(--ink); -webkit-text-stroke:10px var(--cream); paint-order:stroke fill; white-space:nowrap; }
+#subEn { position:absolute; left:0; right:0; top:70px; text-align:center; font:600 30px/40px 'Noto Sans SC'; color:var(--gray); -webkit-text-stroke:6px var(--cream); paint-order:stroke fill; white-space:nowrap; }
+#subZh .w { display:inline-block; font:800 .56em 'Noto Sans SC'; background:var(--ink); color:var(--cream); -webkit-text-stroke:0; padding:0 .5em; margin-right:.55em; vertical-align:.16em; line-height:1.55; letter-spacing:.02em; }
+#subZh .w.ai { background:var(--pink); color:var(--ink); }
+</style>
+</head>
+<body>
+<div class="frame" id="demo">
+  <div class="inner"><div id="demoin">
+    <div id="cardbg"></div>
+    <img id="scrimg">
+    <div id="ovB"></div>
+  </div></div>
+</div>
+<div id="toc"></div>
+<div id="subs"><div id="subZh"></div><div id="subEn"></div></div>
+<script src="timeline.js"></script>
+<script src="frames.js"></script>
+<script src="scenes.js"></script>
+<script src="engine.js"></script>
+</body>
+</html>

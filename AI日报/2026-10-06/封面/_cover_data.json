@@ -1,0 +1,46 @@
+{
+  "line1": "ChatGPT 生图插广告",
+  "line2": "免费画笔谁买单？",
+  "l1px": 168,
+  "l2px": 236,
+  "maxw": 1320,
+  "safe": [
+    300,
+    1620
+  ],
+  "textCx": 900,
+  "scale": 9,
+  "frame": [
+    64,
+    64
+  ],
+  "footRow": 62,
+  "fishX": 1074,
+  "foot": 1062,
+  "tag": "",
+  "theme": {
+    "bg": "#FFFFFF",
+    "lead": "#8A93AD",
+    "accent": "#4A88DA",
+    "list": "#4D5670",
+    "more": "#9AA2B8"
+  },
+  "_theme": "blue",
+  "_pose": "finger_up_m2",
+  "_eyes": "idle_surprised_m0",
+  "_fx": "fx_emph",
+  "_qmark": false,
+  "_place": "right",
+  "others": [
+    "ChatGPT 欧盟文本加水印",
+    "Reflection 发布 Beam",
+    "维基抓到疑似 OpenAI 智能体",
+    "Reka 发布全能模型 Rho-1",
+    "Cohere 推出 North 2"
+  ],
+  "othersHead": "今天还有 6 条",
+  "othersMore": "……共 7 条",
+  "listX": 300,
+  "listW": 740,
+  "listBottom": 1000
+}

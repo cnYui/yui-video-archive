@@ -1,0 +1,89 @@
+{
+ "slug": "Hooks",
+ "title": "Claude官方教程 第6期｜Hooks：把“通常照做”变成“绝对照做”",
+ "kicker": "<b>Claude官方教程</b> 第6期",
+ "hook": [
+  "通常照做",
+  "和一定照做"
+ ],
+ "lines": [
+  {
+   "id": "N01",
+   "zh": "提示里写“改完代码要格式化”，Claude 通常会照做。",
+   "say": "提示里写“改完代码要格式化”，Claude 通常会照做。",
+   "en": "Tell Claude in a prompt to always format after editing, and it usually will."
+  },
+  {
+   "id": "N02",
+   "zh": "通常，不等于每次。Hooks 的卖点就一句：它想跳也跳不过去。",
+   "say": "通常，不等于每次。Hooks 的卖点就一句：它想跳也跳不过去。",
+   "en": "Usually isn't always. The whole pitch of hooks: Claude can't skip it."
+  },
+  {
+   "id": "N03",
+   "zh": "官方列了三十多个钩子事件，常用的就几个。",
+   "say": "官方列了三十多个钩子事件，常用的就几个。",
+   "en": "Anthropic lists more than thirty hook events, and you'll reach for just a handful."
+  },
+  {
+   "id": "N04",
+   "zh": "PreToolUse，在工具调用之前触发，能在事情发生前把它拦下来。",
+   "say": "PreToolUse，在工具调用之前触发，能在事情发生前把它拦下来。",
+   "en": "PreToolUse fires before a tool call, so it can stop something before it happens."
+  },
+  {
+   "id": "N05",
+   "zh": "PostToolUse，在调用成功之后触发，自动格式化、自动检查放这里。",
+   "say": "PostToolUse，在调用成功之后触发，自动格式化、自动检查放这里。",
+   "en": "PostToolUse fires after a successful call, which is where auto-formatting and linting go."
+  },
+  {
+   "id": "N06",
+   "zh": "Stop，在它想收工时触发。一句“你还没做完”，就能让它接着干。",
+   "say": "Stop，在它想收工时触发。一句“你还没做完”，就能让它接着干。",
+   "en": "Stop fires when Claude wants to wrap up. It's how you say: no, you're not done yet."
+  },
+  {
+   "id": "N07",
+   "zh": "PreToolUse 能返回三种决定：放行、拒绝、交给你来定。",
+   "say": "PreToolUse 能返回三种决定：放行、拒绝、交给你来定。",
+   "en": "A PreToolUse hook can return three decisions: allow, deny, or ask you."
+  },
+  {
+   "id": "N08",
+   "zh": "不返回 JSON 的钩子看退出码：2 是拦截，0 是没意见，别的都不拦。",
+   "say": "不返回 JSON 的钩子看退出码：2 是拦截，0 是没意见，别的都不拦。",
+   "en": "Hooks that skip JSON use exit codes: 2 blocks, 0 means no objection, and anything else doesn't block."
+  },
+  {
+   "id": "N09",
+   "zh": "最容易踩的坑：退出码 1 看着像报错，其实不拦，命令照样跑。",
+   "say": "最容易踩的坑：退出码 1 看着像报错，其实不拦，命令照样跑。",
+   "en": "The classic trap: exit code 1 feels like an error, but it doesn't block. The command still runs."
+  },
+  {
+   "id": "N13",
+   "zh": "就算跳过权限，钩子的拒绝照样拦得住。",
+   "say": "就算跳过权限，钩子的拒绝照样拦得住。",
+   "en": "Even with permissions bypassed, a hook's deny still blocks the call."
+  },
+  {
+   "id": "N10",
+   "zh": "还有一招：不拦，改写。把命令里的密钥换成占位符，再放行。",
+   "say": "还有一招：不拦，改写。把命令里的密钥换成占位符，再放行。",
+   "en": "Another move: don't block, rewrite. Swap a secret in the command for a placeholder, then let it run."
+  },
+  {
+   "id": "N11",
+   "zh": "压缩后补上下文，别用 PostCompact，用 SessionStart。",
+   "say": "压缩后补上下文，别用 PostCompact，用 SessionStart。",
+   "en": "To restore context after a compact, don't use PostCompact. Use SessionStart with the compact matcher."
+  },
+  {
+   "id": "N12",
+   "zh": "提示词是请求，Hooks 才是规矩。不过路径写错，它会悄悄失效。",
+   "say": "提示词是请求，Hooks 才是规矩。不过路径写错，它会悄悄失效。",
+   "en": "A prompt is a request. A hook is a rule. Just don't mistype the path, or it fails silently."
+  }
+ ]
+}

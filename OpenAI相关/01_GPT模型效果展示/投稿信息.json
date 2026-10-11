@@ -1,0 +1,47 @@
+{
+  "title": "OpenAI 新模型 GPT-6.1 Sol 来了！做游戏、做地球，效果震撼瘫坐",
+  "title_note": "草稿，用户定；封面字是“GPT-6.1 Sol / 网友实测”，标题写完整一句、不抄封面",
+  "bvid": "BV1wYaU6oEbw",
+  "submitted_at": "2026-10-02 21:14 JST（用户把 mp4 拖进投稿页，插件填表，用户说“填表发布”后我点“立即投稿”）",
+  "video": "D:\\大疆\\OpenAI相关\\01_GPT模型效果展示\\GPT模型效果展示_成片.mp4",
+  "cover_16x9": "D:\\大疆\\OpenAI相关\\01_GPT模型效果展示\\制作\\04_封面\\封面_选定_16x9.png",
+  "cover_4x3": "D:\\大疆\\OpenAI相关\\01_GPT模型效果展示\\制作\\04_封面\\封面_选定_4x3.png",
+  "cover_options": "用户选了 B（Sol 的 3D 游戏）：封面_选定_16x9.png / _4x3.png = B；A 地球、C 毛绒 dots 留在 制作/04_封面/",
+  "partition": "人工智能",
+  "ai_declaration": "含AI生成内容",
+  "season": null,
+  "tags": [
+    "OpenAI",
+    "GPT6.1Sol",
+    "GPT6Astra",
+    "人工智能",
+    "AI",
+    "大模型",
+    "AI作品",
+    "实测",
+    "AI新模型",
+    "OpenAI开发者大会"
+  ],
+  "tags_note": "手敲的“gpt-6-astra”会被丢掉，要点“推荐标签”里的同名项；其余 9 个手敲都在；没选话题、没选合集、没开定时",
+  "desc": "这条视频把网友用 OpenAI 新模型 GPT-6.1 Sol / GPT-6 Astra 做出来的 9 个作品放在一起看，中间穿插 OpenAI DevDay 2026 发布会的官方画面。\n\n【官方说的（10 月 2 日核对）】\n· DevDay 2026 在 9 月 29 日。GPT-6 Astra 是 9 月 3 日发布的旗舰；GPT-6.1 Sol 在 DevDay 发布，官方说它接近 Astra 的表现、成本更低。\n· API 价格（每百万 token，单次输入不超过 27.2 万 token）：Astra 输入 10 美元、输出 50 美元；Sol 输入 2 美元、输出 10 美元，单价是 Astra 的 1/5。\n· Ultrafast：DevDay 发布的最快服务档，发布会幻灯片写最高 8 倍速、每秒最多 300 token；目前先用在 Astra 上。\n· dots：ChatGPT 里由 GPT-6 Astra 驱动的常开智能体。\n\n【9 个作品（模型名都是发布者自己标的）】\n1. LUMENFALL 3D 游戏原型，Sol 对 Astra（@higgsfield_ai）https://x.com/higgsfield_ai/status/2105012668348383325\n2. 3D 斗兽场，四个模型同一个提示词（@LuminaBench）https://x.com/LuminaBench/status/2104995514433564800\n3. 爱琴海 Three.js 场景（AEGEAN）（@chetanankola）https://x.com/chetanankola/status/2105207149869814091\n4. 3D 秋天 Around the bend（Sol）（@ishuagra02）https://x.com/ishuagra02/status/2105060021599871162\n5. 猕猴桃果冻物理，Sol Max 对 Astra Max（@abhinavflac）https://x.com/abhinavflac/status/2105117731440005249\n6. 人体图谱 Human Atlas（转发）（@R_ChajX）https://x.com/R_ChajX/status/2103098256066523405\n7. 高斯泼溅的 dots（@abstrakt314）https://x.com/abstrakt314/status/2105756028935504032\n8. dots × Magnific 宣传片（@magnific）https://x.com/magnific/status/2105003172385497114\n9. Clearwater 一比一的地球（@SamGCoder）https://x.com/SamGCoder/status/2105822535212581210\n\n【几处要说明】\n· @abstrakt314、@chetanankola 的帖子写的是“GPT-6.1 Astra”，官方没有这个模型（OpenAI 取消了原定 10 月发布的版本），视频里不点具体版本。\n· Higgsfield 说的“Sol 快 4 倍、成本 1/5”是它自己的说法：成本 1/5 和官方单价相符，“快 4 倍”官方没有数据；Higgsfield 是 OpenAI 的合作伙伴。\n· @ishuagra02 的“API 只花 1.5 美元、Opus 设计水平的 80%、成本 4%”无法核实。\n· 人体图谱是 @R_ChajX 转发，原作者 Ashe（@ashebytes），数据来自开源的 BodyParts3D。\n· 斗兽场四格里，Astra 那一格标的是 GPT-6 Astra Pro。\n· “OpenAI × Magnific”是 Magnific 自己的宣传。\n\n整个地球你也能玩：https://samg-coder.github.io/ClearWater6.1/ （他人发布，内容未经验证）\n\n声明：配音为 AI 生成（曼波声线）；画面来自 X 平台账号和 OpenAI DevDay 2026 发布会（OpenAI 官方 YouTube），版权归原作者，如有问题请联系，立即处理；价格和功能会变，以官方为准。",
+  "todo_user": [
+    "听配音（Sol / dots / Higgsfield 的读音）",
+    "确认片尾清单（制作/00_整片/outro.json 是草稿）",
+    "定标题和封面（A / B / C）",
+    "把 mp4 拖进 B 站投稿页后我用插件填表；“立即投稿”由你点（或明说发布）",
+    "openai.com 三篇官方文章页我没读到（403），发布前自己看一眼"
+  ],
+  "published_tags": [
+    "OpenAI",
+    "GPT6.1Sol",
+    "人工智能",
+    "AI",
+    "大模型",
+    "AI作品",
+    "实测",
+    "AI新模型",
+    "OpenAI开发者大会",
+    "gpt-6-astra"
+  ],
+  "published_check": "接口核对：state 0 开放浏览、tid 231、标题一致、简介 1833 字、10 个标签、时长 208 s、cover 1920×1080 和 cover43 1440×1080 是两张不同的图"
+}

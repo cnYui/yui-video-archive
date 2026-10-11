@@ -1,0 +1,64 @@
+{
+  "title": "10月6日AI圈7件事：ChatGPT生图时测试图片广告，OpenAI给欧盟文本加隐形水印",
+  "titles": {
+    "bilibili": "10月6日AI圈7件事：ChatGPT生图时测试图片广告，OpenAI给欧盟文本加隐形水印",
+    "douyin": "ChatGPT生图测广告，欧盟文本加水印",
+    "xiaohongshu": "ChatGPT生图要插广告！AI圈7件事"
+  },
+  "title_notes": [],
+  "video": "D:\\大疆\\AI日报\\2026-10-06\\AI每日日报_1006_上传版.mp4",
+  "video_h264": "D:\\大疆\\AI日报\\2026-10-06\\AI每日日报_1006_上传版_h264.mp4",
+  "video_seconds": 367.7,
+  "cover_16x9": "D:\\大疆\\AI日报\\2026-10-06\\封面\\封面_16x9_1920x1080.png",
+  "cover_4x3": "D:\\大疆\\AI日报\\2026-10-06\\封面\\封面_4x3_1440x1080.png",
+  "cover_3x4": "D:\\大疆\\AI日报\\2026-10-06\\封面\\封面_3x4_1080x1440.png",
+  "partition": "人工智能",
+  "partition_fallback": "科技数码",
+  "tags": [
+    "AI资讯",
+    "人工智能",
+    "大模型",
+    "AI日报",
+    "OpenAI",
+    "鲸鱼娘",
+    "大肥鱼"
+  ],
+  "collection": "AI每日日报",
+  "declaration": "含AI生成内容",
+  "description": "AI每日日报 · 10月6日（周二）· 竖屏版\n鲸鱼娘带你看看 AI 圈发生了什么。\n\n来源\n① ChatGPT 生图时插广告：OpenAI https://openai.com/index/new-chatgpt-ads-format-and-measurement/ ；TechCrunch https://techcrunch.com/2026/10/05/openai-launches-visual-ads-that-appear-alongside-image-generation-results/ ；IT之家 https://www.ithome.com/1/009/901.htm\n② ChatGPT 欧盟文本加水印：OpenAI https://openai.com/index/eu-text-provenance/ ；The Decoder https://the-decoder.com/openai-will-watermark-chatgpt-text-in-the-eu-but-makes-it-optional-for-api-users-worldwide/ ；IT之家 https://www.ithome.com/1/009/903.htm\n③ Reflection 发布 Beam：Reflection AI https://reflection.ai/blog/introducing-beam ；Semafor https://www.semafor.com/article/10/05/2026/reflection-ai-unveils-an-open-source-answer-to-chinese-labs\n④ 维基抓到疑似 OpenAI 智能体：Wikimedia Foundation https://wikimediafoundation.org/news/2026/10/05/openai-rogue-agent-activities-found-on-wikimedia-projects/ ；The Verge https://www.theverge.com/news/1004929/wikipedia-openai-rogue-bots-wikimedia-foundation-outage\n⑤ Reka 发布全能模型 Rho-1：Reka AI https://reka.ai/news/rho-1-collapsing-the-multimodal-stack ；The Decoder https://the-decoder.com/reka-ais-omni-model-rho-1-handles-text-images-video-and-robot-control-in-a-single-model/\n⑥ Cohere 推出 North 2：Cohere https://cohere.com/blog/introducing-north-2 ；VentureBeat https://venturebeat.com/orchestration/coheres-north-2-puts-ai-agents-on-a-budget-and-gives-them-a-memory ；SiliconANGLE https://siliconangle.com/2026/10/05/cohere-unveils-north-2-ai-agent-platform-with-rebuilt-orchestration-and-token-spending-caps/\n⑦ 挖漏洞的开源模型 apex：Hugging Face https://huggingface.co/cantina-security/apex-flash-1 ；Cantina https://www.cantina.security/apex-flash ；RuntimeWire https://runtimewire.com/article/cantina-apex-flash-open-weights-security-model\n\n说明\n· 信息截至北京时间 2026-10-06 03:33，以各家官方发布为准。\n· 本期配音由 AI 合成（Fish Audio「苏晓晓」），背景音乐为程序合成；内容由 AI 整理，并自动核对来源，如有出入以原文为准。\n· 主播鲸鱼娘（像素素材包「大肥鱼」）是 DeepSeek 的网友拟人同人（原型：上善无形，CC BY-NC-SA 4.0；女仆造型：ZipZipPipe），与 DeepSeek 官方无关。",
+  "douyin": {
+    "title": "ChatGPT生图测广告，欧盟文本加水印",
+    "description": "10月6日AI圈7件事：ChatGPT生图时测试图片广告，OpenAI给欧盟文本加隐形水印\n今日 7 件事：ChatGPT生图时要测广告、OpenAI给欧盟文本加水印、Reflection发布开放模型Beam、维基百科抓到疑似OpenAI的智能体、Reka一个模型包办图文视频、Cohere推出North 2、专挖漏洞的开源模型apex-flash-1。\n内容由 AI 整理并自动核对来源，如有出入以原文为准。",
+    "topics": [
+      "AI每日日报",
+      "人工智能",
+      "大模型",
+      "AI资讯",
+      "OpenAI"
+    ],
+    "declaration": "内容由AI生成",
+    "collection": "AI每日日报",
+    "video": "D:\\大疆\\AI日报\\2026-10-06\\AI每日日报_1006_上传版_h264.mp4",
+    "cover_3x4": "D:\\大疆\\AI日报\\2026-10-06\\封面\\封面_3x4_1080x1440.png",
+    "cover_4x3": "D:\\大疆\\AI日报\\2026-10-06\\封面\\封面_4x3_1440x1080.png"
+  },
+  "xiaohongshu": {
+    "title": "ChatGPT生图要插广告！AI圈7件事",
+    "description": "10月6日AI圈7件事：ChatGPT生图时测试图片广告，OpenAI给欧盟文本加隐形水印\n今日 7 件事：ChatGPT生图时要测广告、OpenAI给欧盟文本加水印、Reflection发布开放模型Beam、维基百科抓到疑似OpenAI的智能体、Reka一个模型包办图文视频、Cohere推出North 2、专挖漏洞的开源模型apex-flash-1。\n内容由 AI 整理并自动核对来源，如有出入以原文为准。",
+    "topics": [
+      "AI每日日报",
+      "人工智能",
+      "大模型",
+      "AI资讯",
+      "OpenAI",
+      "AIGC",
+      "科技",
+      "开源"
+    ],
+    "declaration": "笔记含AI合成内容",
+    "original": true,
+    "collection": "AI每日日报",
+    "video": "D:\\大疆\\AI日报\\2026-10-06\\AI每日日报_1006_上传版_h264.mp4",
+    "cover_3x4": "D:\\大疆\\AI日报\\2026-10-06\\封面\\封面_3x4_1080x1440.png"
+  }
+}

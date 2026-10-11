@@ -1,0 +1,371 @@
+{
+ "layout": "dual",
+ "plan": [
+  {
+   "id": "S1",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "每次粘贴同一段",
+   "credit": "官方教程 第8期",
+   "ranges": [
+    {
+     "src": "a",
+     "in": 4.15,
+     "out": 6.238,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 10.42,
+     "out": 15.423,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 19.15,
+     "out": 20.5,
+     "mute": true
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "a",
+     "in": 6.71,
+     "out": 7.767,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 8.04,
+     "out": 10.116,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 16.22,
+     "out": 18.558,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 20.89,
+     "out": 22.112,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 22.39,
+     "out": 24.136,
+     "mute": true
+    }
+   ],
+   "lines": [
+    {
+     "id": "N01",
+     "a": 0.0
+    },
+    {
+     "id": "N02",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "S2",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "一个文件夹 + SKILL.md",
+   "credit": "官方教程 第8期",
+   "ranges": [
+    {
+     "src": "a",
+     "in": 33.57,
+     "out": 38.81,
+     "mute": true
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "a",
+     "in": 39.65,
+     "out": 40.2,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 40.45,
+     "out": 45.14,
+     "mute": true
+    }
+   ],
+   "lines": [
+    {
+     "id": "N03",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "S3",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "放在哪",
+   "credit": "官方教程 第8期",
+   "ranges": [
+    {
+     "src": "a",
+     "in": 66.4,
+     "out": 68.899,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 74.88,
+     "out": 77.261,
+     "mute": true
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "a",
+     "in": 69.19,
+     "out": 74.07,
+     "mute": true
+    }
+   ],
+   "lines": [
+    {
+     "id": "N04",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "S4",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "按需加载",
+   "credit": "官方教程 第8期",
+   "ranges": [
+    {
+     "src": "a",
+     "in": 82.45,
+     "out": 84.11,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 99.58,
+     "out": 100.232,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 103.72,
+     "out": 109.708,
+     "mute": true
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "a",
+     "in": 90.67,
+     "out": 98.97,
+     "mute": true
+    }
+   ],
+   "lines": [
+    {
+     "id": "N05",
+     "a": 0.0
+    },
+    {
+     "id": "N06",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "S5",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "技能 vs CLAUDE.md",
+   "credit": "官方教程 第8期",
+   "ranges": [
+    {
+     "src": "a",
+     "in": 113.11,
+     "out": 114.671,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 114.94,
+     "out": 118.759,
+     "mute": true
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "a",
+     "in": 110.02,
+     "out": 112.644,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 119.07,
+     "out": 121.826,
+     "mute": true
+    }
+   ],
+   "lines": [
+    {
+     "id": "N07",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "S6",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "怎么调用 + 何时用",
+   "credit": "官方教程 第8期",
+   "ranges": [
+    {
+     "src": "a",
+     "in": 129.0,
+     "out": 136.023,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 136.3,
+     "out": 139.921,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 140.18,
+     "out": 144.338,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 147.93,
+     "out": 149.939,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 157.35,
+     "out": 157.997,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 158.24,
+     "out": 159.742,
+     "mute": true
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "a",
+     "in": 84.37,
+     "out": 89.438,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 122.31,
+     "out": 127.704,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 150.19,
+     "out": 156.095,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 159.99,
+     "out": 162.583,
+     "mute": true
+    }
+   ],
+   "lines": [
+    {
+     "id": "N08",
+     "a": 0.0
+    },
+    {
+     "id": "N09",
+     "a": 0.0
+    },
+    {
+     "id": "N10",
+     "a": 0.0
+    },
+    {
+     "id": "N13",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "S7",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "收尾",
+   "credit": "官方教程 第8期",
+   "ranges": [
+    {
+     "src": "a",
+     "in": 55.35,
+     "out": 58.455,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 163.33,
+     "out": 169.065,
+     "mute": true
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "a",
+     "in": 50.25,
+     "out": 54.76,
+     "mute": true
+    },
+    {
+     "src": "a",
+     "in": 77.41,
+     "out": 81.74,
+     "mute": true
+    }
+   ],
+   "lines": [
+    {
+     "id": "N11",
+     "a": 0.0
+    },
+    {
+     "id": "N12",
+     "a": 0.0
+    }
+   ]
+  }
+ ]
+}

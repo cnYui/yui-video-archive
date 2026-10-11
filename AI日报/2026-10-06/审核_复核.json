@@ -1,0 +1,45 @@
+{
+  "verdict": "fail",
+  "script_sha": "bc9e2037c84d",
+  "issues": [
+    "【中英内容交叉 + 中文断在定语中间｜上一轮已指出，这版只多切了一刀，没改到位】第 2 条第 2 句：SRT #42/#43 中文“会给欧盟的 | ChatGPT 和 Codex 文本输出加水印。”，英文“watermark EU text | from ChatGPT and Codex.”。英文 #42 已经说了“加水印、文本”，中文 #42 只有“会给欧盟的”（以“的”悬空）；中文 #43 的“文本输出加水印”对应的英文只剩“from ChatGPT and Codex.”，两条各自说的不是同一件事。前一条 #41“未来几周 / it will, over the coming weeks,”只停 0.63 秒（英文约 49 字符/秒），#42 只停 0.79 秒，基本读不完。音频不用动，只改英文和切点即可，例如把这句 en 改成“On October 5, OpenAI said that to comply with the EU AI Act, over the coming weeks, in the EU, it will watermark text output from ChatGPT and Codex.”，vertical.cuts 设成 [\"未来几周会给欧盟的\", \"in the EU,\"]，得到“未来几周会给欧盟的 / over the coming weeks, in the EU,”和“ChatGPT 和 Codex 文本输出加水印。 / it will watermark text output from ChatGPT and Codex.”",
+    "【可读性，不判 fail】几条字幕停留太短、英文读不完：#104“还有几次想攻破 / There were also a few attempts to compromise”1.07 秒（约 41 字符/秒），#109“可能促成了 5 月 / may have contributed, in May,”0.93 秒，#132“官方没说开源。 / and Reka hasn't said anything about open weights.”1.53 秒，#23“同时， / OpenAI also”0.52 秒。可以考虑和相邻一条合并",
+    "【中英小交叉，不判 fail，建议顺手改】第 1 条第 6 句 #25/#26：“合作方”中文在 #26、“partners”英文在 #25；第 4 条第 1 句 #92/#93：“说”中文在 #92、“says”英文在 #93；第 5 条第 1 句 #117/#118：“handles”英文在 #117、“全包了”中文在 #118；第 1 条第 9 句 #33/#34：“follows”英文在 #33、“之后”中文在 #34。专名和数字都在同一条，不影响理解",
+    "【切在名词短语中间，不判 fail】第 3 条第 7 句 #83/#84“OpenAI 和 Anthropic 的顶级 | 闭源模型。”（#84 只停 1.08 秒）；第 4 条第 1 句 #93“它发现了一批”（量词悬空）；第 4 条第 7 句 #111/#112“好消息是，没发现系统 | 或数据被攻破。”（#111 单看像“没发现系统”）。没有断在词中间，但放一条更好读",
+    "【措辞精度，不判 fail】第 5 条钩子 vhook“蒸馏版一秒出 5.3 秒视频”：Reka 原文是内部测试里“in about a second”，台词已写“官方内部测试里……大约一秒”，钩子可加“约”；第 7 条钩子“跑完 60 题只花 2.38 美元”：Cantina 原文是“Estimated cost”，台词和数字卡已写“约”，钩子可改“约 2.38 美元”",
+    "【措辞精度，不判 fail】第 5 条第 8 句“官方也承认，换着花样提示时一致性还不稳”：Reka 原文这句在“Editing Stability: Targeted visual editing remains nascent”下面，说的是编辑画面时“consistency across diverse prompts is brittle”；可改成“编辑画面时，换着花样提示一致性还不稳”。属于缺点说明，不是夸大",
+    "【可选补充，不判 fail】第 4 条：The Verge 写了 OpenAI 发言人 Drew Pusateri 的回应（正在和维基媒体基金会一起审查，OpenAI 的调查还没能确认它的机器人和 5 月宕机有关），台本没提；台本已写明“疑似 OpenAI”是基金会自己的判断，不算错，加一句会更平衡。开场 / 回顾里“维基百科抓到”是口语简称，正文已说清是维基媒体基金会"
+  ],
+  "notes": [
+    "台本.json 的 sha1 前 12 位核对为 bc9e2037c84d，和审核记录.json / state.json 一致；竖屏静帧和三张拼图（10:37）、封面（10:36 / 10:43）、成片和 SRT（10:43）都晚于台本最后修改（10:23），对应当前版本",
+    "审核记录.json 里没有 level 为 review 的条目（hits 为空），唯一 block 的是 AI 复核本身",
+    "上一轮的问题这版已改好：#56/#57“检测工具一开始 | 只给通过审批的研究人员和专业机构”不再拆开“研究人员”；#13–#15 生图广告那句中英已对齐（“要在生图功能里 / in image generation,”“测试一种新的图片广告。 / it will test a new visual ad format.”）；#23/#24“同时， | 广告主的效果测量工具也扩充了，”不再拆“效果测量工具”；#108–#110“may have contributed”和“可能”已在同一条；#116–#118“视频 / video”已同条；#58–#61 水印 / watermark 已同条；#144–#147“上下文 / context”已同条；第 5 条钩子已加“蒸馏版”，台词加“官方内部测试里”；第 2 条要点和数字卡已改成“心理学文本”；“紧跟”已改成“是在……之后”",
+    "SRT：双语 178 条、中文 178 条、英文 178 条，时间轴和文字三份完全一致；没有隐藏字符、没有网址",
+    "事实逐条和原文一致：TechCrunch（10 月 5 日；本月晚些时候只在美国；首批测试广告主；清楚标注、不影响回答；AppsFlyer、Adjust 等测量合作方；DoubleVerify、IAS 品牌适配评估试点；全球推开后触达 12 亿周用户；Meta Muse 之后）、IT之家（官方称每周覆盖 12 亿用户；和正在生成的图片相互独立）；The Decoder 水印（EU AI Act；未来几周欧盟 ChatGPT 和 Codex；textGrain 在挑词时藏统计信号；API 全球 opt-in；心理学 400 token、1% 误报率约 95%；替换四分之一的词降到 17%；数学 400 token 约 60%（OpenAI 图表）；检测器先给选定研究人员和专业机构；Anthropic 对 Claude 全球强制）；Reflection（10 月 5 日；第一个开放权重模型；501B / 23B MoE；高级推理基准和 GLM-5.2 相当、推理算力少 3–4 倍；编程和智能体接近 Qwen 3.8-Max；23.8T token；10.5K GB300 四周；Apache 2.0；权重本月晚些时候放出）、Semafor（纽约公司；Qwen 3.8-Max 落后 OpenAI / Anthropic 顶级闭源模型；英伟达、红杉、花旗；6 月一轮 250 亿美元投前估值）；维基媒体基金会（10 月 5 日；we believe operated by OpenAI；数百万次 API 请求、数百万页面主要是 Wikidata 和 Commons；沙盒测试编辑；引用工具配置、认为想当代理；Etherpad 未遂；几十万次 WDQS 查询；may have contributed to 5 月部分宕机；没发现系统或数据被攻破）；Reka（10 月 5 日；19B；文字图像视频动作同一网络；无工具调用和外部模型；320 张 H100 约三个月；蒸馏版内部测试约一秒出 5.3 秒视频；逆动力学模型；研究预览、没提开放权重；672×384）；Cohere / VentureBeat / SiliconANGLE（10 月 5 日；重做编排系统；记忆让上下文跨会话和智能体保留更久；速率限制、用户配额、全公司上限；按智能体看 token；云 / 本地 / 完全离线；价格按规模和复杂度）；Hugging Face / Cantina / RuntimeWire（Cantina 和 Yeta Labs；10 月 1 日 X 上发布；基座智谱 GLM-5.3-Flash；50 个案例 150 道题；GRPO 强化学习；60 道留出题 40/60 = 66.7%、基座 60%、Opus 5 High 71.7%；估算成本 2.38 对 74.68 美元；MIT；公司内部评测）",
+    "openai.com 两个网址按提示没有直接取（缓存里也是 HTTP 403），用同条 refs 的 TechCrunch、IT之家、The Decoder 核对；The Verge WebFetch 打不开，用 制作\\source_pages.json 缓存正文核对",
+    "封面（16:9 / 4:3 / 3:4）“ChatGPT 生图插广告 / 免费画笔谁买单？”和 TechCrunch 标题“OpenAI launches visual ads that appear alongside image generation results”、IT之家“推出全新图片广告形式”一致，第二行是问句，不夸大；“今天还有 6 条”列 5 条加“……共 7 条”正确",
+    "投稿信息.json：B 站 / 抖音 / 小红书标题和简介的事实、数字和台本一致，不夸大；B 站简介只有 refs 的 18 个网址，没有别的网址或广告；10 月 6 日是周二，正确；章节 txt 时间点和 SRT 吻合",
+    "竖屏静帧（S01–S09 共 33 帧）：标题、钩子、来源贴纸、截图、橙框、要点卡、数字卡（7 件事、12 亿、95%、17%、501B、19B、40/60、$2.38）、进度条、回顾页打勾都没有错位、被盖住或乱码；TechCrunch 截图底部左右各有一小块白边、The Decoder 橙框右边贴着“EU”，都不影响阅读",
+    "内容安全：台本、字幕、标题简介、截图和封面里都没有色情低俗、暴力血腥、时政和地缘、军事、歧视、广告引流、和新闻无关的内容，没有奇怪的指令或网址，没有隐藏字符；Semafor 的中美竞争框架、The Verge 侧栏的美国政治标题都没进台本或画面；“欧盟 AI 法案”只是法规背景；第 7 条是安全研究模型新闻，没提也没推广 abliterated（少拒答）版本；所有网页里没有发现针对 AI 的指令"
+  ],
+  "checked": [
+    "https://openai.com/index/new-chatgpt-ads-format-and-measurement/（403，改用 TechCrunch / IT之家核对）",
+    "https://techcrunch.com/2026/10/05/openai-launches-visual-ads-that-appear-alongside-image-generation-results/",
+    "https://www.ithome.com/1/009/901.htm",
+    "https://openai.com/index/eu-text-provenance/（403，改用 The Decoder / IT之家核对）",
+    "https://the-decoder.com/openai-will-watermark-chatgpt-text-in-the-eu-but-makes-it-optional-for-api-users-worldwide/",
+    "https://www.ithome.com/1/009/903.htm",
+    "https://reflection.ai/blog/introducing-beam",
+    "https://www.semafor.com/article/10/05/2026/reflection-ai-unveils-an-open-source-answer-to-chinese-labs",
+    "https://wikimediafoundation.org/news/2026/10/05/openai-rogue-agent-activities-found-on-wikimedia-projects/",
+    "https://www.theverge.com/news/1004929/wikipedia-openai-rogue-bots-wikimedia-foundation-outage（WebFetch 打不开，用本地 source_pages.json 缓存核对）",
+    "https://reka.ai/news/rho-1-collapsing-the-multimodal-stack",
+    "https://the-decoder.com/reka-ais-omni-model-rho-1-handles-text-images-video-and-robot-control-in-a-single-model/",
+    "https://cohere.com/blog/introducing-north-2",
+    "https://venturebeat.com/orchestration/coheres-north-2-puts-ai-agents-on-a-budget-and-gives-them-a-memory",
+    "https://siliconangle.com/2026/10/05/cohere-unveils-north-2-ai-agent-platform-with-rebuilt-orchestration-and-token-spending-caps/",
+    "https://huggingface.co/cantina-security/apex-flash-1",
+    "https://www.cantina.security/apex-flash",
+    "https://runtimewire.com/article/cantina-apex-flash-open-weights-security-model"
+  ]
+}

@@ -1,0 +1,384 @@
+{
+ "_说明": "每句话（id 对应 台本/录制稿.json）的上框 top = 人脸、下框 bottom = 电脑操作，各是一串子镜头。src = 原片秒 [起, 止]；crop = [中心x, 中心y, 宽]（16:9，坐标按 1920×1080 画面算，原片 4K 按 2 倍取）或 [[起点], [终点]]（同宽平移）；end = 'cueN' 表示这个子镜头在第 N 条字幕开口时结束（cue1 = 第二条字幕）、'narr' = 配音念完时结束、数字 = 句首后多少秒结束；没写 end 的相邻子镜头平分剩余时间；hold = true 表示原片段不够长时最后一帧定格。速度 = 原片段长 ÷ 输出时长，人脸镜头要 0.9–1.1×，操作画面 ≤ 4×。",
+ "N01": {
+  "top": [
+   {
+    "src": [
+     20.9,
+     24.5
+    ],
+    "crop": [
+     960,
+     540,
+     1400
+    ],
+    "note": "Hi-Nate 框里的人脸，评论泡泡 “Hi, I'm Nate. I'm a designer at Anthropic.”"
+   }
+  ],
+  "bottom": [
+   {
+    "src": [
+     5.4,
+     9.0
+    ],
+    "crop": [
+     960,
+     500,
+     1400
+    ],
+    "note": "片名卡 How an Anthropic designer uses Claude Design"
+   }
+  ]
+ },
+ "N02": {
+  "top": [
+   {
+    "src": [
+     56.85,
+     58.32
+    ],
+    "crop": [
+     960,
+     472,
+     1000
+    ],
+    "end": 1.47,
+    "note": "第一杯咖啡（喝）"
+   },
+   {
+    "src": [
+     76.4,
+     77.77
+    ],
+    "crop": [
+     960,
+     560,
+     1000
+    ],
+    "note": "第二杯咖啡（咖啡机 → 杯子）"
+   }
+  ],
+  "bottom": [
+   {
+    "src": [
+     82.3,
+     85.4
+    ],
+    "crop": [
+     1295,
+     620,
+     1250
+    ],
+    "note": "原型成品快闪：When should we bother you? → Can we yell at you? → You're in. Go make bird noises."
+   }
+  ]
+ },
+ "N03": {
+  "top": [
+   {
+    "src": [
+     30.0,
+     33.87
+    ],
+    "crop": [
+     1060,
+     470,
+     1300
+    ],
+    "note": "全屏人脸（讲解）"
+   }
+  ],
+  "bottom": [
+   {
+    "src": [
+     42.0,
+     45.5
+    ],
+    "crop": [
+     700,
+     700,
+     1000
+    ],
+    "end": "cue1",
+    "note": "Claude 桌面应用：选文件夹（连仓库），下拉里 todays-thing / bird-noises"
+   },
+   {
+    "src": [
+     45.7,
+     48.4
+    ],
+    "crop": [
+     800,
+     330,
+     1100
+    ],
+    "note": "Artifacts 页：Docs / Slides / Design，鼠标点 Design 卡片"
+   }
+  ]
+ },
+ "N04": {
+  "top": [
+   {
+    "src": [
+     33.87,
+     36.44
+    ],
+    "crop": [
+     1060,
+     470,
+     1300
+    ],
+    "note": "全屏人脸"
+   }
+  ],
+  "bottom": [
+   {
+    "src": [
+     49.6,
+     54.5
+    ],
+    "crop": [
+     [
+      520,
+      790,
+      1000
+     ],
+     [
+      1000,
+      790,
+      1000
+     ]
+    ],
+    "note": "输入提示词：design a silly onboarding for this silly app. …（镜头随打字右移）"
+   }
+  ]
+ },
+ "N05": {
+  "top": [
+   {
+    "src": [
+     25.6,
+     28.56
+    ],
+    "crop": [
+     960,
+     580,
+     1300
+    ],
+    "note": "Nates-dumb-idea 框里的人脸"
+   }
+  ],
+  "bottom": [
+   {
+    "src": [
+     54.8,
+     56.4
+    ],
+    "crop": [
+     1050,
+     380,
+     950
+    ],
+    "end": "cue1",
+    "note": "发出后的聊天：I'll look at what the first run does today, then sketch some new directions next to it. Working…"
+   },
+   {
+    "src": [
+     59.0,
+     60.4
+    ],
+    "crop": [
+     1370,
+     560,
+     1100
+    ],
+    "note": "画布上五块画板：Current + A–D 四版新方案"
+   }
+  ]
+ },
+ "N06": {
+  "top": [
+   {
+    "src": [
+     18.4,
+     20.0
+    ],
+    "crop": [
+     960,
+     540,
+     1400
+    ],
+    "end": "cue1",
+    "note": "Hi-Nate 框（开头镜头）"
+   },
+   {
+    "src": [
+     66.72,
+     68.39
+    ],
+    "crop": [
+     1060,
+     470,
+     1300
+    ],
+    "note": "全屏人脸：I go into the editor, and I fix them myself（68.4 s 切到编辑器），收在笑"
+   }
+  ],
+  "bottom": [
+   {
+    "src": [
+     61.4,
+     63.6
+    ],
+    "crop": [
+     1000,
+     540,
+     1500
+    ],
+    "end": "cue1",
+    "note": "评论框：@Claude Bigger bird. Much bigger. …（打字）"
+   },
+   {
+    "src": [
+     68.5,
+     70.0
+    ],
+    "crop": [
+     1000,
+     480,
+     1500
+    ],
+    "note": "编辑器：Bet you won't. 选中 + Heading 1 工具栏"
+   }
+  ]
+ },
+ "N07": {
+  "top": [
+   {
+    "src": [
+     36.44,
+     39.37
+    ],
+    "crop": [
+     1060,
+     470,
+     1300
+    ],
+    "note": "全屏人脸"
+   }
+  ],
+  "bottom": [
+   {
+    "src": [
+     73.6,
+     75.9
+    ],
+    "crop": [
+     940,
+     560,
+     1700
+    ],
+    "end": "cue1",
+    "note": "聊天里打：I like bird mode. make me a click-through prototype of it so I can feel the whole flow"
+   },
+   {
+    "src": [
+     86.0,
+     88.0
+    ],
+    "crop": [
+     940,
+     540,
+     1700
+    ],
+    "note": "ok claude. build it. → Preparing to build Bird mode"
+   }
+  ]
+ },
+ "N08": {
+  "top": [
+   {
+    "src": [
+     2.6,
+     4.3
+    ],
+    "crop": [
+     960,
+     580,
+     1300
+    ],
+    "end": 1.7,
+    "note": "Claude-Design-Demo 框里的人脸（2.3 s 起框稳定、手柄消失）"
+   },
+   {
+    "src": [
+     20.0,
+     22.04
+    ],
+    "crop": [
+     1060,
+     560,
+     1100
+    ],
+    "note": "Hi-Nate 框，更紧的裁切（泡泡已打完）"
+   }
+  ],
+  "bottom": [
+   {
+    "src": [
+     10.5,
+     16.0
+    ],
+    "crop": [
+     960,
+     560,
+     1100
+    ],
+    "note": "做的小应用：Draw a picture → Upload bird noises（每天一个不同的东西）"
+   }
+  ]
+ },
+ "N09": {
+  "top": [
+   {
+    "src": [
+     22.04,
+     24.5
+    ],
+    "crop": [
+     1010,
+     540,
+     1250
+    ],
+    "note": "Hi-Nate 框里的人脸，笑着收尾（和第 1 句同一个镜头，首尾呼应）"
+   }
+  ],
+  "bottom": [
+   {
+    "src": [
+     95.9,
+     98.3
+    ],
+    "crop": [
+     965,
+     545,
+     1200
+    ],
+    "end": "narr",
+    "note": "片尾卡：Claude makes it. You steer it.（打字）"
+   },
+   {
+    "src": [
+     99.4,
+     100.2
+    ],
+    "crop": [
+     960,
+     540,
+     1200
+    ],
+    "note": "Claude 标志（金句说完停 0.8 s）"
+   }
+  ]
+ }
+}

@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>悠一 · Intro A · 鼓励球</title>
+<link rel="stylesheet" href="../../../fonts/fonts.css">
+<link rel="stylesheet" href="../../fonts/fonts2.css">
+<script src="../../common/handdata.js"></script>
+<script src="../../common/pack.js"></script>
+<style>html, body { margin: 0; overflow: hidden; background: #ECE6D9; }</style>
+</head>
+<body>
+<script>
+(function () {
+  'use strict';
+  /* 版本 A「鼓励球」：一颗珊瑚色小球掉进纸面，弹跳、翻过小山、从崖边飞出去，变成彗星拖着尾巴落回纸上，
+   * 自己当笔尖一笔一笔写出名字；写完画下划线、落座、撒纸屑，打出“AI鼓励师”。5.5 s，最后 0.3 s 淡到 endColor。 */
+  const P = window.PACK, { C, E, clamp, lerp, prog } = P;
+  const RAW = Object.assign({ name: '悠一', role: 'AI鼓励师', tagline: '', endColor: '#FFFFFF' }, window.__DATA__ || {});
+  const NAME = String(RAW.name == null ? '' : RAW.name).trim() || '悠一';
+  const ROLE = String(RAW.role == null ? '' : RAW.role).trim();
+  const TAG = String(RAW.tagline == null ? '' : RAW.tagline).trim();
+  const END_COLOR = RAW.endColor === 'none' ? 'none' : P.hexOr(RAW.endColor, '#FFFFFF');
+
+  window.DURATION = 5.5;
+  window.__READY__ = false;
+
+  const { FW, OX, ctx } = P.setup(RAW);
+  const paper = P.makePaper(FW, { seed: 11, mottle: 0.07 });
+  const R = 40;                                        // ball radius
+
+  /* ------------------------------------------------------------ timeline */
+  const T = {
+    drop: [0.08, 0.55], c1: [0.55, 0.62], fl2: [0.62, 1.12], c2: [1.12, 1.18], fl3: [1.18, 1.46], c3: [1.46, 1.50],
+    roll: [1.50, 1.95], launch: [1.95, 2.55], world: [2.02, 2.45],
+    write: [2.55, 3.75], hop1: [3.75, 3.84], under: [3.84, 4.06], hop2: [4.06, 4.24], land: 4.24,
+    kicker: [4.28, 4.62], tag: [4.48, 4.82], wink: [4.72, 5.02], fade: [5.2, 5.5],
+  };
+
+  /* ------------------------------------------------------------ the world (ground, hill, props) */
+  const G = 2200;                                      // gravity px/s²
+  const groundPts = [[-500, 826], [0, 821], [300, 817], [550, 811], [700, 799], [850, 762], [1000, 714], [1120, 687], [1190, 677], [1216, 680]];
+  const ground = P.spline(groundPts, 10);
+  const groundRS = P.resample(ground, 4);
+  function groundY(x) {                                // surface height at x (left of the cliff)
+    if (x <= ground[0][0]) return ground[0][1];
+    for (let i = 1; i < ground.length; i++) if (ground[i][0] >= x) { const a = ground[i - 1], b = ground[i]; return lerp(a[1], b[1], (x - a[0]) / ((b[0] - a[0]) || 1)); }
+    return ground[ground.length - 1][1];
+  }
+  const cliff = [[1216, 680], [1224, 720], [1212, 790], [1230, 870], [1214, 950], [1226, 1040], [1220, 1130]];
+  const surfaceInk = P.inkPath(groundPts.concat(cliff.slice(1)), { wobble: 1.8, seed: 3 });
+  const hillsFar = P.spline([[-500, 750], [-150, 690], [200, 660], [520, 636], [820, 652], [1050, 690], [1216, 730], [1300, 760]], 10);
+  const grassTufts = (() => { const rnd = P.rngFor('tufts'); const o = []; for (let i = 0; i < 26; i++) { const x = rnd(-380, 1180); o.push({ x, y: groundY(x), h: rnd(10, 22), lean: rnd(-0.5, 0.5) }); } return o; })();
+  const cloudA = { x: 1330, y: 150, s: 70 }, cloudB = { x: 250, y: 190, s: 52 }, sun = { x: 1600, y: 180, r: 54 };
+
+  function drawWorld(dy) {
+    ctx.save(); ctx.translate(0, dy * 0.55);           // sky: slower parallax
+    P.drawCloud(ctx, cloudA.x, cloudA.y, cloudA.s);
+    P.drawCloud(ctx, cloudB.x, cloudB.y, cloudB.s, { alpha: 0.9 });
+    P.drawSun(ctx, sun.x, sun.y, sun.r, { seed: 2 });
+    ctx.restore();
+    ctx.save(); ctx.translate(0, dy);
+    // far hills (paper-cut blue)
+    ctx.fillStyle = C.sky; ctx.beginPath(); ctx.moveTo(hillsFar[0][0], hillsFar[0][1]); for (const p of hillsFar) if (p[0] <= 1216) ctx.lineTo(p[0], p[1]); ctx.lineTo(1216, 1200); ctx.lineTo(-500, 1200); ctx.closePath(); ctx.fill();
+    // ground: shadow rim, then the green, then the ink line
+    const groundPath = (dx, dyy) => { ctx.beginPath(); ctx.moveTo(ground[0][0] + dx, ground[0][1] + dyy); for (const p of ground) ctx.lineTo(p[0] + dx, p[1] + dyy); for (const p of cliff) ctx.lineTo(p[0] + dx, p[1] + dyy); ctx.lineTo(1220 + dx, 1300); ctx.lineTo(-500, 1300); ctx.closePath(); };
+    ctx.fillStyle = C.grass2; groundPath(14, 12); ctx.fill();
+    ctx.fillStyle = C.grass; groundPath(0, 0); ctx.fill();
+    // tree
+    const tx = 430, ty = groundY(430);
+    ctx.strokeStyle = C.ink; ctx.lineWidth = 7; ctx.lineCap = 'round'; ctx.beginPath(); ctx.moveTo(tx, ty); ctx.quadraticCurveTo(tx - 6, ty - 70, tx + 4, ty - 140); ctx.stroke();
+    ctx.fillStyle = C.mint2; ctx.beginPath(); ctx.arc(tx + 10, ty - 180, 62, 0, 6.2832); ctx.fill();
+    ctx.fillStyle = C.mint; ctx.beginPath(); ctx.arc(tx + 2, ty - 188, 60, 0, 6.2832); ctx.fill();
+    // mushroom
+    const mx = 790, my = groundY(790);
+    ctx.fillStyle = C.white; ctx.beginPath(); ctx.roundRect(mx - 9, my - 34, 18, 34, 6); ctx.fill();
+    ctx.fillStyle = C.coral; ctx.beginPath(); ctx.ellipse(mx, my - 34, 30, 20, 0, Math.PI, 0); ctx.closePath(); ctx.fill();
+    ctx.fillStyle = C.white; for (const [ox, oy, rr] of [[-12, -40, 4], [6, -46, 5], [16, -36, 3]]) { ctx.beginPath(); ctx.arc(mx + ox, my + oy, rr, 0, 6.2832); ctx.fill(); }
+    // flower near the edge
+    const fx = 1085, fy = groundY(1085);
+    ctx.strokeStyle = C.grass3; ctx.lineWidth = 4; ctx.beginPath(); ctx.moveTo(fx, fy); ctx.quadraticCurveTo(fx + 8, fy - 30, fx - 2, fy - 58); ctx.stroke();
+    ctx.fillStyle = C.white; for (let i = 0; i < 6; i++) { const a = i / 6 * 6.2832; ctx.beginPath(); ctx.ellipse(fx - 2 + Math.cos(a) * 13, fy - 62 + Math.sin(a) * 13, 8, 6, a, 0, 6.2832); ctx.fill(); }
+    ctx.fillStyle = C.gold; ctx.beginPath(); ctx.arc(fx - 2, fy - 62, 7, 0, 6.2832); ctx.fill();
+    // surface ink line + grass tufts
+    P.inkLine(ctx, null, { _rs: surfaceInk, width: 6, color: C.ink, profile: u => 5 + 1.5 * Math.sin(u * 7) });
+    ctx.strokeStyle = C.grass3; ctx.lineWidth = 3; ctx.lineCap = 'round';
+    for (const g of grassTufts) { ctx.beginPath(); ctx.moveTo(g.x, g.y + 2); ctx.lineTo(g.x + g.lean * g.h, g.y - g.h); ctx.moveTo(g.x + 7, g.y + 2); ctx.lineTo(g.x + 7 + g.lean * g.h * 0.6, g.y - g.h * 0.7); ctx.stroke(); }
+    ctx.restore();
+  }
+
+  /* ------------------------------------------------------------ the name, written by the ball */
+  const NAME_SIZE = NAME.length <= 2 ? 340 : NAME.length === 3 ? 300 : Math.min(300, 900 / NAME.length);
+  const hand = new P.Hand({ text: NAME, x: 960, y: 500, size: NAME_SIZE, align: 'center', color: C.ink, t0: T.write[0], t1: T.write[1], seed: 'A-name', pen: 0.085 });
+  const nameLeft = hand.box[0], nameRight = hand.box[2];
+  const underPts = [[nameLeft - 70, 702], [960, 696], [nameRight + 110, 700]];
+  const underRS = P.inkPath(underPts, { wobble: 2.2, seed: 9, freq: 0.006 });
+  const underLen = underRS[underRS.length - 1].s;
+  const underProf = u => 5 + 11 * Math.pow(Math.sin(Math.PI * u), 0.7);
+  const seat = { x: nameRight + 70, y: 600 };          // where the ball rests after the underline
+  const penStart = hand.pen(T.write[0]);
+
+  /* ------------------------------------------------------------ ball path */
+  const land1 = [330, groundY(330)], land2 = [570, groundY(570)], land3 = [745, groundY(745)];
+  function flight(p0, p1, t0, t1, t) {                 // ballistic arc between two ground contacts (centre of the ball)
+    const Tt = t1 - t0, tau = clamp(t - t0, 0, Tt), vx = (p1[0] - p0[0]) / Tt, vy0 = (p1[1] - p0[1] - 0.5 * G * Tt * Tt) / Tt;
+    return { x: p0[0] + vx * tau, y: p0[1] - R + vy0 * tau + 0.5 * G * tau * tau, vx, vy: vy0 + G * tau };
+  }
+  const launchP0 = [1196, groundY(1196) - R], launchC1 = [1470, 30], launchC2 = [330, -40], launchP3 = [penStart.x, penStart.y - R * 0.25];
+  function launchPos(t) { const u = E.outSine(prog(t, T.launch[0], T.launch[1])); const p = P.bez(launchP0, launchC1, launchC2, launchP3, u); const q = P.bez(launchP0, launchC1, launchC2, launchP3, Math.min(1, u + 0.01)); return { x: p[0], y: p[1], vx: (q[0] - p[0]) * 100, vy: (q[1] - p[1]) * 100 }; }
+
+  function ball(t) {                                   // -> {x, y, sx, sy, rot, look, shadowY, mode}
+    let b = { sx: 1, sy: 1, rot: 0, look: [0.3, 0.2], shadow: null, mode: 'air' };
+    const squash = (a, c, k) => { const u = prog(t, a, c), s = Math.sin(Math.PI * u) * k; b.sx = 1 + s; b.sy = 1 - s * 0.9; };
+    const stretch = (vx, vy) => { const sp = Math.hypot(vx, vy), s = clamp(sp / 2600, 0, 0.22); b.rot = Math.atan2(vy, vx); b.sx = 1 + s; b.sy = 1 - s * 0.8; b.look = [clamp(vx / 900, -1, 1), clamp(vy / 900, -1, 1)]; };
+    const onGround = (x, dy) => { b.x = x; b.y = groundY(x) - R * b.sy + dy; b.shadow = { y: groundY(x) + 3, k: 1 }; b.mode = 'ground'; };
+    if (t < T.drop[0]) { b.x = 240; b.y = -200; return b; }
+    if (t < T.drop[1]) { const f = flight([240, -60 + R], land1, T.drop[0], T.drop[1], t); stretch(f.vx, f.vy); b.x = f.x; b.y = f.y; b.shadow = { y: groundY(f.x) + 3, k: 0.6, a: clamp((t - T.drop[0]) / 0.3) }; return b; }
+    if (t < T.c1[1]) { squash(T.c1[0], T.c1[1], 0.34); onGround(land1[0] + (t - T.c1[0]) * 40, 0); return b; }
+    if (t < T.fl2[1]) { const f = flight([land1[0] + 3, land1[1]], land2, T.fl2[0], T.fl2[1], t); stretch(f.vx, f.vy); b.x = f.x; b.y = f.y; b.shadow = { y: groundY(f.x) + 3, k: 0.8 }; return b; }
+    if (t < T.c2[1]) { squash(T.c2[0], T.c2[1], 0.26); onGround(land2[0] + (t - T.c2[0]) * 60, 0); return b; }
+    if (t < T.fl3[1]) { const f = flight([land2[0] + 4, land2[1]], land3, T.fl3[0], T.fl3[1], t); stretch(f.vx, f.vy); b.x = f.x; b.y = f.y; b.shadow = { y: groundY(f.x) + 3, k: 0.9 }; return b; }
+    if (t < T.c3[1]) { squash(T.c3[0], T.c3[1], 0.16); onGround(land3[0] + (t - T.c3[0]) * 80, 0); return b; }
+    if (t < T.roll[1]) { const u = prog(t, T.roll[0], T.roll[1]); const x = lerp(land3[0] + 3, 1196, E.inQuad(u) * 0.35 + u * 0.65); b.look = [0.8, -0.3]; b.sx = 1.04; b.sy = 0.97; onGround(x, 0); b.sx = 1 + 0.06 * Math.sin(u * 40); return b; }
+    if (t < T.launch[1]) { const f = launchPos(t); stretch(f.vx, f.vy); b.sx = Math.min(b.sx, 1.18); b.sy = Math.max(b.sy, 0.86); b.x = f.x; b.y = f.y; b.mode = 'launch'; return b; }
+    if (t < T.hop1[0]) { const p = hand.pen(t); b.x = p.x; b.y = p.y - R * 0.25; b.look = [0.1, 0.85]; b.sy = p.down ? 0.94 : 1; b.sx = p.down ? 1.05 : 1; b.mode = 'write'; return b; }
+    if (t < T.under[0]) { const u = E.inOutSine(prog(t, T.hop1[0], T.hop1[1])), a = hand.pen(T.write[1]), s = underRS[0]; b.x = lerp(a.x, s.x, u); b.y = lerp(a.y - R * 0.25, s.y - R * 0.3, u) - Math.sin(Math.PI * u) * 90; b.look = [-0.5, 0.6]; b.mode = 'write'; return b; }
+    if (t < T.under[1]) { const u = E.outCubic(prog(t, T.under[0], T.under[1])), p = P.pointAt(underRS, underLen * u); b.x = p.x; b.y = p.y - R * 0.3; b.look = [0.9, 0.3]; b.sx = 1.12; b.sy = 0.9; b.mode = 'write'; return b; }
+    if (t < T.hop2[1]) { const u = prog(t, T.hop2[0], T.hop2[1]), e = E.inOutSine(u), s = underRS[underRS.length - 1]; b.x = lerp(s.x, seat.x, e); b.y = lerp(s.y - R * 0.3, seat.y, e) - Math.sin(Math.PI * u) * 150; b.look = [0, -0.4]; const vy = Math.cos(Math.PI * u); b.rot = 0; b.sx = 1 - 0.1 * Math.abs(vy); b.sy = 1 + 0.1 * Math.abs(vy); b.shadow = { y: seat.y + R + 8, k: 0.8, a: u }; b.mode = 'air'; return b; }
+    // seated
+    const u = prog(t, T.land, T.land + 0.42), s = Math.sin(Math.PI * clamp(u * 1.6)) * 0.32 * (1 - u * 0.6);
+    b.sx = 1 + s; b.sy = 1 - s * 0.9; b.x = seat.x; b.y = seat.y + R * (1 - b.sy); b.shadow = { y: seat.y + R + 8, k: 1 }; b.look = [0, 0]; b.mode = 'seat';
+    return b;
+  }
+
+  /* ------------------------------------------------------------ particles */
+  const shower = new P.Confetti({ seed: 'A-shower', t0: T.land - 0.35, n: 120, box: [-240 - OX, -140, 1920 + 240 + OX, -20], speed: [220, 520], dir: [65, 115], gravity: 650, drag: 2.0, life: [2.2, 3.2], size: [9, 24], stagger: 0.6 });
+  const splatLand = P.splat({ seed: 'A-splat', t0: T.land, n: 30, origin: [seat.x, seat.y + R], speed: [120, 620], dir: [-175, -5] });
+  const splatInk = P.splat({ seed: 'A-ink', t0: T.write[0], n: 16, origin: [penStart.x, penStart.y], speed: [60, 380], dir: [-170, -10], size: [4, 11], life: [2.5, 3.5] });
+  const sparkRnd = P.rngFor('sparks');
+  const sparks = []; for (let i = 0; i < 40; i++) sparks.push({ k: sparkRnd(0.02, 0.22), off: sparkRnd(-30, 30), ph: sparkRnd(0, 6.28), s: sparkRnd(3, 7) });
+
+  function drawTrail(t) {                              // comet tail behind the launching ball
+    const a = clamp((t - T.launch[0]) / 0.08) * (1 - prog(t, T.launch[1] - 0.05, T.launch[1] + 0.2));
+    if (a <= 0) return;
+    const pts = [];
+    for (let k = 0; k <= 18; k++) { const tk = t - k * 0.02; if (tk < T.launch[0] - 0.02) break; const p = tk < T.launch[0] ? { x: launchP0[0] - (T.launch[0] - tk) * 300, y: launchP0[1] + 10 } : launchPos(Math.min(tk, T.launch[1])); pts.push([p.x, p.y]); }
+    if (pts.length < 3) return;
+    const rs = P.resample(pts, 4), L = rs[rs.length - 1].s;
+    ctx.save(); ctx.globalAlpha = 0.9 * a;
+    P.brush(ctx, rs, u => R * 1.6 * Math.pow(1 - u, 1.4) + 1, C.gold);
+    P.brush(ctx, rs, u => R * 1.1 * Math.pow(1 - u, 1.6) + 0.5, C.coral);
+    ctx.fillStyle = C.goldLight;
+    for (const sp of sparks) { const p = P.pointAt(rs, L * sp.k), w = Math.sin(t * 30 + sp.ph) * 0.5 + 0.5; ctx.globalAlpha = a * (0.4 + 0.6 * w) * (1 - sp.k * 2); ctx.beginPath(); ctx.arc(p.x + sp.off * (0.3 + sp.k * 3), p.y + Math.cos(sp.ph) * sp.off * (0.3 + sp.k * 3), sp.s * (1 - sp.k * 2), 0, 6.2832); ctx.fill(); }
+    ctx.restore();
+  }
+
+  /* ------------------------------------------------------------ kicker + tagline */
+  function drawKicker(t) {
+    if (!ROLE) return;
+    const e = E.outCubic(prog(t, T.kicker[0], T.kicker[1]));
+    if (e <= 0) return;
+    ctx.save(); ctx.globalAlpha = e; ctx.fillStyle = C.ink; ctx.font = "700 42px 'Noto Sans SC'"; ctx.textBaseline = 'middle';
+    const y = 795 + (1 - e) * 14;
+    const w = P.spacedText(ctx, ROLE, 960, y, 14, 'center');
+    ctx.strokeStyle = C.coral; ctx.lineWidth = 4; ctx.lineCap = 'round';
+    const L = 90 * E.outCubic(prog(t, T.kicker[0] + 0.1, T.kicker[1] + 0.1)), gap = 36;
+    ctx.beginPath(); ctx.moveTo(960 - w / 2 - gap, y); ctx.lineTo(960 - w / 2 - gap - L, y); ctx.moveTo(960 + w / 2 + gap, y); ctx.lineTo(960 + w / 2 + gap + L, y); ctx.stroke();
+    ctx.restore();
+    if (TAG) { const e2 = E.outCubic(prog(t, T.tag[0], T.tag[1])); if (e2 > 0) { ctx.save(); ctx.globalAlpha = e2; ctx.fillStyle = C.ink2; ctx.font = "400 30px 'Noto Sans SC'"; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillText(TAG, 960, 858 + (1 - e2) * 10); ctx.restore(); } }
+  }
+
+  /* ------------------------------------------------------------ frame */
+  const blinkK = (t, tb, d = 0.14) => { const u = prog(t, tb, tb + d); return u <= 0 || u >= 1 ? 0 : Math.sin(Math.PI * u); };
+  function renderAt(t) {
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    ctx.drawImage(paper, 0, 0);
+    ctx.translate(OX, 0);
+    const worldDY = 1250 * E.inCubic(prog(t, T.world[0], T.world[1]));
+    if (worldDY < 1200) drawWorld(worldDY);
+    // ink on the paper
+    if (t >= T.write[0]) hand.draw(ctx, t);
+    if (t >= T.under[0]) P.inkLine(ctx, null, { _rs: underRS, width: 12, color: C.ink, profile: underProf, p: E.outCubic(prog(t, T.under[0], T.under[1])) });
+    splatInk.draw(ctx, t); splatLand.draw(ctx, t);
+    drawKicker(t);
+    // the ball
+    drawTrail(t);
+    const b = ball(t);
+    const wink = clamp(Math.min(prog(t, T.wink[0], T.wink[0] + 0.08), 1 - prog(t, T.wink[1] - 0.08, T.wink[1])));
+    const blink = Math.max(blinkK(t, 1.22), blinkK(t, 3.1), blinkK(t, 4.42, 0.12));
+    const smile = b.mode === 'seat' ? 0.95 : b.mode === 'write' ? 0.3 : b.mode === 'launch' ? 1 : 0.55;
+    if (b.mode === 'launch') { b.look = [0, -0.8]; }
+    P.drawBall(ctx, { x: b.x, y: b.y, r: R, sx: b.sx, sy: b.sy, rot: b.rot, look: b.look, blink, wink, smile, shadow: b.shadow });
+    if (t >= T.land) P.dust(ctx, seat.x, seat.y + R + 6, t, T.land, { seed: 'land', n: 7 });
+    shower.draw(ctx, t);
+    P.fade(ctx, FW, END_COLOR, prog(t, T.fade[0], T.fade[1]));
+  }
+  window.renderAt = renderAt;
+
+  P.fontsReady(["700 40px 'Noto Sans SC'", "400 30px 'Noto Sans SC'", "300px 'Ma Shan Zheng'"]).then(() => { window.__READY__ = true; renderAt(0); });
+})();
+</script>
+</body>
+</html>

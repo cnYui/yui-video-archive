@@ -1,12 +1,16 @@
 # -*- coding: utf-8 -*-
 """导出字幕文件（和画面里烧进去的字幕同一套时间）：双语、中文、英文三份 SRT，放在成片旁边。
-成片前面有 3.8 s 片头（add_to_video.py 加的），所以时间整体往后挪 INTRO 秒。"""
+成片前面有悠一片头（add_to_video.py 加的，2026-10-03 起 4.8 s），所以时间整体往后挪 INTRO 秒；INTRO 从共用模板读，模板换了不用改这里。"""
 import json
+import sys
 from pathlib import Path
+
+sys.path.insert(0, r"D:\大疆\AI科普\片头片尾")
+from pack_info import intro_seconds   # noqa: E402  共用片头片尾的时长（读 intro/index.html 的 window.DURATION）
 
 HERE = Path(__file__).resolve().parent
 NAME = HERE.parents[1].name                    # 期目录名，例如 03_<标题>
-INTRO = 3.8                                   # 片头时长（AI科普/片头片尾/intro，DURATION 3.8 s）
+INTRO = intro_seconds()                       # 片头时长（AI科普/片头片尾/intro；2026-10-03 起 4.8 s，以前 3.8）
 TL = json.loads((HERE / "timeline.json").read_text(encoding="utf-8"))
 
 

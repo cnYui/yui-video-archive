@@ -1,0 +1,224 @@
+{
+ "layout": "dual",
+ "plan": [
+  {
+   "id": "H0",
+   "type": "card",
+   "kind": "panel",
+   "overlay": "panel",
+   "name": "钩子",
+   "dur": 1.0,
+   "ui": {
+    "tag": "x|只用 5 个色码",
+    "tag2": "ok|按色阶取色",
+    "credit": "图：《Refactoring UI》· 龙海的文章"
+   },
+   "lines": [
+    {
+     "id": "N01",
+     "a": 0.1
+    }
+   ]
+  },
+  {
+   "id": "B1",
+   "type": "card",
+   "kind": "page",
+   "overlay": "page",
+   "name": "背书",
+   "dur": 1.0,
+   "ui": {
+    "tag": "龙海 · X 长文",
+    "tag2": "refactoringui.com"
+   },
+   "lines": [
+    {
+     "id": "N02",
+     "a": 0.1
+    },
+    {
+     "id": "N03",
+     "a": 0
+    },
+    {
+     "id": "N04",
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "S06",
+   "type": "card",
+   "kind": "panel",
+   "overlay": "panel",
+   "name": "按钮分主次",
+   "dur": 1.0,
+   "ui": {
+    "tag": "x|三个实心",
+    "tag2": "ok|只有一个主操作",
+    "kicker": "悠一 · <b>规则 06</b> 按钮分主次",
+    "credit": "图：《Refactoring UI》· 龙海的文章"
+   },
+   "lines": [
+    {
+     "id": "N05",
+     "a": 0.1
+    },
+    {
+     "id": "N06",
+     "a": 0
+    },
+    {
+     "id": "N07",
+     "a": 0
+    }
+   ],
+   "rule": 6
+  },
+  {
+   "id": "S09",
+   "type": "card",
+   "kind": "panel",
+   "overlay": "panel",
+   "name": "间距有亲疏",
+   "dur": 1.0,
+   "ui": {
+    "tag": "x|上 20 下 20",
+    "tag2": "ok|上 20 下 10",
+    "kicker": "悠一 · <b>规则 09</b> 间距有亲疏",
+    "credit": "图：《Refactoring UI》· 龙海的文章"
+   },
+   "lines": [
+    {
+     "id": "N08",
+     "a": 0.1
+    },
+    {
+     "id": "N09",
+     "a": 0
+    }
+   ],
+   "rule": 9
+  },
+  {
+   "id": "S13",
+   "type": "card",
+   "kind": "panel",
+   "overlay": "panel",
+   "name": "颜色比想象的多",
+   "dur": 1.0,
+   "ui": {
+    "tag": "x|调色板 5 色",
+    "tag2": "ok|完整色阶",
+    "kicker": "悠一 · <b>规则 13</b> 颜色比想象的多",
+    "credit": "图：《Refactoring UI》· 龙海的文章"
+   },
+   "lines": [
+    {
+     "id": "N10",
+     "a": 0.1
+    },
+    {
+     "id": "N11",
+     "a": 0
+    }
+   ],
+   "rule": 13
+  },
+  {
+   "id": "S14",
+   "type": "card",
+   "kind": "panel",
+   "overlay": "panel",
+   "name": "浅底深字",
+   "dur": 1.0,
+   "ui": {
+    "tag": "?|合格，但抢眼",
+    "tag2": "ok|浅底深字",
+    "kicker": "悠一 · <b>规则 14</b> 浅底深字",
+    "credit": "图：《Refactoring UI》· 龙海的文章"
+   },
+   "lines": [
+    {
+     "id": "N12",
+     "a": 0.1
+    },
+    {
+     "id": "N13",
+     "a": 0
+    }
+   ],
+   "rule": 14
+  },
+  {
+   "id": "S17",
+   "type": "card",
+   "kind": "panel",
+   "overlay": "panel",
+   "name": "图上文字",
+   "dur": 1.0,
+   "ui": {
+    "tag": "x|白字压照片",
+    "tag2": "ok|垫蒙版 0.55",
+    "kicker": "悠一 · <b>规则 17</b> 图上文字",
+    "credit": "图：《Refactoring UI》· 龙海的文章"
+   },
+   "lines": [
+    {
+     "id": "N14",
+     "a": 0.1
+    },
+    {
+     "id": "N15",
+     "a": 0
+    }
+   ],
+   "rule": 17
+  },
+  {
+   "id": "C1",
+   "type": "card",
+   "kind": "wall",
+   "overlay": "wall",
+   "name": "泼冷水",
+   "dur": 1.0,
+   "ui": {
+    "tag": "官网 · 全书 50 章",
+    "tag2": "文章覆盖 20 条"
+   },
+   "lines": [
+    {
+     "id": "N16",
+     "a": 0.1
+    },
+    {
+     "id": "N17",
+     "a": 0
+    },
+    {
+     "id": "N18",
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "E1",
+   "type": "card",
+   "kind": "panel",
+   "overlay": "panel",
+   "name": "金句",
+   "dur": 1.0,
+   "ui": {
+    "tag": "x|只用 5 个色码",
+    "tag2": "ok|按色阶取色",
+    "credit": "图：《Refactoring UI》· 龙海的文章"
+   },
+   "lines": [
+    {
+     "id": "N19",
+     "a": 0.1
+    }
+   ]
+  }
+ ]
+}

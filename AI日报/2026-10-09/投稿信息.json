@@ -1,0 +1,66 @@
+{
+  "title": "10月9日AI圈7件事：Claude Haiku 5.5输入价降到每百万0.10美元，ChatGPT回答变成互动界面",
+  "titles": {
+    "bilibili": "10月9日AI圈7件事：Claude Haiku 5.5输入价降到每百万0.10美元，ChatGPT回答变成互动界面",
+    "douyin": "Haiku 5.5输入价降九成，ChatGPT回答可交互",
+    "xiaohongshu": "AI圈7件事：Haiku 5.5降价九成"
+  },
+  "title_notes": [],
+  "video": "D:\\大疆\\AI日报\\2026-10-09\\AI每日日报_1009_上传版.mp4",
+  "video_h264": "D:\\大疆\\AI日报\\2026-10-09\\AI每日日报_1009_上传版_h264.mp4",
+  "video_seconds": 333.73,
+  "cover_16x9": "D:\\大疆\\AI日报\\2026-10-09\\封面\\封面_16x9_1920x1080.png",
+  "cover_4x3": "D:\\大疆\\AI日报\\2026-10-09\\封面\\封面_4x3_1440x1080.png",
+  "cover_3x4": "D:\\大疆\\AI日报\\2026-10-09\\封面\\封面_3x4_1080x1440.png",
+  "partition": "人工智能",
+  "partition_fallback": "科技数码",
+  "tags": [
+    "AI资讯",
+    "人工智能",
+    "大模型",
+    "AI日报",
+    "Anthropic",
+    "OpenAI",
+    "鲸鱼娘",
+    "大肥鱼"
+  ],
+  "collection": "AI每日日报",
+  "declaration": "含AI生成内容",
+  "description": "AI每日日报 · 10月9日（周五）· 竖屏版\n鲸鱼娘带你看看 AI 圈发生了什么。\n\n今日内容\n0:00 开场\n0:20 Haiku 5.5 价格砍九成\n1:06 ChatGPT 回答变成互动界面\n1:52 Claude 能做仪表盘和动画\n2:40 Anthropic 更新使用政策\n3:22 Anthropic 投 1.5 亿给科研\n4:05 OpenAI 放出 722 篇数学稿\n4:50 Ecosia 换中国模型\n5:30 回顾\n\n来源\n① Haiku 5.5 价格砍九成：Anthropic https://www.anthropic.com/claude-haiku-5-5 ；Simon Willison https://simonwillison.net/2026/Oct/7/claude-haiku-5-5/\n② ChatGPT 回答变成互动界面：TechCrunch https://techcrunch.com/2026/10/07/chatgpt-is-getting-a-lot-more-visual-with-the-launch-of-a-new-interface/ ；The Decoder https://the-decoder.com/chatgpt-with-gpt-6-ditches-mostly-text-output-for-interactive-ui-with-charts-buttons-and-mini-apps/\n③ Claude 能做仪表盘和动画：Claude https://claude.com/resources/articles/dashboards-and-motion\n④ Anthropic 更新使用政策：Anthropic https://www.anthropic.com/news/2026-usage-policy-update\n⑤ Anthropic 投 1.5 亿给科研：Anthropic https://www.anthropic.com/news/genesis-mission-commitment\n⑥ OpenAI 放出 722 篇数学稿：Unite.AI https://www.unite.ai/openai-releases-722-math-manuscripts-from-an-unreleased-ai-model/ ；TechCrunch https://techcrunch.com/2026/10/08/openais-math-solutions-arent-meeting-the-fields-standards-yet/\n⑦ Ecosia 换中国模型：IT之家 https://www.ithome.com/1/010/539.htm\n\n说明\n· 信息截至北京时间 2026-10-09 03:33，以各家官方发布为准。\n· 本期配音由 AI 合成（Fish Audio「苏晓晓」），背景音乐为程序合成；内容由 AI 整理，并自动核对来源，如有出入以原文为准。\n· 主播鲸鱼娘（像素素材包「大肥鱼」）是 DeepSeek 的网友拟人同人（原型：上善无形，CC BY-NC-SA 4.0；女仆造型：ZipZipPipe），与 DeepSeek 官方无关。",
+  "douyin": {
+    "title": "Haiku 5.5输入价降九成，ChatGPT回答可交互",
+    "description": "10月9日AI圈7件事：Claude Haiku 5.5输入价降到每百万0.10美元，ChatGPT回答变成互动界面\n今日 7 件事：Anthropic发布Claude Haiku 5.5、ChatGPT回答变成互动界面、Claude能做仪表盘和动画、Anthropic更新使用政策、Anthropic向科研计划投1.5亿美元、OpenAI公开722篇数学稿件、Ecosia放弃Mistral。\n内容由 AI 整理并自动核对来源，如有出入以原文为准。",
+    "topics": [
+      "AI每日日报",
+      "人工智能",
+      "大模型",
+      "AI资讯",
+      "Anthropic"
+    ],
+    "declaration": "内容由AI生成",
+    "collection": "AI每日日报",
+    "video": "D:\\大疆\\AI日报\\2026-10-09\\AI每日日报_1009_上传版_h264.mp4",
+    "cover_3x4": "D:\\大疆\\AI日报\\2026-10-09\\封面\\封面_3x4_1080x1440.png",
+    "cover_4x3": "D:\\大疆\\AI日报\\2026-10-09\\封面\\封面_4x3_1440x1080.png"
+  },
+  "xiaohongshu": {
+    "title": "AI圈7件事：Haiku 5.5降价九成",
+    "description": "10月9日AI圈7件事：Claude Haiku 5.5输入价降到每百万0.10美元，ChatGPT回答变成互动界面\n今日 7 件事：Anthropic发布Claude Haiku 5.5、ChatGPT回答变成互动界面、Claude能做仪表盘和动画、Anthropic更新使用政策、Anthropic向科研计划投1.5亿美元、OpenAI公开722篇数学稿件、Ecosia放弃Mistral。\n内容由 AI 整理并自动核对来源，如有出入以原文为准。",
+    "topics": [
+      "AI每日日报",
+      "人工智能",
+      "大模型",
+      "AI资讯",
+      "Anthropic",
+      "OpenAI",
+      "AIGC",
+      "科技",
+      "开源"
+    ],
+    "declaration": "笔记含AI合成内容",
+    "original": true,
+    "collection": "AI每日日报",
+    "video": "D:\\大疆\\AI日报\\2026-10-09\\AI每日日报_1009_上传版_h264.mp4",
+    "cover_3x4": "D:\\大疆\\AI日报\\2026-10-09\\封面\\封面_3x4_1080x1440.png"
+  }
+}

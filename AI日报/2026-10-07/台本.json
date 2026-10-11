@@ -1,0 +1,723 @@
+{
+  "date": "2026-10-07",
+  "opening": [
+    {
+      "text": "早上好，我是鲸鱼娘，今天是10月7日。",
+      "en": "Good morning, I'm Whale Girl. Today is October 7.",
+      "tts": "早上好，我是鲸鱼娘，今天是十月七日。",
+      "expr": "开心"
+    },
+    {
+      "text": "今天说七件事：Mistral 发布万亿参数模型，Reflection 发布开放权重模型 Beam，OpenAI 给 ChatGPT 文字加水印，Anthropic 送初创公司一年 Claude Team，Anthropic 扩大网络安全验证计划，Together Link 让 Claude Code 跑开源模型，还有谷歌的多模态嵌入模型。",
+      "en": "Seven stories today: Mistral's trillion-parameter model, Reflection's open-weight model Beam, OpenAI watermarks ChatGPT text, Anthropic gives startups a free year of Claude Team, Anthropic expands its cyber verification program, Together Link runs open models in Claude Code, and Google's multimodal embedding model.",
+      "tts": "今天说七件事：Mistral 发布万亿参数模型，Reflection 发布开放权重模型 Beam，OpenAI 给 ChatGPT 文字加水印，Anthropic 送初创公司一年 Claude Team，Anthropic 扩大网络安全验证计划，Together Link 让 Claude Code 跑开源模型，还有谷歌的多模态嵌入模型。",
+      "cuts": [
+        [
+          "今天说七件事：",
+          "Seven stories today:"
+        ],
+        [
+          "参数模型，",
+          "trillion-parameter model,"
+        ],
+        [
+          "模型 Beam，",
+          "model Beam,"
+        ],
+        [
+          "文字加水印，",
+          "ChatGPT text,"
+        ],
+        [
+          "初创公司一年",
+          "a free year"
+        ],
+        [
+          "Claude Team，",
+          "Claude Team,"
+        ],
+        [
+          "验证计划，",
+          "verification program,"
+        ],
+        [
+          "Link",
+          "Link"
+        ]
+      ]
+    }
+  ],
+  "news": [
+    {
+      "headline": "Mistral Large 4",
+      "bar_label": "Mistral",
+      "org": "Mistral AI",
+      "source": "Mistral AI · The Decoder",
+      "source_short": "Mistral AI",
+      "date": "10月6日",
+      "rundown_key": "Mistral 发布万亿参数模型",
+      "vhook": "10 月底放权重，先开 API",
+      "points": [
+        "1 万亿参数，激活 49B",
+        "预览版先开 API",
+        "权重 10 月底放出",
+        "漏洞复现测试 82%"
+      ],
+      "lines": [
+        {
+          "text": "第一件，一个 1 万亿参数的模型，每个词只激活 49B。",
+          "en": "First, a one-trillion-parameter model that activates only 49B for each token.",
+          "tts": "第一件，一个一万亿参数的模型，每个词只激活四十九 B。",
+          "expr": "吃惊",
+          "point": 0
+        },
+        {
+          "text": "10 月 6 日，法国公司 Mistral 发布了 Mistral Large 4，现在是公开预览，API 能用。",
+          "en": "On October 6, French company Mistral released Mistral Large 4 as a public preview, with API access.",
+          "tts": "十月六日，法国公司 Mistral 发布了 Mistral Large 4，现在是公开预览，A P I 能用。",
+          "point": 1,
+          "cuts": [
+            [
+              "法国公司 Mistral",
+              "French company Mistral"
+            ],
+            [
+              "Mistral Large 4，",
+              "Mistral Large 4"
+            ],
+            [
+              "公开预览，",
+              "public preview,"
+            ]
+          ]
+        },
+        {
+          "text": "它在欧洲自己的数据中心训练，用了 3,800 块英伟达 Grace Blackwell 芯片。",
+          "en": "It was trained in Mistral's own European data centers on 3,800 NVIDIA Grace Blackwell GPUs.",
+          "tts": "它在欧洲自己的数据中心训练，用了三千八百块英伟达 Grace Blackwell 芯片。"
+        },
+        {
+          "text": "模型权重要等到 10 月底，许可证也到时才公布。",
+          "en": "The weights won't come until the end of October, and the license will be announced then.",
+          "tts": "模型权重要等到十月底，许可证也到时才公布。",
+          "point": 2
+        },
+        {
+          "text": "官方最看重的是网络安全，复现开源软件漏洞的测试里拿到 82%。",
+          "en": "Its headline claim is security work: 82% on a test of reproducing open-source vulnerabilities.",
+          "tts": "官方最看重的是网络安全，复现开源软件漏洞的测试里拿到百分之八十二。",
+          "point": 3
+        },
+        {
+          "text": "The Decoder 称，Opus 5.5 和 GPT-6 Astra 这项接近零分，因为它们直接拒绝任务。",
+          "en": "The Decoder says Opus 5.5 and GPT-6 Astra score near zero on it because they refuse the task.",
+          "tts": "The Decoder 称，Opus 五点五和 GPT 六 Astra 这项接近零分，因为它们直接拒绝任务。"
+        },
+        {
+          "text": "不过在综合指数上，它是 38 分，Opus 5.5 是 58 分。",
+          "en": "On the overall Intelligence Index, though, it scores 38 against Opus 5.5's 58.",
+          "tts": "不过在综合指数上，它是三十八分，Opus 五点五是五十八分。"
+        },
+        {
+          "text": "能查漏洞，不等于什么都强，等权重出来再看。",
+          "en": "Finding bugs doesn't make it strong at everything. Wait for the weights."
+        }
+      ],
+      "vbigs": [
+        {
+          "line": 0,
+          "n": "49B",
+          "small": "每个词激活的参数",
+          "d": "总参数约 1 万亿"
+        },
+        {
+          "line": 6,
+          "n": "38 vs 58",
+          "small": "综合指数",
+          "d": "Mistral Large 4 对 Opus 5.5"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Mistral AI",
+          "url": "https://mistral.ai/news/mistral-large-4/"
+        },
+        {
+          "name": "The Decoder",
+          "url": "https://the-decoder.com/mistral-large-4-is-said-to-be-the-most-powerful-open-ai-model-from-europe-and-the-u-s/"
+        }
+      ],
+      "snap_url": "https://the-decoder.com/mistral-large-4-is-said-to-be-the-most-powerful-open-ai-model-from-europe-and-the-u-s/"
+    },
+    {
+      "headline": "Reflection 发布 Beam",
+      "bar_label": "Beam",
+      "org": "Reflection AI",
+      "source": "TechCrunch · Reflection AI",
+      "source_short": "Reflection AI",
+      "date": "10月5日",
+      "rundown_key": "Reflection 发布开放权重模型 Beam",
+      "vhook": "501B 参数，每词只动 23B",
+      "points": [
+        "总参数 501B",
+        "每次激活 23B",
+        "上下文 1M token",
+        "权重 10 月内放出"
+      ],
+      "lines": [
+        {
+          "text": "第二件，美国创业公司 Reflection AI 发布了第一个开放权重模型 Beam。",
+          "en": "Second, US startup Reflection AI released Beam, its first open-weight model.",
+          "expr": "吃惊",
+          "cuts": [
+            [
+              "Reflection AI",
+              "Reflection AI"
+            ]
+          ]
+        },
+        {
+          "text": "它是混合专家结构，总参数 501B，每次激活 23B。",
+          "en": "It's a mixture of experts with 501B total parameters and 23B active.",
+          "tts": "它是混合专家结构，总参数五百零一 B，每次激活二十三 B。",
+          "point": 0
+        },
+        {
+          "text": "只处理文字，上下文长度 1M token，预训练用了 23.8T token。",
+          "en": "It handles text only, with a one-million-token context window and 23.8T tokens of pre-training.",
+          "tts": "只处理文字，上下文长度一百万 token，预训练用了二十三点八 T token。",
+          "point": 2
+        },
+        {
+          "text": "权重和技术细节会在 10 月内放出，走大型云厂商渠道。",
+          "en": "Weights and technical details will come in October through major cloud providers.",
+          "tts": "权重和技术细节会在十月内放出，走大型云厂商渠道。",
+          "point": 3
+        },
+        {
+          "text": "官方称，它和智谱 GLM-5.2 水平相当，推理算力少用 3 到 4 倍。",
+          "en": "Reflection says it matches Zhipu's GLM-5.2 while using 3 to 4 times less inference compute.",
+          "tts": "官方称，它和智谱 GLM 五点二水平相当，推理算力少用三到四倍。",
+          "point": 1,
+          "cuts": [
+            [
+              "水平相当，",
+              "GLM-5.2"
+            ]
+          ]
+        },
+        {
+          "text": "公司拿了英伟达、红杉等投资，累计约 47 亿美元。",
+          "en": "It's backed by NVIDIA and Sequoia Capital, with about $4.7 billion raised.",
+          "tts": "公司拿了英伟达、红杉等投资，累计约四十七亿美元。"
+        },
+        {
+          "text": "这些性能数字目前都是公司自己说的，没有独立验证。",
+          "en": "These performance numbers are all the company's own, not independently verified."
+        },
+        {
+          "text": "权重还没放出来，先别急着下结论。",
+          "en": "The weights aren't out yet, so hold off on conclusions."
+        }
+      ],
+      "vbigs": [
+        {
+          "line": 1,
+          "n": "501B",
+          "small": "总参数",
+          "d": "每次只激活 23B"
+        },
+        {
+          "line": 4,
+          "n": "少 3-4 倍",
+          "small": "推理算力",
+          "d": "官方称，与 GLM-5.2 相当"
+        }
+      ],
+      "refs": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/10/05/reflection-debuts-beam-a-open-weight-ai-model-to-rival-chinese-models-at-lower-compute-cost/"
+        }
+      ],
+      "snap_url": "https://techcrunch.com/2026/10/05/reflection-debuts-beam-a-open-weight-ai-model-to-rival-chinese-models-at-lower-compute-cost/"
+    },
+    {
+      "headline": "ChatGPT 文字加水印",
+      "bar_label": "文字水印",
+      "org": "OpenAI",
+      "source": "TechCrunch · OpenAI",
+      "source_short": "OpenAI",
+      "date": "10月5日",
+      "rundown_key": "OpenAI 给 ChatGPT 文字加水印",
+      "vhook": "改 10% 的词，检出率就降",
+      "points": [
+        "欧盟用户先加水印",
+        "ChatGPT 和 Codex",
+        "API 可自己开启",
+        "改 10% 的词就削弱"
+      ],
+      "lines": [
+        {
+          "text": "第三件，OpenAI 要给 ChatGPT 生成的文字加看不见的水印。",
+          "en": "Third, OpenAI is adding to ChatGPT's text an invisible watermark.",
+          "expr": "认真"
+        },
+        {
+          "text": "10 月 5 日，OpenAI 宣布，未来几周会先给欧盟用户的文字加水印。",
+          "en": "On October 5, OpenAI announced that in the coming weeks it will first give EU users' text a watermark.",
+          "tts": "十月五日，OpenAI 宣布，未来几周会先给欧盟用户的文字加水印。",
+          "point": 0
+        },
+        {
+          "text": "范围是 ChatGPT 和 Codex，原因是要符合欧盟的 AI 法案。",
+          "en": "It covers ChatGPT and Codex, and the reason is compliance with the EU AI Act.",
+          "point": 1
+        },
+        {
+          "text": "这个水印叫 textGrain，原理是微调模型选词，留下人看不出、检测器能认出的规律。",
+          "en": "The watermark is called textGrain. It subtly shapes word choices, leaving a pattern people can't see but a detector can."
+        },
+        {
+          "text": "API 开发者现在就能自己选择开启，不限地区。",
+          "en": "API developers can opt in right now, anywhere.",
+          "point": 2
+        },
+        {
+          "text": "但改几个词就能削弱它：把 10% 的词换成同义词，检出率从约 92% 降到 66%。",
+          "en": "But a few edits weaken it. Swapping 10% of words for synonyms cuts detection from about 92% to 66%.",
+          "tts": "但改几个词就能削弱它：把百分之十的词换成同义词，检出率从约百分之九十二降到百分之六十六。",
+          "point": 3
+        },
+        {
+          "text": "短文本、数学答案和翻译过的文字，更难检出。",
+          "en": "Short passages, math answers and translated text are harder to detect."
+        },
+        {
+          "text": "OpenAI 也说，没有水印不代表是人写的。",
+          "en": "OpenAI also says that a missing watermark doesn't prove a human wrote it."
+        }
+      ],
+      "vbigs": [
+        {
+          "line": 5,
+          "n": "92%→66%",
+          "small": "检出率",
+          "d": "10% 的词换成同义词之后"
+        }
+      ],
+      "refs": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/10/05/openai-will-start-watermarking-chatgpts-text-in-the-eu/"
+        }
+      ],
+      "snap_url": "https://techcrunch.com/2026/10/05/openai-will-start-watermarking-chatgpts-text-in-the-eu/"
+    },
+    {
+      "headline": "初创公司免费用 Claude",
+      "bar_label": "初创计划",
+      "org": "Anthropic",
+      "source": "TechCrunch · Anthropic",
+      "source_short": "Anthropic",
+      "date": "10月6日",
+      "rundown_key": "Anthropic 送初创公司一年 Claude Team",
+      "vhook": "免费 Team 一年，送 $1,000",
+      "points": [
+        "免费 Claude Team 一年",
+        "最多 5 个席位",
+        "API 额度 $1,000",
+        "成立 5 年内可申请"
+      ],
+      "lines": [
+        {
+          "text": "第四件，Anthropic 要送初创公司一年的 Claude Team 套餐。",
+          "en": "Fourth, Anthropic is giving startups a free year of Claude Team.",
+          "expr": "开心"
+        },
+        {
+          "text": "10 月 6 日，Anthropic 扩大了 Claude for Startups 计划，免费用一年 Claude Team，最多 5 个席位。",
+          "en": "On October 6, Anthropic expanded its Claude for Startups program: a free year of Claude Team, with up to 5 seats.",
+          "tts": "十月六日，Anthropic 扩大了 Claude for Startups 计划，免费用一年 Claude Team，最多五个席位。",
+          "point": 0
+        },
+        {
+          "text": "另外送 1,000 美元的 API 额度。",
+          "en": "It also adds $1,000 in API credits.",
+          "tts": "另外送一千美元的 A P I 额度。",
+          "point": 2
+        },
+        {
+          "text": "还能用 Claude Marketplace 开发插件，参加应用 AI 团队的线上答疑。",
+          "en": "Startups also get access to Claude Marketplace for building plugins, and virtual office hours with Anthropic's Applied AI team.",
+          "point": 1
+        },
+        {
+          "text": "条件有两个，满足一个就行：公司成立不到 5 年，或者近 2 年拿到过融资。",
+          "en": "There are two conditions, and meeting either is enough: founded within the last 5 years, or funded within the last 2.",
+          "tts": "条件有两个，满足一个就行：公司成立不到五年，或者近两年拿到过融资。",
+          "point": 3
+        },
+        {
+          "text": "原文没有写地区限制，申请入口在 Claude for Startups 的项目页面。",
+          "en": "The article lists no regional limit. Applications go through the Claude for Startups program page."
+        },
+        {
+          "text": "Anthropic 的说法是，多数人会通过基于模型做产品的公司，享受到 AI 的好处。",
+          "en": "Anthropic's argument is that most people will get AI's benefits through the companies that build on top of models."
+        },
+        {
+          "text": "免费只有一年，先想清楚拿它做什么。",
+          "en": "The free ride lasts one year, so decide what to build with it."
+        }
+      ],
+      "vbigs": [
+        {
+          "line": 1,
+          "n": "1 年",
+          "small": "免费 Claude Team",
+          "d": "最多 5 个席位"
+        },
+        {
+          "line": 2,
+          "n": "$1,000",
+          "small": "API 额度",
+          "d": "另外赠送"
+        }
+      ],
+      "refs": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/10/06/anthropic-gives-startups-a-free-year-of-enterprise-service-and-1000-in-token-credits/"
+        }
+      ],
+      "snap_url": "https://techcrunch.com/2026/10/06/anthropic-gives-startups-a-free-year-of-enterprise-service-and-1000-in-token-credits/"
+    },
+    {
+      "headline": "网络安全验证计划",
+      "bar_label": "安全验证",
+      "org": "Anthropic",
+      "source": "Anthropic",
+      "source_short": "Anthropic",
+      "date": "10月6日",
+      "rundown_key": "Anthropic 扩大网络安全验证计划",
+      "vhook": "三档权限，防守档几天回复",
+      "points": [
+        "两个项目合并成一个",
+        "分三档权限",
+        "防守档几天回复",
+        "红队档只收机构"
+      ],
+      "lines": [
+        {
+          "text": "第五件，Anthropic 把两个网络安全项目合并成一个，开放给更多防守方。",
+          "en": "Fifth, Anthropic merged two cyber programs into one, open to more defenders.",
+          "expr": "认真",
+          "point": 0
+        },
+        {
+          "text": "10 月 6 日，扩大后的 Cyber Verification Program 上线，合并了 Project Glasswing 和原来的验证计划。",
+          "en": "October 6: the expanded Cyber Verification Program is live, combining Project Glasswing and the original verification program.",
+          "tts": "十月六日，扩大后的 Cyber Verification Program 上线，合并了 Project Glasswing 和原来的验证计划。"
+        },
+        {
+          "text": "通过验证的安全人员，能用到更强的网络能力，模型的拦截分类器也会放松。",
+          "en": "Verified security professionals get stronger cyber capabilities and fewer blocking classifiers."
+        },
+        {
+          "text": "新方案分三档：防守、红队和特殊访问。",
+          "en": "There are three tiers: Defense, Red Team and Specialized access.",
+          "point": 1
+        },
+        {
+          "text": "防守档做应急响应、恶意软件分析，个人研究者和开源维护者也能申请，几天内回复。",
+          "en": "Defense is for work like incident response and malware analysis. Individuals and open-source maintainers can apply, with a reply in a few days.",
+          "point": 2
+        },
+        {
+          "text": "红队档加上授权渗透测试，只收机构，要等几周。",
+          "en": "Red Team adds authorized penetration testing. It's for organizations only, with a wait of a few weeks.",
+          "point": 3
+        },
+        {
+          "text": "特殊档面向飞行系统、电网这类安全关键系统的测试，名额有限。",
+          "en": "Specialized access is for flight systems, power grids and other safety-critical testing, with limited slots.",
+          "cuts": [
+            [
+              "飞行系统、",
+              "flight systems,"
+            ],
+            [
+              "测试，",
+              "testing,"
+            ]
+          ]
+        },
+        {
+          "text": "覆盖 Claude Opus 5.5、Sonnet 5.5 和 Mythos 5.1，以后的新模型也算。",
+          "en": "It covers Claude Opus 5.5, Sonnet 5.5 and Mythos 5.1, plus new models going forward.",
+          "tts": "覆盖 Claude Opus 五点五、Sonnet 五点五和 Mythos 五点一，以后的新模型也算。"
+        },
+        {
+          "text": "做漏洞研究的人，先看自己属于哪一档。",
+          "en": "If you do vulnerability research, check which tier you fit."
+        }
+      ],
+      "vbigs": [
+        {
+          "line": 3,
+          "n": "3 档",
+          "small": "访问权限",
+          "d": "防守 · 红队 · 特殊"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Anthropic",
+          "url": "https://www.anthropic.com/news/cyber-verification-program"
+        }
+      ],
+      "snap_url": "https://www.anthropic.com/news/cyber-verification-program"
+    },
+    {
+      "headline": "Together Link",
+      "bar_label": "Together Link",
+      "org": "Together AI",
+      "source": "Together AI 文档 · MarkTechPost",
+      "source_short": "Together AI",
+      "date": "10月5日",
+      "rundown_key": "Together Link 让 Claude Code 跑开源模型",
+      "vhook": "Claude Code 里跑 Kimi K3",
+      "points": [
+        "免费开源命令行工具",
+        "连 Claude Code 等",
+        "Opus 档换 Kimi K3",
+        "模型按量付费"
+      ],
+      "lines": [
+        {
+          "text": "第六件，用着 Claude Code，后台却跑开源模型，现在有现成工具了。",
+          "en": "Sixth, you use Claude Code but run open models behind it, and there's now a ready-made tool.",
+          "expr": "开心"
+        },
+        {
+          "text": "Together AI 推出 Together Link，免费、MIT 许可的命令行工具，目前是测试版。",
+          "en": "Together AI released Together Link, a free, MIT-licensed command-line tool that's now in beta.",
+          "point": 0
+        },
+        {
+          "text": "它能连 Claude Code、Codex、OpenCode，还有 Claude 和 ChatGPT 的桌面应用。",
+          "en": "It connects Claude Code, Codex, OpenCode, and the Claude and ChatGPT desktop apps.",
+          "point": 1
+        },
+        {
+          "text": "在 Claude Code 里，Opus 档换成 Kimi K3，Fable 档是 GLM 5.3。",
+          "en": "In Claude Code, the Opus tier runs Kimi K3 and the Fable tier runs GLM 5.3.",
+          "tts": "在 Claude Code 里，Opus 档换成 Kimi K3，Fable 档是 GLM 五点三。",
+          "point": 2
+        },
+        {
+          "text": "默认的 auto 路由，简单请求交给 Together 的模型，难的交给 Claude Opus。",
+          "en": "By default, an auto router sends simple requests to Together's models and hard ones to Claude Opus."
+        },
+        {
+          "text": "转给 Opus 的前提，是你自己接了 Anthropic 的 API key。",
+          "en": "Routing to Opus requires that you connect your own Anthropic API key.",
+          "tts": "转给 Opus 的前提，是你自己接了 Anthropic 的 A P I key。"
+        },
+        {
+          "text": "要注意，工具免费，模型不免费：用 Together 的模型，按它的标准价格付费。",
+          "en": "Note the tool is free, but the models aren't: Together's models are billed at its standard rates.",
+          "point": 3
+        },
+        {
+          "text": "目前只支持 macOS 和 Linux，还需要一个 Together 账号的 API key。",
+          "en": "It supports only macOS and Linux for now, and needs a Together API key.",
+          "tts": "目前只支持 macOS 和 Linux，还需要一个 Together 账号的 A P I key。"
+        },
+        {
+          "text": "换模型能不能省钱，要自己算。",
+          "en": "Does swapping models save money? Work it out.",
+          "cuts": [
+            [
+              "省钱，",
+              "save money?"
+            ]
+          ]
+        }
+      ],
+      "vbigs": [
+        {
+          "line": 3,
+          "n": "Kimi K3",
+          "small": "Claude Code 的 Opus 档",
+          "d": "Fable 档是 GLM 5.3"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Together AI 文档",
+          "url": "https://docs.together.ai/docs/togetherlink"
+        },
+        {
+          "name": "MarkTechPost",
+          "url": "https://www.marktechpost.com/2026/10/05/meet-together-link-a-free-cli-that-runs-open-models-like-kimi-k3-and-glm-5-3-inside-claude-code-codex-and-opencode/"
+        }
+      ],
+      "snap_url": "https://docs.together.ai/docs/togetherlink"
+    },
+    {
+      "headline": "EmbeddingGemma 2",
+      "bar_label": "嵌入模型",
+      "org": "Google DeepMind",
+      "source": "MarkTechPost · Hugging Face",
+      "source_short": "Google DeepMind",
+      "date": "10月6日",
+      "rundown_key": "谷歌的多模态嵌入模型",
+      "vhook": "四种输入，一个向量空间",
+      "points": [
+        "740M 参数",
+        "文字图片视频音频",
+        "768 维向量",
+        "Apache 2.0 许可"
+      ],
+      "lines": [
+        {
+          "text": "第七件，谷歌 DeepMind 发布了一个 740M 参数的开放多模态嵌入模型。",
+          "en": "Seventh, Google DeepMind released a 740M-parameter open multimodal embedding model.",
+          "tts": "第七件，谷歌 DeepMind 发布了一个七百四十 M 参数的开放多模态嵌入模型。",
+          "expr": "认真",
+          "point": 0,
+          "cuts": [
+            [
+              "DeepMind",
+              "DeepMind"
+            ],
+            [
+              "参数的",
+              "740M-parameter"
+            ]
+          ]
+        },
+        {
+          "text": "嵌入模型的工作，是把内容变成一串数字，方便搜索和比较相似度。",
+          "en": "An embedding model turns content into a list of numbers, so it can be searched and compared."
+        },
+        {
+          "text": "EmbeddingGemma 2 把文字、图片、视频和音频放进同一个向量空间。",
+          "en": "EmbeddingGemma 2 puts text, images, video and audio into one vector space.",
+          "point": 1
+        },
+        {
+          "text": "输出是 768 维，也可以截短到 512、256 或 128 维省空间。",
+          "en": "The output is 768 dimensions, and you can truncate it to 512, 256 or 128 to save space.",
+          "tts": "输出是七百六十八维，也可以截短到五百一十二、二百五十六或一百二十八维省空间。",
+          "point": 2
+        },
+        {
+          "text": "基于 Gemma 4 搭建，上下文长度 8,192 token，覆盖 100 多种语言。",
+          "en": "It's built on Gemma 4, with an 8,192-token context window and support for more than 100 languages.",
+          "tts": "基于 Gemma 四搭建，上下文长度八千一百九十二 token，覆盖一百多种语言。"
+        },
+        {
+          "text": "用 Apache 2.0 许可，当天就放出了权重。",
+          "en": "It's under the Apache 2.0 license, with weights released the same day.",
+          "tts": "用 Apache 二点零许可，当天就放出了权重。",
+          "point": 3
+        },
+        {
+          "text": "它设计给手机、笔记本这类普通设备用，本地做多模态搜索会方便很多。",
+          "en": "It's designed for everyday devices like phones and laptops, which makes local multimodal search much easier."
+        },
+        {
+          "text": "做搜索和问答的人，可以直接拿来试。",
+          "en": "If you build search or Q&A, it's ready to try."
+        }
+      ],
+      "vbigs": [
+        {
+          "line": 0,
+          "n": "740M",
+          "small": "参数量",
+          "d": "文字 · 图片 · 视频 · 音频"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Hugging Face",
+          "url": "https://huggingface.co/google/embeddinggemma-2"
+        },
+        {
+          "name": "MarkTechPost",
+          "url": "https://www.marktechpost.com/2026/10/06/google-deepmind-releases-embeddinggemma-2-a-740m-open-multimodal-embedding-model-built-on-gemma-4/"
+        }
+      ],
+      "snap_url": "https://huggingface.co/google/embeddinggemma-2"
+    }
+  ],
+  "closing": [
+    {
+      "text": "今天就这些，来源都在简介里。",
+      "en": "That's all for today. Sources are in the description.",
+      "expr": "开心"
+    },
+    {
+      "text": "我们明天见。",
+      "en": "See you tomorrow.",
+      "expr": "开心"
+    }
+  ],
+  "cover": {
+    "item": 4,
+    "line1": "Anthropic 送初创公司",
+    "line2": "免费用一年？",
+    "mood": "开心"
+  },
+  "titles": {
+    "bilibili": "10月7日AI圈7件事：Mistral发布万亿参数Large 4，Anthropic送初创公司一年Claude Team",
+    "douyin": "Mistral发万亿模型，Anthropic送初创套餐",
+    "xiaohongshu": "AI圈7件事：Mistral万亿模型"
+  },
+  "vertical": {
+    "cuts": {
+      "不过在综合指数上，它是 38 分，Opus 5.5 是 58 分。": [
+        [
+          "38 分，",
+          "scores 38"
+        ]
+      ],
+      "第三件，OpenAI 要给 ChatGPT 生成的文字加看不见的水印。": [
+        [
+          "ChatGPT",
+          "ChatGPT's"
+        ]
+      ],
+      "第六件，用着 Claude Code，后台却跑开源模型，现在有现成工具了。": [
+        [
+          "Claude Code，",
+          "Claude Code"
+        ],
+        [
+          "开源模型，",
+          "behind it,"
+        ]
+      ],
+      "未来几周会先给欧盟用户的文字加水印。": [
+        [
+          "欧盟用户的",
+          "EU users'"
+        ]
+      ],
+      "10 月 6 日，扩大后的 Cyber Verification Program 上线，": [
+        [
+          "扩大后的",
+          "expanded"
+        ],
+        [
+          "Program",
+          "Program"
+        ]
+      ]
+    }
+  }
+}

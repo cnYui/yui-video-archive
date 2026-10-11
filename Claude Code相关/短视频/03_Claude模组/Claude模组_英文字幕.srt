@@ -1,0 +1,95 @@
+1
+00:00:00,100 --> 00:00:01,948
+Claude Code can now run mods,
+
+2
+00:00:01,968 --> 00:00:03,470
+like the ones you install in games.
+
+3
+00:00:03,490 --> 00:00:05,357
+A mod is a small program inside a plugin. It can
+
+4
+00:00:05,377 --> 00:00:07,860
+change how Claude Code behaves and draw its own interface.
+
+5
+00:00:07,880 --> 00:00:09,657
+A few lines of TypeScript is enough to write one,
+
+6
+00:00:09,677 --> 00:00:11,730
+and /plugin installs it.
+
+7
+00:00:11,750 --> 00:00:14,260
+It needs Claude Code 2.1.287 or later.
+
+8
+00:00:14,280 --> 00:00:16,053
+Even Claude Code's own diff pane
+
+9
+00:00:16,073 --> 00:00:17,665
+and its AGENTS.md support
+
+10
+00:00:17,685 --> 00:00:19,310
+are built as mods.
+
+11
+00:00:19,460 --> 00:00:21,177
+Anthropic shows three examples. First,
+
+12
+00:00:21,197 --> 00:00:23,450
+Token Weather: a weather forecast for the context window.
+
+13
+00:00:23,470 --> 00:00:26,014
+A line above the prompt reads clear, showers,
+
+14
+00:00:26,034 --> 00:00:29,100
+then storm. The fuller the context, the worse the weather.
+
+15
+00:00:29,120 --> 00:00:31,870
+The whole mod is about 80 lines of code.
+
+16
+00:00:31,920 --> 00:00:33,612
+Second, Blast Radius. When Claude tries
+
+17
+00:00:33,632 --> 00:00:35,837
+to delete a folder, it stops the command first
+
+18
+00:00:35,857 --> 00:00:37,500
+and lists the files it would touch.
+
+19
+00:00:37,520 --> 00:00:39,800
+Choose Cancel and nothing gets deleted.
+
+20
+00:00:40,120 --> 00:00:42,033
+Third, Replay Theater. After a turn,
+
+21
+00:00:42,053 --> 00:00:45,170
+press R to replay each edit, one at a time.
+
+22
+00:00:45,270 --> 00:00:47,590
+Fun, but mods aren't sandboxed:
+
+23
+00:00:47,610 --> 00:00:50,350
+they have the same access as Claude Code itself.
+
+24
+00:00:50,370 --> 00:00:52,390
+Only install mods from people you trust.

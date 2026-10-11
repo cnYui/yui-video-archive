@@ -12,6 +12,9 @@ action in 3 rows running, 点头 / 摇头 next to a hand gesture, 叉腰 and 收
 4 s), whether the words' frames are in the presenter's frame folder (presenter.frames; or only in a preview overlay),
 off-topic character gags, “待写” placeholders, episode.json questions / chapters / backgrounds that point at missing scenes
 or files, and the estimated length against episode.json target_minutes.
+episode.json "bilingual": true (中英双语字幕): every say row needs its English (dict(en=…, cuts=…) at the end of
+the row); missing / too-long English stops the script (exit 1, after writing the files), and 台本/双语字幕.md lists
+every cue as the subtitles will split it, Chinese and English side by side, for reading through.
 """
 import argparse
 import datetime
@@ -108,7 +111,8 @@ def build(p):
             units_total += C.spoken_units(r["tts"])
             voice.append(dict(id=r["id"], scene=sc["id"], text=r["text"], tts_text=r["tts"],
                               est_seconds=dur, start=round(t, 1)))
-            rows_md.append(f"| {C.fmt(t)}–{C.fmt(t + dur)} | **{r['id']}** {C.md_cell(r['text'])} | {C.md_cell(r['visual'])} |")
+            en = f"<br>*{C.md_cell(r['en'])}*" if r.get("en") else ""
+            rows_md.append(f"| {C.fmt(t)}–{C.fmt(t + dur)} | **{r['id']}** {C.md_cell(r['text'])}{en} | {C.md_cell(r['visual'])} |")
             t += dur + C.SEG_GAP
         md_scenes.append((sc, start, t, rows_md))
 
@@ -131,8 +135,40 @@ def build(p):
     if not lo * 60 <= total <= hi * 60:
         warns.append(f"预计总长 {C.fmt(total)} 不在目标 {lo}–{hi} 分钟内")
     usage = check_usage(p, ep, scenes, rows_acts, events, t, warns)
+    bi_errs, bi_md = check_bilingual(ep, scenes, warns)
     return dict(ns=ns, ep=ep, pr=pr, scenes=scenes, bg_files=bg_files, bg_auto=bg_auto, voice=voice, md_scenes=md_scenes, main=t,
-                total=total, intro=intro, outro=outro, units=units_total, used=used, where_used=where_used, warns=warns, usage=usage)
+                total=total, intro=intro, outro=outro, units=units_total, used=used, where_used=where_used, warns=warns, usage=usage,
+                bi_errs=bi_errs, bi_md=bi_md)
+
+
+def check_bilingual(ep, scenes, warns):
+    """episode.json "bilingual": true（中英双语字幕，2026-10-02 起新一期默认）: every say row needs its English
+    (dict(en=…, cuts=…) at the end of the row). Returns (errors, 台本/双语字幕.md text) — the .md lists every cue as
+    the subtitles will split it (中文 / 英文 side by side) so the split points can be read through before recording."""
+    rows = [r for sc in scenes for r in sc["rows"] if r["kind"] == "say"]
+    if not ep.get("bilingual"):
+        if any(r.get("en") for r in rows):
+            warns.append("台本写了英文（en），但 episode.json 没有 \"bilingual\": true：这期按单语字幕出")
+        return [], None
+    import bilingual as BL
+    errs = []
+    L = ["# 中英双语字幕拆条（build_script.py 生成，改台本请改 script_data.py）", "",
+         "每一行台词按项目统一标准拆成的字幕条：中文 ≤ 约 28 字、英文 ≤ 约 90 字符一条。逐条读一遍，"
+         "中文和英文说的是同一件事、没有断在词组中间；对不上的那一行在 dict 里写 `cuts=[(\"中文锚点\", \"英文锚点\"), …]`。", "",
+         "| 段号 | # | 中文 | 宽 | 英文 | 字符 |", "|---|---|---|---|---|---|"]
+    for r in rows:
+        e, _w = BL.check_pair(r["id"], r["text"], r.get("en"), r.get("cuts"))
+        errs += e
+        warns += _w
+        if not r.get("en"):
+            continue
+        try:
+            chunks = BL.split(r["text"], r["en"], r.get("cuts"))
+        except ValueError:
+            continue
+        for k, (z, en, w) in enumerate(chunks, 1):
+            L.append(f"| {r['id'] if k == 1 else ''} | {k}/{len(chunks)} | {C.md_cell(z)} | {w:.1f} | {C.md_cell(en)} | {len(en)} |")
+    return errs, "\n".join(L) + "\n"
 
 
 def check_usage(p, ep, scenes, rows_acts, events, main, warns):
@@ -311,7 +347,7 @@ def render_md(p, b):
     L.append("")
 
     L.append("## 分场台本\n")
-    L.append("说明：时间是正片时间（不含片头）。粗体编号是配音段，后面的文字就是字幕。画面说明里的【动作：xxx】会变成角色动作，"
+    L.append("说明：时间是正片时间（不含片头）。粗体编号是配音段，后面的文字就是字幕（双语的期，斜体是英文字幕）。画面说明里的【动作：xxx】会变成角色动作，"
              "其余时间说话时动嘴、不说话时待机呼吸，再加上自动层的小动作。\n")
     for sc, s, e, rows in b["md_scenes"]:
         L.append(f"### {sc['id']}｜{sc['title']}｜{C.fmt(s)}–{C.fmt(e)}\n")
@@ -367,7 +403,7 @@ def render_md(p, b):
 
     L.append("### 画面风格\n")
     L.append("- 左上只有「原LAI如此 #%02d」；右上「本期目录」；左下角色；底部字幕按整个画面水平居中；最底《孤独摇滚！》四色章节进度条（整片时间，含片头片尾）。" % ep["number"])
-    L.append("- 文字卡片：纸白底、墨黑字、橙色强调，和片头片尾同一套“终端小票”配色。每个要点一张卡，编号清楚。")
+    L.append("- 文字卡片：纸白底、墨黑字、橙色强调（卡片版的“终端小票”配色；片头片尾 2026-10-03 起换成了 Claude 品牌色）。每个要点一张卡，编号清楚。")
     L.append("- 代码卡：墨黑底 + JetBrains Mono，右上角标“示意·已简化”；Key 一律打码（sk-••••）。")
     L.append("- App、工具界面都用虚构示意，不用真实 App 截图和 logo。")
     L.append("- 音效只用两种：新章节卡片出现的轻“嗒”声、目录打勾声。BGM 无人声轻音乐，说话时压低。\n")
@@ -407,8 +443,14 @@ def main():
     extra = f"（合计 {u['total']} 个，约每分钟 {u['per_min']:.1f} 个；大动作 {u['big']}、贴纸 {u['stickers']}）" if u else ""
     print("动作：" + ("、".join(f"{w}×{n}" for w, n in b["used"].items()) or "无") + extra)
     print(f"-> {p.script_md}\n-> {p.voice_plan}")
+    if b["bi_md"] is not None:
+        bi_path = p.script_dir / "双语字幕.md"
+        bi_path.write_text(b["bi_md"], encoding="utf-8")
+        print(f"-> {bi_path}（中英字幕拆条，逐条读一遍）")
     for w in b["warns"]:
         print("[提醒]", w)
+    if b["bi_errs"]:
+        sys.exit("中英双语字幕要改（script_data.py 那一行末尾的 dict(en=…, cuts=…)）：\n" + "\n".join("  ✗ " + e for e in b["bi_errs"]))
 
 
 if __name__ == "__main__":

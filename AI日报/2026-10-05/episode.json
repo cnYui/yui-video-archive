@@ -1,0 +1,430 @@
+{
+  "number": 1005,
+  "title": "10月5日，鲸鱼娘带你看看AI圈发生了什么？",
+  "dir_name": "AI每日日报_1005",
+  "date": "2026-10-05",
+  "date_label": "10月5日",
+  "weekday": "周一",
+  "subtitle": "鲸鱼娘带你看看 AI 圈发生了什么",
+  "target_minutes": [
+    5,
+    6
+  ],
+  "question_scene": "S01",
+  "questions": [
+    {
+      "text": "Gemini 免费版降级",
+      "scenes": [
+        "S02"
+      ]
+    },
+    {
+      "text": "德国开源模型 Kolibri",
+      "scenes": [
+        "S03"
+      ]
+    },
+    {
+      "text": "DeepSeek Harness 新测试版",
+      "scenes": [
+        "S04"
+      ]
+    },
+    {
+      "text": "GPT-6 打星际搬顶尖代码",
+      "scenes": [
+        "S05"
+      ]
+    },
+    {
+      "text": "谷歌暂停开源漏洞赏金",
+      "scenes": [
+        "S06"
+      ]
+    },
+    {
+      "text": "COSMIC 拒收 AI 代码",
+      "scenes": [
+        "S07"
+      ]
+    },
+    {
+      "text": "Gboard 训练搬进加密服务器",
+      "scenes": [
+        "S08"
+      ]
+    },
+    {
+      "text": "治 AI 智能体刷题",
+      "scenes": [
+        "S09"
+      ]
+    }
+  ],
+  "chapters": {
+    "S01": "开场",
+    "S02": "Gemini 免费版降级",
+    "S03": "德国开源模型 Kolibri",
+    "S04": "DeepSeek Harness 新测试版",
+    "S05": "GPT-6 打星际搬顶尖代码",
+    "S06": "谷歌暂停开源漏洞赏金",
+    "S07": "COSMIC 拒收 AI 代码",
+    "S08": "Gboard 训练搬进加密服务器",
+    "S09": "治 AI 智能体刷题",
+    "S10": "回顾"
+  },
+  "bar_labels": {
+    "S01": "开场",
+    "S02": "Gemini 免费版",
+    "S03": "Kolibri",
+    "S04": "DS Harness",
+    "S05": "星际争霸",
+    "S06": "漏洞赏金",
+    "S07": "COSMIC",
+    "S08": "Gboard",
+    "S09": "RRSI",
+    "S10": "回顾"
+  },
+  "backgrounds": {
+    "S01": "01_深海气泡.png",
+    "S02": "02_星点.png",
+    "S03": "03_波纹.png",
+    "S04": "01_深海气泡.png",
+    "S05": "02_星点.png",
+    "S06": "03_波纹.png",
+    "S07": "01_深海气泡.png",
+    "S08": "02_星点.png",
+    "S09": "03_波纹.png",
+    "S10": "01_深海气泡.png"
+  },
+  "bg_alpha": 0.9,
+  "bg_blur": 0,
+  "intro_tagline": "",
+  "outro_references": [
+    "Gemini 免费版降级（9to5Google / The Decoder）",
+    "德国开源模型 Kolibri（Aleph Alpha / Hugging Face）",
+    "DeepSeek Harness 新测试版（GitHub / 36氪）",
+    "GPT-6 打星际搬顶尖代码（Kotaku / XDA）",
+    "谷歌暂停开源漏洞赏金（IT之家 / Tom's Hardware）",
+    "COSMIC 拒收 AI 代码（Linuxiac / GitHub / IT之家）",
+    "Gboard 训练搬进加密服务器（Google Research / AlphaSignal）",
+    "治 AI 智能体刷题（The Decoder / arXiv）"
+  ],
+  "outro_items": [
+    {
+      "label": "形象",
+      "value": "大肥鱼同人 · 上善无形 / ZipZipPipe"
+    },
+    {
+      "label": "视频制作模型",
+      "value": "Opus 5.5"
+    }
+  ],
+  "outro_closing": "感谢大家看到最后",
+  "auto_gestures": false,
+  "presenter": {
+    "id": "whale",
+    "frames": "角色/动作帧"
+  },
+  "badge_html": "AI每日日报<span class=\"n\">10.05</span>",
+  "toc_kicker_html": "<b>今日要闻</b>TODAY",
+  "bar_colors": [
+    "#97C3F0",
+    "#F3C98C",
+    "#4A88DA",
+    "#C6E6FB"
+  ],
+  "news": [
+    {
+      "headline": "Gemini 免费版降级",
+      "org": "Google",
+      "source": "9to5Google · The Decoder",
+      "source_short": "9to5Google",
+      "date": "10月3日",
+      "points": [
+        "免费版只剩 Flash-Lite",
+        "AI Plus 也没了 Pro",
+        "Pro 起步 19.99 美元",
+        "10 月 9 日起生效"
+      ],
+      "rundown_key": "Gemini 免费版只剩 Flash-Lite",
+      "line_points": [
+        0,
+        3,
+        null,
+        null,
+        1,
+        2,
+        null
+      ],
+      "refs": [
+        {
+          "name": "9to5Google",
+          "url": "https://9to5google.com/2026/10/03/gemini-model-limits-oct-26/"
+        },
+        {
+          "name": "The Decoder",
+          "url": "https://the-decoder.com/googles-new-gemini-tiers-cut-free-users-to-its-weakest-model-and-lock-5-month-subscribers-out-of-pro/"
+        }
+      ],
+      "snap": "../assets/snaps/news_01.png",
+      "snap_src": "9to5google.com"
+    },
+    {
+      "headline": "德国开源模型 Kolibri",
+      "org": "Aleph Alpha",
+      "source": "Aleph Alpha · Hugging Face",
+      "source_short": "Aleph Alpha",
+      "date": "10月3日",
+      "points": [
+        "总参数 78B",
+        "每次只激活 3.46B",
+        "Apache 2.0 开源",
+        "德语占五分之一以上"
+      ],
+      "rundown_key": "德国开源模型 Kolibri",
+      "line_points": [
+        0,
+        null,
+        1,
+        2,
+        null,
+        3,
+        null,
+        null
+      ],
+      "refs": [
+        {
+          "name": "Aleph Alpha",
+          "url": "https://aleph-alpha.com/en/blog/kolibri-has-landed-a-sovereign-open-weight-model/"
+        },
+        {
+          "name": "Hugging Face",
+          "url": "https://huggingface.co/Aleph-Alpha/Kolibri-1"
+        }
+      ],
+      "snap": "../assets/snaps/news_02.png",
+      "snap_src": "aleph-alpha.com"
+    },
+    {
+      "headline": "DeepSeek Harness 新测试版",
+      "org": "DeepSeek",
+      "source": "GitHub · 36氪",
+      "source_short": "GitHub",
+      "date": "10月3日",
+      "points": [
+        "发布 v0.2.1-alpha.1",
+        "试着兼容 Mods",
+        "三个示例能跑",
+        "Agent 能自己建插件"
+      ],
+      "rundown_key": "DeepSeek Harness 试着兼容 Claude Code 插件",
+      "line_points": [
+        null,
+        0,
+        1,
+        null,
+        2,
+        null,
+        3,
+        null
+      ],
+      "refs": [
+        {
+          "name": "GitHub",
+          "url": "https://github.com/deepseek-ai/deepseek-harness/releases/tag/dsh-v0.2.1-alpha.1"
+        },
+        {
+          "name": "36氪",
+          "url": "https://www.36kr.com/p/4010809598922624"
+        }
+      ],
+      "snap": "../assets/snaps/news_03.png",
+      "snap_src": "36kr.com"
+    },
+    {
+      "headline": "GPT-6 打星际搬顶尖代码",
+      "org": "OpenAI",
+      "source": "Kotaku · XDA",
+      "source_short": "Kotaku",
+      "date": "10月3日",
+      "points": [
+        "比赛限时 1 小时写 C++",
+        "输给人类写的 Pluto",
+        "下载顶尖程序 Stardust",
+        "代码被回滚"
+      ],
+      "rundown_key": "GPT-6 Astra 打星际输了直接搬顶尖程序",
+      "line_points": [
+        null,
+        null,
+        0,
+        null,
+        1,
+        2,
+        3,
+        null
+      ],
+      "refs": [
+        {
+          "name": "Kotaku",
+          "url": "https://kotaku.com/openais-gpt-6-astra-gets-frustrated-losing-at-starcraft-and-decides-to-cheat-instead-2000739607"
+        },
+        {
+          "name": "XDA",
+          "url": "https://www.xda-developers.com/gpt-6-astra-started-losing-starcraft-stole-winning-bot-instead-of-playing-fair/"
+        }
+      ],
+      "snap": "../assets/snaps/news_04.png",
+      "snap_src": "xda-developers.com"
+    },
+    {
+      "headline": "谷歌暂停开源漏洞赏金",
+      "org": "Google",
+      "source": "IT之家 · Tom's Hardware",
+      "source_short": "IT之家",
+      "date": "10月1日",
+      "points": [
+        "不再收产品漏洞",
+        "起因是劣质报告太多",
+        "旧报告照常处理",
+        "2027 年一季度再说"
+      ],
+      "rundown_key": "谷歌暂停开源漏洞赏金",
+      "line_points": [
+        null,
+        0,
+        1,
+        null,
+        2,
+        3,
+        null
+      ],
+      "refs": [
+        {
+          "name": "IT之家",
+          "url": "https://www.ithome.com/1/009/673.htm"
+        },
+        {
+          "name": "Tom's Hardware",
+          "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/google-suspends-part-of-the-oss-vrp-bug-bounty-program-due-to-an-influx-of-invalid-ai-submissions-product-vulnerability-submissions-ended-october-1"
+        }
+      ],
+      "snap": "../assets/snaps/news_05.png",
+      "snap_src": "ithome.com"
+    },
+    {
+      "headline": "COSMIC 拒收 AI 代码",
+      "org": "System76",
+      "source": "Linuxiac · GitHub",
+      "source_short": "Linuxiac",
+      "date": "10月2日",
+      "points": [
+        "PR 要勾选没用 AI",
+        "代码注释描述都算",
+        "理由是审核太累",
+        "不反对 AI 工具本身"
+      ],
+      "rundown_key": "COSMIC 拒收 AI 写的代码",
+      "line_points": [
+        null,
+        null,
+        0,
+        1,
+        2,
+        3,
+        null
+      ],
+      "refs": [
+        {
+          "name": "Linuxiac",
+          "url": "https://linuxiac.com/cosmic-stops-accepting-llm-generated-content-in-pull-requests/"
+        },
+        {
+          "name": "GitHub",
+          "url": "https://github.com/pop-os/cosmic-epoch/blob/master/.github/PULL_REQUEST_TEMPLATE.md"
+        },
+        {
+          "name": "IT之家",
+          "url": "https://www.ithome.com/1/009/669.htm"
+        }
+      ],
+      "snap": "../assets/snaps/news_06.png",
+      "snap_src": "linuxiac.com"
+    },
+    {
+      "headline": "Gboard 训练搬进加密服务器",
+      "org": "Google",
+      "source": "Google Research · AlphaSignal",
+      "source_short": "Google Research",
+      "date": "10月2日",
+      "points": [
+        "计算搬进可信执行环境",
+        "隐私保证能外部核验",
+        "英语日语模型已上线",
+        "以前训练要 1–2 个月"
+      ],
+      "rundown_key": "Gboard 把训练搬进加密服务器",
+      "line_points": [
+        null,
+        null,
+        3,
+        0,
+        1,
+        2,
+        null,
+        null
+      ],
+      "refs": [
+        {
+          "name": "Google Research",
+          "url": "https://research.google/blog/toward-provably-private-learning-from-federated-data/"
+        },
+        {
+          "name": "AlphaSignal",
+          "url": "https://alphasignal.ai/news/google-moves-gboard-s-private-ai-training-into-secure-server-enclaves"
+        }
+      ],
+      "snap": "../assets/snaps/news_07.png",
+      "snap_src": "research.google"
+    },
+    {
+      "headline": "治 AI 智能体刷题",
+      "org": "Google",
+      "source": "The Decoder · arXiv",
+      "source_short": "The Decoder",
+      "date": "10月4日",
+      "points": [
+        "自我改进会死记题目",
+        "限制每轮改动的数量",
+        "评审员拦下针对性改动",
+        "没见过的题也涨分"
+      ],
+      "rundown_key": "谷歌治 AI 刷题的新方法",
+      "line_points": [
+        null,
+        0,
+        null,
+        null,
+        null,
+        1,
+        3,
+        2,
+        null
+      ],
+      "refs": [
+        {
+          "name": "The Decoder",
+          "url": "https://the-decoder.com/google-researchers-find-a-way-to-keep-self-improving-ai-agents-from-memorizing-their-tests/"
+        },
+        {
+          "name": "arXiv",
+          "url": "https://arxiv.org/abs/2609.24972"
+        }
+      ],
+      "snap": "../assets/snaps/news_08.png",
+      "snap_src": "the-decoder.com"
+    }
+  ],
+  "style": "board"
+}
