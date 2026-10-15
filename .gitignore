@@ -293,3 +293,15 @@ items.jsonl
 /Claude Code相关/04_ClaudeProjects/制作/04_封面/*.png
 /Claude Code相关/04_ClaudeProjects/制作/04_封面/_src/
 /Claude Code相关/04_ClaudeProjects/*.mp4
+
+# 本地并行工作与发布工具产物（不进公开仓库）
+/B站互动/
+/AI科普/_staging/
+/.playwright-mcp/
+/reports/
+/docs/pw/
+/docs/发布备用_Playwright.md
+/tmp_fetch_games.py
+/tmp_ps.html
+/tmp_ubi.html
+/docs/ai/context/20261014-REA-search-tools.py
