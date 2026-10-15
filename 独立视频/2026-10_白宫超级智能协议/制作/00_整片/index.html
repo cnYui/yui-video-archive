@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<!-- 《一个视频带你看懂：昨天川普和6位CEO到底签署了啥？》（白宫《超级智能协定》）整片：2340×1080，30 fps，白底。
+     renderAt(t) 画出第 t 秒（同一个 t 永远是同一帧）。数据：timeline.js（build_timeline.py）、frames.js（prep_frames.py）。
+     版式沿用《国内订阅Codex/Claude教程》的版式 B：全程画外音，不放出镜框（用户 2026-10-01 定的规矩），
+     左栏是目录，右边演示区放大到 1636×920（内容按 1474×829 写，整体 scale）；演示区放“现场片段”或“文件卡片”，字幕在 y 966 以下。
+     脚本：scenes.js（卡片、提示）→ engine.js（renderAt）。 -->
+<link rel="stylesheet" href="file:///D:/大疆/AI科普/素材/字体/fonts.css">
+<style>
+:root { --ink:#1B1B1F; --ink2:#374151; --gray:#6B7280; --gray2:#9AA1AC; --line:#E5E7EB; --soft:#F4F5F7; --orange:#FF4F1A; --marker:#FFD84D; --green:#16A34A; --blue:#2563EB; --red:#E11D48; }
+* { box-sizing:border-box; margin:0; padding:0; }
+html, body { width:2340px; height:1080px; background:#fff; overflow:hidden; font-family:'Noto Sans SC', sans-serif; color:var(--ink); }
+.abs { position:absolute; }
+.frame { position:absolute; background:#fff; padding:14px; border:1px solid var(--line); border-radius:10px; box-shadow:0 14px 36px rgba(0,0,0,.14); }
+.frame .inner { position:relative; width:100%; height:100%; border-radius:4px; overflow:hidden; background:#EEF0F3; }
+.tape { position:absolute; width:150px; height:40px; background:rgba(255,214,140,.8); top:-18px; box-shadow:0 1px 2px rgba(0,0,0,.08); z-index:3; }
+.tape.l { left:44px; transform:rotate(-7deg); } .tape.r { right:44px; transform:rotate(6deg); }
+.chip { display:inline-block; padding:5px 18px; border:3px solid var(--orange); color:var(--orange); border-radius:999px; font:800 26px 'Noto Sans SC'; white-space:nowrap; }
+.chip.fill { background:var(--orange); color:#fff; }
+.chip.ink { border-color:var(--ink); color:var(--ink); }
+.chip.blue { border-color:var(--blue); color:var(--blue); }
+.chip.red { border-color:var(--red); color:var(--red); }
+.mark { background:linear-gradient(transparent 58%, var(--marker) 58%, var(--marker) 92%, transparent 92%); }
+
+/* 目录 */
+#toc { position:absolute; left:40px; top:226px; width:560px; height:560px; padding:30px 32px; background:rgba(255,255,255,.96); border-top:3px solid var(--orange); border-left:1px solid #E6E6E6; border-right:1px solid #E6E6E6; border-bottom:1px solid #E6E6E6; box-shadow:0 6px 18px rgba(0,0,0,.08); }
+#toc .t { font:800 34px 'Noto Sans SC'; margin-bottom:22px; white-space:nowrap; }
+#toc .t span { display:block; font:600 22px 'Noto Sans SC'; color:var(--gray2); margin:6px 0 0 0; }
+#toc .it { display:flex; align-items:center; gap:12px; font:500 28px/2.0 'Noto Sans SC'; color:#B0B6BF; white-space:nowrap; }
+#toc .it .b { width:6px; height:26px; border-radius:3px; background:transparent; flex:none; }
+#toc .it .n { font:700 22px 'Space Grotesk'; width:24px; flex:none; }
+#toc .it.done { color:var(--gray); }
+#toc .it.now { color:var(--ink); font-weight:800; }
+#toc .it.now .b { background:var(--orange); }
+
+/* 演示区 */
+#demo { left:636px; top:18px; width:1664px; height:948px; }
+#demoin { position:absolute; left:0; top:0; width:1474px; height:829px; transform-origin:0 0; transform:scale(1.10990); }
+#cardbg { position:absolute; inset:0; background:linear-gradient(160deg, #F6F7F9 0%, #E7EBF0 100%); }
+#scrimg { position:absolute; left:0; top:0; width:100%; height:100%; display:block; visibility:hidden; background:#000; }
+#ovB { position:absolute; inset:0; }
+.chapchip { position:absolute; left:22px; top:20px; background:var(--orange); color:#fff; font:800 30px 'Noto Sans SC'; padding:8px 22px; border-radius:12px; white-space:nowrap; box-shadow:0 8px 20px rgba(0,0,0,.25); z-index:5; }
+.chapchip span { font:700 24px 'Space Grotesk'; opacity:.85; margin-right:12px; }
+.pill { position:absolute; background:rgba(17,17,17,.86); color:#fff; font:700 30px 'Noto Sans SC'; padding:12px 24px; border-radius:14px; white-space:nowrap; box-shadow:0 10px 26px rgba(0,0,0,.25); z-index:5; }
+.pill b { color:#FDBA74; }
+.credit { position:absolute; right:22px; top:20px; background:rgba(17,17,17,.84); color:#fff; font:700 26px 'Noto Sans SC'; padding:8px 20px; border-radius:12px; white-space:nowrap; z-index:5; }
+.who { position:absolute; left:200px; bottom:22px; background:rgba(255,255,255,.94); color:var(--ink); font:800 32px 'Noto Sans SC'; padding:8px 22px; border-radius:12px; white-space:nowrap; box-shadow:0 8px 20px rgba(0,0,0,.25); z-index:5; border-left:8px solid var(--orange); }
+.who small { font:600 24px 'Noto Sans SC'; color:var(--gray); margin-left:12px; }
+
+/* 卡片 */
+.kick { font:700 26px 'Noto Sans SC'; letter-spacing:.2em; color:var(--orange); white-space:nowrap; }
+.big { font:800 92px/1.15 'Noto Sans SC'; white-space:nowrap; }
+.h1 { font:800 60px/1.25 'Noto Sans SC'; white-space:nowrap; }
+.h2 { font:800 46px/1.3 'Noto Sans SC'; white-space:nowrap; }
+.cap { position:absolute; font:700 28px/1.45 'Noto Sans SC'; color:var(--gray); }
+.card { position:absolute; border-radius:20px; background:#fff; border:3px solid var(--line); box-shadow:0 12px 28px rgba(0,0,0,.08); padding:26px 32px; }
+.card .no { display:inline-flex; align-items:center; justify-content:center; width:56px; height:56px; border-radius:50%; background:var(--ink); color:#fff; font:800 30px 'Space Grotesk'; margin-right:16px; vertical-align:middle; }
+.card .tt { font:800 38px/1.3 'Noto Sans SC'; vertical-align:middle; }
+.card .dd { font:600 27px/1.5 'Noto Sans SC'; color:var(--gray); margin-top:10px; }
+.card .dd b { color:var(--ink); }
+.card.hot { border-color:var(--orange); }
+.card.hot .no { background:var(--orange); }
+.card.dim .tt, .card.dim .dd { opacity:.5; }
+.person { position:absolute; display:flex; align-items:center; gap:14px; width:440px; height:96px; padding:0 22px; border-radius:18px; background:#fff; border:3px solid var(--ink); font:800 32px 'Noto Sans SC'; box-shadow:0 6px 0 rgba(0,0,0,.08); white-space:nowrap; }
+.person small { font:600 24px 'Noto Sans SC'; color:var(--gray); }
+.person.a { border-color:var(--orange); background:#FFF6F0; }
+.layer { position:absolute; left:70px; width:1130px; height:132px; display:flex; align-items:center; gap:24px; padding:0 30px; border-radius:18px; background:#fff; border:3px solid var(--ink); box-shadow:0 8px 0 rgba(0,0,0,.08); }
+.layer .n { flex:none; width:76px; height:76px; border-radius:16px; background:var(--ink); color:#fff; display:flex; align-items:center; justify-content:center; font:800 44px 'Space Grotesk'; }
+.layer .tt { font:800 44px/1.2 'Noto Sans SC'; white-space:nowrap; }
+.layer .dd { font:600 27px/1.4 'Noto Sans SC'; color:var(--gray); margin-top:4px; white-space:nowrap; }
+.layer.l1 { border-color:#E11D48; } .layer.l1 .n { background:#E11D48; }
+.layer.l2 { border-color:#F59E0B; } .layer.l2 .n { background:#F59E0B; }
+.layer.l3 { border-color:#2563EB; } .layer.l3 .n { background:#2563EB; }
+.layer.l4 { border-color:#16A34A; } .layer.l4 .n { background:#16A34A; }
+.stamp { position:absolute; padding:8px 28px; border:7px solid var(--red); color:var(--red); border-radius:14px; font:900 54px 'Noto Sans SC'; letter-spacing:.08em; transform:rotate(-8deg); background:rgba(255,255,255,.55); white-space:nowrap; }
+.stamp.o { border-color:var(--orange); color:var(--orange); }
+.stamp.g { border-color:var(--green); color:var(--green); }
+.miss { position:absolute; width:668px; height:172px; border-radius:18px; background:#fff; border:3px solid var(--line); box-shadow:0 8px 20px rgba(0,0,0,.07); padding:22px 28px; }
+.miss .k { font:800 28px 'Space Grotesk'; color:var(--orange); }
+.miss .tt { font:800 38px/1.3 'Noto Sans SC'; margin-top:4px; white-space:nowrap; }
+.miss .st { position:absolute; right:26px; top:48px; padding:2px 20px; border:5px solid var(--red); color:var(--red); border-radius:10px; font:900 40px 'Noto Sans SC'; transform:rotate(-7deg); background:rgba(255,255,255,.7); }
+.node { position:absolute; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; border-radius:20px; background:#fff; border:4px solid var(--ink); font:800 40px/1.25 'Noto Sans SC'; box-shadow:0 8px 0 rgba(0,0,0,.08); }
+.node small { font:600 28px 'Noto Sans SC'; color:var(--gray); margin-top:8px; }
+.node.bad { border-color:var(--red); background:#FFF1F2; color:#9F1239; }
+.arrow { position:absolute; height:8px; background:#9AA1AC; border-radius:4px; transform-origin:0 50%; }
+.arrow::after { content:''; position:absolute; right:-6px; top:50%; width:0; height:0; border-left:26px solid #9AA1AC; border-top:16px solid transparent; border-bottom:16px solid transparent; transform:translate(16px,-50%); }
+.tl { position:absolute; left:60px; width:1350px; height:118px; display:flex; align-items:center; gap:26px; padding:0 30px; border-radius:18px; background:#fff; border:3px solid var(--line); box-shadow:0 8px 20px rgba(0,0,0,.07); }
+.tl .d { flex:none; width:210px; text-align:center; font:800 32px 'Noto Sans SC'; color:#fff; background:var(--ink); border-radius:12px; padding:8px 0; }
+.tl .x { font:700 33px/1.35 'Noto Sans SC'; color:var(--ink2); }
+.tl .x small { display:block; font:600 24px 'Noto Sans SC'; color:var(--gray); }
+.tl.fin .d { background:var(--orange); }
+.sig { position:absolute; width:690px; height:300px; border-radius:22px; background:#fff; border:4px solid var(--ink); padding:26px 34px; box-shadow:0 10px 0 rgba(0,0,0,.08); }
+.sig .k { font:800 30px 'Space Grotesk'; color:var(--orange); }
+.sig .tt { font:800 46px/1.25 'Noto Sans SC'; margin-top:4px; white-space:nowrap; }
+.sig .dd { font:600 28px/1.5 'Noto Sans SC'; color:var(--gray); margin-top:10px; }
+.sig .dd b { color:var(--ink); }
+.banner { position:absolute; left:70px; width:1334px; border-radius:20px; padding:20px 36px; text-align:center; font:900 56px/1.3 'Noto Sans SC'; background:var(--ink); color:#fff; box-shadow:0 12px 28px rgba(0,0,0,.2); white-space:nowrap; }
+.banner em { font-style:normal; color:var(--marker); }
+.watch { position:absolute; left:120px; width:1234px; height:104px; display:flex; align-items:center; gap:24px; padding:0 30px; border-radius:18px; background:#fff; border:3px solid var(--line); box-shadow:0 8px 20px rgba(0,0,0,.07); font:800 40px 'Noto Sans SC'; }
+.watch .n { flex:none; width:60px; height:60px; border-radius:50%; background:var(--orange); color:#fff; display:flex; align-items:center; justify-content:center; font:800 34px 'Space Grotesk'; }
+.watch small { font:600 26px 'Noto Sans SC'; color:var(--gray); margin-left:10px; }
+
+/* 字幕 */
+#subs { position:absolute; left:0; top:966px; width:2340px; height:110px; z-index:30; pointer-events:none; }
+#subZh { position:absolute; left:0; right:0; top:10px; text-align:center; font:800 52px/66px 'Noto Sans SC'; color:var(--ink); -webkit-text-stroke:10px #fff; paint-order:stroke fill; white-space:nowrap; }
+#subZh.clip { color:#9A3412; }
+#subZh .w { display:inline-block; font:800 .62em 'Noto Sans SC'; background:var(--orange); color:#fff; -webkit-text-stroke:0; padding:0 .45em; border-radius:.3em; margin-right:.5em; vertical-align:.12em; line-height:1.5; }
+</style>
+</head>
+<body>
+<div class="frame" id="demo"><div class="tape l"></div><div class="tape r"></div>
+  <div class="inner"><div id="demoin">
+    <div id="cardbg"></div>
+    <img id="scrimg">
+    <div id="ovB"></div>
+  </div></div>
+</div>
+<div id="toc"></div>
+<div id="subs"><div id="subZh"></div></div>
+<script src="timeline.js"></script>
+<script src="frames.js"></script>
+<script src="scenes.js"></script>
+<script src="engine.js"></script>
+</body>
+</html>

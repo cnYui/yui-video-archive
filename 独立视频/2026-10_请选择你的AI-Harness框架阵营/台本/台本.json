@@ -1,0 +1,476 @@
+{
+ "_说明": "唯一来源（v5，2026-10-01 夜，用户通过）：一个产品一页，每个产品一个哲学流派的“主义”（出处小字 tag + 3 行 + 金句）；why = 解释（不上画面，可放简介）；note = 产品事实的官方原文依据。每页 8 拍，标题页 8 拍（开头 2 倍速），音乐在第 160 拍自然收尾处淡出，全片约 75.5 s。bpm / t0 来自参考视频音轨的节拍分析（130 BPM，第 0 拍 = 0.503 s）。旧版在 台本/_旧稿/。",
+ "title": "请选择你的AI Harness 框架阵营",
+ "bpm": 130,
+ "t0": 0.503,
+ "dur": 75.55,
+ "drops": [
+  32,
+  96
+ ],
+ "intro": {
+  "bg": "#0a0f1e",
+  "fg": "#ffffff",
+  "accent": "#ffd23f",
+  "line1": "请选择你的",
+  "line2": "AI Harness",
+  "line3": "框架阵营",
+  "grid": [
+   "claude-code",
+   "codex",
+   "deepseek",
+   "openclaw",
+   "hermes",
+   "trae",
+   "workbuddy",
+   "kimi",
+   "cursor",
+   "gemini-cli",
+   "copilot",
+   "kiro",
+   "devin",
+   "qwen",
+   "pi",
+   "opencode"
+  ],
+  "speed": 2,
+  "pop_step": 0.45
+ },
+ "camps": [
+  {
+   "name": "有机主义",
+   "bg": "#c2410c",
+   "fg": "#fff7ed",
+   "logos": [
+    "claude-code"
+   ],
+   "switch": [],
+   "lines": [
+    "生态不是零件堆砌，是有机体。",
+    "Skills、Hooks、MCP、子代理共生，",
+    "整体大于部分之和。"
+   ],
+   "epithet": "万物皆流，万物皆联。",
+   "note": "官方文档：Claude Code 可在 terminal / IDE extensions / desktop app / web 使用，还有 Slack、Chrome；用 CLAUDE.md、skills、hooks、MCP、subagents、plugins、Agent SDK 扩展（code.claude.com/docs/en/overview）",
+   "tag": "怀特海 · 黑格尔",
+   "why": "怀特海的有机哲学、黑格尔的整体论：Claude Code 的 Skills、Hooks、MCP、子代理互相嵌套，终端、IDE、桌面、网页都是它的器官",
+   "chip": null
+  },
+  {
+   "name": "批判主义",
+   "bg": "#0f1b3d",
+   "fg": "#e8eeff",
+   "logos": [
+    "codex"
+   ],
+   "switch": [],
+   "lines": [
+    "康德先为理性划界，Codex先为AI划界：",
+    "默认断网，只能写当前目录，",
+    "出了沙箱才来问你。"
+   ],
+   "epithet": "界限之内一切清楚，界限之外必须请示。",
+   "note": "官方文档原文：By default, the agent runs with network access turned off；OS-enforced sandbox，写权限默认限于当前工作区；The sandbox reduces approval fatigue；出沙箱 / 联网要审批。developers.openai.com/codex/agent-approvals-security、/concepts/sandboxing",
+   "tag": "康德《纯粹理性批判》",
+   "why": "康德先考察理性的边界；Codex 先划定 AI 能碰哪些文件（官方文档：默认断网、写权限限于当前工作区、OS 级沙箱）"
+  },
+  {
+   "name": "折衷主义",
+   "bg": "#4d6bfe",
+   "fg": "#ffffff",
+   "logos": [
+    "deepseek"
+   ],
+   "switch": [],
+   "lines": [
+    "不执着于任何单一架构，万物皆插件，",
+    "写代码、分析表格、跑定时任务，",
+    "要什么插什么，开发者预览随时会变。"
+   ],
+   "chip": null,
+   "chip_bg": "#101a4d",
+   "chip_fg": "#dbe3ff",
+   "epithet": "体系不重要，能用的拼起来就是体系。",
+   "note": "官方 README：DeepSeek Harness (dsh) is an open-source agent harness developed by DeepSeek AI，built on an everything-is-a-plugin architecture，MIT；developer preview，THERE WILL BE COMPATIBILITY-BREAKING CHANGES；npx @deepseek-ai/dsh web 启动本地 Web UI。官网 deepseek.com/en/harness：work with documents, analyze spreadsheets, write code, and schedule tasks。官方桌面版：官方仓库 release dsh-v0.2.0-rc.2（2026-09-29，预览版）的更新说明明写 macOS／Windows 桌面端（Desktop）；另有第三方社区做的 ‘DeepSeek Harness Desktop’，自己声明不是 DeepSeek 官方产品。这里用官方名 DeepSeek Harness",
+   "tag": "亚历山大里亚学派",
+   "why": "折衷主义从各体系里挑要素拼成新体系；DeepSeek Harness 的口号 Everything is a Plugin，README 警告 developer preview 随时有不兼容改动"
+  },
+  {
+   "name": "此在主义",
+   "bg": "#d9381e",
+   "fg": "#fff4f0",
+   "logos": [
+    "openclaw"
+   ],
+   "switch": [],
+   "lines": [
+    "它不待在IDE里，也不待在终端里，",
+    "它住在你的聊天软件里：",
+    "收件箱、日历、订机票，在日常中现身。"
+   ],
+   "epithet": "我聊，故我在。",
+   "note": "官网：The AI that really does things；runs on your machine and works from WhatsApp, Telegram, or any chat app: inbox, email, calendar, flights；吉祥物 Molty（太空龙虾）。‘养龙虾’是官媒（新华社 2026-03-18、03-23）都在用的说法。openclaw.ai",
+   "tag": "海德格尔《存在与时间》",
+   "why": "海德格尔的此在 = 在世存在；OpenClaw 住在 WhatsApp / Telegram 等聊天软件里（官网：inbox, email, calendar, flights），养龙虾"
+  },
+  {
+   "name": "潜能主义",
+   "bg": "#231b46",
+   "fg": "#f1ecff",
+   "logos": [
+    "hermes"
+   ],
+   "switch": [],
+   "lines": [
+    "每解决一个问题，就把方法写成技能，",
+    "经验变成能力，潜能变成现实，",
+    "越用越熟，越用越懂你。"
+   ],
+   "epithet": "你是什么，取决于你反复做什么。",
+   "note": "官方：The Agent That Grows With You；README：creates skills from experience, improves them during use, … persistent memory；Nous Research，MIT。hermes-agent.nousresearch.com",
+   "tag": "亚里士多德 · 潜能与现实",
+   "why": "亚里士多德的潜能到现实；Hermes 把经验写成技能、用着用着改进它（官方：creates skills from experience, improves them during use）。金句是杜兰特对亚里士多德的转述"
+  },
+  {
+   "name": "百科全书主义",
+   "bg": "#0a0a0a",
+   "fg": "#f4fff9",
+   "logos": [
+    "trae"
+   ],
+   "switch": [],
+   "lines": [
+    "百科全书派信一个人通晓万物，",
+    "TRAE信一个AI干完全部工种：",
+    "写代码、做PPT、出设计图。"
+   ],
+   "epithet": "理性的法庭上，没有它不懂的学科。",
+   "note": "官网 trae.cn：TRAE - The Real AI Engineer；Work、Code、Design 模式一键切换，桌面端、移动端与网页端多端协同，已接入豆包 / Kimi / GLM / DeepSeek 等模型。TRAE SOLO 已于 2026-06-10 改名 TRAE Work，官网现分 TraeCode / TraeWork",
+   "tag": "狄德罗《百科全书》",
+   "why": "启蒙时代的《百科全书》想汇编人类全部知识；TRAE 官网：Work、Code、Design 三个模式一键切换"
+  },
+  {
+   "name": "工具理性主义",
+   "bg": "#f59e0b",
+   "fg": "#1f1300",
+   "logos": [
+    "workbuddy"
+   ],
+   "switch": [],
+   "lines": [
+    "报表、PPT、文档丢出去，一句话交代，",
+    "AI自己规划、自己交付，",
+    "只问效率，不问意义，只想准点下班。"
+   ],
+   "epithet": "交付即正义。",
+   "note": "腾讯云文档：WorkBuddy is a full-scenario desktop AI agent launched by Tencent Cloud；面向全部职场角色，一句话描述需求，自主规划并执行任务，交付可验证的成果；官方更新日志首个版本 v4.5.0 为 2026-03-04，2026-03-09 是媒体报道的正式上线日，兼容 OpenClaw 技能，接入 QQ / 企业微信。intl.cloud.tencent.com/document/product/1300/80640",
+   "tag": "韦伯 · 目标—手段理性",
+   "why": "韦伯的工具理性：只问手段对不对目标有效、不问意义；WorkBuddy：一句话描述需求，自主规划、交付可验证的成果"
+  },
+  {
+   "name": "单子论",
+   "bg": "#1783ff",
+   "fg": "#ffffff",
+   "logos": [
+    "kimi"
+   ],
+   "switch": [],
+   "lines": [
+    "Agent Swarm同时派出上百个子代理，",
+    "各在独立的上下文里干活，",
+    "最后汇总：数字版的前定和谐。"
+   ],
+   "epithet": "百子齐发，和谐归一。",
+   "note": "Kimi K2.5 官方博客（kimi.ai/blog/kimi-k2-5）：self-direct an agent swarm with up to 100 sub-agents, executing parallel workflows … reduces execution time by up to 4.5x；Kimi Code CLI 文档（MoonshotAI/kimi-code docs/en/reference/tools.md）有 AgentSwarm 工具：共用 prompt_template + items 数组，每一项启动一个子代理。K3 最高 1M 上下文（kimi.com/code）。名称：Python 版 Kimi CLI 已归档，由 Kimi Code CLI 取代；官网自称 Kimi Code（KFC）。2026-10-01 把‘长文本主义’改成‘蜂群主义’：Agent Swarm 是 harness 层的特色，1M 上下文是模型的特色。具体并行上限（后台报告说 CLI 里 128、K2.6 到 300）没核实，所以只写‘上百个’",
+   "tag": "莱布尼茨《单子论》",
+   "why": "莱布尼茨：单子没有窗户，却由前定和谐构成整体；Kimi Code 的子代理在独立上下文里并行（README：isolated contexts），K2.5 官方：up to 100 sub-agents"
+  },
+  {
+   "name": "先验主义",
+   "bg": "#8a3ffc",
+   "fg": "#ffffff",
+   "logos": [
+    "kiro"
+   ],
+   "switch": [],
+   "lines": [
+    "不让AI上来就写代码。",
+    "先有需求、设计、任务清单，",
+    "代码才有处安放，最后用测试验收。"
+   ],
+   "epithet": "形式无内容则空，代码无规范则盲。",
+   "note": "官网原文：turn prompts into executable specs；Kiro turns your prompts into requirements, architectural designs, and sequenced tasks, then implements them with parallel agents；property-based tests。kiro.dev（AWS）",
+   "tag": "康德 · 先天形式",
+   "why": "康德：先有先天形式，经验内容才能被组织；Kiro 先生成需求、设计、任务清单再实现。金句改写自康德：思维无内容则空，直观无概念则盲。英文不是 Transcendentalism（那是美国超验主义），应为 Apriorism"
+  },
+  {
+   "name": "无为主义",
+   "bg": "#ffffff",
+   "fg": "#111111",
+   "logos": [
+    "pi"
+   ],
+   "switch": [],
+   "lines": [
+    "只留最小的核心，没有权限弹窗，",
+    "要什么功能，让它自己长出来，",
+    "核心越空，生长空间越大。"
+   ],
+   "epithet": "为道日损，损之又损，以至于无为。",
+   "note": "官网原文：Pi is a minimal agent harness；There are many agent harnesses but this one is yours；skips features like sub-agents and plan mode；It will customize itself on the fly。README：Pi does not include a built-in permission system。pi.dev、github.com/badlogic/pi-mono（OpenClaw 的内核）",
+   "tag": "老子《道德经》",
+   "why": "老子：为道日损，无为而无不为；Pi 官网：minimal agent harness，skips features like sub-agents and plan mode；README：没有内置权限系统"
+  },
+  {
+   "name": "契约主义",
+   "bg": "#4a1212",
+   "fg": "#ffeceb",
+   "logos": [
+    "cline"
+   ],
+   "switch": [],
+   "lines": [
+    "先在Plan模式聊清楚方案，",
+    "高风险的操作必须你点头，",
+    "你打出y的那一刻，契约才算签订。"
+   ],
+   "epithet": "点了头，才算数。",
+   "gap": {
+    "k0": 92,
+    "k1": 96,
+    "yes": 95,
+    "small": "Agent 想执行一条命令",
+    "cmd": "$ rm -rf node_modules",
+    "text": "允许吗？ [y/N] "
+   },
+   "note": "官方 README：Toggle between Plan mode and Act mode … Once you're aligned, switch to Act mode；Every file edit and terminal command requires your approval … Or toggle auto-approve；human-in-the-loop approval。Auto Approve 文档：Auto Approve lets you decide which actions Cline can take without prompting you each time … keeps tight control over high-risk actions。注意：新版 CLI 的 --auto-approve 默认是 true（docs.cline.bot/cli/cli-reference.md：Default to start in act mode with auto-approve enabled），所以文案只写 Plan/Act 和‘高风险操作要点头’，不写‘每一步都要点头’",
+   "tag": "霍布斯 · 卢梭《社会契约论》",
+   "why": "社会契约论：合法性来自同意；Cline 的 Plan/Act，高风险操作要批准。静音那一小节弹出删除命令的确认框 [y/N]，鼓点前打出 y，就是签约"
+  },
+  {
+   "name": "自律主义",
+   "bg": "#0f766e",
+   "fg": "#f0fdfa",
+   "logos": [
+    "devin"
+   ],
+   "switch": [],
+   "lines": [
+    "派个任务过去，它自己开虚拟机，",
+    "自己测试、自己录屏、交回PR，",
+    "不用你盯：自己立法，自己遵守。"
+   ],
+   "epithet": "同事最喜欢的同事，就是最自律的同事。",
+   "note": "官网：Devin: the autonomous software engineer；Your teammate's favorite teammate；Devin spins up its own Windows, Mac, and Linux virtual machines … to build, test in its browser, and record itself。‘外包’是我的说法，备选‘同事主义’。devin.ai",
+   "tag": "康德 · 自律",
+   "why": "康德的自律 = 自己立法、自己遵守；Devin 自己开虚拟机测试、录屏、交 PR（官网原文）；同事最喜欢的同事是官网文案"
+  },
+  {
+   "name": "在场主义",
+   "bg": "#f2f2ee",
+   "fg": "#14120b",
+   "logos": [
+    "cursor"
+   ],
+   "switch": [],
+   "lines": [
+    "离不开编辑器，必须亲眼在场：",
+    "AI放手去干，你随时能点开文件、",
+    "跳到定义看一眼。"
+   ],
+   "epithet": "我要看着它改，才安心。",
+   "note": "Cursor 3 官方博客（cursor.com/blog/cursor-3）：a unified workspace for building software with agents；Dive deeper anytime by viewing files, and go to definition in the editor with full LSPs；We will also continue to invest in the IDE until codebases are self-driving",
+   "tag": "被海德格尔批判的“在场”",
+   "why": "存在即被直观、被呈现的在场形而上学（海德格尔批判它）；Cursor 3 官方博客：随时能进编辑器看文件、跳转定义。英文不是 Presentism（那是时间哲学）"
+  },
+  {
+   "name": "内在主义",
+   "bg": "#14532d",
+   "fg": "#ecfdf5",
+   "logos": [
+    "copilot"
+   ],
+   "switch": [],
+   "lines": [
+    "issue进，PR出，规划、并行、交付，",
+    "一切在GitHub内部闭环，",
+    "不需要超越，平台即一切。"
+   ],
+   "chip": null,
+   "chip_bg": "#052e16",
+   "chip_fg": "#bbf7d0",
+   "epithet": "出了GitHub，没有救赎。",
+   "note": "官网原文：Run a GitHub-native agent in your terminal that works directly with your issues and pull requests, executes across a /fleet of parallelized subagents, and carries you from /plan to merged code。github.com/features/copilot/cli",
+   "tag": "斯宾诺莎 · 神即自然",
+   "why": "斯宾诺莎的内在性：神即自然，没有超越；Copilot CLI 官网：GitHub-native，从 issue 到合并。金句化用：教会之外无救恩"
+  },
+  {
+   "name": "普惠主义",
+   "bg": "#2f4bd1",
+   "fg": "#f2f5ff",
+   "logos": [
+    "gemini-cli"
+   ],
+   "switch": [],
+   "lines": [
+    "个人谷歌账号登录，",
+    "每天1000次请求不要钱，",
+    "好东西不该有门槛。"
+   ],
+   "epithet": "能白嫖，才是真普惠。",
+   "note": "官方 README：Free tier: 60 requests/min and 1,000 requests/day with personal Google account；Gemini 3 models, 1M token context window；Apache 2.0。额度以官方当时说明为准（会变）。github.com/google-gemini/gemini-cli",
+   "tag": "斯多葛“世界公民” · 普遍救赎",
+   "why": "斯多葛的世界公民、基督教的普遍救赎：好东西属于所有人；Gemini CLI README：Free tier 1,000 requests/day（额度会变）。把原来的普世价值换掉了（敏感词）"
+  },
+  {
+   "name": "解放主义",
+   "bg": "#5b4de0",
+   "fg": "#f5f3ff",
+   "logos": [
+    "qwen"
+   ],
+   "switch": [],
+   "lines": [
+    "框架开源，Qwen系列也有开源模型，",
+    "第三方和本地模型照样能接，",
+    "不被厂商绑定，夺回生产工具。"
+   ],
+   "epithet": "全世界开发者，联合起来！",
+   "note": "官方 README：The open-source AI coding agent for your terminal, editor, desktop, browser, and chat；Open-source, inside and out — The framework and the Qwen models are open-source. They evolve together. No vendor lock-in；Multi-protocol：OpenAI / Anthropic / Gemini / Qwen APIs，任何第三方或本地模型（Ollama / vLLM）。注意：旗舰 Qwen3.8-Max（2026-08-03 发布）是否开放权重没核实，所以文案写‘Qwen系列也有开源模型’，不写‘模型都开源’",
+   "tag": "马克思 · 法兰克福学派",
+   "why": "马克思 / 法兰克福学派：摆脱异化、夺回自主；Qwen Code README：开源、No vendor lock-in。金句是马克思口号的戏仿，备选：开源的尽头是解放"
+  },
+  {
+   "name": "悬置主义",
+   "bg": "#18181b",
+   "fg": "#fafafa",
+   "logos": [
+    "opencode"
+   ],
+   "switch": [],
+   "lines": [
+    "哪家都不站队，供应商75家以上随便换，",
+    "Claude、GPT、Gemini、本地模型，",
+    "对任何厂商都悬置忠诚。"
+   ],
+   "epithet": "不做任何人的信徒。",
+   "note": "官网原文：The open source AI coding agent；Free models included or connect any model from any provider；Any model: 75+ LLM providers through Models.dev, including local models；Log in with GitHub to use your Copilot account / Log in with OpenAI to use your ChatGPT Plus or Pro account。opencode.ai。注意：OpenCode 在 2026-02 因 Anthropic 的法务要求去掉了 Claude 订阅登录（后台调研报告引 PR #18186，未核实），官网现在只列 Copilot 和 ChatGPT Plus/Pro，所以文案点名这两个",
+   "tag": "胡塞尔 · 悬置判断",
+   "why": "胡塞尔的 epoché：对任何体系悬置判断；OpenCode 官网：any model from any provider，75+ providers"
+  }
+ ],
+ "outro": {
+  "bg": "#05070d",
+  "fg": "#ffffff",
+  "accent": "#ffd23f",
+  "title": "你是哪个阵营？",
+  "sub": "评论区站队",
+  "small": "哪个都不站，也算一派",
+  "note": "资料：各产品官网与官方文档，截至 2026 年 10 月"
+ },
+ "logos": {
+  "claude-code": {
+   "label": "Claude Code",
+   "file": "lobe_claudecode-color.svg",
+   "plate": "#ffffff",
+   "pad": 0.66
+  },
+  "codex": {
+   "label": "Codex",
+   "file": "lobe_codex-color.svg",
+   "plate": "#ffffff",
+   "pad": 0.66
+  },
+  "deepseek": {
+   "label": "DeepSeek Harness",
+   "file": "lobe_deepseek-color.svg",
+   "plate": "#ffffff",
+   "pad": 0.66
+  },
+  "hermes": {
+   "label": "Hermes Agent",
+   "file": "lobe_hermesagent.svg",
+   "plate": "#ffffff",
+   "pad": 0.78
+  },
+  "cline": {
+   "label": "Cline",
+   "file": "lobe_cline.svg",
+   "plate": "#ffffff",
+   "pad": 0.62
+  },
+  "devin": {
+   "label": "Devin",
+   "file": "lobe_devin-color.svg",
+   "plate": "#ffffff",
+   "pad": 0.62
+  },
+  "openclaw": {
+   "label": "OpenClaw",
+   "file": "lobe_openclaw-color.svg",
+   "plate": "#ffffff",
+   "pad": 0.72
+  },
+  "cursor": {
+   "label": "Cursor",
+   "file": "lobe_cursor.svg",
+   "plate": "#ffffff",
+   "pad": 0.6
+  },
+  "gemini-cli": {
+   "label": "Gemini CLI",
+   "file": "lobe_geminicli-color.svg",
+   "plate": "#ffffff",
+   "pad": 0.64
+  },
+  "kiro": {
+   "label": "Kiro",
+   "file": "kiro_icon.svg",
+   "fit": "full"
+  },
+  "pi": {
+   "label": "Pi",
+   "file": "pi_logo-auto.svg",
+   "plate": "#ffffff",
+   "pad": 0.6
+  },
+  "trae": {
+   "label": "TRAE",
+   "file": "lobe_trae-color.svg",
+   "plate": "#ffffff",
+   "pad": 0.62
+  },
+  "workbuddy": {
+   "label": "WorkBuddy",
+   "file": "workbuddy.png",
+   "fit": "full"
+  },
+  "kimi": {
+   "label": "Kimi Code",
+   "file": "lobe_kimi.svg",
+   "plate": "#ffffff",
+   "pad": 0.6
+  },
+  "qwen": {
+   "label": "Qwen Code",
+   "file": "lobe_qwen-color.svg",
+   "plate": "#ffffff",
+   "pad": 0.62
+  },
+  "copilot": {
+   "label": "GitHub Copilot",
+   "file": "lobe_githubcopilot.svg",
+   "plate": "#ffffff",
+   "pad": 0.62
+  },
+  "opencode": {
+   "label": "OpenCode",
+   "file": "lobe_opencode.svg",
+   "plate": "#ffffff",
+   "pad": 0.56
+  }
+ },
+ "slide_beats": 8,
+ "intro_beats": 8,
+ "audio_fade": 1.5
+}
