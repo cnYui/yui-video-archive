@@ -1,0 +1,26 @@
+[
+ {
+  "id": "hermes-official",
+  "url": "https://hermes-agent.nousresearch.com/icon.png",
+  "file": "hermes_official_icon.png",
+  "note": "Hermes Agent 官网 favicon（icon.png）"
+ },
+ {
+  "id": "pi-official",
+  "url": "https://pi.dev/logo-auto.svg",
+  "file": "pi_logo-auto.svg",
+  "note": "pi.dev 官网 logo（README 里引用的 logo-auto.svg）"
+ },
+ {
+  "id": "pi-official-2",
+  "url": "https://pi.dev/logo.svg",
+  "file": "pi_logo.svg",
+  "note": "pi.dev 官网 logo.svg（若存在）"
+ },
+ {
+  "id": "openclaw-favicon",
+  "url": "https://openclaw.ai/favicon.svg",
+  "file": "openclaw_site_favicon.svg",
+  "note": "OpenClaw 官网 favicon（若存在）"
+ }
+]

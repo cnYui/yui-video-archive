@@ -1,0 +1,242 @@
+{
+  "说明": "v2：画外音块（vo）和现场片段（clip）的先后顺序。clip 的 in/out 是素材里的秒；lines 里每句中文同传的 a = 原话这一句在片段里开始的秒（从 in 起算），同传比原话晚 0.25 s 起，念不完的小幅加速（≤1.18），还不够就把片段往后多放一点。who 在 录制稿_v2.json 的 dub 句里。 v2.2：末尾加了彩蛋 K8（用户给的 X 平台竖屏视频；src = x）。cap_out = 原片到这个秒数就是镜头切换，多出来的时间定格最后一帧；lead = 这段前面多停几秒；tag = 片段左上角的小标签；ui = 角标位置（竖屏视频居中，角标跟着视频边缘走）。",
+  "plan": [
+    {
+      "type": "vo",
+      "from": "N01",
+      "to": "N05"
+    },
+    {
+      "type": "vo",
+      "from": "N07",
+      "to": "N07"
+    },
+    {
+      "type": "clip",
+      "id": "K1",
+      "what": "宣布改名",
+      "src": "wh",
+      "in": 84.6,
+      "out": 102.35,
+      "chapter": 1,
+      "credit": "白宫官方",
+      "where": "白宫午宴现场",
+      "lines": [
+        {
+          "id": "K1a",
+          "a": 0.33
+        },
+        {
+          "id": "K1b",
+          "a": 5.09
+        },
+        {
+          "id": "K1c",
+          "a": 10.83
+        }
+      ]
+    },
+    {
+      "type": "vo",
+      "from": "N09",
+      "to": "N11"
+    },
+    {
+      "type": "vo",
+      "from": "N12",
+      "to": "N19"
+    },
+    {
+      "type": "clip",
+      "id": "K2",
+      "what": "扎克伯格概括协定",
+      "src": "pbs",
+      "in": 1323.5,
+      "out": 1349.95,
+      "chapter": 2,
+      "credit": "PBS NewsHour",
+      "where": "Meta 负责人 · 会后答记者问",
+      "lines": [
+        {
+          "id": "K2a",
+          "a": 0.2
+        },
+        {
+          "id": "K2b",
+          "a": 10.42
+        },
+        {
+          "id": "K2c",
+          "a": 17.14
+        },
+        {
+          "id": "K2d",
+          "a": 22.24
+        }
+      ]
+    },
+    {
+      "type": "vo",
+      "from": "N20",
+      "to": "N24"
+    },
+    {
+      "type": "vo",
+      "from": "N25",
+      "to": "N25"
+    },
+    {
+      "type": "clip",
+      "id": "K4",
+      "what": "道德上有约束力",
+      "src": "pbs",
+      "in": 55.0,
+      "out": 60.6,
+      "chapter": 3,
+      "gap": 0.2,
+      "credit": "PBS NewsHour",
+      "where": "会后答记者问",
+      "lines": [
+        {
+          "id": "K4a",
+          "a": 0.06
+        },
+        {
+          "id": "K4b",
+          "a": 3.26
+        }
+      ]
+    },
+    {
+      "type": "vo",
+      "from": "N26",
+      "to": "N26"
+    },
+    {
+      "type": "clip",
+      "id": "K5",
+      "what": "另一种宪法",
+      "src": "pbs",
+      "in": 108.4,
+      "out": 112.4,
+      "chapter": 3,
+      "credit": "PBS NewsHour",
+      "where": "会后答记者问",
+      "lines": [
+        {
+          "id": "K5a",
+          "a": 0.2
+        }
+      ]
+    },
+    {
+      "type": "vo",
+      "from": "N27",
+      "to": "N27"
+    },
+    {
+      "type": "vo",
+      "from": "N28",
+      "to": "N35"
+    },
+    {
+      "type": "vo",
+      "from": "N36",
+      "to": "N36"
+    },
+    {
+      "type": "clip",
+      "id": "K6",
+      "what": "阿莫迪：机制还在讨论",
+      "src": "pbs",
+      "in": 1230.2,
+      "out": 1249.3,
+      "chapter": 4,
+      "credit": "PBS NewsHour",
+      "where": "Anthropic 负责人 · 会后答记者问",
+      "lines": [
+        {
+          "id": "K6a",
+          "a": 0.24
+        },
+        {
+          "id": "K6b",
+          "a": 3.36
+        },
+        {
+          "id": "K6c",
+          "a": 8.18
+        },
+        {
+          "id": "K6d",
+          "a": 14.4
+        }
+      ]
+    },
+    {
+      "type": "vo",
+      "from": "N37",
+      "to": "N43"
+    },
+    {
+      "type": "clip",
+      "id": "K7",
+      "what": "约十人的委员会",
+      "src": "pbs",
+      "in": 147.1,
+      "out": 159.0,
+      "chapter": 4,
+      "credit": "PBS NewsHour",
+      "where": "会后答记者问",
+      "lines": [
+        {
+          "id": "K7a",
+          "a": 0.16
+        },
+        {
+          "id": "K7b",
+          "a": 3.04
+        },
+        {
+          "id": "K7c",
+          "a": 6.06
+        }
+      ]
+    },
+    {
+      "type": "vo",
+      "from": "N44",
+      "to": "N45"
+    },
+    {
+      "type": "clip",
+      "id": "K8",
+      "what": "彩蛋：记者追问马斯克",
+      "src": "x",
+      "in": 42.3,
+      "out": 45.88,
+      "cap_out": 45.88,
+      "chapter": 4,
+      "credit": "X 平台现场视频",
+      "where": "会后西翼外 · 记者追问",
+      "lead": 0.6,
+      "gap": 0.2,
+      "tail": 0.5,
+      "tag": "彩蛋",
+      "ui": {
+        "badgeRight": 518,
+        "whoLeft": 518
+      },
+      "lines": [
+        {
+          "id": "K8a",
+          "a": 1.0
+        },
+        {
+          "id": "K8b",
+          "a": 3.12
+        }
+      ]
+    }
+  ]
+}

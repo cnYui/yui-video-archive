@@ -1,0 +1,16 @@
+{
+  "title": "Claude fable5.5疑似发布！效果依旧震撼瘫坐",
+  "title_note": "用户 2026-10-02 指定，一字不改",
+  "bvid": "BV13Ga26YEV6",
+  "submitted_at": "2026-10-02 10:44 JST（用户拖入文件，插件填表并点“立即投稿”）",
+  "published_tags": ["Fable5.5", "Anthropic", "人工智能", "AI", "大模型", "Opus5.5", "AI作品", "纯代码", "实测", "AI新模型"],
+  "tags_note": "“Claude”是话题专用标签，回车后被悄悄丢掉，换成了“AI新模型”；上面 tags 是原计划",
+  "video": "D:\\大疆\\独立视频\\2026-10_ClaudeFable5.5模型介绍\\ClaudeFable5.5模型介绍_成片.mp4",
+  "cover_16x9": "D:\\大疆\\独立视频\\2026-10_ClaudeFable5.5模型介绍\\制作\\04_封面\\封面_选定_16x9.png",
+  "cover_4x3": "D:\\大疆\\独立视频\\2026-10_ClaudeFable5.5模型介绍\\制作\\04_封面\\封面_选定_4x3.png",
+  "partition": "人工智能",
+  "ai_declaration": "含AI生成内容",
+  "season": null,
+  "tags": ["Claude", "Fable5.5", "Anthropic", "人工智能", "AI", "大模型", "Opus5.5", "AI作品", "纯代码", "实测"],
+  "desc": "标题里的“疑似发布”是这个意思：Anthropic 官方到现在（10 月 2 日）还没有公布 Claude Fable 5.5——官网、模型文档、价格页都查不到，没有型号、价格和跑分；但多位测试者称，claude.ai 网页版里有一部分“Fable 5.1”的请求被悄悄换成了更新的模型，他们把它叫作 Fable 5.5。这个说法没有官方证实，测试者用来判断的办法也不能唯一确定是哪个模型。\n\n视频里的作品都是 @chetaslua 在 X 上发的（模型名是他自己标的，不是官方确认）：\n1. HEAD CASES: HEROES，24 个英雄的脑袋（他标 Fable 5.5）https://x.com/chetaslua/status/2105792187200147541\n2. SUPERMAN 3000 BC → 2020s，超人飞过 20 种画风（他标 Fable 5.5）https://x.com/chetaslua/status/2105757136219504862\n3. HEAD CASES，会动的小脸（他标 Fable 5.2，9 月 19 日）https://x.com/chetaslua/status/2101376238703333883\n4. 同一只小生物的 20 种画法（他标 Opus 5.5）https://x.com/chetaslua/status/2105674430924103789\n\n超人飞行的页面你也能玩：https://claude.ai/artifact/7F2XhpmgiuyxHKgQ9Vgr9Q （别人发布的 Claude 页面，内容未经验证）\n\n官方现状（10 月 2 日核对）：最新模型是 Fable 5.1（9 月 1 日）、Opus 5.5（9 月 22 日）、Sonnet 5.5（9 月 28 日）。来源：Anthropic 官网、模型文档。\n\n声明：配音为 AI 生成（曼波声线）；画面素材来自 X 平台账号 @chetaslua，版权归原作者，如有问题请联系，立即处理；官宣后以官方信息为准。"
+}

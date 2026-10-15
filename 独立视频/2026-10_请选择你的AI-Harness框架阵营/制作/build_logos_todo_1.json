@@ -1,0 +1,344 @@
+[
+ {
+  "id": "claudecode",
+  "url": "https://unpkg.com/@lobehub/icons-static-svg@1.95.1/icons/claudecode.svg",
+  "file": "lobe_claudecode.svg",
+  "note": "lobehub/lobe-icons 1.95.1（MIT；商标归各自所有者）"
+ },
+ {
+  "id": "claudecode-color",
+  "url": "https://unpkg.com/@lobehub/icons-static-svg@1.95.1/icons/claudecode-color.svg",
+  "file": "lobe_claudecode-color.svg",
+  "note": "lobehub/lobe-icons 1.95.1（MIT；商标归各自所有者）"
+ },
+ {
+  "id": "claude-color",
+  "url": "https://unpkg.com/@lobehub/icons-static-svg@1.95.1/icons/claude-color.svg",
+  "file": "lobe_claude-color.svg",
+  "note": "lobehub/lobe-icons 1.95.1（MIT；商标归各自所有者）"
+ },
+ {
+  "id": "codex",
+  "url": "https://unpkg.com/@lobehub/icons-static-svg@1.95.1/icons/codex.svg",
+  "file": "lobe_codex.svg",
+  "note": "lobehub/lobe-icons 1.95.1（MIT；商标归各自所有者）"
+ },
+ {
+  "id": "codex-color",
+  "url": "https://unpkg.com/@lobehub/icons-static-svg@1.95.1/icons/codex-color.svg",
+  "file": "lobe_codex-color.svg",
+  "note": "lobehub/lobe-icons 1.95.1（MIT；商标归各自所有者）"
+ },
+ {
+  "id": "cursor",
+  "url": "https://unpkg.com/@lobehub/icons-static-svg@1.95.1/icons/cursor.svg",
+  "file": "lobe_cursor.svg",
+  "note": "lobehub/lobe-icons 1.95.1（MIT；商标归各自所有者）"
+ },
+ {
+  "id": "cline",
+  "url": "https://unpkg.com/@lobehub/icons-static-svg@1.95.1/icons/cline.svg",
+  "file": "lobe_cline.svg",
+  "note": "lobehub/lobe-icons 1.95.1（MIT；商标归各自所有者）"
+ },
+ {
+  "id": "opencode",
+  "url": "https://unpkg.com/@lobehub/icons-static-svg@1.95.1/icons/opencode.svg",
+  "file": "lobe_opencode.svg",
+  "note": "lobehub/lobe-icons 1.95.1（MIT；商标归各自所有者）"
+ },
+ {
+  "id": "kimi",
+  "url": "https://unpkg.com/@lobehub/icons-static-svg@1.95.1/icons/kimi.svg",
+  "file": "lobe_kimi.svg",
+  "note": "lobehub/lobe-icons 1.95.1（MIT；商标归各自所有者）"
+ },
+ {
+  "id": "kimi-color",
+  "url": "https://unpkg.com/@lobehub/icons-static-svg@1.95.1/icons/kimi-color.svg",
+  "file": "lobe_kimi-color.svg",
+  "note": "lobehub/lobe-icons 1.95.1（MIT；商标归各自所有者）"
+ },
+ {
+  "id": "qwen",
+  "url": "https://unpkg.com/@lobehub/icons-static-svg@1.95.1/icons/qwen.svg",
+  "file": "lobe_qwen.svg",
+  "note": "lobehub/lobe-icons 1.95.1（MIT；商标归各自所有者）"
+ },
+ {
+  "id": "qwen-color",
+  "url": "https://unpkg.com/@lobehub/icons-static-svg@1.95.1/icons/qwen-color.svg",
+  "file": "lobe_qwen-color.svg",
+  "note": "lobehub/lobe-icons 1.95.1（MIT；商标归各自所有者）"
+ },
+ {
+  "id": "deepseek",
+  "url": "https://unpkg.com/@lobehub/icons-static-svg@1.95.1/icons/deepseek.svg",
+  "file": "lobe_deepseek.svg",
+  "note": "lobehub/lobe-icons 1.95.1（MIT；商标归各自所有者）"
+ },
+ {
+  "id": "deepseek-color",
+  "url": "https://unpkg.com/@lobehub/icons-static-svg@1.95.1/icons/deepseek-color.svg",
+  "file": "lobe_deepseek-color.svg",
+  "note": "lobehub/lobe-icons 1.95.1（MIT；商标归各自所有者）"
+ },
+ {
+  "id": "trae",
+  "url": "https://unpkg.com/@lobehub/icons-static-svg@1.95.1/icons/trae.svg",
+  "file": "lobe_trae.svg",
+  "note": "lobehub/lobe-icons 1.95.1（MIT；商标归各自所有者）"
+ },
+ {
+  "id": "trae-color",
+  "url": "https://unpkg.com/@lobehub/icons-static-svg@1.95.1/icons/trae-color.svg",
+  "file": "lobe_trae-color.svg",
+  "note": "lobehub/lobe-icons 1.95.1（MIT；商标归各自所有者）"
+ },
+ {
+  "id": "windsurf",
+  "url": "https://unpkg.com/@lobehub/icons-static-svg@1.95.1/icons/windsurf.svg",
+  "file": "lobe_windsurf.svg",
+  "note": "lobehub/lobe-icons 1.95.1（MIT；商标归各自所有者）"
+ },
+ {
+  "id": "geminicli",
+  "url": "https://unpkg.com/@lobehub/icons-static-svg@1.95.1/icons/geminicli.svg",
+  "file": "lobe_geminicli.svg",
+  "note": "lobehub/lobe-icons 1.95.1（MIT；商标归各自所有者）"
+ },
+ {
+  "id": "geminicli-color",
+  "url": "https://unpkg.com/@lobehub/icons-static-svg@1.95.1/icons/geminicli-color.svg",
+  "file": "lobe_geminicli-color.svg",
+  "note": "lobehub/lobe-icons 1.95.1（MIT；商标归各自所有者）"
+ },
+ {
+  "id": "gemini-color",
+  "url": "https://unpkg.com/@lobehub/icons-static-svg@1.95.1/icons/gemini-color.svg",
+  "file": "lobe_gemini-color.svg",
+  "note": "lobehub/lobe-icons 1.95.1（MIT；商标归各自所有者）"
+ },
+ {
+  "id": "antigravity",
+  "url": "https://unpkg.com/@lobehub/icons-static-svg@1.95.1/icons/antigravity.svg",
+  "file": "lobe_antigravity.svg",
+  "note": "lobehub/lobe-icons 1.95.1（MIT；商标归各自所有者）"
+ },
+ {
+  "id": "antigravity-color",
+  "url": "https://unpkg.com/@lobehub/icons-static-svg@1.95.1/icons/antigravity-color.svg",
+  "file": "lobe_antigravity-color.svg",
+  "note": "lobehub/lobe-icons 1.95.1（MIT；商标归各自所有者）"
+ },
+ {
+  "id": "openclaw",
+  "url": "https://unpkg.com/@lobehub/icons-static-svg@1.95.1/icons/openclaw.svg",
+  "file": "lobe_openclaw.svg",
+  "note": "lobehub/lobe-icons 1.95.1（MIT；商标归各自所有者）"
+ },
+ {
+  "id": "openclaw-color",
+  "url": "https://unpkg.com/@lobehub/icons-static-svg@1.95.1/icons/openclaw-color.svg",
+  "file": "lobe_openclaw-color.svg",
+  "note": "lobehub/lobe-icons 1.95.1（MIT；商标归各自所有者）"
+ },
+ {
+  "id": "hermesagent",
+  "url": "https://unpkg.com/@lobehub/icons-static-svg@1.95.1/icons/hermesagent.svg",
+  "file": "lobe_hermesagent.svg",
+  "note": "lobehub/lobe-icons 1.95.1（MIT；商标归各自所有者）"
+ },
+ {
+  "id": "goose",
+  "url": "https://unpkg.com/@lobehub/icons-static-svg@1.95.1/icons/goose.svg",
+  "file": "lobe_goose.svg",
+  "note": "lobehub/lobe-icons 1.95.1（MIT；商标归各自所有者）"
+ },
+ {
+  "id": "openhands",
+  "url": "https://unpkg.com/@lobehub/icons-static-svg@1.95.1/icons/openhands.svg",
+  "file": "lobe_openhands.svg",
+  "note": "lobehub/lobe-icons 1.95.1（MIT；商标归各自所有者）"
+ },
+ {
+  "id": "openhands-color",
+  "url": "https://unpkg.com/@lobehub/icons-static-svg@1.95.1/icons/openhands-color.svg",
+  "file": "lobe_openhands-color.svg",
+  "note": "lobehub/lobe-icons 1.95.1（MIT；商标归各自所有者）"
+ },
+ {
+  "id": "roocode",
+  "url": "https://unpkg.com/@lobehub/icons-static-svg@1.95.1/icons/roocode.svg",
+  "file": "lobe_roocode.svg",
+  "note": "lobehub/lobe-icons 1.95.1（MIT；商标归各自所有者）"
+ },
+ {
+  "id": "kilocode",
+  "url": "https://unpkg.com/@lobehub/icons-static-svg@1.95.1/icons/kilocode.svg",
+  "file": "lobe_kilocode.svg",
+  "note": "lobehub/lobe-icons 1.95.1（MIT；商标归各自所有者）"
+ },
+ {
+  "id": "kiro",
+  "url": "https://unpkg.com/@lobehub/icons-static-svg@1.95.1/icons/kiro.svg",
+  "file": "lobe_kiro.svg",
+  "note": "lobehub/lobe-icons 1.95.1（MIT；商标归各自所有者）"
+ },
+ {
+  "id": "kiro-color",
+  "url": "https://unpkg.com/@lobehub/icons-static-svg@1.95.1/icons/kiro-color.svg",
+  "file": "lobe_kiro-color.svg",
+  "note": "lobehub/lobe-icons 1.95.1（MIT；商标归各自所有者）"
+ },
+ {
+  "id": "devin",
+  "url": "https://unpkg.com/@lobehub/icons-static-svg@1.95.1/icons/devin.svg",
+  "file": "lobe_devin.svg",
+  "note": "lobehub/lobe-icons 1.95.1（MIT；商标归各自所有者）"
+ },
+ {
+  "id": "devin-color",
+  "url": "https://unpkg.com/@lobehub/icons-static-svg@1.95.1/icons/devin-color.svg",
+  "file": "lobe_devin-color.svg",
+  "note": "lobehub/lobe-icons 1.95.1（MIT；商标归各自所有者）"
+ },
+ {
+  "id": "manus",
+  "url": "https://unpkg.com/@lobehub/icons-static-svg@1.95.1/icons/manus.svg",
+  "file": "lobe_manus.svg",
+  "note": "lobehub/lobe-icons 1.95.1（MIT；商标归各自所有者）"
+ },
+ {
+  "id": "amp",
+  "url": "https://unpkg.com/@lobehub/icons-static-svg@1.95.1/icons/amp.svg",
+  "file": "lobe_amp.svg",
+  "note": "lobehub/lobe-icons 1.95.1（MIT；商标归各自所有者）"
+ },
+ {
+  "id": "amp-color",
+  "url": "https://unpkg.com/@lobehub/icons-static-svg@1.95.1/icons/amp-color.svg",
+  "file": "lobe_amp-color.svg",
+  "note": "lobehub/lobe-icons 1.95.1（MIT；商标归各自所有者）"
+ },
+ {
+  "id": "langgraph",
+  "url": "https://unpkg.com/@lobehub/icons-static-svg@1.95.1/icons/langgraph.svg",
+  "file": "lobe_langgraph.svg",
+  "note": "lobehub/lobe-icons 1.95.1（MIT；商标归各自所有者）"
+ },
+ {
+  "id": "langgraph-color",
+  "url": "https://unpkg.com/@lobehub/icons-static-svg@1.95.1/icons/langgraph-color.svg",
+  "file": "lobe_langgraph-color.svg",
+  "note": "lobehub/lobe-icons 1.95.1（MIT；商标归各自所有者）"
+ },
+ {
+  "id": "n8n",
+  "url": "https://unpkg.com/@lobehub/icons-static-svg@1.95.1/icons/n8n.svg",
+  "file": "lobe_n8n.svg",
+  "note": "lobehub/lobe-icons 1.95.1（MIT；商标归各自所有者）"
+ },
+ {
+  "id": "n8n-color",
+  "url": "https://unpkg.com/@lobehub/icons-static-svg@1.95.1/icons/n8n-color.svg",
+  "file": "lobe_n8n-color.svg",
+  "note": "lobehub/lobe-icons 1.95.1（MIT；商标归各自所有者）"
+ },
+ {
+  "id": "dify",
+  "url": "https://unpkg.com/@lobehub/icons-static-svg@1.95.1/icons/dify.svg",
+  "file": "lobe_dify.svg",
+  "note": "lobehub/lobe-icons 1.95.1（MIT；商标归各自所有者）"
+ },
+ {
+  "id": "dify-color",
+  "url": "https://unpkg.com/@lobehub/icons-static-svg@1.95.1/icons/dify-color.svg",
+  "file": "lobe_dify-color.svg",
+  "note": "lobehub/lobe-icons 1.95.1（MIT；商标归各自所有者）"
+ },
+ {
+  "id": "coze",
+  "url": "https://unpkg.com/@lobehub/icons-static-svg@1.95.1/icons/coze.svg",
+  "file": "lobe_coze.svg",
+  "note": "lobehub/lobe-icons 1.95.1（MIT；商标归各自所有者）"
+ },
+ {
+  "id": "ollama",
+  "url": "https://unpkg.com/@lobehub/icons-static-svg@1.95.1/icons/ollama.svg",
+  "file": "lobe_ollama.svg",
+  "note": "lobehub/lobe-icons 1.95.1（MIT；商标归各自所有者）"
+ },
+ {
+  "id": "codebuddy",
+  "url": "https://unpkg.com/@lobehub/icons-static-svg@1.95.1/icons/codebuddy.svg",
+  "file": "lobe_codebuddy.svg",
+  "note": "lobehub/lobe-icons 1.95.1（MIT；商标归各自所有者）"
+ },
+ {
+  "id": "codebuddy-color",
+  "url": "https://unpkg.com/@lobehub/icons-static-svg@1.95.1/icons/codebuddy-color.svg",
+  "file": "lobe_codebuddy-color.svg",
+  "note": "lobehub/lobe-icons 1.95.1（MIT；商标归各自所有者）"
+ },
+ {
+  "id": "qoder",
+  "url": "https://unpkg.com/@lobehub/icons-static-svg@1.95.1/icons/qoder.svg",
+  "file": "lobe_qoder.svg",
+  "note": "lobehub/lobe-icons 1.95.1（MIT；商标归各自所有者）"
+ },
+ {
+  "id": "qoder-color",
+  "url": "https://unpkg.com/@lobehub/icons-static-svg@1.95.1/icons/qoder-color.svg",
+  "file": "lobe_qoder-color.svg",
+  "note": "lobehub/lobe-icons 1.95.1（MIT；商标归各自所有者）"
+ },
+ {
+  "id": "doubao-color",
+  "url": "https://unpkg.com/@lobehub/icons-static-svg@1.95.1/icons/doubao-color.svg",
+  "file": "lobe_doubao-color.svg",
+  "note": "lobehub/lobe-icons 1.95.1（MIT；商标归各自所有者）"
+ },
+ {
+  "id": "githubcopilot",
+  "url": "https://unpkg.com/@lobehub/icons-static-svg@1.95.1/icons/githubcopilot.svg",
+  "file": "lobe_githubcopilot.svg",
+  "note": "lobehub/lobe-icons 1.95.1（MIT；商标归各自所有者）"
+ },
+ {
+  "id": "copilot-color",
+  "url": "https://unpkg.com/@lobehub/icons-static-svg@1.95.1/icons/copilot-color.svg",
+  "file": "lobe_copilot-color.svg",
+  "note": "lobehub/lobe-icons 1.95.1（MIT；商标归各自所有者）"
+ },
+ {
+  "id": "github",
+  "url": "https://unpkg.com/@lobehub/icons-static-svg@1.95.1/icons/github.svg",
+  "file": "lobe_github.svg",
+  "note": "lobehub/lobe-icons 1.95.1（MIT；商标归各自所有者）"
+ },
+ {
+  "id": "mcp",
+  "url": "https://unpkg.com/@lobehub/icons-static-svg@1.95.1/icons/mcp.svg",
+  "file": "lobe_mcp.svg",
+  "note": "lobehub/lobe-icons 1.95.1（MIT；商标归各自所有者）"
+ },
+ {
+  "id": "huggingface-color",
+  "url": "https://unpkg.com/@lobehub/icons-static-svg@1.95.1/icons/huggingface-color.svg",
+  "file": "lobe_huggingface-color.svg",
+  "note": "lobehub/lobe-icons 1.95.1（MIT；商标归各自所有者）"
+ },
+ {
+  "id": "nousresearch",
+  "url": "https://unpkg.com/@lobehub/icons-static-svg@1.95.1/icons/nousresearch.svg",
+  "file": "lobe_nousresearch.svg",
+  "note": "lobehub/lobe-icons 1.95.1（MIT；商标归各自所有者）"
+ },
+ {
+  "id": "openai",
+  "url": "https://unpkg.com/@lobehub/icons-static-svg@1.95.1/icons/openai.svg",
+  "file": "lobe_openai.svg",
+  "note": "lobehub/lobe-icons 1.95.1（MIT；商标归各自所有者）"
+ }
+]

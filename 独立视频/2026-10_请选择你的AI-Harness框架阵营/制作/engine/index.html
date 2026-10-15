@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>harness-camps</title>
+<style>
+@font-face{font-family:'Noto Sans SC';src:url('fonts/NotoSansSC.ttf') format('truetype');font-weight:100 900;font-display:block}
+@font-face{font-family:'Space Grotesk';src:url('fonts/SpaceGrotesk.ttf') format('truetype');font-weight:300 700;font-display:block}
+@font-face{font-family:'JetBrains Mono';src:url('fonts/JetBrainsMono.ttf') format('truetype');font-weight:100 800;font-display:block}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:2340px;height:1080px;background:#000;overflow:hidden}
+#stage{position:absolute;left:0;top:0;width:2340px;height:1080px;overflow:hidden;background:#000;
+  font-family:'Noto Sans SC','Space Grotesk',sans-serif;-webkit-font-smoothing:antialiased}
+#world{position:absolute;inset:0;transform-origin:50% 50%}
+.slide{position:absolute;left:0;top:0;width:2340px;height:1080px;overflow:hidden;display:none}
+.bg{position:absolute;left:-60px;top:-60px;width:2460px;height:1200px}
+.shade{position:absolute;inset:0;background:#000;opacity:0;pointer-events:none}
+.counter{position:absolute;left:130px;top:84px;font:600 34px 'Space Grotesk','Noto Sans SC';letter-spacing:.08em;opacity:.72;white-space:nowrap}
+.counter b{font-weight:700}
+.ticks{position:absolute;left:0;right:0;bottom:58px;display:flex;justify-content:center;align-items:flex-end;gap:12px;height:22px}
+.tick{width:44px;height:8px;border-radius:4px;background:currentColor;opacity:.2;transform-origin:50% 100%}
+.tick.g{margin-left:30px}
+/* 文字列 */
+.textCol{position:absolute;width:max-content}
+.title{font:900 158px/1.1 'Noto Sans SC';letter-spacing:.02em;white-space:nowrap;transform-origin:0 60%;margin-bottom:22px}
+.tag{font:600 40px/1.3 'Noto Sans SC';white-space:nowrap;letter-spacing:.06em;opacity:.8;margin:0 0 14px}
+.title.hastag{margin-bottom:6px}
+.line{font:700 53px/1.62 'Noto Sans SC';white-space:nowrap;letter-spacing:.01em}
+.chip{display:inline-block;margin-top:22px;padding:10px 28px 12px;border-radius:14px;font:600 44px 'JetBrains Mono',monospace;white-space:nowrap}
+.epi{margin-top:30px;font:700 50px 'Noto Sans SC';white-space:nowrap;transform-origin:0 50%}
+.epi span{display:inline-block;transform:skewX(-9deg)}
+/* logo 列 */
+.logoCol{position:absolute}
+.item{position:absolute;left:0;top:0}
+.tileWrap{position:absolute;transform-origin:50% 50%}
+.tile{position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;background:#fff;box-shadow:0 26px 64px rgba(0,0,0,.30)}
+.tile img{display:block;object-fit:contain}
+.tile.full{background:transparent;box-shadow:none;overflow:visible}
+.tile.full img{width:100%;height:100%;filter:drop-shadow(0 22px 40px rgba(0,0,0,.32))}
+.mono{font:700 96px 'Space Grotesk','Noto Sans SC';color:#222}
+.pname{position:absolute;left:0;width:100%;text-align:center;font:700 58px 'Space Grotesk','Noto Sans SC';white-space:nowrap;letter-spacing:.01em}
+/* 间隙提示（权限主义用） */
+.gapbox{position:absolute;left:0;right:0;top:0;bottom:0;display:flex;align-items:center;justify-content:center;opacity:0}
+.gapbox .panel{background:#0b0f14;color:#e6edf3;border:2px solid rgba(255,255,255,.22);border-radius:26px;padding:48px 70px;
+  font:600 54px/1.6 'JetBrains Mono','Noto Sans SC',monospace;box-shadow:0 30px 90px rgba(0,0,0,.55);white-space:nowrap}
+.gapbox .panel small{display:block;font:500 32px 'Noto Sans SC';color:#8b98a5;margin-bottom:12px;letter-spacing:.04em}
+.gapbox .yes{color:#3ddc84}
+.gapbox .cmd{color:#ff9a8a;margin-bottom:8px}
+/* 标题页 / 收尾页 */
+.itile{position:absolute;overflow:hidden;display:flex;align-items:center;justify-content:center;background:#fff}
+.itile.ghost{background:transparent;border:2px dashed rgba(255,255,255,.18);box-shadow:none}
+.itile img{display:block;object-fit:contain}
+.big{position:absolute;white-space:nowrap;transform-origin:0 60%}
+#flash{position:absolute;inset:0;background:#fff;opacity:0;pointer-events:none}
+#veil{position:absolute;inset:0;background:#000;opacity:0;pointer-events:none}
+</style>
+</head>
+<body>
+<div id="stage"><div id="world"></div><div id="veil"></div><div id="flash"></div></div>
+<script>
+/* =========================================================
+   节拍：130 BPM，第 0 拍 = 0.503 s（参考分析/beat_grid.py 与低频起音拟合得到，
+   四次鼓点进入落在第 32 / 96 / 192 / 256 拍，收尾最后一击在第 288 拍）
+   ========================================================= */
+const W = 2340, H = 1080;
+const DATA = window.DATA;
+const BPM = DATA.bpm, BEAT = 60 / BPM, T0 = DATA.t0, DUR = DATA.dur;
+const SB = DATA.slide_beats || 16;     // 每页的拍数：16 = 4 小节，8 = 2 小节
+const IB = DATA.intro_beats || SB;     // 标题页占的拍数
+const RS = SB / 16;                    // 页内动画的节奏比例：8 拍一页时，出字 / 弹 logo 整体 2 倍速
+const PUSH_LEAD = 0.25, PUSH_DUR = 0.30;
+const tb = k => T0 + k * BEAT;
+const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+const easeOutCubic = x => 1 - Math.pow(1 - x, 3);
+const easeInOutCubic = x => x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
+const easeOutBack = (x, s = 1.70158) => 1 + (s + 1) * Math.pow(x - 1, 3) + s * Math.pow(x - 1, 2);
+const world = document.getElementById('world');
+const flashEl = document.getElementById('flash');
+const veilEl = document.getElementById('veil');
+const mk = (tag, cls, parent, html) => { const e = document.createElement(tag); if (cls) e.className = cls; if (html != null) e.innerHTML = html; if (parent) parent.appendChild(e); return e; };
+const N = DATA.camps.length;
+const DROPS = new Set(DATA.drops || []);
+
+/* ---------- logo 瓦片 ---------- */
+function makeTile(id, size) {
+  const L = DATA.logos[id] || {};
+  const wrap = mk('div', 'tileWrap');
+  wrap.style.width = wrap.style.height = size + 'px';
+  const tile = mk('div', 'tile', wrap);
+  tile.style.width = tile.style.height = size + 'px';
+  tile.style.borderRadius = Math.round(size * (L.radius || 0.22)) + 'px';
+  if (L.fit === 'full' && L.file) {
+    tile.classList.add('full');
+    const img = mk('img', null, tile); img.src = L.file;
+  } else {
+    if (L.plate) tile.style.background = L.plate;
+    if (L.file) {
+      const img = mk('img', null, tile); img.src = L.file;
+      const p = (L.pad || 0.62) * size; img.style.width = img.style.height = p + 'px';
+    } else {
+      const m = mk('div', 'mono', tile, L.mono || (L.label || id).slice(0, 2));
+      m.style.fontSize = size * 0.26 + 'px';
+    }
+  }
+  return wrap;
+}
+const labelOf = id => (DATA.logos[id] && DATA.logos[id].label) || id;
+
+/* ---------- 构建：标题页 ---------- */
+const slides = [];
+function buildIntro() {
+  const I = DATA.intro, s = { kind: 'intro', idx: 0, k0: 0 };
+  const el = s.el = mk('div', 'slide', world);
+  const bg = mk('div', 'bg', el); bg.style.background = I.bg;
+  el.style.color = I.fg;
+  const x0 = 235;
+  // 没有副标题时三行标题整体下移 28 px，和右边的 logo 网格一起垂直居中
+  const dy = I.sub ? 0 : 28;
+  s.l1 = mk('div', 'big', el, I.line1); s.l1.style.cssText += `left:${x0}px;top:${238 + dy}px;font:800 100px/1.2 'Noto Sans SC';letter-spacing:.06em`;
+  s.l2 = mk('div', 'big', el, I.line2); s.l2.style.cssText += `left:${x0 - 8}px;top:${362 + dy}px;font:700 188px/1.0 'Space Grotesk','Noto Sans SC';letter-spacing:-.01em;color:${I.accent}`;
+  s.l3 = mk('div', 'big', el, I.line3); s.l3.style.cssText += `left:${x0 - 6}px;top:${548 + dy}px;font:900 226px/1.05 'Noto Sans SC';letter-spacing:.02em`;
+  if (I.sub) { s.sub = mk('div', 'big', el, I.sub); s.sub.style.cssText += `left:${x0}px;top:830px;font:600 48px 'Noto Sans SC';opacity:0;letter-spacing:.06em;color:${I.sub_fg || I.fg}`; }
+  s.tiles = []; s.ghosts = [];
+  const gx = 1285, gy = 130, sz = 190, gap = 20;
+  I.grid.forEach((id, j) => {
+    const x = gx + (j % 4) * (sz + gap), y = gy + Math.floor(j / 4) * (sz + gap);
+    const g = mk('div', 'itile ghost', el); g.style.cssText += `left:${x}px;top:${y}px;width:${sz}px;height:${sz}px;border-radius:${sz * 0.22}px`;
+    const w = makeTile(id, sz); w.style.left = x + 'px'; w.style.top = y + 'px'; el.appendChild(w);
+    s.ghosts.push(g); s.tiles.push(w);
+  });
+  s.ticks = mkTicks(el, IB);
+  s.shade = mk('div', 'shade', el);
+  slides.push(s);
+}
+function mkTicks(parent, n = SB) {
+  const row = mk('div', 'ticks', parent); const out = [];
+  for (let j = 0; j < n; j++) { const t = mk('div', 'tick' + (j > 0 && j % 4 === 0 ? ' g' : ''), row); out.push(t); }
+  return out;
+}
+
+/* ---------- 构建：阵营页 ---------- */
+function buildCamp(c, i) {
+  const s = { kind: 'camp', idx: i + 1, k0: IB + SB * i, c };
+  const el = s.el = mk('div', 'slide', world);
+  const bg = mk('div', 'bg', el); bg.style.background = c.bg;
+  el.style.color = c.fg;
+  s.counter = mk('div', 'counter', el, `阵营 <b>${String(i + 1).padStart(2, '0')}</b> / ${N}`);
+  const grid = !!c.grid;
+  const tc = s.textCol = mk('div', 'textCol', el);
+  s.title = mk('div', 'title' + (c.tag ? ' hastag' : ''), tc, c.name);
+  if (c.tag) s.tag = mk('div', 'tag', tc, c.tag);
+  if (c.accent) s.title.style.setProperty('--a', c.accent);
+  s.lines = c.lines.map(t => mk('div', 'line', tc, t));
+  if (c.chip) { const wrapC = mk('div', null, tc); s.chip = mk('div', 'chip', wrapC, c.chip); s.chip.style.background = c.chip_bg || 'rgba(0,0,0,.78)'; s.chip.style.color = c.chip_fg || '#fff'; }
+  s.epi = mk('div', 'epi', tc, `<span>“${c.epithet}”</span>`);
+  if (c.epi_fg) s.epi.style.color = c.epi_fg;
+  const logoW = grid ? 640 : 460;
+  const lc = s.logoCol = mk('div', 'logoCol', el);
+  lc.style.width = logoW + 'px';
+  s.items = [];
+  let lh;
+  if (grid) {
+    // 2x2 网格：依次弹出
+    const sz = 270, nameH = 62, vgap = 34, hgap = 60;
+    lh = sz * 2 + nameH * 2 + vgap;
+    lc.style.height = lh + 'px';
+    c.logos.forEach((id, j) => {
+      const it = mk('div', 'item', lc);
+      const x = (j % 2) * (sz + hgap), y = Math.floor(j / 2) * (sz + nameH + vgap);
+      it.style.cssText += `left:${x}px;top:${y}px;width:${sz}px;height:${sz + nameH}px`;
+      const w = makeTile(id, sz); w.style.left = '0px'; w.style.top = '0px'; it.appendChild(w);
+      const nm = mk('div', 'pname', it, labelOf(id)); nm.style.top = (sz + 12) + 'px'; nm.style.font = "700 38px 'Space Grotesk','Noto Sans SC'";
+      s.items.push({ el: it, wrap: w, appear: 1 + j, grid: true });
+    });
+  } else {
+    const sw = c.switch || [];
+    const sz = 420;
+    lh = sz + 46 + 72;
+    lc.style.height = lh + 'px';
+    c.logos.forEach((id, j) => {
+      const it = mk('div', 'item', lc);
+      it.style.cssText += `left:0;top:0;width:${logoW}px;height:${lh}px`;
+      const w = makeTile(id, sz); w.style.left = (logoW - sz) / 2 + 'px'; w.style.top = '0px'; it.appendChild(w);
+      const nm = mk('div', 'pname', it, labelOf(id)); nm.style.top = (sz + 40) + 'px'; if (labelOf(id).length > 12) nm.style.fontSize = '46px';
+      s.items.push({ el: it, wrap: w, appear: j === 0 ? 1 : sw[j - 1], grid: false });
+    });
+  }
+  // 版式：必须等字体加载完、在显示状态下量文字列，再把「logo 列 + 间距 + 文字列」整体居中到画面中线
+  s.layout = () => {
+    el.style.display = 'block';
+    const tcw = tc.offsetWidth, th = tc.offsetHeight;
+    const gapX = grid ? 90 : 120;
+    const left0 = Math.round((W - (logoW + gapX + tcw)) / 2);
+    lc.style.left = left0 + 'px';
+    tc.style.left = (left0 + logoW + gapX) + 'px';
+    tc.style.top = Math.round((H - th) / 2 - 8) + 'px';
+    lc.style.top = Math.round((H - lh) / 2 - 8) + 'px';
+    s._tcw = tcw; s._th = th;
+    el.style.display = 'none';
+  };
+  // 间隙提示
+  if (c.gap) {
+    const gb = s.gapEl = mk('div', 'gapbox', el);
+    gb.innerHTML = `<div class="panel"><small>${c.gap.small}</small>${c.gap.cmd ? `<div class="cmd">${c.gap.cmd}</div>` : ''}<span>${c.gap.text}</span><span class="yes"></span><span class="cur">▌</span></div>`;
+    s.gapYes = gb.querySelector('.yes'); s.gapCur = gb.querySelector('.cur');
+  }
+  s.ticks = mkTicks(el);
+  s.shade = mk('div', 'shade', el);
+  slides.push(s);
+}
+
+/* ---------- 构建：收尾页 ---------- */
+function buildOutro() {
+  const O = DATA.outro, s = { kind: 'outro', idx: N + 1, k0: IB + SB * N };
+  const el = s.el = mk('div', 'slide', world);
+  const bg = mk('div', 'bg', el); bg.style.background = O.bg; el.style.color = O.fg;
+  s.t1 = mk('div', 'big', el, O.title); s.t1.style.cssText += `left:0;width:${W}px;text-align:center;top:250px;font:900 230px/1.1 'Noto Sans SC';letter-spacing:.04em`;
+  s.t2 = mk('div', 'big', el, O.sub); s.t2.style.cssText += `left:0;width:${W}px;text-align:center;top:560px;font:700 82px 'Noto Sans SC';letter-spacing:.08em;color:${O.accent}`;
+  s.t3 = mk('div', 'big', el, O.small); s.t3.style.cssText += `left:0;width:${W}px;text-align:center;top:720px;font:500 48px 'Noto Sans SC';letter-spacing:.1em;opacity:.8`;
+  if (O.note) { s.t4 = mk('div', 'big', el, O.note); s.t4.style.cssText += `left:0;width:${W}px;text-align:center;top:960px;font:500 34px 'Noto Sans SC';letter-spacing:.08em;opacity:0`; }
+  s.shade = mk('div', 'shade', el);
+  slides.push(s);
+}
+
+buildIntro();
+DATA.camps.forEach(buildCamp);
+buildOutro();
+slides.forEach((s, i) => { s.el.style.zIndex = i + 1; });
+
+/* ---------- 每帧更新 ---------- */
+function stamp(el, t, tStart, dur = 0.24, from = 1.35) {      // 标题“盖章”：缩小落位 + 淡入
+  const p = clamp((t - tStart) / dur);
+  el.style.opacity = t < tStart ? 0 : clamp((t - tStart) / 0.07);
+  const sc = from - (from - 1) * easeOutBack(p, 1.9);
+  el.style.transform = `scale(${sc})`;
+}
+function fadeUp(el, t, tStart, dur = 0.22, dy = 28) {
+  const p = clamp((t - tStart) / dur);
+  el.style.opacity = t < tStart ? 0 : p;
+  el.style.transform = `translate3d(0,${dy * (1 - easeOutCubic(p))}px,0)`;
+}
+function beatPulse(t, amp = 0.04, dur = 0.20) {
+  const k = (t - T0) / BEAT; if (k < 0) return 0;
+  const since = (k - Math.floor(k)) * BEAT;
+  return amp * (1 - easeOutCubic(clamp(since / dur)));
+}
+
+function updateTicks(s, t) {
+  const kl = (t - tb(s.k0)) / BEAT;
+  s.ticks.forEach((tk, j) => {
+    const on = kl >= j;
+    const cur = on && kl - j < 0.28;
+    tk.style.opacity = on ? (cur ? 1 : 0.62) : 0.2;
+    tk.style.transform = cur ? 'scaleY(1.9)' : 'none';
+  });
+}
+
+function updateIntro(s, t) {
+  const I = DATA.intro, sp = I.speed || 1, step = I.pop_step || (1 / sp);   // sp = 2：开头的动画 2 倍速（音乐不变）；step：两个 logo 之间隔几拍
+  stamp(s.l1, t, tb(0), 0.24 / sp); stamp(s.l2, t, tb(1 / sp), 0.24 / sp); stamp(s.l3, t, tb(2 / sp), 0.24 / sp);
+  if (s.sub) { fadeUp(s.sub, t, tb(4 / sp), 0.35 / sp, 24); s.sub.style.opacity = Math.min(+s.sub.style.opacity, 0.9); }
+  s.tiles.forEach((w, j) => {
+    const ts = tb(j * step), p = clamp((t - ts) / (0.30 / sp));
+    w.style.opacity = t < ts ? 0 : clamp((t - ts) / (0.06 / sp));
+    w.style.transform = `scale(${0.45 + 0.55 * easeOutBack(p, 2.2)})`;
+    s.ghosts[j].style.opacity = t < ts ? 1 : 0;
+  });
+  updateTicks(s, t);
+}
+
+function updateCamp(s, t) {
+  const c = s.c, t0 = tb(s.k0), R = RS, D = Math.max(0.6, R);   // R：出字节奏比例；D：动画时长比例
+  // 标题盖章（落在页的第一拍）
+  stamp(s.title, t, t0, 0.26 * D, 1.3);
+  s.counter.style.opacity = t < t0 ? 0 : 0.72;
+  // 说明行：16 拍一页时每拍出一行，8 拍一页时每半拍出一行
+  const off = s.tag ? 1 : 0;                       // 有出处小字时，说明行往后顺延一格
+  if (s.tag) fadeUp(s.tag, t, tb(s.k0 + 2 * R), 0.22 * D, 16), s.tag.style.opacity = Math.min(+s.tag.style.opacity, 0.8);
+  s.lines.forEach((ln, n) => fadeUp(ln, t, tb(s.k0 + (2 + off + n) * R), 0.22 * D));
+  const lastBeat = (2 + off + s.lines.length) * R;
+  if (s.chip) { const p = clamp((t - tb(s.k0 + lastBeat)) / (0.24 * D)); s.chip.style.opacity = t < tb(s.k0 + lastBeat) ? 0 : p; s.chip.style.transform = `scale(${0.8 + 0.2 * easeOutBack(p, 2)})`; s.chip.style.transformOrigin = '0 50%'; }
+  const epiBeat = lastBeat + (s.chip ? R : 0);
+  const pe = clamp((t - tb(s.k0 + epiBeat)) / (0.26 * D));
+  s.epi.style.opacity = t < tb(s.k0 + epiBeat) ? 0 : pe;
+  s.epi.style.transform = `translate3d(${-30 * (1 - easeOutCubic(pe))}px,0,0)`;
+  // logo
+  const pulse = 1 + beatPulse(t, 0.035);
+  s.items.forEach((it, j) => {
+    const ta = tb(s.k0 + it.appear * R);
+    let op = 0, y = 0, sc = 1;
+    if (it.grid || j === 0) {
+      const p = clamp((t - ta) / (0.30 * D));
+      op = t < ta ? 0 : clamp((t - ta) / (0.06 * D));
+      sc = 0.5 + 0.5 * easeOutBack(p, 2.0);
+    } else {
+      const pin = clamp((t - (ta - 0.34)) / 0.34);
+      op = clamp((pin - 0.30) / 0.70); y = 260 * (1 - easeOutCubic(pin)); sc = 1;
+    }
+    // 被下一个 logo 顶走
+    const nxt = s.items[j + 1];
+    if (!it.grid && nxt) {
+      const tn = tb(s.k0 + nxt.appear * R);
+      const pout = clamp((t - (tn - 0.34)) / 0.34);
+      op *= (1 - clamp(pout / 0.55)); y += -260 * easeOutCubic(pout);
+    }
+    it.el.style.opacity = op;
+    it.el.style.transform = `translate3d(0,${y}px,0)`;
+    it.wrap.style.transform = `scale(${sc * pulse})`;
+  });
+  // 间隙提示
+  if (s.gapEl) {
+    const g = c.gap, ga = tb(g.k0), gb = tb(g.k1);
+    const inGap = t >= ga && t < gb + 0.25;
+    s.gapEl.style.opacity = inGap ? clamp((t - ga) / 0.12) : 0;
+    const yes = t >= tb(g.yes);
+    s.gapYes.textContent = yes ? ' y' : '';
+    s.gapCur.style.opacity = (Math.floor((t - ga) / 0.25) % 2 === 0) ? 1 : 0;
+    // 提示出现时把页面内容压暗
+    const dim = inGap ? 0.55 * clamp((t - ga) / 0.12) : 0;
+    s.dimExtra = dim;
+  }
+  updateTicks(s, t);
+}
+
+function updateOutro(s, t) {
+  const t0 = tb(s.k0);
+  stamp(s.t1, t, t0, 0.3, 1.4);
+  fadeUp(s.t2, t, tb(s.k0 + 2), 0.3, 30);
+  fadeUp(s.t3, t, tb(s.k0 + 4), 0.3, 20);
+  if (s.t4) { fadeUp(s.t4, t, tb(s.k0 + 6), 0.4, 10); s.t4.style.opacity = Math.min(+s.t4.style.opacity, 0.55); }
+  const fade = clamp((t - (DUR - 1.6)) / 1.5);
+  s.shade.style.opacity = fade;
+}
+
+function render(t) {
+  // 全局：落点冲击（小节首拍轻、鼓点进入重）
+  let punch = 0, flash = 0;
+  const starts = slides.map(s => s.k0);
+  for (const kd of starts) {
+    const dt = t - tb(kd);
+    if (dt >= 0 && dt < 0.5) {
+      const big = DROPS.has(kd);
+      punch = Math.max(punch, (big ? 0.05 : 0.014) * (1 - easeOutCubic(clamp(dt / 0.30))));
+      if (big) flash = Math.max(flash, 0.42 * (1 - clamp(dt / 0.30)));
+    }
+  }
+  world.style.transform = `scale(${1 + punch})`;
+  flashEl.style.opacity = flash;
+  veilEl.style.opacity = 0;
+
+  slides.forEach((s, i) => {
+    const tin = tb(s.k0);
+    let x = 0, shade = 0, show = true;
+    if (i > 0) {
+      const pin = clamp((t - (tin - PUSH_LEAD)) / PUSH_DUR);
+      x = (1 - easeOutCubic(pin)) * W;
+      if (t < tin - PUSH_LEAD) show = false;
+    }
+    const nx = slides[i + 1];
+    if (nx) {
+      const tn = tb(nx.k0), pout = clamp((t - (tn - PUSH_LEAD)) / PUSH_DUR), e = easeOutCubic(pout);
+      x += -e * W * 0.30; shade = e * 0.32;
+      if (t > tn + 0.4) show = false;
+    }
+    s.el.style.display = show ? 'block' : 'none';
+    if (!show) return;
+    s.el.style.transform = `translate3d(${x}px,0,0)`;
+    s.dimExtra = 0;
+    if (s.kind === 'intro') updateIntro(s, t);
+    else if (s.kind === 'camp') updateCamp(s, t);
+    else updateOutro(s, t);
+    if (s.kind !== 'outro') s.shade.style.opacity = Math.min(0.9, shade + (s.dimExtra || 0));
+  });
+}
+window.render = render;
+window.__ready = Promise.all([
+  document.fonts.load("900 100px 'Noto Sans SC'"), document.fonts.load("700 50px 'Noto Sans SC'"),
+  document.fonts.load("700 50px 'Space Grotesk'"), document.fonts.load("600 40px 'JetBrains Mono'")
+]).then(() => document.fonts.ready).then(() => {
+  slides.forEach(s => s.layout && s.layout());
+  return new Promise(r => {
+    const imgs = [...document.images]; let n = imgs.length; if (!n) return r(true);
+    imgs.forEach(im => { if (im.complete) { if (!--n) r(true); } else { im.onload = im.onerror = () => { if (!--n) r(true); }; } });
+  });
+}).then(() => { slides.forEach(s => s.layout && s.layout()); return true; });
+</script>
+</body>
+</html>

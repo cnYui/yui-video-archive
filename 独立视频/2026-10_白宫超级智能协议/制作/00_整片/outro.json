@@ -1,0 +1,26 @@
+{
+  "items": [
+    {
+      "label": "现场画面",
+      "value": "白宫官方 · PBS NewsHour · X 平台视频"
+    },
+    {
+      "label": "资料",
+      "value": "白宫官网 · Reuters · NPR 等公开报道"
+    },
+    {
+      "label": "配音",
+      "value": "曼波声线"
+    },
+    {
+      "label": "剪辑",
+      "value": "Claude Code"
+    },
+    {
+      "label": "视频剪辑模型",
+      "value": "Sonnet 5.5"
+    }
+  ],
+  "closing": "感谢大家看到最后",
+  "signature": "悠一"
+}
