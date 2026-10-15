@@ -1,0 +1,105 @@
+{
+  "_说明": "交付包阶段先写 titles（3 个候选 × 4 个平台 = 3×4）和各平台默认项；用户回“封面 X 标题 Y 同意”后，把选中的那条标题写进各平台字段（bilibili.title / douyin.title / xiaohongshu.title / weixin_channels.short_title），approval 记下选择和时间。scripts/check_titles.py 按各平台要求核对字数：B 站标题 ≤ 80 / 抖音 ≤ 30（话题 ≤ 5）/ 小红书 ≤ 20 / 视频号短标题 6–16；放不下的完整标题放抖音描述、小红书正文、视频号描述的第一行。三个标题角度要真有区别（事实陈述 / 数字悬念 / 泼冷水），不和封面大字同一句。（2026-10-06 起视频号不发：只发 B 站 / 抖音 / 小红书，标题 3×3）",
+  "slug": "TimDenning忠告5_朋友会换父母不会等",
+  "video": "独立视频/短视频/2026-10_TimDenning忠告5_朋友会换父母不会等/TimDenning忠告5_朋友会换父母不会等_成片.mp4（用户拖进各平台上传区；不压缩、不绕 10 MB）",
+  "duration_s": 0,
+  "approval": {
+    "status": "approved",
+    "cover": "A",
+    "title": "1",
+    "approved_at": "2026-10-06 (用户：就用A。你来打开发布页，不发视频号)",
+    "note": "封面 A（文章配图铺满 + 2800万浏览 / 推特万字长文 / 解读(N)）；标题 ① 用户亲述句；四平台中只发 B站/抖音/小红书，视频号不发；成片第 0 帧已换成封面 A；用户没说“发布”前只填表不点发布。"
+  },
+  "titles": [
+    {
+      "id": 1,
+      "angle": "用户定的标题（具体的一句）",
+      "recommend": true,
+      "bilibili": "朋友会换，父母不会等",
+      "douyin": "朋友会换，父母不会等",
+      "xiaohongshu": "朋友会换，父母不会等"
+    },
+    {
+      "id": 2,
+      "angle": "备选：带“自称”挂名的描述版",
+      "recommend": false,
+      "bilibili": "自称10亿阅读的作家Tim Denning：年纪越大越想把一些朋友留在身后，生孩子是自由的起点，陪父母要比觉得正常的更多",
+      "douyin": "作家称：朋友会换，父母不会等",
+      "xiaohongshu": "作家称：朋友会换父母不会等"
+    },
+    {
+      "id": 3,
+      "angle": "泼冷水（但是 / 要说明的前提）",
+      "bilibili": "38岁、有了孩子的人给20多岁的人的忠告，要不要照搬？Tim Denning的朋友、孩子、父母4条忠告",
+      "douyin": "38岁有娃的人的忠告，20多岁别照搬",
+      "xiaohongshu": "20多岁别照搬38岁的忠告"
+    }
+  ],
+  "covers": {
+    "3x4": "制作/04_封面/封面_选定_3x4.png",
+    "16x9": "制作/04_封面/封面_选定_16x9.png",
+    "4x3": "制作/04_封面/封面_选定_4x3.png"
+  },
+  "source": {
+    "original_post": "https://x.com/Tim_Denning/status/2013552215097778231",
+    "original_author": "Tim Denning @Tim_Denning（X 长文 2026-01-20；Substack Modern Freedom 首发 2025-01-21）",
+    "project_or_site": "https://timdenning.substack.com/p/im-38-if-youre-in-your-20s-or-30s；文章配图 Midjourney 生成（原文标注），版权归原作者"
+  },
+  "bilibili": {
+    "title": "朋友会换，父母不会等",
+    "desc": "转载 / 二次创作：整理自澳大利亚作家 Tim Denning（@Tim_Denning）的文章《I'm 38. If You're in Your 20's or 30's, Read This.》36 条忠告，X 长文 2026-01-20：https://x.com/Tim_Denning/status/2013552215097778231 ；Substack 首发 2025-01-21：https://timdenning.substack.com/p/im-38-if-youre-in-your-20s-or-30s（两个版本正文一致）。\n“年纪越大，你越想把一些朋友留在身后。这很正常。”自称10亿阅读的作家 Tim Denning，写这篇时 38 岁、有个 2 岁的女儿。这一期挑 4 条：\n· 第 7 条 朋友：年轻时挑朋友是为了好看，后来不在乎了，朋友就换了；别粗暴断联，慢慢少联系；\n· 第 2 条 孩子：20 岁时有人对 Tim 说“生了孩子你的人生就完了”，他却说这是一生最好的经历，“选你的难”；\n· 第 29 条 父母：陪父母要比你觉得正常的更多，他们很快会走；\n· 第 32 条 却说：把父母给你定的人生计划烧掉，AI 时代的规则全被打破，走自己的路。\n\n几处要说明\n· 视频里的判断都是 Tim Denning 在文章里的说法，不是我的建议或实测；他简介自称“10 亿+ 阅读、赚了 600 万美元以上”、自述“银行干了十年、2021 年辞职”，这些没有独立核实，视频里都挂了“自称 / 自述”；\n· 文章写于他 38 岁时（2025 年 1 月），2026 年 1 月在 X 上原文重发，年龄、“去年”等口径都是 2025 年初的；\n· 画面里的文章页面、作者主页、推文卡片、作者照片来自 Substack 和 X 的公开页面，文章配图为 Midjourney 生成（原文标注 Image Credit-Midjourney），版权归原作者，仅作介绍和评论引用；\n· X 长文浏览量 2800 万+ 是 2026-10-05 的页面读数，会变。\n\n中英双语字幕；配音：温柔男生声线（AI 生成）；剪辑：Claude Code（Sonnet 5.5）。",
+    "declaration": "含AI生成内容",
+    "category": "人工智能（tid 231）",
+    "tags": [
+      "人际关系",
+      "友情",
+      "亲子",
+      "父母",
+      "个人成长",
+      "人生忠告",
+      "Tim Denning",
+      "成长",
+      "家庭",
+      "认知升级"
+    ],
+    "collection": null,
+    "repost_source": "转自 X：https://x.com/Tim_Denning/status/2013552215097778231（Tim Denning @Tim_Denning，X 长文，2026-01-20；Substack 首发 2025-01-21）",
+    "cover": "两个位各传各的（双比例同步改动不勾）：16:9 → 个人空间封面，4:3 → 首页推荐封面",
+    "published": null
+  },
+  "douyin": {
+    "title": "朋友会换，父母不会等",
+    "desc": "朋友会换，父母不会等\n整理自 Tim Denning（Tim_Denning）36 条忠告文章（X 长文 2026-01-20 / Substack 2025-01-21），观点均为他本人的说法，10 亿阅读、600 万美元等为其简介自称；画面来自公开页面，文章配图为 Midjourney 生成，版权归原作者，仅作介绍和评论引用。配音为 AI 生成（温柔男生声线）。",
+    "topics": [
+      "人际关系",
+      "友情",
+      "亲子",
+      "父母",
+      "个人成长"
+    ],
+    "declaration": "内容由AI生成",
+    "collection": null,
+    "cover": "竖封面 3:4 = 封面_选定_3x4.png；横封面 4:3 = 封面_选定_4x3.png",
+    "published": null
+  },
+  "xiaohongshu": {
+    "title": "朋友会换，父母不会等",
+    "desc": "朋友会换，父母不会等\n\n· 第 7 条 朋友：年轻时挑朋友是为了好看，后来不在乎了，朋友就换了；别粗暴断联，慢慢少联系；\n· 第 2 条 孩子：20 岁时有人对 Tim 说“生了孩子你的人生就完了”，他却说这是一生最好的经历，“选你的难”；\n· 第 29 条 父母：陪父母要比你觉得正常的更多，他们很快会走；\n· 第 32 条 却说：把父母给你定的人生计划烧掉，AI 时代的规则全被打破，走自己的路。\n整理自 Tim Denning（Tim_Denning）36 条忠告文章（X 长文 2026-01-20 / Substack 2025-01-21），观点均为他本人的说法，10 亿阅读、600 万美元等为其简介自称；画面来自公开页面，文章配图为 Midjourney 生成，版权归原作者，仅作介绍和评论引用。配音为 AI 生成（温柔男生声线）。",
+    "topics": [
+      "人际关系",
+      "友情",
+      "亲子",
+      "父母",
+      "个人成长",
+      "人生忠告",
+      "TimDenning",
+      "成长",
+      "家庭",
+      "认知升级"
+    ],
+    "declaration": "笔记含AI合成内容",
+    "cover": "3:4 = 封面_选定_3x4.png",
+    "published": null
+  },
+  "published": {}
+}

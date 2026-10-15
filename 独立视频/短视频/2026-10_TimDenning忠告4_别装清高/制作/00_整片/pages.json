@@ -1,0 +1,220 @@
+{
+ "A_16": {
+  "src": "pages/A_16.png",
+  "w": 1536,
+  "h": 1382,
+  "url": "https://timdenning.substack.com/p/im-38-if-youre-in-your-20s-or-30s",
+  "bg": "#171717",
+  "marks": {
+   "People who think they don't pursue their goal for money are delusional": [
+    [
+     38,
+     392,
+     1276,
+     62
+    ]
+   ],
+   "Without the scoreboard it lets you off the hook": [
+    [
+     38,
+     570,
+     843,
+     62
+    ]
+   ],
+   "blame the market or say": [
+    [
+     557,
+     635,
+     431,
+     62
+    ]
+   ],
+   "Romantic artists are the worst. So are $0 hobbyists.": [
+    [
+     86,
+     802,
+     892,
+     36
+    ]
+   ],
+   "Even if you run a charity you still need money": [
+    [
+     1115,
+     941,
+     305,
+     62
+    ],
+    [
+     38,
+     1006,
+     506,
+     62
+    ]
+   ],
+   "not disconnecting what you do from money": [
+    [
+     803,
+     1185,
+     651,
+     62
+    ],
+    [
+     38,
+     1250,
+     119,
+     62
+    ]
+   ]
+  }
+ },
+ "A_17": {
+  "src": "pages/A_17.png",
+  "w": 1536,
+  "h": 2210,
+  "url": "https://timdenning.substack.com/p/im-38-if-youre-in-your-20s-or-30s",
+  "bg": "#171717",
+  "marks": {
+   "If you don't learn how money works you will always work for money": [
+    [
+     187,
+     46,
+     1212,
+     106
+    ],
+    [
+     38,
+     140,
+     1264,
+     106
+    ],
+    [
+     38,
+     235,
+     279,
+     106
+    ]
+   ],
+   "The escape route is to obsessively learn how it works": [
+    [
+     38,
+     1834,
+     949,
+     62
+    ]
+   ],
+   "Last year I took $1000 and turned it into $120K": [
+    [
+     38,
+     745,
+     842,
+     62
+    ]
+   ],
+   "All you need is one strategy or arbitrage to attract more money": [
+    [
+     1233,
+     923,
+     225,
+     62
+    ],
+    [
+     38,
+     989,
+     893,
+     62
+    ]
+   ]
+  }
+ },
+ "A_36": {
+  "src": "pages/A_36.png",
+  "w": 1536,
+  "h": 1296,
+  "url": "https://timdenning.substack.com/p/im-38-if-youre-in-your-20s-or-30s",
+  "bg": "#171717",
+  "marks": {
+   "Understand human psychology and you can make as much money as you want": [
+    [
+     187,
+     46,
+     1284,
+     106
+    ],
+    [
+     38,
+     141,
+     1413,
+     106
+    ],
+    [
+     38,
+     235,
+     492,
+     106
+    ]
+   ],
+   "humans act out of self-interest. Appeal to it": [
+    [
+     1181,
+     680,
+     277,
+     62
+    ],
+    [
+     38,
+     745,
+     496,
+     62
+    ]
+   ]
+  }
+ },
+ "P_bio": {
+  "src": "pages/P_bio.png",
+  "w": 1536,
+  "h": 1680,
+  "url": "https://substack.com/@timdenning",
+  "bg": "#171717",
+  "marks": {
+   "Aussie writer with 1B+ views that made me $6M+": [
+    [
+     125,
+     355,
+     857,
+     46
+    ]
+   ],
+   "Quit my banking job in 2021": [
+    [
+     1001,
+     355,
+     396,
+     46
+    ],
+    [
+     125,
+     403,
+     84,
+     46
+    ]
+   ],
+   "Aussie writer with 1B+ views": [
+    [
+     125,
+     355,
+     490,
+     46
+    ]
+   ],
+   "238K+ subscribers": [
+    [
+     125,
+     624,
+     318,
+     46
+    ]
+   ]
+  }
+ }
+}

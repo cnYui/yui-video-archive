@@ -1,0 +1,105 @@
+{
+  "_说明": "交付包阶段先写 titles（3 个候选 × 4 个平台 = 3×4）和各平台默认项；用户回“封面 X 标题 Y 同意”后，把选中的那条标题写进各平台字段（bilibili.title / douyin.title / xiaohongshu.title / weixin_channels.short_title），approval 记下选择和时间。scripts/check_titles.py 按各平台要求核对字数：B 站标题 ≤ 80 / 抖音 ≤ 30（话题 ≤ 5）/ 小红书 ≤ 20 / 视频号短标题 6–16；放不下的完整标题放抖音描述、小红书正文、视频号描述的第一行。三个标题角度要真有区别（事实陈述 / 数字悬念 / 泼冷水），不和封面大字同一句。（2026-10-06 起视频号不发：只发 B 站 / 抖音 / 小红书，标题 3×3）",
+  "slug": "TimDenning忠告6_忙是低地位",
+  "video": "独立视频/短视频/2026-10_TimDenning忠告6_忙是低地位/TimDenning忠告6_忙是低地位_成片.mp4（用户拖进各平台上传区；不压缩、不绕 10 MB）",
+  "duration_s": 0,
+  "approval": {
+    "status": "approved",
+    "cover": "A",
+    "title": "1",
+    "approved_at": "2026-10-06 (用户：就用A。你来打开发布页，不发视频号)",
+    "note": "封面 A（文章配图铺满 + 2800万浏览 / 推特万字长文 / 解读(N)）；标题 ① 用户亲述句；四平台中只发 B站/抖音/小红书，视频号不发；成片第 0 帧已换成封面 A；用户没说“发布”前只填表不点发布。"
+  },
+  "titles": [
+    {
+      "id": 1,
+      "angle": "用户定的标题（具体的一句）",
+      "recommend": true,
+      "bilibili": "说自己很忙，是低地位的信号",
+      "douyin": "说自己很忙，是低地位的信号",
+      "xiaohongshu": "说自己很忙，是低地位的信号"
+    },
+    {
+      "id": 2,
+      "angle": "备选：带“自称”挂名的描述版",
+      "recommend": false,
+      "bilibili": "“说自己很忙，是低地位的信号”：自称10亿阅读的作家Tim Denning的6条时间与专注忠告",
+      "douyin": "作家称：说自己很忙是低地位信号",
+      "xiaohongshu": "作家称：很忙是低地位信号"
+    },
+    {
+      "id": 3,
+      "angle": "泼冷水（但是 / 要说明的前提）",
+      "bilibili": "关掉新闻智商会自然升高？Tim Denning的忠告里，这一条文里没给任何依据：时间与专注的6条忠告",
+      "douyin": "关掉新闻智商会升高？文里没依据",
+      "xiaohongshu": "关掉新闻智商会升高？"
+    }
+  ],
+  "covers": {
+    "3x4": "制作/04_封面/封面_选定_3x4.png",
+    "16x9": "制作/04_封面/封面_选定_16x9.png",
+    "4x3": "制作/04_封面/封面_选定_4x3.png"
+  },
+  "source": {
+    "original_post": "https://x.com/Tim_Denning/status/2013552215097778231",
+    "original_author": "Tim Denning @Tim_Denning（X 长文 2026-01-20；Substack Modern Freedom 首发 2025-01-21）",
+    "project_or_site": "https://timdenning.substack.com/p/im-38-if-youre-in-your-20s-or-30s；文章配图 Midjourney 生成（原文标注），版权归原作者"
+  },
+  "bilibili": {
+    "title": "说自己很忙，是低地位的信号",
+    "desc": "转载 / 二次创作：整理自澳大利亚作家 Tim Denning（@Tim_Denning）的文章《I'm 38. If You're in Your 20's or 30's, Read This.》36 条忠告，X 长文 2026-01-20：https://x.com/Tim_Denning/status/2013552215097778231 ；Substack 首发 2025-01-21：https://timdenning.substack.com/p/im-38-if-youre-in-your-20s-or-30s（两个版本正文一致）。\n“说自己很忙，是低地位的信号。”自称10亿阅读的作家 Tim Denning 在 38 岁的忠告里这么说。这一期挑 5 条时间与专注相关的：\n· 第 13 条 忙：忙意味着不会专注、生活失控，尽快删掉日历上的安排；\n· 第 14 条 安静：很多成功的人，比如基努·里维斯，安静得出奇，整场对话一句不说反而学到最多；\n· 第 19 条 多巴胺：管住多巴胺比任何健康技巧都管用（TikTok、Netflix、电子游戏……）；\n· 第 28 条 游戏、第 31 条 心流：感觉 8 小时像 1 小时，才有劲；\n· 第 21 条 新闻：Tim 说关掉新闻和政治智商会自然升高，文里没给依据。\n\n几处要说明\n· 视频里的判断都是 Tim Denning 在文章里的说法，不是我的建议或实测；他简介自称“10 亿+ 阅读、赚了 600 万美元以上”、自述“银行干了十年、2021 年辞职”，这些没有独立核实，视频里都挂了“自称 / 自述”；\n· 文章写于他 38 岁时（2025 年 1 月），2026 年 1 月在 X 上原文重发，年龄、“去年”等口径都是 2025 年初的；\n· 画面里的文章页面、作者主页、推文卡片、作者照片来自 Substack 和 X 的公开页面，文章配图为 Midjourney 生成（原文标注 Image Credit-Midjourney），版权归原作者，仅作介绍和评论引用；\n· X 长文浏览量 2800 万+ 是 2026-10-05 的页面读数，会变。\n\n中英双语字幕；配音：温柔男生声线（AI 生成）；剪辑：Claude Code（Sonnet 5.5）。",
+    "declaration": "含AI生成内容",
+    "category": "人工智能（tid 231）",
+    "tags": [
+      "时间管理",
+      "专注力",
+      "多巴胺",
+      "自律",
+      "个人成长",
+      "心流",
+      "Tim Denning",
+      "效率",
+      "人生忠告",
+      "认知升级"
+    ],
+    "collection": null,
+    "repost_source": "转自 X：https://x.com/Tim_Denning/status/2013552215097778231（Tim Denning @Tim_Denning，X 长文，2026-01-20；Substack 首发 2025-01-21）",
+    "cover": "两个位各传各的（双比例同步改动不勾）：16:9 → 个人空间封面，4:3 → 首页推荐封面",
+    "published": null
+  },
+  "douyin": {
+    "title": "说自己很忙，是低地位的信号",
+    "desc": "说自己很忙，是低地位的信号\n整理自 Tim Denning（Tim_Denning）36 条忠告文章（X 长文 2026-01-20 / Substack 2025-01-21），观点均为他本人的说法，10 亿阅读、600 万美元等为其简介自称；画面来自公开页面，文章配图为 Midjourney 生成，版权归原作者，仅作介绍和评论引用。配音为 AI 生成（温柔男生声线）。",
+    "topics": [
+      "时间管理",
+      "专注力",
+      "多巴胺",
+      "自律",
+      "个人成长"
+    ],
+    "declaration": "内容由AI生成",
+    "collection": null,
+    "cover": "竖封面 3:4 = 封面_选定_3x4.png；横封面 4:3 = 封面_选定_4x3.png",
+    "published": null
+  },
+  "xiaohongshu": {
+    "title": "说自己很忙，是低地位的信号",
+    "desc": "说自己很忙，是低地位的信号\n\n· 第 13 条 忙：忙意味着不会专注、生活失控，尽快删掉日历上的安排；\n· 第 14 条 安静：很多成功的人，比如基努·里维斯，安静得出奇，整场对话一句不说反而学到最多；\n· 第 19 条 多巴胺：管住多巴胺比任何健康技巧都管用（TikTok、Netflix、电子游戏……）；\n· 第 28 条 游戏、第 31 条 心流：感觉 8 小时像 1 小时，才有劲；\n· 第 21 条 新闻：Tim 说关掉新闻和政治智商会自然升高，文里没给依据。\n整理自 Tim Denning（Tim_Denning）36 条忠告文章（X 长文 2026-01-20 / Substack 2025-01-21），观点均为他本人的说法，10 亿阅读、600 万美元等为其简介自称；画面来自公开页面，文章配图为 Midjourney 生成，版权归原作者，仅作介绍和评论引用。配音为 AI 生成（温柔男生声线）。",
+    "topics": [
+      "时间管理",
+      "专注力",
+      "多巴胺",
+      "自律",
+      "个人成长",
+      "心流",
+      "TimDenning",
+      "效率",
+      "人生忠告",
+      "认知升级"
+    ],
+    "declaration": "笔记含AI合成内容",
+    "cover": "3:4 = 封面_选定_3x4.png",
+    "published": null
+  },
+  "published": {}
+}

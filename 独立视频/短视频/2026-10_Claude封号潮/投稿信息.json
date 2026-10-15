@@ -1,0 +1,141 @@
+{
+  "_说明": "交付包阶段先写 titles（3 个候选 × 4 个平台 = 3×4）和各平台默认项；用户回“封面 X 标题 Y 同意”后，把选中的那条标题写进各平台字段（bilibili.title / douyin.title / xiaohongshu.title / weixin_channels.short_title），approval 记下选择和时间。scripts/check_titles.py 按各平台要求核对字数：B 站标题 ≤ 80 / 抖音 ≤ 30（话题 ≤ 5）/ 小红书 ≤ 20 / 视频号短标题 6–16；放不下的完整标题放抖音描述、小红书正文、视频号描述的第一行。三个标题角度要真有区别（事实陈述 / 数字悬念 / 泼冷水），不和封面大字同一句。",
+  "slug": "Claude封号潮",
+  "video": "D:\\大疆\\独立视频\\短视频\\2026-10_Claude封号潮\\Claude封号潮_成片.mp4（9.2 MB，第 0 帧 = 选定的封面 A；原片 Claude封号潮_成片_无封面帧.mp4）",
+  "duration_s": 57.8,
+  "approval": {
+    "status": "approved",
+    "cover": "A",
+    "title": 1,
+    "approved_at": "2026-10-05 10:5x（北京时间）",
+    "note": "用户原话：“用封面A 标题用1”；按技能规矩 = 授权四个平台一次填完整并发布"
+  },
+  "titles": [
+    {
+      "id": 1,
+      "angle": "事实陈述（官方数据 + 结论）",
+      "recommend": true,
+      "bilibili": "Claude半年封号1140万个，申诉成功约十分之一：Anthropic官方数据、官方给的路，和国庆封号潮里两位博主相反的说法",
+      "douyin": "Claude半年封号1140万个，申诉成功约十分之一",
+      "xiaohongshu": "Claude半年封号1140万个",
+      "weixin_channels": "Claude封号1140万个"
+    },
+    {
+      "id": 2,
+      "angle": "数字悬念",
+      "bilibili": "1140万个账号被封，申诉只成功4.2万次：Claude国庆封号潮，官方数据怎么说？",
+      "douyin": "1140万个账号被封，申诉只成功4.2万次",
+      "xiaohongshu": "1140万个账号被封，只成4.2万",
+      "weixin_channels": "1140万个号被封"
+    },
+    {
+      "id": 3,
+      "angle": "泼冷水（官方没公布 / 说法相反 / 别当保险）",
+      "bilibili": "Claude国庆封号潮：两位博主说法相反，官方只公布了半年数据，没公布判断标准——别把任何一篇防封教程当保险",
+      "douyin": "防封教程别当保险：两位博主说法相反，官方没公布判据",
+      "xiaohongshu": "Claude防封教程别当保险",
+      "weixin_channels": "防封教程别当保险"
+    }
+  ],
+  "covers": {
+    "3x4": "制作/04_封面/封面_选定_3x4.png",
+    "16x9": "制作/04_封面/封面_选定_16x9.png",
+    "4x3": "制作/04_封面/封面_选定_4x3.png"
+  },
+  "source": {
+    "original_post": "https://x.com/AYi_AInotes/status/2106639522586829094（万字长文）、https://x.com/AYi_AInotes/status/2106649320179032146（同日长推文）、https://x.com/LawrenceW_Zen/status/2106665574067761626",
+    "original_author": "@AYi_AInotes（AYi）、@LawrenceW_Zen（劳伦斯）",
+    "project_or_site": "Anthropic Transparency Hub / Safeguards 帮助中心 / 9 月威胁情报报告 / 退款页（见事实核对）"
+  },
+  "bilibili": {
+    "title": "Claude半年封号1140万个，申诉成功约十分之一：Anthropic官方数据、官方给的路，和国庆封号潮里两位博主相反的说法",
+    "desc": "Anthropic 官方透明度页面（2026-07-23 更新）：2026 年 1–6 月封号 1140 万个账号，收到 39.8 万次申诉，推翻 4.2 万次（约十分之一）；2025 年下半年是 145 万。国庆这轮的数字，官方没公布。\n\n本片只引用官方页面原文。两位博主（@AYi_AInotes、@LawrenceW_Zen）的说法互相矛盾，官方没公布任何判断标准，仅作引用，不构成建议。本片不教规避检测，也不推荐任何代充、中转、号商或拼车账号；原文含 IP 服务和银行卡的邀请链接，本片不引用、不推荐。数据截至 2026-10-05。\n\n来源：\n· Anthropic Transparency Hub · System Trust and Reporting（2026-07-23 更新）https://www.anthropic.com/transparency/system-trust-reporting\n· 2025 年 7–12 月报告（PDF 快照）https://www-cdn.anthropic.com/96721850b17dfa09b4efe674ccf576a68906e508.pdf\n· Safeguards warnings and appeals（页内日期 2026-07-09）https://support.claude.com/en/articles/8241253-safeguards-warnings-and-appeals\n· Detecting and countering misuse of AI: September 2026（Anthropic 威胁情报报告）https://www.anthropic.com/threat-intelligence-report-september-2026\n· Request a refund for a paid Claude plan https://support.claude.com/en/articles/12386328-request-a-refund-for-a-paid-claude-plan\n· 南华早报 2026-10-02《Hong Kong users caught off guard as Anthropic tightens VPN access to Claude》https://www.scmp.com/tech/tech-war/article/3369526/hong-kong-users-caught-offguard-anthropic-tightens-vpn-access-claude\n· @AYi_AInotes 2026-10-04 万字长文 https://x.com/AYi_AInotes/status/2106639522586829094 、长推文 https://x.com/AYi_AInotes/status/2106649320179032146\n· @LawrenceW_Zen 2026-10-04 https://x.com/LawrenceW_Zen/status/2106665574067761626\n素材版权归原作者；配音为 AI 合成。",
+    "declaration": "含AI生成内容",
+    "category": "人工智能（tid 231）",
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "封号",
+      "AI",
+      "人工智能",
+      "AI工具",
+      "账号安全",
+      "Claude Code",
+      "官方数据",
+      "科技"
+    ],
+    "collection": null,
+    "repost_source": "（自制：官方页面 + 博主原帖节选 + AI 配音；来源见简介）",
+    "cover": "两个位各传各的（双比例同步改动不勾）：16:9 → 个人空间封面，4:3 → 首页推荐封面",
+    "published": {
+      "id": "BV1wCHp6ZELc",
+      "at": "2026-10-05 12:02（北京时间，稿件管理里的发布时间）",
+      "state": "开放浏览（15:1x 用稿件管理接口核对：全账号只有这一条同名稿件，没有重复）"
+    }
+  },
+  "douyin": {
+    "title": "Claude半年封号1140万个，申诉成功约十分之一",
+    "desc": "Claude半年封号1140万个，申诉成功约十分之一｜数据来自 Anthropic 官方透明度页面（anthropic.com/transparency/system-trust-reporting，7 月 23 日更新，统计 1–6 月）。国庆这轮官方没公布数字，两位博主说法相反，仅作引用，不教规避。",
+    "topics": [
+      "Claude",
+      "Claude封号",
+      "Anthropic",
+      "AI",
+      "人工智能"
+    ],
+    "declaration": "内容由AI生成",
+    "collection": null,
+    "cover": "竖封面 3:4 = 封面_选定_3x4.png；横封面 4:3 = 封面_选定_4x3.png",
+    "published": {
+      "at": "2026-10-05 12:23（内容管理里的发布时间）",
+      "by": "不是我点的（我的抖音标签当时不见了，其余会话都否认，多半是用户自己点的）",
+      "state": "内容管理里已发布；标题 26 字、描述 191 字 + 5 个话题；编辑页里读回过封面和声明（见 context 记录）",
+      "edit_page_mid": "7693019146380021034"
+    }
+  },
+  "xiaohongshu": {
+    "title": "Claude半年封号1140万个",
+    "desc": "Claude半年封号1140万个，申诉成功约十分之一。\n数据来自 Anthropic 官方透明度页面（7 月 23 日更新，统计 1–6 月）；国庆这轮官方没公布数字，两位博主说法相反，仅作引用，不教规避。",
+    "topics": [
+      "Claude",
+      "Claude封号",
+      "Anthropic",
+      "AI工具",
+      "人工智能",
+      "账号安全",
+      "AI",
+      "科技",
+      "官方数据"
+    ],
+    "declaration": "笔记含AI合成内容",
+    "cover": "3:4 = 封面_选定_3x4.png",
+    "published": {
+      "at": "2026-10-05 15:05（笔记管理列表里显示的时间）",
+      "state": "审核中（发布后立刻在笔记管理里核对：00:57、一条同名笔记、没有重复）",
+      "topics_actual": ["Claude", "AI工具", "大模型", "AI人工智能", "个人开发者", "Anthropic", "账号安全", "科技", "官方数据"],
+      "note": "话题以平台下拉第一项为准：Claude封号 / 人工智能 / AI 没有同名已有话题，平台给的是 大模型 / AI人工智能 / 个人开发者；声明“笔记含AI合成内容”，原创声明关，公开可见，不加地点"
+    }
+  },
+  "weixin_channels": {
+    "short_title": "Claude封号1140万个",
+    "desc": "Claude半年封号1140万个，申诉成功约十分之一。\n数据来自 Anthropic 官方透明度页面（7 月 23 日更新，统计 1–6 月）；国庆这轮官方没公布数字，两位博主说法相反，仅作引用，不教规避。",
+    "topics": [
+      "Claude",
+      "Claude封号",
+      "Anthropic",
+      "AI工具",
+      "人工智能",
+      "账号安全",
+      "AI",
+      "科技",
+      "官方数据"
+    ],
+    "declaration": "视频标注：含AI生成内容",
+    "location": "不显示位置",
+    "collection": null,
+    "cover": "成片第 0 帧 = 选定的封面（cover_frame0.py）；编辑封面选第 0 帧，3:4 裁剪框对到画面 y 450–1890（居中）",
+    "published": null,
+    "status": "不发（用户 2026-10-06：去掉视频号）"
+  },
+  "published": {}
+}

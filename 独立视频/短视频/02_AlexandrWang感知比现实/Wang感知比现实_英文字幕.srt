@@ -1,0 +1,151 @@
+1
+00:00:00,400 --> 00:00:03,760
+At a lot of large customers,
+
+2
+00:00:03,800 --> 00:00:05,790
+perception is more real than reality.
+
+3
+00:00:05,830 --> 00:00:08,440
+This is a podcast episode from December 2024.
+
+4
+00:00:08,480 --> 00:00:10,905
+Back then Wang was Scale AI's CEO.
+
+5
+00:00:10,945 --> 00:00:13,790
+Now he's Meta's chief AI officer.
+
+6
+00:00:13,830 --> 00:00:15,556
+The companies everyone here has worked
+
+7
+00:00:15,596 --> 00:00:18,450
+with are mostly data-driven.
+
+8
+00:00:18,490 --> 00:00:20,200
+It feels like the truth makes its way.
+
+9
+00:00:20,240 --> 00:00:22,830
+Everybody shares one sense of reality.
+
+10
+00:00:22,870 --> 00:00:24,602
+But not at most large companies,
+
+11
+00:00:24,642 --> 00:00:27,300
+nor in government, unfortunately.
+
+12
+00:00:27,340 --> 00:00:29,890
+Reality is usually so ugly
+
+13
+00:00:29,930 --> 00:00:33,050
+that people very rarely confront it.
+
+14
+00:00:33,090 --> 00:00:34,404
+Mostly they choose
+
+15
+00:00:34,444 --> 00:00:37,070
+to believe the perceptions they live in.
+
+16
+00:00:37,110 --> 00:00:43,320
+So if you do enterprise sales or build enterprise products,
+
+17
+00:00:43,360 --> 00:00:44,895
+your job is to improve the reality,
+
+18
+00:00:44,935 --> 00:00:47,370
+just as much as to shape the perception.
+
+19
+00:00:47,410 --> 00:00:49,480
+One of Palantir's superpowers:
+
+20
+00:00:49,520 --> 00:00:50,714
+they shape perception
+
+21
+00:00:50,754 --> 00:00:55,750
+better than most tech companies.
+
+22
+00:00:55,790 --> 00:00:57,890
+Because they view themselves
+
+23
+00:00:57,930 --> 00:00:59,461
+as part acting troupe,
+
+24
+00:00:59,501 --> 00:01:02,610
+part software company.
+
+25
+00:01:02,650 --> 00:01:04,790
+And I'm not even speaking figuratively: they literally
+
+26
+00:01:04,830 --> 00:01:08,350
+gave all new hires an acting book, for a very long time.
+
+27
+00:01:08,390 --> 00:01:10,612
+Ex-Palantir engineer Nabeel Qureshi wrote
+
+28
+00:01:10,652 --> 00:01:12,290
+that new hires were sent a few books,
+
+29
+00:01:12,330 --> 00:01:14,860
+one of them Impro, on improv theater.
+
+30
+00:01:14,900 --> 00:01:17,850
+Whether they still do, he says he isn't sure.
+
+31
+00:01:17,890 --> 00:01:18,722
+Fundamentally,
+
+32
+00:01:18,762 --> 00:01:20,430
+you also need to build a good product.
+
+33
+00:01:20,470 --> 00:01:22,423
+Sept. 23, Meta Connect:
+
+34
+00:01:22,463 --> 00:01:24,010
+Wang took the stage in a T-shirt he says
+
+35
+00:01:24,050 --> 00:01:26,730
+was a $30 thrift find.
+
+36
+00:01:26,770 --> 00:01:28,239
+Oct. 3, Slate: Silicon Valley's most powerful men
+
+37
+00:01:28,279 --> 00:01:30,930
+have discovered the appeal of looking harmless.
+
+38
+00:01:30,970 --> 00:01:34,000
+Perception can amplify reality. It can't replace it.

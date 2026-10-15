@@ -1,0 +1,135 @@
+{
+  "slug": "AI工程师GPU指南",
+  "title": "推特长文《AI 工程师需要知道的 GPU 知识》精选（@kmeanskaran 的 GPU 长文）",
+  "kicker": "悠一 · 推特长文<b>精选</b>",
+  "hook": [
+    "AI 工程师需要知道的",
+    "GPU 知识"
+  ],
+  "lines": [
+    {
+      "id": "N01",
+      "zh": "H100 生成一个 token，等数据的时间，约是算数的 145 倍。",
+      "say": "H 一百生成一个 token，等数据的时间，大约是算数的一百四十五倍。",
+      "en": "For every token an H100 generates, it waits on data about 145 times longer than it spends on math."
+    },
+    {
+      "id": "N02",
+      "zh": "条件：gpt-oss-120b，一张卡，一个用户。",
+      "say": "条件是 G P T O S S 一百二十 B，一张卡，一个用户。",
+      "en": "The setup: gpt-oss-120b, one GPU, one user."
+    },
+    {
+      "id": "N03",
+      "zh": "MLOps 工程师 @kmeanskaran，10 月 1 日在 X 发长文，按规格表算的。",
+      "say": "做 M L Ops 的工程师卡兰，十月一号在 X 上发长文，按规格表算出来的。",
+      "en": "MLOps engineer @kmeanskaran, in a long X article on October 1, worked it out from spec sheets.",
+      "cut": [
+        [
+          "@kmeanskaran，",
+          "@kmeanskaran,"
+        ],
+        [
+          "发长文，",
+          "October 1,"
+        ]
+      ]
+    },
+    {
+      "id": "N04",
+      "zh": "怎么算的？算一个 token，H100 约 0.01 毫秒。",
+      "say": "怎么算的？算一个 token，H 一百大约零点零一毫秒。",
+      "en": "How? The math for one token takes an H100 about 0.01 ms."
+    },
+    {
+      "id": "N05",
+      "zh": "作者估算，每个 token 都要从显存搬约 5 GB 权重。",
+      "say": "作者估算，每个 token，都要从显存里搬一遍，大约五个 G B 的权重。",
+      "en": "The author estimates that each token means hauling about 5 GB of weights out of memory."
+    },
+    {
+      "id": "N06",
+      "zh": "H100 显存带宽 3.35 TB/s，搬一趟要 1.5 毫秒。",
+      "say": "H 一百的显存带宽，每秒三点三五 T B，搬一趟要一点五毫秒。",
+      "en": "At 3.35 TB/s of memory bandwidth, that haul takes 1.5 ms."
+    },
+    {
+      "id": "N07",
+      "zh": "所以一个用户，理论上每秒最多约 670 个 token。",
+      "say": "所以一个用户，理论上每秒最多，大约六百七十个 token。",
+      "en": "So one user tops out near 670 tokens a second, in theory."
+    },
+    {
+      "id": "N08",
+      "zh": "H200 算力和 H100 一样，换的是显存：141 GB，每秒 4.8 TB。",
+      "say": "H 两百的算力和 H 一百一样，换的是显存：一百四十一 G B，每秒四点八 T B。",
+      "en": "The H200 has the same compute as the H100. What changed is memory: 141 GB at 4.8 TB/s."
+    },
+    {
+      "id": "N09",
+      "zh": "训练更吃显存：每个参数约 18 字节。",
+      "say": "训练更吃显存：每个参数，大约十八个字节。",
+      "en": "Training is hungrier for memory: about 18 bytes per parameter."
+    },
+    {
+      "id": "N10",
+      "zh": "粗算：gpt-oss-120b 训练约 2.1 TB，部署约 65 GB。",
+      "say": "粗算下来，G P T O S S 一百二十 B，训练大约两点一 T B，部署大约六十五 G B。",
+      "en": "Rough math: gpt-oss-120b takes about 2.1 TB to train, but only about 65 GB to serve."
+    },
+    {
+      "id": "N11",
+      "zh": "1170 亿个参数，怎么塞进 65 GB？靠 4 位量化。",
+      "say": "一千一百七十亿个参数，怎么塞进六十五 G B？靠四位量化。",
+      "en": "How do 117 billion parameters fit in 65 GB? 4-bit quantization."
+    },
+    {
+      "id": "N12",
+      "zh": "BF16 要 234 GB，压成 4 位只剩约 65 GB。",
+      "say": "B F 十六要二百三十四 G B，压成四位，只剩大约六十五 G B。",
+      "en": "In BF16 it would be 234 GB. Squeezed to 4-bit, it shrinks to about 65 GB."
+    },
+    {
+      "id": "N13",
+      "zh": "按 Hugging Face 的标价，一小时 2.5 美元的 A100，勉强装得下。",
+      "say": "按 Hugging Face 的标价，一小时两块五美元的 A 一百，勉强装得下。",
+      "en": "On Hugging Face's price list, an A100 80 GB at $2.50 an hour can just about hold it.",
+      "cut": [
+        [
+          "标价，",
+          "price list,"
+        ]
+      ]
+    },
+    {
+      "id": "N15",
+      "zh": "Kimi K3 的权重约 1.56 TB，8 张 H200 的 1128 GB 都装不下。",
+      "say": "Kimi K 三的权重，大约一点五六 T B，八张 H 两百加起来的一千一百二十八 G B，都装不下。",
+      "en": "Kimi K3's weights come to about 1.56 TB. Even eight H200s, 1,128 GB in all, can't hold them."
+    },
+    {
+      "id": "N16",
+      "zh": "但作者自己说：没实测过，速度都是规格表算的。",
+      "say": "但作者自己说：这些 GPU 没实测过，速度都是规格表算出来的。",
+      "en": "But the author admits these GPUs were never benchmarked. The speeds are spec-sheet math."
+    },
+    {
+      "id": "N17",
+      "zh": "作者的建议是两次除法：权重除以显存，看装不装得下。",
+      "say": "作者的建议是两次除法：权重除以显存，看装不装得下。",
+      "en": "The author's advice is two divisions: weights divided by VRAM tells you if it fits."
+    },
+    {
+      "id": "N18",
+      "zh": "每个 token 要读的权重除以带宽，看能跑多快。",
+      "say": "每个 token 要读的权重，除以带宽，看能跑多快。",
+      "en": "The weights each token must read, divided by bandwidth, tell you how fast it can go."
+    },
+    {
+      "id": "N19",
+      "zh": "先做两次除法，再掏钱租卡。",
+      "say": "先做两次除法，再掏钱租卡。",
+      "en": "Do the two divisions first. Then pay for the card."
+    }
+  ]
+}

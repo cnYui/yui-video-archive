@@ -1,0 +1,166 @@
+{
+  "_说明": "交付包阶段先写 titles（3 个候选 × 4 个平台 = 3×4）和各平台默认项；用户回“封面 X 标题 Y 同意”后，把选中的那条标题写进各平台字段（bilibili.title / douyin.title / xiaohongshu.title / weixin_channels.short_title），approval 记下选择和时间。scripts/check_titles.py 按各平台要求核对字数：B 站标题 ≤ 80 / 抖音 ≤ 30（话题 ≤ 5）/ 小红书 ≤ 20 / 视频号短标题 6–16；放不下的完整标题放抖音描述、小红书正文、视频号描述的第一行。三个标题角度要真有区别（事实陈述 / 数字悬念 / 泼冷水），不和封面大字同一句。",
+  "slug": "不再Review短视频",
+  "video": "D:\\大疆\\独立视频\\短视频\\2026-10_不再Review\\不再Review短视频_成片.mp4（用户拖进各平台上传区；不压缩、不绕 10 MB）",
+  "duration_s": 54.13,
+  "approval": {
+    "status": "approved",
+    "cover": "A",
+    "title": 1,
+    "approved_at": "2026-10-05 11:57（日本时间）",
+    "note": "用户回“并行，封面用A，短视频发完后，长视频也发四个平台”；标题按推荐的第 1 个；成片第 0 帧 = 封面 A（cover_frame0.py，原片留 _成片_无封面帧.mp4）。15:15 用户又要求封面统一成白字 + 橙字的框版（见技能 short-video 硬性要求 14），已重做封面 A、成片第 0 帧，并替换已发布的封面。"
+  },
+  "titles": [
+    {
+      "id": 1,
+      "angle": "事实陈述（主体 + 动作 + 数字）",
+      "recommend": true,
+      "bilibili": "一个月合并2000多个PR，却不逐个Review：SpaceXAI工程师Lauren Tan是怎么把关的？",
+      "douyin": "一个月2000多个PR不逐个Review，她怎么把关？",
+      "xiaohongshu": "2000个PR不逐个看，她怎么把关",
+      "weixin_channels": "不逐个Review的把关法"
+    },
+    {
+      "id": 2,
+      "angle": "数字悬念（每天 67 个、17 小时）",
+      "bilibili": "每天67个PR、17小时看不完：Lauren Tan改成抽样，再靠验证和规矩兜底",
+      "douyin": "每天67个PR要看17小时，她改成了抽样",
+      "xiaohongshu": "每天67个PR，17小时看不完",
+      "weixin_channels": "每天67个PR看不完"
+    },
+    {
+      "id": 3,
+      "angle": "泼冷水（她自己说很难、撤不回的没答案）",
+      "bilibili": "AI自己合并PR、早上再抽查：Lauren Tan说走到这一步非常难，撤不回的活她也没有答案",
+      "douyin": "AI自己合并PR，她却说走到这一步非常难",
+      "xiaohongshu": "AI自动合并PR，她说很难",
+      "weixin_channels": "AI自己合并，她说很难"
+    }
+  ],
+  "covers": {
+    "3x4": "制作/04_封面/封面_选定_3x4.png",
+    "16x9": "制作/04_封面/封面_选定_16x9.png",
+    "4x3": "制作/04_封面/封面_选定_4x3.png"
+  },
+  "source": {
+    "original_post": "Matt Pocock 的 YouTube 直播（2026-10-02，LIVE: Poteto (creator of pstack) on shipping 1,000's of PR's a month at SpaceX）https://www.youtube.com/watch?v=MN9dGgmLyso ；Lauren Tan 的演讲视频（X，2026-09-21）https://x.com/poteto/status/2102050467505430555",
+    "original_author": "Matt Pocock（直播）、Lauren Tan @poteto（演讲、pstack 作者）",
+    "project_or_site": "pstack：https://github.com/cursor/plugins/tree/main/pstack（MIT）；官方指南 Run work while you sleep"
+  },
+  "bilibili": {
+    "title": "一个月合并2000多个PR，却不逐个Review：SpaceXAI工程师Lauren Tan是怎么把关的？",
+    "desc": "画面来自 Matt Pocock 的 YouTube 直播（2026-10-02）、Lauren Tan 在 X 上发的演讲视频和 pstack 官方文档，版权归原作者，仅作介绍与评论引用。\n配音：温柔男生声线（AI 生成），剪辑：Claude Code（Sonnet 5.5）；含 AI 生成内容。\n\nLauren Tan（网名 poteto，SpaceXAI 做 Grok Bot，pstack 的作者）说她一个月发了 2000 多个 PR，却不逐个 Review。\n她的做法：抽样代替逐个看；让 AI 像真人用户一样把程序跑一遍；把 AI 犯过的错写成 lint 规则；pstack 官方文档里的全自动模式要一组验证者出“干净”裁决才允许合并；合并之后她早上翻提交记录、有问题就撤回再加规则。\n她自己也说：走到这一步非常难，撤不回、又难验证的活，她没有答案。\n\n“2000 多个”是她自己报的：演讲首页写 2000，推文写 2500，不是官方统计；她说的是合并之前不逐个看，合并之后她仍会看、早上抽查。\n\n完整版（访谈 + 演讲原话同传，7 分多钟）：长视频《一个月合并2000多个PR，却不逐个Review》（投稿后补链接）。",
+    "declaration": "含AI生成内容",
+    "category": "人工智能（tid 231）",
+    "tags": [
+      "AI编程",
+      "代码审查",
+      "Code Review",
+      "Cursor",
+      "AI Agent",
+      "软件工程",
+      "程序员",
+      "人工智能",
+      "Grok",
+      "pstack"
+    ],
+    "collection": null,
+    "repost_source": "https://www.youtube.com/watch?v=MN9dGgmLyso ；https://x.com/poteto/status/2102050467505430555",
+    "cover": "两个位各传各的（双比例同步改动不勾）：16:9 → 个人空间封面，4:3 → 首页推荐封面",
+    "published": null
+  },
+  "douyin": {
+    "title": "一个月2000多个PR不逐个Review，她怎么把关？",
+    "desc": "一个月合并2000多个PR，却不逐个Review：SpaceXAI工程师Lauren Tan是怎么把关的？\n画面来自 Matt Pocock 的 YouTube 直播（2026-10-02）、Lauren Tan 在 X 上发的演讲视频和 pstack 官方文档，版权归原作者，仅作介绍与评论引用。\n配音：温柔男生声线（AI 生成），剪辑：Claude Code（Sonnet 5.5）；含 AI 生成内容。\n\nLauren Tan（网名 poteto，SpaceXAI 做 Grok Bot，pstack 的作者）说她一个月发了 2000 多个 PR，却不逐个 Review。\n她自己也说：走到这一步非常难，撤不回、又难验证的活，她没有答案。",
+    "topics": [
+      "AI编程",
+      "代码审查",
+      "程序员",
+      "AIAgent",
+      "人工智能"
+    ],
+    "declaration": "内容由AI生成",
+    "collection": null,
+    "cover": "竖封面 3:4 = 封面_选定_3x4.png；横封面 4:3 = 封面_选定_4x3.png",
+    "published": null
+  },
+  "xiaohongshu": {
+    "title": "2000个PR不逐个看，她怎么把关",
+    "desc": "一个月合并2000多个PR，却不逐个Review：SpaceXAI工程师Lauren Tan是怎么把关的？\n画面来自 Matt Pocock 的 YouTube 直播（2026-10-02）、Lauren Tan 在 X 上发的演讲视频和 pstack 官方文档，版权归原作者，仅作介绍与评论引用。\n配音：温柔男生声线（AI 生成），剪辑：Claude Code（Sonnet 5.5）；含 AI 生成内容。\n\nLauren Tan（网名 poteto，SpaceXAI 做 Grok Bot，pstack 的作者）说她一个月发了 2000 多个 PR，却不逐个 Review。\n她的做法：抽样代替逐个看；让 AI 像真人用户一样把程序跑一遍；把 AI 犯过的错写成 lint 规则；pstack 官方文档里的全自动模式要一组验证者出“干净”裁决才允许合并；合并之后她早上翻提交记录、有问题就撤回再加规则。\n她自己也说：走到这一步非常难，撤不回、又难验证的活，她没有答案。\n\n“2000 多个”是她自己报的：演讲首页写 2000，推文写 2500，不是官方统计；她说的是合并之前不逐个看，合并之后她仍会看、早上抽查。",
+    "topics": [
+      "AI编程",
+      "代码审查",
+      "CodeReview",
+      "Cursor",
+      "AIAgent",
+      "软件工程",
+      "程序员",
+      "人工智能",
+      "Grok",
+      "pstack"
+    ],
+    "declaration": "笔记含AI合成内容",
+    "cover": "3:4 = 封面_选定_3x4.png",
+    "published": null
+  },
+  "weixin_channels": {
+    "short_title": "不逐个Review的把关法",
+    "desc": "一个月合并2000多个PR，却不逐个Review：SpaceXAI工程师Lauren Tan是怎么把关的？\n画面来自 Matt Pocock 的 YouTube 直播（2026-10-02）、Lauren Tan 在 X 上发的演讲视频和 pstack 官方文档，版权归原作者，仅作介绍与评论引用。\n配音：温柔男生声线（AI 生成），剪辑：Claude Code（Sonnet 5.5）；含 AI 生成内容。\n\nLauren Tan（网名 poteto，SpaceXAI 做 Grok Bot，pstack 的作者）说她一个月发了 2000 多个 PR，却不逐个 Review。\n她的做法：抽样代替逐个看；让 AI 像真人用户一样把程序跑一遍；把 AI 犯过的错写成 lint 规则；pstack 官方文档里的全自动模式要一组验证者出“干净”裁决才允许合并；合并之后她早上翻提交记录、有问题就撤回再加规则。\n她自己也说：走到这一步非常难，撤不回、又难验证的活，她没有答案。\n\n“2000 多个”是她自己报的：演讲首页写 2000，推文写 2500，不是官方统计；她说的是合并之前不逐个看，合并之后她仍会看、早上抽查。",
+    "topics": [
+      "AI编程",
+      "代码审查",
+      "CodeReview",
+      "Cursor",
+      "AIAgent",
+      "软件工程",
+      "程序员",
+      "人工智能",
+      "Grok",
+      "pstack"
+    ],
+    "declaration": "视频标注：含AI生成内容",
+    "location": "不显示位置",
+    "collection": null,
+    "cover": "成片第 0 帧 = 选定的封面（cover_frame0.py）；编辑封面选第 0 帧，3:4 裁剪框对到画面 y 450–1890（居中）",
+    "published": null
+  },
+  "published": {
+    "date": "2026-10-05（日本时间）",
+    "order": "B 站 15:08 → 抖音 15:11（审核中）→ 小红书 15:24（新封面）→ 视频号不发（用户 2026-10-06 定）",
+    "uploaded_file": "B 站 / 抖音 = 旧第 0 帧的成片（发布后换了封面）；小红书 = 新第 0 帧的成片；视频号不发（用户 2026-10-06 定）",
+    "bilibili": {
+      "bvid": "BV1pcHp64ECz",
+      "state": "开放浏览（state 0，15:2x 线上核对）",
+      "tid": 231,
+      "tags": "10 个：AI编程 / 代码审查 / Code Review / Cursor / AI Agent / 软件工程 / 人工智能 / Grok / pstack / 大模型（计划里的“程序员”被 B 站静默丢掉，补了“大模型”）",
+      "cover": "15:25–15:27 从编辑页换成新框版封面 A（两个位各传各的）；线上 cover 1920x1080 = 16:9 版、cover43 1440x1080 = 4:3 版，下载下来看过都是新样式（白字 + 橙字黑描边、边框 6、黄贴纸）",
+      "copyright_field": "copyright 3 / source 空，和 image-blaster、MuseGadgets 两条一致",
+      "declaration": "含AI生成内容",
+      "collection": null
+    },
+    "douyin": {
+      "state": "15:11 点发布，内容管理第一条“审核中”；15:28 改封面提交修改，15:30 显示“修改审核中”（结果回头再看）",
+      "declaration": "内容由AI生成",
+      "covers": "竖 3:4 + 横 4:3；发布时是旧封面，15:28 起换成新框版封面 A",
+      "topics": "AI编程 / 代码审查 / 程序员 / AIAgent / 人工智能（5 个）",
+      "checked": "15:4x 内容管理里这条（“一个月2000多个PR不逐个Review，她怎么把关？”，2026-10-05 15:11 已发布）仍显示“修改审核中”，播放 0；封面审核结果回头再看"
+    },
+    "xiaohongshu": {
+      "state": "15:24 发布成功（发布时就是新封面）",
+      "declaration": "笔记含AI合成内容",
+      "original_declaration": "关",
+      "topics": "10 个（`#词` 逐个打，等 2 s 下拉再回车）",
+      "note": "“发布”按钮 DOM / 无障碍树里找不到，只能按截图坐标点",
+      "checked": "15:4x 笔记管理里这条“2000个PR不逐个看，她怎么把关”显示 14:23（北京时间 = 15:23 JST），35 次观看"
+    },
+    "weixin_channels": {
+      "state": "待发：等用户把新成片拖进视频号页（我的标签 582105924）",
+      "short_title": "不逐个Review的把关法",
+      "location": "不显示位置（要手动选，每次都要）",
+      "annotation": "含AI生成内容",
+      "cover": "第 0 帧 = 封面 A；编辑封面里 3:4 裁剪框居中 y 450–1890"
+    },
+    "links": "只记了 B 站 BV；抖音 / 小红书 / 视频号的作品链接没取",
+    "checked_at": "15:4x（日本时间）线上核对一次：B 站接口（state 0、cover / cover43 下载看过）、抖音内容管理、小红书笔记管理"
+  }
+}

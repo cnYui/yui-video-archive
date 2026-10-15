@@ -1,0 +1,133 @@
+{
+  "layout": "single",
+  "plan": [
+    {
+      "id": "A1",
+      "type": "card",
+      "kind": "page",
+      "overlay": "page",
+      "name": "官方数据",
+      "dur": 1.0,
+      "lines": [
+        {
+          "id": "N01",
+          "a": 0.1
+        },
+        {
+          "id": "N02",
+          "a": 0.0
+        },
+        {
+          "id": "N03",
+          "a": 0.0
+        }
+      ]
+    },
+    {
+      "id": "A2",
+      "type": "card",
+      "kind": "page",
+      "overlay": "page",
+      "name": "三条封号理由",
+      "dur": 1.0,
+      "lines": [
+        {
+          "id": "N04",
+          "a": 0.1
+        }
+      ]
+    },
+    {
+      "id": "A3",
+      "type": "card",
+      "kind": "page",
+      "overlay": "page",
+      "name": "9 月报告：可要求验证身份",
+      "dur": 1.0,
+      "lines": [
+        {
+          "id": "N05",
+          "a": 0.1
+        }
+      ]
+    },
+    {
+      "id": "A4",
+      "type": "card",
+      "kind": "page",
+      "overlay": "page",
+      "name": "南华早报：国庆第一天",
+      "dur": 1.0,
+      "lines": [
+        {
+          "id": "N06",
+          "a": 0.1
+        }
+      ]
+    },
+    {
+      "id": "A5",
+      "type": "card",
+      "kind": "page",
+      "overlay": "page",
+      "name": "两位博主说法相反",
+      "dur": 1.0,
+      "lines": [
+        {
+          "id": "N07",
+          "a": 0.1
+        },
+        {
+          "id": "N08",
+          "a": 0.0
+        }
+      ]
+    },
+    {
+      "id": "A6",
+      "type": "card",
+      "kind": "page",
+      "overlay": "page",
+      "name": "官方没公布",
+      "dur": 1.0,
+      "lines": [
+        {
+          "id": "N09",
+          "a": 0.1
+        },
+        {
+          "id": "N10",
+          "a": 0.0
+        }
+      ]
+    },
+    {
+      "id": "A7",
+      "type": "card",
+      "kind": "page",
+      "overlay": "page",
+      "name": "被封后官方的路 / 付款不退",
+      "dur": 1.0,
+      "lines": [
+        {
+          "id": "N11",
+          "a": 0.1
+        }
+      ]
+    },
+    {
+      "id": "A8",
+      "type": "card",
+      "kind": "page",
+      "overlay": "page",
+      "name": "收尾",
+      "dur": 1.0,
+      "lines": [
+        {
+          "id": "N12",
+          "a": 0.1
+        }
+      ]
+    }
+  ]
+}

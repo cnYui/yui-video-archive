@@ -1,0 +1,17 @@
+{
+  "slug": "REA逆向设备",
+  "title": "REA：把设备协议从厂商 App 里拎出来",
+  "hook": ["厂商 App 不是终点", "REA 顺着证据查协议"],
+  "kicker": "开源项目 · REA",
+  "lines": [
+    {"id":"L01","zh":"厂商 App 怎么控制设备？现在可以顺着证据往回查。","say":"厂商 App 怎么控制设备？现在可以顺着证据往回查。","en":"How does a vendor app control a device? Follow the evidence back."},
+    {"id":"L02","zh":"这个项目叫 REA，Reverse Engineer Anything，MIT 开源。","say":"这个项目叫 REA，Reverse Engineer Anything，MIT 开源。","en":"It is REA, Reverse Engineer Anything, released under the MIT license."},
+    {"id":"L03","zh":"截至今天，GitHub 约二十一万八千颗 Star。","say":"截至今天，GitHub 约二十一万八千颗 Star。","en":"As of today, it has about 218 thousand GitHub stars."},
+    {"id":"L04","zh":"它先接入 Agent，再把网页、App、二进制和运行行为拆开看。","say":"它先接入 Agent，再把网页、App、二进制和运行行为拆开看。","en":"It connects to an agent, then inspects web apps, binaries, and runtime behavior."},
+    {"id":"L05","zh":"安卓设备可以用 ADB 找包、拉 APK；网络请求可以读 HAR 或 mitmproxy。","say":"安卓设备可以用 ADB 找包、拉 APK；网络请求可以读 HAR 或 mitmproxy。","en":"ADB can find and pull APKs; network traffic can come from HAR or mitmproxy captures."},
+    {"id":"L06","zh":"固件再交给 Binwalk、Unblob 解包，选出的原生文件接 Ghidra。","say":"固件再交给 Binwalk、Unblob 解包，选出的原生文件接 Ghidra。","en":"Firmware can go through Binwalk and Unblob, then selected native files into Ghidra."},
+    {"id":"L07","zh":"证据带着出处和限制回到 Claude Code 或 Codex，Agent 才能继续还原功能。","say":"证据带着出处和限制回到 Claude Code 或 Codex，Agent 才能继续还原功能。","en":"Evidence and limitations return to Claude Code or Codex before the agent reconstructs a feature."},
+    {"id":"L08","zh":"所以空调、热水器、灯的控制端，理论上可以自己写；能不能成，要看协议和权限。","say":"所以空调、热水器、灯的控制端，理论上可以自己写；能不能成，要看协议和权限。","en":"You may build your own controller for an AC, heater, or light—but protocol and access decide."},
+    {"id":"L09","zh":"厂商 App 只是入口，设备真正的规则，终于可以被看见。","say":"厂商 App 只是入口，设备真正的规则，终于可以被看见。","en":"The vendor app is only an entry point; the device's real rules can finally be seen."}
+  ]
+}

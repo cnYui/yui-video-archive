@@ -1,0 +1,162 @@
+{
+  "_说明": "交付包阶段先写 titles（3 个候选 × 4 个平台 = 3×4）和各平台默认项；用户回“封面 X 标题 Y 同意”后，把选中的那条标题写进各平台字段（bilibili.title / douyin.title / xiaohongshu.title / weixin_channels.short_title），approval 记下选择和时间。scripts/check_titles.py 按各平台要求核对字数：B 站标题 ≤ 80 / 抖音 ≤ 30（话题 ≤ 5）/ 小红书 ≤ 20 / 视频号短标题 6–16；放不下的完整标题放抖音描述、小红书正文、视频号描述的第一行。三个标题角度要真有区别（事实陈述 / 数字悬念 / 泼冷水），不和封面大字同一句。",
+  "slug": "text-to-cad插件",
+  "video": "D:\\大疆\\独立视频\\短视频\\2026-10_text-to-cad\\text-to-cad插件_成片.mp4（用户拖进各平台上传区；不压缩、不绕 10 MB）",
+  "duration_s": 71.667,
+  "approval": {
+    "status": "approved",
+    "cover": "A（文字：一句话来修改模型；白字 + 橙字贴纸风）",
+    "title": 1,
+    "approved_at": "2026-10-04",
+    "note": "用户已确认四个平台发布，不选合集；发布前需在页面读回字段后点发布。"
+  },
+  "titles": [
+    {
+      "id": 1,
+      "angle": "事实陈述（主体 + 动作 + 格式）",
+      "recommend": true,
+      "bilibili": "Codex 桌面版上线开源 CAD 插件 text-to-cad：用大白话改发动机零件，导出 STEP、STL、3MF、GLB",
+      "douyin": "Codex 上线开源 CAD 插件 text-to-cad",
+      "xiaohongshu": "Codex 上线开源 CAD 插件",
+      "weixin_channels": "Codex 上线 CAD 插件"
+    },
+    {
+      "id": 2,
+      "angle": "数字悬念",
+      "bilibili": "1217.5 毫米变 2435 毫米：Codex 里的开源 CAD 插件 text-to-cad，12 个技能，1.66 万 star（10/4 读数）",
+      "douyin": "Codex 的 CAD 插件：12个技能，1.66万star",
+      "xiaohongshu": "12个技能的开源CAD插件",
+      "weixin_channels": "12个技能的CAD插件"
+    },
+    {
+      "id": 3,
+      "angle": "泼冷水（演示加速 / 不是官方 / 不是制造认证）",
+      "bilibili": "Codex 的开源 CAD 插件 text-to-cad：能画能查，但不是 OpenAI 出品，也不是制造认证，演示还是加速过的",
+      "douyin": "Codex 的 CAD 插件：能画能查，但不是官方出品",
+      "xiaohongshu": "Codex 画 CAD：先看这几点",
+      "weixin_channels": "CAD插件的几点提醒"
+    }
+  ],
+  "covers": {
+    "3x4": "制作/04_封面/封面_选定_3x4.png",
+    "16x9": "制作/04_封面/封面_选定_16x9.png",
+    "4x3": "制作/04_封面/封面_选定_4x3.png"
+  },
+  "source": {
+    "original_post": "https://x.com/earthtojake/status/2106120308037947785（2026-10-02 20:33 UTC，北京 10/3 04:33）；7 月演示 https://x.com/earthtojake/status/2081826428295729284（2026-07-27）",
+    "original_author": "@earthtojake（Jake Fitzgerald）",
+    "project_or_site": "https://github.com/earthtojake/text-to-cad（MIT，第三方开源，不是 OpenAI 官方出品）；官网 https://www.texttocad.dev"
+  },
+  "bilibili": {
+    "title": "Codex 桌面版上线开源 CAD 插件 text-to-cad：用大白话改发动机零件，导出 STEP、STL、3MF、GLB",
+    "desc": "Codex 桌面版上线开源 CAD 插件 text-to-cad，作者 @earthtojake（Jake Fitzgerald）。\n· 演示：在已有的星形发动机模型上说 make the propeller twice as long，Codex 量出桨叶 1217.5 mm，改成 2435 mm，检查是合法实体后保存。演示视频是加速过的，屏幕计时已走到 4 分多钟。\n· 仓库说明（读于 2026-10-04）：12 个技能；STEP 为主输出，可导出 STL、3MF、GLB；打印、钣金、数控、注塑各有可制造性检查，DFM 技能自己写明“辅助评审，不是制造认证”；拓竹和 SendCutSend 是在对方软件里打开文件 / 上传前预检，开始打印和下单仍要人来点。\n· 装法：codex plugin marketplace add earthtojake/text-to-cad，再 codex plugin add text-to-cad@earthtojake；要 Codex 0.142.0 以上、先装 uv。Windows 11 开着智能应用控制会拦它的核心库（作者 README 提醒）。\n· 第三方开源插件（MIT），不是 OpenAI 官方出品。4 月 22 日首发，7 月 27 日作者称破 1 万 star，10 月 4 日 18:31（北京时间）读到 1.66 万。\n来源：作者推文 x.com/earthtojake/status/2106120308037947785 、7 月演示 x.com/earthtojake/status/2081826428295729284 、GitHub github.com/earthtojake/text-to-cad\n画面来自上述推文和 GitHub 页面，版权归原作者；配音为 AI 生成（温柔男生声线），BGM 为程序合成的原创音乐。",
+    "declaration": "含AI生成内容",
+    "category": "人工智能（tid 231）",
+    "tags": [
+      "Codex",
+      "CAD",
+      "text-to-cad",
+      "开源",
+      "AI编程",
+      "OpenAI",
+      "3D建模",
+      "插件",
+      "3D打印",
+      "人工智能"
+    ],
+    "collection": "不选合集（用户明确要求）",
+    "repost_source": "https://x.com/earthtojake/status/2106120308037947785",
+    "cover": "两个位各传各的（双比例同步改动不勾）：16:9 → 个人空间封面，4:3 → 首页推荐封面",
+    "published": {
+      "state": "已投递，内容管理可见",
+      "bvid": "BV1jKHE6BEkN",
+      "url": "https://www.bilibili.com/video/BV1jKHE6BEkN",
+      "time": "2026-10-04 20:35:13（B站内容管理）",
+      "title": "Codex 桌面版上线开源 CAD 插件 text-to-cad：用大白话改发动机零件，导出 STEP、STL、3MF、GLB",
+      "duration_s": 72,
+      "evidence": "B站内容管理首条记录显示该标题、BV号和 00:01:12；发布页曾显示“稿件投递成功”。"
+    },
+    "publish_status": "已投递；B站内容管理可见，待审核状态以平台页面为准"
+  },
+  "douyin": {
+    "title": "Codex 上线开源 CAD 插件 text-to-cad",
+    "desc": "Codex 桌面版上线开源 CAD 插件 text-to-cad：大白话改零件、导出 STEP/STL/3MF/GLB、查可制造性。演示被加速过；第三方开源，不是 OpenAI 官方出品。来源：作者 @earthtojake 推文 + GitHub。配音为 AI 生成。",
+    "topics": [
+      "Codex",
+      "CAD",
+      "AI编程",
+      "开源",
+      "3D打印"
+    ],
+    "declaration": "内容由AI生成",
+    "collection": null,
+    "cover": "竖封面 3:4 = 封面_选定_3x4.png；横封面 4:3 = 封面_选定_4x3.png",
+    "published": {
+      "state": "已发布",
+      "time": "2026-10-04 21:55（抖音内容管理）",
+      "title": "Codex 上线开源 CAD 插件 text-to-cad",
+      "evidence": "抖音内容管理首条作品显示 01:12、该标题和“已发布”。平台将话题 3D打印显示为 3d打印玩具。"
+    },
+    "publish_status": "已发布；抖音内容管理显示“已发布”"
+  },
+  "xiaohongshu": {
+    "title": "Codex 上线开源 CAD 插件",
+    "desc": "Codex 桌面版上线开源 CAD 插件 text-to-cad，作者 @earthtojake。\n演示：对已有的发动机模型说“螺旋桨加长一倍”，桨叶 1217.5 → 2435 毫米（演示被加速过，屏幕计时 4 分多钟）。\n12 个技能：STEP 为主、可导出 STL/3MF/GLB；打印、钣金、数控、注塑的可制造性检查（自己写明是辅助评审，不是制造认证）；拓竹和 SendCutSend 是交接，开始打印、下单仍要人来点。\n装法两行命令，要 Codex 0.142.0 以上 + uv；Windows 11 的智能应用控制可能拦它。\n第三方开源（MIT），不是 OpenAI 官方出品。画面来自作者推文和 GitHub，配音为 AI 生成。",
+    "topics": [
+      "Codex",
+      "CAD",
+      "AI编程",
+      "开源项目",
+      "3D打印",
+      "OpenAI",
+      "AI工具",
+      "人工智能",
+      "插件",
+      "机械设计"
+    ],
+    "declaration": "笔记含AI合成内容",
+    "cover": "3:4 = 封面_选定_3x4.png",
+    "published": {
+      "state": "已发布",
+      "time": "2026-10-04 21:06（小红书笔记管理）",
+      "title": "Codex 上线开源 CAD 插件",
+      "evidence": "小红书笔记管理的已发布列表出现 01:11、该标题的条目。"
+    },
+    "publish_status": "已发布；小红书笔记管理可见"
+  },
+  "weixin_channels": {
+    "short_title": "Codex 上线 CAD 插件",
+    "desc": "Codex 桌面版上线开源 CAD 插件 text-to-cad：大白话改零件、导出 STEP/STL/3MF/GLB、查可制造性。演示被加速过；第三方开源，不是 OpenAI 官方出品。来源：作者 @earthtojake 推文 + GitHub。配音为 AI 生成。",
+    "topics": [
+      "Codex",
+      "CAD",
+      "AI编程",
+      "开源项目",
+      "3D打印",
+      "OpenAI",
+      "AI工具",
+      "人工智能",
+      "插件",
+      "机械设计"
+    ],
+    "declaration": "视频标注：含AI生成内容",
+    "location": "不显示位置",
+    "collection": null,
+    "cover": "发布页封面预览和发布后视频管理缩略图均显示选定的封面_选定_3x4.png（文字：一句话来修改模型）",
+    "published": {
+      "state": "已发表",
+      "time": "2026-10-04 22:32（视频号视频管理）",
+      "short_title": "Codex 上线 CAD 插件",
+      "evidence": "视频号视频管理首条记录显示短标题对应的描述、发布时间 22:32；发布后缩略图为选定封面。"
+    },
+    "publish_status": "已发表；视频号视频管理首条记录可见"
+  },
+  "published": {
+    "checked_at": "2026-10-04 22:36（JST）",
+    "state": "四个平台均已完成投稿并在线核对",
+    "bilibili": "BV1jKHE6BEkN，内容管理可见",
+    "douyin": "已发布，内容管理可见",
+    "xiaohongshu": "已发布，笔记管理可见",
+    "weixin_channels": "已发表，视频管理可见"
+  }
+}

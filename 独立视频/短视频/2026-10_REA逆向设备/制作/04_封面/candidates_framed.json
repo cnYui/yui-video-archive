@@ -1,0 +1,78 @@
+{
+  "candidates": [
+    {
+      "id": "A",
+      "recommend": true,
+      "note": "设备控制端角度，推荐",
+      "video": "D:\\大疆\\独立视频\\素材\\2026-10_REA逆向设备\\MideaBar_官方演示封面.jpg",
+      "t": 0,
+      "crop": [
+        0,
+        0,
+        1,
+        0.78
+      ],
+      "big": [
+        "设备协议",
+        "自己掌握"
+      ],
+      "accent_line": 1,
+      "sticker": "独立示例 · MideaBar"
+    },
+    {
+      "id": "B",
+      "note": "逆向工具角度",
+      "video": "D:\\大疆\\独立视频\\素材\\2026-10_REA逆向设备\\REA_官方Hopper截图.png",
+      "t": 0,
+      "crop": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "big": [
+        "逆向一切",
+        "看见证据"
+      ],
+      "accent_line": 1,
+      "sticker": "REA · MIT 开源"
+    },
+    {
+      "id": "C",
+      "note": "REA 与 Agent 分工",
+      "video": "D:\\大疆\\独立视频\\素材\\2026-10_REA逆向设备\\X_0xlangeai_2109544824135467312_09.jpg",
+      "t": 0,
+      "crop": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "big": [
+        "看懂程序",
+        "再写功能"
+      ],
+      "accent_line": 1,
+      "sticker": "REA × Codex"
+    },
+    {
+      "id": "D",
+      "recommend": true,
+      "note": "用户指定：B 的文字 + A 的图片",
+      "video": "D:\\大疆\\独立视频\\素材\\2026-10_REA逆向设备\\MideaBar_官方演示封面.jpg",
+      "t": 0,
+      "crop": [
+        0,
+        0,
+        1,
+        0.78
+      ],
+      "big": [
+        "逆向一切",
+        "看见证据"
+      ],
+      "accent_line": 1,
+      "sticker": "独立示例 · MideaBar"
+    }
+  ]
+}

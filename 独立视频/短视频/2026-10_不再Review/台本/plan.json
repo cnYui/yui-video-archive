@@ -1,0 +1,351 @@
+{
+ "layout": "dual",
+ "plan": [
+  {
+   "id": "S1",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "钩子：2000 个 PR + 她是谁",
+   "credit": "Matt Pocock 直播",
+   "ranges": [
+    {
+     "src": "iv",
+     "in": 2392.0,
+     "out": 2402.8,
+     "mute": true,
+     "crop": [
+      0.5,
+      0.06,
+      1.0,
+      0.56
+     ]
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "tk",
+     "in": 1.0,
+     "hold": 11.0,
+     "crop": [
+      0.0558,
+      0.1296,
+      0.7942,
+      0.7907
+     ],
+     "bg": "#F9F8FB"
+    }
+   ],
+   "lines": [
+    {
+     "id": "N01",
+     "a": 0.0
+    },
+    {
+     "id": "N02",
+     "a": 0.0
+    },
+    {
+     "id": "N03",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "S2",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "算账：每天 67 个 → 抽样",
+   "credit": "Matt Pocock 直播",
+   "ranges": [
+    {
+     "src": "iv",
+     "in": 2960.4,
+     "out": 2965.9,
+     "mute": true,
+     "crop": [
+      0.0,
+      0.06,
+      0.5,
+      0.56
+     ]
+    },
+    {
+     "src": "iv",
+     "in": 2974.0,
+     "out": 2978.7,
+     "mute": true,
+     "crop": [
+      0.5,
+      0.06,
+      1.0,
+      0.56
+     ]
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "tk",
+     "in": 220.0,
+     "hold": 10.3,
+     "crop": [
+      0.2442,
+      0.1019,
+      0.7035,
+      0.8148
+     ],
+     "bg": "#F9F8FB"
+    }
+   ],
+   "lines": [
+    {
+     "id": "N04",
+     "a": 0.0
+    },
+    {
+     "id": "N05",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "S3",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "验证：给 AI 一双手和眼睛",
+   "credit": "Matt Pocock 直播",
+   "ranges": [
+    {
+     "src": "iv",
+     "in": 996.0,
+     "out": 1000.0,
+     "mute": true,
+     "crop": [
+      0.5,
+      0.06,
+      1.0,
+      0.56
+     ]
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "tk",
+     "in": 610.0,
+     "hold": 5.0,
+     "crop": [
+      0.0988,
+      0.1111,
+      0.8023,
+      0.75
+     ],
+     "bg": "#F8F5E8"
+    }
+   ],
+   "lines": [
+    {
+     "id": "N06",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "S4",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "规矩：写成 lint 规则",
+   "credit": "Matt Pocock 直播",
+   "ranges": [
+    {
+     "src": "iv",
+     "in": 1000.6,
+     "out": 1004.8,
+     "mute": true,
+     "crop": [
+      0.5,
+      0.06,
+      1.0,
+      0.56
+     ]
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "tk",
+     "in": 1010.0,
+     "hold": 5.0,
+     "crop": [
+      0.0872,
+      0.0509,
+      0.8721,
+      0.662
+     ],
+     "bg": "#F9F8FB"
+    }
+   ],
+   "lines": [
+    {
+     "id": "N07",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "S5",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "pstack README",
+   "credit": "Matt Pocock 直播",
+   "ranges": [
+    {
+     "src": "iv",
+     "in": 3170.0,
+     "out": 3173.0,
+     "mute": true,
+     "crop": [
+      0.5,
+      0.06,
+      1.0,
+      0.56
+     ]
+    }
+   ],
+   "lines": [
+    {
+     "id": "N08",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "S6",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "官方文档：全自动模式",
+   "credit": "Matt Pocock 直播",
+   "ranges": [
+    {
+     "src": "iv",
+     "in": 3174.0,
+     "out": 3180.0,
+     "mute": true,
+     "crop": [
+      0.5,
+      0.06,
+      1.0,
+      0.56
+     ]
+    }
+   ],
+   "lines": [
+    {
+     "id": "N09",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "S7",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "合并之后才看",
+   "credit": "Matt Pocock 直播",
+   "ranges": [
+    {
+     "src": "iv",
+     "in": 3235.5,
+     "out": 3240.3,
+     "mute": true,
+     "crop": [
+      0.5,
+      0.06,
+      1.0,
+      0.56
+     ]
+    }
+   ],
+   "lines": [
+    {
+     "id": "N10",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "S8",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "泼冷水：非常难、没有答案",
+   "credit": "Matt Pocock 直播",
+   "ranges": [
+    {
+     "src": "iv",
+     "in": 3080.2,
+     "out": 3085.4,
+     "mute": true,
+     "crop": [
+      0.5,
+      0.06,
+      1.0,
+      0.56
+     ]
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "iv",
+     "in": 3366.5,
+     "out": 3371.8,
+     "mute": true,
+     "crop": [
+      0.0,
+      0.06,
+      0.5,
+      0.56
+     ]
+    }
+   ],
+   "lines": [
+    {
+     "id": "N11",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "S9",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "收尾金句",
+   "credit": "Matt Pocock 直播",
+   "ranges": [
+    {
+     "src": "iv",
+     "in": 3257.0,
+     "out": 3261.6,
+     "mute": true,
+     "crop": [
+      0.5,
+      0.06,
+      1.0,
+      0.56
+     ]
+    }
+   ],
+   "lines": [
+    {
+     "id": "N12",
+     "a": 0.0
+    }
+   ]
+  }
+ ]
+}

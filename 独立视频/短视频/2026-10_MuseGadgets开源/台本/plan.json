@@ -1,0 +1,159 @@
+{
+  "layout": "single",
+  "plan": [
+    {
+      "id": "H1",
+      "type": "clip",
+      "kind": "demo",
+      "overlay": "clip",
+      "name": "开场：AYi 动画",
+      "credit": "@AYi_AInotes · X",
+      "ranges": [
+        {
+          "src": "a1",
+          "in": 0.0,
+          "out": 6.15
+        }
+      ],
+      "lines": [
+        {
+          "id": "N01",
+          "a": 0.15
+        }
+      ]
+    },
+    {
+      "id": "P1",
+      "type": "card",
+      "kind": "page",
+      "overlay": "page",
+      "name": "官宣：Nat → Wang",
+      "dur": 3.0,
+      "lines": [
+        {
+          "id": "N02",
+          "a": 0.15
+        }
+      ]
+    },
+    {
+      "id": "P2",
+      "type": "card",
+      "kind": "page",
+      "overlay": "page",
+      "name": "GitHub 仓库",
+      "dur": 3.0,
+      "lines": [
+        {
+          "id": "N03",
+          "a": 0.15
+        }
+      ]
+    },
+    {
+      "id": "P3",
+      "type": "card",
+      "kind": "page",
+      "overlay": "page",
+      "name": "上手：README → Nat",
+      "dur": 3.0,
+      "lines": [
+        {
+          "id": "N04",
+          "a": 0.15
+        }
+      ]
+    },
+    {
+      "id": "C1",
+      "type": "clip",
+      "kind": "demo",
+      "overlay": "clip",
+      "name": "八个现成项目",
+      "credit": "gadgets.muse.ai",
+      "ranges": [
+        {
+          "src": "c1",
+          "in": 0.0,
+          "out": 10.05
+        }
+      ],
+      "lines": [
+        {
+          "id": "N05",
+          "a": 0.2
+        }
+      ]
+    },
+    {
+      "id": "W1",
+      "type": "clip",
+      "kind": "demo",
+      "overlay": "clip",
+      "name": "Home Link",
+      "credit": "gadgets.muse.ai",
+      "ranges": [
+        {
+          "src": "w1",
+          "in": 0.0,
+          "out": 11.32
+        }
+      ],
+      "lines": [
+        {
+          "id": "N06",
+          "a": 0.2
+        }
+      ]
+    },
+    {
+      "id": "P4",
+      "type": "card",
+      "kind": "page",
+      "overlay": "page",
+      "name": "5000 台 + 仅限美国",
+      "dur": 3.0,
+      "lines": [
+        {
+          "id": "N07",
+          "a": 0.15
+        }
+      ]
+    },
+    {
+      "id": "P5",
+      "type": "card",
+      "kind": "page",
+      "overlay": "page",
+      "name": "官网泼冷水",
+      "dur": 3.0,
+      "lines": [
+        {
+          "id": "N08",
+          "a": 0.15
+        }
+      ]
+    },
+    {
+      "id": "W2",
+      "type": "clip",
+      "kind": "demo",
+      "overlay": "clip",
+      "name": "收尾：Muse VM",
+      "credit": "gadgets.muse.ai",
+      "ranges": [
+        {
+          "src": "w2",
+          "in": 0.0,
+          "out": 4.18
+        }
+      ],
+      "lines": [
+        {
+          "id": "N09",
+          "a": 0.2
+        }
+      ]
+    }
+  ]
+}

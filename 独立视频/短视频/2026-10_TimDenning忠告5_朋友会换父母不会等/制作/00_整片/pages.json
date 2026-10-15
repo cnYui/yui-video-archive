@@ -1,0 +1,244 @@
+{
+ "A_2": {
+  "src": "pages/A_2.png",
+  "w": 1536,
+  "h": 1442,
+  "url": "https://timdenning.substack.com/p/im-38-if-youre-in-your-20s-or-30s",
+  "bg": "#171717",
+  "marks": {
+   "Having kids isn't the end of freedom": [
+    [
+     136,
+     50,
+     1126,
+     106
+    ],
+    [
+     38,
+     145,
+     350,
+     106
+    ]
+   ],
+   "Your life is over when it happens, Timbo": [
+    [
+     57,
+     600,
+     731,
+     62
+    ]
+   ],
+   "it's the best experience of my life": [
+    [
+     1144,
+     779,
+     206,
+     62
+    ],
+    [
+     38,
+     844,
+     373,
+     62
+    ]
+   ],
+   "Choose your hard": [
+    [
+     878,
+     1314,
+     319,
+     62
+    ]
+   ]
+  }
+ },
+ "A_29": {
+  "src": "pages/A_29.png",
+  "w": 1008,
+  "h": 163,
+  "url": "https://timdenning.substack.com/p/im-38-if-youre-in-your-20s-or-30s",
+  "bg": "#171717",
+  "marks": {
+   "Spend more time with your parents than feels normal": [
+    [
+     186,
+     19,
+     727,
+     62
+    ],
+    [
+     125,
+     84,
+     222,
+     62
+    ]
+   ],
+   "Soon they'll be gone": [
+    [
+     367,
+     84,
+     363,
+     62
+    ]
+   ]
+  }
+ },
+ "A_32": {
+  "src": "pages/A_32.png",
+  "w": 1536,
+  "h": 763,
+  "url": "https://timdenning.substack.com/p/im-38-if-youre-in-your-20s-or-30s",
+  "bg": "#171717",
+  "marks": {
+   "light it on fire": [
+    [
+     290,
+     139,
+     565,
+     106
+    ]
+   ],
+   "In a world of AI, all the rules are now broken": [
+    [
+     38,
+     500,
+     807,
+     62
+    ]
+   ]
+  }
+ },
+ "A_7": {
+  "src": "pages/A_7.png",
+  "w": 1536,
+  "h": 1366,
+  "url": "https://timdenning.substack.com/p/im-38-if-youre-in-your-20s-or-30s",
+  "bg": "#171717",
+  "marks": {
+   "When you're young you try to look good": [
+    [
+     38,
+     392,
+     718,
+     62
+    ]
+   ],
+   "Many of my friends worked in nightclubs": [
+    [
+     38,
+     684,
+     741,
+     62
+    ]
+   ],
+   "40 year olds still trying to live like 20 year olds": [
+    [
+     694,
+     815,
+     744,
+     62
+    ],
+    [
+     38,
+     880,
+     74,
+     62
+    ]
+   ],
+   "Just slowly reduce contact": [
+    [
+     1005,
+     1172,
+     469,
+     62
+    ]
+   ]
+  }
+ },
+ "A_top": {
+  "src": "pages/A_top.png",
+  "w": 1536,
+  "h": 3113,
+  "url": "https://timdenning.substack.com/p/im-38-if-youre-in-your-20s-or-30s",
+  "bg": "#171717",
+  "marks": {
+   "When you turn 35 you'll see the difference": [
+    [
+     87,
+     374,
+     877,
+     55
+    ]
+   ],
+   "I'm not that smart but these experiences": [
+    [
+     38,
+     2920,
+     725,
+     62
+    ]
+   ],
+   "I'm 38. If You're in Your 20's or 30's, Read This.": [
+    [
+     38,
+     166,
+     1376,
+     98
+    ],
+    [
+     38,
+     252,
+     395,
+     98
+    ]
+   ]
+  }
+ },
+ "P_bio": {
+  "src": "pages/P_bio.png",
+  "w": 1536,
+  "h": 1680,
+  "url": "https://substack.com/@timdenning",
+  "bg": "#171717",
+  "marks": {
+   "Aussie writer with 1B+ views that made me $6M+": [
+    [
+     125,
+     355,
+     857,
+     46
+    ]
+   ],
+   "Quit my banking job in 2021": [
+    [
+     1001,
+     355,
+     396,
+     46
+    ],
+    [
+     125,
+     403,
+     84,
+     46
+    ]
+   ],
+   "Aussie writer with 1B+ views": [
+    [
+     125,
+     355,
+     490,
+     46
+    ]
+   ],
+   "238K+ subscribers": [
+    [
+     125,
+     624,
+     318,
+     46
+    ]
+   ]
+  }
+ }
+}

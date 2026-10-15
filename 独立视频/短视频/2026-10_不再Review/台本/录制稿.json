@@ -1,0 +1,83 @@
+{
+ "slug": "不再Review短视频",
+ "title": "不再 Review：她一个月 2000 多个 PR 是怎么把关的（长视频《不再Review》的二次剪辑）",
+ "kicker": "悠一 · <b>AI 编程</b> 访谈",
+ "hook": [
+  "一个月2000多个PR",
+  "她说不逐个Review"
+ ],
+ "lines": [
+  {
+   "id": "N01",
+   "zh": "一个月 2000 多个 PR，她说自己没有逐个 Review。",
+   "say": "一个月两千多个PR，她说自己没有逐个Review。",
+   "en": "2,000-plus PRs in a month, and she says she didn't review them one by one."
+  },
+  {
+   "id": "N02",
+   "zh": "她叫 Lauren Tan，在 SpaceXAI 做 Grok Bot。",
+   "say": "她叫Lauren Tan，在SpaceXAI做Grok Bot。",
+   "en": "Lauren Tan works on Grok Bot at SpaceXAI."
+  },
+  {
+   "id": "N03",
+   "zh": "10 月 2 号，Matt Pocock 请她上直播，聊了 65 分钟。",
+   "say": "十月二号，Matt Pocock请她上直播，聊了六十五分钟。",
+   "en": "On October 2, Matt Pocock had her on his livestream for 65 minutes."
+  },
+  {
+   "id": "N04",
+   "zh": "按 2000 个算，每天 67 个。一个看 15 分钟，要 17 个小时。",
+   "say": "按两千个算，每天六十七个。一个看十五分钟，要十七个小时。",
+   "en": "At 2,000 PRs, that's 67 a day. At 15 minutes each, that's 17 hours."
+  },
+  {
+   "id": "N05",
+   "zh": "一个人看不过来，所以她改成抽样。靠两样东西：验证，和规矩。",
+   "say": "一个人看不过来，所以她改成抽样。靠两样东西：验证，和规矩。",
+   "en": "One person can't keep up, so she samples instead. Two things hold it together: verification and rules."
+  },
+  {
+   "id": "N06",
+   "zh": "验证：让 AI 像真人用户一样，把程序跑一遍。",
+   "say": "验证：让AI像真人用户一样，把程序跑一遍。",
+   "en": "Verification: the AI uses the program like a real user."
+  },
+  {
+   "id": "N07",
+   "zh": "规矩：AI 犯过的错，写成 lint 规则，让它再也犯不了。",
+   "say": "规矩：AI犯过的错，写成lint规则，让它再也犯不了。",
+   "en": "Rules: a mistake the AI made once becomes a lint rule, so it can't happen again."
+  },
+  {
+   "id": "N08",
+   "zh": "她把做法写成了一组技能，叫 pstack。",
+   "say": "她把做法写成了一组技能，叫pstack。",
+   "en": "She wrote the method up as a set of skills called pstack."
+  },
+  {
+   "id": "N09",
+   "zh": "官方文档里的全自动模式：每个 PR 派一批验证员，裁决干净，才准合并。",
+   "say": "官方文档里的全自动模式：每个PR派一批验证员，裁决干净，才准合并。",
+   "en": "In its official docs' full-autopilot mode, every PR gets a swarm of verifiers, and only a clean verdict lets it merge."
+  },
+  {
+   "id": "N10",
+   "zh": "合并之后，她才看：早上翻提交记录，有问题就撤回，再加规则。",
+   "say": "合并之后，她才看：早上翻提交记录，有问题就撤回，再加规则。",
+   "en": "She reviews after the merge: the morning commit log, revert what's wrong, add a rule."
+  },
+  {
+   "id": "N11",
+   "zh": "但她自己说，走到这一步非常难。撤不回、又难验证的活，她说没有答案。",
+   "say": "但她自己说，走到这一步非常难。撤不回、又难验证的活，她说没有答案。",
+   "en": "But she says getting here is very hard, and for work that can't be undone or verified, she has no answer."
+  },
+  {
+   "id": "N12",
+   "zh": "Review 没有消失。它从每个 PR 的门口，搬到了早上的提交记录里。",
+   "say": "Review没有消失。它从每个PR的门口，搬到了早上的提交记录里。",
+   "en": "Review didn't vanish. It moved from the door of every PR to the morning's commit log."
+  }
+ ]
+}

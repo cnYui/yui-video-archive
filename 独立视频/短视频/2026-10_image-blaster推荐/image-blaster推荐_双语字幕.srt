@@ -1,0 +1,134 @@
+1
+00:00:00,300 --> 00:00:02,083
+@neilsonks 五月发布了一套
+@neilsonks released a set
+
+2
+00:00:02,103 --> 00:00:04,195
+Claude 技能：只用一张参考图，
+of Claude skills in May that generate
+
+3
+00:00:04,215 --> 00:00:06,480
+就能生成完整的 3D 环境。
+a fully 3D environment from a single reference image.
+
+4
+00:00:06,530 --> 00:00:08,404
+项目叫 image-blaster，
+The project is image-blaster:
+
+5
+00:00:08,424 --> 00:00:11,610
+GitHub 5000 多颗星，MIT 协议。
+5,000+ stars on GitHub, MIT license.
+
+6
+00:00:12,040 --> 00:00:13,306
+Claude 先从原图里
+Claude starts by recommending objects
+
+7
+00:00:13,326 --> 00:00:14,822
+推荐物件，列好清单、
+from the original source image,
+
+8
+00:00:14,842 --> 00:00:17,060
+选定要生成的物件之后，
+and once the list is made and the objects are chosen,
+
+9
+00:00:19,240 --> 00:00:21,770
+Claude 会给每件物件各生成一张图，
+Claude creates an image for each of those objects
+
+10
+00:00:21,790 --> 00:00:23,850
+再交给 3D 生成模型。
+and sends it off to a 3D generation model.
+
+11
+00:00:25,440 --> 00:00:28,232
+它们会生成 GLB 文件和 PBR 材质。
+Those create GLB files and PBR materials, and when you go
+
+12
+00:00:28,252 --> 00:00:31,460
+回到原图，就能把这些物件全部去掉。
+back to the source image, you can remove them all.
+
+13
+00:00:31,480 --> 00:00:32,876
+再用这份图片清单，
+You use that list of images
+
+14
+00:00:32,896 --> 00:00:34,763
+做出一个干净的静态环境，
+to create a clean static environment,
+
+15
+00:00:34,783 --> 00:00:36,871
+交给 World Labs，生成静态的
+sent to World Labs to generate static
+
+16
+00:00:36,891 --> 00:00:38,602
+高斯泼溅、全景环境图，
+Gaussian splats, a panoramic environment map
+
+17
+00:00:38,622 --> 00:00:40,040
+还有网格碰撞体。
+and a mesh collider.
+
+18
+00:00:40,060 --> 00:00:41,618
+再让 ElevenLabs 配上
+Then ElevenLabs adds ambient sound
+
+19
+00:00:41,638 --> 00:00:43,460
+环境音和碰撞音。
+and impact sounds.
+
+20
+00:00:43,560 --> 00:00:45,099
+但要自备两个 API key：
+But you bring two API keys:
+
+21
+00:00:45,119 --> 00:00:47,020
+World Labs 和 FAL。
+World Labs and FAL.
+
+22
+00:00:47,070 --> 00:00:48,252
+仓库四月建的，
+The repo was created in April
+
+23
+00:00:48,272 --> 00:00:50,710
+五月中旬之后没再更新。
+and hasn't been updated since mid-May.
+
+24
+00:00:50,960 --> 00:00:52,860
+目前还没有搭场景的功能，
+Right now there's no scene building.
+
+25
+00:00:52,880 --> 00:00:54,530
+纯粹只管生成。
+It's just purely generation.
+
+26
+00:00:54,550 --> 00:00:56,062
+以前从空白画布起步，
+It used to start from a blank canvas.
+
+27
+00:00:56,082 --> 00:00:58,470
+现在从你手里那张图起步。
+Now it starts from your image.

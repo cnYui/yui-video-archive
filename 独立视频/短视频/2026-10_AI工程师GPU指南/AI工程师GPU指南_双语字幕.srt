@@ -1,0 +1,179 @@
+1
+00:00:00,000 --> 00:00:01,599
+H100 生成一个 token，
+For every token an H100 generates, it waits
+
+2
+00:00:01,619 --> 00:00:04,450
+等数据的时间，约是算数的 145 倍。
+on data about 145 times longer than it spends on math.
+
+3
+00:00:04,470 --> 00:00:06,574
+条件：gpt-oss-120b，
+The setup: gpt-oss-120b,
+
+4
+00:00:06,594 --> 00:00:08,960
+一张卡，一个用户。
+one GPU, one user.
+
+5
+00:00:08,980 --> 00:00:11,255
+MLOps 工程师 @kmeanskaran，
+MLOps engineer @kmeanskaran,
+
+6
+00:00:11,275 --> 00:00:13,098
+10 月 1 日在 X 发长文，
+in a long X article on October 1,
+
+7
+00:00:13,118 --> 00:00:14,790
+按规格表算的。
+worked it out from spec sheets.
+
+8
+00:00:14,810 --> 00:00:17,031
+怎么算的？算一个 token，
+How? The math for one token takes
+
+9
+00:00:17,051 --> 00:00:18,970
+H100 约 0.01 毫秒。
+an H100 about 0.01 ms.
+
+10
+00:00:18,990 --> 00:00:20,982
+作者估算，每个 token
+The author estimates that each token
+
+11
+00:00:21,002 --> 00:00:23,730
+都要从显存搬约 5 GB 权重。
+means hauling about 5 GB of weights out of memory.
+
+12
+00:00:23,750 --> 00:00:26,620
+H100 显存带宽 3.35 TB/s，
+At 3.35 TB/s of memory bandwidth,
+
+13
+00:00:26,640 --> 00:00:28,930
+搬一趟要 1.5 毫秒。
+that haul takes 1.5 ms.
+
+14
+00:00:28,950 --> 00:00:30,652
+所以一个用户，理论上
+So one user tops out near
+
+15
+00:00:30,672 --> 00:00:33,260
+每秒最多约 670 个 token。
+670 tokens a second, in theory.
+
+16
+00:00:33,280 --> 00:00:35,717
+H200 算力和 H100 一样，
+The H200 has the same compute as the H100.
+
+17
+00:00:35,737 --> 00:00:39,730
+换的是显存：141 GB，每秒 4.8 TB。
+What changed is memory: 141 GB at 4.8 TB/s.
+
+18
+00:00:39,750 --> 00:00:41,254
+训练更吃显存：
+Training is hungrier for memory:
+
+19
+00:00:41,274 --> 00:00:43,560
+每个参数约 18 字节。
+about 18 bytes per parameter.
+
+20
+00:00:43,580 --> 00:00:47,536
+粗算：gpt-oss-120b 训练约 2.1 TB，
+Rough math: gpt-oss-120b takes about 2.1 TB to train,
+
+21
+00:00:47,556 --> 00:00:49,680
+部署约 65 GB。
+but only about 65 GB to serve.
+
+22
+00:00:49,700 --> 00:00:52,606
+1170 亿个参数，怎么塞进 65 GB？
+How do 117 billion parameters fit in 65 GB?
+
+23
+00:00:52,626 --> 00:00:53,950
+靠 4 位量化。
+4-bit quantization.
+
+24
+00:00:53,970 --> 00:00:56,045
+BF16 要 234 GB，
+In BF16 it would be 234 GB.
+
+25
+00:00:56,065 --> 00:00:59,410
+压成 4 位只剩约 65 GB。
+Squeezed to 4-bit, it shrinks to about 65 GB.
+
+26
+00:00:59,430 --> 00:01:01,030
+按 Hugging Face 的标价，
+On Hugging Face's price list,
+
+27
+00:01:01,050 --> 00:01:03,660
+一小时 2.5 美元的 A100，勉强装得下。
+an A100 80 GB at $2.50 an hour can just about hold it.
+
+28
+00:01:03,680 --> 00:01:06,471
+Kimi K3 的权重约 1.56 TB，
+Kimi K3's weights come to about 1.56 TB.
+
+29
+00:01:06,491 --> 00:01:10,310
+8 张 H200 的 1128 GB 都装不下。
+Even eight H200s, 1,128 GB in all, can't hold them.
+
+30
+00:01:10,330 --> 00:01:12,688
+但作者自己说：没实测过，
+But the author admits these GPUs were never benchmarked.
+
+31
+00:01:12,708 --> 00:01:15,170
+速度都是规格表算的。
+The speeds are spec-sheet math.
+
+32
+00:01:15,190 --> 00:01:16,965
+作者的建议是两次除法：
+The author's advice is two divisions:
+
+33
+00:01:16,985 --> 00:01:19,430
+权重除以显存，看装不装得下。
+weights divided by VRAM tells you if it fits.
+
+34
+00:01:19,450 --> 00:01:21,205
+每个 token 要读的权重
+The weights each token must read,
+
+35
+00:01:21,225 --> 00:01:23,300
+除以带宽，看能跑多快。
+divided by bandwidth, tell you how fast it can go.
+
+36
+00:01:23,320 --> 00:01:26,540
+先做两次除法，再掏钱租卡。
+Do the two divisions first. Then pay for the card.

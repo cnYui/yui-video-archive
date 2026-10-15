@@ -1,0 +1,12 @@
+{
+  "slug": "短名（成片 / 字幕文件名前缀，例：ClaudeDesign两杯咖啡）",
+  "title": "内部标题（不是平台标题）",
+  "kicker": "悠一 · <b>Claude</b> 新功能",
+  "hook": ["第一行 ≤ 12 字：最反常识的事实", "第二行 ≤ 15 字：数字 / 反转"],
+  "lines": [
+    {"id": "N01", "zh": "钩子：最反常识的事实 + 一个数字（≤ 约 34 字，字幕自动拆成 ≤ 17 字一条）", "say": "念的字（数字写汉字；英文名照念；@ 写艾特）", "en": "Hook: the most surprising fact, with a number."},
+    {"id": "N02", "zh": "背书：几月几号，谁（机构 / 官方账号）在哪发的。", "say": "…", "en": "Source: when, who, where."},
+    {"id": "N03", "zh": "拆机制：怎么做到的？三四个短分句讲完。", "say": "…", "en": "How it works, in three or four short clauses."},
+    {"id": "N04", "zh": "收尾金句：对仗或反转，能单独转发。", "say": "…", "en": "A closing line people would screenshot."}
+  ]
+}

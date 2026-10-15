@@ -1,0 +1,122 @@
+{
+  "_说明": "交付包阶段先写 titles（3 个候选 × 3 个平台 = 3×3）和各平台默认项；用户回“封面 X 标题 Y 同意”后，把选中的那条标题写进各平台字段（bilibili.title / douyin.title / xiaohongshu.title），approval 记下选择和时间。scripts/check_titles.py 按各平台要求核对字数：B 站标题 ≤ 80 / 抖音 ≤ 30（话题 ≤ 5）/ 小红书 ≤ 20；放不下的完整标题放抖音描述、小红书正文的第一行。三个标题角度要真有区别（事实陈述 / 数字悬念 / 泼冷水），不和封面大字同一句。2026-10-06 起视频号不发（旧的 weixin_channels 字段和短标题 6–16 字存档在 references/_archive/视频号发布_已移除_20261006.md）；小红书“原创声明”开关选开（用户 2026-10-06 定）。",
+  "slug": "REA逆向设备",
+  "video": "D:\\大疆\\独立视频\\短视频\\2026-10_REA逆向设备\\REA逆向设备_成片.mp4",
+  "duration_s": 58.733333,
+  "approval": {
+    "status": "published",
+    "cover": "D（B文字+A图片）",
+    "title": "一个视频拆解最近爆火的“逆向一切”的 RAE 开源项目 从厂商 App 查到设备协议，自己的控制端能自己写吗？",
+    "approved_at": "2026-10-14",
+    "note": "用户明确授权 Playwright JS 上传后直接发布，仅 B 站；标题 RAE 按原文保留。"
+  },
+  "titles": [
+    {
+      "id": 1,
+      "recommend": true,
+      "angle": "设备协议",
+      "bilibili": "REA：从厂商 App 查到设备协议，自己的控制端能自己写吗？",
+      "douyin": "REA：自己的设备，自己写控制端",
+      "xiaohongshu": "用REA，看懂自己的设备协议"
+    },
+    {
+      "id": 2,
+      "angle": "热度与机制",
+      "bilibili": "21.8 万 Star 的 REA 到底做什么？让 AI 顺着证据逆向程序",
+      "douyin": "21.8万Star的REA，怎么逆向程序",
+      "xiaohongshu": "21.8万Star的REA到底做什么"
+    },
+    {
+      "id": 3,
+      "angle": "能力边界",
+      "bilibili": "“逆向一切”有多真？在线看 REA 代码，拆解 APK、抓包与固件链路",
+      "douyin": "“逆向一切”有多真？看REA的证据链",
+      "xiaohongshu": "REA真能逆向一切？先看证据"
+    }
+  ],
+  "covers": {
+    "3x4": "制作/04_封面/封面_选定_3x4.png",
+    "16x9": "制作/04_封面/封面_选定_16x9.png",
+    "4x3": "制作/04_封面/封面_选定_4x3.png"
+  },
+  "source": {
+    "original_post": [
+      "https://x.com/0xlangeai/status/2109544824135467312",
+      "https://x.com/ResearchWang/status/2109812002076143824"
+    ],
+    "original_author": [
+      "蓝哥AI @0xlangeai",
+      "@ResearchWang"
+    ],
+    "project_or_site": "https://github.com/morluto/rea"
+  },
+  "bilibili": {
+    "title": "一个视频拆解最近爆火的“逆向一切”的 RAE 开源项目 从厂商 App 查到设备协议，自己的控制端能自己写吗？",
+    "desc": "REA（Reverse Engineer Anything）把程序分析工具接给 Claude Code / Codex。本期直接在线阅读官方代码，拆解 ADB 获取 APK、HAR/mitmproxy 抓包分析、Binwalk/Unblob 固件解包和 Ghidra 分析的证据链。Star 为 2026-10-14 查询快照，约 21.8 万。\n\n源码：https://github.com/morluto/rea\nX 教程与原图：蓝哥AI @0xlangeai（https://x.com/0xlangeai/status/2109544824135467312）；@ResearchWang（https://x.com/ResearchWang/status/2109812002076143824）。\n菜单栏空调画面来自独立开源项目 MideaBar：https://github.com/Binaryify/MideaBar，仅作控制端示例，未声称由 REA 完成。固件链路需 Linux 与已有外部工具；是否能还原某台设备取决于协议、权限等。\n本地 Qwen3-TTS 合成配音，中英双语字幕。图片版权归原作者，本期作介绍与评论引用。",
+    "declaration": "含AI生成内容",
+    "category": "人工智能（tid 231）",
+    "tags": [
+      "REA",
+      "开源",
+      "逆向工程",
+      "人工智能",
+      "Codex",
+      "Claude Code",
+      "智能家居",
+      "设备协议"
+    ],
+    "collection": null,
+    "repost_source": "",
+    "cover": "两个位各传各的（双比例同步改动不勾）：16:9 → 个人空间封面，4:3 → 首页推荐封面",
+    "published": {
+      "bvid": "BV1JepC6EEk8",
+      "url": "https://www.bilibili.com/video/BV1JepC6EEk8/",
+      "state": "开放浏览",
+      "verified_at": "2026-10-14T17:17:32+09:00"
+    }
+  },
+  "douyin": {
+    "title": "REA：自己的设备，自己写控制端",
+    "desc": "REA（Reverse Engineer Anything）把程序分析工具接给 Claude Code / Codex。本期直接在线阅读官方代码，拆解 ADB 获取 APK、HAR/mitmproxy 抓包分析、Binwalk/Unblob 固件解包和 Ghidra 分析的证据链。Star 为 2026-10-14 查询快照，约 21.8 万。\n\n源码：https://github.com/morluto/rea\nX 教程与原图：蓝哥AI @0xlangeai（https://x.com/0xlangeai/status/2109544824135467312）；@ResearchWang（https://x.com/ResearchWang/status/2109812002076143824）。\n菜单栏空调画面来自独立开源项目 MideaBar：https://github.com/Binaryify/MideaBar，仅作控制端示例，未声称由 REA 完成。固件链路需 Linux 与已有外部工具；是否能还原某台设备取决于协议、权限等。\n本地 Qwen3-TTS 合成配音，中英双语字幕。图片版权归原作者，本期作介绍与评论引用。",
+    "topics": [
+      "人工智能",
+      "开源项目",
+      "REA",
+      "逆向工程",
+      "智能家居"
+    ],
+    "declaration": "内容由AI生成",
+    "collection": null,
+    "cover": "竖封面 3:4 = 封面_选定_3x4.png；横封面 4:3 = 封面_选定_4x3.png",
+    "published": null
+  },
+  "xiaohongshu": {
+    "title": "用REA，看懂自己的设备协议",
+    "desc": "REA（Reverse Engineer Anything）把程序分析工具接给 Claude Code / Codex。本期直接在线阅读官方代码，拆解 ADB 获取 APK、HAR/mitmproxy 抓包分析、Binwalk/Unblob 固件解包和 Ghidra 分析的证据链。Star 为 2026-10-14 查询快照，约 21.8 万。\n\n源码：https://github.com/morluto/rea\nX 教程与原图：蓝哥AI @0xlangeai（https://x.com/0xlangeai/status/2109544824135467312）；@ResearchWang（https://x.com/ResearchWang/status/2109812002076143824）。\n菜单栏空调画面来自独立开源项目 MideaBar：https://github.com/Binaryify/MideaBar，仅作控制端示例，未声称由 REA 完成。固件链路需 Linux 与已有外部工具；是否能还原某台设备取决于协议、权限等。\n本地 Qwen3-TTS 合成配音，中英双语字幕。图片版权归原作者，本期作介绍与评论引用。",
+    "topics": [
+      "人工智能",
+      "开源项目",
+      "REA",
+      "逆向工程",
+      "Codex",
+      "ClaudeCode",
+      "智能家居",
+      "设备协议"
+    ],
+    "declaration": "笔记含AI合成内容",
+    "original_declaration": "开（用户 2026-10-06 定）",
+    "cover": "3:4 = 封面_选定_3x4.png",
+    "published": null
+  },
+  "published": {
+    "bilibili": {
+      "bvid": "BV1JepC6EEk8",
+      "url": "https://www.bilibili.com/video/BV1JepC6EEk8/",
+      "state": "开放浏览",
+      "verified_at": "2026-10-14T17:17:32+09:00"
+    }
+  },
+  "platforms": [
+    "bilibili"
+  ]
+}

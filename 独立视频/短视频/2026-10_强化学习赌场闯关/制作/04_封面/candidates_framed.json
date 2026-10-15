@@ -1,0 +1,60 @@
+{
+ "_说明": "make_cover_framed.py <本条目录> 读这个文件：每个候选 = 文章里的一张配图（video 写 png / jpg 路径）缩进“边框 6”+ 大字 big（每行 ≤ 6 字，accent_line 那行橙色）+ 黄贴纸 sticker。大字不和任何平台标题同一句。图都是 @goyal__pramod 文章里的手绘配图，贴纸标来源。",
+ "candidates": [
+  {
+   "id": "A",
+   "note": "赌场招牌 + 火柴人：一眼看出“赌场里学强化学习”",
+   "recommend": true,
+   "video": "D:/大疆/独立视频/素材/2026-10_强化学习赌场闯关/图片/img02_b10.jpg",
+   "t": 0,
+   "crop": [
+    0.0,
+    0.03,
+    1.0,
+    0.97
+   ],
+   "big": [
+    "赌场里学",
+    "强化学习"
+   ],
+   "accent_line": 1,
+   "sticker": "@goyal__pramod · X"
+  },
+  {
+   "id": "B",
+   "note": "十台老虎机（“THEY ADDED MORE MACHINES!!!”）：数字 + 悬念",
+   "video": "D:/大疆/独立视频/素材/2026-10_强化学习赌场闯关/图片/img06_b47.jpg",
+   "t": 0,
+   "crop": [
+    0.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "big": [
+    "三台变十台",
+    "怎么办？"
+   ],
+   "accent_line": 1,
+   "sticker": "@goyal__pramod · X"
+  },
+  {
+   "id": "C",
+   "note": "经理急了（“We have had it with your maths…”）：幽默钩子",
+   "video": "D:/大疆/独立视频/素材/2026-10_强化学习赌场闯关/图片/img08_b83.jpg",
+   "t": 0,
+   "crop": [
+    0.04,
+    0.08,
+    0.96,
+    0.92
+   ],
+   "big": [
+    "数学赢了",
+    "赌场急了"
+   ],
+   "accent_line": 1,
+   "sticker": "@goyal__pramod · X"
+  }
+ ]
+}

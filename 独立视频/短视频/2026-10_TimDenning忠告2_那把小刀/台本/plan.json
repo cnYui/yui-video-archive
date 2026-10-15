@@ -1,0 +1,171 @@
+{
+ "layout": "single",
+ "plan": [
+  {
+   "id": "H0",
+   "type": "card",
+   "kind": "page",
+   "overlay": "page",
+   "name": "寓言",
+   "dur": 2.0,
+   "ui": {
+    "tag": "文中的比方",
+    "credit": "图：Substack · Modern Freedom 原文"
+   },
+   "lines": [
+    {
+     "id": "N01",
+     "a": 0.1
+    },
+    {
+     "id": "N02",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "H1",
+   "type": "card",
+   "kind": "page",
+   "overlay": "page",
+   "name": "寓意",
+   "dur": 2.0,
+   "ui": {
+    "tag": "第 3 条 · 执念",
+    "credit": "图：Substack · Modern Freedom 原文"
+   },
+   "lines": [
+    {
+     "id": "N03",
+     "a": 0.15
+    },
+    {
+     "id": "N04",
+     "a": 0.0
+    },
+    {
+     "id": "N05",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "L3",
+   "type": "card",
+   "kind": "page",
+   "overlay": "page",
+   "name": "解法",
+   "dur": 2.0,
+   "ui": {
+    "tag": "第 3 条 · 执念",
+    "credit": "图：Substack · Modern Freedom 原文"
+   },
+   "lines": [
+    {
+     "id": "N06",
+     "a": 0.15
+    },
+    {
+     "id": "N07",
+     "a": 0.0
+    },
+    {
+     "id": "N08",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "L12",
+   "type": "card",
+   "kind": "page",
+   "overlay": "page",
+   "name": "第12条",
+   "dur": 2.0,
+   "ui": {
+    "tag": "第 12 条 · 疯子",
+    "credit": "图：Substack · Modern Freedom 原文"
+   },
+   "lines": [
+    {
+     "id": "N09",
+     "a": 0.15
+    },
+    {
+     "id": "N10",
+     "a": 0.0
+    },
+    {
+     "id": "N11",
+     "a": 0.0
+    },
+    {
+     "id": "N12",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "L8",
+   "type": "card",
+   "kind": "page",
+   "overlay": "page",
+   "name": "第8条",
+   "dur": 2.0,
+   "ui": {
+    "tag": "第 8 条 · 难事",
+    "credit": "图：Substack · Modern Freedom 原文"
+   },
+   "lines": [
+    {
+     "id": "N13",
+     "a": 0.15
+    },
+    {
+     "id": "N14",
+     "a": 0.0
+    },
+    {
+     "id": "N15",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "C1",
+   "type": "card",
+   "kind": "page",
+   "overlay": "page",
+   "name": "泼冷水",
+   "dur": 2.0,
+   "ui": {
+    "tag": "Tim 自己说",
+    "credit": "图：Substack · Modern Freedom 原文"
+   },
+   "lines": [
+    {
+     "id": "N16",
+     "a": 0.15
+    }
+   ]
+  },
+  {
+   "id": "E1",
+   "type": "card",
+   "kind": "page",
+   "overlay": "page",
+   "name": "金句",
+   "dur": 2.0,
+   "ui": {
+    "tag": "第 3 条 · 执念",
+    "credit": "图：Substack · Modern Freedom 原文"
+   },
+   "lines": [
+    {
+     "id": "N17",
+     "a": 0.15
+    }
+   ]
+  }
+ ]
+}

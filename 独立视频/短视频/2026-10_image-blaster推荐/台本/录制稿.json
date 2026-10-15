@@ -1,0 +1,116 @@
+{
+  "slug": "image-blaster推荐",
+  "title": "GitHub 项目推荐：image-blaster（一张图变 3D 世界的 Claude 技能），作者英文讲解 + 曼波中文同传",
+  "kicker": "<b>GitHub</b> 项目推荐 · Claude 技能",
+  "hook": [
+    "一张图变3D世界",
+    "作者称不到5分钟"
+  ],
+  "lines": [
+    {
+      "id": "N01",
+      "kind": "tr",
+      "zh": "@neilsonks 五月发布了一套 Claude 技能：只用一张参考图，就能生成完整的 3D 环境。",
+      "say": "尼尔森五月发布了一套 Claude 技能：只用一张参考图，就能生成完整的三 D 环境。",
+      "en": "@neilsonks released a set of Claude skills in May that generate a fully 3D environment from a single reference image.",
+      "cut": [
+        [
+          "发布了一套",
+          "released a set"
+        ],
+        [
+          "参考图，",
+          "that generate"
+        ]
+      ]
+    },
+    {
+      "id": "N02",
+      "kind": "vo",
+      "zh": "项目叫 image-blaster，GitHub 5000 多颗星，MIT 协议。",
+      "say": "项目叫 image blaster，GitHub 五千多颗星，MIT 协议。",
+      "en": "The project is image-blaster: 5,000+ stars on GitHub, MIT license."
+    },
+    {
+      "id": "N03",
+      "kind": "tr",
+      "zh": "Claude 先从原图里推荐物件，列好清单、选定要生成的物件之后，",
+      "say": "Claude 先从原图里推荐物件，列好清单、选定要生成的物件之后，",
+      "en": "Claude starts by recommending objects from the original source image, and once the list is made and the objects are chosen,"
+    },
+    {
+      "id": "N04",
+      "kind": "tr",
+      "zh": "Claude 会给每件物件各生成一张图，再交给 3D 生成模型。",
+      "say": "Claude 会给每件物件各生成一张图，再交给三 D 生成模型。",
+      "en": "Claude creates an image for each of those objects and sends it off to a 3D generation model."
+    },
+    {
+      "id": "N05",
+      "kind": "tr",
+      "zh": "它们会生成 GLB 文件和 PBR 材质。回到原图，就能把这些物件全部去掉。",
+      "say": "它们会生成 GLB 文件和 PBR 材质。回到原图，就能把这些物件全部去掉。",
+      "en": "Those create GLB files and PBR materials, and when you go back to the source image, you can remove them all."
+    },
+    {
+      "id": "N06",
+      "kind": "tr",
+      "zh": "再用这份图片清单，做出一个干净的静态环境，交给 World Labs，生成静态的高斯泼溅、全景环境图，还有网格碰撞体。",
+      "say": "再用这份图片清单，做出一个干净的静态环境，交给 World Labs，生成静态的高斯泼溅、全景环境图，还有网格碰撞体。",
+      "en": "You use that list of images to create a clean static environment, sent to World Labs to generate static Gaussian splats, a panoramic environment map and a mesh collider.",
+      "cut": [
+        [
+          "再用这份图片清单，",
+          "You use that list of images"
+        ],
+        [
+          "做出一个干净的静态环境，",
+          "to create a clean static environment,"
+        ],
+        [
+          "生成静态的",
+          "sent to World Labs to generate static"
+        ],
+        [
+          "全景环境图，",
+          "Gaussian splats, a panoramic environment map"
+        ]
+      ]
+    },
+    {
+      "id": "N07",
+      "kind": "vo",
+      "zh": "再让 ElevenLabs 配上环境音和碰撞音。",
+      "say": "再让 ElevenLabs 配上环境音和碰撞音。",
+      "en": "Then ElevenLabs adds ambient sound and impact sounds."
+    },
+    {
+      "id": "N08",
+      "kind": "vo",
+      "zh": "但要自备两个 API key：World Labs 和 FAL。",
+      "say": "但要自备两个 API key，World Labs 和 FAL。",
+      "en": "But you bring two API keys: World Labs and FAL."
+    },
+    {
+      "id": "N09",
+      "kind": "vo",
+      "zh": "仓库四月建的，五月中旬之后没再更新。",
+      "say": "仓库四月建的，五月中旬之后没再更新。",
+      "en": "The repo was created in April and hasn't been updated since mid-May."
+    },
+    {
+      "id": "N10",
+      "kind": "tr",
+      "zh": "目前还没有搭场景的功能，纯粹只管生成。",
+      "say": "目前还没有搭场景的功能，纯粹只管生成。",
+      "en": "Right now there's no scene building. It's just purely generation."
+    },
+    {
+      "id": "N11",
+      "kind": "vo",
+      "zh": "以前从空白画布起步，现在从你手里那张图起步。",
+      "say": "以前从空白画布起步，现在从你手里那张图起步。",
+      "en": "It used to start from a blank canvas. Now it starts from your image."
+    }
+  ]
+}

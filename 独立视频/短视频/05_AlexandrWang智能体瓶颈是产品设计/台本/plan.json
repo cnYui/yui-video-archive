@@ -1,0 +1,14 @@
+{
+  "layout": "dual",
+  "plan": [
+    {"id": "S1", "type": "clip", "kind": "demo", "overlay": "clip", "name": "钩子", "credit": "来源 · 平台",
+     "ranges":  [{"src": "v", "in": 3.0, "out": 9.0, "mute": true}],
+     "ranges2": [{"src": "v", "in": 41.0, "out": 47.0, "crop": [0.05, 0.10, 0.75, 0.80]}],
+     "lines": [{"id": "N01", "a": 0.0}, {"id": "N02", "a": 3.2}]},
+
+    {"id": "S2", "type": "clip", "kind": "demo", "overlay": "clip", "name": "怎么做到的", "credit": "来源 · 平台",
+     "ranges":  [{"src": "v", "in": 20.0, "out": 26.0, "mute": true}],
+     "ranges2": [{"src": "v", "in": 60.0, "out": 66.0, "crop": [0.0, 0.0, 0.6, 0.6]}],
+     "lines": [{"id": "N03", "a": 0.1}, {"id": "N04", "a": 4.0}]}
+  ]
+}

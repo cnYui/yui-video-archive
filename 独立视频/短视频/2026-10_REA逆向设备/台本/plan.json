@@ -1,0 +1,167 @@
+{
+  "layout": "single",
+  "plan": [
+    {
+      "id": "S01",
+      "type": "card",
+      "dur": 1,
+      "name": "ac",
+      "kind": "source",
+      "overlay": "source",
+      "ui": {
+        "image": "ac"
+      },
+      "lines": [
+        {
+          "id": "L01",
+          "a": 0
+        }
+      ],
+      "credit": "独立示例：MideaBar"
+    },
+    {
+      "id": "S02",
+      "type": "card",
+      "dur": 1,
+      "name": "tutorial",
+      "kind": "source",
+      "overlay": "source",
+      "ui": {
+        "image": "tutorial"
+      },
+      "lines": [
+        {
+          "id": "L02",
+          "a": 0
+        }
+      ],
+      "credit": "@0xlangeai · X"
+    },
+    {
+      "id": "S03",
+      "type": "card",
+      "dur": 1,
+      "name": "repo",
+      "kind": "source",
+      "overlay": "source",
+      "ui": {
+        "image": "repo"
+      },
+      "lines": [
+        {
+          "id": "L03",
+          "a": 0
+        }
+      ],
+      "credit": "GitHub API 实测"
+    },
+    {
+      "id": "S04",
+      "type": "card",
+      "dur": 1,
+      "name": "hopper",
+      "kind": "source",
+      "overlay": "source",
+      "ui": {
+        "image": "hopper"
+      },
+      "lines": [
+        {
+          "id": "L04",
+          "a": 0
+        }
+      ],
+      "credit": "REA 官方截图"
+    },
+    {
+      "id": "S05",
+      "type": "card",
+      "dur": 1,
+      "name": "adb",
+      "kind": "source",
+      "overlay": "source",
+      "ui": {
+        "image": "adb"
+      },
+      "lines": [
+        {
+          "id": "L05",
+          "a": 0
+        }
+      ],
+      "credit": "REA 官方文档"
+    },
+    {
+      "id": "S06",
+      "type": "card",
+      "dur": 1,
+      "name": "firmware",
+      "kind": "source",
+      "overlay": "source",
+      "ui": {
+        "image": "firmware"
+      },
+      "lines": [
+        {
+          "id": "L06",
+          "a": 0
+        }
+      ],
+      "credit": "REA 官方文档"
+    },
+    {
+      "id": "S07",
+      "type": "card",
+      "dur": 1,
+      "name": "roles",
+      "kind": "source",
+      "overlay": "source",
+      "ui": {
+        "image": "roles"
+      },
+      "lines": [
+        {
+          "id": "L07",
+          "a": 0
+        }
+      ],
+      "credit": "@0xlangeai · X"
+    },
+    {
+      "id": "S08",
+      "type": "card",
+      "dur": 1,
+      "name": "ac",
+      "kind": "source",
+      "overlay": "source",
+      "ui": {
+        "image": "ac"
+      },
+      "lines": [
+        {
+          "id": "L08",
+          "a": 0
+        }
+      ],
+      "credit": "独立示例：MideaBar"
+    },
+    {
+      "id": "S09",
+      "type": "card",
+      "dur": 1,
+      "name": "code_example",
+      "kind": "source",
+      "overlay": "source",
+      "ui": {
+        "image": "code_example"
+      },
+      "lines": [
+        {
+          "id": "L09",
+          "a": 0
+        }
+      ],
+      "credit": "@0xlangeai · X"
+    }
+  ]
+}

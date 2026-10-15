@@ -1,0 +1,197 @@
+{
+ "layout": "single",
+ "plan": [
+  {
+   "id": "H0",
+   "type": "card",
+   "kind": "page",
+   "overlay": "page",
+   "name": "钩子",
+   "dur": 2.0,
+   "ui": {
+    "tag": "文章第 13 条",
+    "credit": "图：Substack · Modern Freedom 原文"
+   },
+   "lines": [
+    {
+     "id": "N01",
+     "a": 0.1
+    }
+   ]
+  },
+  {
+   "id": "B1",
+   "type": "card",
+   "kind": "page",
+   "overlay": "page",
+   "name": "背书·简介",
+   "dur": 2.0,
+   "ui": {
+    "tag": "简介自称",
+    "credit": "图：Substack · Tim Denning 主页"
+   },
+   "lines": [
+    {
+     "id": "N02",
+     "a": 0.15
+    }
+   ]
+  },
+  {
+   "id": "L13a",
+   "type": "card",
+   "kind": "page",
+   "overlay": "page",
+   "name": "第13条·失控",
+   "dur": 2.0,
+   "ui": {
+    "tag": "第 13 条 · 忙",
+    "credit": "图：Substack · Modern Freedom 原文"
+   },
+   "lines": [
+    {
+     "id": "N03",
+     "a": 0.15
+    }
+   ]
+  },
+  {
+   "id": "L13b",
+   "type": "card",
+   "kind": "page",
+   "overlay": "page",
+   "name": "第13条·做法",
+   "dur": 2.0,
+   "ui": {
+    "tag": "第 13 条 · 忙",
+    "credit": "图：Substack · Modern Freedom 原文"
+   },
+   "lines": [
+    {
+     "id": "N04",
+     "a": 0.15
+    }
+   ]
+  },
+  {
+   "id": "L14",
+   "type": "card",
+   "kind": "page",
+   "overlay": "page",
+   "name": "第14条",
+   "dur": 2.0,
+   "ui": {
+    "tag": "第 14 条 · 安静",
+    "credit": "图：Substack · Modern Freedom 原文"
+   },
+   "lines": [
+    {
+     "id": "N05",
+     "a": 0.15
+    },
+    {
+     "id": "N06",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "L19",
+   "type": "card",
+   "kind": "page",
+   "overlay": "page",
+   "name": "第19条",
+   "dur": 2.0,
+   "ui": {
+    "tag": "第 19 条 · 多巴胺",
+    "credit": "图：Substack · Modern Freedom 原文"
+   },
+   "lines": [
+    {
+     "id": "N07",
+     "a": 0.15
+    },
+    {
+     "id": "N08",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "L28",
+   "type": "card",
+   "kind": "page",
+   "overlay": "page",
+   "name": "第28条",
+   "dur": 2.0,
+   "ui": {
+    "tag": "第 28 条 · 游戏",
+    "credit": "图：Substack · Modern Freedom 原文"
+   },
+   "lines": [
+    {
+     "id": "N09",
+     "a": 0.15
+    }
+   ]
+  },
+  {
+   "id": "L31",
+   "type": "card",
+   "kind": "page",
+   "overlay": "page",
+   "name": "第31条",
+   "dur": 2.0,
+   "ui": {
+    "tag": "第 31 条 · 心流",
+    "credit": "图：Substack · Modern Freedom 原文"
+   },
+   "lines": [
+    {
+     "id": "N10",
+     "a": 0.15
+    },
+    {
+     "id": "N11",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "C1",
+   "type": "card",
+   "kind": "page",
+   "overlay": "page",
+   "name": "泼冷水",
+   "dur": 2.0,
+   "ui": {
+    "tag": "文里没给依据",
+    "credit": "图：Substack · Modern Freedom 原文"
+   },
+   "lines": [
+    {
+     "id": "N12",
+     "a": 0.15
+    }
+   ]
+  },
+  {
+   "id": "E1",
+   "type": "card",
+   "kind": "photo",
+   "overlay": "page",
+   "name": "金句",
+   "dur": 2.0,
+   "ui": {
+    "tag": "空出来的时间",
+    "credit": "图：X · @Tim_Denning 横幅"
+   },
+   "lines": [
+    {
+     "id": "N13",
+     "a": 0.15
+    }
+   ]
+  }
+ ]
+}

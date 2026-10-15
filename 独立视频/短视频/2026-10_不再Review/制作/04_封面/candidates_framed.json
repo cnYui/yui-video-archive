@@ -1,0 +1,24 @@
+{
+ "_说明": "短视频《不再Review》封面（框版，2026-10-05 起统一样式：白字 + 橙字黑描边、画面缩进边框 6、黄贴纸、印花底）。A = Lauren 笑着听 Matt 问话的安静帧（访谈 2962.5 s，取她那一格，裁掉左下名牌）。",
+ "candidates": [
+  {
+   "id": "A",
+   "note": "Lauren 的安静帧 + “2000个PR / 没逐个看”",
+   "recommend": true,
+   "video": "D:\\大疆\\独立视频\\素材\\2026-10_不再Review\\YouTube直播_MattPocock×poteto\\MattPocock_poteto_直播_MN9dGgmLyso.mp4",
+   "t": 2962.5,
+   "crop": [
+    0.5,
+    0.02,
+    1.0,
+    0.9
+   ],
+   "big": [
+    "2000个PR",
+    "没逐个看"
+   ],
+   "accent_line": 1,
+   "sticker": "Lauren Tan · 直播"
+  }
+ ]
+}
