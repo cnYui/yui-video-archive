@@ -1,20 +1,20 @@
 {
  "date": "2026-10-15",
- "script_sha": "d5b7e53aa335",
- "passed": false,
- "checked_at": "2026-10-15 07:59:30",
+ "script_sha": "ce4f857648c9",
+ "passed": true,
+ "checked_at": "2026-10-15 08:19:00",
  "checks": [
   {
    "check": "台本检查",
    "ok": true,
    "level": "ok",
-   "detail": "5 条，约 1519 字"
+   "detail": "5 条，约 1536 字"
   },
   {
    "check": "台本提示",
    "ok": false,
    "level": "warn",
-   "detail": "只有 5 条：目标 6–8 条（合格的新闻不够时可以少，但正片会不到 5 分钟，加不了 B 站分段章节）；全片约 1519 字，按每秒 6.35 字约 4.0 分钟；目标正片 5–6 分钟（约 2000–2250 字）；第 1 条第 4 句（第 2/2 条） 英文 92 字符，略超 90"
+   "detail": "只有 5 条：目标 6–8 条（合格的新闻不够时可以少，但正片会不到 5 分钟，加不了 B 站分段章节）；全片约 1536 字，按每秒 6.35 字约 4.0 分钟；目标正片 5–6 分钟（约 2000–2250 字）"
   },
   {
    "check": "成片",
@@ -26,13 +26,13 @@
    "check": "上传版 ≤ 9 MB",
    "ok": true,
    "level": "ok",
-   "detail": "8.95 MB"
+   "detail": "8.98 MB"
   },
   {
    "check": "H.264 上传版 ≤ 9 MB（抖音 / 小红书）",
    "ok": true,
    "level": "ok",
-   "detail": "8.69 MB"
+   "detail": "8.72 MB"
   },
   {
    "check": "竖屏成片 1080×2340",
@@ -44,13 +44,13 @@
    "check": "竖屏 QA（帧数 / 时长 / 口型对齐）",
    "ok": true,
    "level": "ok",
-   "detail": "{\"width\": 1080, \"height\": 2340, \"frames\": 8355, \"want_frames\": 8355, \"duration\": 278.5, \"total\": 278.505, \"lufs\": \"-16.1\", \"lra\": \"3.0\", \"true_peak\": \"-3.2\", \"mouth_best_lag\": 0, \"mouth_corr\": 0.725, \"mouth_corr0\": 0.725, \"subs\": 119, \"ok\": true}"
+   "detail": "{\"width\": 1080, \"height\": 2340, \"frames\": 8496, \"want_frames\": 8496, \"duration\": 283.2, \"total\": 283.192, \"lufs\": \"-16.0\", \"lra\": \"3.2\", \"true_peak\": \"-3.2\", \"mouth_best_lag\": 0, \"mouth_corr\": 0.722, \"mouth_corr0\": 0.722, \"subs\": 122, \"ok\": true}"
   },
   {
    "check": "竖屏字幕中英对齐（make_vertical.py lint）",
    "ok": true,
    "level": "ok",
-   "detail": "字幕对齐检查：119 段，错 0 处、提示 0 处"
+   "detail": "字幕对齐检查：122 段，错 0 处、提示 0 处"
   },
   {
    "check": "封面",
@@ -62,7 +62,7 @@
    "check": "中英双语字幕（画面 + 三份 SRT）",
    "ok": true,
    "level": "ok",
-   "detail": "73 条"
+   "detail": "81 条"
   },
   {
    "check": "标题（三个平台限长）",
@@ -92,7 +92,7 @@
    "check": "总时长超过 5 分钟（B 站分段章节要求）",
    "ok": false,
    "level": "warn",
-   "detail": "278.5 秒"
+   "detail": "283.2 秒"
   },
   {
    "check": "配音识别分 ≥ 0.75",
@@ -116,7 +116,7 @@
    "check": "要 AI 复核确认的词",
    "ok": false,
    "level": "warn",
-   "detail": "[敏感词（看上下文）] 第 1 条 要点 2：政府；[敏感词（看上下文）] 第 1 条 第 4 句：政府；[敏感词（看上下文）] 第 2 条 第 3 句：政府；[敏感词（看上下文）] 第 2 条 第 5 句：政府；[敏感词（看上下文）] 字幕 srt：政府；[敏感词（看上下文）] 字幕 srt：政府；[敏感词（看上下文）] 字幕 srt：政府"
+   "detail": "[敏感词（看上下文）] 第 1 条 要点 2：政府；[敏感词（看上下文）] 第 1 条 第 5 句：政府；[敏感词（看上下文）] 第 2 条 第 3 句：政府；[敏感词（看上下文）] 第 2 条 第 5 句：政府；[敏感词（看上下文）] 字幕 srt：政府；[敏感词（看上下文）] 字幕 srt：政府；[敏感词（看上下文）] 字幕 srt：政府"
   },
   {
    "check": "没有重复最近 7 天播过的原文",
@@ -126,9 +126,9 @@
   },
   {
    "check": "AI 复核（独立子代理，看成品和原文）",
-   "ok": false,
-   "level": "block",
-   "detail": "没有针对当前台本（sha d5b7e53aa335）的通过结论：【判 fail】字幕断在词中间：SRT 第 83/84 条 “三/模态 Masked Diffusion Model”（第4条第2句，“三模态”被拆开）；第 92/93 条 “文生图和文/生音频任务”（第4条第5句，“文生音频”被拆开）；第 106/107 条 “CS-FLEURS 数据/集的14种语言对上”（第5条第4句，“数据集”被拆开）。成片画面里的字幕同源，需要重断。；【判 fail】第5条第4句 SRT 第 106–109 条中英错位：第 108 条中文只有 “Whisper-small”，英文却是 “reached a mean”；第 107 条中文是 “集的14种语言对上”，英文却是 “the Whisper-small encoder”。竖屏 S06 @249s 静帧就是 “Whisper-small / reached a mean” 这一组，观众会读成不搭的两行。li"
+   "ok": true,
+   "level": "ok",
+   "detail": "通过：风格（不判 fail）：SRT 第 101-102 条，中文“不必先转成文字”在第 102 条，英文“detect code-switching directly from speech”也在第 102 条，意思相近但英文没有直译“不必转写”，可保持原样。；风格（不判 fail）：SRT 第 61/62 条英文“flood forecasting”提前一条出现，第 74/75 条英文“one organization”比中文“有机构”晚一条，第 86/87 条“from scratch”比中文晚一条。都不涉及数字或专名，不影响理解。；提示：新闻 1 的来源截图只截到标题和日期，下半是官方配图的绿色色块，属于页面本身，没有错位或遮挡。；提示：全片 283.2 秒、5 条，不足 5 分钟，加不了 B 站分段章节。这个 routine 已有提示，不属于内容问题。"
   }
  ],
  "hits": [
@@ -143,8 +143,8 @@
    "level": "review",
    "cat": "敏感词（看上下文）",
    "word": "政府",
-   "where": "第 1 条 第 4 句",
-   "context": "应，也分享研究和数据，帮助中小企业和政府人员更负责任地用 AI。"
+   "where": "第 1 条 第 5 句",
+   "context": "ropic 还说会探索帮助中小企业和政府人员更负责任地用 AI 的方式。"
   },
   {
    "level": "review",
@@ -165,7 +165,7 @@
    "cat": "敏感词（看上下文）",
    "word": "政府",
    "where": "字幕 srt",
-   "context": "ll businesses    和政府人员更负责任地用 AI。 and p"
+   "context": "explore    帮助中小企业和政府人员 ways to help sm"
   },
   {
    "level": "review",

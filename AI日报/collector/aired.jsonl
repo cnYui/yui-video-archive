@@ -98,3 +98,8 @@
 {"date": "2026-10-14", "headline": "小模型自我复制", "refs": [{"name": "Anthropic", "url": "https://www.anthropic.com/research/self-replicating-ai"}], "bv": "BV1vfp66eEEG"}
 {"date": "2026-10-14", "headline": "X 订阅合并 Grok", "refs": [{"name": "xAI", "url": "https://x.ai/news/x-subscription"}], "bv": "BV1vfp66eEEG"}
 {"date": "2026-10-14", "headline": "RTX Spark 笔记本", "refs": [{"name": "NVIDIA", "url": "https://blogs.nvidia.com/blog/local-ai-rtx-spark-laptops-software-updates/"}], "bv": "BV1vfp66eEEG"}
+{"date": "2026-10-15", "headline": "Anthropic 新加坡开办公室", "refs": [{"name": "Anthropic 官方", "url": "https://www.anthropic.com/news/singapore-office-opening"}], "bv": "BV1eqJr6oExh"}
+{"date": "2026-10-15", "headline": "谷歌设备端反诈模型", "refs": [{"name": "Google DeepMind 官方", "url": "https://deepmind.google/blog/on-device-ai-scam-detection-mddi/"}], "bv": "BV1eqJr6oExh"}
+{"date": "2026-10-15", "headline": "Google Earth AI 地理代理", "refs": [{"name": "Google Research 官方", "url": "https://research.google/blog/putting-earth-ai-to-work-geospatial-agents-for-our-planets-biggest-challenges/"}], "bv": "BV1eqJr6oExh"}
+{"date": "2026-10-15", "headline": "苹果三模态扩散模型", "refs": [{"name": "Apple Machine Learning Research", "url": "https://machinelearning.apple.com/research/tri-modal-masked-diffusion"}], "bv": "BV1eqJr6oExh"}
+{"date": "2026-10-15", "headline": "苹果检测语音混语", "refs": [{"name": "Apple Machine Learning Research", "url": "https://machinelearning.apple.com/research/code-switching-detection"}], "bv": "BV1eqJr6oExh"}
