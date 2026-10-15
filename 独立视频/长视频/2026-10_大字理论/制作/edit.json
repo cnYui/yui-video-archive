@@ -1,0 +1,519 @@
+{
+  "groups": [
+    {
+      "s": 0.30000000000000004,
+      "e": 5.44,
+      "out": 0,
+      "duration": 5.166667
+    },
+    {
+      "s": 5.720000000000001,
+      "e": 11.98,
+      "out": 5.166667,
+      "duration": 6.266667
+    },
+    {
+      "s": 12.52,
+      "e": 30.9,
+      "out": 11.433334,
+      "duration": 18.4
+    },
+    {
+      "s": 31.279999999999998,
+      "e": 39.58,
+      "out": 29.833334,
+      "duration": 8.3
+    },
+    {
+      "s": 40.12,
+      "e": 47.22,
+      "out": 38.133334000000005,
+      "duration": 7.1
+    },
+    {
+      "s": 48.64,
+      "e": 74.38,
+      "out": 45.233334000000006,
+      "duration": 25.766667
+    },
+    {
+      "s": 74.74000000000001,
+      "e": 93.42,
+      "out": 71.00000100000001,
+      "duration": 18.7
+    },
+    {
+      "s": 93.86,
+      "e": 102.47999999999999,
+      "out": 89.70000100000001,
+      "duration": 8.633333
+    },
+    {
+      "s": 102.72,
+      "e": 107.94,
+      "out": 98.33333400000001,
+      "duration": 5.233333
+    },
+    {
+      "s": 108.2,
+      "e": 110.47999999999999,
+      "out": 103.56666700000001,
+      "duration": 2.3
+    },
+    {
+      "s": 111.42,
+      "e": 122.06,
+      "out": 105.866667,
+      "duration": 10.666667
+    },
+    {
+      "s": 122.5,
+      "e": 136.6,
+      "out": 116.53333400000001,
+      "duration": 14.1
+    },
+    {
+      "s": 137.4,
+      "e": 146.98,
+      "out": 130.63333400000002,
+      "duration": 9.6
+    }
+  ],
+  "cues": [
+    {
+      "s": 0.4,
+      "e": 3.86,
+      "zh": "为什么我建议你在掌握了薄肌理论和大水理论之外",
+      "en": "Why do I recommend going beyond lean muscle and drinking water?",
+      "start": 0,
+      "end": 3.4599999999999995
+    },
+    {
+      "s": 3.86,
+      "e": 5.28,
+      "zh": "还要再掌握大字理论",
+      "en": "You also need the big-font theory.",
+      "start": 3.4599999999999995,
+      "end": 5.166667
+    },
+    {
+      "s": 5.82,
+      "e": 6.56,
+      "zh": "什么是大字理论",
+      "en": "What is the big-font theory?",
+      "start": 5.166667,
+      "end": 6.226666999999999
+    },
+    {
+      "s": 6.88,
+      "e": 9.34,
+      "zh": "大字理论，就是把你所有的社交软件和应用",
+      "en": "It means taking all your social apps",
+      "start": 6.226666999999999,
+      "end": 8.686667
+    },
+    {
+      "s": 9.34,
+      "e": 11.82,
+      "zh": "都调成老年人版本，把字体调到最大",
+      "en": "and switching to senior mode, with the largest font.",
+      "start": 8.686667,
+      "end": 11.433334
+    },
+    {
+      "s": 12.62,
+      "e": 14.4,
+      "zh": "强者用大字，弱者用小字",
+      "en": "The strong use big fonts. The weak use small ones.",
+      "start": 11.433334,
+      "end": 13.333333999999999
+    },
+    {
+      "s": 14.52,
+      "e": 17.8,
+      "zh": "为什么？因为弱者总觉得自己眼神好、反应快",
+      "en": "Why? The weak think their eyesight and reactions are great.",
+      "start": 13.333333999999999,
+      "end": 17.013333999999997
+    },
+    {
+      "s": 18.2,
+      "e": 20.82,
+      "zh": "一个屏幕里面能同时处理8个群聊",
+      "en": "They think one screen can handle eight group chats,",
+      "start": 17.013333999999997,
+      "end": 19.713334
+    },
+    {
+      "s": 20.9,
+      "e": 23.04,
+      "zh": "3个购物平台和17条待回复消息",
+      "en": "three shopping apps, and 17 messages to reply to.",
+      "start": 19.713334,
+      "end": 22.293333999999998
+    },
+    {
+      "s": 23.48,
+      "e": 26.48,
+      "zh": "但是强者不一样，强者直接把字体拉到最大",
+      "en": "The strong are different. They just max out the font size.",
+      "start": 22.293333999999998,
+      "end": 25.293333999999998
+    },
+    {
+      "s": 26.48,
+      "e": 28.8,
+      "zh": "告诉整个互联网：我是老人，我看得慢",
+      "en": "They tell the internet: I'm old. I read slowly.",
+      "start": 25.293333999999998,
+      "end": 27.613334
+    },
+    {
+      "s": 28.8,
+      "e": 30.74,
+      "zh": "我回得慢，我不接受你的焦虑",
+      "en": "I reply slowly. I won't take on your anxiety.",
+      "start": 27.613334,
+      "end": 29.833334000000004
+    },
+    {
+      "s": 31.38,
+      "e": 33.98,
+      "zh": "你这样调成大字理论之后，你可以发现",
+      "en": "Once you switch to big fonts, you'll notice",
+      "start": 29.833334000000004,
+      "end": 32.433333999999995
+    },
+    {
+      "s": 33.98,
+      "e": 35.66,
+      "zh": "屏幕里的信息变少了",
+      "en": "there is less information on the screen.",
+      "start": 32.433333999999995,
+      "end": 34.53333399999999
+    },
+    {
+      "s": 36.08,
+      "e": 39.42,
+      "zh": "很多社交软件，它给你推的内容你就看不到了",
+      "en": "Much of what social apps push at you disappears from view.",
+      "start": 34.53333399999999,
+      "end": 38.133334000000005
+    },
+    {
+      "s": 40.22,
+      "e": 43.12,
+      "zh": "以前一眼能看到20条未读消息，会让人非常焦虑",
+      "en": "Seeing 20 unread messages at a glance used to feel stressful.",
+      "start": 38.133334000000005,
+      "end": 41.033333999999996
+    },
+    {
+      "s": 43.12,
+      "e": 47.06,
+      "zh": "但现在你打开一看，一个屏幕只能显示6条群聊内容",
+      "en": "Now you open it and see only six group-chat messages.",
+      "start": 41.033333999999996,
+      "end": 45.233334000000006
+    },
+    {
+      "s": 48.74,
+      "e": 51.06,
+      "zh": "心理上其实就感觉没有那么焦虑了",
+      "en": "Psychologically, you feel less anxious.",
+      "start": 45.233334000000006,
+      "end": 47.973334
+    },
+    {
+      "s": 51.48,
+      "e": 54.3,
+      "zh": "而且一些外卖和购物软件，你调成大字版本之后",
+      "en": "And when you switch food-delivery and shopping apps to big fonts,",
+      "start": 47.973334,
+      "end": 50.793333999999994
+    },
+    {
+      "s": 54.3,
+      "e": 57.74,
+      "zh": "会减少给你商品推送，你就看不到那么多商品了",
+      "en": "you see fewer product recommendations.",
+      "start": 50.793333999999994,
+      "end": 54.233334000000006
+    },
+    {
+      "s": 57.74,
+      "e": 60.52,
+      "zh": "就会降低你的消费欲望，就不会买那么多东西了",
+      "en": "You want to spend less, so you buy fewer things.",
+      "start": 54.233334000000006,
+      "end": 57.353334
+    },
+    {
+      "s": 60.86,
+      "e": 62.88,
+      "zh": "这在经济下行时代是非常有用的",
+      "en": "That's very useful during an economic downturn.",
+      "start": 57.353334,
+      "end": 59.71333400000001
+    },
+    {
+      "s": 63.22,
+      "e": 65.9,
+      "zh": "大字理论还有个隐藏收益，就是它可以降低别人",
+      "en": "Big fonts also have a hidden benefit: they lower",
+      "start": 59.71333400000001,
+      "end": 62.39333400000002
+    },
+    {
+      "s": 65.9,
+      "e": 67.12,
+      "zh": "对你的预期",
+      "en": "other people's expectations of you.",
+      "start": 62.39333400000002,
+      "end": 63.973334
+    },
+    {
+      "s": 67.48,
+      "e": 70.68,
+      "zh": "我都用大字了，我都是老年人了，你应该给我一点关怀",
+      "en": "I use big fonts. I'm an old person. Show me some care.",
+      "start": 63.973334,
+      "end": 67.17333400000003
+    },
+    {
+      "s": 70.68,
+      "e": 74.22,
+      "zh": "我打字速度很慢的，你就不要让我的消息秒回了",
+      "en": "I type slowly, so don't expect instant replies.",
+      "start": 67.17333400000003,
+      "end": 71.00000100000003
+    },
+    {
+      "s": 74.84,
+      "e": 77.46,
+      "zh": "领导或者同事一看到你在贯彻大字理论",
+      "en": "When your boss or colleagues see you using big fonts,",
+      "start": 71.00000100000003,
+      "end": 74.08000100000001
+    },
+    {
+      "s": 77.92,
+      "e": 80.28,
+      "zh": "很多没有必要的社交关系就自然就消失了",
+      "en": "many unnecessary social ties fade away on their own.",
+      "start": 74.08000100000001,
+      "end": 76.44000100000002
+    },
+    {
+      "s": 80.28,
+      "e": 82.4,
+      "zh": "如果同事要拉你去酒吧、去应酬",
+      "en": "If a colleague wants to drag you to a bar or a social event,",
+      "start": 76.44000100000002,
+      "end": 78.94000100000002
+    },
+    {
+      "s": 82.78,
+      "e": 84.64,
+      "zh": "一看你的手机全是特大号字体",
+      "en": "they see your phone filled with extra-large type.",
+      "start": 78.94000100000002,
+      "end": 80.80000100000001
+    },
+    {
+      "s": 84.64,
+      "e": 87.12,
+      "zh": "像个老年人，甚至像个弱智一样，就会觉得",
+      "en": "You look elderly, even clueless, so they think:",
+      "start": 80.80000100000001,
+      "end": 83.740001
+    },
+    {
+      "s": 87.58,
+      "e": 89.22,
+      "zh": "算了，这次就不约他了",
+      "en": "Forget it. Let's skip inviting him this time.",
+      "start": 83.740001,
+      "end": 85.38000100000002
+    },
+    {
+      "s": 89.22,
+      "e": 91.78,
+      "zh": "这会触发周围人的幸福者退让原则",
+      "en": "It triggers the principle of the happier person yielding.",
+      "start": 85.38000100000002,
+      "end": 87.94000100000002
+    },
+    {
+      "s": 91.78,
+      "e": 93.26,
+      "zh": "可以减少很多的社交麻烦",
+      "en": "That cuts down on a lot of social hassle.",
+      "start": 87.94000100000002,
+      "end": 89.70000100000003
+    },
+    {
+      "s": 93.96,
+      "e": 97.78,
+      "zh": "当你贯彻了大字理论之后，周围那些屏幕字号正常",
+      "en": "Once you use big fonts, people with normal-sized type,",
+      "start": 89.70000100000003,
+      "end": 93.52000100000002
+    },
+    {
+      "s": 97.78,
+      "e": 100.48,
+      "zh": "消息秒回，还在研究优惠券叠加的人",
+      "en": "instant replies, and coupon-stacking strategies",
+      "start": 93.52000100000002,
+      "end": 96.22000100000001
+    },
+    {
+      "s": 100.48,
+      "e": 102.32,
+      "zh": "就会下意识给你让出一点空间",
+      "en": "will instinctively give you a little room.",
+      "start": 96.22000100000001,
+      "end": 98.33333400000001
+    },
+    {
+      "s": 102.82,
+      "e": 104.98,
+      "zh": "他们会默认你是老人，是不适合卷",
+      "en": "They'll assume you're old and unsuited to the rat race,",
+      "start": 98.33333400000001,
+      "end": 100.493334
+    },
+    {
+      "s": 104.98,
+      "e": 107.78,
+      "zh": "不适合参与深夜群聊、喜欢大睡的人",
+      "en": "to late-night group chats, and that you love sleeping.",
+      "start": 100.493334,
+      "end": 103.56666700000001
+    },
+    {
+      "s": 108.3,
+      "e": 110.32,
+      "zh": "也是不会被消费主义焦虑影响的人",
+      "en": "And that consumerist anxiety won't get to you.",
+      "start": 103.56666700000001,
+      "end": 105.86666699999999
+    },
+    {
+      "s": 111.52,
+      "e": 113.68,
+      "zh": "大字理论其实反对的是另一套逻辑",
+      "en": "The big-font theory pushes back against another way of thinking.",
+      "start": 105.86666699999999,
+      "end": 108.02666700000002
+    },
+    {
+      "s": 113.68,
+      "e": 115.42,
+      "zh": "就是现在所有的软件都希望在页面里",
+      "en": "Today's apps all want to pack their pages",
+      "start": 108.02666700000002,
+      "end": 109.76666700000003
+    },
+    {
+      "s": 115.42,
+      "e": 117.72,
+      "zh": "塞进更多的内容和广告",
+      "en": "with more content and ads,",
+      "start": 109.76666700000003,
+      "end": 112.06666700000001
+    },
+    {
+      "s": 117.72,
+      "e": 119.28,
+      "zh": "让你沉迷于奶头乐",
+      "en": "to hook you on mindless entertainment.",
+      "start": 112.06666700000001,
+      "end": 113.62666700000001
+    },
+    {
+      "s": 119.28,
+      "e": 121.9,
+      "zh": "我点个外卖，最后去刷短视频了",
+      "en": "I start ordering food and end up scrolling through short videos.",
+      "start": 113.62666700000001,
+      "end": 116.533334
+    },
+    {
+      "s": 122.6,
+      "e": 124.76,
+      "zh": "都需要把你训练成一个随时在线",
+      "en": "They want to train you to be always online,",
+      "start": 116.533334,
+      "end": 118.69333400000002
+    },
+    {
+      "s": 124.76,
+      "e": 128.0,
+      "zh": "随时可被召唤、随时都可以消费的人",
+      "en": "always available, and always ready to spend.",
+      "start": 118.69333400000002,
+      "end": 122.41333399999999
+    },
+    {
+      "s": 128.48,
+      "e": 130.9,
+      "zh": "那大字理论、大水理论、薄肌理论",
+      "en": "Big fonts, drinking water, and lean muscle",
+      "start": 122.41333399999999,
+      "end": 124.83333400000001
+    },
+    {
+      "s": 130.9,
+      "e": 133.24,
+      "zh": "那才是经济下行时代的基础设施",
+      "en": "are the real infrastructure for an economic downturn.",
+      "start": 124.83333400000001,
+      "end": 127.17333400000004
+    },
+    {
+      "s": 133.24,
+      "e": 136.44,
+      "zh": "渴了就喝水，累了就睡觉，身体练一练",
+      "en": "Drink when thirsty. Sleep when tired. Get some exercise.",
+      "start": 127.17333400000004,
+      "end": 130.633334
+    },
+    {
+      "s": 137.5,
+      "e": 139.6,
+      "zh": "注意健康，屏幕字号调大一点",
+      "en": "Look after your health. Make the screen font a little bigger.",
+      "start": 130.633334,
+      "end": 133.113334
+    },
+    {
+      "s": 139.98,
+      "e": 142.5,
+      "zh": "少喝小甜水，少刷广告，少回消息",
+      "en": "Fewer sugary drinks, fewer ads, fewer replies.",
+      "start": 133.113334,
+      "end": 135.633334
+    },
+    {
+      "s": 142.5,
+      "e": 144.88,
+      "zh": "少一些本来不存在的焦虑和需求",
+      "en": "Less anxiety and fewer needs that never needed to exist.",
+      "start": 135.633334,
+      "end": 138.013334
+    },
+    {
+      "s": 144.88,
+      "e": 146.82,
+      "zh": "这才是真正的极简生活",
+      "en": "That's a truly minimalist life.",
+      "start": 138.013334,
+      "end": 140.233334
+    }
+  ],
+  "duration": 140.233334,
+  "source": "H:\\DCIM\\DJI_001\\DJI_20261014115040_0203_D.MP4",
+  "intro": 4.8
+}
