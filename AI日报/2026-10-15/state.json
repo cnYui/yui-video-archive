@@ -23,16 +23,21 @@
       "takes": 1
     },
     "gate": {
-      "at": "2026-10-15 07:59:30",
-      "passed": false,
-      "script_sha": "d5b7e53aa335"
+      "at": "2026-10-15 08:19:00",
+      "passed": true,
+      "script_sha": "ce4f857648c9"
     },
     "render": {
-      "at": "2026-10-15 07:59:25",
-      "seconds": 278.5,
-      "upload_bytes": 8945500,
+      "at": "2026-10-15 08:17:39",
+      "seconds": 283.2,
+      "upload_bytes": 8982244,
       "check_warnings": 0
+    },
+    "published": {
+      "at": "2026-10-15 08:21:14",
+      "bv": "BV1eqJr6oExh",
+      "also": []
     }
   },
-  "last": "voice"
+  "last": "published"
 }
