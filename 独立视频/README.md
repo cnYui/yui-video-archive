@@ -34,3 +34,5 @@ YYYY-MM_<短标题>/
 | `短视频/2026-10_AI工程师GPU指南/`（2026-10-05，素材放 `素材/2026-10_AI工程师GPU指南/`） | X 长文《Everything an AI Engineer Needs to Know About GPUs》（@kmeanskaran）的短视频：H100 解码一步里等数据的时间约是算数的 145 倍、H200、训练 vs 部署、量化、租卡（四平台标题 3×4 / 简介 / 话题见该目录 `投稿信息.json`） | **成片定稿（87.3 s，1080×2340，11.4 MB），用户选封面 B、标题“推特长文《AI 工程师需要知道的 GPU 知识》精选”（视频顶上的标题也是文章标题），**2026-10-06 已发布 B 站 BV1XyHd6KEJn（开放浏览）/ 抖音 / 小红书（审核中），视频号用户说不发**** |
 
 《请选择你的AI Harness 框架阵营》是仿 B 站《请选择你的 AI 模型主义》的“踩点幻灯片”短视频，目录结构和上面不同：`台本/台本.json`（唯一来源，17 个产品 17 个“××主义”）、`制作/`（`engine/` HTML 逐帧引擎、`render_frames.py`、`encode.py`、`verify_sync.py`、`assets/logos/`）、`参考分析/`（参考视频抽帧、BGM 节拍分析，被 .gitignore 忽略）。BGM 是 130 BPM、第 0 拍 0.503 s，整首 72 小节；现行版每页 8 拍（2 小节）踩点，整首版（每页 16 拍、2:19）在 `制作/_旧稿/`；细节见 `docs/ai/context/20261001-171531-harness-camps-video_CN.md`。
+
+- REA 逆向设备短视频（2026-10-14）：短视频/2026-10_REA逆向设备，58.73秒、本地Qwen配音；仅B站 [BV1JepC6EEk8](https://www.bilibili.com/video/BV1JepC6EEk8/)，开放浏览，封面B文字+A图片。

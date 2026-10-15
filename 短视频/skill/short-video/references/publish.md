@@ -1,11 +1,17 @@
+**上传方式（2026-10-14 用户定）：文件小于 10 MB 且本轮已授权自动上传时，可用 Playwright JS 上传完整文件；达到或超过 10 MB 就提醒用户手动上传。不为自动上传压缩、分块或改用低清版本。用户手动上传后继续填表，已授权发布则读回核对后点击发布。**
+
+> 默认发布平台（2026-10-14 用户定）：短视频、长视频在用户未指定平台时仅发 B 站；不打开、不上传其他平台。用户明确要求其他平台时才启用对应流程。平台默认值不代替发布授权；用户已说“发布”时，完成读回核对后直接发布，不重复确认。
+
 # 发布：B 站 / 抖音 / 小红书（三个平台；视频号 2026-10-06 起不发）
+
+> **Playwright 发布（2026-10-14 更新）**：用户点名Playwright时直接使用；Claude/Chrome浏览器插件连不上时也切换到Playwright。连接用户自己的Chrome并沿用登录态；有 `mcp__playwright__*` 工具就用工具，没有就用 `D:\大疆\docs\pw\pw_do.py` 桥接。**已获发布授权且原片小于10 MB时，可自动上传并直接投稿；标准传文件报 `DOM.setFileInputFiles: Not allowed` 时，使用下方已验证的完整小文件JS流程。** 连接说明见 `D:\大疆\docs\发布备用_Playwright.md`，上传到核验的完整步骤见本文件「Playwright：B站小文件自动上传与发布」。
 
 2026-10-04 用《Tavus-Griffin》那条第一次四个平台全发过（`独立视频\短视频\01_Tavus-Griffin\`），下面按那次实际填过的页面重写；复盘见 `D:\大疆\短视频\流程复盘.md`。平台网址在 AGENTS.md「常用网页」。**2026-10-06 用户决定“视频号之后不发”，视频号已从本流程移除**：下面各节里只讲视频号的内容都搬进了 `references/_archive/视频号发布_已移除_20261006.md`。
 
 ## 规矩（先读这里）
 
-1. **视频由用户拖进各页的上传区，我不压缩、不绕 10 MB**：插件 `file_upload` 单次 < 10 MB，成片（十几 MB）传不上去；原生文件选择窗口碰不了（点“上传 / 更换视频”会被权限分类器拒绝，别用 UI 自动化去接管，也别起本机服务 + 页面里塞文件）。用户 2026-10-04：“视频如果太大我来手动上传，不要因为压缩影响了画质”。**2026-10-05 再确认**：用户问“你能不能用 js 脚本帮我上传这些视频”，我提的“成片切成 < 10 MB 的块、逐块 `file_upload` 进页面里临时的 input、JS 拼回去塞进上传框”开工前就被权限分类器拦了，用户随即说“别这样”“等我上传吧”——**不要提、不要试任何分块 / 本机服务 / JS 塞文件 / 挪 input 的办法**，开好三个页、选中成片、等用户说“拖好了”。Tavus 那条我先压了个 9.2 MB 上传版塞进页面，被用户纠正；他后来说“就先用这样的压缩版发布，仅此一次”，**只对那一条**。封面图（< 2 MB）可以 `file_upload`。
-2. **开 Chrome 之前走完“交付包”**（`流程复盘.md` 开头的四段流程）：成片 + **封面 ×3 + 标题 ×3**（各附三平台限长版）+ 默认项摘要一次发给用户，用户回“封面 X 标题 Y 同意”；然后 `make_candidates.py --select X`、`cover_frame0.py`（把选定的封面放进成片第 0 帧：用户规则“之后的视频统一第一帧为封面”）；`投稿信息.json` 里把三个平台的标题（限长版）、简介、话题、声明、位置、合集都写好并核限长；让用户把原片拖进三个页面。**选中成片**：`& explorer.exe "/select,$路径"`（PowerShell），再用 `(New-Object -ComObject Shell.Application).Windows()` 列出窗口，确认资源管理器真的开在成片所在文件夹；**消息里写完整路径**——image-blaster 那次 `Start-Process explorer.exe -ArgumentList '/select,"…"'` 没弹出窗口，用户说“视频在哪里，不在独立视频的文件夹中”（成片在 `独立视频\短视频\<名>\`，比他以为的深一层）。
+1. **原片小于10 MB可自动上传，达到10 MB由用户手动上传；不压缩、不分块、不起上传服务器**。按已验证脚本的保守阈值，`size_bytes < 10_000_000` 才自动传。用户2026-10-14明确说“小于10MB的视频……用JS脚本可以直接上传”，并要求复盘写入本流程。Playwright的完整小文件JS流程已在B站验证，封面小文件也可用。2026-10-05被否决的是为超过限制的大视频分块、压缩或起服务，不再据此让所有小原片都等用户拖入。抖音/小红书的Playwright选择器与JS上传尚未验证，不能直接套B站选择器。
+2. **开 Chrome 之前走完“交付包”**（`流程复盘.md` 开头的四段流程）：成片 + **封面 ×3 + 标题 ×3**（各附三平台限长版）+ 默认项摘要一次发给用户，用户回“封面 X 标题 Y 同意”；然后 `make_candidates.py --select X`、`cover_frame0.py`（把选定封面放进成片第0帧）；`投稿信息.json` 定稿并核限长。用户已经给定封面、标题、平台并要求直接发布时沿用已有授权。符合规矩1的小原片自动上传；需要用户手动上传时再 `& explorer.exe "/select,$路径"`，确认资源管理器已打开并写明完整路径。
 3. **授权和停手**：交付包里用户说了“同意 / 发布 / 用封面 X”就是授权我点三个平台的发布（image-blaster：“没问题，打开四个平台，填写信息然后发布”），**一次填完整、读回核对**后直接点，再逐个核对线上；只说“填写”时才停在“发布 / 立即投稿”前问。**用户随时可能自己去点发布**（Tavus 那条他 15:53–15:56 自己把四个都点了，当时我还在换封面、加话题；image-blaster 的小红书也是他先点的）：表还没填完就要明说“先别点发布”。
 4. **排队**：三个创作页同一时间只有一个会话在填（登录态共享，草稿会互相覆盖）；发完一个平台就关自己的标签、发消息告诉下一个；别的会话接管后我的标签组就没了。
 5. 每项填完**读回来核对**（标题 / 简介 / 话题 / 封面 / 声明 / 位置），再汇报。
@@ -45,7 +51,7 @@
 - **抖音的封面检测会给“封面不佳：请勿使用截屏当封面”**（页面说会减少流量，但不拦发布）：Tavus 那条带视频通话小窗（Hassaan）的 4:3 被标了，3:4 没被标；image-blaster 的 4:3（真实画面 + 箭头 + 小窗输入图）没被标。**原因没确认**（我猜是像视频通话截屏），保险起见横版用干净的单人画面。
 - **封面候选和成片一起发给用户、选定了再开 Chrome**：Tavus 那条封面发了之后用户到发布阶段才说没看，导致在填表时返工。
 
-## 通用的插件手法
+## Claude/Chrome 浏览器插件手法（非Playwright）
 
 - 找 `<input type=file>` 用 `find`，别点上传按钮；`file_upload` 要用刚 `find` 出来的 ref（页面重渲后旧 ref 会 “garbage collected”）。
 - 按钮被浮层 / 客服气泡挡住时，用 JS 按 `innerText` 找到再 `.click()`。
@@ -55,6 +61,93 @@
 - **Chrome 窗口被别的窗口完全遮住时页面 `visibilityState` 是 `hidden`**（用户在聊天窗口里工作就会）：截图超时，小红书这类 SPA 只渲染出一个“个人知识库”浮层（正文长度 27）。对该标签做一次 `computer` 动作（比如 `scroll`）会让它渲染一次，马上用 JS 读 DOM；长时间操作前请用户把 Chrome 窗口放到旁边别被盖住（第 3 条）。
 - **额度中断后标签组会丢**：`tabs_context_mcp` 报 “No tab group exists”，旧标签报 “Tool can only target tabs inside the group”；`createIfEmpty: true` 新建后旧标签多半碰不到（有一次只有一个标签重新挂上来，里面是我填了一半的小红书表）。额度快到时先把每个页面的进度写进记录；恢复后用新标签重做。
 - **填表顺序：先封面 / 声明 / 合集，话题和简介放最后**——用户会在表没填完时自己点发布（第 3 条：16:24 B 站 + 抖音、16:35 小红书），小红书那条因此没封面 / AI 声明 / 合集就上线了；开始填之前就说“填完前先别点发布”。
+
+## Playwright：B站小文件自动上传与发布（2026-10-14 实测）
+
+**连接工具是Chrome的Playwright MCP Bridge扩展 + Playwright MCP**，下面的 `page` 来自 `browser_run_code_unsafe`；不使用Claude浏览器插件的 `javascript_tool` / `file_upload`。工具名以本次列表为准，本次实测的是 `browser_run_code_unsafe`。所有选择器先核对当前DOM，下面记录的是本次B站新投稿页。
+
+### 1. 连Chrome并打开新投稿页
+
+1. 读本期 `投稿信息.json`、已有授权与实际文件字节数；只打开选定平台。Chrome须运行并装有Playwright MCP Bridge扩展，桥接自行读取 `D:\大疆\docs\pw\token.env`，不回显令牌/cookie。
+2. 每期用自己的临时队列，不清共享队列、不停止其他会话的桥接。`<队列目录>` 在系统临时目录，`<本期目录>` 是本期成片目录。用长驻终端会话起桥接，返回session ID后保留会话：
+
+   ```powershell
+   python -W ignore "D:\大疆\docs\pw\pw_mcp_bridge.py" "<队列目录>" "<本期目录>" -- --extension --output-dir "<队列目录>\out"
+   python -W ignore "D:\大疆\docs\pw\pw_do.py" --queue "<队列目录>" ready
+   python -W ignore "D:\大疆\docs\pw\pw_do.py" --queue "<队列目录>" list
+   ```
+
+3. 扩展通常打开Welcome工作标签，用Playwright导航到 `https://member.bilibili.com/platform/upload/video/frame` 并确认登录态。页面加载慢时先读当前状态，不凭一次等待超时认定连接失败。
+4. 不点旧稿的「继续编辑」、不删除旧的未提交视频。扩展重连后重新读URL/DOM；如果已有本期文件名就先检查上传状态，不重新导航或重复上传。本次有3个旧稿，新片单独上传。
+
+### 2. 「点击上传」与真正传文件
+
+**点击只打开文件选择框，尚未上传。** 新投稿页真正可点击的是 `.upload-area`；里面的 `.upload-text.no-events` 文字不接收鼠标事件。确认目标只有一个后，用 `page.locator('.upload-area').click({force:true})`，不能反复点文字节点。
+
+标准路径是等待 `filechooser` → 点上传区 → `fileChooser.setFiles(原片路径)`，也可用已找到的input执行 `setInputFiles` / `browser_file_upload`。本次选择框能打开，但传文件报 **`Protocol error (DOM.setFileInputFiles): Not allowed`**，`locator.setInputFiles`也未成功。**具体原因未证实**；不能认定“开允许访问文件网址就能修复”，也不能把它说成自动审批拒绝。当前扩展连接已遇到这个错误时，改走下方已验证的小文件路径，不重复同一个失败动作。
+
+成功路径：**本机读取完整原片 → base64作为JS参数 → 页面创建File/DataTransfer → 赋给已有input.files → 派发change → B站自身上传器处理。** 本次没有新增/移动input、拦截input.click或接管原生窗口，也没有直接调用B站上传接口。自动审批拒绝、人机验证、缺少授权须单独处理，不能当普通协议错误继续。
+
+本机包装脚本先检查 `size_bytes < 10_000_000`，准备 `payload`：`base64`、`name`、`mime`、`selector`。将下面的 `MEDIA_JSON` 用 `json.dumps(payload, ensure_ascii=False)` 替换，代码写成 `{"code":"完整JS函数"}` 的参数JSON，放私有临时队列，不用Shell插值传媒体内容：
+
+```javascript
+async (page) => {
+  if (!page.url().startsWith('https://member.bilibili.com/')) {
+    throw new Error('当前不是B站创作中心');
+  }
+  const file = await page.evaluate((data) => {
+    const input = document.querySelector(data.selector);
+    if (!input || input.type !== 'file') throw new Error('目标file input不存在');
+    const bytes = Uint8Array.from(atob(data.base64), c => c.charCodeAt(0));
+    if (bytes.length >= 10_000_000) throw new Error('达到10 MB，停止自动上传');
+    const media = new File([bytes], data.name, {type: data.mime});
+    const transfer = new DataTransfer();
+    transfer.items.add(media);
+    input.files = transfer.files;
+    input.dispatchEvent(new Event('change', {bubbles: true}));
+    return {name: media.name, size: media.size, selected: input.files.length};
+  }, MEDIA_JSON);
+  return {file, text: await page.locator('body').innerText()};
+}
+```
+
+本次MP4的MIME是 `video/mp4`，选择器是 **`.bcc-upload-wrapper > input[type=file]`**（新投稿页且尚未打开封面编辑器时）。先确认匹配数量和accept，不能选其他buploader或添加分P的input。
+
+```powershell
+python -W ignore "D:\大疆\docs\pw\pw_do.py" --queue "<队列目录>" browser_run_code_unsafe "@<队列目录>\upload_args.json"
+```
+
+**这条命令须由包装脚本捕获输出后再打印**：桥接结果会回显执行代码，包装脚本须剔除 `### Ran Playwright code` 段并隐藏连接令牌，只输出文件名、字节数和页面状态，不能把base64打印到会话。完整实现见 `D:\大疆\Claude Code相关\短视频\04_CCBaga环境工具\制作\pw_media.py`。它限制读取本期文件、拒绝达到10MB的文件、使用参数文件并过滤输出；**本期路径与队列是固定值，下一期复用前须改成下一期路径**。本次JS运行环境没有 `require` / `process`，文件读取在本机包装脚本完成。
+
+成功标志依次是：返回 `selected:1`（选入文件）→ 页面出现本期文件名和「上传中」（站点开始处理）→ 本期文件名和 **「上传完成」**（上传完成）。三者不能混为一谈。最初0MB/0MB、剩余>1天不是最终结果，本次随后正常完成；已出现本期文件名时先读状态，不重复change。
+
+### 3. 填表与两个比例的封面
+
+| 项目 | 本次Playwright操作与核对 |
+|---|---|
+| 标题 | `getByPlaceholder('请输入稿件标题').fill(title)`，用 `inputValue()`读回 |
+| 声明 | 点 `.bcc-select`，选择目标 `.bcc-option`，再读声明input；本期「含AI生成内容」 |
+| 分区 | 点 `.select-controller` → `.drop-list-v2-item[title="人工智能"]`；填完标签后复核 |
+| 标签 | 删 `.tag-pre-wrp .close` 的默认项；逐个fill、等候选更新、Enter、等结果并读chip。快速连续操作会丢标签 |
+| 简介 | 第一个 `.ql-editor` 执行fill；用 `parentElement.__quill.getText()` 去掉唯一末尾换行后与定稿比较，innerText会因段落多出空行 |
+| 合集 | 点「请选择合集」后选目标；隐藏批量表单有同名节点，本次主表单是 `.first()`，复用时先确认目标 |
+
+本次 `Claude` 被静默丢弃；点 `.hot-tag-item` 里的推荐 `claude` 后加上，最终6个标签全部读回。每个操作后重取locator/状态，不复用重绘前的ref。
+
+封面：点 `.cover-main .cover-img` → 确认「首页推荐封面（4:3）」 → **先关双比例同步** → 用上面的JS把4:3 PNG传给 `input[type=file][accept="image/png, image/jpeg"]` → 点「个人空间封面（16:9）」 → 确认同步关闭 → 传16:9 PNG → 点「完成」 → 等「制作中...」消失。两个同步节点同时存在，本次宽版是 `.sync.ratio_16_9 input[type=checkbox]`，4:3位是 `.sync.ratio_4_3`；核对当前比例再关，不按全页checkbox序号操作。
+
+本期实际先传4:3，切16:9后发现同步开启，再关闭并传16:9，最终两个比例正确。下一期将关闭同步提前。发现某个底图不对就回该比例重传，主表单只显示一张缩略图，不能据此认定两个都正确。
+
+### 4. 发布一次并核验线上
+
+1. 读回标题、Quill简介、标签chip、声明、分区、合集；确认本期「上传完成」、封面制作结束、定时发布关闭。
+2. 已有发布授权，`page.getByText('立即投稿', {exact:true}).click({force:true})` **一次**；只授权填写才停在按钮前。
+3. 等「稿件投递成功」，点「查看进度」，从同一稿件的链接取BV号。瞬间读到的URL可能仍是跳转前的，以最终页面和稿件链接为准。
+4. 超时或结果丢失先只读检查成功页/稿件列表，不能再点发布“试一下”。
+5. 在已登录B站页面内只读fetch三个接口：`/x/web/archives`（同一BV/标题/状态）、`/x/vupre/web/archive/view?bvid=<BV>`（简介、标签、tid、声明、两封面、时长）、`https://api.bilibili.com/x/web-interface/view?bvid=<BV>`（公开状态及 `ugc_season.id/title`）。不导出cookie。封面用 `new Image()`量实际尺寸，两张URL应不同。state-1按审核中记；state0且已过审才称开放浏览。
+6. 保存核验证据并更新本期 `投稿信息.json` / README、合集README、短视频台账、AGENTS.md；新建时间戳context。关闭自己的工作标签，停止自己的桥接队列；保留原片/素材。
+
+**本次证据**：CCBaga，BV1CxpC69ESE，完整原片7,156,553字节；三个接口state0「开放浏览」，合集9223239「Claude Code相关」、tid231、声明id1、6个标签、封面1920×1080 / 1440×1080。证据 `Claude Code相关/短视频/04_CCBaga环境工具/制作/B站发布核验.json`；复盘见 `短视频/流程复盘.md`第10部分。已验证范围是B站新投稿；替换已发布视频和其他平台的Playwright上传仍须现场核对。
 
 ## B 站（竖屏）
 

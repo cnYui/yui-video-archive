@@ -2,6 +2,8 @@
 
 用 Claude in Chrome 插件在用户自己的 Chrome 里操作（用户在那里登录了 B 站）。投稿页：https://member.bilibili.com/platform/upload/video/frame
 
+> **备用发布方案（2026-10-14 用户定）**：Chrome 插件连不上浏览器（`tabs_context_mcp` 报错、`unsupported Codex auth method`、`Codex auth token is unavailable`、没有已连接的浏览器）、因此没法填表 / 发布时，不要停在这里等，改用 **Playwright（装了插件就用 `mcp__playwright__*` 工具；没装就用桥接脚本 `D:\大疆\docs\pw\pw_do.py`，它读 `D:\大疆\docs\pw\token.env` 里的令牌直接连用户自己的 Chrome）** 继续：做法、工具对照和注意事项见 `D:\大疆\docs\发布备用_Playwright.md`。只换操作浏览器的工具，本文件的内容和红线（谁点“立即投稿”、视频由谁上传、10 MB）一条不变。
+
 **两条红线**
 - 「立即投稿」（以及任何“发布 / 提交”按钮）永远不点。填完就停，让用户检查后自己发。
 - 不点允许浏览器的安全类权限提示（本地网络访问等），不尝试绕过插件的上传大小限制。

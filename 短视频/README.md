@@ -1,11 +1,12 @@
 # 短视频（竖屏）技能的家
 
-2026-10-04 开。竖屏 1080×2340、不加悠一片头片尾、台本照 `docs/台本风格_AI大圆镜.md`、中英双语字幕，发 B 站竖屏 + 抖音 + 小红书三个平台（2026-10-06 起视频号不发；每条问用户）。做法见技能 `skill/short-video/SKILL.md`。
+2026-10-04 开。竖屏 1080×2340、不加悠一片头片尾、台本照 `docs/台本风格_AI大圆镜.md`、中英双语字幕。2026-10-14 起，短视频和长视频未指定平台时默认仅 B 站；超过 10 MB 提醒用户手动上传，不为自动上传压缩原片。做法见技能 `skill/short-video/SKILL.md`。
 
 **短视频本身放各合集的 `短视频\` 里**（`<合集>\短视频\NN_<短名>\`），素材放 `<合集>\素材\<YYYY-MM_主题>\`，短、长视频共用（用户 2026-10-04 的目录规则，见 AGENTS.md「目录结构」）。这里只放技能。
 
 | # | 目录（现在的位置） | 内容 | 状态 |
 |---|---|---|---|
+| — | `Claude Code相关/短视频/04_CCBaga环境工具/`（素材 `Claude Code相关/素材/2026-10_CCBaga/`） | CCBaga环境管理机制介绍，86.5秒，不出镜，本地Qwen配音，中英双语字幕；封面和标题按用户指定 | **2026-10-14 已发B站 [BV1CxpC69ESE](https://www.bilibili.com/video/BV1CxpC69ESE/)（开放浏览）**，合集「Claude Code相关」；7.2MB原片经Chrome Playwright的JS上传并直接投稿，双比例封面与AI声明已核验 |
 | 01 | `Claude Code相关/短视频/01_ClaudeDesign设计师用法/`（2026-10-04 14:05 从这里挪过去，原片在 `Claude Code相关/素材/2026-10_ClaudeDesign设计师用法/`） | Claude 官方 YouTube《Build an App With Claude Design》二次剪辑成 28 秒（双分镜：人脸 + 电脑操作，曼波中文讲解）。另一个会话用 ffmpeg 直接剪的 | **成片已出**（28.28 s、1080×2340、30 fps、-16 LUFS，README 有做法和坑）；等用户听配音 / 定平台 / 合集 / 封面 |
 | 02 | `Claude Code相关/短视频/02_Anthropic设计师用Claude做设计/`（原片在 `Claude Code相关/素材/2026-10_Anthropic设计师_ClaudeDesign与Slides/`） | 同一位设计师 Nate 的两条 Claude 官方视频（Claude Design 主线 + Claude Slides）合成一条约 2:18 的竖屏短视频：原声 + BGM 保留、曼波第三人称同传、中英字幕（中文 = 同传、英文第三人称）、双分镜（版式 B + 边框 6）、随机背景印花、字幕 y 1764；**ffmpeg 直接合成的路线**（plan.py → render_scenes → render），第 1 条的脚本改的 | 成片已出（见本条 README）；配音待用户听 / 平台 / 合集 / 封面待定 |
 | — | `独立视频/短视频/2026-10_image-blaster推荐/` | GitHub 项目 image-blaster 推荐，59.6 s 定稿（单框 + 大数字卡 + GitHub 页面录屏 + 曼波第三人称同传 + 中英双语字幕 + BGM + 彩色图标背景 + 封面 A），第一条照技能引擎做的；**按“素材 → 技能 → 成片 + 封面×3 + 标题×3 → 同意 → 四平台”跑过一遍** | **2026-10-04 四个平台都发了**：B 站 BV1ncHr6gE4U（审核中）、抖音 / 小红书审核中、视频号已发表（用户说“同意”后我点的发布，小红书是他自己点的）；复盘见 `流程复盘.md` 第 2 部分 |
@@ -19,3 +20,5 @@
 | — | `独立视频/短视频/2026-10_强化学习赌场闯关/`（素材 `独立视频/素材/2026-10_强化学习赌场闯关/`） | X 长文《Reinforcement Learning from scratch #1》（@goyal__pramod）66.8 s：single 版式 B + 边框 6，文章手绘配图 + 作者推文截图（新 `imgShot` 镜头：缓推 / 平移 + 橙框 / 荧光笔 / 白遮罩）+ 温柔男生第三人称配音 18 句 + 中英双语字幕 + BGM + 框版封面 A；文章写“价值迭代 5 轮”，照他的代码实测 4 轮停，台词只说“几轮”；Codex 也接了同一个链接，我用自己的目录名 | **2026-10-05 21:41–21:42 用户自己点发布：B 站 BV1rGH46vEwT（开放浏览）/ 抖音 / 小红书**；视频号不发；**10-06 标题按用户意见改成“入门”版**（B 站 / 抖音 / 小红书都改了并核对）；小红书原创声明开；记录 `docs/ai/context/20261005-204800-rl-casino-short-video-claude_CN.md`，复盘 `流程复盘.md` 第 8 部分 |
 
 流程复盘：`流程复盘.md`（**开头是用户定的四段标准流程：素材 → 技能 → 成片 + 封面×3 + 标题×3 → 同意后发三个平台（2026-10-06 起视频号不发），含交付包模板**；后面是 Tavus、image-blaster 两条的复盘；每条做完补一节，下一条开工前读）；发布三个平台的填表和坑（视频号旧做法存档在 `skill/short-video/references/_archive/`）：`skill/short-video/references/publish.md`。
+
+- 2026-10-14 REA：独立视频/短视频/2026-10_REA逆向设备，仅B站 [BV1JepC6EEk8](https://www.bilibili.com/video/BV1JepC6EEk8/)，开放浏览；用户手动上传14.5MB原片，代理Playwright填表并发布。
