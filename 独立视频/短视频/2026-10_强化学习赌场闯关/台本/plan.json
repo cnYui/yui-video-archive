@@ -1,0 +1,220 @@
+{
+ "layout": "single",
+ "plan": [
+  {
+   "id": "H0",
+   "type": "card",
+   "kind": "img",
+   "overlay": "img",
+   "name": "钩子：赌场",
+   "dur": 1.0,
+   "credit": "图：@goyal__pramod 的文章",
+   "lines": [
+    {
+     "id": "N01",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "B1",
+   "type": "card",
+   "kind": "page",
+   "overlay": "page",
+   "name": "背书：推文 + 封面",
+   "dur": 1.0,
+   "lead": -0.2,
+   "lines": [
+    {
+     "id": "N02",
+     "a": 0.1
+    },
+    {
+     "id": "N03",
+     "a": 0
+    },
+    {
+     "id": "N04",
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "C1",
+   "type": "card",
+   "kind": "img",
+   "overlay": "img",
+   "name": "第一关：三台老虎机",
+   "dur": 1.0,
+   "lead": -0.2,
+   "credit": "图：@goyal__pramod 的文章",
+   "lines": [
+    {
+     "id": "N05",
+     "a": 0.1
+    }
+   ]
+  },
+  {
+   "id": "C2",
+   "type": "card",
+   "kind": "img",
+   "overlay": "img",
+   "name": "十台和三个办法",
+   "dur": 1.0,
+   "lead": -0.2,
+   "credit": "图：@goyal__pramod 的文章",
+   "lines": [
+    {
+     "id": "N06",
+     "a": 0.1
+    },
+    {
+     "id": "N07",
+     "a": 0
+    },
+    {
+     "id": "N08",
+     "a": 0
+    },
+    {
+     "id": "N09",
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "C3",
+   "type": "card",
+   "kind": "img",
+   "overlay": "img",
+   "name": "赌场改赔率",
+   "dur": 1.0,
+   "lead": -0.2,
+   "credit": "图：@goyal__pramod 的文章",
+   "lines": [
+    {
+     "id": "N10",
+     "a": 0.1
+    }
+   ]
+  },
+  {
+   "id": "M1",
+   "type": "card",
+   "kind": "img",
+   "overlay": "img",
+   "name": "迷宫和地图",
+   "dur": 1.0,
+   "lead": -0.2,
+   "credit": "图：@goyal__pramod 的文章",
+   "lines": [
+    {
+     "id": "N11",
+     "a": 0.1
+    }
+   ]
+  },
+  {
+   "id": "M2",
+   "type": "card",
+   "kind": "img",
+   "overlay": "img",
+   "name": "机器人对着地图算",
+   "dur": 1.0,
+   "lead": -0.2,
+   "credit": "图：@goyal__pramod 的文章",
+   "lines": [
+    {
+     "id": "N12",
+     "a": 0.1
+    }
+   ]
+  },
+  {
+   "id": "M3",
+   "type": "card",
+   "kind": "img",
+   "overlay": "img",
+   "name": "贝尔曼方程",
+   "dur": 1.0,
+   "lead": -0.2,
+   "credit": "图：@goyal__pramod 的文章",
+   "lines": [
+    {
+     "id": "N13",
+     "a": 0.1
+    },
+    {
+     "id": "N14",
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "M4",
+   "type": "card",
+   "kind": "img",
+   "overlay": "img",
+   "name": "价值迭代",
+   "dur": 1.0,
+   "lead": -0.2,
+   "credit": "图：Sutton & Barto 教科书",
+   "lines": [
+    {
+     "id": "N15",
+     "a": 0.1
+    }
+   ]
+  },
+  {
+   "id": "T1",
+   "type": "card",
+   "kind": "img",
+   "overlay": "img",
+   "name": "圈套",
+   "dur": 1.0,
+   "lead": -0.2,
+   "credit": "图：@goyal__pramod 的文章",
+   "lines": [
+    {
+     "id": "N16",
+     "a": 0.1
+    }
+   ]
+  },
+  {
+   "id": "T2",
+   "type": "card",
+   "kind": "img",
+   "overlay": "img",
+   "name": "封面写着",
+   "dur": 1.0,
+   "lead": -0.2,
+   "credit": "图：@goyal__pramod 的文章",
+   "lines": [
+    {
+     "id": "N17",
+     "a": 0.1
+    }
+   ]
+  },
+  {
+   "id": "E1",
+   "type": "card",
+   "kind": "img",
+   "overlay": "img",
+   "name": "金句：回到赌场",
+   "dur": 2.45,
+   "lead": -0.2,
+   "credit": "图：@goyal__pramod 的文章",
+   "lines": [
+    {
+     "id": "N18",
+     "a": 0.1
+    }
+   ],
+   "spill": true
+  }
+ ]
+}

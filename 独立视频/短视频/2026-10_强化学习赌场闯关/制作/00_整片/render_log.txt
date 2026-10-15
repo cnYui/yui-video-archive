@@ -1,0 +1,10 @@
+[w0] 0/668 (0s)
+[w1] 0/669 (0s)
+[w2] 0/668 (0s)
+[w0] 600/668 (45s)
+[w1] 600/669 (48s)
+[w2] 600/668 (48s)
+[w0] done 668 frames in 51s, errors: 0
+[w1] done 669 frames in 52s, errors: 0
+[w2] done 668 frames in 55s, errors: 0
+ok -> D:\大疆\独立视频\短视频\2026-10_强化学习赌场闯关\制作\00_整片\整片_v1.mp4  (2005 frames, 62s)

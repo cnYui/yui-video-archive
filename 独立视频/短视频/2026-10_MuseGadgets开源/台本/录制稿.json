@@ -1,0 +1,65 @@
+{
+  "slug": "MuseGadgets开源",
+  "title": "Meta 开源 Muse Gadgets：ESP32 固件 + Linux SDK，官方 Home Link 送 5000 台、token 条款限个人非商用（新闻短条，第三人称，温柔男生配音；v2 按独立事实核对改过）",
+  "kicker": "<b>Meta</b> 开源 · Muse Gadgets",
+  "hook": [
+    "Meta 开源 Muse 外设",
+    "两天多，一千多颗星"
+  ],
+  "lines": [
+    {
+      "id": "N01",
+      "zh": "两天多，GitHub 上一千多颗星：Meta 把给 Muse 做外设的固件和 SDK 开源了。",
+      "say": "两天多，GitHub 上一千多颗星：Meta 把给 Muse 做外设的固件和 SDK 开源了。",
+      "en": "Two days in, 1,000+ GitHub stars: Meta has open-sourced the firmware and SDK for building Muse peripherals."
+    },
+    {
+      "id": "N02",
+      "zh": "美国时间 10 月 2 日，Meta 超级智能实验室的 Nat Friedman 和 Alexandr Wang，先后在 X 上官宣 Muse Gadgets：让大家给 Meta 的个人智能体 Muse 造硬件。",
+      "say": "美国时间十月二日，Meta 超级智能实验室的 Nat Friedman 和 Alexandr Wang，先后在 X 上官宣 Muse Gadgets：让大家给 Meta 的个人智能体 Muse 造硬件。",
+      "en": "On October 2, US time, Nat Friedman and Alexandr Wang of Meta Superintelligence Labs announced Muse Gadgets on X: let anyone build hardware for Meta's personal AI agent, Muse."
+    },
+    {
+      "id": "N03",
+      "zh": "开源的有两套：ESP32 固件，和一套 Linux SDK。开发板、树莓派都能接，代码是 Apache 2.0。",
+      "say": "开源的有两套：ESP三十二固件，和一套 Linux SDK。开发板、树莓派都能接，代码是 Apache 二点零。",
+      "en": "Two things are open: ESP32 firmware and a Linux SDK. Dev boards and Raspberry Pis both work; the code is Apache 2.0."
+    },
+    {
+      "id": "N04",
+      "zh": "流程是：领一个 SDK token，刷固件，在 Muse App 里配对。Nat Friedman 的建议：把仓库丢给编程智能体，让它帮忙造外设。",
+      "say": "流程是：领一个 SDK token，刷固件，在 Muse App 里配对。Nat Friedman 的建议：把仓库丢给编程智能体，让它帮忙造外设。",
+      "en": "The flow: get an SDK token, flash the firmware, pair in the Muse app. Nat Friedman's tip: hand the repo to a coding agent and let it build the peripheral."
+    },
+    {
+      "id": "N05",
+      "zh": "官网列了八个示例项目：树莓派，接 Home Assistant；圆形触摸屏，按键说话；电视 HDMI 棒，即将推出；彩色墨水屏，推早间简报。",
+      "say": "官网列了八个示例项目：树莓派，接 Home Assistant；圆形触摸屏，按键说话；电视 HDMI 棒，即将推出；彩色墨水屏，推早间简报。",
+      "en": "The site lists eight example projects: a Raspberry Pi for Home Assistant, a round touchscreen with push-to-talk, an HDMI TV stick coming soon, and a color e-ink briefing display."
+    },
+    {
+      "id": "N06",
+      "zh": "Meta 自己也做了一个：Muse Home Link。USB-C 插上，里面是一块 ESP32-C5，连家里 Wi-Fi，靠社区写的技能，能让 Muse 开灯、控制电视。",
+      "say": "Meta 自己也做了一个：Muse Home Link。USB C 插上，里面是一块 ESP三十二 C五，连家里 WiFi，靠社区写的技能，能让 Muse 开灯、控制电视。",
+      "en": "Meta built one too: Muse Home Link. It plugs in over USB-C, runs an ESP32-C5, joins home Wi-Fi, and community skills can let Muse turn on lights or control a TV."
+    },
+    {
+      "id": "N07",
+      "zh": "做了一批，5000 个，订阅用户免费领。但官网写明：仅限美国，每人一个，先到先得，十月发货。",
+      "say": "做了一批，五千个，订阅用户免费领。但官网写明：仅限美国，每人一个，先到先得，十月发货。",
+      "en": "Meta made a batch of 5,000, free for subscribers. But the site says: US only, one per person, first come first served, shipping in October."
+    },
+    {
+      "id": "N08",
+      "zh": "但 Apache 2.0 只管代码。token 条款写着：个人非商用，最多 50 台设备，不能卖，Meta 随时能收回。",
+      "say": "但 Apache 二点零只管代码。token 条款写着：个人非商用，最多五十台设备，不能卖，Meta 随时能收回。",
+      "en": "But Apache 2.0 covers only the code. The token terms say: personal, non-commercial use, at most 50 devices, no selling, and Meta can revoke access at any time."
+    },
+    {
+      "id": "N09",
+      "zh": "开源的是手脚，大脑还在 Meta 的云上。",
+      "say": "开源的是手脚，大脑还在 Meta 的云上。",
+      "en": "The hands are open source. The brain stays in Meta's cloud."
+    }
+  ]
+}

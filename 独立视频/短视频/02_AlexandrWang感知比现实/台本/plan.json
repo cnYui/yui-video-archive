@@ -1,0 +1,404 @@
+{
+ "_说明": "双分镜：上框 = 播客原片（Wang 特写，原声压低留着，同传盖上去；解说段上框也是 Wang 特写但静音），下框 = 双人远景 B-roll（静音）或页面录屏（pageShot {lower:true}）。同传句带橙色“Wang”标签（who），解说句不带。人称：同传 / 解说都不用“我”；Wang 访谈时是 Scale AI CEO，现在是 Meta 首席 AI 官。配音声线「温柔男生」（2026-10-04 起）。",
+ "layout": "dual",
+ "plan": [
+  {
+   "id": "S1",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "钩子：感知比现实更真实",
+   "credit": "SPC 播客 · 2024-12",
+   "ranges": [
+    {
+     "src": "w",
+     "in": 688.01,
+     "out": 693.61
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "w",
+     "in": 743.0,
+     "out": 749.5,
+     "mute": true
+    }
+   ],
+   "lines": [
+    {
+     "id": "N01",
+     "a": 0.5
+    },
+    {
+     "id": "N02",
+     "a": 3.9
+    }
+   ],
+   "freeze_tail": true
+  },
+  {
+   "id": "S2",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "背书：2024 年 12 月的旧访谈",
+   "credit": "SPC 播客 · 2024-12",
+   "ranges": [
+    {
+     "src": "w",
+     "in": 500.0,
+     "out": 507.5,
+     "mute": true
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "w",
+     "in": 405.0,
+     "out": 412.5,
+     "mute": true
+    }
+   ],
+   "lines": [
+    {
+     "id": "N03",
+     "a": 0.0
+    },
+    {
+     "id": "N04",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "S3",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "数据驱动的公司 vs 大公司、政府",
+   "credit": "SPC 播客 · 2024-12",
+   "ranges": [
+    {
+     "src": "w",
+     "in": 672.2,
+     "out": 678.25
+    },
+    {
+     "src": "w",
+     "in": 680.42,
+     "out": 687.88
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "w",
+     "in": 581.4,
+     "out": 594.9,
+     "mute": true
+    }
+   ],
+   "lines": [
+    {
+     "id": "N05",
+     "a": 0.5
+    },
+    {
+     "id": "N06",
+     "a": 5.16
+    },
+    {
+     "id": "N07",
+     "a": 6.55
+    },
+    {
+     "id": "N08",
+     "a": 9.54
+    }
+   ],
+   "freeze_tail": true
+  },
+  {
+   "id": "S4",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "现实太难看，人们选择相信感知",
+   "credit": "SPC 播客 · 2024-12",
+   "ranges": [
+    {
+     "src": "w",
+     "in": 693.73,
+     "out": 703.55
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "w",
+     "in": 594.9,
+     "out": 604.7,
+     "mute": true
+    }
+   ],
+   "lines": [
+    {
+     "id": "N09",
+     "a": 0.5
+    },
+    {
+     "id": "N10",
+     "a": 3.09
+    },
+    {
+     "id": "N11",
+     "a": 6.25
+    }
+   ],
+   "freeze_tail": true
+  },
+  {
+   "id": "S5",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "做企业销售：改善现实，也要塑造感知",
+   "credit": "SPC 播客 · 2024-12",
+   "ranges": [
+    {
+     "src": "w",
+     "in": 703.6,
+     "out": 709.8
+    },
+    {
+     "src": "w",
+     "in": 712.15,
+     "out": 716.19
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "w",
+     "in": 604.7,
+     "out": 615.0,
+     "mute": true
+    }
+   ],
+   "lines": [
+    {
+     "id": "N12",
+     "a": 0.45
+    },
+    {
+     "id": "N13",
+     "a": 6.7
+    }
+   ],
+   "freeze_tail": true
+  },
+  {
+   "id": "S6",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "Palantir：半个表演剧团，半个软件公司",
+   "credit": "SPC 播客 · 2024-12",
+   "ranges": [
+    {
+     "src": "w",
+     "in": 720.78,
+     "out": 742.26
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "w",
+     "in": 615.0,
+     "out": 636.5,
+     "mute": true
+    }
+   ],
+   "lines": [
+    {
+     "id": "N14",
+     "a": 0.5
+    },
+    {
+     "id": "N15",
+     "a": 2.61
+    },
+    {
+     "id": "N16",
+     "a": 8.88
+    },
+    {
+     "id": "N17",
+     "a": 11.02
+    },
+    {
+     "id": "N18",
+     "a": 15.74
+    }
+   ],
+   "freeze_tail": true
+  },
+  {
+   "id": "S7",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "前员工 Qureshi：入职时寄几本书，有一本是《Impro》",
+   "credit": "SPC 播客 · 2024-12",
+   "ranges": [
+    {
+     "src": "w",
+     "in": 520.0,
+     "out": 529.0,
+     "mute": true
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "w",
+     "in": 420.0,
+     "out": 429.0,
+     "mute": true
+    }
+   ],
+   "lines": [
+    {
+     "id": "N19",
+     "a": 0.0
+    },
+    {
+     "id": "N20",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "S8",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "Wang 自己补一句：根本上要做好产品",
+   "credit": "SPC 播客 · 2024-12",
+   "ranges": [
+    {
+     "src": "w",
+     "in": 773.56,
+     "out": 776.06,
+     "crop": [
+      0.06,
+      0.18,
+      0.66,
+      0.78
+     ]
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "w",
+     "in": 755.0,
+     "out": 758.0,
+     "mute": true
+    }
+   ],
+   "lines": [
+    {
+     "id": "N21",
+     "a": 0.5
+    }
+   ],
+   "freeze_tail": true
+  },
+  {
+   "id": "S9",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "相关事件：Meta Connect 的 30 美元 T 恤",
+   "credit": "SPC 播客 · 2024-12",
+   "ranges": [
+    {
+     "src": "w",
+     "in": 545.0,
+     "out": 551.3,
+     "mute": true
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "w",
+     "in": 432.0,
+     "out": 438.3,
+     "mute": true
+    }
+   ],
+   "lines": [
+    {
+     "id": "N22",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "S9b",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "相关事件：Slate 的判断",
+   "credit": "SPC 播客 · 2024-12",
+   "ranges": [
+    {
+     "src": "w",
+     "in": 553.0,
+     "out": 557.2,
+     "mute": true
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "w",
+     "in": 440.0,
+     "out": 444.2,
+     "mute": true
+    }
+   ],
+   "lines": [
+    {
+     "id": "N23",
+     "a": 0.0
+    }
+   ]
+  },
+  {
+   "id": "S10",
+   "type": "clip",
+   "kind": "demo",
+   "overlay": "clip",
+   "name": "收尾：感知放大现实，替代不了现实",
+   "credit": "SPC 播客 · 2024-12",
+   "ranges": [
+    {
+     "src": "w",
+     "in": 561.0,
+     "out": 564.0,
+     "mute": true
+    }
+   ],
+   "ranges2": [
+    {
+     "src": "w",
+     "in": 398.5,
+     "out": 401.5,
+     "mute": true
+    }
+   ],
+   "lines": [
+    {
+     "id": "N24",
+     "a": 0.0
+    }
+   ]
+  }
+ ]
+}

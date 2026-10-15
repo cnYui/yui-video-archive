@@ -1,0 +1,99 @@
+1
+00:00:00,000 --> 00:00:02,028
+厂商 App 怎么控制设备？
+How does a vendor app control a device?
+
+2
+00:00:02,048 --> 00:00:04,725
+现在可以顺着证据往回查。
+Follow the evidence back.
+
+3
+00:00:04,745 --> 00:00:06,424
+这个项目叫 REA，
+It is REA,
+
+4
+00:00:06,444 --> 00:00:09,328
+Reverse Engineer Anything，
+Reverse Engineer Anything,
+
+5
+00:00:09,348 --> 00:00:10,793
+MIT 开源。
+released under the MIT license.
+
+6
+00:00:10,813 --> 00:00:12,684
+截至今天，GitHub
+As of today,
+
+7
+00:00:12,704 --> 00:00:15,709
+约二十一万八千颗 Star。
+it has about 218 thousand GitHub stars.
+
+8
+00:00:15,729 --> 00:00:19,003
+它先接入 Agent，再把网页、App、
+It connects to an agent, then inspects web apps,
+
+9
+00:00:19,023 --> 00:00:21,940
+二进制和运行行为拆开看。
+binaries, and runtime behavior.
+
+10
+00:00:21,960 --> 00:00:26,109
+安卓设备可以用 ADB 找包、拉 APK；
+ADB can find and pull APKs; network traffic
+
+11
+00:00:26,129 --> 00:00:30,663
+网络请求可以读 HAR 或 mitmproxy。
+can come from HAR or mitmproxy captures.
+
+12
+00:00:30,683 --> 00:00:34,180
+固件再交给 Binwalk、Unblob 解包，
+Firmware can go through Binwalk and Unblob,
+
+13
+00:00:34,200 --> 00:00:37,244
+选出的原生文件接 Ghidra。
+then selected native files into Ghidra.
+
+14
+00:00:37,264 --> 00:00:40,295
+证据带着出处和限制回到 Claude Code
+Evidence and limitations return to Claude Code
+
+15
+00:00:40,315 --> 00:00:43,747
+或 Codex，Agent 才能继续还原功能。
+or Codex before the agent reconstructs a feature.
+
+16
+00:00:43,767 --> 00:00:47,003
+所以空调、热水器、灯的控制端，
+You may build your own controller
+
+17
+00:00:47,023 --> 00:00:48,956
+理论上可以自己写；
+for an AC, heater,
+
+18
+00:00:48,976 --> 00:00:52,178
+能不能成，要看协议和权限。
+or light—but protocol and access decide.
+
+19
+00:00:52,198 --> 00:00:54,093
+厂商 App 只是入口，
+The vendor app is only an entry point;
+
+20
+00:00:54,113 --> 00:00:57,985
+设备真正的规则，终于可以被看见。
+the device's real rules can finally be seen.

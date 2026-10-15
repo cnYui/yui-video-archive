@@ -1,0 +1,105 @@
+{
+  "_说明": "交付包阶段先写 titles（3 个候选 × 4 个平台 = 3×4）和各平台默认项；用户回“封面 X 标题 Y 同意”后，把选中的那条标题写进各平台字段（bilibili.title / douyin.title / xiaohongshu.title / weixin_channels.short_title），approval 记下选择和时间。scripts/check_titles.py 按各平台要求核对字数：B 站标题 ≤ 80 / 抖音 ≤ 30（话题 ≤ 5）/ 小红书 ≤ 20 / 视频号短标题 6–16；放不下的完整标题放抖音描述、小红书正文、视频号描述的第一行。三个标题角度要真有区别（事实陈述 / 数字悬念 / 泼冷水），不和封面大字同一句。（2026-10-06 起视频号不发：只发 B 站 / 抖音 / 小红书，标题 3×3）",
+  "slug": "TimDenning忠告2_那把小刀",
+  "video": "独立视频/短视频/2026-10_TimDenning忠告2_那把小刀/TimDenning忠告2_那把小刀_成片.mp4（用户拖进各平台上传区；不压缩、不绕 10 MB）",
+  "duration_s": 0,
+  "approval": {
+    "status": "approved",
+    "cover": "A",
+    "title": "1",
+    "approved_at": "2026-10-06 (用户：就用A。你来打开发布页，不发视频号)",
+    "note": "封面 A（文章配图铺满 + 2800万浏览 / 推特万字长文 / 解读(N)）；标题 ① 用户亲述句；四平台中只发 B站/抖音/小红书，视频号不发；成片第 0 帧已换成封面 A；用户没说“发布”前只填表不点发布。"
+  },
+  "titles": [
+    {
+      "id": 1,
+      "angle": "用户定的标题（具体的一句）",
+      "recommend": true,
+      "bilibili": "如果你正值二三十岁，人好不够，要有本事",
+      "douyin": "如果你正值二三十岁，人好不够，要有本事",
+      "xiaohongshu": "如果你正值二三十岁，人好不够，要有本事"
+    },
+    {
+      "id": 2,
+      "angle": "备选：带“自称”挂名的描述版",
+      "recommend": false,
+      "bilibili": "你最爱的人倒在街上流血，有人掏出一把小刀说他来做手术：Tim Denning引的这个比方，讲透了“人好”为什么不够",
+      "douyin": "人好、守时、孝顺，可你手里只有一把小刀",
+      "xiaohongshu": "人好不够，要有本事"
+    },
+    {
+      "id": 3,
+      "angle": "泼冷水（但是 / 要说明的前提）",
+      "bilibili": "执念是成为高手最快的路？Tim Denning自己都说14小时不休息近乎愚蠢，没撑下来的人文中没提",
+      "douyin": "执念救人？没撑下来的人，文里没提",
+      "xiaohongshu": "执念是捷径？先看没撑下来的人"
+    }
+  ],
+  "covers": {
+    "3x4": "制作/04_封面/封面_选定_3x4.png",
+    "16x9": "制作/04_封面/封面_选定_16x9.png",
+    "4x3": "制作/04_封面/封面_选定_4x3.png"
+  },
+  "source": {
+    "original_post": "https://x.com/Tim_Denning/status/2013552215097778231",
+    "original_author": "Tim Denning @Tim_Denning（X 长文 2026-01-20；Substack Modern Freedom 首发 2025-01-21）",
+    "project_or_site": "https://timdenning.substack.com/p/im-38-if-youre-in-your-20s-or-30s；文章配图 Midjourney 生成（原文标注），版权归原作者"
+  },
+  "bilibili": {
+    "title": "如果你正值二三十岁，人好不够，要有本事",
+    "desc": "转载 / 二次创作：整理自澳大利亚作家 Tim Denning（@Tim_Denning）的文章《I'm 38. If You're in Your 20's or 30's, Read This.》36 条忠告，X 长文 2026-01-20：https://x.com/Tim_Denning/status/2013552215097778231 ；Substack 首发 2025-01-21：https://timdenning.substack.com/p/im-38-if-youre-in-your-20s-or-30s（两个版本正文一致）。\n一个比方讲透“人好”为什么不够：自称10亿阅读的作家 Tim Denning 在 38 岁的忠告里，引了作家 Jason Pargin（旧笔名 David Wong，2012 年 Cracked 文章《6 Harsh Truths That Will Make You a Better Person》）的一个比方。\n· 寓言（文中署名 Jason Pargin）：亲人受重伤倒在街上，来了个拿小刀的人要动手术，说自己人好、守时、孝顺——社会需要的是能止血的人；\n· 第 3 条 执念：从什么都有点兴趣，变成对一件事彻底着迷；\n· 第 12 条 疯子：Tim 说他见过一个每天回复 X 评论 14 小时、坚持一年的人；\n· 第 8 条 难事：据 Tim 自述，小时候家里两处房子都因破产没了，现在把它看成赢面。\n\n几处要说明\n· 视频里的判断都是 Tim Denning 在文章里的说法，不是我的建议或实测；他简介自称“10 亿+ 阅读、赚了 600 万美元以上”、自述“银行干了十年、2021 年辞职”，这些没有独立核实，视频里都挂了“自称 / 自述”；\n· 文章写于他 38 岁时（2025 年 1 月），2026 年 1 月在 X 上原文重发，年龄、“去年”等口径都是 2025 年初的；\n· 画面里的文章页面、作者主页、推文卡片、作者照片来自 Substack 和 X 的公开页面，文章配图为 Midjourney 生成（原文标注 Image Credit-Midjourney），版权归原作者，仅作介绍和评论引用；\n· X 长文浏览量 2800 万+ 是 2026-10-05 的页面读数，会变。\n\n中英双语字幕；配音：温柔男生声线（AI 生成）；剪辑：Claude Code（Sonnet 5.5）。",
+    "declaration": "含AI生成内容",
+    "category": "人工智能（tid 231）",
+    "tags": [
+      "人生忠告",
+      "个人成长",
+      "自我提升",
+      "执念",
+      "技能",
+      "Tim Denning",
+      "认知升级",
+      "20多岁",
+      "寓言",
+      "观点"
+    ],
+    "collection": null,
+    "repost_source": "转自 X：https://x.com/Tim_Denning/status/2013552215097778231（Tim Denning @Tim_Denning，X 长文，2026-01-20；Substack 首发 2025-01-21）",
+    "cover": "两个位各传各的（双比例同步改动不勾）：16:9 → 个人空间封面，4:3 → 首页推荐封面",
+    "published": null
+  },
+  "douyin": {
+    "title": "如果你正值二三十岁，人好不够，要有本事",
+    "desc": "如果你正值二三十岁，人好不够，要有本事\n整理自 Tim Denning（Tim_Denning）36 条忠告文章（X 长文 2026-01-20 / Substack 2025-01-21），观点均为他本人的说法，10 亿阅读、600 万美元等为其简介自称；画面来自公开页面，文章配图为 Midjourney 生成，版权归原作者，仅作介绍和评论引用。配音为 AI 生成（温柔男生声线）。",
+    "topics": [
+      "人生忠告",
+      "个人成长",
+      "自我提升",
+      "执念",
+      "技能"
+    ],
+    "declaration": "内容由AI生成",
+    "collection": null,
+    "cover": "竖封面 3:4 = 封面_选定_3x4.png；横封面 4:3 = 封面_选定_4x3.png",
+    "published": null
+  },
+  "xiaohongshu": {
+    "title": "如果你正值二三十岁，人好不够，要有本事",
+    "desc": "如果你正值二三十岁，人好不够，要有本事\n\n· 寓言（文中署名 Jason Pargin）：亲人受重伤倒在街上，来了个拿小刀的人要动手术，说自己人好、守时、孝顺——社会需要的是能止血的人；\n· 第 3 条 执念：从什么都有点兴趣，变成对一件事彻底着迷；\n· 第 12 条 疯子：Tim 说他见过一个每天回复 X 评论 14 小时、坚持一年的人；\n· 第 8 条 难事：据 Tim 自述，小时候家里两处房子都因破产没了，现在把它看成赢面。\n整理自 Tim Denning（Tim_Denning）36 条忠告文章（X 长文 2026-01-20 / Substack 2025-01-21），观点均为他本人的说法，10 亿阅读、600 万美元等为其简介自称；画面来自公开页面，文章配图为 Midjourney 生成，版权归原作者，仅作介绍和评论引用。配音为 AI 生成（温柔男生声线）。",
+    "topics": [
+      "人生忠告",
+      "个人成长",
+      "自我提升",
+      "执念",
+      "技能",
+      "TimDenning",
+      "认知升级",
+      "20多岁",
+      "寓言",
+      "观点"
+    ],
+    "declaration": "笔记含AI合成内容",
+    "cover": "3:4 = 封面_选定_3x4.png",
+    "published": null
+  },
+  "published": {}
+}

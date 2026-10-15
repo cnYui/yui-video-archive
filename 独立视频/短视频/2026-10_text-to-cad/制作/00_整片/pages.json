@@ -1,0 +1,365 @@
+{
+ "X_t1": {
+  "src": "pages/X_t1.png",
+  "w": 1096,
+  "h": 542,
+  "url": "https://x.com/earthtojake/status/2106120308037947785",
+  "bg": "#FFFFFF",
+  "marks": {
+   "text-to-cad plugin extension is now live on codex!": [
+    [
+     32,
+     140,
+     879,
+     54
+    ]
+   ],
+   "100% open source and free, runs locally inside the codex desktop app": [
+    [
+     32,
+     428,
+     999,
+     54
+    ],
+    [
+     1031,
+     428,
+     11,
+     54
+    ],
+    [
+     32,
+     476,
+     220,
+     54
+    ]
+   ]
+  }
+ },
+ "X_t2": {
+  "src": "pages/X_t2.png",
+  "w": 1096,
+  "h": 686,
+  "url": "https://x.com/earthtojake/status/2081826428295729284",
+  "bg": "#FFFFFF",
+  "marks": {
+   "text-to-cad just crossed 10,000 stars": [
+    [
+     32,
+     140,
+     637,
+     54
+    ]
+   ],
+   "100% free and open source": [
+    [
+     32,
+     572,
+     483,
+     54
+    ]
+   ]
+  }
+ },
+ "G_repo": {
+  "src": "pages/G_repo.png",
+  "w": 1600,
+  "h": 3000,
+  "url": "https://github.com/earthtojake/text-to-cad",
+  "bg": "#FFFFFF",
+  "marks": {
+   "Give your agent CAD superpowers.": [
+    [
+     1104,
+     454,
+     295,
+     42
+    ],
+    [
+     1104,
+     502,
+     187,
+     42
+    ]
+   ],
+   "k stars": [
+    [
+     1104,
+     1196,
+     448,
+     42
+    ]
+   ],
+   "MIT": [
+    [
+     1104,
+     966,
+     186,
+     38
+    ]
+   ],
+   "v0.7.11": [
+    [
+     1152,
+     1552,
+     81,
+     38
+    ]
+   ]
+  }
+ },
+ "G_skills": {
+  "src": "pages/G_skills.png",
+  "w": 1600,
+  "h": 7200,
+  "url": "https://github.com/earthtojake/text-to-cad",
+  "bg": "#FFFFFF",
+  "marks": {
+   "STEP as the main output along with options to export to STL, 3MF and GLB.": [
+    [
+     441,
+     606,
+     161,
+     42
+    ],
+    [
+     373,
+     654,
+     174,
+     42
+    ],
+    [
+     373,
+     702,
+     148,
+     42
+    ],
+    [
+     373,
+     750,
+     245,
+     42
+    ],
+    [
+     373,
+     798,
+     226,
+     42
+    ],
+    [
+     373,
+     846,
+     62,
+     42
+    ]
+   ],
+   "DFM": [
+    [
+     126,
+     3792,
+     67,
+     42
+    ]
+   ],
+   "Checks DXF and STEP files before upload to SendCutSend.": [
+    [
+     373,
+     2900,
+     226,
+     42
+    ],
+    [
+     373,
+     2948,
+     233,
+     42
+    ],
+    [
+     373,
+     2996,
+     137,
+     42
+    ],
+    [
+     373,
+     3044,
+     197,
+     42
+    ]
+   ],
+   "printer-ready G-code with OrcaSlicer": [
+    [
+     373,
+     4178,
+     229,
+     42
+    ],
+    [
+     373,
+     4226,
+     138,
+     42
+    ],
+    [
+     373,
+     4274,
+     141,
+     42
+    ]
+   ],
+   "Sends prints to Bambu Lab printers": [
+    [
+     373,
+     4444,
+     212,
+     42
+    ],
+    [
+     373,
+     4492,
+     158,
+     42
+    ],
+    [
+     373,
+     4540,
+     108,
+     42
+    ]
+   ]
+  }
+ },
+ "G_install": {
+  "src": "pages/G_install.png",
+  "w": 1600,
+  "h": 1120,
+  "url": "https://github.com/earthtojake/text-to-cad",
+  "bg": "#FFFFFF",
+  "marks": {
+   "codex plugin marketplace add earthtojake/text-to-cad": [
+    [
+     130,
+     467,
+     778,
+     32
+    ]
+   ],
+   "codex plugin add text-to-cad@earthtojake": [
+    [
+     130,
+     507,
+     598,
+     32
+    ]
+   ],
+   "requires Codex 0.142.0 or newer": [
+    [
+     265,
+     428,
+     464,
+     32
+    ]
+   ]
+  }
+ },
+ "G_win": {
+  "src": "pages/G_win.png",
+  "w": 1600,
+  "h": 1040,
+  "url": "https://github.com/earthtojake/text-to-cad",
+  "bg": "#FFFFFF",
+  "marks": {
+   "Windows 11's Smart App Control blocks unsigned native code": [
+    [
+     578,
+     220,
+     353,
+     42
+    ],
+    [
+     98,
+     268,
+     514,
+     42
+    ]
+   ],
+   "DLL load failed while importing OCP": [
+    [
+     768,
+     372,
+     135,
+     32
+    ],
+    [
+     98,
+     420,
+     389,
+     32
+    ]
+   ]
+  }
+ },
+ "G_dfm": {
+  "src": "pages/G_dfm.png",
+  "w": 1600,
+  "h": 3400,
+  "url": "https://github.com/earthtojake/text-to-cad/blob/main/skills/dfm/SKILL.md",
+  "bg": "#FFFFFF",
+  "marks": {
+   "not an automatic feature-recognition or manufacturing certification engine": [
+    [
+     98,
+     1561,
+     1404,
+     144
+    ]
+   ]
+  }
+ },
+ "G_bambu": {
+  "src": "pages/G_bambu.png",
+  "w": 1600,
+  "h": 3400,
+  "url": "https://github.com/earthtojake/text-to-cad/blob/main/skills/bambu-labs/SKILL.md",
+  "bg": "#FFFFFF",
+  "marks": {
+   "the user picks the printer and starts the print there": [
+    [
+     466,
+     1158,
+     710,
+     42
+    ]
+   ]
+  }
+ },
+ "X_t0": {
+  "src": "pages/X_t0.png",
+  "w": 1096,
+  "h": 446,
+  "url": "https://x.com/earthtojake/status/2047072107612303692",
+  "bg": "#FFFFFF",
+  "marks": {
+   "Say hello to text-to-cad, an open source tool for generating 3D models in Codex!": [
+    [
+     32,
+     140,
+     848,
+     54
+    ],
+    [
+     880,
+     140,
+     11,
+     54
+    ],
+    [
+     32,
+     188,
+     569,
+     54
+    ]
+   ]
+  }
+ }
+}

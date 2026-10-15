@@ -1,0 +1,3 @@
+2026-10-05 10:05–10:12  Fish 故事工作室空白项目（我建的叫“未命名项目”，可以删）  声音「温柔男生」+ 模型 S2 Pro  12 句 / 256 个汉字  生成 1 次（没点“重新生成”）  导出“按段落拆分”segments.zip
+实测：逐句 wav 合计 54.38 s（每汉字约 0.21 s）；整片 57.8 s。机器识别（带提示词的两个模型）N01 Claude / N02 / N03 / N07 / N08 / N11 都对得上；唯一的疑点是 medium 把“博主”听成“佛祖”（N07、N08，turbo 听成“博主”）——请用户耳朵听。
+Chrome 共用窗口的坑：别的会话的标签是后台标签（visibilityState = hidden，computer type 会丢字符）；前置自己的标签：UI Automation 的 SelectionItemPattern.Select() 选中“属于‘短视频制作’群组”的标签 + ShowWindow(SW_RESTORE) + Alt 键按下后 SetForegroundWindow，再用 JS 确认 visibilityState = visible；用完把用户原来的标签选回去、最小化窗口、把焦点还给 Claude。

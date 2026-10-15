@@ -1,0 +1,131 @@
+1
+00:00:00,000 --> 00:00:01,697
+Three chapters of the reinforcement learning textbook,
+
+2
+00:00:01,717 --> 00:00:03,980
+retold as a casino escape.
+
+3
+00:00:04,000 --> 00:00:05,608
+On October 3, Pramod Goyal finished
+
+4
+00:00:05,628 --> 00:00:07,860
+this long article after almost an all-nighter.
+
+5
+00:00:07,880 --> 00:00:09,215
+Reinforcement Learning from Scratch,
+
+6
+00:00:09,235 --> 00:00:10,750
+part 1: over 7,000 words.
+
+7
+00:00:10,770 --> 00:00:13,054
+Two days in: 1,751 bookmarks,
+
+8
+00:00:13,074 --> 00:00:15,090
+nearly double its 924 likes.
+
+9
+00:00:15,110 --> 00:00:16,627
+Level one: three slot machines.
+
+10
+00:00:16,647 --> 00:00:19,080
+Try each a few times and its average payout shows up.
+
+11
+00:00:19,100 --> 00:00:20,025
+The casino adds more, up to ten,
+
+12
+00:00:20,045 --> 00:00:21,420
+and trial and error suddenly gets expensive.
+
+13
+00:00:21,440 --> 00:00:23,450
+Fix one: mostly play the best machine,
+
+14
+00:00:23,470 --> 00:00:24,880
+and now and then try a random one.
+
+15
+00:00:24,900 --> 00:00:27,730
+Fix two: start by assuming every machine pays ten,
+
+16
+00:00:27,750 --> 00:00:29,430
+so you're forced to try them all.
+
+17
+00:00:29,450 --> 00:00:32,670
+Fix three: the machine you've tried least gets a bonus.
+
+18
+00:00:32,690 --> 00:00:34,234
+The casino changes the odds overnight?
+
+19
+00:00:34,254 --> 00:00:36,620
+Then make new data count for more.
+
+20
+00:00:36,640 --> 00:00:37,564
+The back door leads to a maze,
+
+21
+00:00:37,584 --> 00:00:39,280
+with a map pinned on the wall.
+
+22
+00:00:39,300 --> 00:00:41,411
+With the map, the robot takes no steps
+
+23
+00:00:41,431 --> 00:00:43,350
+and can still work out what each square is worth.
+
+24
+00:00:43,370 --> 00:00:45,318
+What is a square worth? The reward now,
+
+25
+00:00:45,338 --> 00:00:47,630
+plus the next square's value, discounted.
+
+26
+00:00:47,650 --> 00:00:50,520
+That's the Bellman equation: it only looks one step ahead.
+
+27
+00:00:50,540 --> 00:00:52,947
+Change one line, from average to max,
+
+28
+00:00:52,967 --> 00:00:54,980
+and a few sweeps give the shortest way out.
+
+29
+00:00:55,000 --> 00:00:57,470
+Out at the gate, the map turns out to be a trap.
+
+30
+00:00:57,490 --> 00:00:59,370
+Next article: no map.
+
+31
+00:00:59,390 --> 00:01:02,015
+The cover says how LLMs learned to think,
+
+32
+00:01:02,035 --> 00:01:03,560
+but this part only lays the foundation.
+
+33
+00:01:03,580 --> 00:01:06,460
+Every trick was forced out by the failure of the last one.

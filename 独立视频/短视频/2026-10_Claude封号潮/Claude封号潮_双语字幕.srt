@@ -1,0 +1,129 @@
+1
+00:00:00,000 --> 00:00:02,791
+Claude 半年封了 1140 万个账号，
+Claude banned 11.4 million accounts in six months.
+
+2
+00:00:02,811 --> 00:00:05,370
+申诉成功的，只有 4.2 万次。
+Only 42,000 appeals succeeded.
+
+3
+00:00:05,390 --> 00:00:07,741
+出自 Anthropic 官方透明度页面，
+It comes from Anthropic's own transparency page,
+
+4
+00:00:07,761 --> 00:00:10,240
+7 月 23 日更新，统计 1 到 6 月。
+updated July 23, covering January to June.
+
+5
+00:00:10,260 --> 00:00:13,280
+去年下半年，才 145 万。
+In the second half of last year it was 1.45 million.
+
+6
+00:00:13,300 --> 00:00:15,182
+官方列了三条封号理由：
+The help center lists three reasons for a ban:
+
+7
+00:00:15,202 --> 00:00:17,949
+反复违规，从不受支持的地点注册，
+repeated violations, signing up from an unsupported location,
+
+8
+00:00:17,969 --> 00:00:19,660
+违反服务条款。
+and breaking the terms.
+
+9
+00:00:19,680 --> 00:00:21,619
+9 月官方报告：疑似转售，
+An official September report: accounts suspected of resale,
+
+10
+00:00:21,639 --> 00:00:24,422
+或在中国等不受支持国家运行的账号，
+or running from unsupported countries like China,
+
+11
+00:00:24,442 --> 00:00:27,230
+可被要求验证身份，失败就封。
+can be asked to verify identity. Fail, and they are banned.
+
+12
+00:00:27,250 --> 00:00:29,140
+南华早报 10 月 2 日报道：
+The South China Morning Post reported on October 2:
+
+13
+00:00:29,160 --> 00:00:30,100
+国庆第一天，
+on the first day of the holiday,
+
+14
+00:00:30,120 --> 00:00:32,286
+X 和 Reddit 上冒出一波投诉，
+a wave of complaints on X and Reddit said accounts used
+
+15
+00:00:32,306 --> 00:00:34,760
+用 VPN 的账号被突然停用。
+with VPNs were suddenly deactivated.
+
+16
+00:00:34,780 --> 00:00:36,020
+博主 @AYi_AInotes 说，
+Blogger @AYi_AInotes says the killer
+
+17
+00:00:36,040 --> 00:00:37,250
+要命的是时区撕裂。
+is a mismatched time zone.
+
+18
+00:00:37,270 --> 00:00:38,653
+博主 @LawrenceW_Zen 说，
+Blogger @LawrenceW_Zen says IP
+
+19
+00:00:38,673 --> 00:00:40,280
+IP 和时区，无所谓。
+and time zone don't matter.
+
+20
+00:00:40,300 --> 00:00:43,096
+说法相反。官方没公布这轮的数字，
+Opposite claims. The official side has published no numbers
+
+21
+00:00:43,116 --> 00:00:44,860
+也没公布判断标准。
+for this wave, and no criteria.
+
+22
+00:00:44,880 --> 00:00:47,590
+哪篇教程，都别当保险。
+So no tutorial is insurance.
+
+23
+00:00:47,610 --> 00:00:49,764
+真被封了，官方给两条路：
+If banned, the official page gives two routes: log
+
+24
+00:00:49,784 --> 00:00:52,301
+登录申诉，或导出数据、删号。
+in and appeal, or export your data and delete the account.
+
+25
+00:00:52,321 --> 00:00:54,250
+付款，一般不退。
+Payments are generally not refunded.
+
+26
+00:00:54,270 --> 00:00:57,060
+号是租的，代码得是自己的。
+The account is rented. The code has to be yours.

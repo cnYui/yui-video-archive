@@ -1,0 +1,9 @@
+厂商 App 怎么控制设备？现在可以顺着证据往回查。
+这个项目叫 REA，Reverse Engineer Anything，MIT 开源。
+截至今天，GitHub 约二十一万八千颗 Star。
+它先接入 Agent，再把网页、App、二进制和运行行为拆开看。
+安卓设备可以用 ADB 找包、拉 APK；网络请求可以读 HAR 或 mitmproxy。
+固件再交给 Binwalk、Unblob 解包，选出的原生文件接 Ghidra。
+证据带着出处和限制回到 Claude Code 或 Codex，Agent 才能继续还原功能。
+所以空调、热水器、灯的控制端，理论上可以自己写；能不能成，要看协议和权限。
+厂商 App 只是入口，设备真正的规则，终于可以被看见。

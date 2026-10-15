@@ -1,0 +1,36 @@
+{
+ "_说明": "make_cover_framed.py <本条目录> 读这个文件。2026-10-05 21:5x 用户定了封面大字 = “AI 工程师需要知道的 GPU 知识”（按语义拆三行：AI工程师 / 需要知道的 / GPU知识，GPU知识 橙色），三个候选只是画面不同。底图是作者长文里的示意图（make_cover_src.py 裁好、画了橙色高亮框，存在 _src/）；贴纸写画面来源。",
+ "candidates": [
+  {
+   "id": "A",
+   "note": "解码一步里“搬权重 1.5 ms / 算数 0.01 ms”那个虚线框（钩子同一幕；画面里有数字，最像“知识点”）",
+   "recommend": true,
+   "video": "D:/大疆/独立视频/短视频/2026-10_AI工程师GPU指南/制作/04_封面/_src/A_decode.png",
+   "t": 0,
+   "crop": [0.0, 0.0, 1.0, 1.0],
+   "big": ["AI工程师", "需要知道的", "GPU知识"],
+   "accent_line": 2,
+   "sticker": "图：@kmeanskaran"
+  },
+  {
+   "id": "B",
+   "note": "文章封面图里的 H100 手绘板（the chip: does the math / memory: holds your model）——一眼就是 GPU",
+   "video": "D:/大疆/独立视频/短视频/2026-10_AI工程师GPU指南/制作/04_封面/_src/B_board.png",
+   "t": 0,
+   "crop": [0.0, 0.0, 1.0, 1.0],
+   "big": ["AI工程师", "需要知道的", "GPU知识"],
+   "accent_line": 2,
+   "sticker": "图：@kmeanskaran"
+  },
+  {
+   "id": "C",
+   "note": "H100 内部图：132 个 SM、50 MB L2、3.35 TB/s 的细管子连着 80 GB 显存",
+   "video": "D:/大疆/独立视频/短视频/2026-10_AI工程师GPU指南/制作/04_封面/_src/C_inside.png",
+   "t": 0,
+   "crop": [0.0, 0.0, 1.0, 1.0],
+   "big": ["AI工程师", "需要知道的", "GPU知识"],
+   "accent_line": 2,
+   "sticker": "图：@kmeanskaran"
+  }
+ ]
+}

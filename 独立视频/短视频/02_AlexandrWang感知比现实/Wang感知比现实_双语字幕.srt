@@ -1,0 +1,189 @@
+1
+00:00:00,400 --> 00:00:03,760
+Wang：在很多大客户那里
+At a lot of large customers,
+
+2
+00:00:03,800 --> 00:00:05,790
+Wang：感知比现实更真实。
+perception is more real than reality.
+
+3
+00:00:05,830 --> 00:00:08,440
+这是 2024 年 12 月的一期播客。
+This is a podcast episode from December 2024.
+
+4
+00:00:08,480 --> 00:00:10,905
+那时 Wang 是 Scale AI 的 CEO，
+Back then Wang was Scale AI's CEO.
+
+5
+00:00:10,945 --> 00:00:13,790
+现在是 Meta 首席 AI 官。
+Now he's Meta's chief AI officer.
+
+6
+00:00:13,830 --> 00:00:15,556
+Wang：在座各位合作过的公司，
+The companies everyone here has worked
+
+7
+00:00:15,596 --> 00:00:18,450
+Wang：多半靠数据说话
+with are mostly data-driven.
+
+8
+00:00:18,490 --> 00:00:20,200
+Wang：真相自己会浮出来。
+It feels like the truth makes its way.
+
+9
+00:00:20,240 --> 00:00:22,830
+Wang：大家共享同一个现实。
+Everybody shares one sense of reality.
+
+10
+00:00:22,870 --> 00:00:24,602
+Wang：但多数大公司不是这样，
+But not at most large companies,
+
+11
+00:00:24,642 --> 00:00:27,300
+Wang：政府里也不是。
+nor in government, unfortunately.
+
+12
+00:00:27,340 --> 00:00:29,890
+Wang：现实往往太难看
+Reality is usually so ugly
+
+13
+00:00:29,930 --> 00:00:33,050
+Wang：很少有人愿意直面。
+that people very rarely confront it.
+
+14
+00:00:33,090 --> 00:00:34,404
+Wang：多数时候，人们宁愿
+Mostly they choose
+
+15
+00:00:34,444 --> 00:00:37,070
+Wang：相信自己活在其中的感知。
+to believe the perceptions they live in.
+
+16
+00:00:37,110 --> 00:00:43,320
+Wang：所以做企业销售、做企业产品
+So if you do enterprise sales or build enterprise products,
+
+17
+00:00:43,360 --> 00:00:44,895
+Wang：工作既是改善现实，
+your job is to improve the reality,
+
+18
+00:00:44,935 --> 00:00:47,370
+Wang：同样也是塑造感知。
+just as much as to shape the perception.
+
+19
+00:00:47,410 --> 00:00:49,480
+Wang：Palantir 的绝活之一，
+One of Palantir's superpowers:
+
+20
+00:00:49,520 --> 00:00:50,714
+Wang：是比大多数科技
+they shape perception
+
+21
+00:00:50,754 --> 00:00:55,750
+Wang：公司更会塑造感知。
+better than most tech companies.
+
+22
+00:00:55,790 --> 00:00:57,890
+Wang：因为它觉得
+Because they view themselves
+
+23
+00:00:57,930 --> 00:00:59,461
+Wang：自己像半个表演剧团，
+as part acting troupe,
+
+24
+00:00:59,501 --> 00:01:02,610
+Wang：半个软件公司。
+part software company.
+
+25
+00:01:02,650 --> 00:01:04,790
+Wang：这还不是比喻：它真的给所有新
+And I'm not even speaking figuratively: they literally
+
+26
+00:01:04,830 --> 00:01:08,350
+Wang：员工发一本表演书，发了很久。
+gave all new hires an acting book, for a very long time.
+
+27
+00:01:08,390 --> 00:01:10,612
+Palantir 前员工 Qureshi 写过：
+Ex-Palantir engineer Nabeel Qureshi wrote
+
+28
+00:01:10,652 --> 00:01:12,290
+入职时公司寄来几本书，
+that new hires were sent a few books,
+
+29
+00:01:12,330 --> 00:01:14,860
+有一本是讲即兴戏剧的《Impro》。
+one of them Impro, on improv theater.
+
+30
+00:01:14,900 --> 00:01:17,850
+现在还发不发，他也不确定。
+Whether they still do, he says he isn't sure.
+
+31
+00:01:17,890 --> 00:01:18,722
+Wang：不过根本上，
+Fundamentally,
+
+32
+00:01:18,762 --> 00:01:20,430
+Wang：还是得做出好产品。
+you also need to build a good product.
+
+33
+00:01:20,470 --> 00:01:22,423
+9 月 23 日，Meta 发布会：
+Sept. 23, Meta Connect:
+
+34
+00:01:22,463 --> 00:01:24,010
+Wang 上台穿的 T 恤，
+Wang took the stage in a T-shirt he says
+
+35
+00:01:24,050 --> 00:01:26,730
+他自己说是 30 美元的二手货。
+was a $30 thrift find.
+
+36
+00:01:26,770 --> 00:01:28,239
+10 月 3 日，Slate 发文：
+Oct. 3, Slate: Silicon Valley's most powerful men
+
+37
+00:01:28,279 --> 00:01:30,930
+硅谷大佬发现了“显得无害”的好处。
+have discovered the appeal of looking harmless.
+
+38
+00:01:30,970 --> 00:01:34,000
+感知能放大现实，替代不了现实。
+Perception can amplify reality. It can't replace it.

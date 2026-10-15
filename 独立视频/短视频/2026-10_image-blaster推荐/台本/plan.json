@@ -1,0 +1,201 @@
+{
+  "layout": "single",
+  "plan": [
+    {
+      "id": "H1",
+      "type": "clip",
+      "kind": "demo",
+      "overlay": "clip",
+      "name": "开场：同传",
+      "credit": "@neilsonks · X（原帖）",
+      "ranges": [
+        {
+          "src": "d1",
+          "in": 0.0,
+          "out": 5.2
+        },
+        {
+          "src": "d1",
+          "in": 5.2,
+          "hold": 0.9
+        }
+      ],
+      "lines": [
+        {
+          "id": "N01",
+          "a": 0.4
+        }
+      ]
+    },
+    {
+      "id": "P1",
+      "type": "card",
+      "kind": "page",
+      "overlay": "page",
+      "name": "GitHub 项目页",
+      "dur": 4.0,
+      "lines": [
+        {
+          "id": "N02",
+          "a": 0.2
+        }
+      ]
+    },
+    {
+      "id": "M1",
+      "type": "clip",
+      "kind": "demo",
+      "overlay": "clip",
+      "name": "原理：同传",
+      "credit": "@neilsonks · X（原帖）",
+      "ranges": [
+        {
+          "src": "d1",
+          "in": 37.7,
+          "out": 44.6
+        },
+        {
+          "src": "d1",
+          "in": 44.6,
+          "out": 50.9,
+          "crop": [
+            0.0,
+            0.03,
+            0.6,
+            0.63
+          ]
+        },
+        {
+          "src": "d1",
+          "in": 50.9,
+          "out": 55.6,
+          "crop": [
+            0.0,
+            0.03,
+            0.6,
+            0.63
+          ]
+        },
+        {
+          "src": "d1",
+          "in": 55.6,
+          "out": 60.6,
+          "crop": [
+            0.0,
+            0.03,
+            0.6,
+            0.63
+          ]
+        },
+        {
+          "src": "d1",
+          "in": 60.6,
+          "out": 69.0
+        },
+        {
+          "src": "d1",
+          "in": 69.0,
+          "hold": 0.6
+        }
+      ],
+      "lines": [
+        {
+          "id": "N03",
+          "a": 0.58
+        },
+        {
+          "id": "N04",
+          "a": 7.78
+        },
+        {
+          "id": "N05",
+          "a": 13.98
+        },
+        {
+          "id": "N06",
+          "a": 19.9
+        },
+        {
+          "id": "N07",
+          "a": 28.4
+        }
+      ]
+    },
+    {
+      "id": "P2",
+      "type": "card",
+      "kind": "page",
+      "overlay": "page",
+      "name": "要两个 key",
+      "dur": 3.5,
+      "lines": [
+        {
+          "id": "N08",
+          "a": 0.2
+        }
+      ]
+    },
+    {
+      "id": "P3",
+      "type": "card",
+      "kind": "page",
+      "overlay": "page",
+      "name": "最近提交",
+      "dur": 3.0,
+      "lines": [
+        {
+          "id": "N09",
+          "a": 0.2
+        }
+      ]
+    },
+    {
+      "id": "H2",
+      "type": "clip",
+      "kind": "demo",
+      "overlay": "clip",
+      "name": "只管生成：同传",
+      "credit": "@neilsonks · X（原帖）",
+      "ranges": [
+        {
+          "src": "d1",
+          "in": 117.2,
+          "out": 120.5
+        }
+      ],
+      "lines": [
+        {
+          "id": "N10",
+          "a": 0.4
+        }
+      ]
+    },
+    {
+      "id": "D4",
+      "type": "clip",
+      "kind": "demo",
+      "overlay": "clip",
+      "name": "收尾",
+      "credit": "@neilsonks · X（原帖）",
+      "ranges": [
+        {
+          "src": "d1",
+          "in": 101.6,
+          "out": 104.5,
+          "mute": true
+        },
+        {
+          "src": "d1",
+          "in": 104.5,
+          "hold": 1.4
+        }
+      ],
+      "lines": [
+        {
+          "id": "N11",
+          "a": 0.15
+        }
+      ]
+    }
+  ]
+}

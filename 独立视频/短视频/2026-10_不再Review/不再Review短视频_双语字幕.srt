@@ -1,0 +1,129 @@
+1
+00:00:00,000 --> 00:00:01,301
+一个月 2000 多个 PR，
+2,000-plus PRs in a month,
+
+2
+00:00:01,321 --> 00:00:03,190
+她说自己没有逐个 Review。
+and she says she didn't review them one by one.
+
+3
+00:00:03,210 --> 00:00:04,574
+她叫 Lauren Tan，
+Lauren Tan works
+
+4
+00:00:04,594 --> 00:00:06,790
+在 SpaceXAI 做 Grok Bot。
+on Grok Bot at SpaceXAI.
+
+5
+00:00:06,810 --> 00:00:08,445
+10 月 2 号，Matt Pocock
+On October 2, Matt Pocock
+
+6
+00:00:08,465 --> 00:00:10,720
+请她上直播，聊了 65 分钟。
+had her on his livestream for 65 minutes.
+
+7
+00:00:10,740 --> 00:00:12,860
+按 2000 个算，每天 67 个。
+At 2,000 PRs, that's 67 a day.
+
+8
+00:00:12,880 --> 00:00:15,490
+一个看 15 分钟，要 17 个小时。
+At 15 minutes each, that's 17 hours.
+
+9
+00:00:15,510 --> 00:00:18,293
+一个人看不过来，所以她改成抽样。
+One person can't keep up, so she samples instead.
+
+10
+00:00:18,313 --> 00:00:20,970
+靠两样东西：验证，和规矩。
+Two things hold it together: verification and rules.
+
+11
+00:00:20,990 --> 00:00:23,356
+验证：让 AI 像真人用户一样，
+Verification: the AI uses the program
+
+12
+00:00:23,376 --> 00:00:24,970
+把程序跑一遍。
+like a real user.
+
+13
+00:00:24,990 --> 00:00:27,602
+规矩：AI 犯过的错，写成 lint 规则，
+Rules: a mistake the AI made once becomes a lint rule,
+
+14
+00:00:27,622 --> 00:00:29,230
+让它再也犯不了。
+so it can't happen again.
+
+15
+00:00:29,250 --> 00:00:32,340
+她把做法写成了一组技能，叫 pstack。
+She wrote the method up as a set of skills called pstack.
+
+16
+00:00:32,360 --> 00:00:34,410
+官方文档里的全自动模式：
+In its official docs' full-autopilot mode,
+
+17
+00:00:34,430 --> 00:00:36,265
+每个 PR 派一批验证员，
+every PR gets a swarm of verifiers,
+
+18
+00:00:36,285 --> 00:00:38,390
+裁决干净，才准合并。
+and only a clean verdict lets it merge.
+
+19
+00:00:38,410 --> 00:00:40,993
+合并之后，她才看：早上翻提交记录，
+She reviews after the merge: the morning commit log,
+
+20
+00:00:41,013 --> 00:00:43,230
+有问题就撤回，再加规则。
+revert what's wrong, add a rule.
+
+21
+00:00:43,250 --> 00:00:45,462
+但她自己说，走到这一步非常难。
+But she says getting here is very hard,
+
+22
+00:00:45,482 --> 00:00:47,098
+撤不回、又难验证的活，
+and for work that can't be undone or verified,
+
+23
+00:00:47,118 --> 00:00:48,540
+她说没有答案。
+she has no answer.
+
+24
+00:00:48,560 --> 00:00:49,740
+Review 没有消失。
+Review didn't vanish.
+
+25
+00:00:49,760 --> 00:00:51,122
+它从每个 PR 的门口，
+It moved from the door of every PR
+
+26
+00:00:51,142 --> 00:00:53,390
+搬到了早上的提交记录里。
+to the morning's commit log.

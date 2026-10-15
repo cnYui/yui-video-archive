@@ -1,0 +1,83 @@
+{
+  "slug": "Claude封号潮",
+  "title": "Claude 半年封号 1140 万个账号：官方数据、官方给的路、两位博主说法相反（内部标题，不是平台标题）",
+  "kicker": "悠一 · <b>Claude</b> 封号潮",
+  "hook": [
+    "半年封了1140万个号",
+    "申诉成功率约十分之一"
+  ],
+  "lines": [
+    {
+      "id": "N01",
+      "zh": "Claude 半年封了 1140 万个账号，申诉成功的，只有 4.2 万次。",
+      "say": "Claude 半年封了一千一百四十万个账号，申诉成功的，只有四万二千次。",
+      "en": "Claude banned 11.4 million accounts in six months. Only 42,000 appeals succeeded."
+    },
+    {
+      "id": "N02",
+      "zh": "出自 Anthropic 官方透明度页面，7 月 23 日更新，统计 1 到 6 月。",
+      "say": "出自 Anthropic 官方透明度页面，七月二十三日更新，统计一月到六月。",
+      "en": "It comes from Anthropic's own transparency page, updated July 23, covering January to June."
+    },
+    {
+      "id": "N03",
+      "zh": "去年下半年，才 145 万。",
+      "say": "去年下半年，才一百四十五万。",
+      "en": "In the second half of last year it was 1.45 million."
+    },
+    {
+      "id": "N04",
+      "zh": "官方列了三条封号理由：反复违规，从不受支持的地点注册，违反服务条款。",
+      "say": "官方列了三条封号理由：反复违规，从不受支持的地点注册，违反服务条款。",
+      "en": "The help center lists three reasons for a ban: repeated violations, signing up from an unsupported location, and breaking the terms."
+    },
+    {
+      "id": "N05",
+      "zh": "9 月官方报告：疑似转售，或在中国等不受支持国家运行的账号，可被要求验证身份，失败就封。",
+      "say": "九月官方报告：疑似转售，或在中国等不受支持国家运行的账号，可被要求验证身份，失败就封。",
+      "en": "An official September report: accounts suspected of resale, or running from unsupported countries like China, can be asked to verify identity. Fail, and they are banned."
+    },
+    {
+      "id": "N06",
+      "zh": "南华早报 10 月 2 日报道：国庆第一天，X 和 Reddit 上冒出一波投诉，用 VPN 的账号被突然停用。",
+      "say": "南华早报十月二日报道：国庆第一天，X 和 Reddit 上冒出一波投诉，用 VPN 的账号被突然停用。",
+      "en": "The South China Morning Post reported on October 2: on the first day of the holiday, a wave of complaints on X and Reddit said accounts used with VPNs were suddenly deactivated."
+    },
+    {
+      "id": "N07",
+      "zh": "博主 @AYi_AInotes 说，要命的是时区撕裂。",
+      "say": "博主阿伊说，要命的是时区撕裂。",
+      "en": "Blogger @AYi_AInotes says the killer is a mismatched time zone."
+    },
+    {
+      "id": "N08",
+      "zh": "博主 @LawrenceW_Zen 说，IP 和时区，无所谓。",
+      "say": "博主劳伦斯说，IP 和时区，无所谓。",
+      "en": "Blogger @LawrenceW_Zen says IP and time zone don't matter."
+    },
+    {
+      "id": "N09",
+      "zh": "说法相反。官方没公布这轮的数字，也没公布判断标准。",
+      "say": "说法相反。官方没公布这轮的数字，也没公布判断标准。",
+      "en": "Opposite claims. The official side has published no numbers for this wave, and no criteria."
+    },
+    {
+      "id": "N10",
+      "zh": "哪篇教程，都别当保险。",
+      "say": "哪篇教程，都别当保险。",
+      "en": "So no tutorial is insurance."
+    },
+    {
+      "id": "N11",
+      "zh": "真被封了，官方给两条路：登录申诉，或导出数据、删号。付款，一般不退。",
+      "say": "真被封了，官方给两条路：登录申诉，或导出数据、删号。付款，一般不退。",
+      "en": "If banned, the official page gives two routes: log in and appeal, or export your data and delete the account. Payments are generally not refunded."
+    },
+    {
+      "id": "N12",
+      "zh": "号是租的，代码得是自己的。",
+      "say": "号是租的，代码得是自己的。",
+      "en": "The account is rented. The code has to be yours."
+    }
+  ]
+}

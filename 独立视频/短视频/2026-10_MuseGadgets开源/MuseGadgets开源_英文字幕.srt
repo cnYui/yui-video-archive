@@ -1,0 +1,139 @@
+1
+00:00:00,050 --> 00:00:02,415
+Two days in, 1,000+ GitHub stars:
+
+2
+00:00:02,435 --> 00:00:03,756
+Meta has open-sourced the firmware
+
+3
+00:00:03,776 --> 00:00:06,330
+and SDK for building Muse peripherals.
+
+4
+00:00:06,350 --> 00:00:07,756
+On October 2, US time,
+
+5
+00:00:07,776 --> 00:00:10,177
+Nat Friedman and Alexandr Wang of Meta
+
+6
+00:00:10,197 --> 00:00:12,492
+Superintelligence Labs announced Muse Gadgets on X:
+
+7
+00:00:12,512 --> 00:00:14,913
+let anyone build hardware
+
+8
+00:00:14,933 --> 00:00:16,860
+for Meta's personal AI agent, Muse.
+
+9
+00:00:16,880 --> 00:00:19,151
+Two things are open: ESP32 firmware
+
+10
+00:00:19,171 --> 00:00:20,713
+and a Linux SDK. Dev boards
+
+11
+00:00:20,733 --> 00:00:22,622
+and Raspberry Pis both work;
+
+12
+00:00:22,642 --> 00:00:24,790
+the code is Apache 2.0.
+
+13
+00:00:24,810 --> 00:00:26,907
+The flow: get an SDK token,
+
+14
+00:00:26,927 --> 00:00:29,143
+flash the firmware, pair in the Muse app.
+
+15
+00:00:29,163 --> 00:00:31,996
+Nat Friedman's tip: hand the repo to a coding agent
+
+16
+00:00:32,016 --> 00:00:34,530
+and let it build the peripheral.
+
+17
+00:00:34,580 --> 00:00:36,934
+The site lists eight example projects:
+
+18
+00:00:36,954 --> 00:00:39,383
+a Raspberry Pi for Home Assistant, a round touchscreen
+
+19
+00:00:39,403 --> 00:00:42,061
+with push-to-talk, an HDMI TV stick coming soon,
+
+20
+00:00:42,081 --> 00:00:44,530
+and a color e-ink briefing display.
+
+21
+00:00:44,630 --> 00:00:46,202
+Meta built one too: Muse Home Link.
+
+22
+00:00:46,222 --> 00:00:48,340
+It plugs in over USB-C,
+
+23
+00:00:48,360 --> 00:00:49,978
+runs an ESP32-C5, joins home Wi-Fi,
+
+24
+00:00:49,998 --> 00:00:52,247
+and community skills
+
+25
+00:00:52,267 --> 00:00:54,760
+can let Muse turn on lights or control a TV.
+
+26
+00:00:55,900 --> 00:00:57,428
+Meta made a batch of 5,000,
+
+27
+00:00:57,448 --> 00:00:58,716
+free for subscribers.
+
+28
+00:00:58,736 --> 00:01:00,486
+But the site says: US only, one per person,
+
+29
+00:01:00,506 --> 00:01:03,450
+first come first served, shipping in October.
+
+30
+00:01:03,470 --> 00:01:05,351
+But Apache 2.0 covers only the code.
+
+31
+00:01:05,371 --> 00:01:06,644
+The token terms say: personal,
+
+32
+00:01:06,664 --> 00:01:08,895
+non-commercial use, at most 50 devices, no selling,
+
+33
+00:01:08,915 --> 00:01:11,500
+and Meta can revoke access at any time.
+
+34
+00:01:11,550 --> 00:01:12,584
+The hands are open source.
+
+35
+00:01:12,604 --> 00:01:14,770
+The brain stays in Meta's cloud.

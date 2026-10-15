@@ -1,0 +1,36 @@
+{
+  "_说明": "框版封面（make_cover_framed.py）：界面 / 产品图没有脸，用‘钩子大字在框外 + 画面缩进边框 6 + 黄贴纸’；3 个候选 × 3:4 / 16:9 / 4:3。大字每行 ≤ 6 字，不和平台标题同一句。",
+  "candidates": [
+    {
+      "id": "A",
+      "note": "Nat 官宣帖里的五台设备合影（圆屏 / 小屏 / Home Link / 树莓派 / 墨水屏）+ “Meta开源 / AI硬件”",
+      "recommend": true,
+      "video": "D:/大疆/独立视频/素材/2026-10_MuseGadgets开源/图片/natfriedman_2106099383037309211_photo.jpg",
+      "t": 0,
+      "crop": [0.0, 0.0, 1.0, 1.0],
+      "big": ["Meta开源", "AI硬件"],
+      "accent_line": 1,
+      "sticker": "@natfriedman · X"
+    },
+    {
+      "id": "B",
+      "note": "官网 Home Link 3D 正面 + 数字钩子 “免费送 / 5000台”（贴纸写明仅限美国）",
+      "video": "D:/大疆/独立视频/素材/2026-10_MuseGadgets开源/官网与仓库/widget/device_044.png",
+      "t": 0,
+      "crop": [0.0, 0.0, 1.0, 0.88],
+      "big": ["免费送", "5000台"],
+      "accent_line": 1,
+      "sticker": "仅限美国"
+    },
+    {
+      "id": "C",
+      "note": "官网 Connection 图（云端 Muse VM → Wi-Fi → Home Link）+ 泼冷水钩子 “只开源 / 手脚”",
+      "video": "D:/大疆/独立视频/素材/2026-10_MuseGadgets开源/官网与仓库/widget/connection_010.png",
+      "t": 0,
+      "crop": [0.0, 0.0, 1.0, 0.88],
+      "big": ["只开源", "手脚"],
+      "accent_line": 1,
+      "sticker": "官网 · Muse VM"
+    }
+  ]
+}

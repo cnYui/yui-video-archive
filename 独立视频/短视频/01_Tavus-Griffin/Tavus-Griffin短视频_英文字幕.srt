@@ -1,0 +1,87 @@
+1
+00:00:00,000 --> 00:00:01,650
+The woman on the other end of this call is an AI.
+
+2
+00:00:01,670 --> 00:00:04,579
+In the company's own study, 54 people video-chatted
+
+3
+00:00:04,599 --> 00:00:06,930
+for a minute, and 26 thought they'd talked to a real person.
+
+4
+00:00:06,950 --> 00:00:09,880
+The previous system: just 1 out of 41.
+
+5
+00:00:09,900 --> 00:00:11,248
+This is Griffin,
+
+6
+00:00:11,268 --> 00:00:13,200
+a new model Tavus released on October 1.
+
+7
+00:00:13,220 --> 00:00:14,555
+Tavus says it's the first
+
+8
+00:00:14,575 --> 00:00:16,530
+to pass the video Turing test.
+
+9
+00:00:16,550 --> 00:00:18,099
+How? Griffin listens,
+
+10
+00:00:18,119 --> 00:00:20,039
+watches and speaks at once,
+
+11
+00:00:20,059 --> 00:00:22,460
+re-deciding every fraction of a second.
+
+12
+00:00:22,480 --> 00:00:24,460
+Oh. Who's that with the ugly sweater?
+
+13
+00:00:24,480 --> 00:00:25,883
+But Tavus ran the study itself,
+
+14
+00:00:25,903 --> 00:00:27,410
+with just 54 people.
+
+15
+00:00:27,430 --> 00:00:29,663
+They were told their partner was a real person,
+
+16
+00:00:29,683 --> 00:00:31,970
+and the page mentions no human control group.
+
+17
+00:00:31,990 --> 00:00:33,406
+On NVIDIA's leaderboard,
+
+18
+00:00:33,426 --> 00:00:36,870
+an AI judge gave it 3.83. The human reference scores 3.92.
+
+19
+00:00:36,890 --> 00:00:38,508
+But it's only a research preview
+
+20
+00:00:38,528 --> 00:00:41,310
+for a few testers, with no release date.
+
+21
+00:00:41,330 --> 00:00:42,426
+Tavus itself says:
+
+22
+00:00:42,446 --> 00:00:44,750
+being this lifelike is both a strength and a risk.

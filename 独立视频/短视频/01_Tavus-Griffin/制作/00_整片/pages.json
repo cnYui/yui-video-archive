@@ -1,0 +1,160 @@
+{
+ "P_study": {
+  "src": "pages/P_study.png",
+  "w": 1424,
+  "h": 1182,
+  "url": "https://www.tavus.io/griffin",
+  "bg": "#F7F4EF",
+  "marks": {
+   "#sel:card_g": [
+    [
+     58,
+     324,
+     1308,
+     412
+    ]
+   ],
+   "#sel:card_p": [
+    [
+     58,
+     752,
+     1308,
+     410
+    ]
+   ]
+  }
+ },
+ "P_intro": {
+  "src": "pages/P_intro.png",
+  "w": 1520,
+  "h": 1438,
+  "url": "https://www.tavus.io/griffin",
+  "bg": "#F7F4EF",
+  "marks": {
+   "October 1st, 2026": [
+    [
+     0,
+     4,
+     246,
+     38
+    ]
+   ],
+   "first to pass": [
+    [
+     0,
+     795,
+     1072,
+     47
+    ]
+   ]
+  }
+ },
+ "P_duplex": {
+  "src": "pages/P_duplex.png",
+  "w": 1552,
+  "h": 1224,
+  "url": "https://www.tavus.io/griffin",
+  "bg": "#F7F4EF",
+  "marks": {
+   "#sel:cascade": [
+    [
+     90,
+     452,
+     1372,
+     246
+    ]
+   ],
+   "#sel:griffin": [
+    [
+     90,
+     724,
+     1372,
+     222
+    ]
+   ]
+  }
+ },
+ "P_study2": {
+  "src": "pages/P_study2.png",
+  "w": 1424,
+  "h": 1430,
+  "url": "https://www.tavus.io/griffin",
+  "bg": "#F7F4EF",
+  "marks": {
+   "54 participants": [
+    [
+     92,
+     88,
+     196,
+     36
+    ]
+   ],
+   "told matched": [
+    [
+     58,
+     1142,
+     1308,
+     123
+    ]
+   ]
+  }
+ },
+ "P_fdb": {
+  "src": "pages/P_fdb.png",
+  "w": 1552,
+  "h": 1130,
+  "url": "https://www.tavus.io/griffin",
+  "bg": "#F7F4EF",
+  "marks": {
+   "#sel:human": [
+    [
+     56,
+     362,
+     1440,
+     74
+    ]
+   ],
+   "#sel:griffin": [
+    [
+     56,
+     446,
+     1440,
+     60
+    ]
+   ],
+   "judge": [
+    [
+     646,
+     964,
+     704,
+     34
+    ]
+   ]
+  }
+ },
+ "P_safety": {
+  "src": "pages/P_safety.png",
+  "w": 1700,
+  "h": 1238,
+  "url": "https://www.tavus.io/griffin",
+  "bg": "#F7F4EF",
+  "marks": {
+   "deceive": [
+    [
+     90,
+     494,
+     1520,
+     181
+    ]
+   ],
+   "not available": [
+    [
+     90,
+     951,
+     1520,
+     241
+    ]
+   ]
+  }
+ }
+}

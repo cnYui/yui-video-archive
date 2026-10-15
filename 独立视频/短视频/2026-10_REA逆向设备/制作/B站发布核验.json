@@ -1,0 +1,87 @@
+{
+  "verified_at": "2026-10-14T17:17:32+09:00",
+  "archive": {
+    "code": 0,
+    "archive": {
+      "aid": 117438247077608,
+      "bvid": "BV1JepC6EEk8",
+      "title": "一个视频拆解最近爆火的“逆向一切”的 RAE 开源项目 从厂商 App 查到设备协议，自己的控制端能自己写吗？",
+      "desc": "REA（Reverse Engineer Anything）把程序分析工具接给 Claude Code / Codex。本期直接在线阅读官方代码，拆解 ADB 获取 APK、HAR/mitmproxy 抓包分析、Binwalk/Unblob 固件解包和 Ghidra 分析的证据链。Star 为 2026-10-14 查询快照，约 21.8 万。\n\n源码：https://github.com/morluto/rea\nX 教程与原图：蓝哥AI @0xlangeai（https://x.com/0xlangeai/status/2109544824135467312）；@ResearchWang（https://x.com/ResearchWang/status/2109812002076143824）。\n菜单栏空调画面来自独立开源项目 MideaBar：https://github.com/Binaryify/MideaBar，仅作控制端示例，未声称由 REA 完成。固件链路需 Linux 与已有外部工具；是否能还原某台设备取决于协议、权限等。\n本地 Qwen3-TTS 合成配音，中英双语字幕。图片版权归原作者，本期作介绍与评论引用。",
+      "tid": 231,
+      "tag": "REA,开源,逆向工程,人工智能,Codex,Claude Code,智能家居,设备协议",
+      "state": 0,
+      "state_desc": "开放浏览",
+      "creation_statement": {
+        "id": 1,
+        "content": "含AI生成内容"
+      }
+    },
+    "covers": {
+      "cover": {
+        "url": "http://i1.hdslb.com/bfs/archive/b3e3dcdabf39e47faaf5458619efb8cd89ea6b5b.jpg",
+        "width": 1920,
+        "height": 1080
+      },
+      "cover43": {
+        "url": "http://i1.hdslb.com/bfs/archive/fa82c82fd743837b32f93f0d2073f5e70f6f1a9a.jpg",
+        "width": 1440,
+        "height": 1080
+      }
+    },
+    "videos": [
+      {
+        "duration": 59,
+        "cid": 42732880297,
+        "title": "一个视频拆解最近爆火的“逆向一切”的 RAE 开源项目 从厂商 App 查到设备协议，自己的控制端能自己写吗？"
+      }
+    ],
+    "dataKeys": [
+      "act_reserve_binded",
+      "act_reserve_create",
+      "add_season",
+      "arc_elec",
+      "archive",
+      "can_edit_delay",
+      "has_appeal",
+      "in_season",
+      "no_disturbance",
+      "origin_state",
+      "replace_check",
+      "reply",
+      "show_space_hidden",
+      "show_staff",
+      "space_hidden",
+      "staffs",
+      "subtitle",
+      "tip",
+      "videos",
+      "watermark"
+    ],
+    "statementFields": {
+      "aid": 117438247077608,
+      "copyright": 3,
+      "source": "",
+      "creation_statement": {
+        "id": 1,
+        "content": "含AI生成内容"
+      },
+      "ai_cover": 0
+    }
+  },
+  "public": {
+    "code": 0,
+    "message": "OK",
+    "data": {
+      "bvid": "BV1JepC6EEk8",
+      "title": "一个视频拆解最近爆火的“逆向一切”的 RAE 开源项目 从厂商 App 查到设备协议，自己的控制端能自己写吗？",
+      "state": 0,
+      "duration": 59,
+      "tid": 231
+    }
+  },
+  "cover_psnr_db": {
+    "16x9": 37.71861253525271,
+    "4x3": 37.16937295274914
+  },
+  "upload_method": "用户手动上传14.5MB完整原片，未压缩；Playwright JS上传两张小封面并点击发布"
+}

@@ -1,0 +1,119 @@
+{
+ "slug": "TimDenning忠告2_那把小刀",
+ "title": "Tim Denning 忠告 2：那把小刀",
+ "kicker": "悠一 · <b>Tim Denning</b> 忠告 ②",
+ "hook": [
+  "人好、守时、孝顺",
+  "可你拿的是把小刀"
+ ],
+ "lines": [
+  {
+   "id": "N01",
+   "zh": "你最爱的人倒在街上流血，一个人掏出小刀，说要做手术。",
+   "say": "你最爱的人倒在街上流血，一个人掏出小刀，说要做手术。",
+   "en": "The person you love most lies bleeding in the street. A stranger pulls out a pocket knife to operate.",
+   "cut": [
+    [
+     "流血，",
+     "street."
+    ]
+   ]
+  },
+  {
+   "id": "N02",
+   "zh": "你问：你是医生吗？对方说：不是，但人好、守时、孝顺。",
+   "say": "你问：你是医生吗？对方说：不是，但人好、守时、孝顺。",
+   "en": "You ask: are you a doctor? No, the stranger says, but he's kind, punctual and a devoted son."
+  },
+  {
+   "id": "N03",
+   "zh": "社会就是那个流血的人：要房子，要吃的，要娱乐。",
+   "say": "社会就是那个流血的人：要房子，要吃的，要娱乐。",
+   "en": "Society is the bleeding person: it needs houses, food and entertainment."
+  },
+  {
+   "id": "N04",
+   "zh": "拿着小刀的，是你。人再好，没有技能，世界照样拒绝。",
+   "say": "拿着小刀的，是你。人再好，没有技能，世界照样拒绝。",
+   "en": "You're the one with the knife. However nice you are, the world rejects you without skills."
+  },
+  {
+   "id": "N05",
+   "zh": "第三条里，Tim Denning 引了这个比方，署名 Jason Pargin。",
+   "say": "第三条里，Tim Denning 引了这个比方，署名 Jason Pargin。",
+   "en": "In lesson 3, Tim Denning quotes this parable, credited to Jason Pargin."
+  },
+  {
+   "id": "N06",
+   "zh": "简介自称 10 亿阅读的作家 Tim，给的解法是：执念。",
+   "say": "简介自称十亿阅读的作家 Tim，给的解法是：执念。",
+   "en": "The writer who claims 1B+ views offers one fix: obsession."
+  },
+  {
+   "id": "N07",
+   "zh": "从什么都有点兴趣，变成对一件事彻底着迷。",
+   "say": "从什么都有点兴趣，变成对一件事彻底着迷。",
+   "en": "Go from lukewarm interest to being all-out obsessed with one thing."
+  },
+  {
+   "id": "N08",
+   "zh": "Tim 说，这救过自己，也能救无家可归的朋友 Peter。",
+   "say": "Tim 说，这救过自己，也能救无家可归的朋友 Peter。",
+   "en": "Tim says it saved him, and can save anyone, even his homeless friend Peter."
+  },
+  {
+   "id": "N09",
+   "zh": "第十二条：向“疯子”学习。Tim 说自己见过一个：",
+   "say": "第十二条：向“疯子”学习。Tim 说自己见过一个：",
+   "en": "Lesson 12: learn from maniacs. Tim says he met one:"
+  },
+  {
+   "id": "N10",
+   "zh": "每天回复 X 上的评论 14 个小时，坚持了一年。",
+   "say": "每天回复 X 上的评论十四个小时，坚持了一年。",
+   "en": "Someone replied to comments on X 14 hours a day, for a year."
+  },
+  {
+   "id": "N11",
+   "zh": "结果粉丝成群，赚的钱够一辈子不上班。",
+   "say": "结果粉丝成群，赚的钱够一辈子不上班。",
+   "en": "The result: a big following, and enough money to never work a job."
+  },
+  {
+   "id": "N12",
+   "zh": "Tim 的看法：竞争几乎为零，因为太苦了。",
+   "say": "Tim 的看法：竞争几乎为零，因为太苦了。",
+   "en": "Tim's view: competition is close to zero, because it's hard work."
+  },
+  {
+   "id": "N13",
+   "zh": "第八条：难事做得越多，越容易成功。",
+   "say": "第八条：难事做得越多，越容易成功。",
+   "en": "Lesson 8: the more hard things you do, the more successful you become."
+  },
+  {
+   "id": "N14",
+   "zh": "据 Tim 自述，小时候家里的两处房子都因破产没了。",
+   "say": "据 Tim 自述，小时候家里的两处房子都因破产没了。",
+   "en": "By Tim's own account, both family homes were lost to bankruptcy in his childhood."
+  },
+  {
+   "id": "N15",
+   "zh": "现在回头看，那是赢面：逼着练出了别人没有的本事。",
+   "say": "现在回头看，那是赢面：逼着练出了别人没有的本事。",
+   "en": "Looking back, he calls it a win: it forced skills most people never built."
+  },
+  {
+   "id": "N16",
+   "zh": "Tim 自己都说，14 小时不休息近乎愚蠢。没撑下来的人，文中没提。",
+   "say": "Tim 自己都说，十四个小时不休息近乎愚蠢。没撑下来的人，文中没提。",
+   "en": "Tim himself calls 14 hours without a break almost stupid. The ones who gave up go unmentioned."
+  },
+  {
+   "id": "N17",
+   "zh": "人再好，也得带着能止血的本事。",
+   "say": "人再好，也得带着能止血的本事。",
+   "en": "Be as nice as you like, but carry a skill that can stop the bleeding."
+  }
+ ]
+}

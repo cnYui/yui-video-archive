@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<!-- 【系列改动，模板原样见 技能 assets/engine-template/】《Tim Denning 的 36 条忠告》系列（单框）：没有视频素材，画面全是页面录屏 / 照片。① 上下两框各一张真元素贴纸（#stk1 右上 / #stk2 左上，内容 = 图标 + 文字，plan.json 的 ui.tag / ui.tag2）；
+     ② 对比图面板镜头的样式（.pn .pimg .pbox .ptag .veil .tile）、来源小字 #credit（ui.credit）；③ 小标题 #kicker 可以按场景换（ui.kicker）。其余同模板。 -->
+<!-- 短视频引擎模板（竖屏）：1080×2340（用户 2026-10-04：“竖屏的比例就是我当前横屏比例竖过来就行”，横屏是 2340×1080），30 fps。renderAt(t) 画出第 t 秒（同一个 t 永远是同一帧）。
+     从 Claude Code相关 引擎（claude-code-episode）改的：时间模型、素材抽帧、页面录屏、配音、混音都一样，只换了版式。
+     数据：timeline.js（build_timeline.py）、frames.js（prep_frames.py）、pages.js（capture_pages.py）。
+     两种版式（plan.json 顶层 "layout"）——2026-10-04 用户选定「版式 B + 边框 6」（样图见 D:\大疆\短视频\版式方案_20261004\）：
+       single（单框，新闻短条）            dual（两个横屏视频：长视频二次剪辑、对照；两框叠在一起，字幕在下）
+       0–250     留空：手机状态栏 + 抖音 / B 站顶上的标签栏会盖住（两种一样）
+       280–570   标题（整条视频一直在）：kicker 小字 + 两行大字（第一行黑 76 px ≤ 12 字，第二行橙 60 px ≤ 15 字），照 AI大圆镜 的做法（两种一样）
+       single：770–1339 视频框 1000×569（7 px 黑描边 + 橙色硬阴影，右上角黄色贴纸 = 当前场景的来源 credit），里面按 1474×829 的坐标写、整体缩放 0.6689
+               1498–1608 字幕（中文一行 52 px ≤ 约 17 字 + 英文一行 30 px ≤ 约 60 字符，居中，左右各留 ≥ 70 px）
+               1658 起   信息条：大数字卡 big()（紧凑版 205 px 高）或 GitHub 链接条 linkPill()（96 px 高），不要同时出现
+       dual：  680–1170 上框 860×490、1194–1684 下框 860×490（x 110–970，同一种边框，缩放 0.5739），字幕 1764–1876
+       间距：标题 → 视频框 200（dual 110）、视频框 → 字幕 160（dual 80）；背景印花 bg.png（assets/backgrounds，每条随机挑一张）
+       1950–2340 留空：抖音的账号名、文案、音乐条会盖住
+     右边 x ≥ 940、y 1170–1990 一带是抖音的点赞 / 评论按钮：长字幕、卡片别贴右边（视频框下半截会被按钮栏盖住一点，不放关键内容在右下角）。
+     没有悠一片头片尾（用户 2026-10-04：“短视频开头和结尾不要用开场和收尾的视频片段”），也没有左栏目录。 -->
+<link rel="stylesheet" href="file:///D:/大疆/AI科普/素材/字体/fonts.css">
+<style>
+:root { --bg:#FAF9F5; --ink:#141413; --ink2:#374151; --gray:#6B7280; --gray2:#9AA1AC; --line:#E5E7EB; --soft:#F4F5F7; --accent:#FF4F1A; --orange:#FF4F1A; --marker:#FFD84D; --green:#16A34A; --blue:#2563EB; --red:#E11D48; }
+* { box-sizing:border-box; margin:0; padding:0; }
+html, body { width:1080px; height:2340px; background:var(--bg); overflow:hidden; font-family:'Noto Sans SC', sans-serif; color:var(--ink); }
+body::before { content:''; position:absolute; inset:0; background:radial-gradient(circle at 1px 1px, rgba(20,20,19,.07) 1.4px, transparent 1.6px) 0 0 / 36px 36px; }
+/* 背景印花（bg.png，1080×2340 透明 PNG，透明度已烤进去）：每条从技能的 assets/backgrounds/ 随机挑一张；有印花就不画点阵 */
+body.hasbg { background:var(--bg) url('bg.png') 0 0 / 1080px 2340px no-repeat; }
+body.hasbg::before { display:none; }
+.abs { position:absolute; }
+.mark { background:linear-gradient(transparent 58%, var(--marker) 58%, var(--marker) 92%, transparent 92%); }
+
+/* 标题：两行，整条视频一直在 */
+#head { position:absolute; left:40px; right:40px; top:280px; height:290px; text-align:center; }
+#kicker { font:700 30px 'Noto Sans SC'; letter-spacing:.18em; color:var(--gray); white-space:nowrap; }
+#kicker b { color:var(--accent); font-weight:800; }
+#t1 { margin-top:22px; font:900 76px/1.22 'Noto Sans SC'; color:var(--ink); white-space:nowrap; }
+#t2 { margin-top:10px; font:800 60px/1.25 'Noto Sans SC'; color:var(--accent); white-space:nowrap; }
+#t2 span { background:linear-gradient(transparent 62%, var(--marker) 62%, var(--marker) 94%, transparent 94%); padding:0 6px; }
+
+/* 素材框：外框 1000×575，里面 1474×829 的坐标缩放 0.6594 */
+.frame { position:absolute; background:#141413; padding:0; border:7px solid #141413; border-radius:14px; box-shadow:14px 14px 0 var(--accent); }
+.frame::after { content:attr(data-tag); position:absolute; right:-8px; top:-40px; background:var(--marker); color:var(--ink); border:5px solid #141413; border-radius:10px; padding:0 16px; font:900 26px/38px 'Noto Sans SC'; transform:rotate(3deg); white-space:nowrap; z-index:6; }
+.frame[data-tag='']::after, .frame:not([data-tag])::after { display:none; }
+.frame .inner { position:relative; width:100%; height:100%; border-radius:4px; overflow:hidden; background:#111; }
+#demo { left:40px; top:770px; width:1000px; height:569px; }
+#demo2 { left:110px; top:1194px; width:860px; height:490px; display:none; }
+body.dual #demo { left:110px; top:680px; width:860px; height:490px; }
+body.dual #demo2 { display:block; }
+.demoin { position:absolute; left:0; top:0; width:1474px; height:829px; transform:scale(0.668928); transform-origin:0 0; }   /* 单框：(1000 − 2×7)/1474；dual：(860 − 14)/1474 */
+body.dual .demoin { transform:scale(0.573948); }
+.cardbg { position:absolute; inset:0; background:linear-gradient(160deg, #F6F7F9 0%, #E7EBF0 100%); }
+.scrimg { position:absolute; left:0; top:0; width:100%; height:100%; display:block; visibility:hidden; background:#000; }
+.ov { position:absolute; inset:0; }
+/* 素材框里的字：坐标按 1474 宽写、显示时缩到 0.66，所以字号是横屏版的 1.4 倍左右 */
+.credit { display:none !important; position:absolute; right:22px; top:20px; background:rgba(17,17,17,.86); color:#fff; font:700 36px 'Noto Sans SC'; padding:10px 26px; border-radius:16px; white-space:nowrap; z-index:5; }
+.tagpill { position:absolute; background:rgba(255,255,255,.95); color:var(--ink); font:800 44px/1.3 'Noto Sans SC'; padding:10px 28px; border-radius:16px; white-space:nowrap; box-shadow:0 8px 20px rgba(0,0,0,.28); z-index:5; border-left:10px solid var(--accent); }
+.tagpill small { display:block; font:600 32px/1.35 'Noto Sans SC'; color:var(--gray); }
+.bigpill { display:inline-block; background:rgba(17,17,17,.88); color:#fff; font:900 92px/1.2 'Noto Sans SC'; padding:12px 48px 16px; border-radius:26px; box-shadow:0 14px 34px rgba(0,0,0,.28); white-space:nowrap; }
+.bigpill em { font-style:normal; color:var(--marker); }
+.kbd { display:inline-block; min-width:70px; text-align:center; padding:2px 20px 4px; border:4px solid var(--ink); border-bottom-width:9px; border-radius:14px; background:#fff; font:800 48px 'JetBrains Mono','Noto Sans SC'; }
+.cmd { display:inline-block; padding:12px 30px; border-radius:16px; background:#16181D; color:#F3F4F6; font:600 52px/1.3 'JetBrains Mono','Noto Sans SC'; white-space:nowrap; box-shadow:0 10px 24px rgba(0,0,0,.22); }
+.cmd .p { color:#FDBA74; } .cmd .g { color:#86EFAC; } .cmd .d { color:#9CA3AF; } .cmd .b { color:#93C5FD; }
+.hl { position:absolute; border:8px solid var(--accent); border-radius:14px; box-shadow:0 0 0 9px rgba(255,79,26,.2); z-index:4; }
+.zhnote { position:absolute; background:rgba(255,255,255,.96); border-left:10px solid var(--accent); border-radius:14px; box-shadow:0 8px 22px rgba(0,0,0,.32); padding:10px 28px 12px 22px; z-index:5; font:800 46px/1.35 'Noto Sans SC'; color:var(--ink); }
+.zhnote small { display:block; font:600 32px/1.4 'Noto Sans SC'; color:var(--gray); margin-top:2px; }
+
+/* 整页坐标的叠加层（big() 大数字卡片等） */
+#ovP { position:absolute; left:0; top:0; width:1080px; height:2340px; z-index:20; pointer-events:none; }
+.bigcard { position:absolute; left:90px; width:900px; text-align:center; background:#fff; border:1px solid var(--line); border-top:8px solid var(--accent); border-radius:22px; box-shadow:0 16px 40px rgba(0,0,0,.12); padding:14px 30px 18px; }
+.bigcard .n { font:900 92px/1.05 'Space Grotesk','Noto Sans SC'; color:var(--accent); white-space:nowrap; }
+.bigcard .n small { font:800 42px 'Noto Sans SC'; color:var(--ink); margin-left:8px; }
+.bigcard .d { margin-top:4px; font:700 34px/1.4 'Noto Sans SC'; color:var(--ink2); }
+.linkpill { position:absolute; left:90px; width:900px; box-sizing:border-box; text-align:center; background:#16181D; color:#fff; border-radius:26px; padding:20px 24px 22px; font:700 42px/1.2 'JetBrains Mono','Noto Sans SC'; box-shadow:0 14px 34px rgba(0,0,0,.28); white-space:nowrap; }
+.linkpill i { font-style:normal; color:#9CA3AF; } .linkpill b { color:#FFD84D; font-weight:800; }
+
+/* 字幕：项目中英双语标准（中文一行 52 px + 英文一行 30 px，和横屏同字号），竖屏每行字数少一些，居中，y 1240 起 */
+#subs { position:absolute; left:0; top:1498px; width:1080px; height:112px; z-index:30; pointer-events:none; }
+body.dual #subs { top:1764px; }
+#subZh { position:absolute; left:0; right:0; top:0; text-align:center; font:800 52px/66px 'Noto Sans SC'; color:var(--ink); -webkit-text-stroke:10px var(--bg); paint-order:stroke fill; white-space:nowrap; }
+#subEn { position:absolute; left:0; right:0; top:70px; text-align:center; font:600 30px/40px 'Noto Sans SC'; color:#4B5563; -webkit-text-stroke:6px var(--bg); paint-order:stroke fill; white-space:nowrap; }
+#subZh .w { display:inline-block; font:800 .62em 'Noto Sans SC'; background:var(--accent); color:#fff; -webkit-text-stroke:0; padding:0 .45em; border-radius:.3em; margin-right:.5em; vertical-align:.12em; line-height:1.5; }
+/* ── 本条加的样式 ─────────────────────────────────────────────────────────────── */
+/* 贴纸（边框 6 的黄贴纸）：上框贴右上角、下框贴左上角；真元素：图标（SVG）+ 文字；内容由 engine.js 按场景的 ui.tag / ui.tag2 填 */
+.stk { position:absolute; top:-40px; display:none; align-items:center; gap:9px; background:var(--marker); color:var(--ink); border:5px solid #141413; border-radius:10px; padding:0 16px 0 10px; font:900 26px/38px 'Noto Sans SC'; white-space:nowrap; z-index:6; }
+.stk.r { right:-8px; transform:rotate(3deg); }
+.stk.l { left:-8px; transform:rotate(-3deg); }
+.stk svg { width:26px; height:26px; flex:none; display:block; }
+/* 来源小字：上框左上角外面（标题和框之间的空档，贴纸在右边），对比图面板的场景写 ui.credit（对比图是《Refactoring UI》的插图，经龙海的文章转载，每个画面都要标来源） */
+#credit { position:absolute; left:56px; top:722px; font:700 24px/30px 'Noto Sans SC'; color:var(--gray); letter-spacing:.03em; white-space:nowrap; z-index:6; }
+/* 照片镜头（作者照 / 文章配图 / X 横幅）：框里放一张图，缓慢推近 */
+.ph { position:absolute; max-width:none; display:block; will-change:transform; }
+</style>
+</head>
+<body>
+<div id="head"><div id="kicker"></div><div id="t1"></div><div id="t2"></div></div>
+<div class="frame" id="demo">
+  <div class="inner"><div class="demoin">
+    <div class="cardbg"></div>
+    <img class="scrimg" id="scrimg">
+    <div class="ov" id="ovB"></div>
+  </div></div>
+  <div class="stk r" id="stk1"></div>
+</div>
+<div class="frame" id="demo2">
+  <div class="inner"><div class="demoin">
+    <div class="cardbg"></div>
+    <img class="scrimg" id="scrimg2">
+    <div class="ov" id="ovB2"></div>
+  </div></div>
+  <div class="stk l" id="stk2"></div>
+</div>
+<div id="credit"></div>
+<div id="ovP"></div>
+<div id="subs"><div id="subZh"></div><div id="subEn"></div></div>
+<script src="timeline.js"></script>
+<script src="frames.js"></script>
+<script src="pages.js"></script>
+<script src="photos.js"></script>
+<script src="scenes.js"></script>
+<script src="engine.js"></script>
+</body>
+</html>

@@ -1,0 +1,201 @@
+{
+  "_说明": "交付包阶段先写 titles（3 个候选 × 4 个平台 = 3×4）和各平台默认项；用户回“封面 X 标题 Y 同意”后，把选中的那条标题写进各平台字段（bilibili.title / douyin.title / xiaohongshu.title / weixin_channels.short_title），approval 记下选择和时间。scripts/check_titles.py 按各平台要求核对字数：B 站标题 ≤ 80 / 抖音 ≤ 30（话题 ≤ 5）/ 小红书 ≤ 20 / 视频号短标题 6–16；放不下的完整标题放抖音描述、小红书正文、视频号描述的第一行。三个标题角度要真有区别（事实陈述 / 数字悬念 / 泼冷水），不和封面大字同一句。",
+  "slug": "AI工程师GPU指南",
+  "video": "独立视频/短视频/2026-10_AI工程师GPU指南/AI工程师GPU指南_成片.mp4（第 0 帧 = 封面 B，cover_frame0.py 已做，原片留 _成片_无封面帧.mp4；用户拖进各平台上传区；不压缩、不绕 10 MB）",
+  "duration_s": 87.3,
+  "approval": {
+    "status": "published",
+    "cover": "B",
+    "title": "user-specified",
+    "approved_at": "2026-10-06 09:1x（日本时间）",
+    "note": "用户 2026-10-06 回“同意发布”（之前：选封面 B、“视频号不发”、“好了”=拖好了）；我按 B 站 → 抖音 → 小红书顺序发，每个点之前读回核对；三个都显示审核中，B 站另用接口核对（tid 231、10 标签、两个比例封面）。抖音 09:33 回查已发布并补了链接；小红书审核中，链接审核通过后再补。"
+  },
+  "titles": [],
+  "covers": {
+    "3x4": "制作/04_封面/封面_选定_3x4.png",
+    "16x9": "制作/04_封面/封面_选定_16x9.png",
+    "4x3": "制作/04_封面/封面_选定_4x3.png"
+  },
+  "source": {
+    "original_post": "https://x.com/kmeanskaran/status/2105635344385450151",
+    "original_author": "Karan @kmeanskaran（X 长文《Everything an AI Engineer Needs to Know About GPUs》，2026-10-01）",
+    "project_or_site": "文章里的 9 张示意图（版权归原作者）；NVIDIA 官网 H200 页 https://www.nvidia.com/en-us/data-center/h200/；Hugging Face Inference Endpoints 价格页 https://huggingface.co/docs/inference-endpoints/pricing"
+  },
+  "bilibili": {
+    "title": "推特长文《AI 工程师需要知道的 GPU 知识》精选",
+    "desc": "转载 / 二次创作：整理自 X 用户 Karan（@kmeanskaran，自称 MLOps 工程师，做推理、写技术文章）2026-10-01 发的长文《Everything an AI Engineer Needs to Know About GPUs》，原文：https://x.com/kmeanskaran/status/2105635344385450151\n文中的示意图出自该长文，版权归原作者所有，本片仅作介绍和评论引用；H200 页面截图来自 NVIDIA 官网（https://www.nvidia.com/en-us/data-center/h200/），价格表截图来自 Hugging Face Inference Endpoints 价格页（https://huggingface.co/docs/inference-endpoints/pricing ，AWS 价目表，2026-10-05 读到，价格会变）。数字已对照 NVIDIA 产品页、OpenAI gpt-oss 模型卡、Hugging Face 模型页和价格页核对过。\n\n这是一条精选：原文共 8 节，本片只讲其中和“跑大模型要多少显存、能跑多快、怎么估算租卡”最相关的几个点——\n· 生成 token 的速度卡在显存带宽，不是算力：gpt-oss-120b、一张 H100、一个用户，算一个 token 约 0.01 毫秒，从显存搬约 5 GB 权重要约 1.5 毫秒（带宽 3.35 TB/s），等数据的时间约是算数的 145 倍，理论上限约 670 token/秒；\n· 所以 H200 比 H100 快在显存：算力同一档，显存 141 GB、4.8 TB/s（NVIDIA 官网）；\n· 训练和推理是两种活：训练每个参数约 18 字节，gpt-oss-120b 粗算约 2.1 TB，部署只要约 65 GB；\n· 量化：1170 亿参数 BF16 约 234 GB，4 位格式的权重约 65 GB，所以能塞进一张 80GB 的卡；\n· 怎么估算租卡：权重 ÷ 显存看装不装得下，每个 token 要读的权重 ÷ 带宽看能跑多快；按 Hugging Face 的 AWS 标价，一小时 2.5 美元的 A100 80GB 勉强装得下 gpt-oss-120b（只剩约 15 GB 放 KV 缓存），Kimi K3 的权重约 1.56 TB，8 张 H200（共 1128 GB，一小时 40 美元）也装不下。\n\n没讲的部分（想系统学请看原文）：GPU 分类（数据中心 / 工作站 / 个人）、SM / CUDA / Tensor Core 的结构、GPU 代际（Ampere / Hopper / Blackwell / Rubin）、多卡互联（NVLink / InfiniBand / MIG）、AMD / TPU / Groq 等其他芯片。\n\n几处要说明\n· 145 倍、0.01 毫秒、1.5 毫秒、670 token/秒都是作者按规格表算出的理论上限（单用户，没扣 KV 缓存和实际开销），作者自己写了没有实测过这些 GPU；\n· “每 token 约 5 GB”“训练约 2.1 TB”是作者的估算 / 粗算，不是官方数字；\n· Kimi K3 的 1.56 TB 是 Hugging Face 仓库里权重文件的大小（模型卡没写这个数）；\n· 价格是 2026-10-05 读到的标价，会变，别当市价。\n\n中英双语字幕；配音：温柔男生声线（AI 生成）；剪辑：Claude Code（Sonnet 5.5）。",
+    "declaration": "含AI生成内容",
+    "category": "人工智能（tid 231）",
+    "tags": [
+      "GPU",
+      "显存",
+      "AI工程师",
+      "大模型推理",
+      "英伟达",
+      "H100",
+      "H200",
+      "量化",
+      "MLOps",
+      "AI基础设施"
+    ],
+    "collection": null,
+    "repost_source": "转自 X：https://x.com/kmeanskaran/status/2105635344385450151（Karan @kmeanskaran，长文《Everything an AI Engineer Needs to Know About GPUs》，2026-10-01）",
+    "cover": "两个位各传各的（双比例同步改动不勾）：16:9 → 个人空间封面，4:3 → 首页推荐封面",
+    "published": {
+      "bvid": "BV1XyHd6KEJn",
+      "at": "2026-10-06 09:19（日本时间）",
+      "state": "投稿后立刻查：state −1 审核中；之后看开放浏览",
+      "tid": 231,
+      "tags": 10,
+      "cover": "cover 1920×1080 / cover43 1440×1080（两张不同的图）",
+      "title": "推特长文《AI 工程师需要知道的 GPU 知识》精选"
+    }
+  },
+  "douyin": {
+    "title": "推特长文《AI 工程师需要知道的 GPU 知识》精选",
+    "desc": "推特长文《AI 工程师需要知道的 GPU 知识》精选\n精选：只讲显存带宽决定生成速度、训练 vs 部署的显存、量化、怎么估算租卡；GPU 分类 / SM 和 CUDA 结构 / 代际 / 多卡互联 / 其他芯片没讲，见原文。\n整理自 X 用户 Karan（kmeanskaran）2026-10-01 的长文《Everything an AI Engineer Needs to Know About GPUs》；示意图版权归原作者，H200 页面来自 NVIDIA 官网，价格表来自 Hugging Face（AWS 标价，10 月 5 日读到，会变），仅作介绍和评论引用。145 倍、670 token/秒等数字是作者按规格表算的理论上限，作者自己说没实测。配音为 AI 生成（温柔男生声线）。",
+    "topics": [
+      "GPU",
+      "AI工程师",
+      "大模型推理",
+      "显存",
+      "英伟达"
+    ],
+    "declaration": "内容由AI生成",
+    "collection": null,
+    "cover": "竖封面 3:4 = 封面_选定_3x4.png；横封面 4:3 = 封面_选定_4x3.png",
+    "published": {
+      "at": "2026-10-06 09:19（日本时间，内容管理显示）",
+      "state": "审核中",
+      "duration": "01:27",
+      "topics": 5,
+      "title": "推特长文《AI 工程师需要知道的 GPU 知识》精选",
+      "link": null
+    }
+  },
+  "xiaohongshu": {
+    "title": "AI 工程师需要知道的 GPU 知识精选",
+    "desc": "推特长文《AI 工程师需要知道的 GPU 知识》精选\n\n· 生成速度卡在显存带宽：算一个 token 约 0.01 毫秒，搬约 5 GB 权重要约 1.5 毫秒（3.35 TB/s），等数据约是算数的 145 倍\n· H200：算力同 H100，显存 141 GB、4.8 TB/s\n· 训练 vs 部署：gpt-oss-120b 粗算训练约 2.1 TB，部署约 65 GB\n· 量化：BF16 约 234 GB → 4 位约 65 GB，一张 80GB 的卡就能放下\n· 租卡先做两次除法：权重 ÷ 显存、每个 token 要读的权重 ÷ 带宽；A100 80GB 一小时 2.5 美元勉强装得下，Kimi K3 权重约 1.56 TB，8 张 H200 也装不下\n精选：只讲显存带宽决定生成速度、训练 vs 部署的显存、量化、怎么估算租卡；GPU 分类 / SM 和 CUDA 结构 / 代际 / 多卡互联 / 其他芯片没讲，见原文。\n整理自 X 用户 Karan（kmeanskaran）2026-10-01 的长文《Everything an AI Engineer Needs to Know About GPUs》；示意图版权归原作者，H200 页面来自 NVIDIA 官网，价格表来自 Hugging Face（AWS 标价，10 月 5 日读到，会变），仅作介绍和评论引用。145 倍、670 token/秒等数字是作者按规格表算的理论上限，作者自己说没实测。配音为 AI 生成（温柔男生声线）。",
+    "topics": [
+      "GPU",
+      "显存",
+      "AI工程师",
+      "大模型推理",
+      "英伟达",
+      "H100",
+      "量化",
+      "MLOps",
+      "AI基础设施",
+      "租GPU"
+    ],
+    "declaration": "笔记含AI合成内容",
+    "cover": "3:4 = 封面_选定_3x4.png",
+    "published": {
+      "at": "2026-10-06 08:20（笔记管理显示的北京时间，= 09:20 日本时间）",
+      "state": "审核中",
+      "duration": "01:27",
+      "topics": 10,
+      "title": "AI 工程师需要知道的 GPU 知识精选",
+      "link": null
+    }
+  },
+  "weixin_channels": {
+    "short_title": "AI工程师需要知道的GPU知识",
+    "desc": "推特长文《AI 工程师需要知道的 GPU 知识》精选\n精选：只讲显存带宽决定生成速度、训练 vs 部署的显存、量化、怎么估算租卡；GPU 分类 / SM 和 CUDA 结构 / 代际 / 多卡互联 / 其他芯片没讲，见原文。\n整理自 X 用户 Karan（kmeanskaran）2026-10-01 的长文《Everything an AI Engineer Needs to Know About GPUs》；示意图版权归原作者，H200 页面来自 NVIDIA 官网，价格表来自 Hugging Face（AWS 标价，10 月 5 日读到，会变），仅作介绍和评论引用。145 倍、670 token/秒等数字是作者按规格表算的理论上限，作者自己说没实测。配音为 AI 生成（温柔男生声线）。",
+    "topics": [
+      "GPU",
+      "显存",
+      "AI工程师",
+      "大模型推理",
+      "英伟达",
+      "H100",
+      "量化",
+      "MLOps",
+      "AI基础设施",
+      "租GPU"
+    ],
+    "declaration": "视频标注：含AI生成内容",
+    "location": "不显示位置",
+    "collection": null,
+    "cover": "成片第 0 帧 = 选定的封面（cover_frame0.py）；编辑封面选第 0 帧，3:4 裁剪框对到画面 y 450–1890（居中）",
+    "published": "不发",
+    "skip": "用户 2026-10-06 回“视频号不发”：本条只发 B 站 / 抖音 / 小红书三个平台（我理解成针对这条；若他指的是强化学习那条的视频号，与本条无关）"
+  },
+  "published": {
+    "bilibili": {
+      "bvid": "BV1XyHd6KEJn",
+      "at": "2026-10-06 09:19（日本时间）",
+      "state": "09:19 投稿后查：state −1 审核中；几分钟后回查 state 0 开放浏览（时长 88 s）",
+      "tid": 231,
+      "tags": 10,
+      "cover": "cover 1920×1080 / cover43 1440×1080（两张不同的图）",
+      "title": "推特长文《AI 工程师需要知道的 GPU 知识》精选",
+      "link": "https://www.bilibili.com/video/BV1XyHd6KEJn"
+    },
+    "douyin": {
+      "at": "2026-10-06 09:19（日本时间，内容管理显示）",
+      "state": "已发布（审核通过；09:33 回查内容管理显示“已发布”，播放 1）",
+      "duration": "01:27",
+      "topics": 5,
+      "title": "推特长文《AI 工程师需要知道的 GPU 知识》精选",
+      "link": "https://www.douyin.com/video/7693342833876471040",
+      "aweme_id": "7693342833876471040"
+    },
+    "xiaohongshu": {
+      "at": "2026-10-06 08:20（笔记管理显示的北京时间，= 09:20 日本时间）",
+      "state": "审核中（09:34 日本时间回查仍在审核）",
+      "duration": "01:27",
+      "topics": 10,
+      "title": "AI 工程师需要知道的 GPU 知识精选",
+      "link": null,
+      "original_declaration": "关（发布时的状态；用户转告“小红书应选原创声明（开）”，待用户决定是否改线上笔记）"
+    },
+    "weixin_channels": "不发（用户 2026-10-06：“视频号不发”）"
+  },
+  "titles_rejected_20261005": [
+    {
+      "id": 1,
+      "angle": "事实陈述（主体 + 动作 + 数字）",
+      "recommend": true,
+      "bilibili": "H100 每生成一个 token，等数据的时间约是算数的 145 倍｜X 长文《AI 工程师需要知道的 GPU 知识》精选",
+      "douyin": "H100生成一个token，等数据的时间约是算数的145倍",
+      "xiaohongshu": "H100等数据，约是算数的145倍",
+      "weixin_channels": "H100等数据是算数145倍"
+    },
+    {
+      "id": 2,
+      "angle": "数字悬念",
+      "bilibili": "1170 亿参数的 gpt-oss-120b，一张 80GB 的 A100 勉强装得下？显存、带宽、量化、租价，一篇长文算清",
+      "douyin": "1170亿参数的模型，一张80GB的A100勉强装得下",
+      "xiaohongshu": "1170亿参数怎么塞进一张A100",
+      "weixin_channels": "1170亿参数 塞进一张卡"
+    },
+    {
+      "id": 3,
+      "angle": "泼冷水（作者自己说 / 但是 / 要说明的前提）",
+      "bilibili": "GPU 长文里的速度数字很硬，但作者自己说：没实测过，全是规格表算出来的（H100、H200、A100、Kimi K3）",
+      "douyin": "GPU长文数字很硬，但作者说速度是规格表算的，没实测",
+      "xiaohongshu": "GPU速度是算的，作者没实测",
+      "weixin_channels": "GPU速度 作者没实测"
+    }
+  ],
+  "title_decision": {
+    "by": "用户",
+    "at": "2026-10-05 21:5x",
+    "text": "推特长文《AI 工程师需要知道的 GPU 知识》精选",
+    "note": "用户：“推特长文《AI 工程师需要知道的 GPU 知识》精选 这个才是你应该设定的标题，封面文字修改为 AI 工程师需要知道的 GPU 知识”；B 站 / 抖音用原话，小红书 ≤ 20 去掉“推特长文《》”，视频号短标题 6–16 去掉空格和“精选”，完整标题放各平台描述 / 正文第一行。注意：标题和封面大字现在是同一句，这是用户明确要求的，覆盖技能里“标题不和封面同一句”的惯例。"
+  },
+  "platforms": [
+    "bilibili",
+    "douyin",
+    "xiaohongshu"
+  ],
+  "publish_prep": {
+    "at": "2026-10-06（用户回“好了”拖完成片后）",
+    "note": "B 站 / 抖音 / 小红书三页都已填完整并读回核对，**没点发布**，等用户说“发布 / 同意”；视频号按用户说的不发。我的标签组在共用窗口 3082854 里（B站 582106312 / 抖音 582106336 / 小红书 582106337，B站和小红书页标题带【GPU】标记）；点发布前再确认群组和标签。",
+    "bilibili": "标题 26/80、创作声明含AI生成内容、分区人工智能、标签 10 个（GPU 显存 AI工程师 大模型推理 英伟达 H100 H200 量化 MLOps AI基础设施）、简介 1507 字、封面 4:3 + 16:9 两个位都传了、不选合集、不定时",
+    "douyin": "标题 26/30、描述 + 5 个话题 chip（GPU AI工程师 大模型推理 显存 英伟达）、竖封面 3:4 + 横封面 4:3、封面检测通过、自主声明“内容由AI生成”、公开 / 允许保存 / 立即发布、不选位置和合集",
+    "xiaohongshu": "标题 20/20、正文 786 字含 10 个话题 chip、封面 3:4 评估通过、“笔记含AI合成内容”、原创声明关、不选合集 / 地点",
+    "weixin_channels": "不发（用户 2026-10-06：“视频号不发”）"
+  }
+}

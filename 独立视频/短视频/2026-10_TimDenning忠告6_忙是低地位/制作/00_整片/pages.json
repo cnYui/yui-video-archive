@@ -1,0 +1,257 @@
+{
+ "A_13": {
+  "src": "pages/A_13.png",
+  "w": 1536,
+  "h": 487,
+  "url": "https://timdenning.substack.com/p/im-38-if-youre-in-your-20s-or-30s",
+  "bg": "#171717",
+  "marks": {
+   "Avoid being busy": [
+    [
+     187,
+     50,
+     711,
+     106
+    ]
+   ]
+  }
+ },
+ "A_13p": {
+  "src": "pages/A_13p.png",
+  "w": 1008,
+  "h": 283,
+  "url": "https://timdenning.substack.com/p/im-38-if-youre-in-your-20s-or-30s",
+  "bg": "#171717",
+  "marks": {
+   "Eliminate calendar events as quickly": [
+    [
+     559,
+     155,
+     341,
+     62
+    ],
+    [
+     38,
+     220,
+     305,
+     62
+    ]
+   ]
+  }
+ },
+ "A_13q": {
+  "src": "pages/A_13q.png",
+  "w": 1008,
+  "h": 154,
+  "url": "https://timdenning.substack.com/p/im-38-if-youre-in-your-20s-or-30s",
+  "bg": "#171717",
+  "marks": {
+   "It means your life is out of control and you have no focus": [
+    [
+     398,
+     24,
+     473,
+     62
+    ],
+    [
+     38,
+     89,
+     537,
+     62
+    ]
+   ]
+  }
+ },
+ "A_14": {
+  "src": "pages/A_14.png",
+  "w": 1536,
+  "h": 763,
+  "url": "https://timdenning.substack.com/p/im-38-if-youre-in-your-20s-or-30s",
+  "bg": "#171717",
+  "marks": {
+   "Keanu Reeves are bizarrely quiet": [
+    [
+     512,
+     145,
+     717,
+     106
+    ],
+    [
+     38,
+     240,
+     592,
+     106
+    ]
+   ],
+   "conversations where you don't talk at all": [
+    [
+     569,
+     506,
+     724,
+     62
+    ]
+   ]
+  }
+ },
+ "A_19": {
+  "src": "pages/A_19.png",
+  "w": 1536,
+  "h": 859,
+  "url": "https://timdenning.substack.com/p/im-38-if-youre-in-your-20s-or-30s",
+  "bg": "#171717",
+  "marks": {
+   "Keeping your dopamine addiction under control": [
+    [
+     187,
+     45,
+     985,
+     106
+    ],
+    [
+     38,
+     140,
+     971,
+     106
+    ]
+   ],
+   "TikTok, Netflix, video games, and anything with an easy payoff": [
+    [
+     1234,
+     660,
+     143,
+     62
+    ],
+    [
+     38,
+     726,
+     979,
+     62
+    ]
+   ]
+  }
+ },
+ "A_21": {
+  "src": "pages/A_21.png",
+  "w": 1008,
+  "h": 552,
+  "url": "https://timdenning.substack.com/p/im-38-if-youre-in-your-20s-or-30s",
+  "bg": "#171717",
+  "marks": {
+   "Turn off news and politics to naturally increase your IQ": [
+    [
+     186,
+     193,
+     691,
+     62
+    ],
+    [
+     125,
+     259,
+     298,
+     62
+    ]
+   ]
+  }
+ },
+ "A_28": {
+  "src": "pages/A_28.png",
+  "w": 1008,
+  "h": 228,
+  "url": "https://timdenning.substack.com/p/im-38-if-youre-in-your-20s-or-30s",
+  "bg": "#171717",
+  "marks": {
+   "Video games are fine when you're younger": [
+    [
+     186,
+     19,
+     762,
+     62
+    ]
+   ]
+  }
+ },
+ "A_31": {
+  "src": "pages/A_31.png",
+  "w": 1536,
+  "h": 571,
+  "url": "https://timdenning.substack.com/p/im-38-if-youre-in-your-20s-or-30s",
+  "bg": "#171717",
+  "marks": {
+   "Flow states are more important than productivity": [
+    [
+     187,
+     45,
+     1294,
+     106
+    ],
+    [
+     38,
+     140,
+     710,
+     106
+    ]
+   ],
+   "Feeling like 8 hours happened in 1 hour will feel better": [
+    [
+     606,
+     293,
+     866,
+     62
+    ],
+    [
+     38,
+     358,
+     106,
+     62
+    ]
+   ]
+  }
+ },
+ "P_bio": {
+  "src": "pages/P_bio.png",
+  "w": 1536,
+  "h": 1680,
+  "url": "https://substack.com/@timdenning",
+  "bg": "#171717",
+  "marks": {
+   "Aussie writer with 1B+ views that made me $6M+": [
+    [
+     125,
+     355,
+     857,
+     46
+    ]
+   ],
+   "Quit my banking job in 2021": [
+    [
+     1001,
+     355,
+     396,
+     46
+    ],
+    [
+     125,
+     403,
+     84,
+     46
+    ]
+   ],
+   "Aussie writer with 1B+ views": [
+    [
+     125,
+     355,
+     490,
+     46
+    ]
+   ],
+   "238K+ subscribers": [
+    [
+     125,
+     624,
+     318,
+     46
+    ]
+   ]
+  }
+ }
+}

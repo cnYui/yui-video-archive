@@ -1,0 +1,79 @@
+1
+00:00:00,000 --> 00:00:02,028
+How does a vendor app control a device?
+
+2
+00:00:02,048 --> 00:00:04,725
+Follow the evidence back.
+
+3
+00:00:04,745 --> 00:00:06,424
+It is REA,
+
+4
+00:00:06,444 --> 00:00:09,328
+Reverse Engineer Anything,
+
+5
+00:00:09,348 --> 00:00:10,793
+released under the MIT license.
+
+6
+00:00:10,813 --> 00:00:12,684
+As of today,
+
+7
+00:00:12,704 --> 00:00:15,709
+it has about 218 thousand GitHub stars.
+
+8
+00:00:15,729 --> 00:00:19,003
+It connects to an agent, then inspects web apps,
+
+9
+00:00:19,023 --> 00:00:21,940
+binaries, and runtime behavior.
+
+10
+00:00:21,960 --> 00:00:26,109
+ADB can find and pull APKs; network traffic
+
+11
+00:00:26,129 --> 00:00:30,663
+can come from HAR or mitmproxy captures.
+
+12
+00:00:30,683 --> 00:00:34,180
+Firmware can go through Binwalk and Unblob,
+
+13
+00:00:34,200 --> 00:00:37,244
+then selected native files into Ghidra.
+
+14
+00:00:37,264 --> 00:00:40,295
+Evidence and limitations return to Claude Code
+
+15
+00:00:40,315 --> 00:00:43,747
+or Codex before the agent reconstructs a feature.
+
+16
+00:00:43,767 --> 00:00:47,003
+You may build your own controller
+
+17
+00:00:47,023 --> 00:00:48,956
+for an AC, heater,
+
+18
+00:00:48,976 --> 00:00:52,178
+or light—but protocol and access decide.
+
+19
+00:00:52,198 --> 00:00:54,093
+The vendor app is only an entry point;
+
+20
+00:00:54,113 --> 00:00:57,985
+the device's real rules can finally be seen.

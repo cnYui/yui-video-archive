@@ -1,0 +1,109 @@
+1
+00:00:00,000 --> 00:00:01,650
+屏幕那头的她，是 AI。
+The woman on the other end of this call is an AI.
+
+2
+00:00:01,670 --> 00:00:04,579
+官方实验：54 个人视频聊一分钟，
+In the company's own study, 54 people video-chatted
+
+3
+00:00:04,599 --> 00:00:06,930
+26 个人以为对面是真人。
+for a minute, and 26 thought they'd talked to a real person.
+
+4
+00:00:06,950 --> 00:00:09,880
+上一代系统，41 个人里只有 1 个。
+The previous system: just 1 out of 41.
+
+5
+00:00:09,900 --> 00:00:11,248
+这是 Tavus 十月一号
+This is Griffin,
+
+6
+00:00:11,268 --> 00:00:13,200
+发的新模型，叫 Griffin。
+a new model Tavus released on October 1.
+
+7
+00:00:13,220 --> 00:00:14,555
+官方说，它是第一个
+Tavus says it's the first
+
+8
+00:00:14,575 --> 00:00:16,530
+通过视频图灵测试的。
+to pass the video Turing test.
+
+9
+00:00:16,550 --> 00:00:18,099
+怎么做到的？Griffin
+How? Griffin listens,
+
+10
+00:00:18,119 --> 00:00:20,039
+一边听、一边看、一边说，
+watches and speaks at once,
+
+11
+00:00:20,059 --> 00:00:22,460
+不到一秒就重新判断一次。
+re-deciding every fraction of a second.
+
+12
+00:00:22,480 --> 00:00:24,460
+Vanessa：哎，那个穿丑毛衣的是谁？
+Oh. Who's that with the ugly sweater?
+
+13
+00:00:24,480 --> 00:00:25,883
+但实验是 Tavus 自己
+But Tavus ran the study itself,
+
+14
+00:00:25,903 --> 00:00:27,410
+做的，只有 54 人。
+with just 54 people.
+
+15
+00:00:27,430 --> 00:00:29,663
+他们事先被告知对面是真人，
+They were told their partner was a real person,
+
+16
+00:00:29,683 --> 00:00:31,970
+页面也没提真人对照组。
+and the page mentions no human control group.
+
+17
+00:00:31,990 --> 00:00:33,406
+NVIDIA 榜单上，
+On NVIDIA's leaderboard,
+
+18
+00:00:33,426 --> 00:00:36,870
+AI 评审给它 3.83 分，真人是 3.92。
+an AI judge gave it 3.83. The human reference scores 3.92.
+
+19
+00:00:36,890 --> 00:00:38,508
+不过只是研究预览版，
+But it's only a research preview
+
+20
+00:00:38,528 --> 00:00:41,310
+少数测试者才能用，没有发布日期。
+for a few testers, with no release date.
+
+21
+00:00:41,330 --> 00:00:42,426
+官方自己都说：
+Tavus itself says:
+
+22
+00:00:42,446 --> 00:00:44,750
+逼真是本事，也是风险。
+being this lifelike is both a strength and a risk.

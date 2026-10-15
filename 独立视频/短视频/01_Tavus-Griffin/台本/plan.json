@@ -1,0 +1,34 @@
+{
+  "_说明": "双分镜（dual）：上框 = @tavus 官方演示视频（Hassaan × Vanessa 视频通话）的镜头，下框 = 官网原页的录屏（pageShot {lower:true}，在 制作/00_整片/scenes.js 里，图来自 make_pages.py）。画面全部静音（贴纸 credit = 边框右上角的黄贴纸，≤ 16 字，2026-10-04 新版式 B + 边框 6），只有 S3 里 Vanessa 说“穿丑毛衣”那一句留原声（压低，曼波同传）；S6 结尾回到 Vanessa（和开头首尾呼应），最后 0.8 s 定格。crop 三种：V = 视频通话的内框（去掉四周的抖动纹理和烧进去的英文字幕，Vanessa 那段）、D = 同一种内框（毛衣 / 笔记本那段，边界略不同）、C = 取上 90%（去掉画面下沿烧进去的英文字幕）。",
+  "layout": "dual",
+  "plan": [
+    {"id": "S1", "type": "clip", "kind": "demo", "overlay": "clip", "name": "钩子：Vanessa + 实验数字", "credit": "@tavus · X（官方）",
+     "ranges": [{"src": "gr", "in": 39.4, "out": 49.4, "mute": true, "crop": [0.103125, 0.059259, 0.894792, 0.850926]}],
+     "lines": [{"id": "N01", "a": 0.0}, {"id": "N02", "a": 0.0}, {"id": "N03", "a": 0.0}]},
+
+    {"id": "S2", "type": "clip", "kind": "demo", "overlay": "clip", "name": "背书：Tavus、10 月 1 日、第一个通过视频图灵测试", "credit": "@tavus · X（官方）",
+     "ranges": [{"src": "gr", "in": 37.05, "out": 38.5, "mute": true, "crop": [0.05, 0.0, 0.95, 0.9]},
+                {"src": "gr", "in": 83.2, "out": 86.0, "mute": true, "crop": [0.05, 0.0, 0.95, 0.9]},
+                {"src": "gr", "in": 86.0, "out": 88.4, "mute": true, "crop": [0.05, 0.0, 0.95, 0.9]}],
+     "lines": [{"id": "N04", "a": 0.0}, {"id": "N05", "a": 0.0}]},
+
+    {"id": "S3", "type": "clip", "kind": "demo", "overlay": "clip", "name": "怎么做到的：一边听一边看一边说 + Vanessa 看到了毛衣", "credit": "@tavus · X（官方）",
+     "ranges": [{"src": "gr", "in": 31.05, "out": 36.5, "mute": true, "crop": [0.05, 0.0, 0.95, 0.9]},
+                {"src": "gr", "in": 51.42, "out": 53.5, "crop": [0.104167, 0.061111, 0.894792, 0.851852]},
+                {"src": "gr", "in": 53.5, "out": 53.9, "mute": true, "crop": [0.104167, 0.061111, 0.894792, 0.851852]}],
+     "lines": [{"id": "N06", "a": 0.0}, {"id": "N07", "a": 5.93}]},
+
+    {"id": "S4", "type": "clip", "kind": "demo", "overlay": "clip", "name": "泼冷水：自己做的、54 人、事先被告知", "credit": "@tavus · X（官方）",
+     "ranges": [{"src": "gr", "in": 74.4, "out": 81.9, "mute": true, "crop": [0.05, 0.0, 0.95, 0.9]}],
+     "lines": [{"id": "N08", "a": 0.0}, {"id": "N09", "a": 0.0}]},
+
+    {"id": "S5", "type": "clip", "kind": "demo", "overlay": "clip", "name": "加码：NVIDIA 榜单", "credit": "@tavus · X（官方）",
+     "ranges": [{"src": "gr", "in": 62.1, "out": 67.0, "mute": true, "crop": [0.104167, 0.061111, 0.894792, 0.851852]}],
+     "lines": [{"id": "N10", "a": 0.0}]},
+
+    {"id": "S6", "type": "clip", "kind": "demo", "overlay": "clip", "name": "收尾：研究预览版 + 逼真是风险", "credit": "@tavus · X（官方）",
+     "ranges": [{"src": "gr", "in": 94.55, "out": 99.0, "mute": true, "crop": [0.05, 0.0, 0.95, 0.9]},
+                {"src": "gr", "in": 47.2, "out": 50.4, "mute": true, "crop": [0.103125, 0.059259, 0.894792, 0.850926]}],
+     "lines": [{"id": "N11", "a": 0.0}, {"id": "N12", "a": 0.0}]}
+  ]
+}

@@ -1,0 +1,166 @@
+{
+  "_说明": "交付包阶段先写 titles（3 个候选 × 4 个平台 = 3×4）和各平台默认项；用户回“封面 X 标题 Y 同意”后，把选中的那条标题写进各平台字段（bilibili.title / douyin.title / xiaohongshu.title / weixin_channels.short_title），approval 记下选择和时间。scripts/check_titles.py 按各平台要求核对字数：B 站标题 ≤ 80 / 抖音 ≤ 30（话题 ≤ 5）/ 小红书 ≤ 20 / 视频号短标题 6–16；放不下的完整标题放抖音描述、小红书正文、视频号描述的第一行。三个标题角度要真有区别（事实陈述 / 数字悬念 / 泼冷水），不和封面大字同一句。",
+  "slug": "MuseGadgets开源",
+  "video": "D:\\大疆\\独立视频\\短视频\\2026-10_MuseGadgets开源\\MuseGadgets开源_成片.mp4（用户拖进各平台上传区；不压缩、不绕 10 MB）",
+  "duration_s": 76.43,
+  "approval": {
+    "status": "approved",
+    "cover": "A",
+    "title": 1,
+    "approved_at": "2026-10-05 11:58（日本时间）",
+    "note": "用户回“封面 A 标题 1 同意，并行发布”；成片第 0 帧已换成封面 A（cover_frame0.py，原片留 _成片_无封面帧.mp4）；并行 = 开我自己的新标签，不碰别的会话的草稿"
+  },
+  "titles": [
+    {
+      "id": 1,
+      "angle": "事实陈述（主体 + 动作 + 数字）",
+      "recommend": true,
+      "bilibili": "Meta 开源 Muse Gadgets：ESP32 固件 + Linux SDK，两天 1000+ 星；官方 Home Link 送 5000 台（仅限美国）",
+      "douyin": "Meta开源Muse外设，GitHub两天1000+星",
+      "xiaohongshu": "Meta开源Muse外设两天1000+星",
+      "weixin_channels": "Meta开源Muse外设"
+    },
+    {
+      "id": 2,
+      "angle": "数字悬念",
+      "bilibili": "两天 1000+ 星：Meta 把给 Muse 做外设的固件和 SDK 开源了，官方还要送 5000 台 Home Link（仅限美国）",
+      "douyin": "两天1000+星！Meta把Muse外设固件开源了",
+      "xiaohongshu": "两天1000+星的Meta开源项目",
+      "weixin_channels": "两天1000+星"
+    },
+    {
+      "id": 3,
+      "angle": "泼冷水（官方说 / 但是 / 要说明的）",
+      "bilibili": "Meta 开源 Muse 外设：代码是 Apache 2.0，但 token 条款限个人非商用、最多 50 台，Home Link 还仅限美国",
+      "douyin": "Meta开源Muse外设？token限个人非商用",
+      "xiaohongshu": "Meta开源Muse：有条件的开源",
+      "weixin_channels": "开源了，但有条件"
+    }
+  ],
+  "covers": {
+    "3x4": "制作/04_封面/封面_选定_3x4.png",
+    "16x9": "制作/04_封面/封面_选定_16x9.png",
+    "4x3": "制作/04_封面/封面_选定_4x3.png"
+  },
+  "source": {
+    "original_post": "https://x.com/natfriedman/status/2106099383037309211 ；https://x.com/alexandr_wang/status/2106113742266089526 ；https://x.com/alexandr_wang/status/2106113745282015730 ；开场动画 https://x.com/AYi_AInotes/status/2106239579938238880",
+    "original_author": "@natfriedman、@alexandr_wang（官宣）；@AYi_AInotes（开场动画，非 Meta 官方）",
+    "project_or_site": "https://gadgets.muse.ai/ ；https://github.com/facebookincubator/muse-gadget-sdk（Apache-2.0）；token 条款 https://gadgets.muse.ai/sdk-terms"
+  },
+  "bilibili": {
+    "title": "Meta 开源 Muse Gadgets：ESP32 固件 + Linux SDK，两天 1000+ 星；官方 Home Link 送 5000 台（仅限美国）",
+    "desc": "Meta 开源了给个人智能体 Muse 做外设的固件和 SDK（Muse Gadgets）。\n来源：@natfriedman、@alexandr_wang 在 X 上的官宣（美国时间 10 月 2 日）；官网 gadgets.muse.ai；GitHub facebookincubator/muse-gadget-sdk（Apache-2.0）。开场动画来自 @AYi_AInotes 的 X 帖，非 Meta 官方。\n• 美国时间 10 月 2 日，Meta 超级智能实验室的 Nat Friedman、Alexandr Wang 先后在 X 上官宣。\n• 开源的是 ESP32 固件和 Linux SDK，代码 Apache 2.0；GitHub 仓库 2026-10-02 18:21 UTC 建，10 月 5 日（日本时间）一千一百多颗星。\n• 官网 Project Ideas 列了 8 个示例项目（7 个是第三方开发板，Meta 不背书；电视 HDMI 棒“即将推出”）。\n• Muse Home Link：官方做的 USB-C 小设备，内部 ESP32-C5；做了一批 5000 个，Muse 订阅用户免费领；官网写明仅限美国、每人一个、先到先得、十月发货（领取是排队占位，不是下单）。\n• 要说明：Apache 2.0 只管代码；连接 Muse 用的 token 另有条款（gadgets.muse.ai/sdk-terms）：仅限个人非商用、最多 50 台设备、不能出售或公开上架，Meta 可随时暂停或收回，并称这不是受支持的产品。Muse 目前只在部分地区可用。\n• 片尾那句“开源的是手脚，大脑还在 Meta 的云上”是编辑的总结，不是官方说法；依据是官网 Connection 示意图把云端标成 Muse VM、设备要用 token 配对。\n画面：官网 gadgets.muse.ai 录屏 / 截图、GitHub 仓库页、X 推文截图。版权归 Meta 及原作者。配音为 AI 生成（Fish Audio「温柔男生」），BGM 为系列背景音乐。",
+    "declaration": "含AI生成内容",
+    "category": "人工智能（tid 231）",
+    "tags": [
+      "Meta",
+      "Muse",
+      "开源",
+      "ESP32",
+      "树莓派",
+      "GitHub",
+      "人工智能",
+      "AI",
+      "智能体",
+      "AI硬件"
+    ],
+    "collection": null,
+    "repost_source": "",
+    "cover": "两个位各传各的（双比例同步改动不勾）：16:9 → 个人空间封面，4:3 → 首页推荐封面",
+    "published": null
+  },
+  "douyin": {
+    "title": "Meta开源Muse外设，GitHub两天1000+星",
+    "desc": "Meta 开源 Muse Gadgets：ESP32 固件 + Linux SDK，两天 1000+ 星；官方 Home Link 送 5000 台（仅限美国）\n来源：X 上 Nat Friedman（natfriedman）、Alexandr Wang（alexandr_wang）的官宣（美国时间 10 月 2 日）；官网 gadgets.muse.ai；GitHub facebookincubator/muse-gadget-sdk（Apache-2.0）。开场动画来自 AYi_AInotes 的 X 帖，非 Meta 官方。\n要说明：Apache 2.0 只管代码；连接 Muse 的 token 另有条款：仅限个人非商用、最多 50 台设备、不能出售，Meta 可随时收回。Home Link 官网写明仅限美国，Muse 目前只在部分地区可用。\n片尾那句“开源的是手脚，大脑还在 Meta 的云上”是编辑的总结，不是官方说法。\n配音为 AI 生成（Fish Audio「温柔男生」），BGM 为系列背景音乐；画面来自官网录屏 / 截图、GitHub、X 推文，版权归 Meta 及原作者。\n#Meta #Muse #开源 #AI硬件 #ESP32",
+    "topics": [
+      "Meta",
+      "Muse",
+      "开源",
+      "AI硬件",
+      "ESP32"
+    ],
+    "declaration": "内容由AI生成",
+    "collection": null,
+    "cover": "竖封面 3:4 = 封面_选定_3x4.png；横封面 4:3 = 封面_选定_4x3.png",
+    "published": null
+  },
+  "xiaohongshu": {
+    "title": "Meta开源Muse外设两天1000+星",
+    "desc": "Meta 开源 Muse Gadgets：ESP32 固件 + Linux SDK，两天 1000+ 星；官方 Home Link 送 5000 台（仅限美国）\n来源：X 上 Nat Friedman（natfriedman）、Alexandr Wang（alexandr_wang）的官宣（美国时间 10 月 2 日）；官网 gadgets.muse.ai；GitHub facebookincubator/muse-gadget-sdk（Apache-2.0）。开场动画来自 AYi_AInotes 的 X 帖，非 Meta 官方。\n• 开源的是 ESP32 固件和 Linux SDK，代码 Apache 2.0；GitHub 仓库 10 月 2 日（UTC）建，10 月 5 日一千一百多颗星。\n• Muse Home Link：官方做的 USB-C 小设备，一批 5000 个，Muse 订阅用户免费领；官网写明仅限美国、每人一个、先到先得。\n• 要说明：Apache 2.0 只管代码；连接 Muse 的 token 另有条款：仅限个人非商用、最多 50 台设备、不能出售，Meta 可随时收回。Muse 目前只在部分地区可用。\n• 片尾那句“开源的是手脚，大脑还在 Meta 的云上”是编辑的总结，不是官方说法。\n配音为 AI 生成（Fish Audio「温柔男生」），BGM 为系列背景音乐；画面来自官网录屏 / 截图、GitHub、X 推文，版权归 Meta 及原作者。\n#Meta #Muse #开源 #AI硬件 #ESP32 #树莓派 #GitHub #智能体 #AI #人工智能",
+    "topics": [
+      "Meta",
+      "Muse",
+      "开源",
+      "AI硬件",
+      "ESP32",
+      "树莓派",
+      "GitHub",
+      "智能体",
+      "AI",
+      "人工智能"
+    ],
+    "declaration": "笔记含AI合成内容",
+    "cover": "3:4 = 封面_选定_3x4.png",
+    "published": null
+  },
+  "weixin_channels": {
+    "short_title": "Meta开源Muse外设",
+    "desc": "Meta 开源 Muse Gadgets：ESP32 固件 + Linux SDK，两天 1000+ 星；官方 Home Link 送 5000 台（仅限美国）\n来源：X 上 Nat Friedman（natfriedman）、Alexandr Wang（alexandr_wang）的官宣（美国时间 10 月 2 日）；官网 gadgets.muse.ai；GitHub facebookincubator/muse-gadget-sdk（Apache-2.0）。开场动画来自 AYi_AInotes 的 X 帖，非 Meta 官方。\n要说明：Apache 2.0 只管代码；连接 Muse 的 token 另有条款：仅限个人非商用、最多 50 台设备、不能出售，Meta 可随时收回。Home Link 官网写明仅限美国，Muse 目前只在部分地区可用。\n片尾那句“开源的是手脚，大脑还在 Meta 的云上”是编辑的总结，不是官方说法。\n配音为 AI 生成（Fish Audio「温柔男生」），BGM 为系列背景音乐；画面来自官网录屏 / 截图、GitHub、X 推文，版权归 Meta 及原作者。\n#Meta #Muse #开源 #AI硬件 #ESP32 #树莓派 #GitHub #智能体 #AI #人工智能",
+    "topics": [
+      "Meta",
+      "Muse",
+      "开源",
+      "AI硬件",
+      "ESP32",
+      "树莓派",
+      "GitHub",
+      "智能体",
+      "AI",
+      "人工智能"
+    ],
+    "declaration": "视频标注：含AI生成内容",
+    "location": "不显示位置",
+    "collection": null,
+    "cover": "成片第 0 帧 = 选定的封面（cover_frame0.py）；编辑封面选第 0 帧，3:4 裁剪框对到画面 y 450–1890（居中）",
+    "published": null
+  },
+  "published": {
+    "date": "2026-10-05（日本时间）",
+    "order": "视频号 12:14 → 抖音 12:18 → 小红书 12:23（页面按北京时间显示 11:23）→ B 站 12:29",
+    "approval": "用户 11:58：封面 A 标题 1 同意，并行发布；12:06 拖好成片",
+    "checked_at": "15:0x（日本时间）线上核对",
+    "uploaded_file": "MuseGadgets开源_成片.mp4（第 0 帧 = 封面 A，21,327,682 字节；不是 _无封面帧 那个）",
+    "bilibili": {
+      "bvid": "BV1fQHp6HEjt",
+      "state": "开放浏览（state 0；12:29 投稿时 -1 审核中）",
+      "tid": 231,
+      "tags": 10,
+      "cover_vs_cover43": "cover 1920x1080 = 16:9 版，cover43 1440x1080 = 4:3 版，两张不同，下载下来看过都对（封面弹窗里 4:3 位第一次被 16:9 图占了，点 4:3 位重传后才对）",
+      "video": "1080x2340, 77 s",
+      "declaration": "含AI生成内容",
+      "collection": null
+    },
+    "douyin": {
+      "state": "内容管理“已发布”，12:18，封面缩略图 = 封面 A，01:16",
+      "declaration": "内容由AI生成",
+      "covers": "竖 3:4 + 横 4:3 都传了，封面检测通过",
+      "topics": "Meta / Muse / 开源 / AI硬件 / ESP32（5 个，都是话题 chip）"
+    },
+    "xiaohongshu": {
+      "state": "笔记管理里有这条（2026-10-05 11:23，01:16，封面 A 缩略图），不在“审核中”过滤里",
+      "declaration": "笔记含AI合成内容",
+      "original_declaration": "关",
+      "topics": "10 个：Meta / Muse / 开源 / AI硬件 / ESP32 / 树莓派 / GitHub平台（没有现成 #GitHub 话题，换成它）/ 智能体 / ai（没有现成 #AI，换成小写 ai）/ 人工智能"
+    },
+    "weixin_channels": {
+      "state": "视频管理第一条，12:14，封面缩略图 = 封面 A",
+      "short_title": "Meta开源Muse外设",
+      "location": "不显示位置",
+      "annotation": "含AI生成内容",
+      "cover": "第 0 帧 = 封面 A，编辑封面里 3:4 裁剪框默认就是整张封面，没改"
+    },
+    "desc_note": "抖音 / 小红书 / 视频号简介里把 @ 换成纯文字名字（编辑器里 @ 会弹“提到好友”框）；B 站简介保留 @",
+    "links": "只记了 B 站 BV；抖音 / 小红书 / 视频号的作品链接没取"
+  },
+  "desc_draft": "Meta 开源了给个人智能体 Muse 做外设的固件和 SDK（Muse Gadgets）。\n• 美国时间 10 月 2 日，Meta 超级智能实验室的 Nat Friedman、Alexandr Wang 先后在 X 上官宣。\n• 开源的是 ESP32 固件和 Linux SDK，代码 Apache 2.0；GitHub 仓库 2026-10-02 18:21 UTC 建，10 月 5 日（日本时间）一千一百多颗星。\n• 官网 Project Ideas 列了 8 个示例项目（7 个是第三方开发板，Meta 不背书；电视 HDMI 棒“即将推出”）。\n• Muse Home Link：官方做的 USB-C 小设备，内部 ESP32-C5；做了一批 5000 个，Muse 订阅用户免费领；官网写明仅限美国、每人一个、先到先得、十月发货（领取是排队占位，不是下单）。\n• 要说明：Apache 2.0 只管代码；连接 Muse 用的 token 另有条款（gadgets.muse.ai/sdk-terms）：仅限个人非商用、最多 50 台设备、不能出售或公开上架，Meta 可随时暂停或收回，并称这不是受支持的产品。Muse 目前只在部分地区可用。\n• 片尾那句“开源的是手脚，大脑还在 Meta 的云上”是编辑的总结，不是官方说法；依据是官网 Connection 示意图把云端标成 Muse VM、设备要用 token 配对。\n画面来源：官网 gadgets.muse.ai 录屏 / 截图、GitHub 仓库页、X 推文截图（@natfriedman、@alexandr_wang）；开场动画来自 @AYi_AInotes 的 X 帖（非 Meta 官方）。版权归 Meta 及原作者。配音为 AI 生成（Fish Audio「温柔男生」），BGM 为系列背景音乐。"
+}

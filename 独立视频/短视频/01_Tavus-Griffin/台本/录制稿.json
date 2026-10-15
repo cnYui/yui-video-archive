@@ -1,0 +1,20 @@
+{
+  "slug": "Tavus-Griffin短视频",
+  "title": "Tavus Griffin：屏幕那头的她是 AI（长视频二次剪辑，约 50 秒）",
+  "kicker": "悠一 · <b>Tavus</b> 新模型",
+  "hook": ["屏幕那头的她是 AI", "官方实验：48% 以为是真人"],
+  "lines": [
+    {"id": "N01", "zh": "屏幕那头的她，是 AI。", "say": "屏幕那头的她，是 AI。", "en": "The woman on the other end of this call is an AI."},
+    {"id": "N02", "zh": "官方实验：54 个人视频聊一分钟，26 个人以为对面是真人。", "say": "官方实验：五十四个人视频聊一分钟，二十六个人以为对面是真人。", "en": "In the company's own study, 54 people video-chatted for a minute, and 26 thought they'd talked to a real person."},
+    {"id": "N03", "zh": "上一代系统，41 个人里只有 1 个。", "say": "上一代系统，四十一个人里只有一个。", "en": "The previous system: just 1 out of 41."},
+    {"id": "N04", "zh": "这是 Tavus 十月一号发的新模型，叫 Griffin。", "say": "这是塔维斯十月一号发的新模型，叫格里芬。", "en": "This is Griffin, a new model Tavus released on October 1."},
+    {"id": "N05", "zh": "官方说，它是第一个通过视频图灵测试的。", "say": "官方说，它是第一个通过视频图灵测试的。", "en": "Tavus says it's the first to pass the video Turing test."},
+    {"id": "N06", "zh": "怎么做到的？Griffin 一边听、一边看、一边说，不到一秒就重新判断一次。", "say": "怎么做到的？格里芬一边听、一边看、一边说，不到一秒就重新判断一次。", "en": "How? Griffin listens, watches and speaks at once, re-deciding every fraction of a second."},
+    {"id": "N07", "zh": "哎，那个穿丑毛衣的是谁？", "say": "哎，那个穿丑毛衣的是谁？", "who": "Vanessa", "en": "Oh. Who's that with the ugly sweater?"},
+    {"id": "N08", "zh": "但实验是 Tavus 自己做的，只有 54 人。", "say": "但实验是塔维斯自己做的，只有五十四人。", "en": "But Tavus ran the study itself, with just 54 people."},
+    {"id": "N09", "zh": "他们事先被告知对面是真人，页面也没提真人对照组。", "say": "他们事先被告知对面是真人，页面也没提真人对照组。", "en": "They were told their partner was a real person, and the page mentions no human control group."},
+    {"id": "N10", "zh": "NVIDIA 榜单上，AI 评审给它 3.83 分，真人是 3.92。", "say": "英伟达榜单上，AI 评审给它三点八三分，真人是三点九二。", "en": "On NVIDIA's leaderboard, an AI judge gave it 3.83. The human reference scores 3.92."},
+    {"id": "N11", "zh": "不过只是研究预览版，少数测试者才能用，没有发布日期。", "say": "不过只是研究预览版，少数测试者才能用，没有发布日期。", "en": "But it's only a research preview for a few testers, with no release date."},
+    {"id": "N12", "zh": "官方自己都说：逼真是本事，也是风险。", "say": "官方自己都说：逼真是本事，也是风险。", "en": "Tavus itself says: being this lifelike is both a strength and a risk."}
+  ]
+}
