@@ -1,0 +1,98 @@
+{
+  "number": 5,
+  "title": "论文AIGC检测到底在测什么",
+  "dir_name": "第05期_论文AIGC检测到底在测什么",
+  "presenter": {
+    "id": "whale",
+    "name": "鲸鱼娘",
+    "frames": "角色/大肥鱼像素素材包/素材/动作帧",
+    "voice_id": "80b7c246b1634e708479b46e50de5983",
+    "voice_page": "https://fish.audio/zh-CN/m/80b7c246b1634e708479b46e50de5983/",
+    "voice_app": "https://fish.audio/app/text-to-speech/?modelId=80b7c246b1634e708479b46e50de5983",
+    "voice_name": "悠一（用户克隆的声音）"
+  },
+  "canvas": [
+    2340,
+    1080
+  ],
+  "bg_color": "#FFFFFF",
+  "layout": "center",
+  "style": "board",
+  "voice_source": "tts",
+  "target_minutes": [
+    5,
+    7
+  ],
+  "question_scene": "S02",
+  "questions": [
+    {
+      "text": "AI率是什么",
+      "scenes": [
+        "S03"
+      ]
+    },
+    {
+      "text": "检测在测什么",
+      "scenes": [
+        "S04"
+      ]
+    },
+    {
+      "text": "被判高怎么办",
+      "scenes": [
+        "S05"
+      ]
+    }
+  ],
+  "chapters": {
+    "S01": "开场",
+    "S02": "五个问题",
+    "S03": "AI率是什么",
+    "S04": "检测测什么",
+    "S05": "被判高怎么办",
+    "S06": "总结"
+  },
+  "backgrounds": {},
+  "bg_alpha": 0.22,
+  "bg_blur": 10,
+  "terms": [
+    "AI率",
+    "AIGC",
+    "黑盒",
+    "仅供参考"
+  ],
+  "auto_gestures": true,
+  "intro_tagline": "",
+  "outro_items": [
+    {
+      "label": "配音",
+      "value": "悠一"
+    },
+    {
+      "label": "资料",
+      "value": "大河报 · IT时报 · 知网协议 · 科技日报 · Patterns（截至 2026-09-30）"
+    },
+    {
+      "label": "制作",
+      "value": "Opus 5.5"
+    }
+  ],
+  "outro_closing": "感谢大家看到最后",
+  "_说明": [
+    "presenter：本期讲解员（new_episode.py --presenter ryo|whale 写入，预设在 scripts/epcommon.py PRESENTERS）。name = 开场自称（“大家好，我是{name}”），frames = 角色帧目录（相对 素材/），voice_page / voice_app / voice_name = Fish Audio 音色；换讲解员就把整段换成另一个预设。帧还没画完时，出草稿可以临时把 frames 指到已有的帧目录",
+    "canvas：视频画面尺寸 [宽, 高]，默认 [2340, 1080]（19.5:9，2026-09-27 起每期都用）；没有这一项 = 1920×1080（第 1 期）。scenes.js 仍按 1920×1080 的内容舞台写坐标（舞台在画布里水平居中）；徽标、目录、角色、字幕、进度条、背景由引擎铺满画布。封面不受影响，照旧 16:9 + 4:3。改了要重跑 build_timeline",
+    "bg_color：视频背景色，默认 \"#FFFFFF\"（2026-09-28 用户：以后默认白底）= 纯色背景、视频里不用背景图；浅色时引擎自动换浅色主题（深色章节标题 / 徽标 / 进度条文字，卡片阴影减轻，右上目录保留深色底板，字幕不变）。删掉这一项 = 深藏青底 + backgrounds 的章节背景图（第 1、2 期）。封面：白板版（style board）也是白底、手写标题，make_cover.py 自动选；卡片版照旧在 封面/cover.json 选背景图。改了要重跑 build_timeline",
+    "layout：\"center\" = 内容以画面中线居中（舞台 x 960 = 画布中线，和字幕同一条线；章节标题收起后停在顶部正中）；右上目录、左下讲解员不动。删掉这一项 = 旧版面（内容区 x 440–1860，中线 1150，第 1–4 期）。改了要重跑 build_timeline",
+    "style：\"board\" = 白板手写版（2026-09-28 用户：原LAI如此也用手写白板，字提前一秒出现，字幕也同步放大）：标题、要点、结论边说边手写，画面比声音早 board_lead 秒（默认 1），字幕 56 px 黑字白边，右上目录白卡片。删掉这一项 = 印刷体卡片版（第 1–4 期）。改了要重跑 build_timeline 和 sync_assets（它生成手写笔画 handdata.js）",
+    "voice_source：\"user\" = 用户自己配音（2026-09-28 用户：原LAI如此配音之后需要我来配音）：record_script.py 出录音稿，用户录好后 import_voice.py 导入，segment_audio.py 切句（能跳过重读的句子）；\"tts\" = Fish Audio 合成（用户点名要时才用，AI 配音现在只用于《AI每日日报》）",
+    "questions：右上角「本期目录」，如 {\"text\": \"Token 是什么\", \"scenes\": [\"S03\"]}，scenes 是讲这一题的章节",
+    "chapters：进度条章节名，如 {\"S01\": \"开场\", \"S02\": \"三个疑问\"}（没写的用场景 title）",
+    "backgrounds：每章一张 素材/背景图库 里的文件名，如 {\"S01\": \"01_放学路上_树影.jpg\"}；没写的章节按图库顺序轮换。有 bg_color 时视频不用它，可以空着",
+    "terms：字幕里要标橙色的术语（引擎已内置 API、API Key、Token、JSON、HTTP 等），如 [\"Token\", \"上下文窗口\"]",
+    "outro_items / outro_closing：片尾制作清单和感谢语，必须问用户，不许用默认值（assemble.py 为空会报错）",
+    "auto_gestures：角色自动层（说话时小手势、句末点头、看向内容），true 开 / false 关；嫌多写成 {\"gesture\": 0.6}（手势密度倍率），或 {\"nod\": false} / {\"look\": false} 关掉某个通道",
+    "sprites_extra（可选）：新动作帧还没追加进本期讲解员的帧目录（presenter.frames）时出样片用，例如 \"_skilltest/actions_v2/frames_preview\"（相对 SERIES，必须是同一个讲解员的帧）；用户确认、帧追加进帧目录以后删掉",
+    "这个 _说明 字段可以删掉，脚本不读它"
+  ],
+  "_voice_note": "2026-09-30 晚用户：“我已经克隆了我的声音，你直接用这个生成音频即可，然后对着音频，微调视频，让文字比声音的内容提前一秒出现”。配音改用 Fish Audio 网页版 + 用户克隆的「悠一」声音（S1），voice_source 从 user 改成 tts；讲解员形象仍是鲸鱼娘（presenter.id/frames 不变）。"
+}
