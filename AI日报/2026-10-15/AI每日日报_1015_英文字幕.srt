@@ -1,0 +1,487 @@
+1
+00:00:00,000 --> 00:00:02,013
+Good morning, I'm Whale Girl.
+
+2
+00:00:02,033 --> 00:00:04,051
+Today is October 15.
+
+3
+00:00:04,071 --> 00:00:05,204
+Five stories today:
+
+4
+00:00:05,224 --> 00:00:07,546
+Anthropic opens in Singapore,
+
+5
+00:00:07,566 --> 00:00:10,382
+Google builds on-device scam detection, Google Earth AI
+
+6
+00:00:10,402 --> 00:00:11,906
+upgrades its geospatial agent,
+
+7
+00:00:11,926 --> 00:00:13,790
+and Apple studies tri-modal diffusion
+
+8
+00:00:13,810 --> 00:00:15,715
+and code-switching detection.
+
+9
+00:00:15,735 --> 00:00:18,595
+First, Anthropic announced on October 14 that it opened
+
+10
+00:00:18,615 --> 00:00:20,331
+an office in Singapore,
+
+11
+00:00:20,351 --> 00:00:23,141
+its fifth office in the Asia-Pacific region.
+
+12
+00:00:23,161 --> 00:00:25,660
+At the same time, Anthropic and Singapore's
+
+13
+00:00:25,680 --> 00:00:26,972
+Ministry of Digital Development and Information
+
+14
+00:00:26,992 --> 00:00:28,662
+signed a memorandum.
+
+15
+00:00:28,682 --> 00:00:31,045
+The cooperation covers AI safety,
+
+16
+00:00:31,065 --> 00:00:33,118
+security and model evaluation.
+
+17
+00:00:33,138 --> 00:00:35,373
+They also plan technical exchanges
+
+18
+00:00:35,393 --> 00:00:37,834
+on testing standards and incident response,
+
+19
+00:00:37,854 --> 00:00:40,084
+and sharing research and data.
+
+20
+00:00:40,104 --> 00:00:42,374
+Anthropic also says it will explore
+
+21
+00:00:42,394 --> 00:00:44,264
+ways to help small businesses and public officers
+
+22
+00:00:44,284 --> 00:00:46,515
+adopt AI responsibly.
+
+23
+00:00:46,535 --> 00:00:47,740
+Anthropic says Singapore,
+
+24
+00:00:47,760 --> 00:00:49,181
+on Claude usage
+
+25
+00:00:49,201 --> 00:00:51,176
+relative to population,
+
+26
+00:00:51,196 --> 00:00:54,056
+ranks second among 121 countries,
+
+27
+00:00:54,076 --> 00:00:56,056
+nearly six times its expected level.
+
+28
+00:00:56,076 --> 00:00:58,530
+Anthropic also says Singapore's GovTech already has
+
+29
+00:00:58,550 --> 00:01:00,671
+more than 1500 engineers and technical staff
+
+30
+00:01:00,691 --> 00:01:02,567
+using Claude Code.
+
+31
+00:01:02,587 --> 00:01:04,536
+Those usage figures come from Anthropic's
+
+32
+00:01:04,556 --> 00:01:05,368
+own announcement,
+
+33
+00:01:05,388 --> 00:01:07,798
+not an independent evaluation.
+
+34
+00:01:07,998 --> 00:01:10,053
+Second, Google DeepMind and Singapore's
+
+35
+00:01:10,073 --> 00:01:11,969
+GovTech built an on-device model
+
+36
+00:01:11,989 --> 00:01:15,489
+for detecting scam conversations.
+
+37
+00:01:15,509 --> 00:01:17,307
+Google says scams make up more than half
+
+38
+00:01:17,327 --> 00:01:19,125
+of Singapore's reported crimes,
+
+39
+00:01:19,145 --> 00:01:21,781
+with losses since 2019 topping
+
+40
+00:01:21,801 --> 00:01:24,175
+4 billion Singapore dollars.
+
+41
+00:01:24,195 --> 00:01:26,151
+They fine-tuned a lightweight Gemma model
+
+42
+00:01:26,171 --> 00:01:27,751
+on local scam conversations,
+
+43
+00:01:27,771 --> 00:01:29,606
+including impersonation of public institutions,
+
+44
+00:01:29,626 --> 00:01:32,123
+banks and local figures.
+
+45
+00:01:32,143 --> 00:01:34,589
+The model analyzes conversation patterns on the phone
+
+46
+00:01:34,609 --> 00:01:36,940
+and gives a real-time warning on the device
+
+47
+00:01:36,960 --> 00:01:39,969
+when it detects possible manipulation.
+
+48
+00:01:39,989 --> 00:01:43,619
+Google and the Singapore Government cannot read the chats;
+
+49
+00:01:43,639 --> 00:01:45,615
+the model works only with user consent
+
+50
+00:01:45,635 --> 00:01:48,459
+and the application's terms allowing access.
+
+51
+00:01:48,479 --> 00:01:50,640
+The system uses two stages:
+
+52
+00:01:50,660 --> 00:01:52,425
+a small context check first,
+
+53
+00:01:52,445 --> 00:01:54,427
+followed by the fine-tuned Gemma model
+
+54
+00:01:54,447 --> 00:01:56,656
+examining a larger conversation snapshot.
+
+55
+00:01:56,676 --> 00:02:00,062
+The post says rollout in the app will be phased,
+
+56
+00:02:00,082 --> 00:02:02,212
+and notes that battery use needs special attention
+
+57
+00:02:02,232 --> 00:02:04,345
+when running a classifier on a phone.
+
+58
+00:02:04,545 --> 00:02:07,062
+Third, Google Research published
+
+59
+00:02:07,082 --> 00:02:08,701
+a technical report
+
+60
+00:02:08,721 --> 00:02:12,361
+on an upgraded geospatial reasoning agent.
+
+61
+00:02:12,381 --> 00:02:14,825
+It connects Gemini to WeatherNext, flood forecasting,
+
+62
+00:02:14,845 --> 00:02:16,377
+population dynamics,
+
+63
+00:02:16,397 --> 00:02:17,030
+satellite remote sensing
+
+64
+00:02:17,050 --> 00:02:19,997
+and Google Earth Engine tools.
+
+65
+00:02:20,017 --> 00:02:23,059
+After a question, the agent plans a multi-step workflow,
+
+66
+00:02:23,079 --> 00:02:24,973
+selects datasets and models,
+
+67
+00:02:24,993 --> 00:02:28,459
+and processes large map data in a separate workspace.
+
+68
+00:02:28,479 --> 00:02:30,515
+The work adds two benchmarks,
+
+69
+00:02:30,535 --> 00:02:33,454
+GeoKTools and GeoExpertQueries,
+
+70
+00:02:33,474 --> 00:02:35,605
+and compares four agent configurations.
+
+71
+00:02:35,625 --> 00:02:36,825
+Google is also expanding
+
+72
+00:02:36,845 --> 00:02:40,014
+Ask Google Earth experimental deep analysis
+
+73
+00:02:40,034 --> 00:02:42,831
+and early access to the Agent-to-Agent API.
+
+74
+00:02:42,851 --> 00:02:44,685
+In partner testing,
+
+75
+00:02:44,705 --> 00:02:47,402
+one organization analyzed 14 historical cyclone
+
+76
+00:02:47,422 --> 00:02:51,052
+paths in minutes instead of days of manual screening.
+
+77
+00:02:51,072 --> 00:02:52,796
+Google explicitly warns
+
+78
+00:02:52,816 --> 00:02:55,412
+that some scores come from an autorater,
+
+79
+00:02:55,432 --> 00:02:57,610
+so the output is a strong first draft
+
+80
+00:02:57,630 --> 00:02:59,579
+rather than a final answer.
+
+81
+00:02:59,779 --> 00:03:01,991
+Fourth, Apple's research team
+
+82
+00:03:02,011 --> 00:03:04,670
+presented a tri-modal masked diffusion
+
+83
+00:03:04,690 --> 00:03:07,424
+model trained on text, image-text
+
+84
+00:03:07,444 --> 00:03:09,677
+and audio-text data.
+
+85
+00:03:09,697 --> 00:03:11,304
+The paper says
+
+86
+00:03:11,324 --> 00:03:13,292
+this is the first tri-modal
+
+87
+00:03:13,312 --> 00:03:15,302
+Masked Diffusion Model pretrained from scratch.
+
+88
+00:03:15,322 --> 00:03:18,542
+The authors systematically analyze multimodal scaling laws,
+
+89
+00:03:18,562 --> 00:03:23,022
+modality mixing ratios, noise schedules and batch size.
+
+90
+00:03:23,042 --> 00:03:24,092
+They also propose
+
+91
+00:03:24,112 --> 00:03:26,233
+a stochastic-differential-equation reparameterization
+
+92
+00:03:26,253 --> 00:03:30,003
+that decouples physical and logical batch size.
+
+93
+00:03:30,023 --> 00:03:32,496
+The preliminary unified model has 3B parameters
+
+94
+00:03:32,516 --> 00:03:34,669
+and uses 6.4 trillion tokens,
+
+95
+00:03:34,689 --> 00:03:35,866
+with results in text generation,
+
+96
+00:03:35,886 --> 00:03:39,507
+text-to-image and text-to-speech tasks.
+
+97
+00:03:39,527 --> 00:03:41,898
+This is an open research study and systematic analysis,
+
+98
+00:03:41,918 --> 00:03:44,164
+not a product model that Apple
+
+99
+00:03:44,184 --> 00:03:46,128
+has released for direct use.
+
+100
+00:03:46,328 --> 00:03:48,761
+Fifth, Apple proposed
+
+101
+00:03:48,781 --> 00:03:51,828
+a lightweight way
+
+102
+00:03:51,848 --> 00:03:55,528
+to detect code-switching directly from speech.
+
+103
+00:03:55,548 --> 00:03:56,977
+Code-switching means alternating
+
+104
+00:03:56,997 --> 00:03:58,749
+between two languages in one utterance,
+
+105
+00:03:58,769 --> 00:04:01,071
+common in multilingual conversations.
+
+106
+00:04:01,091 --> 00:04:03,750
+The method finds language-selective hidden
+
+107
+00:04:03,770 --> 00:04:06,237
+dimensions in a pretrained speech encoder
+
+108
+00:04:06,257 --> 00:04:08,967
+and aggregates frame-level activations into a prediction.
+
+109
+00:04:08,987 --> 00:04:11,397
+Across CS-FLEURS's
+
+110
+00:04:11,417 --> 00:04:12,983
+14 language pairs,
+
+111
+00:04:13,003 --> 00:04:14,607
+the Whisper-small
+
+112
+00:04:14,627 --> 00:04:17,653
+encoder reached a mean F1 of 0.798.
+
+113
+00:04:17,673 --> 00:04:20,814
+That is higher than 0.776 for a CNN
+
+114
+00:04:20,834 --> 00:04:24,524
+and 0.751 for a HuBERT linear baseline.
+
+115
+00:04:24,544 --> 00:04:27,455
+The idea is to help data teams find code-switching
+
+116
+00:04:27,475 --> 00:04:29,470
+audio in large speech collections
+
+117
+00:04:29,490 --> 00:04:31,938
+and build more representative multilingual training data.
+
+118
+00:04:31,958 --> 00:04:34,404
+The paper presents a data-selection tool,
+
+119
+00:04:34,424 --> 00:04:35,911
+not a complete speech assistant
+
+120
+00:04:35,931 --> 00:04:38,364
+that has solved code-switching recognition.
+
+121
+00:04:38,564 --> 00:04:41,543
+That's all for today. Sources are in the description.
+
+122
+00:04:41,563 --> 00:04:42,842
+See you tomorrow.

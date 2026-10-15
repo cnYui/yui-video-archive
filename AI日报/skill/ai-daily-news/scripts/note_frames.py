@@ -35,7 +35,10 @@ def make_frames(ep, a):
     times = []
     for sc, it in zip([x for x in J["scenes"] if x["kind"] == "news"], a["items"]):
         f = it["frame"]
-        if len(f["pts"]) != len(sc["pts"]) or len(sc.get("bigs", [])) != 1:
+        if not sc.get("bigs"):      # 视频里这条没有数字卡（vbigs 空）：在场景中段造一张，只给配图用
+            mid = (sc["s"] + sc["e"]) / 2
+            sc["bigs"] = [dict(n="", small="", d="", s=mid - 2.0, e=mid + 2.0)]
+        if len(f["pts"]) != len(sc["pts"]) or len(sc.get("bigs", [])) < 1:
             sys.exit(f"第 {sc['idx']} 条：要点数（{len(f['pts'])}）和数字卡数要和视频一致（{len(sc['pts'])} / {len(sc.get('bigs', []))}）")
         sc["kicker"] = f"{kicker} · <b>{dd}</b> · 第 <b>{sc['idx']}</b> / {len(news)} 本"
         sc["t1"], sc["t2"], sc["tag"] = f["t1"], f["t2"], f.get("tag", "")

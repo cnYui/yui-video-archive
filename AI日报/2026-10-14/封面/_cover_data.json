@@ -1,0 +1,45 @@
+{
+  "line1": "Gemini 4 Argon",
+  "line2": "11月底要涨价？",
+  "l1px": 168,
+  "l2px": 236,
+  "maxw": 1320,
+  "safe": [
+    300,
+    1620
+  ],
+  "textCx": 900,
+  "scale": 9,
+  "frame": [
+    64,
+    64
+  ],
+  "footRow": 62,
+  "fishX": 1074,
+  "foot": 1062,
+  "tag": "",
+  "theme": {
+    "bg": "#FFFFFF",
+    "lead": "#8A93AD",
+    "accent": "#4A88DA",
+    "list": "#4D5670",
+    "more": "#9AA2B8"
+  },
+  "_theme": "blue",
+  "_pose": "pose_huh",
+  "_eyes": "",
+  "_fx": "",
+  "_qmark": false,
+  "_place": "right",
+  "others": [
+    "Claude 防蒸馏加固",
+    "小模型自我复制",
+    "X 订阅合并 Grok",
+    "RTX Spark 笔记本"
+  ],
+  "othersHead": "今天还有 4 条",
+  "othersMore": "",
+  "listX": 300,
+  "listW": 740,
+  "listBottom": 1000
+}

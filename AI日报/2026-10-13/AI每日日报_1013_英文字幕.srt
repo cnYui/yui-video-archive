@@ -1,0 +1,607 @@
+1
+00:00:00,000 --> 00:00:02,393
+Good morning, I'm Whale Girl.
+
+2
+00:00:02,413 --> 00:00:04,750
+Today is October 13.
+
+3
+00:00:04,770 --> 00:00:06,053
+Six stories today:
+
+4
+00:00:06,073 --> 00:00:08,236
+Meta releases its first frontier model,
+
+5
+00:00:08,256 --> 00:00:12,293
+GPT-6.1 Sol's default context grows to 500k,
+
+6
+00:00:12,313 --> 00:00:15,176
+Microsoft unveils the Maia 300 chip,
+
+7
+00:00:15,196 --> 00:00:17,676
+AlphaProof Nexus lands in Science,
+
+8
+00:00:17,696 --> 00:00:19,562
+clearing chat history
+
+9
+00:00:19,582 --> 00:00:22,156
+helps agents find better ideas,
+
+10
+00:00:22,176 --> 00:00:24,212
+and Qwen's QwenGyre arrives.
+
+11
+00:00:24,232 --> 00:00:25,990
+First, Meta has released
+
+12
+00:00:26,010 --> 00:00:27,768
+its first frontier model,
+
+13
+00:00:27,788 --> 00:00:29,556
+called Muse Wonder.
+
+14
+00:00:29,576 --> 00:00:30,692
+There are two versions:
+
+15
+00:00:30,712 --> 00:00:33,877
+Muse Wonder and Muse Wonder Full.
+
+16
+00:00:33,897 --> 00:00:35,717
+Both models support a 1 million
+
+17
+00:00:35,737 --> 00:00:37,223
+token context
+
+18
+00:00:37,243 --> 00:00:41,473
+and accept text, images, video and audio.
+
+19
+00:00:41,493 --> 00:00:43,976
+Muse Wonder is available through Meta's API,
+
+20
+00:00:43,996 --> 00:00:45,558
+per million tokens,
+
+21
+00:00:45,578 --> 00:00:48,174
+at $4 for input and $20 for output.
+
+22
+00:00:48,194 --> 00:00:50,765
+The Full version is for Muse Code subscribers only,
+
+23
+00:00:50,785 --> 00:00:53,742
+not served through the API, and has no public price.
+
+24
+00:00:53,762 --> 00:00:54,828
+According to Meta's blog,
+
+25
+00:00:54,848 --> 00:00:57,268
+the models were trained in central Ohio,
+
+26
+00:00:57,288 --> 00:00:59,570
+at the Prometheus data center.
+
+27
+00:00:59,590 --> 00:01:00,846
+Meta's own tests say
+
+28
+00:01:00,866 --> 00:01:02,706
+both models and Fable 5.1 and
+
+29
+00:01:02,726 --> 00:01:06,266
+GPT-6 Astra have comparable benchmark scores.
+
+30
+00:01:06,286 --> 00:01:10,033
+On the third-party Artificial Analysis
+
+31
+00:01:10,053 --> 00:01:13,020
+Intelligence Index, the Full version scores 56,
+
+32
+00:01:13,040 --> 00:01:16,697
+versus 48 for the previous Muse Spark 1.3.
+
+33
+00:01:16,717 --> 00:01:19,263
+But on the AA-Omniscience knowledge test,
+
+34
+00:01:19,283 --> 00:01:21,220
+the Full version scores only 30,
+
+35
+00:01:21,240 --> 00:01:24,353
+while Claude Opus 5.5 scores 46.
+
+36
+00:01:24,373 --> 00:01:25,418
+Muse Wonder will
+
+37
+00:01:25,438 --> 00:01:27,634
+also come to Meta's Muse app,
+
+38
+00:01:27,654 --> 00:01:29,991
+starting with paid subscribers.
+
+39
+00:01:30,011 --> 00:01:31,385
+The cost per task
+
+40
+00:01:31,405 --> 00:01:33,229
+is also about three times the previous generation's.
+
+41
+00:01:33,249 --> 00:01:34,700
+TechCrunch notes
+
+42
+00:01:34,720 --> 00:01:38,090
+that Meta's comparisons come from its own model card.
+
+43
+00:01:38,290 --> 00:01:40,142
+Second, OpenAI has raised
+
+44
+00:01:40,162 --> 00:01:44,106
+the default context length of GPT-6.1 Sol
+
+45
+00:01:44,126 --> 00:01:48,034
+from 272k to 500k, about 80% more.
+
+46
+00:01:48,054 --> 00:01:49,364
+The change applies in the Codex
+
+47
+00:01:49,384 --> 00:01:51,220
+and Work environments.
+
+48
+00:01:51,240 --> 00:01:53,789
+IT Home says, when using subscription quota,
+
+49
+00:01:53,809 --> 00:01:57,003
+Sol carries no extra long-context fee.
+
+50
+00:01:57,023 --> 00:01:59,554
+OpenAI's Thibault Sottiaux says,
+
+51
+00:01:59,574 --> 00:02:01,894
+the value is well tested,
+
+52
+00:02:01,914 --> 00:02:03,774
+for most users,
+
+53
+00:02:03,794 --> 00:02:06,477
+it is the best balance between experience and performance.
+
+54
+00:02:06,497 --> 00:02:09,434
+Sol supports a maximum context of 1M,
+
+55
+00:02:09,454 --> 00:02:12,308
+and users can raise or lower it themselves.
+
+56
+00:02:12,328 --> 00:02:13,972
+Adjusting it can reduce how often context
+
+57
+00:02:13,992 --> 00:02:15,584
+compression is triggered.
+
+58
+00:02:15,604 --> 00:02:19,355
+OpenAI also says it will keep raising the limit.
+
+59
+00:02:19,375 --> 00:02:21,781
+The article does not mention specific pricing.
+
+60
+00:02:21,981 --> 00:02:23,956
+Third, Microsoft unveils
+
+61
+00:02:23,976 --> 00:02:27,160
+its in-house AI chip, Maia 300.
+
+62
+00:02:27,180 --> 00:02:29,479
+Maia 200 already powers,
+
+63
+00:02:29,499 --> 00:02:31,096
+in the US, Europe and Australia,
+
+64
+00:02:31,116 --> 00:02:33,546
+Microsoft Copilot.
+
+65
+00:02:33,566 --> 00:02:37,022
+Each chip has 288GB of HBM4 memory,
+
+66
+00:02:37,042 --> 00:02:41,332
+18TB/s of bandwidth and a rated power of 950 watts.
+
+67
+00:02:41,352 --> 00:02:43,273
+One rack can hold 96 chips.
+
+68
+00:02:43,293 --> 00:02:46,257
+Microsoft says, per-megawatt token output,
+
+69
+00:02:46,277 --> 00:02:49,205
+is 40% higher than leading GPU systems.
+
+70
+00:02:49,225 --> 00:02:51,578
+A 96-chip rack, token output,
+
+71
+00:02:51,598 --> 00:02:54,070
+is up to 7 times a Maia 200 rack's.
+
+72
+00:02:54,090 --> 00:02:56,966
+But the article doesn't say which GPU or how it was tested,
+
+73
+00:02:56,986 --> 00:03:00,142
+and gives no benchmarks or pricing.
+
+74
+00:03:00,162 --> 00:03:02,288
+Maia 300 targets
+
+75
+00:03:02,308 --> 00:03:05,426
+long inputs, fast conversations and agent tasks.
+
+76
+00:03:05,446 --> 00:03:07,427
+Starting in 2027, Microsoft plans
+
+77
+00:03:07,447 --> 00:03:09,367
+multi-gigawatt deployment.
+
+78
+00:03:09,387 --> 00:03:13,095
+More details will come at the Ignite conference in November.
+
+79
+00:03:13,295 --> 00:03:15,318
+Fourth, Google DeepMind's
+
+80
+00:03:15,338 --> 00:03:16,766
+AlphaProof Nexus has
+
+81
+00:03:16,786 --> 00:03:19,402
+had its results published in Science.
+
+82
+00:03:19,422 --> 00:03:20,981
+It uses Gemini 3.1 Pro
+
+83
+00:03:21,001 --> 00:03:22,618
+to draft proofs in the Lean formal language,
+
+84
+00:03:22,638 --> 00:03:24,859
+Lean checks every revision,
+
+85
+00:03:24,879 --> 00:03:27,195
+and its errors guide the next round.
+
+86
+00:03:27,215 --> 00:03:28,572
+Harder subproblems
+
+87
+00:03:28,592 --> 00:03:32,145
+call the dedicated proof tool AlphaProof.
+
+88
+00:03:32,165 --> 00:03:34,976
+Of 353 unsolved Erdos problems,
+
+89
+00:03:34,996 --> 00:03:36,528
+it solved nine,
+
+90
+00:03:36,548 --> 00:03:39,106
+two of which had been open for 56 years.
+
+91
+00:03:39,126 --> 00:03:41,382
+According to the paper, without AlphaProof's help,
+
+92
+00:03:41,402 --> 00:03:43,896
+the system also solved these nine problems.
+
+93
+00:03:43,916 --> 00:03:45,527
+Before the paper was published,
+
+94
+00:03:45,547 --> 00:03:47,908
+the team had already posted the solutions online.
+
+95
+00:03:47,928 --> 00:03:49,954
+It also proved 44 conjectures,
+
+96
+00:03:49,974 --> 00:03:51,649
+from the OEIS sequence database,
+
+97
+00:03:51,669 --> 00:03:54,939
+and settled an open problem in algebraic geometry.
+
+98
+00:03:54,959 --> 00:03:56,733
+The Decoder's contrast:
+
+99
+00:03:56,753 --> 00:03:58,584
+OpenAI recently uploaded hundreds of proofs
+
+100
+00:03:58,604 --> 00:04:00,175
+to GitHub,
+
+101
+00:04:00,195 --> 00:04:03,140
+DeepMind went through peer review.
+
+102
+00:04:03,160 --> 00:04:05,795
+The article does not list any limitations of the study.
+
+103
+00:04:05,995 --> 00:04:08,946
+Fifth, a Microsoft Research paper says,
+
+104
+00:04:08,966 --> 00:04:11,258
+for long-running agents,
+
+105
+00:04:11,278 --> 00:04:12,220
+the longer they chat,
+
+106
+00:04:12,240 --> 00:04:14,586
+the more easily they get stuck in one line of thinking.
+
+107
+00:04:14,606 --> 00:04:18,107
+They call this phenomenon
+
+108
+00:04:18,127 --> 00:04:20,663
+"idea basins."
+
+109
+00:04:20,683 --> 00:04:22,474
+The method is called Fork-and-Flush.
+
+110
+00:04:22,494 --> 00:04:24,675
+It first splits into K parallel branches,
+
+111
+00:04:24,695 --> 00:04:27,743
+and each branch inherits the workspace and files.
+
+112
+00:04:27,763 --> 00:04:30,697
+Then each branch clears all its chat context
+
+113
+00:04:30,717 --> 00:04:32,543
+and continues from a fresh conversation,
+
+114
+00:04:32,563 --> 00:04:34,888
+and only the best branch is kept.
+
+115
+00:04:34,908 --> 00:04:37,537
+In other words, it drops the chat history
+
+116
+00:04:37,557 --> 00:04:39,774
+but keeps the code and files.
+
+117
+00:04:39,794 --> 00:04:42,955
+On 13 long-running tasks with the same compute,
+
+118
+00:04:42,975 --> 00:04:46,922
+its average normalized score is 0.78,
+
+119
+00:04:46,942 --> 00:04:49,655
+versus 0.47 for a single run.
+
+120
+00:04:49,675 --> 00:04:52,868
+That is 66% higher than a single run
+
+121
+00:04:52,888 --> 00:04:56,316
+and 44.4% higher than best-of-4.
+
+122
+00:04:56,336 --> 00:04:57,992
+Clearing the chat without forking
+
+123
+00:04:58,012 --> 00:05:02,082
+also gave about a 22% gain on 11 tasks.
+
+124
+00:05:02,102 --> 00:05:04,583
+Note that the experiment covers only 13 tasks,
+
+125
+00:05:04,603 --> 00:05:08,655
+uses GPT-5.6-terra and GPT-5.5,
+
+126
+00:05:08,675 --> 00:05:11,443
+and forking costs extra compute.
+
+127
+00:05:11,643 --> 00:05:14,754
+Sixth, Alibaba's Qwen has released QwenGyre,
+
+128
+00:05:14,774 --> 00:05:16,891
+an online reinforcement learning framework,
+
+129
+00:05:16,911 --> 00:05:19,084
+for long-horizon agent tasks.
+
+130
+00:05:19,104 --> 00:05:21,520
+Qwen says a complex agent job
+
+131
+00:05:21,540 --> 00:05:23,875
+can run for hours,
+
+132
+00:05:23,895 --> 00:05:25,160
+with hundreds of interactions
+
+133
+00:05:25,180 --> 00:05:27,340
+and over a million tokens processed in total.
+
+134
+00:05:27,360 --> 00:05:29,189
+QwenGyre uses elastic scheduling:
+
+135
+00:05:29,209 --> 00:05:30,476
+each time a batch of tasks finishes,
+
+136
+00:05:30,496 --> 00:05:32,906
+the freed-up GPUs switch to training.
+
+137
+00:05:32,926 --> 00:05:36,207
+It also organizes trajectories into a tree by shared prefix
+
+138
+00:05:36,227 --> 00:05:38,574
+and expands only the selected paths.
+
+139
+00:05:38,594 --> 00:05:42,735
+In Qwen's experiment on NL2RepoBench,
+
+140
+00:05:42,755 --> 00:05:45,162
+with about 700,000 tokens per rollout
+
+141
+00:05:45,182 --> 00:05:46,279
+and 48 training steps,
+
+142
+00:05:46,299 --> 00:05:49,280
+the pass rate rose from 52.5% to 58.5%.
+
+143
+00:05:49,300 --> 00:05:51,020
+With the same GPU budget,
+
+144
+00:05:51,040 --> 00:05:53,985
+it is 1.78 times faster end to end than Async.
+
+145
+00:05:54,005 --> 00:05:57,176
+Qwen also says Qwen3.6-122B sees
+
+146
+00:05:57,196 --> 00:05:59,916
+end-to-end speedups on three kinds of tasks,
+
+147
+00:05:59,936 --> 00:06:02,716
+but the article gives no figures.
+
+148
+00:06:02,736 --> 00:06:05,397
+These are Qwen's own figures from specific setups,
+
+149
+00:06:05,417 --> 00:06:07,408
+the article doesn't say if it is open source,
+
+150
+00:06:07,428 --> 00:06:09,542
+or how to use it.
+
+151
+00:06:09,742 --> 00:06:12,838
+That's all for today. Sources are in the description.
+
+152
+00:06:12,858 --> 00:06:14,142
+See you tomorrow.

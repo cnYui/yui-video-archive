@@ -1,0 +1,39 @@
+{
+  "line1": "Gemini 4 Argonの",
+  "line2": "導入価格は11月まで",
+  "l1px": 168,
+  "l2px": 236,
+  "maxw": 1320,
+  "safe": [
+    300,
+    1620
+  ],
+  "textCx": 900,
+  "scale": 9,
+  "frame": [
+    64,
+    64
+  ],
+  "footRow": 62,
+  "fishX": 1074,
+  "foot": 1062,
+  "tag": "",
+  "theme": {
+    "bg": "#FFFFFF",
+    "lead": "#8A93AD",
+    "accent": "#4A88DA",
+    "list": "#4D5670",
+    "more": "#9AA2B8"
+  },
+  "others": [
+    "Anthropicが蒸留対策を強化",
+    "小型AIの自己複製を警告",
+    "XがGrokとCursorを統合",
+    "NVIDIA RTX Spark発売へ"
+  ],
+  "othersHead": "今日はほかに4本",
+  "othersMore": "……全5本",
+  "listX": 300,
+  "listW": 740,
+  "listBottom": 1000
+}

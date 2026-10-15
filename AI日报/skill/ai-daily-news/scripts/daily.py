@@ -3,10 +3,10 @@
     python daily.py init   [--date YYYY-MM-DD] [--hours N]   建本期目录；最后抓一次；导出候选 → candidates.md、aired_recent.md
         （Claude 选题、查原文、写 台本.json）
     python daily.py build  [--date ...]    台本.json → episode.json / script_data.py / 引擎 → 台本.md、配音分段.json → 配音分批
-        （配音：用户 2026-09-29 定，之后都用 Fish Audio 网页版。Claude 用 Chrome 插件在网页版整期一次生成（用户 Plus、S1），
-          页面一次出两个版本 → 插件 read_network_requests 拿两个任务编号 → webvoice 下载）
-    python daily.py webvoice --task <编号> [--task <编号2>] [--date ...] [--probe]   网页版音频 → 配音/raw/C01_vN.mp3（登记文字、记用量）
-    python daily.py tts    [--date ...] --api [--takes 1] [--model s1]   Fish Audio API 配音（停用：只在用户点名时加 --api 用）
+        （配音：用户 2026-10-14 定，改用本机跑的免费开源 TTS 女声（Qwen3-TTS，备选 MeloTTS），不再用 Fish Audio 网页版 / 浏览器插件）
+    python daily.py localtts [--date ...] [--engine auto|qwen|melo|sapi] [--speaker Vivian]   本地 TTS 整期配音 → 配音/raw/C01_vN.mp3（登记文字、记用量；sapi = 只做引导音轨的无人声版）
+    python daily.py webvoice --task <编号> [--task <编号2>] [--date ...] [--probe]   （2026-10-14 起停用）Fish Audio 网页版音频 → 配音/raw/C01_vN.mp3
+    python daily.py tts    [--date ...] --api [--takes 1] [--model s1]   （停用）Fish Audio API 配音：只在用户点名时加 --api 用
     python daily.py voice  [--date ...] [--hist urls_hist.txt]   选版本 + 按句切开、对齐字幕
     python daily.py render [--date ...] [--workers N] [--horizontal]   时间轴 → 混音 → 中英双语字幕 → 封面 → 竖屏成片（make_vertical.py）→ 上传版（B 站 H.265 / 另三个平台 H.264，≤9 MB）→ 核对 → 审稿单、投稿信息
         ✋ 用户看 审稿单.md 和成片，回复“发”；Claude 用 Chrome 插件填 B 站投稿页，收到“发”才点「立即投稿」
@@ -18,6 +18,7 @@
 import argparse
 import hashlib
 import json
+import os
 import re
 import shutil
 import subprocess
@@ -132,14 +133,14 @@ def cmd_build(a):
     if changed:
         print("! 台本.json 改过：daily.py tts 会整期重新生成（旧音频挪进 配音/raw/_旧稿_*，不删）")
     print(f"\n配音：{len(chunks)} 批，共 {sum(c['count'] for c in chunks)} 字节：{vdir / 'chunks.json'}")
-    print("下一步：Fish Audio 网页版配音（SKILL.md 第 5 步）→ daily.py webvoice --task <编号> --task <编号2>，然后 daily.py voice")
+    print("下一步：本地 TTS 配音（SKILL.md 第 5 步）→ daily.py localtts，然后 daily.py voice")
 
 
 # ---------------------------------------------------------------- tts (Fish Audio API：停用，用户点名才加 --api)
 def cmd_tts(a):
     if not a.api:
-        sys.exit("用户 2026-09-29 定：之后都用 Fish Audio 网页版配音（SKILL.md 第 5 步），生成后 daily.py webvoice --task <编号> 下载。\n"
-                 "不调 API；用户点名要用 API 时才加 --api。")
+        sys.exit("用户 2026-10-14 定：日报配音改用本机跑的免费开源 TTS 女声（SKILL.md 第 5 步）：daily.py localtts。\n"
+                 "Fish Audio（网页版 / API）都不用了；用户点名要用 API 时才加 --api。")
     ep = ep_dir(a.date)
     st = load_state(ep)
     extra = ["--takes", str(a.takes), "--model", a.model, "--missing"]   # 只补文字对不上 / 还没有版本的批次
@@ -228,6 +229,83 @@ def cmd_webvoice(a):
     with open(raw / "web_usage.txt", "a", encoding="utf-8") as f:
         f.write(f"{datetime.now(CST):%Y-%m-%d %H:%M} 北京｜网页版 S1｜{len(c['text'])} 字 / {c['count']} 字节｜任务 {' '.join(a.task)}{'（页面下载）' if a.file else ''}\n")
     save_state(ep, st, "tts", source="web", tasks=a.task)
+    print("下一步：daily.py voice")
+
+
+# ---------------------------------------------------------------- localtts（本机跑的免费开源 TTS 女声，2026-10-14 起日报的配音）
+QWEN_PY = SERIES / "素材" / "本地TTS" / "venv-qwen" / "Scripts" / "python.exe"      # torch + qwen-tts，和全局环境隔开
+LOCAL_TTS = SK / "local_tts.py"
+TEMPO = {"qwen": 1.15, "melo": 1.0, "sapi": 1.0}           # qwen 原速约 5.5 字/秒，比 Fish 苏晓晓（6.35）慢；加速 1.15 倍（ffmpeg atempo，保持音高）≈ 6.3 字/秒，一期 2200 字约 6 分钟；2026-10-14 实测识别分 0.867 → 0.874，没变差
+VOICE_CREDIT = {"qwen": "开源模型 Qwen3-TTS 女声", "melo": "开源模型 MeloTTS 女声", "sapi": ""}
+
+
+def cmd_localtts(a):
+    """本机 TTS 整期一次生成（免费、离线、女声）→ 配音/raw/C01_vN.mp3，和 webvoice 一样登记文字、记用量，之后照旧 daily.py voice。
+    --engine auto = 先 qwen（质量好、CPU 上慢）；qwen 报错或超过 --timeout 秒就换 melo（快，质量一般）。
+    sapi = Windows 自带 Huihui，机械感重，只做“引导音轨”：成片里不混进配音（无人声版，DAILY_SILENT=1，render 自动开）。"""
+    ep = ep_dir(a.date)
+    st = load_state(ep)
+    raw = ep / "配音" / "raw"
+    chunks = load_json(ep / "配音" / "chunks.json", []) or []
+    if len(chunks) != 1:
+        sys.exit("配音/chunks.json 不是整期一批 C01：先 daily.py build")
+    c = chunks[0]
+    raw.mkdir(parents=True, exist_ok=True)
+    db_path = raw / "api_takes.json"
+    db = load_json(db_path, {}) or {}
+    stale = [f for f in sorted(raw.glob(f"{c['chunk']}_v*.mp3")) if db.get(f.name) != c["text"]]
+    if stale:                                              # 文字对不上的旧版本挪走（和 webvoice 一样），select_takes 只在当前文字的版本里挑
+        stale_dir = raw / f"_旧稿_{datetime.now(CST):%Y%m%d-%H%M%S}"
+        stale_dir.mkdir(parents=True, exist_ok=True)
+        for f in stale:
+            shutil.move(str(f), str(stale_dir / f.name))
+        print(f"{len(stale)} 个旧版本和当前文字对不上，挪到 {stale_dir.name}/")
+    engines = ["qwen", "melo"] if a.engine == "auto" else [a.engine]
+    wav, used, t0 = ep / "配音" / "_local_tts.wav", None, datetime.now(CST)
+    for k, eng in enumerate(engines):
+        wav.unlink(missing_ok=True)
+        py = QWEN_PY if eng == "qwen" else sys.executable
+        if eng == "qwen" and not Path(py).exists():
+            print("! 没有 qwen 的虚拟环境（素材\\本地TTS\\venv-qwen），跳过 qwen")
+            continue
+        cmd = [py, LOCAL_TTS, ep, "--engine", eng, "--out", wav, "--seed", str(a.seed)]
+        if a.speaker and eng == "qwen":
+            cmd += ["--speaker", a.speaker]
+        if a.speed != 1.0:
+            cmd += ["--speed", str(a.speed)]
+        cmd = [str(x) for x in cmd]
+        print("$ " + " ".join(cmd)[:220], flush=True)
+        try:
+            r = subprocess.run(cmd, timeout=a.timeout if k < len(engines) - 1 else None)
+            ok = r.returncode == 0 and wav.exists()
+        except subprocess.TimeoutExpired:
+            print(f"! {eng} 超过 {a.timeout} s 还没合成完，换下一个引擎（已合成的句子留在 配音/local_{eng}/ 缓存里）")
+            ok = False
+        if ok:
+            used = eng
+            break
+        print(f"! {eng} 没做出来")
+    if not used:
+        sys.exit("本地 TTS 都没做出来：看上面的报错；qwen 的环境见 SKILL.md 第 5 步“重建环境”")
+    n = 1
+    while (raw / f"{c['chunk']}_v{n}.mp3").exists():
+        n += 1
+    dst = raw / f"{c['chunk']}_v{n}.mp3"
+    tempo = a.tempo or TEMPO.get(used, 1.0)
+    run(["ffmpeg", "-y", "-loglevel", "error", "-i", wav, "-ac", "1", "-ar", "44100"] + (["-filter:a", f"atempo={tempo}"] if tempo != 1.0 else [])
+        + ["-c:a", "libmp3lame", "-q:a", "2", dst])
+    dur = ffprobe_duration(dst)
+    if dur < 60:
+        sys.exit(f"{dst.name} 只有 {dur:.1f} 秒：合成不完整，查一下")
+    db[dst.name] = c["text"]
+    db_path.write_text(json.dumps(db, ensure_ascii=False, indent=1), encoding="utf-8")
+    took = (datetime.now(CST) - t0).total_seconds()
+    with open(raw / "local_tts_usage.txt", "a", encoding="utf-8") as f:
+        f.write(f"{datetime.now(CST):%Y-%m-%d %H:%M} 北京｜本地 TTS {used}{'/' + a.speaker if a.speaker and used == 'qwen' else ''}｜{len(c['text'])} 字｜{dur:.1f} s 音频（加速 {tempo}×），用时 {took:.0f} s\n")
+    silent = used == "sapi"
+    save_state(ep, st, "tts", source="local", engine=used, speaker=(a.speaker or "Vivian") if used == "qwen" else None, tempo=tempo, silent=silent,
+               seconds=round(dur, 1), took=round(took))
+    print(f"{dst.name}: {dur:.1f} s，引擎 {used}，用时 {took:.0f} s" + ("（引导音轨：成片不混配音）" if silent else ""))
     print("下一步：daily.py voice")
 
 
@@ -401,6 +479,16 @@ def platform_titles(sc):
     return out, notes
 
 
+def voice_note(ep):
+    """简介里的 AI 声明一行：按本期实际用的配音引擎写（本地 TTS 引擎记在 state.json 的 tts 阶段）；无人声版（sapi 引导音轨）写明没有人声。"""
+    tail = "内容由 AI 整理，并自动核对来源，如有出入以原文为准。"
+    t = load_state(ep).get("stages", {}).get("tts", {})
+    if t.get("silent"):
+        return f"· 本期无人声配音，背景音乐为程序合成；{tail}"
+    who = VOICE_CREDIT.get(t.get("engine"), "本地开源 TTS 女声")
+    return f"· 本期配音由 AI 合成（{who}，本机生成），背景音乐为程序合成；{tail}"
+
+
 def build_publish_info(ep, ep_json, sc, upload_path, dur, upload_h264=None):
     news = sc["news"]
     tags = list(BASE_TAGS)
@@ -423,7 +511,7 @@ def build_publish_info(ep, ep_json, sc, upload_path, dur, upload_h264=None):
     tail = ["来源", *src_lines, "",
             "说明",
             f"· 信息截至北京时间 {exported or ep_json['date']}，以各家官方发布为准。",
-            "· 本期配音由 AI 合成（Fish Audio「苏晓晓」），背景音乐为程序合成；内容由 AI 整理，并自动核对来源，如有出入以原文为准。",   # 全自动：没有人工审核，不能写“经人工审核”
+            voice_note(ep),   # 全自动：没有人工审核，不能写“经人工审核”
             "· 主播鲸鱼娘（像素素材包「大肥鱼」）是 DeepSeek 的网友拟人同人（原型：上善无形，CC BY-NC-SA 4.0；女仆造型：ZipZipPipe），与 DeepSeek 官方无关。"]
     desc = "\n".join(head + toc + tail)
     if desc_len(desc) > DESC_LIMIT:
@@ -493,6 +581,8 @@ def cmd_render(a):
     --horizontal = 以前的 2340×1080 横屏版（悠一片头片尾 + 手写白板），竖屏出不来时的退路，只发 B 站。"""
     ep = ep_dir(a.date)
     st = load_state(ep)
+    if st.get("stages", {}).get("tts", {}).get("silent"):   # localtts --engine sapi：引导音轨只定字幕时间，成片里不混配音（make_vertical.py 的 DAILY_SILENT）
+        os.environ["DAILY_SILENT"] = "1"
     run([sys.executable, YL / "build_timeline.py", ep, "--series", SERIES])
     run([sys.executable, YL / "mix_audio.py", ep, "--series", SERIES])
     # 中英双语字幕（用户 2026-10-02，项目统一标准）：台本每句的 text + en 拆条、按配音对齐的时间写进 timeline.json 的 segments[].subs
@@ -703,7 +793,7 @@ def cmd_published(a):
 
 
 NEXT = {None: "daily.py init", "init": "选 6–8 条、查原文、写 台本.json，然后 daily.py build",
-        "build": "Fish Audio 网页版配音（SKILL.md 第 5 步）→ daily.py webvoice --task …",
+        "build": "本地 TTS 配音（SKILL.md 第 5 步）→ daily.py localtts",
         "tts": "daily.py voice", "voice": "daily.py render", "render": "daily.py gate → AI 复核 → daily.py gate",
         "gate": "gate 通过：插件填 B 站发布页（定时北京 06:00；SKILL.md 第 8 步 8a。2026-10-06 起抖音 / 小红书暂停，不做 8b / 8c），然后 daily.py published --bv …（不带 --also；没通过：改台本重做）",
         "published": "公开后加 B 站分段章节（daily.py chapters），加好后 daily.py chapters --done", "chapters": "本期完成"}
@@ -720,7 +810,7 @@ def cmd_status(a):
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = ap.add_subparsers(dest="cmd", required=True)
-    for name in ("init", "build", "webvoice", "tts", "voice", "render", "review", "gate", "published", "chapters", "status"):
+    for name in ("init", "build", "localtts", "webvoice", "tts", "voice", "render", "review", "gate", "published", "chapters", "status"):
         s = sub.add_parser(name)
         s.add_argument("--date", default=today_cst())
         if name == "init":
@@ -729,6 +819,14 @@ def main():
         if name == "build":
             s.add_argument("--force", action="store_true", help="重新分批（台本改过时会自动加）")
             s.add_argument("--batches", action="store_true", help="保留按场景分批（只在网页版单次放不下整期时用）；默认整期一批，一次生成")
+        if name == "localtts":
+            s.add_argument("--engine", default="auto", choices=["auto", "qwen", "melo", "sapi"],
+                           help="auto = 先 qwen，出错 / 超时换 melo；sapi = Windows Huihui 引导音轨（无人声版）")
+            s.add_argument("--speaker", default=None, help="qwen 的说话人：Vivian（默认）/ Serena")
+            s.add_argument("--speed", type=float, default=1.0, help="melo / sapi 的语速倍数")
+            s.add_argument("--seed", type=int, default=1234)
+            s.add_argument("--tempo", type=float, default=None, help="整体加速倍数（ffmpeg atempo）；不写 = qwen 1.15、其余 1.0")
+            s.add_argument("--timeout", type=int, default=2700, help="qwen 最长跑多少秒，超了换 melo（auto 时）")
         if name == "webvoice":
             s.add_argument("--task", action="append", required=True, help="网页版的任务编号（32 位十六进制；一次出两个版本就写两次 --task）")
             s.add_argument("--file", action="append", help="R2 地址找不到时（2026-10-04 起音频改成私有签名地址）：用页面播放器的「下载」按钮存下的 mp3，按版本顺序写，可写多次")
@@ -751,7 +849,7 @@ def main():
         if name == "chapters":
             s.add_argument("--done", action="store_true", help="B 站分段章节已加好，记进 state.json")
     a = ap.parse_args()
-    {"init": cmd_init, "build": cmd_build, "webvoice": cmd_webvoice, "tts": cmd_tts, "voice": cmd_voice, "render": cmd_render, "review": cmd_review,
+    {"init": cmd_init, "build": cmd_build, "localtts": cmd_localtts, "webvoice": cmd_webvoice, "tts": cmd_tts, "voice": cmd_voice, "render": cmd_render, "review": cmd_review,
      "gate": cmd_gate, "published": cmd_published, "chapters": cmd_chapters, "status": cmd_status}[a.cmd](a)
 
 

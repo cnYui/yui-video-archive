@@ -1,0 +1,185 @@
+{
+ "date": "2026-10-15",
+ "script_sha": "d5b7e53aa335",
+ "passed": false,
+ "checked_at": "2026-10-15 07:59:30",
+ "checks": [
+  {
+   "check": "台本检查",
+   "ok": true,
+   "level": "ok",
+   "detail": "5 条，约 1519 字"
+  },
+  {
+   "check": "台本提示",
+   "ok": false,
+   "level": "warn",
+   "detail": "只有 5 条：目标 6–8 条（合格的新闻不够时可以少，但正片会不到 5 分钟，加不了 B 站分段章节）；全片约 1519 字，按每秒 6.35 字约 4.0 分钟；目标正片 5–6 分钟（约 2000–2250 字）；第 1 条第 4 句（第 2/2 条） 英文 92 字符，略超 90"
+  },
+  {
+   "check": "成片",
+   "ok": true,
+   "level": "ok",
+   "detail": "D:\\大疆\\AI日报\\2026-10-15\\AI每日日报_1015_成片.mp4"
+  },
+  {
+   "check": "上传版 ≤ 9 MB",
+   "ok": true,
+   "level": "ok",
+   "detail": "8.95 MB"
+  },
+  {
+   "check": "H.264 上传版 ≤ 9 MB（抖音 / 小红书）",
+   "ok": true,
+   "level": "ok",
+   "detail": "8.69 MB"
+  },
+  {
+   "check": "竖屏成片 1080×2340",
+   "ok": true,
+   "level": "ok",
+   "detail": "1080,2340"
+  },
+  {
+   "check": "竖屏 QA（帧数 / 时长 / 口型对齐）",
+   "ok": true,
+   "level": "ok",
+   "detail": "{\"width\": 1080, \"height\": 2340, \"frames\": 8355, \"want_frames\": 8355, \"duration\": 278.5, \"total\": 278.505, \"lufs\": \"-16.1\", \"lra\": \"3.0\", \"true_peak\": \"-3.2\", \"mouth_best_lag\": 0, \"mouth_corr\": 0.725, \"mouth_corr0\": 0.725, \"subs\": 119, \"ok\": true}"
+  },
+  {
+   "check": "竖屏字幕中英对齐（make_vertical.py lint）",
+   "ok": true,
+   "level": "ok",
+   "detail": "字幕对齐检查：119 段，错 0 处、提示 0 处"
+  },
+  {
+   "check": "封面",
+   "ok": true,
+   "level": "ok",
+   "detail": "16x9 + 4x3 + 3x4"
+  },
+  {
+   "check": "中英双语字幕（画面 + 三份 SRT）",
+   "ok": true,
+   "level": "ok",
+   "detail": "73 条"
+  },
+  {
+   "check": "标题（三个平台限长）",
+   "ok": true,
+   "level": "ok",
+   "detail": "10月15日AI圈5件事：Anthropic进新加坡，谷歌做设备端反诈，苹果公布三模态扩散研究 | Anthropic进新加坡，苹果研究三模态 | AI圈5件事：设备端反诈"
+  },
+  {
+   "check": "简介里有全部来源",
+   "ok": true,
+   "level": "ok",
+   "detail": "5 个网址"
+  },
+  {
+   "check": "简介里没有别的网址",
+   "ok": true,
+   "level": "ok",
+   "detail": ""
+  },
+  {
+   "check": "简介 ≤ 2000 字",
+   "ok": true,
+   "level": "ok",
+   "detail": "936 字"
+  },
+  {
+   "check": "总时长超过 5 分钟（B 站分段章节要求）",
+   "ok": false,
+   "level": "warn",
+   "detail": "278.5 秒"
+  },
+  {
+   "check": "配音识别分 ≥ 0.75",
+   "ok": true,
+   "level": "ok",
+   "detail": "1 批"
+  },
+  {
+   "check": "事实核对（数字、英文名都在原文里）",
+   "ok": true,
+   "level": "ok",
+   "detail": "全部找到"
+  },
+  {
+   "check": "内容安全（色情、暴力、时政、广告、提示词注入、隐藏字符）",
+   "ok": true,
+   "level": "ok",
+   "detail": "没有命中"
+  },
+  {
+   "check": "要 AI 复核确认的词",
+   "ok": false,
+   "level": "warn",
+   "detail": "[敏感词（看上下文）] 第 1 条 要点 2：政府；[敏感词（看上下文）] 第 1 条 第 4 句：政府；[敏感词（看上下文）] 第 2 条 第 3 句：政府；[敏感词（看上下文）] 第 2 条 第 5 句：政府；[敏感词（看上下文）] 字幕 srt：政府；[敏感词（看上下文）] 字幕 srt：政府；[敏感词（看上下文）] 字幕 srt：政府"
+  },
+  {
+   "check": "没有重复最近 7 天播过的原文",
+   "ok": true,
+   "level": "ok",
+   "detail": ""
+  },
+  {
+   "check": "AI 复核（独立子代理，看成品和原文）",
+   "ok": false,
+   "level": "block",
+   "detail": "没有针对当前台本（sha d5b7e53aa335）的通过结论：【判 fail】字幕断在词中间：SRT 第 83/84 条 “三/模态 Masked Diffusion Model”（第4条第2句，“三模态”被拆开）；第 92/93 条 “文生图和文/生音频任务”（第4条第5句，“文生音频”被拆开）；第 106/107 条 “CS-FLEURS 数据/集的14种语言对上”（第5条第4句，“数据集”被拆开）。成片画面里的字幕同源，需要重断。；【判 fail】第5条第4句 SRT 第 106–109 条中英错位：第 108 条中文只有 “Whisper-small”，英文却是 “reached a mean”；第 107 条中文是 “集的14种语言对上”，英文却是 “the Whisper-small encoder”。竖屏 S06 @249s 静帧就是 “Whisper-small / reached a mean” 这一组，观众会读成不搭的两行。li"
+  }
+ ],
+ "hits": [
+  {
+   "level": "review",
+   "cat": "敏感词（看上下文）",
+   "word": "政府",
+   "where": "第 1 条 要点 2",
+   "context": "和新加坡政府签 MOU"
+  },
+  {
+   "level": "review",
+   "cat": "敏感词（看上下文）",
+   "word": "政府",
+   "where": "第 1 条 第 4 句",
+   "context": "应，也分享研究和数据，帮助中小企业和政府人员更负责任地用 AI。"
+  },
+  {
+   "level": "review",
+   "cat": "敏感词（看上下文）",
+   "word": "政府",
+   "where": "第 2 条 第 3 句",
+   "context": "a 模型用本地诈骗对话微调，覆盖冒充政府机构、银行和本地人物等套路。"
+  },
+  {
+   "level": "review",
+   "cat": "敏感词（看上下文）",
+   "word": "政府",
+   "where": "第 2 条 第 5 句",
+   "context": "谷歌和新加坡政府都不能读取聊天内容，模型只有在用户同"
+  },
+  {
+   "level": "review",
+   "cat": "敏感词（看上下文）",
+   "word": "政府",
+   "where": "字幕 srt",
+   "context": "ll businesses    和政府人员更负责任地用 AI。 and p"
+  },
+  {
+   "level": "review",
+   "cat": "敏感词（看上下文）",
+   "word": "政府",
+   "where": "字幕 srt",
+   "context": "ersations,    覆盖冒充政府机构、 including impe"
+  },
+  {
+   "level": "review",
+   "cat": "敏感词（看上下文）",
+   "word": "政府",
+   "where": "字幕 srt",
+   "context": "ulation.    谷歌和新加坡政府都不能读取聊天内容， Google "
+  }
+ ]
+}

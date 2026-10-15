@@ -78,6 +78,13 @@ def shoot(page, url, out_png):
             continue
     if h1 is None:
         raise RuntimeError("页面里没有可见的 <h1>")
+    hb = h1.bounding_box()
+    if hb and hb["width"] + 80 > CLIP_W and page.viewport_size["width"] > 960:
+        # 标题比截图框还宽（Anthropic 研究页的 h1 占满 1152 px 的容器，右边会被裁掉、橙框伸出卡片：2026-10-14 复核发现）：
+        # 把视口收窄到 940，让标题自己换行，再整体重新排版
+        page.set_viewport_size({"width": 940, "height": 900})
+        page.wait_for_timeout(800)
+        page.evaluate(HIDE_OVERLAYS_JS)
     h1.evaluate("el => window.scrollTo(0, Math.max(0, el.getBoundingClientRect().top + window.scrollY - 70))")
     page.wait_for_timeout(500)
     box = h1.bounding_box()

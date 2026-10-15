@@ -1,0 +1,46 @@
+{
+  "line1": "Meta 首个前沿模型",
+  "line2": "追上顶级了吗？",
+  "l1px": 168,
+  "l2px": 236,
+  "maxw": 1320,
+  "safe": [
+    300,
+    1620
+  ],
+  "textCx": 900,
+  "scale": 9,
+  "frame": [
+    64,
+    64
+  ],
+  "footRow": 62,
+  "fishX": 1074,
+  "foot": 1062,
+  "tag": "",
+  "theme": {
+    "bg": "#FFFFFF",
+    "lead": "#8A93AD",
+    "accent": "#4A88DA",
+    "list": "#4D5670",
+    "more": "#9AA2B8"
+  },
+  "_theme": "blue",
+  "_pose": "ear_m0",
+  "_eyes": "idle_look_r_m0",
+  "_fx": "fx_listen",
+  "_qmark": false,
+  "_place": "right",
+  "others": [
+    "Sol 上下文扩到 50 万",
+    "微软 Maia 300 芯片",
+    "AlphaProof Nexus 解题",
+    "清空聊天记录更会想",
+    "千问发布 QwenGyre"
+  ],
+  "othersHead": "今天还有 5 条",
+  "othersMore": "",
+  "listX": 300,
+  "listW": 740,
+  "listBottom": 1000
+}

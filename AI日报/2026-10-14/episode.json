@@ -1,0 +1,271 @@
+{
+  "number": 1014,
+  "title": "10月14日，鲸鱼娘带你看看AI圈发生了什么？",
+  "dir_name": "AI每日日报_1014",
+  "date": "2026-10-14",
+  "date_label": "10月14日",
+  "weekday": "周三",
+  "subtitle": "鲸鱼娘带你看看 AI 圈发生了什么",
+  "target_minutes": [
+    5,
+    6
+  ],
+  "question_scene": "S01",
+  "questions": [
+    {
+      "text": "Gemini 4 Argon",
+      "scenes": [
+        "S02"
+      ]
+    },
+    {
+      "text": "Claude 防蒸馏加固",
+      "scenes": [
+        "S03"
+      ]
+    },
+    {
+      "text": "小模型自我复制",
+      "scenes": [
+        "S04"
+      ]
+    },
+    {
+      "text": "X 订阅合并 Grok",
+      "scenes": [
+        "S05"
+      ]
+    },
+    {
+      "text": "RTX Spark 笔记本",
+      "scenes": [
+        "S06"
+      ]
+    }
+  ],
+  "chapters": {
+    "S01": "开场",
+    "S02": "Gemini 4 Argon",
+    "S03": "Claude 防蒸馏加固",
+    "S04": "小模型自我复制",
+    "S05": "X 订阅合并 Grok",
+    "S06": "RTX Spark 笔记本",
+    "S07": "回顾"
+  },
+  "bar_labels": {
+    "S01": "开场",
+    "S02": "Gemini 4",
+    "S03": "防蒸馏",
+    "S04": "自我复制",
+    "S05": "X 订阅",
+    "S06": "RTX Spark",
+    "S07": "回顾"
+  },
+  "backgrounds": {
+    "S01": "01_深海气泡.png",
+    "S02": "02_星点.png",
+    "S03": "03_波纹.png",
+    "S04": "01_深海气泡.png",
+    "S05": "02_星点.png",
+    "S06": "03_波纹.png",
+    "S07": "01_深海气泡.png"
+  },
+  "bg_alpha": 0.9,
+  "bg_blur": 0,
+  "intro_tagline": "",
+  "outro_references": [
+    "Gemini 4 Argon（Google 官方博客）",
+    "Claude 防蒸馏加固（Anthropic）",
+    "小模型自我复制（Anthropic）",
+    "X 订阅合并 Grok（xAI）",
+    "RTX Spark 笔记本（NVIDIA）"
+  ],
+  "outro_items": [
+    {
+      "label": "形象",
+      "value": "大肥鱼同人 · 上善无形 / ZipZipPipe"
+    },
+    {
+      "label": "视频制作模型",
+      "value": "Opus 5.5"
+    }
+  ],
+  "outro_closing": "感谢大家看到最后",
+  "auto_gestures": false,
+  "presenter": {
+    "id": "whale",
+    "frames": "角色/动作帧"
+  },
+  "badge_html": "AI每日日报<span class=\"n\">10.14</span>",
+  "toc_kicker_html": "<b>今日要闻</b>TODAY",
+  "bar_colors": [
+    "#97C3F0",
+    "#F3C98C",
+    "#4A88DA",
+    "#C6E6FB"
+  ],
+  "news": [
+    {
+      "headline": "Gemini 4 Argon",
+      "org": "Google",
+      "source": "Google 官方博客",
+      "source_short": "Google",
+      "date": "10月13日",
+      "points": [
+        "API 全球开放",
+        "推广价 2 / 10 美元",
+        "11 月 30 日后翻倍"
+      ],
+      "rundown_key": "谷歌发布 Gemini 4 Argon",
+      "line_points": [
+        null,
+        null,
+        1,
+        2,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "refs": [
+        {
+          "name": "Google 官方博客",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/"
+        }
+      ],
+      "snap": "../assets/snaps/news_01.png",
+      "snap_src": "blog.google"
+    },
+    {
+      "headline": "Claude 防蒸馏加固",
+      "org": "Anthropic",
+      "source": "Anthropic 研究",
+      "source_short": "Anthropic",
+      "date": "10月12日",
+      "points": [
+        "三项新措施",
+        "提取量降 90%–99%",
+        "说是猫鼠游戏"
+      ],
+      "rundown_key": "Anthropic 加固防蒸馏",
+      "line_points": [
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null,
+        2
+      ],
+      "refs": [
+        {
+          "name": "Anthropic",
+          "url": "https://www.anthropic.com/research/distillation-defenses"
+        }
+      ],
+      "snap": "../assets/snaps/news_02.png",
+      "snap_src": "anthropic.com"
+    },
+    {
+      "headline": "小模型自我复制",
+      "org": "Anthropic",
+      "source": "Anthropic 前沿红队",
+      "source_short": "Anthropic",
+      "date": "10月12日",
+      "points": [
+        "可能几个月内能复制",
+        "入侵步骤故意从简",
+        "说是生命迹象"
+      ],
+      "rundown_key": "Anthropic 红队谈小模型自我复制",
+      "line_points": [
+        null,
+        0,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        2
+      ],
+      "refs": [
+        {
+          "name": "Anthropic",
+          "url": "https://www.anthropic.com/research/self-replicating-ai"
+        }
+      ],
+      "snap": "../assets/snaps/news_03.png",
+      "snap_src": "anthropic.com"
+    },
+    {
+      "headline": "X 订阅合并 Grok",
+      "org": "xAI",
+      "source": "xAI 官方",
+      "source_short": "xAI",
+      "date": "10月12日",
+      "points": [
+        "Grok、Cursor、X 合一",
+        "付费档 8 到 200 美元",
+        "老用户可不换"
+      ],
+      "rundown_key": "X 把 Grok 和 Cursor 打成一个订阅",
+      "line_points": [
+        0,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        2,
+        null
+      ],
+      "refs": [
+        {
+          "name": "xAI",
+          "url": "https://x.ai/news/x-subscription"
+        }
+      ],
+      "snap": "../assets/snaps/news_04.png",
+      "snap_src": "x.ai"
+    },
+    {
+      "headline": "RTX Spark 笔记本",
+      "org": "NVIDIA",
+      "source": "NVIDIA 官方博客",
+      "source_short": "NVIDIA",
+      "date": "10月13日",
+      "points": [
+        "10月16日开卖",
+        "最高 128GB 统一内存",
+        "这篇没写价格"
+      ],
+      "rundown_key": "英伟达 RTX Spark 笔记本",
+      "line_points": [
+        0,
+        1,
+        2,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "refs": [
+        {
+          "name": "NVIDIA",
+          "url": "https://blogs.nvidia.com/blog/local-ai-rtx-spark-laptops-software-updates/"
+        }
+      ]
+    }
+  ],
+  "style": "board"
+}

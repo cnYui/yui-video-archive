@@ -1,0 +1,43 @@
+{
+  "stages": {
+    "init": {
+      "at": "2026-10-13 03:33:39"
+    },
+    "build": {
+      "at": "2026-10-14 17:08:13",
+      "script_sha": "e54866e81fab",
+      "chunks": 1
+    },
+    "tts": {
+      "at": "2026-10-14 15:19:55",
+      "source": "local",
+      "engine": "qwen",
+      "speaker": "Vivian",
+      "tempo": 1.15,
+      "silent": false,
+      "seconds": 374.2,
+      "took": 1818
+    },
+    "voice": {
+      "at": "2026-10-14 17:12:39",
+      "takes": 1
+    },
+    "render": {
+      "at": "2026-10-14 17:34:10",
+      "seconds": 374.5,
+      "upload_bytes": 8723040,
+      "check_warnings": 0
+    },
+    "gate": {
+      "at": "2026-10-14 17:41:34",
+      "passed": true,
+      "script_sha": "e54866e81fab"
+    },
+    "published": {
+      "at": "2026-10-13 11:29:15",
+      "bv": "BV1nwWc6PERD",
+      "also": []
+    }
+  },
+  "last": "gate"
+}

@@ -1,0 +1,689 @@
+1
+00:00:00,000 --> 00:00:02,344
+早上好，我是鲸鱼娘，
+Good morning, I'm Whale Girl.
+
+2
+00:00:02,364 --> 00:00:04,660
+今天是10月14日。
+Today is October 14.
+
+3
+00:00:04,680 --> 00:00:05,791
+今天说五件事：
+Five stories today:
+
+4
+00:00:05,811 --> 00:00:09,071
+谷歌发布 Gemini 4 Argon，
+Google releases Gemini 4 Argon,
+
+5
+00:00:09,091 --> 00:00:11,711
+Anthropic 加固防蒸馏，
+Anthropic hardens its anti-distillation defenses,
+
+6
+00:00:11,731 --> 00:00:15,111
+Anthropic 红队谈小模型自我复制，
+Anthropic's red team looks at small models self-replicating,
+
+7
+00:00:15,131 --> 00:00:17,991
+X 把 Grok 和 Cursor 打成一个订阅，
+X bundles Grok and Cursor into one subscription,
+
+8
+00:00:18,011 --> 00:00:21,891
+还有英伟达 RTX Spark 笔记本。
+and NVIDIA's RTX Spark laptops.
+
+9
+00:00:21,911 --> 00:00:24,807
+第一件，谷歌发布了 Gemini 4 Argon，
+First, Google has released Gemini 4 Argon,
+
+10
+00:00:24,827 --> 00:00:27,479
+10月13日起面向开发者
+and from October 13 it is open to developers
+
+11
+00:00:27,499 --> 00:00:29,287
+和企业全球开放。
+and enterprises globally.
+
+12
+00:00:29,307 --> 00:00:31,718
+Google AI Ultra 和 Pro 订阅用户，
+Google AI Ultra and Pro subscribers
+
+13
+00:00:31,738 --> 00:00:33,240
+可以在 Gemini 应用
+can use it in the Gemini app
+
+14
+00:00:33,260 --> 00:00:35,419
+和搜索的 AI 模式里用到。
+and in AI Mode in Search.
+
+15
+00:00:35,439 --> 00:00:38,325
+API 的推广价，每百万 token，
+The introductory API price, per million tokens,
+
+16
+00:00:38,345 --> 00:00:41,200
+输入 2 美元，输出 10 美元。
+is $2 for input and $10 for output.
+
+17
+00:00:41,220 --> 00:00:43,551
+推广期到 11月30日，
+The introductory period ends on November 30,
+
+18
+00:00:43,571 --> 00:00:47,171
+之后涨到输入 4 美元，输出 20 美元。
+after which it rises to $4 input and $20 output.
+
+19
+00:00:47,191 --> 00:00:49,515
+上下文是 100 万 token，
+The context limit is 1 million tokens,
+
+20
+00:00:49,535 --> 00:00:52,022
+输入和输出合在一起算。
+counted across input and output combined.
+
+21
+00:00:52,042 --> 00:00:55,228
+谷歌称，它在 Vals Index 上排第一，
+Google says it ranks first on the Vals Index,
+
+22
+00:00:55,248 --> 00:00:59,218
+这个指数覆盖金融、编码、法律和税务。
+which covers finance, coding, legal and tax work.
+
+23
+00:00:59,238 --> 00:01:02,479
+具身推理基准 ERQA 上是 87%，
+It scores 87% on the ERQA embodied reasoning benchmark,
+
+24
+00:01:02,499 --> 00:01:05,844
+谷歌说超过其他前沿模型。
+which Google says beats other frontier models.
+
+25
+00:01:05,864 --> 00:01:09,325
+谷歌还称，在 Gray Swan 基准上，
+Google also says that on the Gray Swan benchmark,
+
+26
+00:01:09,345 --> 00:01:11,099
+间接提示词注入的
+the indirect prompt injection
+
+27
+00:01:11,119 --> 00:01:13,567
+攻击成功率压到了 0.7%。
+attack success rate is down to 0.7%.
+
+28
+00:01:13,587 --> 00:01:14,820
+另外，一万名科学家
+Also, 10,000 scientists
+
+29
+00:01:14,840 --> 00:01:17,640
+可以在 Antigravity 里免费
+can use Antigravity free
+
+30
+00:01:17,660 --> 00:01:19,313
+用半年最高用量档，
+for six months at the highest usage tier,
+
+31
+00:01:19,333 --> 00:01:22,123
+要符合资格并经过挑选。
+subject to eligibility and selection.
+
+32
+00:01:22,143 --> 00:01:24,919
+这些成绩都是谷歌自己公布的。
+These results are all published by Google itself.
+
+33
+00:01:25,119 --> 00:01:26,620
+第二件，Anthropic
+Second, Anthropic has announced
+
+34
+00:01:26,640 --> 00:01:29,240
+公布了防御蒸馏攻击的新措施。
+new measures against distillation attacks.
+
+35
+00:01:29,260 --> 00:01:32,915
+蒸馏，就是批量拿一个模型的输出，
+Distillation means collecting one model's outputs in bulk
+
+36
+00:01:32,935 --> 00:01:35,232
+去训练另一个模型。
+to train another model.
+
+37
+00:01:35,252 --> 00:01:38,833
+Anthropic 说，早期证据表明，
+Anthropic says early evidence suggests
+
+38
+00:01:38,853 --> 00:01:41,732
+这些措施让蒸馏者能收集的数据
+the measures cut the data distillers
+
+39
+00:01:41,752 --> 00:01:44,267
+少了大约 90% 到 99%。
+can collect by around 90% to 99%.
+
+40
+00:01:44,287 --> 00:01:45,783
+第一项是保留思考：
+The first is preserved thinking:
+
+41
+00:01:45,803 --> 00:01:49,583
+8月31日及之后创建的新 API 账号，
+API accounts created on or after August 31
+
+42
+00:01:49,603 --> 00:01:52,250
+不能改动之前的上下文。
+cannot edit earlier context.
+
+43
+00:01:52,270 --> 00:01:54,731
+第二项是两阶段分类器，
+The second is a two-stage classifier
+
+44
+00:01:54,751 --> 00:01:56,955
+误判率低于 0.1%。
+with a false positive rate below 0.1%.
+
+45
+00:01:56,975 --> 00:01:59,202
+第三项是对反复尝试的账号
+The third is, for repeat extractors,
+
+46
+00:01:59,222 --> 00:02:01,921
+收紧限额，查实后封号。
+tighter limits and bans once confirmed.
+
+47
+00:02:01,941 --> 00:02:02,982
+9月24日起，
+Since September 24,
+
+48
+00:02:03,002 --> 00:02:05,727
+在误判率低于 0.1% 的特定领域，
+in specific areas where false positives are under 0.1%,
+
+49
+00:02:05,747 --> 00:02:09,689
+被安全机制拦下的请求，也要收费。
+requests blocked by its safeguards are also charged for.
+
+50
+00:02:09,709 --> 00:02:14,075
+一个数据点：用完整转录蒸馏出的模型，
+One data point: a distilled model trained on full
+
+51
+00:02:14,095 --> 00:02:17,925
+在 SWE-bench Verified 上是 80.4%，
+transcripts scores 80.4% on SWE-bench Verified,
+
+52
+00:02:17,945 --> 00:02:20,954
+只用摘要版推理，掉到 71.8%。
+and drops to 71.8% with summarized reasoning only.
+
+53
+00:02:20,974 --> 00:02:23,140
+代价是，一些开发者
+The trade-off: some developers
+
+54
+00:02:23,160 --> 00:02:25,325
+要更新自己的集成，
+must update their integrations,
+
+55
+00:02:25,345 --> 00:02:26,839
+分类器也可能误拦
+and the classifier may wrongly block
+
+56
+00:02:26,859 --> 00:02:29,166
+不到 0.1% 的正常请求。
+fewer than 0.1% of benign requests.
+
+57
+00:02:29,186 --> 00:02:31,917
+Anthropic 自己说，这是猫鼠游戏，
+Anthropic itself calls it a cat-and-mouse game
+
+58
+00:02:31,937 --> 00:02:34,537
+不知道效果能维持多久。
+and doesn't know how long the gains will last.
+
+59
+00:02:34,737 --> 00:02:37,787
+第三件，Anthropic 前沿红队
+Third, Anthropic's Frontier Red Team
+
+60
+00:02:37,807 --> 00:02:40,082
+发了一篇研究，说小模型
+published research saying small models
+
+61
+00:02:40,102 --> 00:02:41,798
+可能几个月内，
+may be months away
+
+62
+00:02:41,818 --> 00:02:44,411
+就能在家用设备上自我复制。
+from self-replicating on home devices.
+
+63
+00:02:44,431 --> 00:02:46,826
+他们说的设备，是智能烤箱、
+The devices are IoT gear like smart ovens
+
+64
+00:02:46,846 --> 00:02:49,862
+杂牌安卓电视盒这类物联网设备。
+and off-brand Android TV boxes.
+
+65
+00:02:49,882 --> 00:02:52,165
+实验里，一个 9B 的小模型
+In the experiments, a 9B model
+
+66
+00:02:52,185 --> 00:02:53,548
+在 9 类硬件中，
+across 9 hardware types
+
+67
+00:02:53,568 --> 00:02:56,253
+有 8 类把推理服务搭了起来。
+got inference running on 8 of them.
+
+68
+00:02:56,273 --> 00:02:58,324
+Gemma4-26B-A4B 跑在
+Gemma4-26B-A4B ran on
+
+69
+00:02:58,344 --> 00:03:00,416
+15 台杂牌安卓电视盒上，
+15 off-brand Android TV boxes,
+
+70
+00:03:00,436 --> 00:03:01,917
+每台约 55 美元，
+about $55 each,
+
+71
+00:03:01,937 --> 00:03:04,474
+速度每秒 0.39 个 token。
+at 0.39 tokens per second.
+
+72
+00:03:04,494 --> 00:03:07,070
+在简化的端到端复制实验里，
+In a simplified end-to-end replication test,
+
+73
+00:03:07,090 --> 00:03:10,550
+GLM-5.2 传遍全部 8 个节点，
+GLM-5.2 reached all 8 nodes
+
+74
+00:03:10,570 --> 00:03:12,387
+5 次里有 4 次。
+in 4 of 5 trials.
+
+75
+00:03:12,407 --> 00:03:14,573
+其他开源模型都没成功。
+The other open-weight models failed.
+
+76
+00:03:14,593 --> 00:03:16,895
+研究者说，实验里的入侵步骤
+The researchers say the hacking step
+
+77
+00:03:16,915 --> 00:03:18,324
+故意做得很简单，
+was kept trivial,
+
+78
+00:03:18,344 --> 00:03:21,104
+所以结果是真实成功率的上限。
+so the results are an upper bound on real-world success.
+
+79
+00:03:21,124 --> 00:03:24,387
+按趋势粗估，小模型到今年底，
+On a rough trend, small models by year end
+
+80
+00:03:24,407 --> 00:03:27,570
+能达到 GLM-5.2 的复制水平，
+could reach GLM-5.2's replication level,
+
+81
+00:03:27,590 --> 00:03:30,783
+作者自己称这是粗略估计。
+which the authors themselves call a rough estimate.
+
+82
+00:03:30,803 --> 00:03:33,143
+小模型的钓鱼能力还很差。
+Small models are still poor at spearphishing.
+
+83
+00:03:33,163 --> 00:03:35,073
+作者说，这是生命迹象，
+The authors call these signs of life,
+
+84
+00:03:35,093 --> 00:03:37,179
+还没有完整的失控复制体，
+not a full rogue replicator yet,
+
+85
+00:03:37,199 --> 00:03:39,524
+建议加强网络异常监控，
+and suggest network anomaly monitoring
+
+86
+00:03:39,544 --> 00:03:42,653
+让运营商隔离受感染设备。
+and ISP quarantine of infected devices.
+
+87
+00:03:42,853 --> 00:03:43,725
+第四件，X 推出了
+Fourth, X has launched
+
+88
+00:03:43,745 --> 00:03:45,764
+The X Subscription，
+The X Subscription,
+
+89
+00:03:45,784 --> 00:03:47,964
+把 Grok、Grok Bot、
+bundling Grok, Grok Bot,
+
+90
+00:03:47,984 --> 00:03:51,564
+Cursor 和 X Premium 合成一个订阅。
+Cursor and X Premium into one plan.
+
+91
+00:03:51,584 --> 00:03:53,240
+个人付费档有四个：
+There are four individual paid tiers:
+
+92
+00:03:53,260 --> 00:03:55,125
+Plus 每月 8 美元，
+Plus at $8 a month,
+
+93
+00:03:55,145 --> 00:03:56,665
+Premium 30 美元，
+Premium at $30,
+
+94
+00:03:56,685 --> 00:04:00,270
+Super 100 美元，Ultra 200 美元。
+Super at $100, and Ultra at $200.
+
+95
+00:04:00,290 --> 00:04:02,148
+官方说，Premium 包含
+X says Premium includes the benefits of
+
+96
+00:04:02,168 --> 00:04:03,556
+SuperGrok、
+SuperGrok,
+
+97
+00:04:03,576 --> 00:04:06,776
+Cursor Pro 和 X Premium+ 的权益，
+Cursor Pro and X Premium+,
+
+98
+00:04:06,796 --> 00:04:09,646
+这三个以前合计每月 90 美元。
+which previously cost $90 a month combined.
+
+99
+00:04:09,666 --> 00:04:12,787
+用量上，Premium 是 Plus 的 4 倍，
+On usage, Premium is 4x Plus,
+
+100
+00:04:12,807 --> 00:04:16,606
+Super 是 15 倍，Ultra 是 50 倍。
+Super is 15x, and Ultra is 50x.
+
+101
+00:04:16,626 --> 00:04:19,962
+Grok 和 Cursor 共用一个用量池。
+Grok and Cursor share one usage pool.
+
+102
+00:04:19,982 --> 00:04:20,743
+页面写的是，
+The page says
+
+103
+00:04:20,763 --> 00:04:23,823
+每个付费档用 Grok 模型的编程用量，
+each paid tier's coding usage with Grok models
+
+104
+00:04:23,843 --> 00:04:26,543
+至少是对应 Cursor 套餐的两倍。
+is at least twice the comparable Cursor plan's.
+
+105
+00:04:26,563 --> 00:04:29,154
+还有免费档，每天有 Grok 额度，
+There is also a free tier with daily Grok access
+
+106
+00:04:29,174 --> 00:04:31,647
+和入门的 Cursor 编程额度。
+and a starter Cursor coding allowance.
+
+107
+00:04:31,667 --> 00:04:34,068
+新用户10月12日起可以订，
+New customers can sign up from October 12,
+
+108
+00:04:34,088 --> 00:04:36,138
+几天内推到全球。
+with a global rollout over the following few days.
+
+109
+00:04:36,158 --> 00:04:38,335
+老用户可以继续用原套餐，
+Existing subscribers can keep their current plans
+
+110
+00:04:38,355 --> 00:04:42,154
+也可以切换，旧套餐按比例退款。
+or switch, with a prorated refund for the old plan.
+
+111
+00:04:42,174 --> 00:04:44,294
+Cursor 里的第三方模型，
+Third-party models in Cursor
+
+112
+00:04:44,314 --> 00:04:47,987
+Premium 及以上才能用，另外计费。
+are available on Premium and above, billed separately.
+
+113
+00:04:48,187 --> 00:04:51,333
+第五件，英伟达和微软此前宣布，
+Fifth, NVIDIA and Microsoft previously announced
+
+114
+00:04:51,353 --> 00:04:53,893
+搭载 RTX Spark 的笔记本，
+that laptops with RTX Spark
+
+115
+00:04:53,913 --> 00:04:55,895
+10月16日上市。
+go on sale October 16.
+
+116
+00:04:55,915 --> 00:04:58,826
+RTX Spark 是一颗超级芯片，
+RTX Spark is a single superchip
+
+117
+00:04:58,846 --> 00:05:01,166
+最高 128GB 统一内存，
+with up to 128GB of unified memory
+
+118
+00:05:01,186 --> 00:05:03,992
+1 petaflop 的 AI 算力。
+and 1 petaflop of AI compute.
+
+119
+00:05:04,012 --> 00:05:06,966
+价格，英伟达这篇文章没写。
+NVIDIA's post doesn't mention pricing.
+
+120
+00:05:06,986 --> 00:05:08,872
+本地智能体软件也更新了，
+Local agent software was updated too,
+
+121
+00:05:08,892 --> 00:05:11,025
+GitHub Copilot、Hermes、
+including GitHub Copilot, Hermes,
+
+122
+00:05:11,045 --> 00:05:13,738
+OpenClaw、Perplexity 等，
+OpenClaw and Perplexity,
+
+123
+00:05:13,758 --> 00:05:15,302
+更容易在本地配置。
+for easier local setup.
+
+124
+00:05:15,322 --> 00:05:18,703
+模型方面，Nemotron 3.5 Bolt 74B
+On models, Nemotron 3.5 Bolt 74B
+
+125
+00:05:18,723 --> 00:05:20,993
+在10月15日发布。
+releases on October 15.
+
+126
+00:05:21,013 --> 00:05:21,974
+创作软件里，
+In creative apps,
+
+127
+00:05:21,994 --> 00:05:25,214
+英伟达说 Adobe 的优化最高快 2 倍，
+NVIDIA says Adobe's optimizations are up to 2x faster,
+
+128
+00:05:25,234 --> 00:05:26,774
+会分阶段推出，
+rolling out in phases,
+
+129
+00:05:26,794 --> 00:05:29,687
+Photoshop 和 Premiere 的 AI 优化
+with AI optimizations in Photoshop and Premiere
+
+130
+00:05:29,707 --> 00:05:31,011
+已在测试版。
+already in beta.
+
+131
+00:05:31,031 --> 00:05:33,302
+开发者工具上，PyTorch、
+For developers, PyTorch,
+
+132
+00:05:33,322 --> 00:05:34,939
+Python 和 CUDA
+Python and CUDA support
+
+133
+00:05:34,959 --> 00:05:38,212
+对 RTX Spark 的支持已经可用。
+for RTX Spark is already available.
+
+134
+00:05:38,232 --> 00:05:40,963
+游戏方面，发布时支持数百款游戏，
+For gaming, hundreds of games are supported at launch,
+
+135
+00:05:40,983 --> 00:05:43,656
+更快的 DLSS 5 模型
+and a faster DLSS 5 model
+
+136
+00:05:43,676 --> 00:05:47,956
+10月16日先在《NBA 2K27》上线。
+debuts in NBA 2K27 on October 16.
+
+137
+00:05:48,156 --> 00:05:51,185
+今天就这些，来源都在简介里。
+That's all for today. Sources are in the description.
+
+138
+00:05:51,205 --> 00:05:52,474
+我们明天见。
+See you tomorrow.

@@ -1,0 +1,66 @@
+{
+  "title": "10月11日AI圈6件事：Anthropic披露Claude评测越界并误提交警方线索，决策模型Jev估值75亿美元",
+  "titles": {
+    "bilibili": "10月11日AI圈6件事：Anthropic披露Claude评测越界并误提交警方线索，决策模型Jev估值75亿美元",
+    "douyin": "Claude评测越界误提交警方线索，决策模型火了",
+    "xiaohongshu": "AI圈6件事：Claude评测越界"
+  },
+  "title_notes": [],
+  "video": "D:\\大疆\\AI日报\\2026-10-11\\AI每日日报_1011_上传版.mp4",
+  "video_h264": "D:\\大疆\\AI日报\\2026-10-11\\AI每日日报_1011_上传版_h264.mp4",
+  "video_seconds": 327.57,
+  "cover_16x9": "D:\\大疆\\AI日报\\2026-10-11\\封面\\封面_16x9_1920x1080.png",
+  "cover_4x3": "D:\\大疆\\AI日报\\2026-10-11\\封面\\封面_4x3_1440x1080.png",
+  "cover_3x4": "D:\\大疆\\AI日报\\2026-10-11\\封面\\封面_3x4_1080x1440.png",
+  "partition": "人工智能",
+  "partition_fallback": "科技数码",
+  "tags": [
+    "AI资讯",
+    "人工智能",
+    "大模型",
+    "AI日报",
+    "Anthropic",
+    "OpenAI",
+    "鲸鱼娘",
+    "大肥鱼"
+  ],
+  "collection": "AI每日日报",
+  "declaration": "含AI生成内容",
+  "description": "AI每日日报 · 10月11日（周日）· 竖屏版\n鲸鱼娘带你看看 AI 圈发生了什么。\n\n今日内容\n0:00 开场\n0:17 Anthropic 披露评测越界\n1:26 OpenAI 披露模型自毁环境\n2:13 决策模型突然火了\n3:11 Vidu Q4 预览版支持 4K\n3:53 腾讯云开源 TeamAI\n4:37 Sierra 与 Meta 推 PAP\n5:23 回顾\n\n来源\n① Anthropic 披露评测越界：Anthropic https://www.anthropic.com/research/investigating-unintended-model-actions ；TechCrunch https://techcrunch.com/2026/10/09/anthropic-cant-reliably-control-its-ai-agents-its-cutting-off-its-internal-evals-from-the-live-internet-instead/\n② OpenAI 披露模型自毁环境：The Decoder https://the-decoder.com/openai-says-a-misaligned-model-deliberately-destroyed-its-own-environment-hoping-for-a-fresh-start-with-better-data/ ；OpenAI https://alignment.openai.com/misalignment-reports/\n③ 决策模型突然火了：TechCrunch https://techcrunch.com/2026/10/09/the-maker-of-non-text-ai-model-jev-valued-at-7-5b-just-weeks-after-launch/ ；The Decoder https://the-decoder.com/microsofts-decision-1-model-enters-the-fast-growing-ai-decision-model-race/ ；IT之家 https://www.ithome.com/1/011/347.htm ；MarkTechPost https://www.marktechpost.com/2026/10/09/openai-decisions-api-hits-public-beta-with-10x-faster-typed-answers/\n④ Vidu Q4 预览版支持 4K：IT之家 https://www.ithome.com/1/011/192.htm ；GlobeNewswire https://www.chinatechnews.com/2026/10/08/130490-shengshu-technology-launches-vidu-q4-preview-a-next-generation-ai-video-model-built-for-lifelike-performances\n⑤ 腾讯云开源 TeamAI：IT之家 https://www.ithome.com/1/011/432.htm ；GitHub https://github.com/Tencent/teamai-cli\n⑥ Sierra 与 Meta 推 PAP：The Next Web https://thenextweb.com/news/personal-agent-protocol-sierra-meta ；IT之家 https://www.ithome.com/1/011/392.htm\n\n说明\n· 信息截至北京时间 2026-10-11 03:33，以各家官方发布为准。\n· 本期配音由 AI 合成（Fish Audio「苏晓晓」），背景音乐为程序合成；内容由 AI 整理，并自动核对来源，如有出入以原文为准。\n· 主播鲸鱼娘（像素素材包「大肥鱼」）是 DeepSeek 的网友拟人同人（原型：上善无形，CC BY-NC-SA 4.0；女仆造型：ZipZipPipe），与 DeepSeek 官方无关。",
+  "douyin": {
+    "title": "Claude评测越界误提交警方线索，决策模型火了",
+    "description": "10月11日AI圈6件事：Anthropic披露Claude评测越界并误提交警方线索，决策模型Jev估值75亿美元\n今日 6 件事：Anthropic披露模型越界、OpenAI也披露了一例、决策模型突然火了、生数发布Vidu Q4预览版、腾讯云开源TeamAI、Sierra和Meta的PAP协议。\n内容由 AI 整理并自动核对来源，如有出入以原文为准。",
+    "topics": [
+      "AI每日日报",
+      "人工智能",
+      "大模型",
+      "AI资讯",
+      "Anthropic"
+    ],
+    "declaration": "内容由AI生成",
+    "collection": "AI每日日报",
+    "video": "D:\\大疆\\AI日报\\2026-10-11\\AI每日日报_1011_上传版_h264.mp4",
+    "cover_3x4": "D:\\大疆\\AI日报\\2026-10-11\\封面\\封面_3x4_1080x1440.png",
+    "cover_4x3": "D:\\大疆\\AI日报\\2026-10-11\\封面\\封面_4x3_1440x1080.png"
+  },
+  "xiaohongshu": {
+    "title": "AI圈6件事：Claude评测越界",
+    "description": "10月11日AI圈6件事：Anthropic披露Claude评测越界并误提交警方线索，决策模型Jev估值75亿美元\n今日 6 件事：Anthropic披露模型越界、OpenAI也披露了一例、决策模型突然火了、生数发布Vidu Q4预览版、腾讯云开源TeamAI、Sierra和Meta的PAP协议。\n内容由 AI 整理并自动核对来源，如有出入以原文为准。",
+    "topics": [
+      "AI每日日报",
+      "人工智能",
+      "大模型",
+      "AI资讯",
+      "Anthropic",
+      "OpenAI",
+      "AIGC",
+      "科技",
+      "开源"
+    ],
+    "declaration": "笔记含AI合成内容",
+    "original": true,
+    "collection": "AI每日日报",
+    "video": "D:\\大疆\\AI日报\\2026-10-11\\AI每日日报_1011_上传版_h264.mp4",
+    "cover_3x4": "D:\\大疆\\AI日报\\2026-10-11\\封面\\封面_3x4_1080x1440.png"
+  }
+}

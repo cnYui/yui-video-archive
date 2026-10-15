@@ -1,0 +1,68 @@
+{
+  "title": "10月14日AI圈5件事：谷歌发布Gemini 4 Argon，Anthropic公布防蒸馏措施，X把Grok和Cursor并进一个订阅",
+  "titles": {
+    "bilibili": "10月14日AI圈5件事：谷歌发布Gemini 4 Argon，Anthropic公布防蒸馏措施，X把Grok和Cursor并进一个订阅",
+    "douyin": "Gemini 4发布，X合并Grok和Cursor",
+    "xiaohongshu": "AI圈5件事：Gemini 4发布"
+  },
+  "title_notes": [],
+  "video": "D:\\大疆\\AI日报\\2026-10-14\\AI每日日报_1014_上传版.mp4",
+  "video_h264": "D:\\大疆\\AI日报\\2026-10-14\\AI每日日报_1014_上传版_h264.mp4",
+  "video_seconds": 352.83,
+  "cover_16x9": "D:\\大疆\\AI日报\\2026-10-14\\封面\\封面_16x9_1920x1080.png",
+  "cover_4x3": "D:\\大疆\\AI日报\\2026-10-14\\封面\\封面_4x3_1440x1080.png",
+  "cover_3x4": "D:\\大疆\\AI日报\\2026-10-14\\封面\\封面_3x4_1080x1440.png",
+  "partition": "人工智能",
+  "partition_fallback": "科技数码",
+  "tags": [
+    "AI资讯",
+    "人工智能",
+    "大模型",
+    "AI日报",
+    "谷歌",
+    "Anthropic",
+    "Grok",
+    "英伟达",
+    "鲸鱼娘",
+    "大肥鱼"
+  ],
+  "collection": "AI每日日报",
+  "declaration": "含AI生成内容",
+  "description": "AI每日日报 · 10月14日（周三）· 竖屏版\n鲸鱼娘带你看看 AI 圈发生了什么。\n\n今日内容\n0:00 开场\n0:22 Gemini 4 Argon\n1:25 Claude 防蒸馏加固\n2:35 小模型自我复制\n3:43 X 订阅合并 Grok\n4:48 RTX Spark 笔记本\n5:48 回顾\n\n来源\n① Gemini 4 Argon：Google 官方博客 https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/\n② Claude 防蒸馏加固：Anthropic https://www.anthropic.com/research/distillation-defenses\n③ 小模型自我复制：Anthropic https://www.anthropic.com/research/self-replicating-ai\n④ X 订阅合并 Grok：xAI https://x.ai/news/x-subscription\n⑤ RTX Spark 笔记本：NVIDIA https://blogs.nvidia.com/blog/local-ai-rtx-spark-laptops-software-updates/\n\n说明\n· 信息截至北京时间 2026-10-14 03:33，以各家官方发布为准。\n· 本期配音由 AI 合成（开源模型 Qwen3-TTS 女声，本机生成），背景音乐为程序合成；内容由 AI 整理，并自动核对来源，如有出入以原文为准。\n· 主播鲸鱼娘（像素素材包「大肥鱼」）是 DeepSeek 的网友拟人同人（原型：上善无形，CC BY-NC-SA 4.0；女仆造型：ZipZipPipe），与 DeepSeek 官方无关。",
+  "douyin": {
+    "title": "Gemini 4发布，X合并Grok和Cursor",
+    "description": "10月14日AI圈5件事：谷歌发布Gemini 4 Argon，Anthropic公布防蒸馏措施，X把Grok和Cursor并进一个订阅\n今日 5 件事：谷歌发布Gemini 4 Argon、Anthropic加固防蒸馏、Anthropic红队谈小模型自我复制、X把Grok和Cursor打成一个订阅、英伟达RTX Spark笔记本。\n内容由 AI 整理并自动核对来源，如有出入以原文为准。",
+    "topics": [
+      "AI每日日报",
+      "人工智能",
+      "大模型",
+      "AI资讯",
+      "谷歌"
+    ],
+    "declaration": "内容由AI生成",
+    "collection": "AI每日日报",
+    "video": "D:\\大疆\\AI日报\\2026-10-14\\AI每日日报_1014_上传版_h264.mp4",
+    "cover_3x4": "D:\\大疆\\AI日报\\2026-10-14\\封面\\封面_3x4_1080x1440.png",
+    "cover_4x3": "D:\\大疆\\AI日报\\2026-10-14\\封面\\封面_4x3_1440x1080.png"
+  },
+  "xiaohongshu": {
+    "title": "AI圈5件事：Gemini 4发布",
+    "description": "10月14日AI圈5件事：谷歌发布Gemini 4 Argon，Anthropic公布防蒸馏措施，X把Grok和Cursor并进一个订阅\n今日 5 件事：谷歌发布Gemini 4 Argon、Anthropic加固防蒸馏、Anthropic红队谈小模型自我复制、X把Grok和Cursor打成一个订阅、英伟达RTX Spark笔记本。\n内容由 AI 整理并自动核对来源，如有出入以原文为准。",
+    "topics": [
+      "AI每日日报",
+      "人工智能",
+      "大模型",
+      "AI资讯",
+      "谷歌",
+      "Anthropic",
+      "Grok",
+      "英伟达",
+      "AIGC"
+    ],
+    "declaration": "笔记含AI合成内容",
+    "original": true,
+    "collection": "AI每日日报",
+    "video": "D:\\大疆\\AI日报\\2026-10-14\\AI每日日报_1014_上传版_h264.mp4",
+    "cover_3x4": "D:\\大疆\\AI日报\\2026-10-14\\封面\\封面_3x4_1080x1440.png"
+  }
+}

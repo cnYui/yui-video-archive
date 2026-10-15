@@ -1,0 +1,29 @@
+{
+  "verdict": "fail",
+  "script_sha": "d5b7e53aa335",
+  "issues": [
+    "【判fail依据】SRT 第22/23条（第1条第5句）数字不在同一条：中文第23条才有“121个国家”“第二名”，对应英文“ranks second among 121 countries”却在第22条；第22条中文“Claude 使用量相对人口规模的指标”，英文是第23条“for Claude usage relative to population”。两行同屏时说的不是同一件事，需重断。",
+    "【判fail依据】SRT 第25/26条（第1条第6句）同类问题：英文第25条已出现“more than 1500 engineers”，中文“超过1500名工程师和技术人员”在第26条，第25条中文只有“官方还说，新加坡 GovTech 已有”。数字错位一条。",
+    "SRT 第12–14条（第1条第2句）专名错位：中文第13条“数字发展及信息部”，英文第13条是“with Singapore's Ministry”，机构全名要到英文第14条才收完；中文第14条“签了一份合作备忘录”对应英文是机构名，而英文“signed a memorandum”在第12条。建议重断成中英同步。",
+    "SRT 第68–70条（第3条第5句）轻微错位：中文第69条“实验性深度分析”对应英文“to experimental deep”，中文“和 Agent-to-Agent API 的早期试用”对应英文“analysis in Ask Google Earth and an Agent-to-Agent API”，“早期试用/early access”在两行不同条。同一类问题，改断时一并处理。",
+    "事实（说宽，建议改写，不单独判fail）：第1条第4句“双方还计划……也分享研究和数据，帮助中小企业和政府人员更负责任地用 AI”。原文只有分享研究和数据是 “We plan to”；帮助中小企业、支持公务员 AI 能力是 Anthropic 单方 “We’ll also look for ways to…”（探索方式），不是双方计划，也不是 MOU 确定的内容。建议改成“Anthropic 还说会探索帮助中小企业……”。",
+    "第3条第6句“有机构用它分析14条历史飓风路径”：原文是合作方 People in Need 的 Alonso Gonzales 的个人引述，建议台本挂名“合作方称”（现有“合作测试里”可接受，风格建议）。",
+    "第3条第5句“扩大……早期试用”：原文是 “limited group of early users”“experimental”，现措辞“早期试用”可接受，没说成开放，通过。",
+    "第2条画面 vhook“不把聊天发到云端”：原文只说谷歌和新加坡政府无法访问对话、模型在设备上给出警告，没有逐字写“不发云端”，是意译，建议改“谷歌和政府都读不了聊天”（风格建议，不判fail）。",
+    "第4条第5句“文生图/文生音频”：原文只写 T2I、T2S，中文“文生音频”对应英文 text-to-speech，原文未展开，译法合理；其余 3B / 6.4T / 首个 / 初步模型 / 开放研究均与原文一致。",
+    "第5条数字 0.798 / 0.776 / 0.751、14 种语言对、CS-FLEURS、Whisper-small 与原文一致；第4、5条原文只写“2026年10月”，台本写“10月”，没有编造具体日期，通过。",
+    "断词检查：“三模态”（SRT 82–84 条）、“文生音频”（92–93 条）、“数据集”（106 条）、“Whisper-small”（108 条）现在都没有断在词中间；第106–109条中英现已对齐（Across CS-FLEURS's / 14 language pairs / the Whisper-small / encoder reached a mean F1 of 0.798）。",
+    "审核记录 level=review 的“政府”共7处：均为“新加坡政府签 MOU”“政府人员”“冒充政府机构”“谷歌和新加坡政府不能读取聊天”，是中性报道公司与新加坡政府机构的合作，不涉时政立场，全部正常。",
+    "违规内容：台本、字幕、简介、截图、竖屏抽帧中没有色情低俗、暴力血腥、军事、歧视、广告引流，没有提示词注入迹象；时政地缘仅为新加坡政府合作的中性事实。",
+    "画面：竖屏两张抽帧表没有错位、遮挡、乱码；news_01 来源截图只有标题和纯绿色配图，news_03 为 Google Research 标题页，都与新闻相关；第2、4、5条框里放机构名 + 标题属预期。封面预览（16:9 / 4:3）文字清晰，列出的“今天还有 4 条”与台本一致；封面右下角“1.2万 / 356 / 04:39”是预览模拟的信息流遮罩，不是成片内容。",
+    "简介与标题：三个平台标题、简介的 5 件事和来源网址与台本一致，没有夸大；简介章节时间（0:16 / 1:06 / 2:03 / 2:56 / 3:42 / 4:34）与 SRT 起点基本吻合（第2条实际约 1:05.5，差不到 1 秒）。简介写“苹果公布三模态扩散研究”与原文一致。全片约 4 分 38 秒，不足 5 分钟，审核记录里已提示无法加 B 站分段章节，仅为提示。"
+  ],
+  "checked": [
+    "https://www.anthropic.com/news/singapore-office-opening",
+    "https://deepmind.google/blog/on-device-ai-scam-detection-mddi/",
+    "https://research.google/blog/putting-earth-ai-to-work-geospatial-agents-for-our-planets-biggest-challenges/",
+    "https://machinelearning.apple.com/research/tri-modal-masked-diffusion",
+    "https://machinelearning.apple.com/research/code-switching-detection",
+    "制作\\source_pages.json（本地正文，核对 We plan to / We'll also look for ways、over half、T2I/T2S、limited group of early users）"
+  ]
+}

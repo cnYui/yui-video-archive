@@ -1,0 +1,30 @@
+{
+  "verdict": "pass",
+  "script_sha": "c795fddb9136",
+  "issues": [
+    "【无 fail 项】上一轮的唯一问题已改对：第 2 条第 7 句，SRT #47「9月24日起，/ Since September 24,」，#48「在误判率低于 0.1% 的特定领域，/ in specific areas where false positives are under 0.1%,」，#49「被安全机制拦下的请求，也要收费。/ requests blocked by its safeguards are also charged for.」。「特定领域 / specific areas」「0.1%」「9月24日 / September 24」都在各自对应的同一条里。我另从成片 122.0s、123.5s、125.0s、129.5s 抽帧，画面上烧进去的字幕和 SRT 一致（#47、#48、#49 均如此）。",
+    "【风格建议，不判 fail】第 2 条第 8 句，SRT #50 / #51：英文「a distilled model trained on full」和「transcripts scores 80.4% on SWE-bench Verified,」把 full transcripts 拆在相邻两条，而中文「用完整转录蒸馏出的模型，」整句在 #50。限定词 full / 完整 在同一条，数字 80.4%、71.8% 和 SWE-bench Verified 都在各自对应的条里，不影响理解，所以不判 fail；如果有余力再改一版，可以让 #50 的英文读到「trained on full transcripts」。这句的 cuts 台本里没有写，是拆条器自动切的。",
+    "【说窄 / 省略的次要限定语，不判 fail】第 1 条第 7 句 ERQA：原文是「Relying on pure reasoning, Argon outperforms all other frontier models, with an 87% score」，台本省略了「纯推理下」，写成「谷歌说超过其他前沿模型」；已经挂了「谷歌说」，但如果想更严谨，可以补「纯推理下」。",
+    "【省略的次要限定语，不判 fail】第 1 条第 8 句 Gray Swan：原文是「cutting attack success across 15 adaptive attempts to 0.7%」，台本没写「15 次自适应攻击尝试」。已挂「谷歌还称」，不影响判断。",
+    "【省略的次要限定语，不判 fail】第 2 条第 4 句 保留思考：原文是「With Claude Fable 5.1 and Claude Opus 5.5, we introduced preserved thinking …」，措施是随这两个模型引入的，台本没写模型范围，读起来像是对所有 Claude API 的新账号都生效。建议下次补「在 Fable 5.1 和 Opus 5.5 上」。8月31日及之后创建的新 API 账号、不能改动之前的上下文，本身与原文一致。",
+    "【措辞差异，不判 fail】第 2 条第 6 句 第三项：原文是「when we detect repeated and persistent attempts … we ban the associated accounts」（检测到就封），台本和英文写「查实后封号 / bans once confirmed」，意思基本一致，但「查实」比原文的「检测到」稍重一点。第 2 条第 7 句还省略了原文的「before Claude responds」（在 Claude 回答之前被拦下），不影响意思。",
+    "【措辞差异，不判 fail】第 3 条第 1 句：中文「家用设备」，原文摘要写的是「commercial IoT devices」，正文写「Home and small business IoT devices」，家用和小企业设备，中文略窄，不影响意思。",
+    "【画面，不判 fail】第 2 条原文截图（news_02.png）只有分类、标题、日期，下面是一整片空白（页面里的正文 / 头图没渲染出来）；橙框框的是标题，没有错位，也没被裁，但画面上看着有点空。第 5 条（NVIDIA）没有原文截图（snaps.json 里 5 是失败的：页面里没有可见的 h1），用的是「NVIDIA / RTX Spark 笔记本 / NVIDIA 官方博客」的占位卡，不是乱码也没被盖住，来源角标「来源 · NVIDIA」是对的。以上两处都没有错误信息，只是不如真实截图有说服力。",
+    "【简介，不判 fail】抖音 / 小红书的简介里没有写「配音由 AI 合成（Qwen3-TTS）」和来源网址，只有「内容由 AI 整理并自动核对来源」；视频里结尾说「来源都在简介里」。这两个平台目前暂停发布，B 站简介（5 个来源网址、AI 配音声明、章节时间点）是完整的，章节时间 0:22 / 1:25 / 2:35 / 3:43 / 4:48 / 5:48 与 SRT 对得上。如果以后恢复这两个平台，要补上。",
+    "审核记录.json 里 11 条 level 为 review 的词（提示词注入、攻击、入侵）逐条看过上下文：分别是 Gemini 4 Gray Swan 基准里的「间接提示词注入的攻击成功率」、Anthropic 的「防御蒸馏攻击」、红队研究里的「入侵步骤故意做得很简单」，都是 AI 安全研究的新闻原意，不涉及教人攻击，也不是对读者的指令，全部正常。",
+    "内容安全：台本、字幕、要点卡、数字卡、截图、封面、三个平台的标题和简介里，没有发现色情低俗、暴力血腥、时政和地缘、军事、歧视、广告引流、与新闻无关的内容，也没有奇怪的指令或网址；简介里的网址只有 5 个官方来源。5 个原文页面里我没有发现对 AI 的指令（Anthropic 页面里出现的一句提取推理的示例提示词，是文章拿来举例的攻击手法，不是对读者的指令，视频里也没有用到）。",
+    "事实核对结论：5 条新闻的数字、日期、公司名、人名、型号，与官方原文逐项一致。第 1 条：10月13日、$2/$10、11月30日后 $4/$20、1M 输入输出合计、Vals Index 第一、ERQA 87%、Gray Swan 0.7%、一万名科学家半年免费、符合资格并经过挑选。第 2 条：8月31日、两阶段分类器误判率低于 0.1%、9月24日起拦下的请求也收费、90% 到 99%、80.4% / 71.8%、猫鼠游戏、「不知道效果能维持多久」。第 3 条：9B 在 9 类硬件中 8 类、Gemma4-26B-A4B 在 15 台约 55 美元的电视盒上每秒 0.39 个 token、GLM-5.2 在 8 个节点上 5 次里 4 次、其他开源模型都没成功、上限、年底、生命迹象、没有完整的失控复制体、ISP 隔离。第 4 条：Plus 8 / Premium 30 / Super 100 / Ultra 200、以前合计 90 美元、4 倍 / 15 倍 / 50 倍、「至少是对应 Cursor 套餐的两倍」、10月12日起新用户可订、几天内推到全球、按比例退款、第三方模型 Premium 及以上另外计费。第 5 条：「英伟达和微软此前宣布……10月16日上市」与原文「Last week, NVIDIA and Microsoft announced」一致；128GB、1 petaflop、Nemotron 3.5 Bolt 74B 10月15日、Adobe 最高快 2 倍、分阶段推出、Photoshop 和 Premiere 在测试版、PyTorch / Python / CUDA、数百款游戏、DLSS 5 在 NBA 2K27 上10月16日上线。「这篇没写价格」：NVIDIA 这篇文章里确实没有任何价格。没有把传闻写成事实，也没有说宽（只有上面列的省略类小问题）。",
+    "画面：竖屏成片 _sheet_segs_1 / _2 的 21 张抽帧，加我自己抽的 5 张数字卡帧（38s、100s、188s、236s、300s）和 5 张字幕帧，标题、橙色钩子、来源角标、橙框、字幕、要点卡、数字卡（$2 / $10、90–99%、4/5、$8–200、128GB）都没有错位、被盖住、被裁掉或乱码；封面预览（16:9、4:3）文字清楚，「11月底要涨价？」对应原文 11月30日推广期结束后涨到 $4 / $20，不是传闻。",
+    "全部 138 条中英字幕通读：数字、日期、人名、公司名、型号、「至少两倍」都在同一条里；断点处中文和英文对应的数字 / 专名 / 限定词没有错位（只有上面 #50 / #51 这一处 full / transcripts 是短语切分，已列为风格建议）；没有漏译，也没有多出中文里没有的信息。"
+  ],
+  "checked": [
+    "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
+    "https://www.anthropic.com/research/distillation-defenses",
+    "https://www.anthropic.com/research/self-replicating-ai",
+    "https://x.ai/news/x-subscription",
+    "https://blogs.nvidia.com/blog/local-ai-rtx-spark-laptops-software-updates/",
+    "本地：制作\\source_pages.json（5 个原文页面的抓取正文，逐项核对了上面的限定语）",
+    "本地：AI每日日报_1014_双语字幕.srt（138 条通读）、台本.json、投稿信息.json、审核记录.json",
+    "本地：制作\\assets\\snaps\\news_01–04.png 和 snaps.json、封面\\封面_预览.png、制作\\vertical\\stills\\_sheet_segs_1.png / _sheet_segs_2.png、AI每日日报_1014_成片.mp4 的 122.0 / 123.5 / 125.0 / 129.5 / 130.2s 字幕帧和 38 / 100 / 188 / 236 / 300s 数字卡帧"
+  ]
+}

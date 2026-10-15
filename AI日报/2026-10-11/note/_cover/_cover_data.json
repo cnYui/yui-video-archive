@@ -1,0 +1,40 @@
+{
+  "line1": "Claudeが評価中に",
+  "line2": "偽の情報提供？",
+  "l1px": 168,
+  "l2px": 236,
+  "maxw": 1320,
+  "safe": [
+    300,
+    1620
+  ],
+  "textCx": 900,
+  "scale": 9,
+  "frame": [
+    64,
+    64
+  ],
+  "footRow": 62,
+  "fishX": 1074,
+  "foot": 1062,
+  "tag": "",
+  "theme": {
+    "bg": "#FFFFFF",
+    "lead": "#8A93AD",
+    "accent": "#4A88DA",
+    "list": "#4D5670",
+    "more": "#9AA2B8"
+  },
+  "others": [
+    "OpenAIも逸脱事例を公表",
+    "意思決定モデルが急浮上",
+    "生数科技がVidu Q4公開",
+    "テンセントがTeamAI公開",
+    "SierraとMetaがPAP発表"
+  ],
+  "othersHead": "今日はほかに5本",
+  "othersMore": "……全6本",
+  "listX": 300,
+  "listW": 740,
+  "listBottom": 1000
+}
