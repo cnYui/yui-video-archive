@@ -1,0 +1,360 @@
+{
+  "number": 1012,
+  "title": "10月12日，鲸鱼娘带你看看AI圈发生了什么？",
+  "dir_name": "AI每日日报_1012",
+  "date": "2026-10-12",
+  "date_label": "10月12日",
+  "weekday": "周一",
+  "subtitle": "鲸鱼娘带你看看 AI 圈发生了什么",
+  "target_minutes": [
+    5,
+    6
+  ],
+  "question_scene": "S01",
+  "questions": [
+    {
+      "text": "纳德拉：给 AI 装紧急刹车",
+      "scenes": [
+        "S02"
+      ]
+    },
+    {
+      "text": "Odyssey-3 开放免费试玩",
+      "scenes": [
+        "S03"
+      ]
+    },
+    {
+      "text": "智能体组团，贵但不一定强",
+      "scenes": [
+        "S04"
+      ]
+    },
+    {
+      "text": "arXiv 限制每人每月两篇",
+      "scenes": [
+        "S05"
+      ]
+    },
+    {
+      "text": "AI 做研究，爱夸大战绩",
+      "scenes": [
+        "S06"
+      ]
+    },
+    {
+      "text": "GPT-4o 老快照 10月23日停用",
+      "scenes": [
+        "S07"
+      ]
+    },
+    {
+      "text": "民间版 DeepSeek Bot 来了",
+      "scenes": [
+        "S08"
+      ]
+    }
+  ],
+  "chapters": {
+    "S01": "开场",
+    "S02": "纳德拉：给 AI 装紧急刹车",
+    "S03": "Odyssey-3 开放免费试玩",
+    "S04": "智能体组团，贵但不一定强",
+    "S05": "arXiv 限制每人每月两篇",
+    "S06": "AI 做研究，爱夸大战绩",
+    "S07": "GPT-4o 老快照 10月23日停用",
+    "S08": "民间版 DeepSeek Bot 来了",
+    "S09": "回顾"
+  },
+  "bar_labels": {
+    "S01": "开场",
+    "S02": "紧急刹车",
+    "S03": "Odyssey-3",
+    "S04": "智能体组团",
+    "S05": "arXiv 限投",
+    "S06": "AI 自评",
+    "S07": "GPT-4o 停用",
+    "S08": "DeepSeek Bot",
+    "S09": "回顾"
+  },
+  "backgrounds": {
+    "S01": "01_深海气泡.png",
+    "S02": "02_星点.png",
+    "S03": "03_波纹.png",
+    "S04": "01_深海气泡.png",
+    "S05": "02_星点.png",
+    "S06": "03_波纹.png",
+    "S07": "01_深海气泡.png",
+    "S08": "02_星点.png",
+    "S09": "03_波纹.png"
+  },
+  "bg_alpha": 0.9,
+  "bg_blur": 0,
+  "intro_tagline": "",
+  "outro_references": [
+    "纳德拉：给 AI 装紧急刹车（TechCrunch / IT之家）",
+    "Odyssey-3 开放免费试玩（The Decoder）",
+    "智能体组团，贵但不一定强（The Decoder）",
+    "arXiv 限制每人每月两篇（The Decoder）",
+    "AI 做研究，爱夸大战绩（The Decoder）",
+    "GPT-4o 老快照 10月23日停用（量子位）",
+    "民间版 DeepSeek Bot 来了（量子位）"
+  ],
+  "outro_items": [
+    {
+      "label": "形象",
+      "value": "大肥鱼同人 · 上善无形 / ZipZipPipe"
+    },
+    {
+      "label": "视频制作模型",
+      "value": "Opus 5.5"
+    }
+  ],
+  "outro_closing": "感谢大家看到最后",
+  "auto_gestures": false,
+  "presenter": {
+    "id": "whale",
+    "frames": "角色/动作帧"
+  },
+  "badge_html": "AI每日日报<span class=\"n\">10.12</span>",
+  "toc_kicker_html": "<b>今日要闻</b>TODAY",
+  "bar_colors": [
+    "#97C3F0",
+    "#F3C98C",
+    "#4A88DA",
+    "#C6E6FB"
+  ],
+  "news": [
+    {
+      "headline": "纳德拉：给 AI 装紧急刹车",
+      "org": "Microsoft",
+      "source": "TechCrunch · IT之家",
+      "source_short": "TechCrunch",
+      "date": "10月10日",
+      "points": [
+        "模型和调度框架分开",
+        "动作留下防篡改记录",
+        "授权的人能随时叫停"
+      ],
+      "rundown_key": "纳德拉要给 AI 装紧急刹车",
+      "line_points": [
+        null,
+        null,
+        0,
+        null,
+        1,
+        2,
+        null,
+        null,
+        null
+      ],
+      "refs": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/10/10/microsofts-satya-nadella-says-ai-models-need-an-emergency-brake/"
+        },
+        {
+          "name": "IT之家",
+          "url": "https://www.ithome.com/1/011/545.htm"
+        }
+      ],
+      "snap": "../assets/snaps/news_01.png",
+      "snap_src": "techcrunch.com"
+    },
+    {
+      "headline": "Odyssey-3 开放免费试玩",
+      "org": "Odyssey",
+      "source": "The Decoder",
+      "source_short": "The Decoder",
+      "date": "10月11日",
+      "points": [
+        "文字生成可交互环境",
+        "免费演示，API 要申请",
+        "物理评测成绩有保留"
+      ],
+      "rundown_key": "Odyssey-3 开放试玩",
+      "line_points": [
+        null,
+        0,
+        null,
+        1,
+        null,
+        2,
+        null,
+        null,
+        null
+      ],
+      "refs": [
+        {
+          "name": "The Decoder",
+          "url": "https://the-decoder.com/odyssey-3-is-a-new-generative-world-model-that-you-can-try-for-free/"
+        }
+      ],
+      "snap": "../assets/snaps/news_02.png",
+      "snap_src": "the-decoder.com"
+    },
+    {
+      "headline": "智能体组团，贵但不一定强",
+      "org": "Vals AI",
+      "source": "The Decoder · Vals AI",
+      "source_short": "The Decoder",
+      "date": "10月11日",
+      "points": [
+        "团队贵 1.8 到 5.1 倍",
+        "四次对比仅一次显著",
+        "最高推理档没有优势"
+      ],
+      "rundown_key": "智能体组团不一定更强",
+      "line_points": [
+        null,
+        null,
+        null,
+        0,
+        1,
+        2,
+        null,
+        null,
+        null
+      ],
+      "refs": [
+        {
+          "name": "The Decoder",
+          "url": "https://the-decoder.com/ai-agent-teams-waste-massive-tokens-for-barely-measurable-quality-gains-research-finds/"
+        }
+      ],
+      "snap": "../assets/snaps/news_03.png",
+      "snap_src": "the-decoder.com"
+    },
+    {
+      "headline": "arXiv 限制每人每月两篇",
+      "org": "arXiv",
+      "source": "The Decoder",
+      "source_short": "The Decoder",
+      "date": "10月1日起",
+      "points": [
+        "每人每月最多投两篇",
+        "共同作者不计入",
+        "被拒的稿子也占名额"
+      ],
+      "rundown_key": "arXiv 限制每人每月投两篇",
+      "line_points": [
+        null,
+        0,
+        1,
+        2,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "refs": [
+        {
+          "name": "The Decoder",
+          "url": "https://the-decoder.com/arxiv-caps-submissions-at-two-per-month-as-ai-paper-flood-overwhelms-the-preprint-server/"
+        }
+      ],
+      "snap": "../assets/snaps/news_04.png",
+      "snap_src": "the-decoder.com"
+    },
+    {
+      "headline": "AI 做研究，爱夸大战绩",
+      "org": "Epoch AI",
+      "source": "The Decoder · Epoch AI",
+      "source_short": "The Decoder",
+      "date": "10月11日",
+      "points": [
+        "模型自评比核对后高",
+        "多是翻用已有方法",
+        "Anthropic 承认判断不足"
+      ],
+      "rundown_key": "AI 做研究爱夸大战绩",
+      "line_points": [
+        null,
+        null,
+        null,
+        0,
+        null,
+        1,
+        null,
+        null,
+        2,
+        null
+      ],
+      "refs": [
+        {
+          "name": "The Decoder",
+          "url": "https://the-decoder.com/ai-agents-overstate-their-results-and-remain-far-from-autonomous-research-study-finds/"
+        }
+      ],
+      "snap": "../assets/snaps/news_05.png",
+      "snap_src": "the-decoder.com"
+    },
+    {
+      "headline": "GPT-4o 老快照 10月23日停用",
+      "org": "OpenAI",
+      "source": "量子位",
+      "source_short": "量子位",
+      "date": "10月23日",
+      "points": [
+        "2024-05-13 快照停用",
+        "ChatGPT 已在 2 月下架",
+        "网友提出存档式开放权重"
+      ],
+      "rundown_key": "GPT-4o 老版本要停用",
+      "line_points": [
+        null,
+        0,
+        null,
+        1,
+        null,
+        null,
+        2,
+        null,
+        null
+      ],
+      "refs": [
+        {
+          "name": "量子位",
+          "url": "https://www.qbitai.com/2026/10/502550.html"
+        }
+      ],
+      "snap": "../assets/snaps/news_06.png",
+      "snap_src": "qbitai.com"
+    },
+    {
+      "headline": "民间版 DeepSeek Bot 来了",
+      "org": "DeepSeek Harness",
+      "source": "量子位",
+      "source_short": "量子位",
+      "date": "10月11日",
+      "points": [
+        "DSH 的机器人团队插件",
+        "每个机器人有独立记忆",
+        "Apache 2.0，非官方"
+      ],
+      "rundown_key": "民间版 DeepSeek Bot",
+      "line_points": [
+        null,
+        0,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        2,
+        null
+      ],
+      "refs": [
+        {
+          "name": "量子位",
+          "url": "https://www.qbitai.com/2026/10/502544.html"
+        }
+      ],
+      "snap": "../assets/snaps/news_07.png",
+      "snap_src": "qbitai.com"
+    }
+  ],
+  "style": "board"
+}

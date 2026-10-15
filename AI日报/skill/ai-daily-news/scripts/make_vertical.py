@@ -772,7 +772,10 @@ def cmd_mix(e):
     bgm = b * (10 ** (bed_db / 20)) * swell[:, None]
     bgm[:SR] *= np.linspace(0, 1, SR)[:, None]
     bgm[-2 * SR:] *= np.linspace(1, 0, 2 * SR)[:, None]
-    mix = voice + bgm
+    if os.environ.get("DAILY_SILENT") == "1":              # 2026-10-13 用户：Fish 额度用完，先发“无配音 + BGM”版；配音轨只用来定字幕时间和 BGM 起伏，不混进成片
+        mix = bgm.copy()
+    else:
+        mix = voice + bgm
     g = 10 ** ((TARGET_LUFS - _lufs(mix)) / 20)
     mix *= g
     lim = 10 ** (-1.0 / 20)
@@ -897,7 +900,7 @@ def cmd_finish(e, upload=False):
     last = lambda pat: (re.findall(pat, err) or ["—"])[-1]
     lufs, lra, tp = last(r"I:\s+(-?[\d.]+|-inf) LUFS"), last(r"LRA:\s+([\d.]+) LU"), last(r"Peak:\s+(-?[\d.]+|-inf) dBFS")
     lag, corr, corr0 = sync_check(e, T)
-    ok = (w, h) == (1080, 2340) and frames == T["frames"] and abs(dur - T["total"]) < 0.15 and lag == 0
+    ok = (w, h) == (1080, 2340) and frames == T["frames"] and abs(dur - T["total"]) < 0.15 and (lag == 0 or os.environ.get("DAILY_SILENT") == "1")   # 无配音版没有口型可对
     qa = dict(width=w, height=h, frames=frames, want_frames=T["frames"], duration=round(dur, 3), total=T["total"], lufs=lufs, lra=lra, true_peak=tp,
               mouth_best_lag=lag, mouth_corr=round(corr, 3), mouth_corr0=round(corr0, 3), subs=len(T["subs"]), ok=bool(ok))
     (e.work / "qa.json").write_text(json.dumps(qa, ensure_ascii=False, indent=1), encoding="utf-8")

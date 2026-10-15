@@ -1,0 +1,67 @@
+{
+  "title": "10月13日AI圈6件事：Meta发布首个前沿模型Muse Wonder，GPT-6.1 Sol默认上下文扩到50万，微软公布Maia 300芯片",
+  "titles": {
+    "bilibili": "10月13日AI圈6件事：Meta发布首个前沿模型Muse Wonder，GPT-6.1 Sol默认上下文扩到50万，微软公布Maia 300芯片",
+    "douyin": "Meta发布Muse Wonder，Sol上下文扩到50万",
+    "xiaohongshu": "AI圈6件事：Meta新模型"
+  },
+  "title_notes": [],
+  "video": "D:\\大疆\\AI日报\\2026-10-13\\AI每日日报_1013_上传版.mp4",
+  "video_h264": "D:\\大疆\\AI日报\\2026-10-13\\AI每日日报_1013_上传版_h264.mp4",
+  "video_seconds": 374.5,
+  "cover_16x9": "D:\\大疆\\AI日报\\2026-10-13\\封面\\封面_16x9_1920x1080.png",
+  "cover_4x3": "D:\\大疆\\AI日报\\2026-10-13\\封面\\封面_4x3_1440x1080.png",
+  "cover_3x4": "D:\\大疆\\AI日报\\2026-10-13\\封面\\封面_3x4_1080x1440.png",
+  "partition": "人工智能",
+  "partition_fallback": "科技数码",
+  "tags": [
+    "AI资讯",
+    "人工智能",
+    "大模型",
+    "AI日报",
+    "Meta",
+    "OpenAI",
+    "微软",
+    "鲸鱼娘",
+    "大肥鱼"
+  ],
+  "collection": "AI每日日报",
+  "declaration": "含AI生成内容",
+  "description": "AI每日日报 · 10月13日（周二）· 竖屏版\n鲸鱼娘带你看看 AI 圈发生了什么。\n\n今日内容\n0:00 开场\n0:24 Meta 首个前沿模型\n1:38 Sol 上下文扩到 50 万\n2:22 微软 Maia 300 芯片\n3:13 AlphaProof Nexus 解题\n4:06 清空聊天记录更会想\n5:12 千问发布 QwenGyre\n6:10 回顾\n\n来源\n① Meta 首个前沿模型：TechCrunch https://techcrunch.com/2026/10/12/meta-releases-its-first-frontier-model-muse-wonder/ ；The Decoder https://the-decoder.com/metas-new-frontier-model-muse-wonder-full-breaks-into-the-ai-top-tier/\n② Sol 上下文扩到 50 万：IT之家 https://www.ithome.com/1/011/736.htm\n③ 微软 Maia 300 芯片：The Decoder https://the-decoder.com/microsoft-plans-to-scale-its-own-maia-ai-chips-to-gigawatt-levels-by-2027/ ；IT之家 https://www.ithome.com/1/012/115.htm\n④ AlphaProof Nexus 解题：The Decoder https://the-decoder.com/google-deepminds-alphaproof-nexus-solved-dozens-of-open-math-problems-and-actually-got-peer-reviewed/\n⑤ 清空聊天记录更会想：The Decoder https://the-decoder.com/clearing-chat-history-helps-ai-agents-find-better-solutions/\n⑥ 千问发布 QwenGyre：IT之家 https://www.ithome.com/1/012/066.htm\n\n说明\n· 信息截至北京时间 2026-10-13 03:33，以各家官方发布为准。\n· 本期配音由 AI 合成（开源模型 Qwen3-TTS 女声，本机生成），背景音乐为程序合成；内容由 AI 整理，并自动核对来源，如有出入以原文为准。\n· 主播鲸鱼娘（像素素材包「大肥鱼」）是 DeepSeek 的网友拟人同人（原型：上善无形，CC BY-NC-SA 4.0；女仆造型：ZipZipPipe），与 DeepSeek 官方无关。",
+  "douyin": {
+    "title": "Meta发布Muse Wonder，Sol上下文扩到50万",
+    "description": "10月13日AI圈6件事：Meta发布首个前沿模型Muse Wonder，GPT-6.1 Sol默认上下文扩到50万，微软公布Maia 300芯片\n今日 6 件事：Meta发布首个前沿模型、GPT-6.1 Sol默认上下文扩到50万、微软公布Maia 300芯片、AlphaProof Nexus登上《Science》、清空聊天记录能让智能体找到更好的思路、千问的QwenGyre。\n内容由 AI 整理并自动核对来源，如有出入以原文为准。",
+    "topics": [
+      "AI每日日报",
+      "人工智能",
+      "大模型",
+      "AI资讯",
+      "Meta"
+    ],
+    "declaration": "内容由AI生成",
+    "collection": "AI每日日报",
+    "video": "D:\\大疆\\AI日报\\2026-10-13\\AI每日日报_1013_上传版_h264.mp4",
+    "cover_3x4": "D:\\大疆\\AI日报\\2026-10-13\\封面\\封面_3x4_1080x1440.png",
+    "cover_4x3": "D:\\大疆\\AI日报\\2026-10-13\\封面\\封面_4x3_1440x1080.png"
+  },
+  "xiaohongshu": {
+    "title": "AI圈6件事：Meta新模型",
+    "description": "10月13日AI圈6件事：Meta发布首个前沿模型Muse Wonder，GPT-6.1 Sol默认上下文扩到50万，微软公布Maia 300芯片\n今日 6 件事：Meta发布首个前沿模型、GPT-6.1 Sol默认上下文扩到50万、微软公布Maia 300芯片、AlphaProof Nexus登上《Science》、清空聊天记录能让智能体找到更好的思路、千问的QwenGyre。\n内容由 AI 整理并自动核对来源，如有出入以原文为准。",
+    "topics": [
+      "AI每日日报",
+      "人工智能",
+      "大模型",
+      "AI资讯",
+      "Meta",
+      "OpenAI",
+      "微软",
+      "AIGC",
+      "科技"
+    ],
+    "declaration": "笔记含AI合成内容",
+    "original": true,
+    "collection": "AI每日日报",
+    "video": "D:\\大疆\\AI日报\\2026-10-13\\AI每日日报_1013_上传版_h264.mp4",
+    "cover_3x4": "D:\\大疆\\AI日报\\2026-10-13\\封面\\封面_3x4_1080x1440.png"
+  }
+}

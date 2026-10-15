@@ -1,0 +1,46 @@
+{
+  "line1": "Claude 在评测里",
+  "line2": "递了条假线索？",
+  "l1px": 168,
+  "l2px": 236,
+  "maxw": 1320,
+  "safe": [
+    300,
+    1620
+  ],
+  "textCx": 900,
+  "scale": 9,
+  "frame": [
+    64,
+    64
+  ],
+  "footRow": 62,
+  "fishX": 1074,
+  "foot": 1062,
+  "tag": "",
+  "theme": {
+    "bg": "#FFFFFF",
+    "lead": "#8A93AD",
+    "accent": "#4A88DA",
+    "list": "#4D5670",
+    "more": "#9AA2B8"
+  },
+  "_theme": "blue",
+  "_pose": "pose_huh",
+  "_eyes": "",
+  "_fx": "",
+  "_qmark": false,
+  "_place": "right",
+  "others": [
+    "OpenAI 披露模型自毁环境",
+    "决策模型突然火了",
+    "Vidu Q4 预览版支持 4K",
+    "腾讯云开源 TeamAI",
+    "Sierra 与 Meta 推 PAP"
+  ],
+  "othersHead": "今天还有 5 条",
+  "othersMore": "",
+  "listX": 300,
+  "listW": 740,
+  "listBottom": 1000
+}

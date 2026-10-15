@@ -1,0 +1,45 @@
+{
+  "line1": "Anthropic 去新加坡",
+  "line2": "要做什么？",
+  "l1px": 168,
+  "l2px": 236,
+  "maxw": 1320,
+  "safe": [
+    300,
+    1620
+  ],
+  "textCx": 900,
+  "scale": 9,
+  "frame": [
+    64,
+    64
+  ],
+  "footRow": 62,
+  "fishX": 1074,
+  "foot": 1062,
+  "tag": "",
+  "theme": {
+    "bg": "#FFFFFF",
+    "lead": "#8A93AD",
+    "accent": "#4A88DA",
+    "list": "#4D5670",
+    "more": "#9AA2B8"
+  },
+  "_theme": "blue",
+  "_pose": "think_m0",
+  "_eyes": "idle_look_ur_m0",
+  "_fx": "",
+  "_qmark": true,
+  "_place": "right",
+  "others": [
+    "谷歌设备端反诈模型",
+    "Google Earth AI 地理代理",
+    "苹果三模态扩散模型",
+    "苹果检测语音混语"
+  ],
+  "othersHead": "今天还有 4 条",
+  "othersMore": "",
+  "listX": 300,
+  "listW": 740,
+  "listBottom": 1000
+}

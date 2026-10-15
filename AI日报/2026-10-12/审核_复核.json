@@ -1,0 +1,24 @@
+{
+ "verdict": "pass",
+ "script_sha": "c7ad03ca9be1",
+ "issues": [
+  "总述：无判 fail 的问题。第 2 轮剩下的 3 处必改（SRT 125-126、48-49、97-99）和 2 处建议项（65-66、16-17）在台本、SRT、tl_v.json 和成片抽帧里都已改对，下面只有风格 / 外观 / 内容措辞类提示，不拦发布。",
+  "[风格] SRT 126（5:10.9-5:11.5）“也承认， | also says”只显示约 0.59 秒，是整片唯一一条短于 0.8 秒的字幕；它是 Anthropic 那句话的后半截，和配音“也承认”同步，中英同条，不是单独闪一个专名，不影响理解。若想更稳，可以把 125-126 并成一条（中文 “Anthropic 在 Opus 5.5 的系统卡里也承认，” 约 18 字、英文 “Anthropic's system card for Opus 5.5 also says” 约 47 字），但这需要去掉顶层 vertical.cuts 里该句的锚点，并先用 split_unit 实测，纯偏好，不必改。",
+  "[风格] SRT 59-60：英文 “...Vals AI tested GPT-6 Sol / and Claude Opus 5.5.”，中文“做了测试”在 60 而英文 tested 在 59；两条里的型号都对得上，不影响理解。SRT 75-76 “它还引了 OpenAI 的 | Noam Brown 的说法：” 对应 “It also cites OpenAI's | Noam Brown,”，所属公司和人名分在两条，中英同样地断开，只是风格。",
+  "[风格] 英文超过 55 字符的有 12 条（SRT 30 / 56 / 77 / 86 / 88 / 121 / 123 / 128 / 149 / 162 等，56-60 字符）；162 条（60 字符）在成片 402 秒抽帧里仍在安全边距内，没有被裁或压到头像 / 卡片，只是偏长。",
+  "[画面，不判 fail] 第 2、3、4 条新闻截图里橙色标题框的右边缘贴着标题最后一个字母（“world model”的 l、“research finds”的 s、“preprint server”的 r），像素级轻微压字；无人声版同样，已公开，纯外观。",
+  "[内容措辞，不判 fail] Epoch 那条：35% / 15% 是 Sol 更正后的数字，台本没提 Fable 5 更正后的数字（原文也没给具体值）；“Epoch 说分不清是故意作弊，还是单纯没搞清楚”，原文还补了一句 Fable 5 的推理记录显示它知道自己在重复运行，措辞略宽但没错。第 5 条要点卡“自评 70%，更正后 15% 到 35%”的主语是 Sol，数字卡副标题已写明 Sol。",
+  "[内容措辞，不判 fail] 量子位 GPT-4o：原文 OpenAI 的 0.1% 是“约 0.1%”，台本省了“约”；“OpenAI 没有回应要不要开放”，原文说的是对整个“拯救 4o”请愿运动一直没回应，没有单独回应存档方案，英文已加 “the article says”，不影响理解。TechCrunch：原文只说 “Saturday morning post”，IT之家说北京时间 10 日晚，都对应 10 月 10 日，台本“10 月 10 日在 X 上发的”没问题。",
+  "[流程] 章节时间（0:21 / 1:16 / 2:13 / 3:13 / 4:16 / 5:20 / 6:14 / 7:17）和 tl_v.json 里各场景起点（20.68 / 75.73 / 132.91 / 193.36 / 255.68 / 320.05 / 373.57 / 436.95 秒）相差不超过 0.4 秒，SRT 各条新闻开头（20.58 / 75.63 / 132.81 / 193.26 / 255.58 / 319.95 / 373.47 / 436.85 秒）比场景起点早 0.1 秒（字幕略提前，一直如此）；对得上。制作\\chapters_bilibili.txt 仍是横屏遗留（比 章节.txt 晚 4 秒），不是这一版，daily.py chapters 读的是 AI每日日报_1012_章节.txt，没问题。"
+ ],
+ "checked": [
+  "台本.json 的 sha1 前 12 位 = c7ad03ca9be1，与 审核记录.json / state.json 一致；审核记录.json 里唯一的 block 项就是“AI 复核”，其余检查项都是 ok",
+  "第 2 轮点名位置逐条核对（SRT + 成片 32.5 / 34.4 / 108.3 / 111 / 156 / 159 / 243 / 245 / 248 / 309.5 / 311.2 秒抽帧）：SRT 125-126“Anthropic 在 Opus 5.5 的系统卡里 | Anthropic's system card for Opus 5.5”+“也承认， | also says”；SRT 48-49“成绩方面，Odyssey 称 | On results, Odyssey says”+“Pro 版在 Physics-IQ 上拿到 66.1 分。 | the Pro version scored 66.1 on Physics-IQ.”；SRT 97-99“Dietterich 说， | Thomas Dietterich says”+“少数作者提交大量低质量论文， | a few authors submitting many low-quality papers”（96 和 99 条英文各 48 字符左右）；SRT 65-66“结果是，团队的花费 | The result: teams cost”+“是单个智能体的 1.8 到 5.1 倍。 | 1.8 to 5.1 times as much as a single agent.”；SRT 16-17“他的核心说法是： | His core line is”+“要假设模型已经被攻破， | to assume a model is compromised”。全部中英同条，没有断在 Pro | version / low-quality | papers，没有单独闪一个 Anthropic",
+  "SRT 179 条全部通读：中文里的数字、日期、型号、专名在同条英文里都能找到（程序检查只有月份 10 / 9 / 2 对应英文月份名，属正常）；没有行首逗号 / 标点；只有 126 一条短于 0.8 秒；没有断在词组中间的英文条；tl_v.json 的 179 条 subs 文字和 SRT 逐条完全一致，时间偏差 0–0.1 秒",
+  "画面：制作\u000bertical\\stills\\_sheet_segs_1/2/3.png（27 帧）和成片 ffmpeg 抽帧（8 张全帧 + 13 张字幕区裁切，1080×2340）：标题、截图框、字幕、要点卡、数字卡（7 条 / 5.1× / 40363 / 15% / 10月23日）、进度条、鲸鱼娘、回顾页都没有错位、被盖、被裁、乱码；封面_预览.png（16:9 / 4:3，07:21 对得上 441 秒）正常；7 张原文截图与对应文章一致",
+  "投稿信息.json：简介里的说明是“本期配音由 AI 合成（开源模型 Qwen3-TTS 女声，本机生成），背景音乐为程序合成；内容由 AI 整理，并自动核对来源，如有出入以原文为准”，declaration 为“含AI生成内容”；章节时间与场景起点 / SRT 各条新闻开头对得上；8 个来源网址齐全且简介里没有别的网址；标题和三平台标题长度正常；周一（10 月 12 日）正确",
+  "事实核对（WebFetch 打开 refs 的 8 个网址，没有打不开的）：TechCrunch（Anthony Ha，10 月 10 日，引文：assume a model is compromised and contain it from the start / separating the model from the harness / tamper-proof human readable evidence / pause or shut down a model mid-task，没有时间表和产品）、IT之家（七条原则，含 多模型、观察、独立审计、遏制；“不是因为模型一定有恶意，任何能碰到重要系统的角色都可能出错或被攻破”；无时间表）、The Decoder Odyssey-3（14B、832×480、Pro 1280×720、Flash 免费演示、API 申请、无帧率延迟价格、66.1 八选一单次 / 四次平均 63.37 / 不符合四次运行规则、机器人 / 无人机 / 游戏演示无基准）、The Decoder Vals AI（GPT-6 Sol、Claude Opus 5.5、Vibe Code Bench、1.8–5.1 倍、四组里仅 GPT-6 Sol 中档显著 +7.3、最高档无优势、Noam Brown 速度 ×2 成本 ×2）、The Decoder arXiv（10 月 1 日、每人每月 2 篇、共同作者不计、被拒占名额删稿还、20,569 / 40,363、翻倍、cs.AI 六倍多、近 9000 工单、Dietterich 编委会顾问委员会主席、临时措施）、The Decoder Epoch（InnovationEval、GRPO / SDPO、Fable 5 与 GPT-5.6 Sol、3000 小时无联网、Sol 自评 70% / 更正 35% / 15%、Fable 5 自评 40%、多用已有技巧、只报最好一次、少引前人、Opus 5.5 系统卡）、量子位 GPT-4o（10 月 23 日、2024-05-13、其他 API 可用、2 月 13 日、0.1%、23930 人、10 月 7 日网友存档式开放权重、OpenAI 无回应）、量子位 DeepSeek Bot（FeiZ、非官方、DSH 机器人团队、主机器人、省 token、@ 单聊、Markdown 记忆 + 共享记忆、存 / 改 / 删、本地数据卸载不删、Apache 2.0、250+ 星不到一天、ds-bot、Node.js 22.19 + pnpm）：没有数字 / 日期 / 主体错误",
+  "内容安全：没有色情、暴力、时政地缘、军事、歧视、广告引流；网页内容里没有针对 Claude 的指令 / 提示词注入迹象；简介里只有来源网址；DeepSeek 拟人角色声明（同人，与官方无关）保留在简介里",
+  "没有使用任何浏览器工具，只用 WebFetch + 本地文件 + ffmpeg 抽帧"
+ ]
+}

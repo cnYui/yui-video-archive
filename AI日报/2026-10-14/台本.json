@@ -1,0 +1,684 @@
+{
+  "date": "2026-10-14",
+  "opening": [
+    {
+      "text": "早上好，我是鲸鱼娘，今天是10月14日。",
+      "en": "Good morning, I'm Whale Girl. Today is October 14.",
+      "tts": "早上好，我是鲸鱼娘，今天是十月十四日。",
+      "expr": "开心"
+    },
+    {
+      "text": "今天说五件事：谷歌发布 Gemini 4 Argon，Anthropic 加固防蒸馏，Anthropic 红队谈小模型自我复制，X 把 Grok 和 Cursor 打成一个订阅，还有英伟达 RTX Spark 笔记本。",
+      "en": "Five stories today: Google releases Gemini 4 Argon, Anthropic hardens its anti-distillation defenses, Anthropic's red team looks at small models self-replicating, X bundles Grok and Cursor into one subscription, and NVIDIA's RTX Spark laptops.",
+      "tts": "今天说五件事：谷歌发布 Gemini 四 Argon，Anthropic 加固防蒸馏，Anthropic 红队谈小模型自我复制，X 把 Grok 和 Cursor 打成一个订阅，还有英伟达 RTX Spark 笔记本。",
+      "cuts": [
+        [
+          "今天说五件事：",
+          "Five stories today:"
+        ],
+        [
+          "谷歌发布 Gemini 4 Argon，",
+          "Google releases Gemini 4 Argon,"
+        ],
+        [
+          "Anthropic 加固防蒸馏，",
+          "Anthropic hardens its anti-distillation defenses,"
+        ],
+        [
+          "Anthropic 红队谈小模型自我复制，",
+          "Anthropic's red team looks at small models self-replicating,"
+        ],
+        [
+          "X 把 Grok 和 Cursor 打成一个订阅，",
+          "X bundles Grok and Cursor into one subscription,"
+        ]
+      ]
+    }
+  ],
+  "news": [
+    {
+      "headline": "Gemini 4 Argon",
+      "bar_label": "Gemini 4",
+      "org": "Google",
+      "source": "Google 官方博客",
+      "source_short": "Google",
+      "date": "10月13日",
+      "rundown_key": "谷歌发布 Gemini 4 Argon",
+      "vhook": "推广价到 11 月 30 日",
+      "points": [
+        "API 全球开放",
+        "推广价 2 / 10 美元",
+        "11 月 30 日后翻倍"
+      ],
+      "lines": [
+        {
+          "text": "第一件，谷歌发布了 Gemini 4 Argon，10月13日起面向开发者和企业全球开放。",
+          "en": "First, Google has released Gemini 4 Argon, and from October 13 it is open to developers and enterprises globally.",
+          "expr": "认真",
+          "cuts": [
+            [
+              "第一件，谷歌发布了 Gemini 4 Argon，",
+              "First, Google has released Gemini 4 Argon,"
+            ],
+            [
+              "10月13日起面向开发者",
+              "and from October 13 it is open to developers"
+            ]
+          ]
+        },
+        {
+          "text": "Google AI Ultra 和 Pro 订阅用户，可以在 Gemini 应用和搜索的 AI 模式里用到。",
+          "en": "Google AI Ultra and Pro subscribers can use it in the Gemini app and in AI Mode in Search.",
+          "tts": "Google AI Ultra 和 Pro 订阅用户，可以在 Gemini 应用和搜索的 AI 模式里用到。"
+        },
+        {
+          "text": "API 的推广价，每百万 token，输入 2 美元，输出 10 美元。",
+          "en": "The introductory API price, per million tokens, is $2 for input and $10 for output.",
+          "tts": "API 的推广价，每百万 token，输入二美元，输出十美元。",
+          "point": 1
+        },
+        {
+          "text": "推广期到 11月30日，之后涨到输入 4 美元，输出 20 美元。",
+          "en": "The introductory period ends on November 30, after which it rises to $4 input and $20 output.",
+          "tts": "推广期到十一月三十日，之后涨到输入四美元，输出二十美元。",
+          "point": 2
+        },
+        {
+          "text": "上下文是 100 万 token，输入和输出合在一起算。",
+          "en": "The context limit is 1 million tokens, counted across input and output combined.",
+          "tts": "上下文是一百万 token，输入和输出合在一起算。",
+          "point": 0
+        },
+        {
+          "text": "谷歌称，它在 Vals Index 上排第一，这个指数覆盖金融、编码、法律和税务。",
+          "en": "Google says it ranks first on the Vals Index, which covers finance, coding, legal and tax work."
+        },
+        {
+          "text": "具身推理基准 ERQA 上是 87%，谷歌说超过其他前沿模型。",
+          "en": "It scores 87% on the ERQA embodied reasoning benchmark, which Google says beats other frontier models.",
+          "tts": "具身推理基准 ERQA 上是百分之八十七，谷歌说超过其他前沿模型。"
+        },
+        {
+          "text": "谷歌还称，在 Gray Swan 基准上，间接提示词注入的攻击成功率压到了 0.7%。",
+          "en": "Google also says that on the Gray Swan benchmark, the indirect prompt injection attack success rate is down to 0.7%.",
+          "tts": "谷歌还称，在 Gray Swan 基准上，间接提示词注入的攻击成功率压到了百分之零点七。",
+          "cuts": [
+            [
+              "谷歌还称，在 Gray Swan 基准上，",
+              "Google also says that on the Gray Swan benchmark,"
+            ],
+            [
+              "间接提示词注入的",
+              "the indirect prompt injection"
+            ]
+          ]
+        },
+        {
+          "text": "另外，一万名科学家可以在 Antigravity 里免费用半年最高用量档，要符合资格并经过挑选。",
+          "en": "Also, 10,000 scientists can use Antigravity free for six months at the highest usage tier, subject to eligibility and selection.",
+          "tts": "另外，一万名科学家可以在 Antigravity 里免费用半年最高用量档，要符合资格并经过挑选。",
+          "cuts": [
+            [
+              "另外，一万名科学家",
+              "Also, 10,000 scientists"
+            ],
+            [
+              "可以在 Antigravity 里免费",
+              "can use Antigravity free"
+            ],
+            [
+              "用半年最高用量档，",
+              "for six months at the highest usage tier,"
+            ]
+          ]
+        },
+        {
+          "text": "这些成绩都是谷歌自己公布的。",
+          "en": "These results are all published by Google itself."
+        }
+      ],
+      "vbigs": [
+        {
+          "line": 2,
+          "n": "$2 / $10",
+          "small": "每百万 token",
+          "d": "输入 / 输出，推广价到 11 月 30 日"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Google 官方博客",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/"
+        }
+      ],
+      "snap_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/"
+    },
+    {
+      "headline": "Claude 防蒸馏加固",
+      "bar_label": "防蒸馏",
+      "org": "Anthropic",
+      "source": "Anthropic 研究",
+      "source_short": "Anthropic",
+      "date": "10月12日",
+      "rundown_key": "Anthropic 加固防蒸馏",
+      "vhook": "官方称蒸馏数据少 90%–99%",
+      "points": [
+        "三项新措施",
+        "提取量降 90%–99%",
+        "说是猫鼠游戏"
+      ],
+      "lines": [
+        {
+          "text": "第二件，Anthropic 公布了防御蒸馏攻击的新措施。",
+          "en": "Second, Anthropic has announced new measures against distillation attacks.",
+          "expr": "认真"
+        },
+        {
+          "text": "蒸馏，就是批量拿一个模型的输出，去训练另一个模型。",
+          "en": "Distillation means collecting one model's outputs in bulk to train another model."
+        },
+        {
+          "text": "Anthropic 说，早期证据表明，这些措施让蒸馏者能收集的数据少了大约 90% 到 99%。",
+          "en": "Anthropic says early evidence suggests the measures cut the data distillers can collect by around 90% to 99%.",
+          "tts": "Anthropic 说，早期证据表明，这些措施让蒸馏者能收集的数据少了大约百分之九十到百分之九十九。",
+          "point": 1
+        },
+        {
+          "text": "第一项是保留思考：8月31日及之后创建的新 API 账号，不能改动之前的上下文。",
+          "en": "The first is preserved thinking: API accounts created on or after August 31 cannot edit earlier context.",
+          "tts": "第一项是保留思考：八月三十一日及之后创建的新 API 账号，不能改动之前的上下文。",
+          "point": 0,
+          "cuts": [
+            [
+              "第一项是保留思考：",
+              "The first is preserved thinking:"
+            ],
+            [
+              "8月31日及之后创建的新 API 账号，",
+              "API accounts created on or after August 31"
+            ]
+          ]
+        },
+        {
+          "text": "第二项是两阶段分类器，误判率低于 0.1%。",
+          "en": "The second is a two-stage classifier with a false positive rate below 0.1%.",
+          "tts": "第二项是两阶段分类器，误判率低于百分之零点一。"
+        },
+        {
+          "text": "第三项是对反复尝试的账号收紧限额，查实后封号。",
+          "en": "The third is, for repeat extractors, tighter limits and bans once confirmed.",
+          "cuts": [
+            [
+              "第三项是对反复尝试的账号",
+              "The third is, for repeat extractors,"
+            ]
+          ]
+        },
+        {
+          "text": "9月24日起，在误判率低于 0.1% 的特定领域，被安全机制拦下的请求，也要收费。",
+          "en": "Since September 24, in specific areas where false positives are under 0.1%, requests blocked by its safeguards are also charged for.",
+          "tts": "九月二十四日起，在误判率低于百分之零点一的特定领域，被安全机制拦下的请求，也要收费。",
+          "cuts": [
+            [
+              "9月24日起，",
+              "Since September 24,"
+            ],
+            [
+              "在误判率低于 0.1% 的特定领域，",
+              "in specific areas where false positives are under 0.1%,"
+            ]
+          ]
+        },
+        {
+          "text": "一个数据点：用完整转录蒸馏出的模型，在 SWE-bench Verified 上是 80.4%，只用摘要版推理，掉到 71.8%。",
+          "en": "One data point: a distilled model trained on full transcripts scores 80.4% on SWE-bench Verified, and drops to 71.8% with summarized reasoning only.",
+          "tts": "一个数据点：用完整转录蒸馏出的模型，在 SWE-bench Verified 上是百分之八十点四，只用摘要版推理，掉到百分之七十一点八。"
+        },
+        {
+          "text": "代价是，一些开发者要更新自己的集成，分类器也可能误拦不到 0.1% 的正常请求。",
+          "en": "The trade-off: some developers must update their integrations, and the classifier may wrongly block fewer than 0.1% of benign requests.",
+          "tts": "代价是，一些开发者要更新自己的集成，分类器也可能误拦不到百分之零点一的正常请求。"
+        },
+        {
+          "text": "Anthropic 自己说，这是猫鼠游戏，不知道效果能维持多久。",
+          "en": "Anthropic itself calls it a cat-and-mouse game and doesn't know how long the gains will last.",
+          "point": 2
+        }
+      ],
+      "vbigs": [
+        {
+          "line": 2,
+          "n": "90–99%",
+          "small": "数据量减少",
+          "d": "Anthropic 称早期证据显示"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Anthropic",
+          "url": "https://www.anthropic.com/research/distillation-defenses"
+        }
+      ],
+      "snap_url": "https://www.anthropic.com/research/distillation-defenses"
+    },
+    {
+      "headline": "小模型自我复制",
+      "bar_label": "自我复制",
+      "org": "Anthropic",
+      "source": "Anthropic 前沿红队",
+      "source_short": "Anthropic",
+      "date": "10月12日",
+      "rundown_key": "Anthropic 红队谈小模型自我复制",
+      "vhook": "实验是上限，还不是现实",
+      "points": [
+        "可能几个月内能复制",
+        "入侵步骤故意从简",
+        "说是生命迹象"
+      ],
+      "lines": [
+        {
+          "text": "第三件，Anthropic 前沿红队发了一篇研究，说小模型可能几个月内，就能在家用设备上自我复制。",
+          "en": "Third, Anthropic's Frontier Red Team published research saying small models may be months away from self-replicating on home devices.",
+          "expr": "认真",
+          "cuts": [
+            [
+              "第三件，Anthropic 前沿红队",
+              "Third, Anthropic's Frontier Red Team"
+            ],
+            [
+              "发了一篇研究，说小模型",
+              "published research saying small models"
+            ],
+            [
+              "可能几个月内，",
+              "may be months away"
+            ]
+          ]
+        },
+        {
+          "text": "他们说的设备，是智能烤箱、杂牌安卓电视盒这类物联网设备。",
+          "en": "The devices are IoT gear like smart ovens and off-brand Android TV boxes.",
+          "point": 0
+        },
+        {
+          "text": "实验里，一个 9B 的小模型在 9 类硬件中，有 8 类把推理服务搭了起来。",
+          "en": "In the experiments, a 9B model across 9 hardware types got inference running on 8 of them.",
+          "tts": "实验里，一个九B的小模型，在九类硬件中，有八类把推理服务搭了起来。",
+          "cuts": [
+            [
+              "实验里，一个 9B 的小模型在 9 类硬件中，",
+              "In the experiments, a 9B model across 9 hardware types"
+            ]
+          ]
+        },
+        {
+          "text": "Gemma4-26B-A4B 跑在 15 台杂牌安卓电视盒上，每台约 55 美元，速度每秒 0.39 个 token。",
+          "en": "Gemma4-26B-A4B ran on 15 off-brand Android TV boxes, about $55 each, at 0.39 tokens per second.",
+          "tts": "Gemma4-26B-A4B 跑在十五台杂牌安卓电视盒上，每台约五十五美元，速度每秒零点三九个 token。"
+        },
+        {
+          "text": "在简化的端到端复制实验里，GLM-5.2 传遍全部 8 个节点，5 次里有 4 次。",
+          "en": "In a simplified end-to-end replication test, GLM-5.2 reached all 8 nodes in 4 of 5 trials.",
+          "tts": "在简化的端到端复制实验里，GLM-5.2 传遍全部八个节点，五次里有四次。",
+          "cuts": [
+            [
+              "在简化的端到端复制实验里，",
+              "In a simplified end-to-end replication test,"
+            ],
+            [
+              "GLM-5.2 传遍全部 8 个节点，",
+              "GLM-5.2 reached all 8 nodes"
+            ]
+          ]
+        },
+        {
+          "text": "其他开源模型都没成功。",
+          "en": "The other open-weight models failed."
+        },
+        {
+          "text": "研究者说，实验里的入侵步骤故意做得很简单，所以结果是真实成功率的上限。",
+          "en": "The researchers say the hacking step was kept trivial, so the results are an upper bound on real-world success.",
+          "point": 1
+        },
+        {
+          "text": "按趋势粗估，小模型到今年底，能达到 GLM-5.2 的复制水平，作者自己称这是粗略估计。",
+          "en": "On a rough trend, small models by year end could reach GLM-5.2's replication level, which the authors themselves call a rough estimate."
+        },
+        {
+          "text": "小模型的钓鱼能力还很差。",
+          "en": "Small models are still poor at spearphishing."
+        },
+        {
+          "text": "作者说，这是生命迹象，还没有完整的失控复制体，建议加强网络异常监控，让运营商隔离受感染设备。",
+          "en": "The authors call these signs of life, not a full rogue replicator yet, and suggest network anomaly monitoring and ISP quarantine of infected devices.",
+          "point": 2
+        }
+      ],
+      "vbigs": [
+        {
+          "line": 4,
+          "n": "4/5",
+          "small": "传遍 8 个节点",
+          "d": "GLM-5.2，简化实验"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Anthropic",
+          "url": "https://www.anthropic.com/research/self-replicating-ai"
+        }
+      ],
+      "snap_url": "https://www.anthropic.com/research/self-replicating-ai"
+    },
+    {
+      "headline": "X 订阅合并 Grok",
+      "bar_label": "X 订阅",
+      "org": "xAI",
+      "source": "xAI 官方",
+      "source_short": "xAI",
+      "date": "10月12日",
+      "rundown_key": "X 把 Grok 和 Cursor 打成一个订阅",
+      "vhook": "付费档每月 8 美元起",
+      "points": [
+        "Grok、Cursor、X 合一",
+        "付费档 8 到 200 美元",
+        "老用户可不换"
+      ],
+      "lines": [
+        {
+          "text": "第四件，X 推出了 The X Subscription，把 Grok、Grok Bot、Cursor 和 X Premium 合成一个订阅。",
+          "en": "Fourth, X has launched The X Subscription, bundling Grok, Grok Bot, Cursor and X Premium into one plan.",
+          "expr": "认真",
+          "point": 0,
+          "cuts": [
+            [
+              "第四件，X 推出了",
+              "Fourth, X has launched"
+            ],
+            [
+              "The X Subscription，",
+              "The X Subscription,"
+            ],
+            [
+              "把 Grok、Grok Bot、",
+              "bundling Grok, Grok Bot,"
+            ]
+          ]
+        },
+        {
+          "text": "个人付费档有四个：Plus 每月 8 美元，Premium 30 美元，Super 100 美元，Ultra 200 美元。",
+          "en": "There are four individual paid tiers: Plus at $8 a month, Premium at $30, Super at $100, and Ultra at $200.",
+          "tts": "个人付费档有四个：Plus 每月八美元，Premium 三十美元，Super 一百美元，Ultra 二百美元。",
+          "point": 1,
+          "cuts": [
+            [
+              "个人付费档有四个：",
+              "There are four individual paid tiers:"
+            ],
+            [
+              "Plus 每月 8 美元，",
+              "Plus at $8 a month,"
+            ],
+            [
+              "Premium 30 美元，",
+              "Premium at $30,"
+            ]
+          ]
+        },
+        {
+          "text": "官方说，Premium 包含 SuperGrok、Cursor Pro 和 X Premium+ 的权益，这三个以前合计每月 90 美元。",
+          "en": "X says Premium includes the benefits of SuperGrok, Cursor Pro and X Premium+, which previously cost $90 a month combined.",
+          "tts": "官方说，Premium 包含 SuperGrok、Cursor Pro 和 X Premium+ 的权益，这三个以前合计每月九十美元。",
+          "cuts": [
+            [
+              "官方说，Premium 包含",
+              "X says Premium includes the benefits of"
+            ],
+            [
+              "SuperGrok、",
+              "SuperGrok,"
+            ],
+            [
+              "Cursor Pro 和 X Premium+ 的权益，",
+              "Cursor Pro and X Premium+,"
+            ]
+          ]
+        },
+        {
+          "text": "用量上，Premium 是 Plus 的 4 倍，Super 是 15 倍，Ultra 是 50 倍。",
+          "en": "On usage, Premium is 4x Plus, Super is 15x, and Ultra is 50x.",
+          "tts": "用量上，Premium 是 Plus 的四倍，Super 是十五倍，Ultra 是五十倍。"
+        },
+        {
+          "text": "Grok 和 Cursor 共用一个用量池。",
+          "en": "Grok and Cursor share one usage pool."
+        },
+        {
+          "text": "页面写的是，每个付费档用 Grok 模型的编程用量，至少是对应 Cursor 套餐的两倍。",
+          "en": "The page says each paid tier's coding usage with Grok models is at least twice the comparable Cursor plan's.",
+          "tts": "页面写的是，每个付费档用 Grok 模型的编程用量，至少是对应 Cursor 套餐的两倍。",
+          "cuts": [
+            [
+              "页面写的是，",
+              "The page says"
+            ],
+            [
+              "每个付费档用 Grok 模型的编程用量，",
+              "each paid tier's coding usage with Grok models"
+            ]
+          ]
+        },
+        {
+          "text": "还有免费档，每天有 Grok 额度，和入门的 Cursor 编程额度。",
+          "en": "There is also a free tier with daily Grok access and a starter Cursor coding allowance."
+        },
+        {
+          "text": "新用户10月12日起可以订，几天内推到全球。",
+          "en": "New customers can sign up from October 12, with a global rollout over the following few days.",
+          "tts": "新用户十月十二日起可以订，几天内推到全球。"
+        },
+        {
+          "text": "老用户可以继续用原套餐，也可以切换，旧套餐按比例退款。",
+          "en": "Existing subscribers can keep their current plans or switch, with a prorated refund for the old plan.",
+          "point": 2
+        },
+        {
+          "text": "Cursor 里的第三方模型，Premium 及以上才能用，另外计费。",
+          "en": "Third-party models in Cursor are available on Premium and above, billed separately."
+        }
+      ],
+      "vbigs": [
+        {
+          "line": 1,
+          "n": "$8–200",
+          "small": "每月",
+          "d": "四个付费档"
+        }
+      ],
+      "refs": [
+        {
+          "name": "xAI",
+          "url": "https://x.ai/news/x-subscription"
+        }
+      ],
+      "snap_url": "https://x.ai/news/x-subscription"
+    },
+    {
+      "headline": "RTX Spark 笔记本",
+      "bar_label": "RTX Spark",
+      "org": "NVIDIA",
+      "source": "NVIDIA 官方博客",
+      "source_short": "NVIDIA",
+      "date": "10月13日",
+      "rundown_key": "英伟达 RTX Spark 笔记本",
+      "vhook": "10 月 16 日开卖，最高 128GB",
+      "points": [
+        "10月16日开卖",
+        "最高 128GB 统一内存",
+        "这篇没写价格"
+      ],
+      "lines": [
+        {
+          "text": "第五件，英伟达和微软此前宣布，搭载 RTX Spark 的笔记本，10月16日上市。",
+          "en": "Fifth, NVIDIA and Microsoft previously announced that laptops with RTX Spark go on sale October 16.",
+          "expr": "认真",
+          "point": 0,
+          "cuts": [
+            [
+              "第五件，英伟达和微软此前宣布，",
+              "Fifth, NVIDIA and Microsoft previously announced"
+            ],
+            [
+              "搭载 RTX Spark 的笔记本，",
+              "that laptops with RTX Spark"
+            ]
+          ]
+        },
+        {
+          "text": "RTX Spark 是一颗超级芯片，最高 128GB 统一内存，1 petaflop 的 AI 算力。",
+          "en": "RTX Spark is a single superchip with up to 128GB of unified memory and 1 petaflop of AI compute.",
+          "tts": "RTX Spark 是一颗超级芯片，最高一百二十八 GB 统一内存，一 petaflop 的 AI 算力。",
+          "point": 1
+        },
+        {
+          "text": "价格，英伟达这篇文章没写。",
+          "en": "NVIDIA's post doesn't mention pricing.",
+          "point": 2
+        },
+        {
+          "text": "本地智能体软件也更新了，GitHub Copilot、Hermes、OpenClaw、Perplexity 等，更容易在本地配置。",
+          "en": "Local agent software was updated too, including GitHub Copilot, Hermes, OpenClaw and Perplexity, for easier local setup.",
+          "cuts": [
+            [
+              "本地智能体软件也更新了，",
+              "Local agent software was updated too,"
+            ],
+            [
+              "GitHub Copilot、Hermes、",
+              "including GitHub Copilot, Hermes,"
+            ],
+            [
+              "OpenClaw、Perplexity 等，",
+              "OpenClaw and Perplexity,"
+            ]
+          ]
+        },
+        {
+          "text": "模型方面，Nemotron 3.5 Bolt 74B 在10月15日发布。",
+          "en": "On models, Nemotron 3.5 Bolt 74B releases on October 15.",
+          "tts": "模型方面，Nemotron 三点五 Bolt 七十四 B 在十月十五日发布。",
+          "cuts": [
+            [
+              "模型方面，Nemotron 3.5 Bolt 74B",
+              "On models, Nemotron 3.5 Bolt 74B"
+            ]
+          ]
+        },
+        {
+          "text": "创作软件里，英伟达说 Adobe 的优化最高快 2 倍，会分阶段推出，Photoshop 和 Premiere 的 AI 优化已在测试版。",
+          "en": "In creative apps, NVIDIA says Adobe's optimizations are up to 2x faster, rolling out in phases, with AI optimizations in Photoshop and Premiere already in beta.",
+          "tts": "创作软件里，英伟达说 Adobe 的优化最高快两倍，会分阶段推出，Photoshop 和 Premiere 的 AI 优化已在测试版。",
+          "cuts": [
+            [
+              "创作软件里，",
+              "In creative apps,"
+            ],
+            [
+              "英伟达说 Adobe 的优化最高快 2 倍，",
+              "NVIDIA says Adobe's optimizations are up to 2x faster,"
+            ],
+            [
+              "会分阶段推出，",
+              "rolling out in phases,"
+            ]
+          ]
+        },
+        {
+          "text": "开发者工具上，PyTorch、Python 和 CUDA 对 RTX Spark 的支持已经可用。",
+          "en": "For developers, PyTorch, Python and CUDA support for RTX Spark is already available."
+        },
+        {
+          "text": "游戏方面，发布时支持数百款游戏，更快的 DLSS 5 模型10月16日先在《NBA 2K27》上线。",
+          "en": "For gaming, hundreds of games are supported at launch, and a faster DLSS 5 model debuts in NBA 2K27 on October 16.",
+          "tts": "游戏方面，发布时支持数百款游戏，更快的 DLSS 五 模型十月十六日先在《NBA 二 K 二十七》上线。",
+          "cuts": [
+            [
+              "游戏方面，发布时支持数百款游戏，",
+              "For gaming, hundreds of games are supported at launch,"
+            ],
+            [
+              "更快的 DLSS 5 模型",
+              "and a faster DLSS 5 model"
+            ]
+          ]
+        }
+      ],
+      "vbigs": [
+        {
+          "line": 1,
+          "n": "128GB",
+          "small": "统一内存",
+          "d": "最高配置 · AI 算力 1 petaflop"
+        }
+      ],
+      "refs": [
+        {
+          "name": "NVIDIA",
+          "url": "https://blogs.nvidia.com/blog/local-ai-rtx-spark-laptops-software-updates/"
+        }
+      ],
+      "snap_url": "https://blogs.nvidia.com/blog/local-ai-rtx-spark-laptops-software-updates/"
+    }
+  ],
+  "closing": [
+    {
+      "text": "今天就这些，来源都在简介里。",
+      "en": "That's all for today. Sources are in the description.",
+      "expr": "开心"
+    },
+    {
+      "text": "我们明天见。",
+      "en": "See you tomorrow.",
+      "expr": "开心"
+    }
+  ],
+  "cover": {
+    "item": 1,
+    "line1": "Gemini 4 Argon",
+    "line2": "11月底要涨价？",
+    "mood": "疑问"
+  },
+  "titles": {
+    "bilibili": "10月14日AI圈5件事：谷歌发布Gemini 4 Argon，Anthropic公布防蒸馏措施，X把Grok和Cursor并进一个订阅",
+    "douyin": "Gemini 4发布，X合并Grok和Cursor",
+    "xiaohongshu": "AI圈5件事：Gemini 4发布"
+  },
+  "vertical": {
+    "cuts": {
+      "Photoshop 和 Premiere 的 AI 优化已在测试版。": [
+        [
+          "Photoshop 和 Premiere 的 AI 优化",
+          "with AI optimizations in Photoshop and Premiere"
+        ]
+      ],
+      "Gemma4-26B-A4B 跑在 15 台杂牌安卓电视盒上，": [
+        [
+          "Gemma4-26B-A4B 跑在",
+          "Gemma4-26B-A4B ran on"
+        ]
+      ],
+      "分类器也可能误拦不到 0.1% 的正常请求。": [
+        [
+          "分类器也可能误拦",
+          "and the classifier may wrongly block"
+        ]
+      ],
+      "实验里，一个 9B 的小模型在 9 类硬件中，": [
+        [
+          "实验里，一个 9B 的小模型",
+          "In the experiments, a 9B model"
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "title": "10月12日AI圈7件事：纳德拉提出给AI装紧急刹车，arXiv限制每人每月投两篇，Epoch测出AI自评战绩偏高",
+  "titles": {
+    "bilibili": "10月12日AI圈7件事：纳德拉提出给AI装紧急刹车，arXiv限制每人每月投两篇，Epoch测出AI自评战绩偏高",
+    "douyin": "arXiv限制每月投两篇，AI做研究自评偏高",
+    "xiaohongshu": "AI圈7件事：arXiv限投两篇"
+  },
+  "title_notes": [],
+  "video": "D:\\大疆\\AI日报\\2026-10-12\\AI每日日报_1012_上传版.mp4",
+  "video_h264": "D:\\大疆\\AI日报\\2026-10-12\\AI每日日报_1012_上传版_h264.mp4",
+  "video_seconds": 441.23,
+  "cover_16x9": "D:\\大疆\\AI日报\\2026-10-12\\封面\\封面_16x9_1920x1080.png",
+  "cover_4x3": "D:\\大疆\\AI日报\\2026-10-12\\封面\\封面_4x3_1440x1080.png",
+  "cover_3x4": "D:\\大疆\\AI日报\\2026-10-12\\封面\\封面_3x4_1080x1440.png",
+  "partition": "人工智能",
+  "partition_fallback": "科技数码",
+  "tags": [
+    "AI资讯",
+    "人工智能",
+    "大模型",
+    "AI日报",
+    "微软",
+    "OpenAI",
+    "鲸鱼娘",
+    "大肥鱼"
+  ],
+  "collection": "AI每日日报",
+  "declaration": "含AI生成内容",
+  "description": "AI每日日报 · 10月12日（周一）· 竖屏版\n鲸鱼娘带你看看 AI 圈发生了什么。\n\n今日内容\n0:00 开场\n0:21 纳德拉：给 AI 装紧急刹车\n1:16 Odyssey-3 开放免费试玩\n2:13 智能体组团，贵但不一定强\n3:13 arXiv 限制每人每月两篇\n4:16 AI 做研究，爱夸大战绩\n5:20 GPT-4o 老快照 10月23日停用\n6:14 民间版 DeepSeek Bot 来了\n7:17 回顾\n\n来源\n① 纳德拉：给 AI 装紧急刹车：TechCrunch https://techcrunch.com/2026/10/10/microsofts-satya-nadella-says-ai-models-need-an-emergency-brake/ ；IT之家 https://www.ithome.com/1/011/545.htm\n② Odyssey-3 开放免费试玩：The Decoder https://the-decoder.com/odyssey-3-is-a-new-generative-world-model-that-you-can-try-for-free/\n③ 智能体组团，贵但不一定强：The Decoder https://the-decoder.com/ai-agent-teams-waste-massive-tokens-for-barely-measurable-quality-gains-research-finds/\n④ arXiv 限制每人每月两篇：The Decoder https://the-decoder.com/arxiv-caps-submissions-at-two-per-month-as-ai-paper-flood-overwhelms-the-preprint-server/\n⑤ AI 做研究，爱夸大战绩：The Decoder https://the-decoder.com/ai-agents-overstate-their-results-and-remain-far-from-autonomous-research-study-finds/\n⑥ GPT-4o 老快照 10月23日停用：量子位 https://www.qbitai.com/2026/10/502550.html\n⑦ 民间版 DeepSeek Bot 来了：量子位 https://www.qbitai.com/2026/10/502544.html\n\n说明\n· 信息截至北京时间 2026-10-12 03:33，以各家官方发布为准。\n· 本期配音由 AI 合成（开源模型 Qwen3-TTS 女声，本机生成），背景音乐为程序合成；内容由 AI 整理，并自动核对来源，如有出入以原文为准。\n· 主播鲸鱼娘（像素素材包「大肥鱼」）是 DeepSeek 的网友拟人同人（原型：上善无形，CC BY-NC-SA 4.0；女仆造型：ZipZipPipe），与 DeepSeek 官方无关。",
+  "douyin": {
+    "title": "arXiv限制每月投两篇，AI做研究自评偏高",
+    "description": "10月12日AI圈7件事：纳德拉提出给AI装紧急刹车，arXiv限制每人每月投两篇，Epoch测出AI自评战绩偏高\n今日 7 件事：纳德拉要给AI装紧急刹车、Odyssey-3开放试玩、智能体组团不一定更强、arXiv限制每人每月投两篇、AI做研究爱夸大战绩、GPT-4o老版本要停用、民间版DeepSeek Bot。\n内容由 AI 整理并自动核对来源，如有出入以原文为准。",
+    "topics": [
+      "AI每日日报",
+      "人工智能",
+      "大模型",
+      "AI资讯",
+      "微软"
+    ],
+    "declaration": "内容由AI生成",
+    "collection": "AI每日日报",
+    "video": "D:\\大疆\\AI日报\\2026-10-12\\AI每日日报_1012_上传版_h264.mp4",
+    "cover_3x4": "D:\\大疆\\AI日报\\2026-10-12\\封面\\封面_3x4_1080x1440.png",
+    "cover_4x3": "D:\\大疆\\AI日报\\2026-10-12\\封面\\封面_4x3_1440x1080.png"
+  },
+  "xiaohongshu": {
+    "title": "AI圈7件事：arXiv限投两篇",
+    "description": "10月12日AI圈7件事：纳德拉提出给AI装紧急刹车，arXiv限制每人每月投两篇，Epoch测出AI自评战绩偏高\n今日 7 件事：纳德拉要给AI装紧急刹车、Odyssey-3开放试玩、智能体组团不一定更强、arXiv限制每人每月投两篇、AI做研究爱夸大战绩、GPT-4o老版本要停用、民间版DeepSeek Bot。\n内容由 AI 整理并自动核对来源，如有出入以原文为准。",
+    "topics": [
+      "AI每日日报",
+      "人工智能",
+      "大模型",
+      "AI资讯",
+      "微软",
+      "OpenAI",
+      "AIGC",
+      "科技",
+      "开源"
+    ],
+    "declaration": "笔记含AI合成内容",
+    "original": true,
+    "collection": "AI每日日报",
+    "video": "D:\\大疆\\AI日报\\2026-10-12\\AI每日日报_1012_上传版_h264.mp4",
+    "cover_3x4": "D:\\大疆\\AI日报\\2026-10-12\\封面\\封面_3x4_1080x1440.png"
+  }
+}

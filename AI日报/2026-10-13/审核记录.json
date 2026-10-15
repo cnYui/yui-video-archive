@@ -1,0 +1,129 @@
+{
+ "date": "2026-10-13",
+ "script_sha": "e54866e81fab",
+ "passed": true,
+ "checked_at": "2026-10-14 17:41:34",
+ "checks": [
+  {
+   "check": "台本检查",
+   "ok": true,
+   "level": "ok",
+   "detail": "6 条，约 2059 字"
+  },
+  {
+   "check": "台本提示",
+   "ok": false,
+   "level": "warn",
+   "detail": "第 1 条第 3 句 的数字在英文里没找到：100（换算过的写法也行，确认意思一致）；第 5 条第 3 句（第 2/2 条） 英文 91 字符，略超 90"
+  },
+  {
+   "check": "成片",
+   "ok": true,
+   "level": "ok",
+   "detail": "D:\\大疆\\AI日报\\2026-10-13\\AI每日日报_1013_成片.mp4"
+  },
+  {
+   "check": "上传版 ≤ 9 MB",
+   "ok": true,
+   "level": "ok",
+   "detail": "8.72 MB"
+  },
+  {
+   "check": "H.264 上传版 ≤ 9 MB（抖音 / 小红书）",
+   "ok": true,
+   "level": "ok",
+   "detail": "8.89 MB"
+  },
+  {
+   "check": "竖屏成片 1080×2340",
+   "ok": true,
+   "level": "ok",
+   "detail": "1080,2340"
+  },
+  {
+   "check": "竖屏 QA（帧数 / 时长 / 口型对齐）",
+   "ok": true,
+   "level": "ok",
+   "detail": "{\"width\": 1080, \"height\": 2340, \"frames\": 11235, \"want_frames\": 11235, \"duration\": 374.5, \"total\": 374.492, \"lufs\": \"-16.0\", \"lra\": \"3.0\", \"true_peak\": \"-3.2\", \"mouth_best_lag\": 0, \"mouth_corr\": 0.728, \"mouth_corr0\": 0.728, \"subs\": 152, \"ok\": true}"
+  },
+  {
+   "check": "竖屏字幕中英对齐（make_vertical.py lint）",
+   "ok": true,
+   "level": "ok",
+   "detail": "字幕对齐检查：152 段，错 0 处、提示 0 处"
+  },
+  {
+   "check": "封面",
+   "ok": true,
+   "level": "ok",
+   "detail": "16x9 + 4x3 + 3x4"
+  },
+  {
+   "check": "中英双语字幕（画面 + 三份 SRT）",
+   "ok": true,
+   "level": "ok",
+   "detail": "116 条"
+  },
+  {
+   "check": "标题（三个平台限长）",
+   "ok": true,
+   "level": "ok",
+   "detail": "10月13日AI圈6件事：Meta发布首个前沿模型Muse Wonder，GPT-6.1 Sol默认上下文扩到50万，微软公布Maia 300芯片 | Meta发布Muse Wonder，Sol上下文扩到50万 | AI圈6件事：Meta新模型"
+  },
+  {
+   "check": "简介里有全部来源",
+   "ok": true,
+   "level": "ok",
+   "detail": "8 个网址"
+  },
+  {
+   "check": "简介里没有别的网址",
+   "ok": true,
+   "level": "ok",
+   "detail": ""
+  },
+  {
+   "check": "简介 ≤ 2000 字",
+   "ok": true,
+   "level": "ok",
+   "detail": "1177 字"
+  },
+  {
+   "check": "总时长超过 5 分钟（B 站分段章节要求）",
+   "ok": true,
+   "level": "ok",
+   "detail": "374.5 秒"
+  },
+  {
+   "check": "配音识别分 ≥ 0.75",
+   "ok": true,
+   "level": "ok",
+   "detail": "1 批"
+  },
+  {
+   "check": "事实核对（数字、英文名都在原文里）",
+   "ok": true,
+   "level": "ok",
+   "detail": "全部找到"
+  },
+  {
+   "check": "内容安全（色情、暴力、时政、广告、提示词注入、隐藏字符）",
+   "ok": true,
+   "level": "ok",
+   "detail": "没有命中"
+  },
+  {
+   "check": "没有重复最近 7 天播过的原文",
+   "ok": true,
+   "level": "ok",
+   "detail": ""
+  },
+  {
+   "check": "AI 复核（独立子代理，看成品和原文）",
+   "ok": true,
+   "level": "ok",
+   "detail": "通过：【风格，可不改】SRT 第 56–57 条：中文“调整它，可以减少上下文 | 压缩被触发的次数。”、英文“Adjusting it can reduce how often context | compression is triggered.”，把“上下文压缩 / context compression”拆成两条（中英是同一个断点，不影响理解，lint 也没报）。如果要改，台本.json 的 vertical.cuts 加一项：\"调整它，可以减少上下文压缩被触发的次数。\": [[\"调整它，可以减少\", \"Adjusting it can reduce\"]]。已用 make_vertical.split_unit 在不改任何文件的前提下实测：得到（调整它，可以减少 / Adjusting it can reduce）+（上下文压缩被触发的次数。/ how often context co"
+  }
+ ],
+ "hits": []
+}

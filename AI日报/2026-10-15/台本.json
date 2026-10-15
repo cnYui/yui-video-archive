@@ -1,0 +1,467 @@
+{
+  "date": "2026-10-15",
+  "opening": [
+    {
+      "text": "早上好，我是鲸鱼娘，今天是10月15日。",
+      "en": "Good morning, I'm Whale Girl. Today is October 15.",
+      "tts": "早上好，我是鲸鱼娘，今天是十月十五日。",
+      "expr": "开心"
+    },
+    {
+      "text": "今天说五件事：Anthropic 在新加坡开办公室，谷歌做设备端反诈，Google Earth AI 升级地理空间代理，苹果研究三模态扩散和语音混语检测。",
+      "en": "Five stories today: Anthropic opens in Singapore, Google builds on-device scam detection, Google Earth AI upgrades its geospatial agent, and Apple studies tri-modal diffusion and code-switching detection.",
+      "expr": "开心"
+    }
+  ],
+  "news": [
+    {
+      "headline": "Anthropic 新加坡开办公室",
+      "bar_label": "新加坡办公室",
+      "org": "Anthropic",
+      "source": "Anthropic 官方",
+      "source_short": "Anthropic",
+      "date": "10月14日",
+      "rundown_key": "Anthropic 在新加坡开办公室",
+      "vhook": "第五个亚太办公室",
+      "points": [
+        "第五个亚太办公室",
+        "和新加坡政府签 MOU",
+        "GovTech 1500+人已用"
+      ],
+      "lines": [
+        {
+          "text": "第一件，Anthropic 10月14日宣布，在新加坡开设办公室，这是它在亚太地区的第五个办公室。",
+          "en": "First, Anthropic announced on October 14 that it opened an office in Singapore, its fifth office in the Asia-Pacific region.",
+          "expr": "认真",
+          "point": 0
+        },
+        {
+          "text": "同时，Anthropic 和新加坡数字发展及信息部签了一份合作备忘录。",
+          "en": "At the same time, Anthropic and Singapore's Ministry of Digital Development and Information signed a memorandum.",
+          "point": 1,
+          "cuts": [
+            [
+              "同时，Anthropic 和新加坡",
+              "At the same time, Anthropic and Singapore's"
+            ],
+            [
+              "数字发展及信息部",
+              "Ministry of Digital Development and Information"
+            ]
+          ]
+        },
+        {
+          "text": "合作范围包括 AI 安全、安保和模型评估。",
+          "en": "The cooperation covers AI safety, security and model evaluation.",
+          "point": 1
+        },
+        {
+          "text": "双方还计划做技术交流，涉及测试标准和事故响应，也分享研究和数据。",
+          "en": "They also plan technical exchanges on testing standards and incident response, and sharing research and data.",
+          "cuts": [
+            [
+              "涉及测试标准和事故响应，",
+              "on testing standards and incident response,"
+            ]
+          ]
+        },
+        {
+          "text": "Anthropic 还说会探索帮助中小企业和政府人员更负责任地用 AI 的方式。",
+          "en": "Anthropic also says it will explore ways to help small businesses and public officers adopt AI responsibly.",
+          "cuts": [
+            [
+              "Anthropic 还说会探索",
+              "Anthropic also says it will explore"
+            ],
+            [
+              "帮助中小企业和政府人员",
+              "ways to help small businesses and public officers"
+            ]
+          ]
+        },
+        {
+          "text": "Anthropic 说，新加坡在 Claude 使用量相对人口规模的指标上，排在121个国家中的第二名，接近理论规模的六倍。",
+          "en": "Anthropic says Singapore, on Claude usage relative to population, ranks second among 121 countries, nearly six times its expected level.",
+          "point": 2,
+          "cuts": [
+            [
+              "Anthropic 说，新加坡",
+              "Anthropic says Singapore,"
+            ],
+            [
+              "在 Claude 使用量相对人口规模的指标上，",
+              "on Claude usage relative to population,"
+            ],
+            [
+              "排在121个国家中的第二名，",
+              "ranks second among 121 countries,"
+            ]
+          ]
+        },
+        {
+          "text": "官方还说，新加坡 GovTech 已有超过1500名工程师和技术人员采用 Claude Code。",
+          "en": "Anthropic also says Singapore's GovTech already has more than 1500 engineers and technical staff using Claude Code.",
+          "point": 2,
+          "cuts": [
+            [
+              "官方还说，新加坡 GovTech 已有",
+              "Anthropic also says Singapore's GovTech already has"
+            ],
+            [
+              "超过1500名工程师和技术人员",
+              "more than 1500 engineers and technical staff"
+            ]
+          ]
+        },
+        {
+          "text": "这些使用数据都来自 Anthropic 自己的公告，不能当成独立评测。",
+          "en": "Those usage figures come from Anthropic's own announcement, not an independent evaluation."
+        }
+      ],
+      "vbigs": [
+        {
+          "line": 4,
+          "n": "1,500+",
+          "small": "GovTech 技术人员",
+          "d": "Anthropic 公告中的采用人数"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Anthropic 官方",
+          "url": "https://www.anthropic.com/news/singapore-office-opening"
+        }
+      ],
+      "snap_url": "https://www.anthropic.com/news/singapore-office-opening"
+    },
+    {
+      "headline": "谷歌设备端反诈模型",
+      "bar_label": "设备端反诈",
+      "org": "Google DeepMind",
+      "source": "Google DeepMind 官方",
+      "source_short": "Google",
+      "date": "10月14日",
+      "rundown_key": "谷歌做设备端反诈",
+      "vhook": "谷歌和政府都读不了聊天",
+      "points": [
+        "本地 Gemma 模型",
+        "只在设备端分析",
+        "用户同意后才接入"
+      ],
+      "lines": [
+        {
+          "text": "第二件，Google DeepMind 和新加坡 GovTech 合作，做了一个设备端的诈骗对话检测模型。",
+          "en": "Second, Google DeepMind and Singapore's GovTech built an on-device model for detecting scam conversations.",
+          "expr": "认真",
+          "point": 0
+        },
+        {
+          "text": "谷歌说，诈骗占新加坡报案数量的一半以上，自2019年以来造成的损失超过40亿新加坡元。",
+          "en": "Google says scams make up more than half of Singapore's reported crimes, with losses since 2019 topping 4 billion Singapore dollars.",
+          "point": 0
+        },
+        {
+          "text": "他们把轻量级 Gemma 模型用本地诈骗对话微调，覆盖冒充政府机构、银行和本地人物等套路。",
+          "en": "They fine-tuned a lightweight Gemma model on local scam conversations, including impersonation of public institutions, banks and local figures."
+        },
+        {
+          "text": "模型直接在手机上分析对话模式，发现可能的操纵意图后，在设备上实时提醒用户暂停。",
+          "en": "The model analyzes conversation patterns on the phone and gives a real-time warning on the device when it detects possible manipulation.",
+          "point": 1
+        },
+        {
+          "text": "谷歌和新加坡政府都不能读取聊天内容，模型只有在用户同意、并且应用条款允许时才接入。",
+          "en": "Google and the Singapore Government cannot read the chats; the model works only with user consent and the application's terms allowing access.",
+          "point": 2
+        },
+        {
+          "text": "实现上用了两阶段流程，先看较小的上下文，再用微调后的 Gemma 检查更大的对话片段。",
+          "en": "The system uses two stages: a small context check first, followed by the fine-tuned Gemma model examining a larger conversation snapshot."
+        },
+        {
+          "text": "原文称应用里的推广会分阶段进行，也提到在手机上跑分类器要特别注意电量。",
+          "en": "The post says rollout in the app will be phased, and notes that battery use needs special attention when running a classifier on a phone."
+        }
+      ],
+      "vbigs": [
+        {
+          "line": 1,
+          "n": "40亿+",
+          "small": "新加坡元损失",
+          "d": "谷歌称自 2019 年以来"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Google DeepMind 官方",
+          "url": "https://deepmind.google/blog/on-device-ai-scam-detection-mddi/"
+        }
+      ],
+      "snap_url": "https://deepmind.google/blog/on-device-ai-scam-detection-mddi/"
+    },
+    {
+      "headline": "Google Earth AI 地理代理",
+      "bar_label": "Earth AI 代理",
+      "org": "Google Research",
+      "source": "Google Research 官方",
+      "source_short": "Google Research",
+      "date": "10月14日",
+      "rundown_key": "Google Earth AI 升级地理空间代理",
+      "vhook": "从地图问答到多步分析",
+      "points": [
+        "连接多种地理模型",
+        "新增两个评测基准",
+        "结果仍要专家复核"
+      ],
+      "lines": [
+        {
+          "text": "第三件，Google Research 发布新技术报告，介绍升级后的地理空间推理代理。",
+          "en": "Third, Google Research published a technical report on an upgraded geospatial reasoning agent.",
+          "expr": "认真",
+          "point": 0
+        },
+        {
+          "text": "它把 Gemini 接到 WeatherNext、洪水预测、人口动态、卫星遥感和 Google Earth Engine 等工具上。",
+          "en": "It connects Gemini to WeatherNext, flood forecasting, population dynamics, satellite remote sensing and Google Earth Engine tools.",
+          "point": 0
+        },
+        {
+          "text": "用户提问后，代理先制定多步计划，再选择数据集和模型，在独立工作区处理大规模地图数据。",
+          "en": "After a question, the agent plans a multi-step workflow, selects datasets and models, and processes large map data in a separate workspace."
+        },
+        {
+          "text": "这次新增了两个评测基准：GeoKTools 和 GeoExpertQueries，一共对比四种代理配置。",
+          "en": "The work adds two benchmarks, GeoKTools and GeoExpertQueries, and compares four agent configurations.",
+          "point": 1
+        },
+        {
+          "text": "Google 还扩大了 Ask Google Earth 实验性深度分析和 Agent-to-Agent API 的早期试用。",
+          "en": "Google is also expanding Ask Google Earth experimental deep analysis and early access to the Agent-to-Agent API.",
+          "cuts": [
+            [
+              "Google 还扩大了",
+              "Google is also expanding"
+            ],
+            [
+              "Ask Google Earth 实验性深度分析",
+              "Ask Google Earth experimental deep analysis"
+            ]
+          ]
+        },
+        {
+          "text": "合作测试里，有机构用它分析14条历史飓风路径，几分钟完成原本要人工做几天的筛查。",
+          "en": "In partner testing, one organization analyzed 14 historical cyclone paths in minutes instead of days of manual screening."
+        },
+        {
+          "text": "但官方明确提醒，部分分数来自自动评分器，结果更像专家的第一稿，不是最终答案。",
+          "en": "Google explicitly warns that some scores come from an autorater, so the output is a strong first draft rather than a final answer.",
+          "point": 2
+        }
+      ],
+      "vbigs": [
+        {
+          "line": 5,
+          "n": "14条",
+          "small": "历史飓风路径",
+          "d": "合作测试中的分析数量"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Google Research 官方",
+          "url": "https://research.google/blog/putting-earth-ai-to-work-geospatial-agents-for-our-planets-biggest-challenges/"
+        }
+      ],
+      "snap_url": "https://research.google/blog/putting-earth-ai-to-work-geospatial-agents-for-our-planets-biggest-challenges/"
+    },
+    {
+      "headline": "苹果三模态扩散模型",
+      "bar_label": "三模态扩散",
+      "org": "Apple",
+      "source": "Apple Machine Learning Research",
+      "source_short": "Apple ML",
+      "date": "10月",
+      "rundown_key": "苹果研究三模态扩散",
+      "vhook": "文本、图像和音频一起预训练",
+      "points": [
+        "首次三模态 MDM",
+        "3B 模型规模",
+        "文本图像音频都能生成"
+      ],
+      "lines": [
+        {
+          "text": "第四件，苹果研究团队公布三模态掩码扩散模型，训练数据同时包含文本、图文和音频文本。",
+          "en": "Fourth, Apple's research team presented a tri-modal masked diffusion model trained on text, image-text and audio-text data.",
+          "expr": "认真",
+          "point": 0
+        },
+        {
+          "text": "论文说，这是第一个从零开始预训练的三模态 Masked Diffusion Model。",
+          "en": "The paper says this is the first tri-modal Masked Diffusion Model pretrained from scratch.",
+          "point": 0,
+          "cuts": [
+            [
+              "论文说，这是第一个从零开始预训练的三模态",
+              "The paper says this is the first tri-modal"
+            ]
+          ]
+        },
+        {
+          "text": "作者系统分析了多模态缩放规律、模态混合比例、噪声日程和批量大小。",
+          "en": "The authors systematically analyze multimodal scaling laws, modality mixing ratios, noise schedules and batch size."
+        },
+        {
+          "text": "他们还提出一种基于随机微分方程的重参数化，把物理批量大小和逻辑批量大小解耦。",
+          "en": "They also propose a stochastic-differential-equation reparameterization that decouples physical and logical batch size."
+        },
+        {
+          "text": "初步统一模型的规模是3B，使用了6.4万亿 token，在文本生成、文生图和文生音频任务上都给出结果。",
+          "en": "The preliminary unified model has 3B parameters and uses 6.4 trillion tokens, with results in text generation, text-to-image and text-to-speech tasks.",
+          "point": 1,
+          "cuts": [
+            [
+              "使用了6.4万亿 token，",
+              "and uses 6.4 trillion tokens,"
+            ]
+          ]
+        },
+        {
+          "text": "这是一项开放研究和系统分析，不等于苹果已经发布了可直接使用的产品模型。",
+          "en": "This is an open research study and systematic analysis, not a product model that Apple has released for direct use.",
+          "point": 2
+        }
+      ],
+      "vbigs": [
+        {
+          "line": 4,
+          "n": "3B",
+          "small": "初步模型规模",
+          "d": "苹果论文使用 6.4T tokens"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Apple Machine Learning Research",
+          "url": "https://machinelearning.apple.com/research/tri-modal-masked-diffusion"
+        }
+      ],
+      "snap_url": "https://machinelearning.apple.com/research/tri-modal-masked-diffusion"
+    },
+    {
+      "headline": "苹果检测语音混语",
+      "bar_label": "语音混语检测",
+      "org": "Apple",
+      "source": "Apple Machine Learning Research",
+      "source_short": "Apple ML",
+      "date": "10月",
+      "rundown_key": "苹果研究语音混语检测",
+      "vhook": "不用先转写就能找混语",
+      "points": [
+        "直接从语音检测",
+        "覆盖14种语言对",
+        "Whisper F1 0.798"
+      ],
+      "lines": [
+        {
+          "text": "第五件，苹果提出一种直接从语音里找混语句子的轻量方法，不必先把整段音频转成文字。",
+          "en": "Fifth, Apple proposed a lightweight way to detect code-switching directly from speech.",
+          "expr": "认真",
+          "point": 0
+        },
+        {
+          "text": "这里的混语，是一句话里交替使用两种语言，常见于多语言对话。",
+          "en": "Code-switching means alternating between two languages in one utterance, common in multilingual conversations."
+        },
+        {
+          "text": "方法从预训练语音编码器里找出对某种语言敏感的隐藏维度，再聚合成逐帧的混语预测。",
+          "en": "The method finds language-selective hidden dimensions in a pretrained speech encoder and aggregates frame-level activations into a prediction.",
+          "point": 0
+        },
+        {
+          "text": "在 CS-FLEURS 数据集的14种语言对上，Whisper-small 编码器的平均 F1 是0.798。",
+          "en": "Across CS-FLEURS's 14 language pairs, the Whisper-small encoder reached a mean F1 of 0.798.",
+          "point": 1,
+          "cuts": [
+            [
+              "在 CS-FLEURS 数据集的14种语言对上，",
+              "Across CS-FLEURS's 14 language pairs,"
+            ]
+          ]
+        },
+        {
+          "text": "这个分数高于 CNN 的0.776，也高于 HuBERT 线性基线的0.751。",
+          "en": "That is higher than 0.776 for a CNN and 0.751 for a HuBERT linear baseline.",
+          "point": 2
+        },
+        {
+          "text": "意义在于，数据团队可以先从大规模语音库里筛出混语音频，再补充多语言训练数据。",
+          "en": "The idea is to help data teams find code-switching audio in large speech collections and build more representative multilingual training data."
+        },
+        {
+          "text": "论文展示的是数据筛选工具，不是已经解决混语识别的完整语音助手。",
+          "en": "The paper presents a data-selection tool, not a complete speech assistant that has solved code-switching recognition."
+        }
+      ],
+      "vbigs": [
+        {
+          "line": 3,
+          "n": "0.798",
+          "small": "平均 F1",
+          "d": "Whisper-small · 14 种语言对"
+        }
+      ],
+      "refs": [
+        {
+          "name": "Apple Machine Learning Research",
+          "url": "https://machinelearning.apple.com/research/code-switching-detection"
+        }
+      ],
+      "snap_url": "https://machinelearning.apple.com/research/code-switching-detection"
+    }
+  ],
+  "closing": [
+    {
+      "text": "今天就这些，来源都在简介里。",
+      "en": "That's all for today. Sources are in the description.",
+      "expr": "开心"
+    },
+    {
+      "text": "我们明天见。",
+      "en": "See you tomorrow.",
+      "expr": "开心"
+    }
+  ],
+  "cover": {
+    "item": 1,
+    "line1": "Anthropic 去新加坡",
+    "line2": "要做什么？",
+    "mood": "疑问"
+  },
+  "titles": {
+    "bilibili": "10月15日AI圈5件事：Anthropic进新加坡，谷歌做设备端反诈，苹果公布三模态扩散研究",
+    "douyin": "Anthropic进新加坡，苹果研究三模态",
+    "xiaohongshu": "AI圈5件事：设备端反诈"
+  },
+  "vertical": {
+    "cuts": {
+      "谷歌做设备端反诈，Google Earth AI 升级地理空间代理，": [
+        [
+          "谷歌做设备端反诈，Google Earth AI",
+          "Google builds on-device scam detection, Google Earth AI"
+        ]
+      ],
+      "在 CS-FLEURS 数据集的14种语言对上，": [
+        [
+          "在 CS-FLEURS 数据集的",
+          "Across CS-FLEURS's"
+        ]
+      ],
+      "在文本生成、文生图和文生音频任务上都给出结果。": [
+        [
+          "在文本生成、",
+          "with results in text generation,"
+        ]
+      ]
+    }
+  }
+}

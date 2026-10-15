@@ -1,0 +1,322 @@
+{
+  "number": 1013,
+  "title": "10月13日，鲸鱼娘带你看看AI圈发生了什么？",
+  "dir_name": "AI每日日报_1013",
+  "date": "2026-10-13",
+  "date_label": "10月13日",
+  "weekday": "周二",
+  "subtitle": "鲸鱼娘带你看看 AI 圈发生了什么",
+  "target_minutes": [
+    5,
+    6
+  ],
+  "question_scene": "S01",
+  "questions": [
+    {
+      "text": "Meta 首个前沿模型",
+      "scenes": [
+        "S02"
+      ]
+    },
+    {
+      "text": "Sol 上下文扩到 50 万",
+      "scenes": [
+        "S03"
+      ]
+    },
+    {
+      "text": "微软 Maia 300 芯片",
+      "scenes": [
+        "S04"
+      ]
+    },
+    {
+      "text": "AlphaProof Nexus 解题",
+      "scenes": [
+        "S05"
+      ]
+    },
+    {
+      "text": "清空聊天记录更会想",
+      "scenes": [
+        "S06"
+      ]
+    },
+    {
+      "text": "千问发布 QwenGyre",
+      "scenes": [
+        "S07"
+      ]
+    }
+  ],
+  "chapters": {
+    "S01": "开场",
+    "S02": "Meta 首个前沿模型",
+    "S03": "Sol 上下文扩到 50 万",
+    "S04": "微软 Maia 300 芯片",
+    "S05": "AlphaProof Nexus 解题",
+    "S06": "清空聊天记录更会想",
+    "S07": "千问发布 QwenGyre",
+    "S08": "回顾"
+  },
+  "bar_labels": {
+    "S01": "开场",
+    "S02": "Muse Wonder",
+    "S03": "Sol 50 万",
+    "S04": "Maia 300",
+    "S05": "AlphaProof",
+    "S06": "清空聊天",
+    "S07": "QwenGyre",
+    "S08": "回顾"
+  },
+  "backgrounds": {
+    "S01": "01_深海气泡.png",
+    "S02": "02_星点.png",
+    "S03": "03_波纹.png",
+    "S04": "01_深海气泡.png",
+    "S05": "02_星点.png",
+    "S06": "03_波纹.png",
+    "S07": "01_深海气泡.png",
+    "S08": "02_星点.png"
+  },
+  "bg_alpha": 0.9,
+  "bg_blur": 0,
+  "intro_tagline": "",
+  "outro_references": [
+    "Meta 首个前沿模型（TechCrunch / The Decoder）",
+    "Sol 上下文扩到 50 万（IT之家）",
+    "微软 Maia 300 芯片（The Decoder / IT之家）",
+    "AlphaProof Nexus 解题（The Decoder）",
+    "清空聊天记录更会想（The Decoder）",
+    "千问发布 QwenGyre（IT之家）"
+  ],
+  "outro_items": [
+    {
+      "label": "形象",
+      "value": "大肥鱼同人 · 上善无形 / ZipZipPipe"
+    },
+    {
+      "label": "视频制作模型",
+      "value": "Opus 5.5"
+    }
+  ],
+  "outro_closing": "感谢大家看到最后",
+  "auto_gestures": false,
+  "presenter": {
+    "id": "whale",
+    "frames": "角色/动作帧"
+  },
+  "badge_html": "AI每日日报<span class=\"n\">10.13</span>",
+  "toc_kicker_html": "<b>今日要闻</b>TODAY",
+  "bar_colors": [
+    "#97C3F0",
+    "#F3C98C",
+    "#4A88DA",
+    "#C6E6FB"
+  ],
+  "news": [
+    {
+      "headline": "Meta 首个前沿模型",
+      "org": "Meta",
+      "source": "TechCrunch · The Decoder",
+      "source_short": "TechCrunch",
+      "date": "10月12日",
+      "points": [
+        "两个版本，Full 仅限订阅",
+        "API 输入 4 美元",
+        "知识测试仍落后"
+      ],
+      "rundown_key": "Meta 发布首个前沿模型",
+      "line_points": [
+        null,
+        0,
+        null,
+        1,
+        null,
+        null,
+        null,
+        2,
+        null,
+        null,
+        null,
+        null
+      ],
+      "refs": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/10/12/meta-releases-its-first-frontier-model-muse-wonder/"
+        },
+        {
+          "name": "The Decoder",
+          "url": "https://the-decoder.com/metas-new-frontier-model-muse-wonder-full-breaks-into-the-ai-top-tier/"
+        }
+      ],
+      "snap": "../assets/snaps/news_01.png",
+      "snap_src": "techcrunch.com"
+    },
+    {
+      "headline": "Sol 上下文扩到 50 万",
+      "org": "OpenAI",
+      "source": "IT之家",
+      "source_short": "IT之家",
+      "date": "10月12日",
+      "points": [
+        "Codex 和 Work 里生效",
+        "订阅额度内不加价",
+        "最大仍是 100 万"
+      ],
+      "rundown_key": "GPT-6.1 Sol 默认上下文扩到 50 万",
+      "line_points": [
+        null,
+        0,
+        1,
+        null,
+        2,
+        null,
+        null,
+        null
+      ],
+      "refs": [
+        {
+          "name": "IT之家",
+          "url": "https://www.ithome.com/1/011/736.htm"
+        }
+      ],
+      "snap": "../assets/snaps/news_02.png",
+      "snap_src": "ithome.com"
+    },
+    {
+      "headline": "微软 Maia 300 芯片",
+      "org": "Microsoft",
+      "source": "The Decoder · IT之家",
+      "source_short": "The Decoder",
+      "date": "10月12日",
+      "points": [
+        "288GB HBM4，18TB/s",
+        "一个机架放 96 颗",
+        "2027 年起大规模部署"
+      ],
+      "rundown_key": "微软公布 Maia 300 芯片",
+      "line_points": [
+        null,
+        null,
+        0,
+        1,
+        null,
+        null,
+        null,
+        null,
+        2,
+        null
+      ],
+      "refs": [
+        {
+          "name": "The Decoder",
+          "url": "https://the-decoder.com/microsoft-plans-to-scale-its-own-maia-ai-chips-to-gigawatt-levels-by-2027/"
+        },
+        {
+          "name": "IT之家",
+          "url": "https://www.ithome.com/1/012/115.htm"
+        }
+      ],
+      "snap": "../assets/snaps/news_03.png",
+      "snap_src": "the-decoder.com"
+    },
+    {
+      "headline": "AlphaProof Nexus 解题",
+      "org": "Google DeepMind",
+      "source": "The Decoder",
+      "source_short": "The Decoder",
+      "date": "10月12日",
+      "points": [
+        "Lean 检查每次修改",
+        "九道埃尔德什问题",
+        "44 个数列猜想"
+      ],
+      "rundown_key": "AlphaProof Nexus 登上《Science》",
+      "line_points": [
+        null,
+        0,
+        null,
+        1,
+        null,
+        null,
+        2,
+        null,
+        null
+      ],
+      "refs": [
+        {
+          "name": "The Decoder",
+          "url": "https://the-decoder.com/google-deepminds-alphaproof-nexus-solved-dozens-of-open-math-problems-and-actually-got-peer-reviewed/"
+        }
+      ],
+      "snap": "../assets/snaps/news_04.png",
+      "snap_src": "the-decoder.com"
+    },
+    {
+      "headline": "清空聊天记录更会想",
+      "org": "Microsoft",
+      "source": "The Decoder",
+      "source_short": "The Decoder",
+      "date": "10月12日",
+      "points": [
+        "聊久了困在一个思路里",
+        "分叉 K 路，各自清空聊天",
+        "只清不分叉也提升约 22%"
+      ],
+      "rundown_key": "清空聊天记录能让智能体找到更好的思路",
+      "line_points": [
+        null,
+        0,
+        1,
+        null,
+        null,
+        null,
+        null,
+        2,
+        null
+      ],
+      "refs": [
+        {
+          "name": "The Decoder",
+          "url": "https://the-decoder.com/clearing-chat-history-helps-ai-agents-find-better-solutions/"
+        }
+      ],
+      "snap": "../assets/snaps/news_05.png",
+      "snap_src": "the-decoder.com"
+    },
+    {
+      "headline": "千问发布 QwenGyre",
+      "org": "Alibaba",
+      "source": "IT之家",
+      "source_short": "IT之家",
+      "date": "10月12日",
+      "points": [
+        "面向长程智能体任务",
+        "跑完一批就转去训练",
+        "通过率 52.5% 到 58.5%"
+      ],
+      "rundown_key": "千问的 QwenGyre",
+      "line_points": [
+        null,
+        0,
+        1,
+        null,
+        2,
+        null,
+        null,
+        null
+      ],
+      "refs": [
+        {
+          "name": "IT之家",
+          "url": "https://www.ithome.com/1/012/066.htm"
+        }
+      ],
+      "snap": "../assets/snaps/news_06.png",
+      "snap_src": "ithome.com"
+    }
+  ],
+  "style": "board"
+}

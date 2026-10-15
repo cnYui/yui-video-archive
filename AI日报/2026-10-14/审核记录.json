@@ -1,0 +1,213 @@
+{
+ "date": "2026-10-14",
+ "script_sha": "c795fddb9136",
+ "passed": true,
+ "checked_at": "2026-10-14 14:35:25",
+ "checks": [
+  {
+   "check": "台本检查",
+   "ok": true,
+   "level": "ok",
+   "detail": "5 条，约 1885 字"
+  },
+  {
+   "check": "台本提示",
+   "ok": false,
+   "level": "warn",
+   "detail": "只有 5 条：目标 6–8 条（合格的新闻不够时可以少，但正片会不到 5 分钟，加不了 B 站分段章节）；全片约 1885 字，按每秒 6.35 字约 4.9 分钟；目标正片 5–6 分钟（约 2000–2250 字）；第 1 条第 5 句 的数字在英文里没找到：100（换算过的写法也行，确认意思一致）"
+  },
+  {
+   "check": "成片",
+   "ok": true,
+   "level": "ok",
+   "detail": "D:\\大疆\\AI日报\\2026-10-14\\AI每日日报_1014_成片.mp4"
+  },
+  {
+   "check": "上传版 ≤ 9 MB",
+   "ok": true,
+   "level": "ok",
+   "detail": "8.70 MB"
+  },
+  {
+   "check": "H.264 上传版 ≤ 9 MB（抖音 / 小红书）",
+   "ok": true,
+   "level": "ok",
+   "detail": "8.77 MB"
+  },
+  {
+   "check": "竖屏成片 1080×2340",
+   "ok": true,
+   "level": "ok",
+   "detail": "1080,2340"
+  },
+  {
+   "check": "竖屏 QA（帧数 / 时长 / 口型对齐）",
+   "ok": true,
+   "level": "ok",
+   "detail": "{\"width\": 1080, \"height\": 2340, \"frames\": 10585, \"want_frames\": 10585, \"duration\": 352.833, \"total\": 352.824, \"lufs\": \"-16.0\", \"lra\": \"2.9\", \"true_peak\": \"-2.7\", \"mouth_best_lag\": 0, \"mouth_corr\": 0.724, \"mouth_corr0\": 0.724, \"subs\": 138, \"ok\": true}"
+  },
+  {
+   "check": "竖屏字幕中英对齐（make_vertical.py lint）",
+   "ok": true,
+   "level": "ok",
+   "detail": "字幕对齐检查：138 段，错 0 处、提示 0 处"
+  },
+  {
+   "check": "封面",
+   "ok": true,
+   "level": "ok",
+   "detail": "16x9 + 4x3 + 3x4"
+  },
+  {
+   "check": "中英双语字幕（画面 + 三份 SRT）",
+   "ok": true,
+   "level": "ok",
+   "detail": "115 条"
+  },
+  {
+   "check": "标题（三个平台限长）",
+   "ok": true,
+   "level": "ok",
+   "detail": "10月14日AI圈5件事：谷歌发布Gemini 4 Argon，Anthropic公布防蒸馏措施，X把Grok和Cursor并进一个订阅 | Gemini 4发布，X合并Grok和Cursor | AI圈5件事：Gemini 4发布"
+  },
+  {
+   "check": "简介里有全部来源",
+   "ok": true,
+   "level": "ok",
+   "detail": "5 个网址"
+  },
+  {
+   "check": "简介里没有别的网址",
+   "ok": true,
+   "level": "ok",
+   "detail": ""
+  },
+  {
+   "check": "简介 ≤ 2000 字",
+   "ok": true,
+   "level": "ok",
+   "detail": "807 字"
+  },
+  {
+   "check": "总时长超过 5 分钟（B 站分段章节要求）",
+   "ok": true,
+   "level": "ok",
+   "detail": "352.8 秒"
+  },
+  {
+   "check": "配音识别分 ≥ 0.75",
+   "ok": true,
+   "level": "ok",
+   "detail": "1 批"
+  },
+  {
+   "check": "事实核对（数字、英文名都在原文里）",
+   "ok": true,
+   "level": "ok",
+   "detail": "全部找到"
+  },
+  {
+   "check": "内容安全（色情、暴力、时政、广告、提示词注入、隐藏字符）",
+   "ok": true,
+   "level": "ok",
+   "detail": "没有命中"
+  },
+  {
+   "check": "要 AI 复核确认的词",
+   "ok": false,
+   "level": "warn",
+   "detail": "[敏感词（看上下文）] 第 1 条 第 8 句：提示词注入；[敏感词（看上下文）] 第 1 条 第 8 句：攻击；[敏感词（看上下文）] 第 1 条 第 8 句（配音文本）：提示词注入；[敏感词（看上下文）] 第 1 条 第 8 句（配音文本）：攻击；[敏感词（看上下文）] 第 2 条 第 1 句：攻击；[敏感词（看上下文）] 第 3 条 要点 2：入侵；[敏感词（看上下文）] 第 3 条 第 7 句：入侵；[敏感词（看上下文）] 字幕 srt：提示词注入；[敏感词（看上下文）] 字幕 srt：攻击；[敏感词（看上下文）] 字幕 srt：攻击；[敏感词（看上下文）] 字幕 srt：入侵"
+  },
+  {
+   "check": "没有重复最近 7 天播过的原文",
+   "ok": true,
+   "level": "ok",
+   "detail": ""
+  },
+  {
+   "check": "AI 复核（独立子代理，看成品和原文）",
+   "ok": true,
+   "level": "ok",
+   "detail": "通过：【无 fail 项】上一轮的唯一问题已改对：第 2 条第 7 句，SRT #47「9月24日起，/ Since September 24,」，#48「在误判率低于 0.1% 的特定领域，/ in specific areas where false positives are under 0.1%,」，#49「被安全机制拦下的请求，也要收费。/ requests blocked by its safeguards are also charged for.」。「特定领域 / specific areas」「0.1%」「9月24日 / September 24」都在各自对应的同一条里。我另从成片 122.0s、123.5s、125.0s、129.5s 抽帧，画面上烧进去的字幕和 SRT 一致（#47、#48、#49 均如此）。；【风格建议，不判 fail】第 2 条第 8 句，SRT #5"
+  }
+ ],
+ "hits": [
+  {
+   "level": "review",
+   "cat": "敏感词（看上下文）",
+   "word": "提示词注入",
+   "where": "第 1 条 第 8 句",
+   "context": "在 Gray Swan 基准上，间接提示词注入的攻击成功率压到了 0.7%。"
+  },
+  {
+   "level": "review",
+   "cat": "敏感词（看上下文）",
+   "word": "攻击",
+   "where": "第 1 条 第 8 句",
+   "context": " Swan 基准上，间接提示词注入的攻击成功率压到了 0.7%。"
+  },
+  {
+   "level": "review",
+   "cat": "敏感词（看上下文）",
+   "word": "提示词注入",
+   "where": "第 1 条 第 8 句（配音文本）",
+   "context": "在 Gray Swan 基准上，间接提示词注入的攻击成功率压到了百分之零点七。"
+  },
+  {
+   "level": "review",
+   "cat": "敏感词（看上下文）",
+   "word": "攻击",
+   "where": "第 1 条 第 8 句（配音文本）",
+   "context": " Swan 基准上，间接提示词注入的攻击成功率压到了百分之零点七。"
+  },
+  {
+   "level": "review",
+   "cat": "敏感词（看上下文）",
+   "word": "攻击",
+   "where": "第 2 条 第 1 句",
+   "context": "，Anthropic 公布了防御蒸馏攻击的新措施。"
+  },
+  {
+   "level": "review",
+   "cat": "敏感词（看上下文）",
+   "word": "入侵",
+   "where": "第 3 条 要点 2",
+   "context": "入侵步骤故意从简"
+  },
+  {
+   "level": "review",
+   "cat": "敏感词（看上下文）",
+   "word": "入侵",
+   "where": "第 3 条 第 7 句",
+   "context": "研究者说，实验里的入侵步骤故意做得很简单，所以结果是真实成"
+  },
+  {
+   "level": "review",
+   "cat": "敏感词（看上下文）",
+   "word": "提示词注入",
+   "where": "字幕 srt",
+   "context": "n benchmark,    间接提示词注入的 the indirect pro"
+  },
+  {
+   "level": "review",
+   "cat": "敏感词（看上下文）",
+   "word": "攻击",
+   "where": "字幕 srt",
+   "context": "ompt injection    攻击成功率压到了 0.7%。 attac"
+  },
+  {
+   "level": "review",
+   "cat": "敏感词（看上下文）",
+   "word": "攻击",
+   "where": "字幕 srt",
+   "context": "nounced    公布了防御蒸馏攻击的新措施。 new measures"
+  },
+  {
+   "level": "review",
+   "cat": "敏感词（看上下文）",
+   "word": "入侵",
+   "where": "字幕 srt",
+   "context": "iled.    研究者说，实验里的入侵步骤 The researchers"
+  }
+ ]
+}

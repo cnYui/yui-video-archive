@@ -1,0 +1,701 @@
+{
+  "date": "2026-10-13",
+  "opening": [
+    {
+      "text": "早上好，我是鲸鱼娘，今天是10月13日。",
+      "en": "Good morning, I'm Whale Girl. Today is October 13.",
+      "tts": "早上好，我是鲸鱼娘，今天是十月十三日。",
+      "expr": "开心"
+    },
+    {
+      "text": "今天说六件事：Meta 发布首个前沿模型，GPT-6.1 Sol 默认上下文扩到 50 万，微软公布 Maia 300 芯片，AlphaProof Nexus 登上《Science》，清空聊天记录能让智能体找到更好的思路，还有千问的 QwenGyre。",
+      "en": "Six stories today: Meta releases its first frontier model, GPT-6.1 Sol's default context grows to 500k, Microsoft unveils the Maia 300 chip, AlphaProof Nexus lands in Science, clearing chat history helps agents find better ideas, and Qwen's QwenGyre arrives.",
+      "tts": "今天说六件事：Meta 发布首个前沿模型，GPT 六点一 Sol 默认上下文扩到五十万，微软公布 Maia 三百 芯片，AlphaProof Nexus 登上《Science》，清空聊天记录能让智能体找到更好的思路，还有千问的 QwenGyre。"
+    }
+  ],
+  "news": [
+    {
+      "headline": "Meta 首个前沿模型",
+      "bar_label": "Muse Wonder",
+      "org": "Meta",
+      "source": "TechCrunch · The Decoder",
+      "source_short": "TechCrunch",
+      "date": "10月12日",
+      "rundown_key": "Meta 发布首个前沿模型",
+      "vhook": "Full 版 56 分，只给订阅用户",
+      "points": [
+        "两个版本，Full 仅限订阅",
+        "API 输入 4 美元",
+        "知识测试仍落后"
+      ],
+      "lines": [
+        {
+          "text": "第一件，Meta 发布了自己的第一个前沿模型，叫 Muse Wonder。",
+          "en": "First, Meta has released its first frontier model, called Muse Wonder.",
+          "expr": "认真",
+          "cuts": [
+            [
+              "第一件，Meta 发布了",
+              "First, Meta has released"
+            ],
+            [
+              "自己的第一个前沿模型，",
+              "its first frontier model,"
+            ]
+          ]
+        },
+        {
+          "text": "一共两个版本：Muse Wonder 和 Muse Wonder Full。",
+          "en": "There are two versions: Muse Wonder and Muse Wonder Full.",
+          "point": 0
+        },
+        {
+          "text": "两个模型都支持 100 万 token 的上下文，可以输入文字、图像、视频和音频。",
+          "en": "Both models support a 1 million token context and accept text, images, video and audio.",
+          "tts": "两个模型都支持一百万 token 的上下文，可以输入文字、图像、视频和音频。",
+          "cuts": [
+            [
+              "两个模型都支持 100 万",
+              "Both models support a 1 million"
+            ],
+            [
+              "token 的上下文，",
+              "token context"
+            ]
+          ]
+        },
+        {
+          "text": "Muse Wonder 可以通过 Meta 的 API 调用，每百万 token，输入 4 美元，输出 20 美元。",
+          "en": "Muse Wonder is available through Meta's API, per million tokens, at $4 for input and $20 for output.",
+          "tts": "Muse Wonder 可以通过 Meta 的 API 调用，每百万 token，输入四美元，输出二十美元。",
+          "point": 1,
+          "cuts": [
+            [
+              "Muse Wonder 可以通过 Meta 的 API",
+              "Muse Wonder is available through Meta's API,"
+            ],
+            [
+              "调用，每百万 token，",
+              "per million tokens,"
+            ]
+          ]
+        },
+        {
+          "text": "Full 版只给 Muse Code 订阅用户，不走 API，也没有公开价格。",
+          "en": "The Full version is for Muse Code subscribers only, not served through the API, and has no public price."
+        },
+        {
+          "text": "据 Meta 的博客，模型是在俄亥俄州中部的 Prometheus 数据中心训练的。",
+          "en": "According to Meta's blog, the models were trained in central Ohio, at the Prometheus data center.",
+          "cuts": [
+            [
+              "据 Meta 的博客，",
+              "According to Meta's blog,"
+            ],
+            [
+              "模型是在俄亥俄州中部的",
+              "the models were trained in central Ohio,"
+            ]
+          ]
+        },
+        {
+          "text": "Meta 自己的测试说，两个模型和 Fable 5.1、GPT-6 Astra 的基准分数相当。",
+          "en": "Meta's own tests say both models and Fable 5.1 and GPT-6 Astra have comparable benchmark scores.",
+          "tts": "Meta 自己的测试说，两个模型和 Fable 五点一、GPT 六 Astra 的基准分数相当。",
+          "cuts": [
+            [
+              "Meta 自己的测试说，",
+              "Meta's own tests say"
+            ],
+            [
+              "两个模型和 Fable 5.1、",
+              "both models and Fable 5.1 and"
+            ]
+          ]
+        },
+        {
+          "text": "第三方 Artificial Analysis 的智能指数里，Full 版 56 分，前代 Muse Spark 1.3 是 48 分。",
+          "en": "On the third-party Artificial Analysis Intelligence Index, the Full version scores 56, versus 48 for the previous Muse Spark 1.3.",
+          "tts": "第三方 Artificial Analysis 的智能指数里，Full 版五十六分，前代 Muse Spark 一点三 是四十八分。",
+          "point": 2,
+          "cuts": [
+            [
+              "第三方 Artificial Analysis 的",
+              "On the third-party Artificial Analysis"
+            ]
+          ]
+        },
+        {
+          "text": "不过在知识测试 AA-Omniscience 上，Full 版只有 30 分，Claude Opus 5.5 是 46 分。",
+          "en": "But on the AA-Omniscience knowledge test, the Full version scores only 30, while Claude Opus 5.5 scores 46.",
+          "tts": "不过在知识测试 AA-Omniscience 上，Full 版只有三十分，Claude Opus 五点五 是四十六分。"
+        },
+        {
+          "text": "Muse Wonder 也会接入 Meta 的 Muse 应用，先面向付费订阅用户。",
+          "en": "Muse Wonder will also come to Meta's Muse app, starting with paid subscribers."
+        },
+        {
+          "text": "每个任务的成本，也约是前代的三倍。",
+          "en": "The cost per task is also about three times the previous generation's.",
+          "cuts": [
+            [
+              "每个任务的成本，",
+              "The cost per task"
+            ]
+          ]
+        },
+        {
+          "text": "TechCrunch 提到，Meta 的对比结果来自它自己的模型卡。",
+          "en": "TechCrunch notes that Meta's comparisons come from its own model card."
+        }
+      ],
+      "vbigs": [
+        {
+          "line": 7,
+          "n": "56",
+          "small": "智能指数",
+          "d": "前代 Muse Spark 1.3 是 48 分"
+        }
+      ],
+      "refs": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/10/12/meta-releases-its-first-frontier-model-muse-wonder/"
+        },
+        {
+          "name": "The Decoder",
+          "url": "https://the-decoder.com/metas-new-frontier-model-muse-wonder-full-breaks-into-the-ai-top-tier/"
+        }
+      ],
+      "snap_url": "https://techcrunch.com/2026/10/12/meta-releases-its-first-frontier-model-muse-wonder/"
+    },
+    {
+      "headline": "Sol 上下文扩到 50 万",
+      "bar_label": "Sol 50 万",
+      "org": "OpenAI",
+      "source": "IT之家",
+      "source_short": "IT之家",
+      "date": "10月12日",
+      "rundown_key": "GPT-6.1 Sol 默认上下文扩到 50 万",
+      "vhook": "默认从 272k 提到 500k",
+      "points": [
+        "Codex 和 Work 里生效",
+        "订阅额度内不加价",
+        "最大仍是 100 万"
+      ],
+      "lines": [
+        {
+          "text": "第二件，OpenAI 把 GPT-6.1 Sol 的默认上下文长度，从 272k 提高到 500k，约增加 80%。",
+          "en": "Second, OpenAI has raised the default context length of GPT-6.1 Sol from 272k to 500k, about 80% more.",
+          "tts": "第二件，OpenAI 把 GPT 六点一 Sol 的默认上下文长度，从二十七万二千提高到五十万，约增加百分之八十。",
+          "expr": "认真"
+        },
+        {
+          "text": "这个改动在 Codex 和 Work 环境里生效。",
+          "en": "The change applies in the Codex and Work environments.",
+          "point": 0
+        },
+        {
+          "text": "IT之家说，用订阅额度时，Sol 不会被额外收长上下文费。",
+          "en": "IT Home says, when using subscription quota, Sol carries no extra long-context fee.",
+          "point": 1
+        },
+        {
+          "text": "OpenAI 的 Thibault Sottiaux 说，这个数值经过充分测试，对绝大多数用户来说，是体验和性能的最佳平衡点。",
+          "en": "OpenAI's Thibault Sottiaux says, the value is well tested, for most users, it is the best balance between experience and performance.",
+          "cuts": [
+            [
+              "OpenAI 的 Thibault Sottiaux 说，",
+              "OpenAI's Thibault Sottiaux says,"
+            ],
+            [
+              "这个数值经过充分测试，",
+              "the value is well tested,"
+            ],
+            [
+              "对绝大多数用户来说，",
+              "for most users,"
+            ]
+          ]
+        },
+        {
+          "text": "Sol 支持的最大上下文是 1M，用户可以自己调高或调低。",
+          "en": "Sol supports a maximum context of 1M, and users can raise or lower it themselves.",
+          "tts": "Sol 支持的最大上下文是一百万，用户可以自己调高或调低。",
+          "point": 2
+        },
+        {
+          "text": "调整它，可以减少上下文压缩被触发的次数。",
+          "en": "Adjusting it can reduce how often context compression is triggered."
+        },
+        {
+          "text": "OpenAI 还说，之后会继续提高上限。",
+          "en": "OpenAI also says it will keep raising the limit."
+        },
+        {
+          "text": "原文没有提具体价格。",
+          "en": "The article does not mention specific pricing."
+        }
+      ],
+      "vbigs": [
+        {
+          "line": 0,
+          "n": "500k",
+          "small": "默认上下文",
+          "d": "原来是 272k · 约增加 80%"
+        }
+      ],
+      "refs": [
+        {
+          "name": "IT之家",
+          "url": "https://www.ithome.com/1/011/736.htm"
+        }
+      ],
+      "snap_url": "https://www.ithome.com/1/011/736.htm"
+    },
+    {
+      "headline": "微软 Maia 300 芯片",
+      "bar_label": "Maia 300",
+      "org": "Microsoft",
+      "source": "The Decoder · IT之家",
+      "source_short": "The Decoder",
+      "date": "10月12日",
+      "rundown_key": "微软公布 Maia 300 芯片",
+      "vhook": "每兆瓦多 40% token，微软称",
+      "points": [
+        "288GB HBM4，18TB/s",
+        "一个机架放 96 颗",
+        "2027 年起大规模部署"
+      ],
+      "lines": [
+        {
+          "text": "第三件，微软公布自研 AI 芯片，Maia 300。",
+          "en": "Third, Microsoft unveils its in-house AI chip, Maia 300.",
+          "tts": "第三件，微软公布自研 AI 芯片，Maia 三百。",
+          "expr": "认真"
+        },
+        {
+          "text": "Maia 200 现在已经在为美国、欧洲和澳大利亚的 Microsoft Copilot 提供支持。",
+          "en": "Maia 200 already powers, in the US, Europe and Australia, Microsoft Copilot.",
+          "tts": "Maia 二百 现在已经在为美国、欧洲和澳大利亚的 Microsoft Copilot 提供支持。",
+          "cuts": [
+            [
+              "Maia 200 现在已经在为",
+              "Maia 200 already powers,"
+            ],
+            [
+              "美国、欧洲和澳大利亚的",
+              "in the US, Europe and Australia,"
+            ]
+          ]
+        },
+        {
+          "text": "每颗芯片配 288GB 的 HBM4 内存，带宽 18TB/s，额定功耗 950 瓦。",
+          "en": "Each chip has 288GB of HBM4 memory, 18TB/s of bandwidth and a rated power of 950 watts.",
+          "tts": "每颗芯片配二百八十八 GB 的 HBM 四 内存，带宽十八 TB 每秒，额定功耗九百五十瓦。",
+          "point": 0
+        },
+        {
+          "text": "一个机架能放 96 颗。",
+          "en": "One rack can hold 96 chips.",
+          "tts": "一个机架能放九十六颗。",
+          "point": 1
+        },
+        {
+          "text": "微软称，每兆瓦的 token 产出，比领先的 GPU 系统多 40%。",
+          "en": "Microsoft says, per-megawatt token output, is 40% higher than leading GPU systems.",
+          "tts": "微软称，每兆瓦的 token 产出，比领先的 GPU 系统多百分之四十。"
+        },
+        {
+          "text": "96 颗的机架，token 产出，最高是 Maia 200 的 7 倍。",
+          "en": "A 96-chip rack, token output, is up to 7 times a Maia 200 rack's.",
+          "tts": "九十六颗的机架，token 产出，最高是 Maia 二百 的七倍。"
+        },
+        {
+          "text": "但“领先 GPU”是哪一款、怎么测的，原文没说，也没有跑分和价格。",
+          "en": "But the article doesn't say which GPU or how it was tested, and gives no benchmarks or pricing."
+        },
+        {
+          "text": "Maia 300 的目标场景是长输入、快速对话和智能体任务。",
+          "en": "Maia 300 targets long inputs, fast conversations and agent tasks.",
+          "tts": "Maia 三百 的目标场景是长输入、快速对话和智能体任务。",
+          "cuts": [
+            [
+              "Maia 300 的目标场景是",
+              "Maia 300 targets"
+            ]
+          ]
+        },
+        {
+          "text": "微软计划从 2027 年开始，以多吉瓦的规模部署。",
+          "en": "Starting in 2027, Microsoft plans multi-gigawatt deployment.",
+          "tts": "微软计划从二零二七年开始，以多吉瓦的规模部署。",
+          "point": 2
+        },
+        {
+          "text": "更多细节，要等 11 月的 Ignite 大会。",
+          "en": "More details will come at the Ignite conference in November.",
+          "tts": "更多细节，要等十一月的 Ignite 大会。"
+        }
+      ],
+      "vbigs": [
+        {
+          "line": 4,
+          "n": "+40%",
+          "small": "每兆瓦 token",
+          "d": "微软自称 · 对比的 GPU 型号未说明"
+        }
+      ],
+      "refs": [
+        {
+          "name": "The Decoder",
+          "url": "https://the-decoder.com/microsoft-plans-to-scale-its-own-maia-ai-chips-to-gigawatt-levels-by-2027/"
+        },
+        {
+          "name": "IT之家",
+          "url": "https://www.ithome.com/1/012/115.htm"
+        }
+      ],
+      "snap_url": "https://the-decoder.com/microsoft-plans-to-scale-its-own-maia-ai-chips-to-gigawatt-levels-by-2027/"
+    },
+    {
+      "headline": "AlphaProof Nexus 解题",
+      "bar_label": "AlphaProof",
+      "org": "Google DeepMind",
+      "source": "The Decoder",
+      "source_short": "The Decoder",
+      "date": "10月12日",
+      "rundown_key": "AlphaProof Nexus 登上《Science》",
+      "vhook": "解了九道难题，两道悬了 56 年",
+      "points": [
+        "Lean 检查每次修改",
+        "九道埃尔德什问题",
+        "44 个数列猜想"
+      ],
+      "lines": [
+        {
+          "text": "第四件，Google DeepMind 的 AlphaProof Nexus，成果发表在《Science》上。",
+          "en": "Fourth, Google DeepMind's AlphaProof Nexus has had its results published in Science.",
+          "expr": "认真"
+        },
+        {
+          "text": "它用 Gemini 3.1 Pro 起草 Lean 形式证明，Lean 检查每次修改，报错再指导下一轮。",
+          "en": "It uses Gemini 3.1 Pro to draft proofs in the Lean formal language, Lean checks every revision, and its errors guide the next round.",
+          "tts": "它用 Gemini 三点一 Pro 起草 Lean 形式证明，Lean 检查每次修改，报错再指导下一轮。",
+          "point": 0
+        },
+        {
+          "text": "较难的子问题，会调用专用的证明工具 AlphaProof。",
+          "en": "Harder subproblems call the dedicated proof tool AlphaProof."
+        },
+        {
+          "text": "在 353 个未解决的埃尔德什问题里，它解决了九个，其中两个悬了 56 年。",
+          "en": "Of 353 unsolved Erdos problems, it solved nine, two of which had been open for 56 years.",
+          "tts": "在三百五十三个未解决的埃尔德什问题里，它解决了九个，其中两个悬了五十六年。",
+          "point": 1,
+          "cuts": [
+            [
+              "在 353 个未解决的埃尔德什问题里，",
+              "Of 353 unsolved Erdos problems,"
+            ],
+            [
+              "它解决了九个，",
+              "it solved nine,"
+            ]
+          ]
+        },
+        {
+          "text": "据论文，没有 AlphaProof 的帮助，系统也解出了这九个问题。",
+          "en": "According to the paper, without AlphaProof's help, the system also solved these nine problems.",
+          "tts": "据论文，没有 AlphaProof 的帮助，系统也解出了这九个问题。"
+        },
+        {
+          "text": "团队在论文发表前，就已经把这些解答放到了网上。",
+          "en": "Before the paper was published, the team had already posted the solutions online.",
+          "cuts": [
+            [
+              "团队在论文发表前，",
+              "Before the paper was published,"
+            ]
+          ]
+        },
+        {
+          "text": "它还证明了 44 个猜想，来自 OEIS 数列库，解决了代数几何里的一个开放问题。",
+          "en": "It also proved 44 conjectures, from the OEIS sequence database, and settled an open problem in algebraic geometry.",
+          "tts": "它还证明了四十四个猜想，来自 OEIS 数列库，解决了代数几何里的一个开放问题。",
+          "point": 2
+        },
+        {
+          "text": "The Decoder 的对比是：OpenAI 最近把数百个证明传到了 GitHub，DeepMind 则走了同行评审。",
+          "en": "The Decoder's contrast: OpenAI recently uploaded hundreds of proofs to GitHub, DeepMind went through peer review.",
+          "cuts": [
+            [
+              "OpenAI 最近把数百个证明",
+              "OpenAI recently uploaded hundreds of proofs"
+            ]
+          ]
+        },
+        {
+          "text": "原文没有列出这项研究的局限。",
+          "en": "The article does not list any limitations of the study."
+        }
+      ],
+      "vbigs": [
+        {
+          "line": 3,
+          "n": "9",
+          "small": "埃尔德什问题",
+          "d": "353 个未解题中解决 · 两个悬了 56 年"
+        }
+      ],
+      "refs": [
+        {
+          "name": "The Decoder",
+          "url": "https://the-decoder.com/google-deepminds-alphaproof-nexus-solved-dozens-of-open-math-problems-and-actually-got-peer-reviewed/"
+        }
+      ],
+      "snap_url": "https://the-decoder.com/google-deepminds-alphaproof-nexus-solved-dozens-of-open-math-problems-and-actually-got-peer-reviewed/"
+    },
+    {
+      "headline": "清空聊天记录更会想",
+      "bar_label": "清空聊天",
+      "org": "Microsoft",
+      "source": "The Decoder",
+      "source_short": "The Decoder",
+      "date": "10月12日",
+      "rundown_key": "清空聊天记录能让智能体找到更好的思路",
+      "vhook": "13 个任务平均提升 66%",
+      "points": [
+        "聊久了困在一个思路里",
+        "分叉 K 路，各自清空聊天",
+        "只清不分叉也提升约 22%"
+      ],
+      "lines": [
+        {
+          "text": "第五件，微软研究院有篇论文说，长时间运行的智能体，聊得越久，越容易困在一个思路里。",
+          "en": "Fifth, a Microsoft Research paper says, for long-running agents, the longer they chat, the more easily they get stuck in one line of thinking.",
+          "expr": "认真",
+          "cuts": [
+            [
+              "第五件，微软研究院有篇论文说，",
+              "Fifth, a Microsoft Research paper says,"
+            ],
+            [
+              "长时间运行的智能体，",
+              "for long-running agents,"
+            ],
+            [
+              "聊得越久，",
+              "the longer they chat,"
+            ]
+          ]
+        },
+        {
+          "text": "他们把这种现象叫“想法盆地”，英文是 idea basins。",
+          "en": "They call this phenomenon \"idea basins.\"",
+          "point": 0
+        },
+        {
+          "text": "办法叫 Fork-and-Flush。先分出 K 个并行分支，每个分支继承工作区和文件。",
+          "en": "The method is called Fork-and-Flush. It first splits into K parallel branches, and each branch inherits the workspace and files.",
+          "cuts": [
+            [
+              "办法叫 Fork-and-Flush。",
+              "The method is called Fork-and-Flush."
+            ]
+          ],
+          "point": 1
+        },
+        {
+          "text": "然后每个分支清空全部聊天上下文，从一段新对话接着干，最后只留最好的一支。",
+          "en": "Then each branch clears all its chat context and continues from a fresh conversation, and only the best branch is kept."
+        },
+        {
+          "text": "也就是说，丢掉聊天历史，但保留代码和文件。",
+          "en": "In other words, it drops the chat history but keeps the code and files."
+        },
+        {
+          "text": "在 13 个长时间任务上，同样算力下，它的平均归一化分数是 0.78，单次运行是 0.47。",
+          "en": "On 13 long-running tasks with the same compute, its average normalized score is 0.78, versus 0.47 for a single run."
+        },
+        {
+          "text": "也就是比单次运行高 66%，比四选一取最佳高 44.4%。",
+          "en": "That is 66% higher than a single run and 44.4% higher than best-of-4.",
+          "tts": "也就是比单次运行高百分之六十六，比四选一取最佳高百分之四十四点四。"
+        },
+        {
+          "text": "只清空聊天、不分叉，在 11 个任务上也有约 22% 的提升。",
+          "en": "Clearing the chat without forking also gave about a 22% gain on 11 tasks.",
+          "point": 2,
+          "cuts": [
+            [
+              "只清空聊天、不分叉，",
+              "Clearing the chat without forking"
+            ]
+          ]
+        },
+        {
+          "text": "要注意，实验只有 13 个任务，用的是 GPT-5.6-terra 和 GPT-5.5，分叉还要多花算力。",
+          "en": "Note that the experiment covers only 13 tasks, uses GPT-5.6-terra and GPT-5.5, and forking costs extra compute."
+        }
+      ],
+      "vbigs": [
+        {
+          "line": 6,
+          "n": "66%",
+          "small": "相对单次运行",
+          "d": "13 个任务平均 · 0.78 对 0.47"
+        }
+      ],
+      "refs": [
+        {
+          "name": "The Decoder",
+          "url": "https://the-decoder.com/clearing-chat-history-helps-ai-agents-find-better-solutions/"
+        }
+      ],
+      "snap_url": "https://the-decoder.com/clearing-chat-history-helps-ai-agents-find-better-solutions/"
+    },
+    {
+      "headline": "千问发布 QwenGyre",
+      "bar_label": "QwenGyre",
+      "org": "Alibaba",
+      "source": "IT之家",
+      "source_short": "IT之家",
+      "date": "10月12日",
+      "rundown_key": "千问的 QwenGyre",
+      "vhook": "同预算官方称快 1.78 倍",
+      "points": [
+        "面向长程智能体任务",
+        "跑完一批就转去训练",
+        "通过率 52.5% 到 58.5%"
+      ],
+      "lines": [
+        {
+          "text": "第六件，阿里千问发布了 QwenGyre，一个在线强化学习框架，面向长程智能体任务。",
+          "en": "Sixth, Alibaba's Qwen has released QwenGyre, an online reinforcement learning framework, for long-horizon agent tasks.",
+          "expr": "认真"
+        },
+        {
+          "text": "官方说，智能体做复杂工作，一次执行可能持续数小时，有几百轮交互，累计处理上百万 token。",
+          "en": "Qwen says a complex agent job can run for hours, with hundreds of interactions and over a million tokens processed in total.",
+          "point": 0,
+          "cuts": [
+            [
+              "官方说，智能体做复杂工作，",
+              "Qwen says a complex agent job"
+            ],
+            [
+              "一次执行可能持续数小时，",
+              "can run for hours,"
+            ],
+            [
+              "有几百轮交互，",
+              "with hundreds of interactions"
+            ]
+          ]
+        },
+        {
+          "text": "QwenGyre 用弹性调度：任务每结束一批，空出来的 GPU 就转去训练。",
+          "en": "QwenGyre uses elastic scheduling: each time a batch of tasks finishes, the freed-up GPUs switch to training.",
+          "point": 1
+        },
+        {
+          "text": "它还把轨迹按共享前缀组成轨迹树，只展开被选中的路径。",
+          "en": "It also organizes trajectories into a tree by shared prefix and expands only the selected paths."
+        },
+        {
+          "text": "官方的实验是 NL2RepoBench，每次约 70 万 token，训练 48 步，通过率从 52.5% 升到 58.5%。",
+          "en": "In Qwen's experiment on NL2RepoBench, with about 700,000 tokens per rollout and 48 training steps, the pass rate rose from 52.5% to 58.5%.",
+          "tts": "官方的实验是 NL2RepoBench，每次约七十万 token，训练四十八步，通过率从百分之五十二点五升到百分之五十八点五。",
+          "point": 2,
+          "cuts": [
+            [
+              "官方的实验是 NL2RepoBench，",
+              "In Qwen's experiment on NL2RepoBench,"
+            ],
+            [
+              "每次约 70 万 token，",
+              "with about 700,000 tokens per rollout"
+            ],
+            [
+              "训练 48 步，",
+              "and 48 training steps,"
+            ]
+          ]
+        },
+        {
+          "text": "同样的 GPU 预算下，端到端比 Async 实现快 1.78 倍。",
+          "en": "With the same GPU budget, it is 1.78 times faster end to end than Async.",
+          "tts": "同样的 GPU 预算下，端到端比 Async 实现快一点七八倍。"
+        },
+        {
+          "text": "官方还说，在 Qwen3.6-122B 上，三类任务都有端到端提速，但原文没给具体数字。",
+          "en": "Qwen also says Qwen3.6-122B sees end-to-end speedups on three kinds of tasks, but the article gives no figures.",
+          "tts": "官方还说，在 Qwen 三点六 一百二十二 B 上，三类任务都有端到端提速，但原文没给具体数字。",
+          "cuts": [
+            [
+              "官方还说，在 Qwen3.6-122B 上，",
+              "Qwen also says Qwen3.6-122B sees"
+            ],
+            [
+              "三类任务都有端到端提速，",
+              "end-to-end speedups on three kinds of tasks,"
+            ]
+          ]
+        },
+        {
+          "text": "这些数据都是官方在特定设置下给的，原文没提是否开源，也没说怎么用。",
+          "en": "These are Qwen's own figures from specific setups, the article doesn't say if it is open source, or how to use it."
+        }
+      ],
+      "vbigs": [
+        {
+          "line": 5,
+          "n": "1.78×",
+          "small": "端到端加速",
+          "d": "官方称 · 相对 Async · 同 GPU 预算"
+        }
+      ],
+      "refs": [
+        {
+          "name": "IT之家",
+          "url": "https://www.ithome.com/1/012/066.htm"
+        }
+      ],
+      "snap_url": "https://www.ithome.com/1/012/066.htm"
+    }
+  ],
+  "closing": [
+    {
+      "text": "今天就这些，来源都在简介里。",
+      "en": "That's all for today. Sources are in the description.",
+      "expr": "开心"
+    },
+    {
+      "text": "我们明天见。",
+      "en": "See you tomorrow.",
+      "expr": "开心"
+    }
+  ],
+  "cover": {
+    "item": 1,
+    "line1": "Meta 首个前沿模型",
+    "line2": "追上顶级了吗？",
+    "mood": "疑问"
+  },
+  "titles": {
+    "bilibili": "10月13日AI圈6件事：Meta发布首个前沿模型Muse Wonder，GPT-6.1 Sol默认上下文扩到50万，微软公布Maia 300芯片",
+    "douyin": "Meta发布Muse Wonder，Sol上下文扩到50万",
+    "xiaohongshu": "AI圈6件事：Meta新模型"
+  },
+  "vertical": {
+    "cuts": {
+      "训练 48 步，通过率从 52.5% 升到 58.5%。": [
+        [
+          "训练 48 步，",
+          "and 48 training steps,"
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,254 @@
+{
+  "number": 1015,
+  "title": "10月15日，鲸鱼娘带你看看AI圈发生了什么？",
+  "dir_name": "AI每日日报_1015",
+  "date": "2026-10-15",
+  "date_label": "10月15日",
+  "weekday": "周四",
+  "subtitle": "鲸鱼娘带你看看 AI 圈发生了什么",
+  "target_minutes": [
+    5,
+    6
+  ],
+  "question_scene": "S01",
+  "questions": [
+    {
+      "text": "Anthropic 新加坡开办公室",
+      "scenes": [
+        "S02"
+      ]
+    },
+    {
+      "text": "谷歌设备端反诈模型",
+      "scenes": [
+        "S03"
+      ]
+    },
+    {
+      "text": "Google Earth AI 地理代理",
+      "scenes": [
+        "S04"
+      ]
+    },
+    {
+      "text": "苹果三模态扩散模型",
+      "scenes": [
+        "S05"
+      ]
+    },
+    {
+      "text": "苹果检测语音混语",
+      "scenes": [
+        "S06"
+      ]
+    }
+  ],
+  "chapters": {
+    "S01": "开场",
+    "S02": "Anthropic 新加坡开办公室",
+    "S03": "谷歌设备端反诈模型",
+    "S04": "Google Earth AI 地理代理",
+    "S05": "苹果三模态扩散模型",
+    "S06": "苹果检测语音混语",
+    "S07": "回顾"
+  },
+  "bar_labels": {
+    "S01": "开场",
+    "S02": "新加坡办公室",
+    "S03": "设备端反诈",
+    "S04": "Earth AI 代理",
+    "S05": "三模态扩散",
+    "S06": "语音混语检测",
+    "S07": "回顾"
+  },
+  "backgrounds": {
+    "S01": "01_深海气泡.png",
+    "S02": "02_星点.png",
+    "S03": "03_波纹.png",
+    "S04": "01_深海气泡.png",
+    "S05": "02_星点.png",
+    "S06": "03_波纹.png",
+    "S07": "01_深海气泡.png"
+  },
+  "bg_alpha": 0.9,
+  "bg_blur": 0,
+  "intro_tagline": "",
+  "outro_references": [
+    "Anthropic 新加坡开办公室（Anthropic 官方）",
+    "谷歌设备端反诈模型（Google DeepMind 官方）",
+    "Google Earth AI 地理代理（Google Research 官方）",
+    "苹果三模态扩散模型（Apple Machine Learning Research）",
+    "苹果检测语音混语（Apple Machine Learning Research）"
+  ],
+  "outro_items": [
+    {
+      "label": "形象",
+      "value": "大肥鱼同人 · 上善无形 / ZipZipPipe"
+    },
+    {
+      "label": "视频制作模型",
+      "value": "Opus 5.5"
+    }
+  ],
+  "outro_closing": "感谢大家看到最后",
+  "auto_gestures": false,
+  "presenter": {
+    "id": "whale",
+    "frames": "角色/动作帧"
+  },
+  "badge_html": "AI每日日报<span class=\"n\">10.15</span>",
+  "toc_kicker_html": "<b>今日要闻</b>TODAY",
+  "bar_colors": [
+    "#97C3F0",
+    "#F3C98C",
+    "#4A88DA",
+    "#C6E6FB"
+  ],
+  "news": [
+    {
+      "headline": "Anthropic 新加坡开办公室",
+      "org": "Anthropic",
+      "source": "Anthropic 官方",
+      "source_short": "Anthropic",
+      "date": "10月14日",
+      "points": [
+        "第五个亚太办公室",
+        "和新加坡政府签 MOU",
+        "GovTech 1500+人已用"
+      ],
+      "rundown_key": "Anthropic 在新加坡开办公室",
+      "line_points": [
+        0,
+        1,
+        1,
+        null,
+        null,
+        2,
+        2,
+        null
+      ],
+      "refs": [
+        {
+          "name": "Anthropic 官方",
+          "url": "https://www.anthropic.com/news/singapore-office-opening"
+        }
+      ],
+      "snap": "../assets/snaps/news_01.png",
+      "snap_src": "anthropic.com"
+    },
+    {
+      "headline": "谷歌设备端反诈模型",
+      "org": "Google DeepMind",
+      "source": "Google DeepMind 官方",
+      "source_short": "Google",
+      "date": "10月14日",
+      "points": [
+        "本地 Gemma 模型",
+        "只在设备端分析",
+        "用户同意后才接入"
+      ],
+      "rundown_key": "谷歌做设备端反诈",
+      "line_points": [
+        0,
+        0,
+        null,
+        1,
+        2,
+        null,
+        null
+      ],
+      "refs": [
+        {
+          "name": "Google DeepMind 官方",
+          "url": "https://deepmind.google/blog/on-device-ai-scam-detection-mddi/"
+        }
+      ]
+    },
+    {
+      "headline": "Google Earth AI 地理代理",
+      "org": "Google Research",
+      "source": "Google Research 官方",
+      "source_short": "Google Research",
+      "date": "10月14日",
+      "points": [
+        "连接多种地理模型",
+        "新增两个评测基准",
+        "结果仍要专家复核"
+      ],
+      "rundown_key": "Google Earth AI 升级地理空间代理",
+      "line_points": [
+        0,
+        0,
+        null,
+        1,
+        null,
+        null,
+        2
+      ],
+      "refs": [
+        {
+          "name": "Google Research 官方",
+          "url": "https://research.google/blog/putting-earth-ai-to-work-geospatial-agents-for-our-planets-biggest-challenges/"
+        }
+      ],
+      "snap": "../assets/snaps/news_03.png",
+      "snap_src": "research.google"
+    },
+    {
+      "headline": "苹果三模态扩散模型",
+      "org": "Apple",
+      "source": "Apple Machine Learning Research",
+      "source_short": "Apple ML",
+      "date": "10月",
+      "points": [
+        "首次三模态 MDM",
+        "3B 模型规模",
+        "文本图像音频都能生成"
+      ],
+      "rundown_key": "苹果研究三模态扩散",
+      "line_points": [
+        0,
+        0,
+        null,
+        null,
+        1,
+        2
+      ],
+      "refs": [
+        {
+          "name": "Apple Machine Learning Research",
+          "url": "https://machinelearning.apple.com/research/tri-modal-masked-diffusion"
+        }
+      ]
+    },
+    {
+      "headline": "苹果检测语音混语",
+      "org": "Apple",
+      "source": "Apple Machine Learning Research",
+      "source_short": "Apple ML",
+      "date": "10月",
+      "points": [
+        "直接从语音检测",
+        "覆盖14种语言对",
+        "Whisper F1 0.798"
+      ],
+      "rundown_key": "苹果研究语音混语检测",
+      "line_points": [
+        0,
+        null,
+        0,
+        1,
+        2,
+        null,
+        null
+      ],
+      "refs": [
+        {
+          "name": "Apple Machine Learning Research",
+          "url": "https://machinelearning.apple.com/research/code-switching-detection"
+        }
+      ]
+    }
+  ],
+  "style": "board"
+}

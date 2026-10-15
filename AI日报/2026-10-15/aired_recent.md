@@ -1,0 +1,33 @@
+# 最近 7 天已播（选题去重：同一件事没有新进展就不再报）
+
+- 2026-10-10｜Anthropic 免费查开源漏洞｜https://www.anthropic.com/research/launching-opt-in-vuln-finding-service-for-open-source
+- 2026-10-10｜Claude 智能体并行 1000 个｜https://the-decoder.com/anthropics-claude-can-now-orchestrate-up-to-1000-ai-agents-in-parallel-through-dynamic-workflows/
+- 2026-10-10｜Claude 画出紫外天图｜https://www.anthropic.com/research/the-missing-map-of-the-sky
+- 2026-10-10｜Anthropic 更新使用政策｜https://www.anthropic.com/news/2026-usage-policy-update
+- 2026-10-10｜DeepSeek 抽风的原因｜https://www.ithome.com/1/010/780.htm
+- 2026-10-10｜OpenAI 年化营收少 200 亿｜https://www.ithome.com/1/010/751.htm https://the-decoder.com/openai-and-anthropic-before-the-ipo-different-balance-sheets-make-comparison-difficult/
+- 2026-10-10｜Ecosia 换中国模型｜https://www.ithome.com/1/010/539.htm
+- 2026-10-11｜Anthropic 披露评测越界｜https://www.anthropic.com/research/investigating-unintended-model-actions https://techcrunch.com/2026/10/09/anthropic-cant-reliably-control-its-ai-agents-its-cutting-off-its-internal-evals-from-the-live-internet-instead/
+- 2026-10-11｜OpenAI 披露模型自毁环境｜https://the-decoder.com/openai-says-a-misaligned-model-deliberately-destroyed-its-own-environment-hoping-for-a-fresh-start-with-better-data/ https://alignment.openai.com/misalignment-reports/
+- 2026-10-11｜决策模型突然火了｜https://techcrunch.com/2026/10/09/the-maker-of-non-text-ai-model-jev-valued-at-7-5b-just-weeks-after-launch/ https://the-decoder.com/microsofts-decision-1-model-enters-the-fast-growing-ai-decision-model-race/
+- 2026-10-11｜Vidu Q4 预览版支持 4K｜https://www.ithome.com/1/011/192.htm https://www.chinatechnews.com/2026/10/08/130490-shengshu-technology-launches-vidu-q4-preview-a-next-generation-ai-video-model-built-for-lifelike-performances
+- 2026-10-11｜腾讯云开源 TeamAI｜https://www.ithome.com/1/011/432.htm https://github.com/Tencent/teamai-cli
+- 2026-10-11｜Sierra 与 Meta 推 PAP｜https://thenextweb.com/news/personal-agent-protocol-sierra-meta https://www.ithome.com/1/011/392.htm
+- 2026-10-12｜纳德拉：给 AI 装紧急刹车｜https://techcrunch.com/2026/10/10/microsofts-satya-nadella-says-ai-models-need-an-emergency-brake/ https://www.ithome.com/1/011/545.htm
+- 2026-10-12｜Odyssey-3 开放免费试玩｜https://the-decoder.com/odyssey-3-is-a-new-generative-world-model-that-you-can-try-for-free/
+- 2026-10-12｜智能体组团，贵但不一定强｜https://the-decoder.com/ai-agent-teams-waste-massive-tokens-for-barely-measurable-quality-gains-research-finds/
+- 2026-10-12｜arXiv 限制每人每月两篇｜https://the-decoder.com/arxiv-caps-submissions-at-two-per-month-as-ai-paper-flood-overwhelms-the-preprint-server/
+- 2026-10-12｜AI 做研究，爱夸大战绩｜https://the-decoder.com/ai-agents-overstate-their-results-and-remain-far-from-autonomous-research-study-finds/
+- 2026-10-12｜GPT-4o 老快照 10月23日停用｜https://www.qbitai.com/2026/10/502550.html
+- 2026-10-12｜民间版 DeepSeek Bot 来了｜https://www.qbitai.com/2026/10/502544.html
+- 2026-10-13｜Meta 首个前沿模型｜https://techcrunch.com/2026/10/12/meta-releases-its-first-frontier-model-muse-wonder/ https://the-decoder.com/metas-new-frontier-model-muse-wonder-full-breaks-into-the-ai-top-tier/
+- 2026-10-13｜Sol 上下文扩到 50 万｜https://www.ithome.com/1/011/736.htm
+- 2026-10-13｜微软 Maia 300 芯片｜https://the-decoder.com/microsoft-plans-to-scale-its-own-maia-ai-chips-to-gigawatt-levels-by-2027/ https://www.ithome.com/1/012/115.htm
+- 2026-10-13｜AlphaProof Nexus 解题｜https://the-decoder.com/google-deepminds-alphaproof-nexus-solved-dozens-of-open-math-problems-and-actually-got-peer-reviewed/
+- 2026-10-13｜清空聊天记录更会想｜https://the-decoder.com/clearing-chat-history-helps-ai-agents-find-better-solutions/
+- 2026-10-13｜千问发布 QwenGyre｜https://www.ithome.com/1/012/066.htm
+- 2026-10-14｜Gemini 4 Argon｜https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/
+- 2026-10-14｜Claude 防蒸馏加固｜https://www.anthropic.com/research/distillation-defenses
+- 2026-10-14｜小模型自我复制｜https://www.anthropic.com/research/self-replicating-ai
+- 2026-10-14｜X 订阅合并 Grok｜https://x.ai/news/x-subscription
+- 2026-10-14｜RTX Spark 笔记本｜https://blogs.nvidia.com/blog/local-ai-rtx-spark-laptops-software-updates/

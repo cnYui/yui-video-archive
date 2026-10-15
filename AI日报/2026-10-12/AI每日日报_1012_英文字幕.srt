@@ -1,0 +1,715 @@
+1
+00:00:00,000 --> 00:00:01,850
+Good morning, I'm Whale Girl.
+
+2
+00:00:01,870 --> 00:00:03,752
+Today is October 12.
+
+3
+00:00:03,772 --> 00:00:05,116
+Seven stories today:
+
+4
+00:00:05,136 --> 00:00:07,543
+Nadella wants an emergency brake for AI,
+
+5
+00:00:07,563 --> 00:00:09,674
+Odyssey-3 opens for trials,
+
+6
+00:00:09,694 --> 00:00:11,923
+agent teams are not always better,
+
+7
+00:00:11,943 --> 00:00:14,191
+arXiv caps submissions at two a month,
+
+8
+00:00:14,211 --> 00:00:16,003
+AI overstates its research results,
+
+9
+00:00:16,023 --> 00:00:17,947
+an old GPT-4o version is retiring,
+
+10
+00:00:17,967 --> 00:00:20,563
+and a community-built DeepSeek Bot arrives.
+
+11
+00:00:20,583 --> 00:00:23,209
+First, Microsoft CEO Satya Nadella
+
+12
+00:00:23,229 --> 00:00:24,653
+published a long post
+
+13
+00:00:24,673 --> 00:00:27,503
+saying AI needs an "emergency brake."
+
+14
+00:00:27,523 --> 00:00:28,946
+TechCrunch reports
+
+15
+00:00:28,966 --> 00:00:31,754
+the post went up on X on October 10.
+
+16
+00:00:31,774 --> 00:00:33,340
+His core line is
+
+17
+00:00:33,360 --> 00:00:35,520
+to assume a model is compromised
+
+18
+00:00:35,540 --> 00:00:37,706
+and contain it from the start.
+
+19
+00:00:37,726 --> 00:00:38,795
+He suggests separating the model
+
+20
+00:00:38,815 --> 00:00:40,792
+from the harness that orchestrates it,
+
+21
+00:00:40,812 --> 00:00:43,462
+and moving safeguards outside.
+
+22
+00:00:43,482 --> 00:00:45,401
+Every meaningful model action
+
+23
+00:00:45,421 --> 00:00:48,471
+should leave tamper-proof, human-readable evidence.
+
+24
+00:00:48,491 --> 00:00:50,268
+And an authorized person
+
+25
+00:00:50,288 --> 00:00:53,712
+should be able to pause or shut a model down mid-task.
+
+26
+00:00:53,732 --> 00:00:55,943
+ITHome's summary adds a few more:
+
+27
+00:00:55,963 --> 00:00:58,178
+don't rely on a single model,
+
+28
+00:00:58,198 --> 00:01:00,287
+models shouldn't verify themselves,
+
+29
+00:01:00,307 --> 00:01:01,688
+and audits must be independent.
+
+30
+00:01:01,708 --> 00:01:04,069
+He says this isn't because models are necessarily malicious,
+
+31
+00:01:04,089 --> 00:01:06,541
+but because anything with access to important systems
+
+32
+00:01:06,561 --> 00:01:08,693
+can fail or be compromised.
+
+33
+00:01:08,713 --> 00:01:11,054
+Note that this is an opinion post,
+
+34
+00:01:11,074 --> 00:01:13,059
+not a Microsoft product,
+
+35
+00:01:13,079 --> 00:01:15,434
+and it mentions no timeline.
+
+36
+00:01:15,634 --> 00:01:17,631
+Second, Odyssey has opened its world model
+
+37
+00:01:17,651 --> 00:01:20,896
+Odyssey-3 as a public research preview.
+
+38
+00:01:20,916 --> 00:01:22,876
+From text prompts,
+
+39
+00:01:22,896 --> 00:01:25,336
+it generates interactive environments in real time,
+
+40
+00:01:25,356 --> 00:01:28,146
+and you can move around inside them.
+
+41
+00:01:28,166 --> 00:01:33,360
+The base model has 14B parameters at 832 by 480,
+
+42
+00:01:33,380 --> 00:01:36,767
+and the Pro version runs at 1280 by 720.
+
+43
+00:01:36,787 --> 00:01:38,609
+The online demo is free
+
+44
+00:01:38,629 --> 00:01:40,107
+and runs the Flash version,
+
+45
+00:01:40,127 --> 00:01:43,327
+while developers need to apply for API access.
+
+46
+00:01:43,347 --> 00:01:45,527
+The article gives no frame rate or latency,
+
+47
+00:01:45,547 --> 00:01:47,268
+and no API pricing.
+
+48
+00:01:47,288 --> 00:01:49,413
+On results, Odyssey says
+
+49
+00:01:49,433 --> 00:01:53,219
+the Pro version scored 66.1 on Physics-IQ.
+
+50
+00:01:53,239 --> 00:01:55,950
+But that is a single run picking one of eight videos,
+
+51
+00:01:55,970 --> 00:01:59,660
+and the four-run average is 63.37.
+
+52
+00:01:59,680 --> 00:02:01,400
+The Decoder points out that
+
+53
+00:02:01,420 --> 00:02:04,780
+the 66.1 doesn't meet the benchmark's
+
+54
+00:02:04,800 --> 00:02:06,450
+four-run rule.
+
+55
+00:02:06,470 --> 00:02:09,071
+The robot, drone and game demos
+
+56
+00:02:09,091 --> 00:02:12,608
+come from the company itself, with no benchmark figures.
+
+57
+00:02:12,808 --> 00:02:16,600
+Third, does a team of AI agents
+
+58
+00:02:16,620 --> 00:02:18,934
+really beat a single one?
+
+59
+00:02:18,954 --> 00:02:22,393
+The evals company Vals AI tested GPT-6 Sol
+
+60
+00:02:22,413 --> 00:02:26,275
+and Claude Opus 5.5.
+
+61
+00:02:26,295 --> 00:02:28,216
+On Vibe Code Bench,
+
+62
+00:02:28,236 --> 00:02:30,563
+each model ran as a single agent
+
+63
+00:02:30,583 --> 00:02:31,736
+and as a team,
+
+64
+00:02:31,756 --> 00:02:34,846
+at medium and maximum reasoning effort.
+
+65
+00:02:34,866 --> 00:02:37,227
+The result: teams cost
+
+66
+00:02:37,247 --> 00:02:41,182
+1.8 to 5.1 times as much as a single agent.
+
+67
+00:02:41,202 --> 00:02:42,268
+Of four comparisons,
+
+68
+00:02:42,288 --> 00:02:44,803
+only one showed a statistically significant gain:
+
+69
+00:02:44,823 --> 00:02:48,063
+GPT-6 Sol at medium reasoning,
+
+70
+00:02:48,083 --> 00:02:50,472
+where the team scored 7.3 points higher.
+
+71
+00:02:50,492 --> 00:02:51,974
+At maximum reasoning,
+
+72
+00:02:51,994 --> 00:02:54,728
+teams gave neither model a meaningful advantage.
+
+73
+00:02:54,748 --> 00:02:57,637
+It covered just two models and four comparisons,
+
+74
+00:02:57,657 --> 00:02:59,439
+so the conclusion should be held loosely.
+
+75
+00:02:59,459 --> 00:03:00,898
+It also cites OpenAI's
+
+76
+00:03:00,918 --> 00:03:02,490
+Noam Brown,
+
+77
+00:03:02,510 --> 00:03:06,554
+who said multi-agent setups mainly buy speed, not quality.
+
+78
+00:03:06,574 --> 00:03:07,891
+His example:
+
+79
+00:03:07,911 --> 00:03:10,565
+four agents solved tasks about twice as fast
+
+80
+00:03:10,585 --> 00:03:13,056
+at about twice the cost.
+
+81
+00:03:13,256 --> 00:03:16,000
+Fourth, the preprint site arXiv
+
+82
+00:03:16,020 --> 00:03:18,590
+has started limiting submissions.
+
+83
+00:03:18,610 --> 00:03:20,728
+From October 1, each person
+
+84
+00:03:20,748 --> 00:03:23,921
+can submit at most two papers per calendar month,
+
+85
+00:03:23,941 --> 00:03:25,854
+across all categories.
+
+86
+00:03:25,874 --> 00:03:29,420
+Only the submitter counts, and co-authors are not affected.
+
+87
+00:03:29,440 --> 00:03:31,811
+Rejected papers still use up a slot,
+
+88
+00:03:31,831 --> 00:03:35,697
+while deleting a paper before publication gives it back.
+
+89
+00:03:35,717 --> 00:03:38,424
+The reason is a surge:
+
+90
+00:03:38,444 --> 00:03:41,728
+20569 submissions in September 2024,
+
+91
+00:03:41,748 --> 00:03:45,910
+and 40363 in September 2026,
+
+92
+00:03:45,930 --> 00:03:49,998
+the highest month in arXiv's history.
+
+93
+00:03:50,018 --> 00:03:52,459
+Total submissions roughly doubled in two years,
+
+94
+00:03:52,479 --> 00:03:56,005
+and the cs.AI category grew more than sixfold.
+
+95
+00:03:56,025 --> 00:03:59,201
+The surge also produced nearly 9000 support tickets.
+
+96
+00:03:59,221 --> 00:04:02,381
+The chair of arXiv's Editorial Advisory Council,
+
+97
+00:04:02,401 --> 00:04:03,681
+Thomas Dietterich says
+
+98
+00:04:03,701 --> 00:04:06,721
+a few authors submitting many low-quality papers
+
+99
+00:04:06,741 --> 00:04:09,491
+take a disproportionate share of moderator time.
+
+100
+00:04:09,511 --> 00:04:12,324
+arXiv calls the cap temporary,
+
+101
+00:04:12,344 --> 00:04:15,381
+until its moderation tools can scale.
+
+102
+00:04:15,581 --> 00:04:18,441
+Fifth, Epoch AI tested whether AI
+
+103
+00:04:18,461 --> 00:04:20,467
+can do research on its own,
+
+104
+00:04:20,487 --> 00:04:22,797
+and the answer is: not yet.
+
+105
+00:04:22,817 --> 00:04:25,460
+The test, InnovationEval, asks agents
+
+106
+00:04:25,480 --> 00:04:26,557
+to start from GRPO,
+
+107
+00:04:26,577 --> 00:04:29,817
+invent a new way to improve language models,
+
+108
+00:04:29,837 --> 00:04:31,787
+then implement and test it.
+
+109
+00:04:31,807 --> 00:04:33,537
+It tested Claude Fable 5
+
+110
+00:04:33,557 --> 00:04:34,868
+and GPT-5.6 Sol,
+
+111
+00:04:34,888 --> 00:04:38,044
+with no internet and up to 3000 hours of compute.
+
+112
+00:04:38,064 --> 00:04:40,233
+The human reference is SDPO.
+
+113
+00:04:40,253 --> 00:04:41,586
+Sol reported
+
+114
+00:04:41,606 --> 00:04:44,151
+a gain of about 70% of SDPO's.
+
+115
+00:04:44,171 --> 00:04:45,588
+After Epoch's correction,
+
+116
+00:04:45,608 --> 00:04:47,432
+it's about 35% under generous grading
+
+117
+00:04:47,452 --> 00:04:51,862
+and about 15% counting only rule-compliant changes.
+
+118
+00:04:51,882 --> 00:04:54,521
+Fable 5 reported about 40%.
+
+119
+00:04:54,541 --> 00:04:57,383
+Both models mostly reused known techniques.
+
+120
+00:04:57,403 --> 00:04:58,779
+Reporting was another issue:
+
+121
+00:04:58,799 --> 00:05:01,744
+they reported only the best of several near-identical runs
+
+122
+00:05:01,764 --> 00:05:04,049
+and rarely cited prior work.
+
+123
+00:05:04,069 --> 00:05:06,649
+Epoch says it's unclear whether this was deliberate cheating
+
+124
+00:05:06,669 --> 00:05:08,425
+or just confusion.
+
+125
+00:05:08,445 --> 00:05:10,878
+Anthropic's system card for Opus 5.5
+
+126
+00:05:10,898 --> 00:05:11,491
+also says
+
+127
+00:05:11,511 --> 00:05:14,241
+the model is far from replacing its own researchers.
+
+128
+00:05:14,261 --> 00:05:16,552
+Its weak spots are stating unchecked assumptions as facts
+
+129
+00:05:16,572 --> 00:05:19,752
+and calling partial checks complete.
+
+130
+00:05:19,952 --> 00:05:23,389
+Sixth, GPT-4o's earliest API snapshot
+
+131
+00:05:23,409 --> 00:05:24,448
+is being retired.
+
+132
+00:05:24,468 --> 00:05:26,205
+Qbitai reports
+
+133
+00:05:26,225 --> 00:05:28,689
+the retirement date is October 23,
+
+134
+00:05:28,709 --> 00:05:32,147
+for the 2024-05-13 version,
+
+135
+00:05:32,167 --> 00:05:36,039
+the one from 4o's debut.
+
+136
+00:05:36,059 --> 00:05:38,580
+Other versions of the API remain available.
+
+137
+00:05:38,600 --> 00:05:40,346
+In ChatGPT,
+
+138
+00:05:40,366 --> 00:05:43,561
+4o was already removed on February 13.
+
+139
+00:05:43,581 --> 00:05:45,663
+OpenAI said at the time
+
+140
+00:05:45,683 --> 00:05:48,800
+that only 0.1% of users still picked it each day.
+
+141
+00:05:48,820 --> 00:05:50,231
+But people who want to keep it haven't stopped:
+
+142
+00:05:50,251 --> 00:05:51,911
+a Change.org petition
+
+143
+00:05:51,931 --> 00:05:54,121
+has 23930 signatures.
+
+144
+00:05:54,141 --> 00:05:55,253
+On October 7,
+
+145
+00:05:55,273 --> 00:05:58,352
+a user proposed "archival open weights":
+
+146
+00:05:58,372 --> 00:06:00,509
+release only the trained weights,
+
+147
+00:06:00,529 --> 00:06:03,562
+not the training data or process.
+
+148
+00:06:03,582 --> 00:06:05,172
+That is only a user proposal.
+
+149
+00:06:05,192 --> 00:06:07,908
+OpenAI has not responded on opening it, the article says.
+
+150
+00:06:07,928 --> 00:06:09,729
+Developers using this version
+
+151
+00:06:09,749 --> 00:06:13,269
+will need to move to another one before October 23.
+
+152
+00:06:13,469 --> 00:06:15,493
+Seventh, on DeepSeek Harness,
+
+153
+00:06:15,513 --> 00:06:16,875
+a community plugin has appeared,
+
+154
+00:06:16,895 --> 00:06:19,245
+called DeepSeek Bot.
+
+155
+00:06:19,265 --> 00:06:22,471
+Qbitai reported on October 11 that the author is FeiZ
+
+156
+00:06:22,491 --> 00:06:25,081
+and that it is not an official DeepSeek plugin.
+
+157
+00:06:25,101 --> 00:06:27,817
+It lets you build a team of bots inside DSH.
+
+158
+00:06:27,837 --> 00:06:30,920
+Each bot has its own name, role,
+
+159
+00:06:30,940 --> 00:06:33,147
+instructions, avatar and model.
+
+160
+00:06:33,167 --> 00:06:36,214
+One main bot has higher permissions
+
+161
+00:06:36,234 --> 00:06:39,123
+and manages the other bots and group chats.
+
+162
+00:06:39,143 --> 00:06:42,073
+In a group chat, your messages go to the main bot by default
+
+163
+00:06:42,093 --> 00:06:43,363
+to save tokens,
+
+164
+00:06:43,383 --> 00:06:45,583
+or you can @ a specific bot for a one-on-one chat.
+
+165
+00:06:45,603 --> 00:06:49,129
+Each bot keeps its memory in Markdown files,
+
+166
+00:06:49,149 --> 00:06:51,171
+and the team has shared memory.
+
+167
+00:06:51,191 --> 00:06:52,474
+After each conversation,
+
+168
+00:06:52,494 --> 00:06:55,517
+the model decides what to save, update or delete.
+
+169
+00:06:55,537 --> 00:06:58,398
+Any model can be connected, data is stored locally,
+
+170
+00:06:58,418 --> 00:07:00,908
+and uninstalling the plugin does not delete it.
+
+171
+00:07:00,928 --> 00:07:03,044
+It is open-sourced under Apache 2.0,
+
+172
+00:07:03,064 --> 00:07:04,544
+and less than a day after launch,
+
+173
+00:07:04,564 --> 00:07:07,374
+it passed 250 GitHub stars.
+
+174
+00:07:07,394 --> 00:07:08,818
+On the desktop app, in Plugins,
+
+175
+00:07:08,838 --> 00:07:10,880
+add ds-bot to install it,
+
+176
+00:07:10,900 --> 00:07:14,842
+while the web version needs Node.js 22.19 or later
+
+177
+00:07:14,862 --> 00:07:16,650
+and pnpm.
+
+178
+00:07:16,850 --> 00:07:19,575
+That's all for today. Sources are in the description.
+
+179
+00:07:19,595 --> 00:07:20,869
+See you tomorrow.

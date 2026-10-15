@@ -1,0 +1,46 @@
+{
+  "line1": "AI 自己做研究",
+  "line2": "战绩吹大了？",
+  "l1px": 168,
+  "l2px": 236,
+  "maxw": 1320,
+  "safe": [
+    300,
+    1620
+  ],
+  "textCx": 900,
+  "scale": 9,
+  "frame": [
+    64,
+    64
+  ],
+  "footRow": 62,
+  "fishX": 1074,
+  "foot": 1062,
+  "tag": "",
+  "theme": {
+    "bg": "#FFFFFF",
+    "lead": "#8A93AD",
+    "accent": "#4A88DA",
+    "list": "#4D5670",
+    "more": "#9AA2B8"
+  },
+  "_theme": "blue",
+  "_pose": "think_m0",
+  "_eyes": "idle_look_ur_m0",
+  "_fx": "",
+  "_qmark": true,
+  "_place": "right",
+  "others": [
+    "纳德拉：给 AI 装紧急刹车",
+    "Odyssey-3 开放免费试玩",
+    "智能体组团，贵但不一定强",
+    "arXiv 限制每人每月两篇",
+    "GPT-4o 老快照 10月23日停用"
+  ],
+  "othersHead": "今天还有 6 条",
+  "othersMore": "……共 7 条",
+  "listX": 300,
+  "listW": 740,
+  "listBottom": 1000
+}

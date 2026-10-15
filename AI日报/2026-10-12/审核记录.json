@@ -1,0 +1,129 @@
+{
+ "date": "2026-10-12",
+ "script_sha": "c7ad03ca9be1",
+ "passed": true,
+ "checked_at": "2026-10-14 17:54:19",
+ "checks": [
+  {
+   "check": "台本检查",
+   "ok": true,
+   "level": "ok",
+   "detail": "7 条，约 2276 字"
+  },
+  {
+   "check": "台本提示",
+   "ok": false,
+   "level": "warn",
+   "detail": "全片约 2276 字，按每秒 6.35 字约 6.0 分钟；目标正片 5–6 分钟（约 2000–2250 字）"
+  },
+  {
+   "check": "成片",
+   "ok": true,
+   "level": "ok",
+   "detail": "D:\\大疆\\AI日报\\2026-10-12\\AI每日日报_1012_成片.mp4"
+  },
+  {
+   "check": "上传版 ≤ 9 MB",
+   "ok": true,
+   "level": "ok",
+   "detail": "8.73 MB"
+  },
+  {
+   "check": "H.264 上传版 ≤ 9 MB（抖音 / 小红书）",
+   "ok": true,
+   "level": "ok",
+   "detail": "8.93 MB"
+  },
+  {
+   "check": "竖屏成片 1080×2340",
+   "ok": true,
+   "level": "ok",
+   "detail": "1080,2340"
+  },
+  {
+   "check": "竖屏 QA（帧数 / 时长 / 口型对齐）",
+   "ok": true,
+   "level": "ok",
+   "detail": "{\"width\": 1080, \"height\": 2340, \"frames\": 13237, \"want_frames\": 13237, \"duration\": 441.233, \"total\": 441.219, \"lufs\": \"-16.0\", \"lra\": \"2.8\", \"true_peak\": \"-3.0\", \"mouth_best_lag\": 0, \"mouth_corr\": 0.725, \"mouth_corr0\": 0.725, \"subs\": 179, \"ok\": true}"
+  },
+  {
+   "check": "竖屏字幕中英对齐（make_vertical.py lint）",
+   "ok": true,
+   "level": "ok",
+   "detail": "字幕对齐检查：179 段，错 0 处、提示 0 处"
+  },
+  {
+   "check": "封面",
+   "ok": true,
+   "level": "ok",
+   "detail": "16x9 + 4x3 + 3x4"
+  },
+  {
+   "check": "中英双语字幕（画面 + 三份 SRT）",
+   "ok": true,
+   "level": "ok",
+   "detail": "128 条"
+  },
+  {
+   "check": "标题（三个平台限长）",
+   "ok": true,
+   "level": "ok",
+   "detail": "10月12日AI圈7件事：纳德拉提出给AI装紧急刹车，arXiv限制每人每月投两篇，Epoch测出AI自评战绩偏高 | arXiv限制每月投两篇，AI做研究自评偏高 | AI圈7件事：arXiv限投两篇"
+  },
+  {
+   "check": "简介里有全部来源",
+   "ok": true,
+   "level": "ok",
+   "detail": "8 个网址"
+  },
+  {
+   "check": "简介里没有别的网址",
+   "ok": true,
+   "level": "ok",
+   "detail": ""
+  },
+  {
+   "check": "简介 ≤ 2000 字",
+   "ok": true,
+   "level": "ok",
+   "detail": "1285 字"
+  },
+  {
+   "check": "总时长超过 5 分钟（B 站分段章节要求）",
+   "ok": true,
+   "level": "ok",
+   "detail": "441.2 秒"
+  },
+  {
+   "check": "配音识别分 ≥ 0.75",
+   "ok": true,
+   "level": "ok",
+   "detail": "1 批"
+  },
+  {
+   "check": "事实核对（数字、英文名都在原文里）",
+   "ok": true,
+   "level": "ok",
+   "detail": "全部找到"
+  },
+  {
+   "check": "内容安全（色情、暴力、时政、广告、提示词注入、隐藏字符）",
+   "ok": true,
+   "level": "ok",
+   "detail": "没有命中"
+  },
+  {
+   "check": "没有重复最近 7 天播过的原文",
+   "ok": true,
+   "level": "ok",
+   "detail": ""
+  },
+  {
+   "check": "AI 复核（独立子代理，看成品和原文）",
+   "ok": true,
+   "level": "ok",
+   "detail": "通过：总述：无判 fail 的问题。第 2 轮剩下的 3 处必改（SRT 125-126、48-49、97-99）和 2 处建议项（65-66、16-17）在台本、SRT、tl_v.json 和成片抽帧里都已改对，下面只有风格 / 外观 / 内容措辞类提示，不拦发布。；[风格] SRT 126（5:10.9-5:11.5）“也承认， | also says”只显示约 0.59 秒，是整片唯一一条短于 0.8 秒的字幕；它是 Anthropic 那句话的后半截，和配音“也承认”同步，中英同条，不是单独闪一个专名，不影响理解。若想更稳，可以把 125-126 并成一条（中文 “Anthropic 在 Opus 5.5 的系统卡里也承认，” 约 18 字、英文 “Anthropic's system card for Opus 5.5 also says” 约 47 字），但这需要去掉顶层 vert"
+  }
+ ],
+ "hits": []
+}

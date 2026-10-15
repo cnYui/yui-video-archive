@@ -1,0 +1,609 @@
+1
+00:00:00,000 --> 00:00:02,013
+早上好，我是鲸鱼娘，
+Good morning, I'm Whale Girl.
+
+2
+00:00:02,033 --> 00:00:04,051
+今天是10月15日。
+Today is October 15.
+
+3
+00:00:04,071 --> 00:00:05,204
+今天说五件事：
+Five stories today:
+
+4
+00:00:05,224 --> 00:00:07,546
+Anthropic 在新加坡开办公室，
+Anthropic opens in Singapore,
+
+5
+00:00:07,566 --> 00:00:10,382
+谷歌做设备端反诈，Google Earth AI
+Google builds on-device scam detection, Google Earth AI
+
+6
+00:00:10,402 --> 00:00:11,906
+升级地理空间代理，
+upgrades its geospatial agent,
+
+7
+00:00:11,926 --> 00:00:13,790
+苹果研究三模态扩散
+and Apple studies tri-modal diffusion
+
+8
+00:00:13,810 --> 00:00:15,715
+和语音混语检测。
+and code-switching detection.
+
+9
+00:00:15,735 --> 00:00:18,595
+第一件，Anthropic 10月14日宣布，
+First, Anthropic announced on October 14 that it opened
+
+10
+00:00:18,615 --> 00:00:20,331
+在新加坡开设办公室，
+an office in Singapore,
+
+11
+00:00:20,351 --> 00:00:23,141
+这是它在亚太地区的第五个办公室。
+its fifth office in the Asia-Pacific region.
+
+12
+00:00:23,161 --> 00:00:25,660
+同时，Anthropic 和新加坡
+At the same time, Anthropic and Singapore's
+
+13
+00:00:25,680 --> 00:00:26,972
+数字发展及信息部
+Ministry of Digital Development and Information
+
+14
+00:00:26,992 --> 00:00:28,662
+签了一份合作备忘录。
+signed a memorandum.
+
+15
+00:00:28,682 --> 00:00:31,045
+合作范围包括 AI 安全、
+The cooperation covers AI safety,
+
+16
+00:00:31,065 --> 00:00:33,118
+安保和模型评估。
+security and model evaluation.
+
+17
+00:00:33,138 --> 00:00:35,373
+双方还计划做技术交流，
+They also plan technical exchanges
+
+18
+00:00:35,393 --> 00:00:37,834
+涉及测试标准和事故响应，
+on testing standards and incident response,
+
+19
+00:00:37,854 --> 00:00:40,084
+也分享研究和数据。
+and sharing research and data.
+
+20
+00:00:40,104 --> 00:00:42,374
+Anthropic 还说会探索
+Anthropic also says it will explore
+
+21
+00:00:42,394 --> 00:00:44,264
+帮助中小企业和政府人员
+ways to help small businesses and public officers
+
+22
+00:00:44,284 --> 00:00:46,515
+更负责任地用 AI 的方式。
+adopt AI responsibly.
+
+23
+00:00:46,535 --> 00:00:47,740
+Anthropic 说，新加坡
+Anthropic says Singapore,
+
+24
+00:00:47,760 --> 00:00:49,181
+在 Claude 使用量
+on Claude usage
+
+25
+00:00:49,201 --> 00:00:51,176
+相对人口规模的指标上，
+relative to population,
+
+26
+00:00:51,196 --> 00:00:54,056
+排在121个国家中的第二名，
+ranks second among 121 countries,
+
+27
+00:00:54,076 --> 00:00:56,056
+接近理论规模的六倍。
+nearly six times its expected level.
+
+28
+00:00:56,076 --> 00:00:58,530
+官方还说，新加坡 GovTech 已有
+Anthropic also says Singapore's GovTech already has
+
+29
+00:00:58,550 --> 00:01:00,671
+超过1500名工程师和技术人员
+more than 1500 engineers and technical staff
+
+30
+00:01:00,691 --> 00:01:02,567
+采用 Claude Code。
+using Claude Code.
+
+31
+00:01:02,587 --> 00:01:04,536
+这些使用数据都来自 Anthropic
+Those usage figures come from Anthropic's
+
+32
+00:01:04,556 --> 00:01:05,368
+自己的公告，
+own announcement,
+
+33
+00:01:05,388 --> 00:01:07,798
+不能当成独立评测。
+not an independent evaluation.
+
+34
+00:01:07,998 --> 00:01:10,053
+第二件，Google DeepMind
+Second, Google DeepMind and Singapore's
+
+35
+00:01:10,073 --> 00:01:11,969
+和新加坡 GovTech 合作，
+GovTech built an on-device model
+
+36
+00:01:11,989 --> 00:01:15,489
+做了一个设备端的诈骗对话检测模型。
+for detecting scam conversations.
+
+37
+00:01:15,509 --> 00:01:17,307
+谷歌说，诈骗占新加坡
+Google says scams make up more than half
+
+38
+00:01:17,327 --> 00:01:19,125
+报案数量的一半以上，
+of Singapore's reported crimes,
+
+39
+00:01:19,145 --> 00:01:21,781
+自2019年以来造成的损失
+with losses since 2019 topping
+
+40
+00:01:21,801 --> 00:01:24,175
+超过40亿新加坡元。
+4 billion Singapore dollars.
+
+41
+00:01:24,195 --> 00:01:26,151
+他们把轻量级 Gemma 模型
+They fine-tuned a lightweight Gemma model
+
+42
+00:01:26,171 --> 00:01:27,751
+用本地诈骗对话微调，
+on local scam conversations,
+
+43
+00:01:27,771 --> 00:01:29,606
+覆盖冒充政府机构、
+including impersonation of public institutions,
+
+44
+00:01:29,626 --> 00:01:32,123
+银行和本地人物等套路。
+banks and local figures.
+
+45
+00:01:32,143 --> 00:01:34,589
+模型直接在手机上分析对话模式，
+The model analyzes conversation patterns on the phone
+
+46
+00:01:34,609 --> 00:01:36,940
+发现可能的操纵意图后，
+and gives a real-time warning on the device
+
+47
+00:01:36,960 --> 00:01:39,969
+在设备上实时提醒用户暂停。
+when it detects possible manipulation.
+
+48
+00:01:39,989 --> 00:01:43,619
+谷歌和新加坡政府都不能读取聊天内容，
+Google and the Singapore Government cannot read the chats;
+
+49
+00:01:43,639 --> 00:01:45,615
+模型只有在用户同意、
+the model works only with user consent
+
+50
+00:01:45,635 --> 00:01:48,459
+并且应用条款允许时才接入。
+and the application's terms allowing access.
+
+51
+00:01:48,479 --> 00:01:50,640
+实现上用了两阶段流程，
+The system uses two stages:
+
+52
+00:01:50,660 --> 00:01:52,425
+先看较小的上下文，
+a small context check first,
+
+53
+00:01:52,445 --> 00:01:54,427
+再用微调后的 Gemma
+followed by the fine-tuned Gemma model
+
+54
+00:01:54,447 --> 00:01:56,656
+检查更大的对话片段。
+examining a larger conversation snapshot.
+
+55
+00:01:56,676 --> 00:02:00,062
+原文称应用里的推广会分阶段进行，
+The post says rollout in the app will be phased,
+
+56
+00:02:00,082 --> 00:02:02,212
+也提到在手机上跑分类器
+and notes that battery use needs special attention
+
+57
+00:02:02,232 --> 00:02:04,345
+要特别注意电量。
+when running a classifier on a phone.
+
+58
+00:02:04,545 --> 00:02:07,062
+第三件，Google Research
+Third, Google Research published
+
+59
+00:02:07,082 --> 00:02:08,701
+发布新技术报告，
+a technical report
+
+60
+00:02:08,721 --> 00:02:12,361
+介绍升级后的地理空间推理代理。
+on an upgraded geospatial reasoning agent.
+
+61
+00:02:12,381 --> 00:02:14,825
+它把 Gemini 接到 WeatherNext、
+It connects Gemini to WeatherNext, flood forecasting,
+
+62
+00:02:14,845 --> 00:02:16,377
+洪水预测、人口动态、
+population dynamics,
+
+63
+00:02:16,397 --> 00:02:17,030
+卫星遥感
+satellite remote sensing
+
+64
+00:02:17,050 --> 00:02:19,997
+和 Google Earth Engine 等工具上。
+and Google Earth Engine tools.
+
+65
+00:02:20,017 --> 00:02:23,059
+用户提问后，代理先制定多步计划，
+After a question, the agent plans a multi-step workflow,
+
+66
+00:02:23,079 --> 00:02:24,973
+再选择数据集和模型，
+selects datasets and models,
+
+67
+00:02:24,993 --> 00:02:28,459
+在独立工作区处理大规模地图数据。
+and processes large map data in a separate workspace.
+
+68
+00:02:28,479 --> 00:02:30,515
+这次新增了两个评测基准：
+The work adds two benchmarks,
+
+69
+00:02:30,535 --> 00:02:33,454
+GeoKTools 和 GeoExpertQueries，
+GeoKTools and GeoExpertQueries,
+
+70
+00:02:33,474 --> 00:02:35,605
+一共对比四种代理配置。
+and compares four agent configurations.
+
+71
+00:02:35,625 --> 00:02:36,825
+Google 还扩大了
+Google is also expanding
+
+72
+00:02:36,845 --> 00:02:40,014
+Ask Google Earth 实验性深度分析
+Ask Google Earth experimental deep analysis
+
+73
+00:02:40,034 --> 00:02:42,831
+和 Agent-to-Agent API 的早期试用。
+and early access to the Agent-to-Agent API.
+
+74
+00:02:42,851 --> 00:02:44,685
+合作测试里，有机构
+In partner testing,
+
+75
+00:02:44,705 --> 00:02:47,402
+用它分析14条历史飓风路径，
+one organization analyzed 14 historical cyclone
+
+76
+00:02:47,422 --> 00:02:51,052
+几分钟完成原本要人工做几天的筛查。
+paths in minutes instead of days of manual screening.
+
+77
+00:02:51,072 --> 00:02:52,796
+但官方明确提醒，
+Google explicitly warns
+
+78
+00:02:52,816 --> 00:02:55,412
+部分分数来自自动评分器，
+that some scores come from an autorater,
+
+79
+00:02:55,432 --> 00:02:57,610
+结果更像专家的第一稿，
+so the output is a strong first draft
+
+80
+00:02:57,630 --> 00:02:59,579
+不是最终答案。
+rather than a final answer.
+
+81
+00:02:59,779 --> 00:03:01,991
+第四件，苹果研究团队
+Fourth, Apple's research team
+
+82
+00:03:02,011 --> 00:03:04,670
+公布三模态掩码扩散模型，
+presented a tri-modal masked diffusion
+
+83
+00:03:04,690 --> 00:03:07,424
+训练数据同时包含文本、
+model trained on text, image-text
+
+84
+00:03:07,444 --> 00:03:09,677
+图文和音频文本。
+and audio-text data.
+
+85
+00:03:09,697 --> 00:03:11,304
+论文说，这是第一个
+The paper says
+
+86
+00:03:11,324 --> 00:03:13,292
+从零开始预训练的三模态
+this is the first tri-modal
+
+87
+00:03:13,312 --> 00:03:15,302
+Masked Diffusion Model。
+Masked Diffusion Model pretrained from scratch.
+
+88
+00:03:15,322 --> 00:03:18,542
+作者系统分析了多模态缩放规律、
+The authors systematically analyze multimodal scaling laws,
+
+89
+00:03:18,562 --> 00:03:23,022
+模态混合比例、噪声日程和批量大小。
+modality mixing ratios, noise schedules and batch size.
+
+90
+00:03:23,042 --> 00:03:24,092
+他们还提出一种
+They also propose
+
+91
+00:03:24,112 --> 00:03:26,233
+基于随机微分方程的重参数化，
+a stochastic-differential-equation reparameterization
+
+92
+00:03:26,253 --> 00:03:30,003
+把物理批量大小和逻辑批量大小解耦。
+that decouples physical and logical batch size.
+
+93
+00:03:30,023 --> 00:03:32,496
+初步统一模型的规模是3B，
+The preliminary unified model has 3B parameters
+
+94
+00:03:32,516 --> 00:03:34,669
+使用了6.4万亿 token，
+and uses 6.4 trillion tokens,
+
+95
+00:03:34,689 --> 00:03:35,866
+在文本生成、
+with results in text generation,
+
+96
+00:03:35,886 --> 00:03:39,507
+文生图和文生音频任务上都给出结果。
+text-to-image and text-to-speech tasks.
+
+97
+00:03:39,527 --> 00:03:41,898
+这是一项开放研究和系统分析，
+This is an open research study and systematic analysis,
+
+98
+00:03:41,918 --> 00:03:44,164
+不等于苹果已经发布了可直接
+not a product model that Apple
+
+99
+00:03:44,184 --> 00:03:46,128
+使用的产品模型。
+has released for direct use.
+
+100
+00:03:46,328 --> 00:03:48,761
+第五件，苹果提出一种直接
+Fifth, Apple proposed
+
+101
+00:03:48,781 --> 00:03:51,828
+从语音里找混语句子的轻量方法，
+a lightweight way
+
+102
+00:03:51,848 --> 00:03:55,528
+不必先把整段音频转成文字。
+to detect code-switching directly from speech.
+
+103
+00:03:55,548 --> 00:03:56,977
+这里的混语，是一句
+Code-switching means alternating
+
+104
+00:03:56,997 --> 00:03:58,749
+话里交替使用两种语言，
+between two languages in one utterance,
+
+105
+00:03:58,769 --> 00:04:01,071
+常见于多语言对话。
+common in multilingual conversations.
+
+106
+00:04:01,091 --> 00:04:03,750
+方法从预训练语音编码器里找出
+The method finds language-selective hidden
+
+107
+00:04:03,770 --> 00:04:06,237
+对某种语言敏感的隐藏维度，
+dimensions in a pretrained speech encoder
+
+108
+00:04:06,257 --> 00:04:08,967
+再聚合成逐帧的混语预测。
+and aggregates frame-level activations into a prediction.
+
+109
+00:04:08,987 --> 00:04:11,397
+在 CS-FLEURS 数据集的
+Across CS-FLEURS's
+
+110
+00:04:11,417 --> 00:04:12,983
+14种语言对上，
+14 language pairs,
+
+111
+00:04:13,003 --> 00:04:14,607
+Whisper-small
+the Whisper-small
+
+112
+00:04:14,627 --> 00:04:17,653
+编码器的平均 F1 是0.798。
+encoder reached a mean F1 of 0.798.
+
+113
+00:04:17,673 --> 00:04:20,814
+这个分数高于 CNN 的0.776，
+That is higher than 0.776 for a CNN
+
+114
+00:04:20,834 --> 00:04:24,524
+也高于 HuBERT 线性基线的0.751。
+and 0.751 for a HuBERT linear baseline.
+
+115
+00:04:24,544 --> 00:04:27,455
+意义在于，数据团队可以先从大规模
+The idea is to help data teams find code-switching
+
+116
+00:04:27,475 --> 00:04:29,470
+语音库里筛出混语音频，
+audio in large speech collections
+
+117
+00:04:29,490 --> 00:04:31,938
+再补充多语言训练数据。
+and build more representative multilingual training data.
+
+118
+00:04:31,958 --> 00:04:34,404
+论文展示的是数据筛选工具，
+The paper presents a data-selection tool,
+
+119
+00:04:34,424 --> 00:04:35,911
+不是已经解决混语
+not a complete speech assistant
+
+120
+00:04:35,931 --> 00:04:38,364
+识别的完整语音助手。
+that has solved code-switching recognition.
+
+121
+00:04:38,564 --> 00:04:41,543
+今天就这些，来源都在简介里。
+That's all for today. Sources are in the description.
+
+122
+00:04:41,563 --> 00:04:42,842
+我们明天见。
+See you tomorrow.

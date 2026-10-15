@@ -1,0 +1,44 @@
+{
+  "stages": {
+    "init": {
+      "at": "2026-10-14 03:33:51"
+    },
+    "build": {
+      "at": "2026-10-14 14:15:23",
+      "script_sha": "c795fddb9136",
+      "chunks": 1
+    },
+    "voice": {
+      "at": "2026-10-14 14:17:13",
+      "takes": 1
+    },
+    "render": {
+      "at": "2026-10-14 14:26:03",
+      "seconds": 352.83,
+      "upload_bytes": 8704186,
+      "check_warnings": 0
+    },
+    "gate": {
+      "at": "2026-10-14 14:35:25",
+      "passed": true,
+      "script_sha": "c795fddb9136"
+    },
+    "published": {
+      "at": "2026-10-14 14:43:36",
+      "bv": "BV1vfp66eEEG",
+      "also": [],
+      "replaced_video": "有人声版（Qwen3-TTS）替换无人声版，B 站编辑页「更换视频」→ 修改内容待审核"
+    },
+    "tts": {
+      "at": "2026-10-14 13:55:11",
+      "source": "local",
+      "engine": "qwen",
+      "speaker": "Vivian",
+      "tempo": 1.15,
+      "silent": false,
+      "seconds": 352.7,
+      "took": 83
+    }
+  },
+  "last": "published"
+}
