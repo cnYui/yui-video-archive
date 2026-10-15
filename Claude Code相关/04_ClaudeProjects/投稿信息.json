@@ -1,0 +1,29 @@
+{
+  "bilibili": {
+    "bvid": "BV1Hgpg6dELo",
+    "url": "https://www.bilibili.com/video/BV1Hgpg6dELo/",
+    "posted_at_cn": "2026-10-10 20:15:09",
+    "state_at_post": "审核中（state -1），没有定时发布（dtime 0）",
+    "title": "这个 Claude 的这个 Project，一个视频带你看懂是什么东西",
+    "tid": 231,
+    "category": "人工智能",
+    "declaration": "含AI生成内容",
+    "tags": ["编程", "claude", "Claude Code", "Anthropic", "AI编程", "人工智能", "AI工具", "大模型", "AI Agent", "Projects"],
+    "desc_length": 1155,
+    "desc_file": "制作/_desc_final.txt",
+    "season": "Claude Code相关",
+    "duration_s": 683,
+    "cover": "封面 A（制作/04_封面/封面_选定_16x9.png、封面_选定_4x3.png）；线上 cover 1920×1080、cover43 1440×1080，两张不同的图",
+    "video_file": "claude-projects_成片.mp4",
+    "srt_uploaded": false
+  },
+  "other_platforms": "未发（用户这次只让发 B 站）",
+  "notes": [
+    "用户自己把 mp4 拖进 B 站上传页，我填表并点“立即投稿”（用户在聊天里明说“你来发布”）。",
+    "第一次点“立即投稿”弹“定时发布时间不可用”：定时发布开关被我前面的点击带开了（时间 20:07），取消弹窗、关开关后重新投稿成功；以后填完表、点投稿前先读一遍定时开关。",
+    "标题里的 Claude：用户原稿写的是 Cloud，按语音输入误听改成 Claude，用户确认“标题用Claude”。",
+    "片尾清单是草稿（5 条参考文献 + 致谢），已烧进成片，用户没确认过。",
+    "稿子里没录“泼冷水 / 边界”那一段；剪辑时删了 17 处说法不准确的话，清单在 台本/剪辑说明.md。",
+    "页面所在标签是后台标签（hidden），截图超时、坐标点击不可靠，全程用 JS 读写页面；没有把 Chrome 窗口抢到前台（用户那个窗口里有他在玩的 JoJo 游戏标签）。"
+  ]
+}

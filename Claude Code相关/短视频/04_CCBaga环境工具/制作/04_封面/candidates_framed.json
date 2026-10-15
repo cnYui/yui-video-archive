@@ -1,0 +1,59 @@
+{
+  "candidates": [
+    {
+      "id": "A",
+      "note": "用户指定文字，项目身份界面",
+      "recommend": true,
+      "video": "D:\\大疆\\Claude Code相关\\素材\\2026-10_CCBaga\\identity-preview.png",
+      "t": 0,
+      "crop": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "big": [
+        "Claude",
+        "永不封号？！"
+      ],
+      "accent_line": 1,
+      "sticker": "CCBaga"
+    },
+    {
+      "id": "B",
+      "note": "用户指定文字，仓库主视觉",
+      "video": "D:\\大疆\\Claude Code相关\\素材\\2026-10_CCBaga\\CCBaga\\docs\\readme-hero.png",
+      "t": 0,
+      "crop": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "big": [
+        "Claude",
+        "永不封号？！"
+      ],
+      "accent_line": 1,
+      "sticker": "CCBaga"
+    },
+    {
+      "id": "C",
+      "note": "用户指定文字，项目架构图",
+      "video": "D:\\大疆\\Claude Code相关\\素材\\2026-10_CCBaga\\architecture.png",
+      "t": 0,
+      "crop": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "big": [
+        "Claude",
+        "永不封号？！"
+      ],
+      "accent_line": 1,
+      "sticker": "CCBaga"
+    }
+  ]
+}

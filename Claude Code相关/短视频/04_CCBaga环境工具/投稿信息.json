@@ -1,0 +1,193 @@
+{
+  "_说明": "交付包阶段先写 titles（3 个候选 × 3 个平台 = 3×3）和各平台默认项；用户回“封面 X 标题 Y 同意”后，把选中的那条标题写进各平台字段（bilibili.title / douyin.title / xiaohongshu.title），approval 记下选择和时间。scripts/check_titles.py 按各平台要求核对字数：B 站标题 ≤ 80 / 抖音 ≤ 30（话题 ≤ 5）/ 小红书 ≤ 20；放不下的完整标题放抖音描述、小红书正文的第一行。三个标题角度要真有区别（事实陈述 / 数字悬念 / 泼冷水），不和封面大字同一句。2026-10-06 起视频号不发（旧的 weixin_channels 字段和短标题 6–16 字存档在 references/_archive/视频号发布_已移除_20261006.md）；小红书“原创声明”开关选开（用户 2026-10-06 定）。",
+  "slug": "CCBaga",
+  "video": "D:\\大疆\\Claude Code相关\\短视频\\04_CCBaga环境工具\\CCBaga_成片.mp4",
+  "duration_s": 86.536,
+  "approval": {
+    "status": "authorized",
+    "cover": "A",
+    "title": 1,
+    "note": "用户要求做完直接 Playwright 发布，后明确只发 B站；封面与标题按用户原文。"
+  },
+  "titles": [
+    {
+      "id": 1,
+      "angle": "用户指定",
+      "recommend": true,
+      "bilibili": "这个github开源项目防止你的Claude封号！ccbaga",
+      "douyin": "CCBaga：把 Claude 环境一次理清",
+      "xiaohongshu": "CCBaga能防封吗？"
+    },
+    {
+      "id": 2,
+      "angle": "备选功能介绍，不发布",
+      "bilibili": "CCBaga：把 Claude 本地身份、浏览器和环境检查放进一个开源工具",
+      "douyin": "CCBaga：Claude 环境管理工具",
+      "xiaohongshu": "Claude环境整理工具CCBaga"
+    },
+    {
+      "id": 3,
+      "angle": "备选边界说明，不发布",
+      "bilibili": "Claude 永不封号？CCBaga 的绿色核验到底代表什么",
+      "douyin": "Claude全绿核验能保证不封号吗？",
+      "xiaohongshu": "CCBaga全绿等于不封号吗？"
+    }
+  ],
+  "covers": {
+    "3x4": "制作/04_封面/封面_选定_3x4.png",
+    "16x9": "制作/04_封面/封面_选定_16x9.png",
+    "4x3": "制作/04_封面/封面_选定_4x3.png"
+  },
+  "source": {
+    "original_post": "",
+    "original_author": "",
+    "project_or_site": ""
+  },
+  "bilibili": {
+    "title": "这个github开源项目防止你的Claude封号！ccbaga",
+    "desc": "CCBaga 把 Claude 本地身份归档、配套浏览器和环境核验放到一个桌面工作流中。\n\n标题围绕防封话题；项目明确：选择地区不改变公网 IP，绿色结果只说明本次已测项目匹配，不保证匿名、解封或账号获准。仅管理自己的身份，遵守 Anthropic 条款与支持地区，账号受限走官方申诉。\n\n项目与画面来源：https://github.com/liseami/CCBaga\n版本：2026年10月14日核对 v0.2.43；第三方开源项目，与 Anthropic 无隶属或背书关系。身份页面为项目原始组件的隔离预览，使用虚构身份；没有执行真实清理或网络修改。\n\n配音：本机 Qwen3-TTS 开源模型合成；中英双语字幕。背景音乐来自本项目既有系列素材。",
+    "declaration": "含AI生成内容",
+    "category": "人工智能（tid 231）",
+    "tags": [
+      "Claude",
+      "Claude Code",
+      "CCBaga",
+      "开源工具",
+      "AI工具",
+      "人工智能"
+    ],
+    "collection": "Claude Code相关（9223239）",
+    "repost_source": "",
+    "cover": "两个位各传各的（双比例同步改动不勾）：16:9 → 个人空间封面，4:3 → 首页推荐封面",
+    "published": {
+      "url": "https://www.bilibili.com/video/BV1CxpC69ESE/",
+      "bvid": "BV1CxpC69ESE",
+      "aid": 117438129702417,
+      "cid": 42732094824,
+      "posted_at": "2026-10-14T15:41:19+08:00",
+      "verified_at": "2026-10-14T16:47:46+09:00",
+      "state": 0,
+      "state_desc": "开放浏览",
+      "title": "这个github开源项目防止你的Claude封号！ccbaga",
+      "duration_s": 87,
+      "category_tid": 231,
+      "collection": {
+        "id": 9223239,
+        "title": "Claude Code相关"
+      },
+      "declaration": {
+        "id": 1,
+        "content": "含AI生成内容"
+      },
+      "tags": [
+        "CCBaga",
+        "人工智能",
+        "Claude Code",
+        "开源工具",
+        "AI工具",
+        "claude"
+      ],
+      "covers": {
+        "cover": {
+          "url": "http://i0.hdslb.com/bfs/archive/f4ef18c52bf5f87909ffb3b03bf0cd21adbe6d1e.jpg",
+          "width": 1920,
+          "height": 1080
+        },
+        "cover43": {
+          "url": "http://i0.hdslb.com/bfs/archive/13d680e7035db7ab33da5574574d5a12d55b2c6f.jpg",
+          "width": 1440,
+          "height": 1080
+        }
+      },
+      "uploaded_file": "D:\\大疆\\Claude Code相关\\短视频\\04_CCBaga环境工具\\CCBaga_成片.mp4",
+      "uploaded_size_bytes": 7156553,
+      "evidence": "制作/B站发布核验.json"
+    }
+  },
+  "douyin": {
+    "title": "",
+    "desc": "",
+    "topics": [],
+    "declaration": "内容由AI生成",
+    "collection": null,
+    "cover": "竖封面 3:4 = 封面_选定_3x4.png；横封面 4:3 = 封面_选定_4x3.png",
+    "published": null
+  },
+  "xiaohongshu": {
+    "title": "",
+    "desc": "",
+    "topics": [],
+    "declaration": "笔记含AI合成内容",
+    "original_declaration": "开（用户 2026-10-06 定）",
+    "cover": "3:4 = 封面_选定_3x4.png",
+    "published": null
+  },
+  "published": {
+    "bilibili": {
+      "url": "https://www.bilibili.com/video/BV1CxpC69ESE/",
+      "bvid": "BV1CxpC69ESE",
+      "aid": 117438129702417,
+      "cid": 42732094824,
+      "posted_at": "2026-10-14T15:41:19+08:00",
+      "verified_at": "2026-10-14T16:47:46+09:00",
+      "state": 0,
+      "state_desc": "开放浏览",
+      "title": "这个github开源项目防止你的Claude封号！ccbaga",
+      "duration_s": 87,
+      "category_tid": 231,
+      "collection": {
+        "id": 9223239,
+        "title": "Claude Code相关"
+      },
+      "declaration": {
+        "id": 1,
+        "content": "含AI生成内容"
+      },
+      "tags": [
+        "CCBaga",
+        "人工智能",
+        "Claude Code",
+        "开源工具",
+        "AI工具",
+        "claude"
+      ],
+      "covers": {
+        "cover": {
+          "url": "http://i0.hdslb.com/bfs/archive/f4ef18c52bf5f87909ffb3b03bf0cd21adbe6d1e.jpg",
+          "width": 1920,
+          "height": 1080
+        },
+        "cover43": {
+          "url": "http://i0.hdslb.com/bfs/archive/13d680e7035db7ab33da5574574d5a12d55b2c6f.jpg",
+          "width": 1440,
+          "height": 1080
+        }
+      },
+      "uploaded_file": "D:\\大疆\\Claude Code相关\\短视频\\04_CCBaga环境工具\\CCBaga_成片.mp4",
+      "uploaded_size_bytes": 7156553,
+      "evidence": "制作/B站发布核验.json"
+    }
+  },
+  "platforms": [
+    "bilibili"
+  ],
+  "delivery": {
+    "created_at": "2026-10-14T16:25:25.621496+09:00",
+    "resolution": [
+      1080,
+      2340
+    ],
+    "fps": 30,
+    "frames": 2596,
+    "duration": 86.533333,
+    "size_bytes": 7156553,
+    "sha256": "eb8e31be7ae9f0b3ad2f5a97da50fa879b4fdf897e3c01f6c8ca31a83b0a1fc0",
+    "qa": {
+      "page_errors": 0,
+      "subtitle_width": "通过",
+      "audio_asr": "20句，17句达到0.8；3句英文专名转写差异",
+      "cover_frame0": "2596帧与全部pts保持一致，原音轨md5一致，解码无错误"
+    }
+  },
+  "publish_status": "published"
+}

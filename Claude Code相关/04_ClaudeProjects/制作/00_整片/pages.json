@@ -1,0 +1,720 @@
+{
+ "X_t1": {
+  "src": "pages/X_t1.png",
+  "w": 1096,
+  "h": 1244,
+  "url": "https://x.com/ClaudeDevs/status/2108621476538781878",
+  "bg": "#CFD9DE",
+  "marks": {
+   "every Pro and Max user": [
+    [
+     272,
+     140,
+     413,
+     54
+    ]
+   ],
+   "4 minute walkthrough": [
+    [
+     860,
+     284,
+     156,
+     54
+    ],
+    [
+     1017,
+     284,
+     11,
+     54
+    ],
+    [
+     32,
+     332,
+     221,
+     54
+    ]
+   ]
+  }
+ },
+ "Y_blog": {
+  "src": "pages/Y_blog.png",
+  "w": 1600,
+  "h": 2000,
+  "url": "https://claude.com/blog/projects-redesigned",
+  "bg": "#FAF9F5",
+  "marks": {
+   "now available in beta in Claude Code": [
+    [
+     861,
+     292,
+     608,
+     52
+    ],
+    [
+     91,
+     356,
+     109,
+     52
+    ]
+   ],
+   "from folder to conversation": [
+    [
+     893,
+     38,
+     194,
+     104
+    ],
+    [
+     91,
+     138,
+     854,
+     104
+    ]
+   ]
+  }
+ },
+ "Y_blog2": {
+  "src": "pages/Y_blog2.png",
+  "w": 1600,
+  "h": 3000,
+  "url": "https://claude.com/blog/projects-redesigned",
+  "bg": "#FAF9F5",
+  "marks": {
+   "Brief Claude in the project the way you'd brief a chief of staff": [
+    [
+     1100,
+     1560,
+     268,
+     48
+    ],
+    [
+     91,
+     1622,
+     827,
+     48
+    ]
+   ],
+   "@@each thread is a Claude Code cloud session working on its own branch": [
+    [
+     91,
+     2924,
+     1320,
+     248
+    ]
+   ]
+  }
+ },
+ "S_old": {
+  "src": "pages/S_old.png",
+  "w": 1600,
+  "h": 660,
+  "url": "https://support.claude.com/en/articles/9517075-what-are-projects",
+  "bg": "#FAF9F5",
+  "marks": {
+   "self-contained workspaces": [
+    [
+     427,
+     84,
+     381,
+     38
+    ]
+   ],
+   "Free users can create a maximum of five projects": [
+    [
+     1150,
+     243,
+     332,
+     38
+    ],
+    [
+     74,
+     290,
+     357,
+     38
+    ]
+   ]
+  }
+ },
+ "S_new": {
+  "src": "pages/S_new.png",
+  "w": 1600,
+  "h": 1400,
+  "url": "https://support.claude.com/en/articles/9517075-what-are-projects",
+  "bg": "#FAF9F5",
+  "marks": {
+   "a project is one conversation": [
+    [
+     1415,
+     143,
+     131,
+     38
+    ],
+    [
+     32,
+     190,
+     272,
+     38
+    ]
+   ],
+   "Existing projects in chat and Cowork keep working as they do today": [
+    [
+     32,
+     775,
+     946,
+     38
+    ]
+   ],
+   "chat, Cowork, Team, and Enterprise will follow": [
+    [
+     1205,
+     575,
+     347,
+     38
+    ],
+    [
+     32,
+     622,
+     293,
+     38
+    ]
+   ]
+  }
+ },
+ "D_note": {
+  "src": "pages/D_note.png",
+  "w": 1600,
+  "h": 840,
+  "url": "https://code.claude.com/docs/en/claude-projects",
+  "bg": "#FDFDF7",
+  "marks": {
+   "public beta on Pro and Max plans": [
+    [
+     332,
+     116,
+     432,
+     36
+    ]
+   ],
+   "They aren't available on Team or Enterprise plans yet": [
+    [
+     1199,
+     156,
+     307,
+     36
+    ],
+    [
+     138,
+     196,
+     373,
+     36
+    ]
+   ],
+   "join the waitlist": [
+    [
+     1145,
+     236,
+     206,
+     36
+    ]
+   ]
+  }
+ },
+ "D_prereq": {
+  "src": "pages/D_prereq.png",
+  "w": 1600,
+  "h": 1240,
+  "url": "https://code.claude.com/docs/en/claude-projects",
+  "bg": "#FFFFFF",
+  "marks": {
+   "Pro or Max": [
+    [
+     328,
+     228,
+     162,
+     40
+    ]
+   ],
+   "github.com rather than GitHub Enterprise Server, GitLab, or Bitbucket": [
+    [
+     950,
+     300,
+     459,
+     40
+    ],
+    [
+     104,
+     356,
+     578,
+     40
+    ]
+   ],
+   "push access to it": [
+    [
+     1245,
+     356,
+     252,
+     40
+    ]
+   ]
+  }
+ },
+ "D_create": {
+  "src": "pages/D_create.png",
+  "w": 1600,
+  "h": 2300,
+  "url": "https://code.claude.com/docs/en/claude-projects",
+  "bg": "#FFFFFF",
+  "marks": {
+   "Only the name is required": [
+    [
+     1099,
+     188,
+     387,
+     40
+    ]
+   ],
+   "one line of what you're trying to get done": [
+    [
+     437,
+     1086,
+     610,
+     40
+    ]
+   ],
+   "That turn uses your plan.": [
+    [
+     516,
+     2002,
+     370,
+     40
+    ]
+   ]
+  }
+ },
+ "D_ctx": {
+  "src": "pages/D_ctx.png",
+  "w": 1600,
+  "h": 1520,
+  "url": "https://code.claude.com/docs/en/claude-projects",
+  "bg": "#FFFFFF",
+  "marks": {
+   "Project memory": [
+    [
+     40,
+     148,
+     237,
+     40
+    ]
+   ],
+   "up to 16,000 characters": [
+    [
+     745,
+     674,
+     157,
+     36
+    ],
+    [
+     380,
+     714,
+     142,
+     36
+    ]
+   ],
+   "MEMORY.md": [
+    [
+     522,
+     526,
+     131,
+     28
+    ]
+   ]
+  }
+ },
+ "D_instr": {
+  "src": "pages/D_instr.png",
+  "w": 1600,
+  "h": 2040,
+  "url": "https://code.claude.com/docs/en/claude-projects",
+  "bg": "#FFFFFF",
+  "marks": {
+   "What the project is for": [
+    [
+     104,
+     284,
+     337,
+     40
+    ]
+   ],
+   "Don't substitute, mock, or guess.": [
+    [
+     2721,
+     1042,
+     560,
+     32
+    ]
+   ],
+   "Don't merge, force-push, or change CI configuration": [
+    [
+     108,
+     1090,
+     865,
+     32
+    ]
+   ]
+  }
+ },
+ "D_batch": {
+  "src": "pages/D_batch.png",
+  "w": 1600,
+  "h": 1120,
+  "url": "https://code.claude.com/docs/en/claude-projects",
+  "bg": "#FFFFFF",
+  "marks": {
+   "Send one small piece of the real work": [
+    [
+     104,
+     412,
+     555,
+     40
+    ]
+   ],
+   "A new project runs every thread on Opus at high effort": [
+    [
+     1151,
+     652,
+     375,
+     40
+    ],
+    [
+     104,
+     708,
+     436,
+     40
+    ]
+   ]
+  }
+ },
+ "D_files": {
+  "src": "pages/D_files.png",
+  "w": 1600,
+  "h": 960,
+  "url": "https://code.claude.com/docs/en/claude-projects",
+  "bg": "#FFFFFF",
+  "marks": {
+   "up to 100 files and 2 GB in one pick": [
+    [
+     288,
+     284,
+     515,
+     40
+    ]
+   ],
+   "a single file up to 480 MB": [
+    [
+     891,
+     284,
+     373,
+     40
+    ]
+   ],
+   "files over 30 MB are skipped": [
+    [
+     408,
+     356,
+     423,
+     40
+    ]
+   ]
+  }
+ },
+ "D_overview": {
+  "src": "pages/D_overview.png",
+  "w": 1600,
+  "h": 1800,
+  "url": "https://code.claude.com/docs/en/claude-projects",
+  "bg": "#FFFFFF",
+  "marks": {
+   "Ready for review": [
+    [
+     40,
+     856,
+     228,
+     36
+    ]
+   ],
+   "Waiting on you": [
+    [
+     478,
+     244,
+     216,
+     40
+    ]
+   ],
+   "Resolved": [
+    [
+     40,
+     1226,
+     124,
+     36
+    ]
+   ]
+  }
+ },
+ "D_approval": {
+  "src": "pages/D_approval.png",
+  "w": 1600,
+  "h": 920,
+  "url": "https://code.claude.com/docs/en/claude-projects",
+  "bg": "#FFFFFF",
+  "marks": {
+   "the prompt is inside that thread": [
+    [
+     656,
+     188,
+     475,
+     40
+    ]
+   ],
+   "Telling Claude in the project conversation to go ahead doesn't reach it.": [
+    [
+     342,
+     244,
+     1047,
+     40
+    ]
+   ]
+  }
+ },
+ "D_local": {
+  "src": "pages/D_local.png",
+  "w": 1600,
+  "h": 1800,
+  "url": "https://code.claude.com/docs/en/claude-projects",
+  "bg": "#FFFFFF",
+  "marks": {
+   "Both need Claude Code v2.1.280 or later": [
+    [
+     422,
+     953,
+     597,
+     40
+    ]
+   ],
+   "Work locally": [
+    [
+     460,
+     1471,
+     189,
+     40
+    ]
+   ],
+   "Runs only while that computer is awake with Remote Control turned on": [
+    [
+     104,
+     652,
+     1063,
+     40
+    ]
+   ],
+   "but not with its memory files loaded": [
+    [
+     666,
+     580,
+     539,
+     40
+    ]
+   ]
+  }
+ },
+ "D_tools": {
+  "src": "pages/D_tools.png",
+  "w": 1600,
+  "h": 1320,
+  "url": "https://code.claude.com/docs/en/claude-projects",
+  "bg": "#FFFFFF",
+  "marks": {
+   "Cloud threads don't have the skills": [
+    [
+     40,
+     132,
+     516,
+     40
+    ]
+   ],
+   "The project conversation itself has no connectors": [
+    [
+     586,
+     932,
+     741,
+     40
+    ]
+   ]
+  }
+ },
+ "D_other": {
+  "src": "pages/D_other.png",
+  "w": 1600,
+  "h": 1120,
+  "url": "https://code.claude.com/docs/en/claude-projects",
+  "bg": "#FFFFFF",
+  "marks": {
+   "One task that fits in a session": [
+    [
+     104,
+     396,
+     454,
+     40
+    ]
+   ],
+   "Work where every task needs your machine": [
+    [
+     104,
+     468,
+     672,
+     40
+    ]
+   ],
+   "One task that repeats on a schedule with no conversation around it": [
+    [
+     104,
+     652,
+     1030,
+     40
+    ]
+   ],
+   "Several people giving Claude work and steering it together in a Slack channel": [
+    [
+     104,
+     780,
+     1176,
+     40
+    ]
+   ]
+  }
+ },
+ "A_table": {
+  "src": "pages/A_table.png",
+  "w": 1600,
+  "h": 1800,
+  "url": "https://code.claude.com/docs/en/agents",
+  "bg": "#FFFFFF",
+  "marks": {
+   "five ways": [
+    [
+     302,
+     68,
+     140,
+     40
+    ]
+   ],
+   "Public beta on Pro and Max": [
+    [
+     697,
+     1174,
+     291,
+     36
+    ],
+    [
+     356,
+     1214,
+     58,
+     36
+    ]
+   ],
+   "Experimental and disabled by default": [
+    [
+     424,
+     900,
+     489,
+     36
+    ]
+   ]
+  }
+ },
+ "D_intro": {
+  "src": "pages/D_intro.png",
+  "w": 1600,
+  "h": 1600,
+  "url": "https://code.claude.com/docs/en/claude-projects",
+  "bg": "#FFFFFF",
+  "marks": {
+   "doing the coordinating yourself": [
+    [
+     798,
+     520,
+     470,
+     40
+    ]
+   ],
+   "repeat the same background": [
+    [
+     332,
+     576,
+     432,
+     40
+    ]
+   ],
+   "check back to see which finished": [
+    [
+     1134,
+     576,
+     366,
+     40
+    ],
+    [
+     40,
+     632,
+     123,
+     40
+    ]
+   ],
+   "Send work to one place": [
+    [
+     104,
+     728,
+     357,
+     40
+    ]
+   ]
+  }
+ },
+ "Y_blog_body": {
+  "src": "pages/Y_blog_body.png",
+  "w": 1600,
+  "h": 2600,
+  "url": "https://claude.com/blog/projects-redesigned",
+  "bg": "#FAF9F5",
+  "marks": {
+   "Now in a Claude Code project, you describe what needs to get done": [
+    [
+     1232,
+     108,
+     155,
+     48
+    ],
+    [
+     91,
+     170,
+     1065,
+     48
+    ]
+   ],
+   "Starting today, updated projects are available in beta": [
+    [
+     91,
+     1102,
+     955,
+     48
+    ]
+   ],
+   "even from your phone": [
+    [
+     590,
+     481,
+     397,
+     48
+    ]
+   ]
+  }
+ }
+}

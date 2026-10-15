@@ -1,0 +1,155 @@
+{
+  "layout": "single",
+  "plan": [
+    {
+      "id": "repo",
+      "type": "card",
+      "kind": "page",
+      "overlay": "page",
+      "name": "repo",
+      "dur": 0.2,
+      "lines": [
+        {
+          "id": "N01",
+          "a": 0.0
+        },
+        {
+          "id": "N02",
+          "a": 0.0
+        }
+      ]
+    },
+    {
+      "id": "arch",
+      "type": "card",
+      "kind": "page",
+      "overlay": "page",
+      "name": "arch",
+      "dur": 0.2,
+      "lines": [
+        {
+          "id": "N03",
+          "a": 0.0
+        },
+        {
+          "id": "N04",
+          "a": 0.0
+        }
+      ]
+    },
+    {
+      "id": "identity",
+      "type": "card",
+      "kind": "page",
+      "overlay": "page",
+      "name": "identity",
+      "dur": 0.2,
+      "lines": [
+        {
+          "id": "N05",
+          "a": 0.0
+        },
+        {
+          "id": "N06",
+          "a": 0.0
+        },
+        {
+          "id": "N07",
+          "a": 0.0
+        },
+        {
+          "id": "N08",
+          "a": 0.0
+        }
+      ]
+    },
+    {
+      "id": "browser",
+      "type": "card",
+      "kind": "page",
+      "overlay": "page",
+      "name": "browser",
+      "dur": 0.2,
+      "lines": [
+        {
+          "id": "N09",
+          "a": 0.0
+        },
+        {
+          "id": "N10",
+          "a": 0.0
+        },
+        {
+          "id": "N11",
+          "a": 0.0
+        },
+        {
+          "id": "N12",
+          "a": 0.0
+        },
+        {
+          "id": "N13",
+          "a": 0.0
+        },
+        {
+          "id": "N14",
+          "a": 0.0
+        }
+      ]
+    },
+    {
+      "id": "limits",
+      "type": "card",
+      "kind": "page",
+      "overlay": "page",
+      "name": "limits",
+      "dur": 0.2,
+      "lines": [
+        {
+          "id": "N15",
+          "a": 0.0
+        },
+        {
+          "id": "N16",
+          "a": 0.0
+        },
+        {
+          "id": "N17",
+          "a": 0.0
+        }
+      ]
+    },
+    {
+      "id": "install",
+      "type": "card",
+      "kind": "page",
+      "overlay": "page",
+      "name": "install",
+      "dur": 0.2,
+      "lines": [
+        {
+          "id": "N18",
+          "a": 0.0
+        }
+      ]
+    },
+    {
+      "id": "closing",
+      "type": "card",
+      "kind": "page",
+      "overlay": "page",
+      "name": "closing",
+      "dur": 0.2,
+      "lines": [
+        {
+          "id": "N19",
+          "a": 0.0
+        },
+        {
+          "id": "N20",
+          "a": 0.0
+        }
+      ]
+    }
+  ]
+}

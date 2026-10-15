@@ -1,0 +1,50 @@
+// 由 台本\script_v2.py 生成，别手改（改 script_v2.py 再跑一遍）。页面镜头 / 译文条 / 高亮框，时间按每句的开口时刻排。
+window.__MISS = window.__MISS || [];
+function pageShotSafe(from, to, key, marks, opt) {
+  const m = PG[key]; if (!m) { window.__MISS.push('没有页面图 ' + key); return; }
+  const ok = marks.filter(x => { if (m.marks[x[0]]) return true; window.__MISS.push(key + ' 没有高亮句子 ' + x[0]); return false; });
+  pageShot(from, to, key, ok, opt);
+}
+pageShotSafe('C008', 'C008', 'Y_blog', [["now available in beta in Claude Code", S('C008') + 0.3, "官方博客：更新后的 Projects 在 Claude Code 里公测"]], {start: 0, pad: 0, first: true, last: true});
+pageShotSafe('C009', 'C010', 'X_t1', [["every Pro and Max user", S('C010') + 0.0, "官方推文：等候名单上的 Pro 和 Max 用户全部放进来了"],["4 minute walkthrough", S('C010') + 3.0, "附了一个 4 分钟的上手视频"]], {start: 0, pad: 0, first: true, last: true});
+pageShotSafe('C012', 'C016', 'D_intro', [["doing the coordinating yourself", S('C012') + 0.0, "没有 Projects：协调要你自己来"],["repeat the same background", S('C013') + 0.0, "每个会话开头，重复同样的背景"],["check back to see which finished", S('C014') + 0.0, "回头看谁做完了、谁在等你"],["Send work to one place", S('C016') + 0.0, "有了 Projects：把活发到一个地方"]], {start: 0, pad: 0, first: true, last: true});
+pageShotSafe('C023', 'C028', 'Y_blog2', [["Brief Claude in the project the way you'd brief a chief of staff", S('C023') + 0.0, "官方博客：像给幕僚长交代工作一样"],["@@each thread is a Claude Code cloud session working on its own branch", S('C024') + 0.0, "每个线程：云端的 Claude Code 会话，自己的分支"]], {start: 0, pad: 0, first: true, last: true});
+pageShotSafe('C029', 'C030', 'Y_blog_body', [["even from your phone", S('C030') + 0.0, "手机上也能看进度、发指令；你离开电脑，它继续干"]], {start: 0, pad: 0, first: true, last: true});
+pageShotSafe('C031', 'C035', 'S_old', [["self-contained workspaces", S('C032') + 0.0, "聊天里的 Projects：自成一体的工作区"],["Free users can create a maximum of five projects", S('C034') + 0.0, "免费账号最多 5 个"]], {start: 0, pad: 0, first: true, last: true});
+pageShotSafe('C036', 'C037', 'Y_blog', [["from folder to conversation", S('C036') + 0.0, "官方博客：从文件夹，到对话"]], {start: 0, pad: 0, first: true, last: true});
+pageShotSafe('C038', 'C043', 'S_new', [["chat, Cowork, Team, and Enterprise will follow", S('C038') + 0.0, "先从 Claude Code 开始，聊天、Cowork、Team、Enterprise 之后跟上"],["Existing projects in chat and Cowork keep working as they do today", S('C039') + 0.0, "已有的项目照常用"]], {start: 0, pad: 0, first: true, last: true});
+note(S('C052'), E('C053'), "发给 Claude 的第一条消息：营销网站的 Core Web Vitals 掉了一个月，手机端 p75 LCP 4.1 秒、CLS 0.28，用户说导航慢。先读两个仓库，再按影响大小提修复方案。", "", {"x": 40, "y": 300, "w": 1394});
+note(S('C057'), E('C058'), "8 个线程：客户端导航 · 优化图片 · 缓存页面内容 · 懒加载脚本 · 预加载字体 · 拆 JS 包 · 给横幅留位置 · 压缩静态资源", "", {"x": 40, "y": 20, "w": 980});
+note(S('C078'), E('C078'), "例程查到的回归：/pricing 手机端 p75 LCP 3.4 秒，前一天 2.1 秒", "", {"x": 40, "y": 585, "w": 1100});
+note(S('C079'), E('C079'), "原因：/pricing 上一张 1.9 MB 的 PNG（线程问：要开 PR 吗？）", "", {"x": 40, "y": 585, "w": 1100});
+note(S('C079'), E('C079'), "官方演示的数据，网站是虚构的公司", "", {"x": 40, "y": 585, "w": 900});
+box(S('C077'), E('C077'), 170, 184, 1110, 85);
+box(S('C078'), E('C078'), 166, 287, 1110, 85);
+box(S('C079'), E('C079'), 230, 450, 645, 44);
+pageShotSafe('C080', 'C085', 'D_note', [["public beta on Pro and Max plans", S('C080') + 0.0, "公开测试：Pro 和 Max 套餐"],["join the waitlist", S('C084') + 0.0, "还没轮到你：加入等候名单"]], {start: 0, pad: 0, first: true, last: true});
+pageShotSafe('C086', 'C088', 'D_create', [["Only the name is required", S('C087') + 0.0, "只有名字是必填"],["one line of what you're trying to get done", S('C088') + 0.0, "目标：一行字，写你想做成什么"]], {start: 0, pad: 0, first: true, last: true});
+pageShotSafe('C089', 'C094', 'D_prereq', [["github.com rather than GitHub Enterprise Server, GitLab, or Bitbucket", S('C090') + 0.0, "代码要在 github.com（不是企业版 / GitLab / Bitbucket）"],["push access to it", S('C091') + 0.0, "账号要有 push 权限，装好 Claude GitHub App"]], {start: 0, pad: 0, first: true, last: true});
+pageShotSafe('C095', 'C095', 'D_ctx', [["up to 16,000 characters", S('C095') + 0.5, "项目说明：最多 16,000 个字符"]], {start: 0, pad: 0, first: true, last: false});
+pageShotSafe('C096', 'C101', 'D_instr', [["What the project is for", S('C097') + 0.0, "写什么：项目为了什么、分支、自查、缺东西怎么办、先问你什么"],["Don't substitute, mock, or guess.", S('C100') + 0.0, "官方例子：缺东西就停下来说清楚，不许替代、模拟、猜"],["Don't merge, force-push, or change CI configuration", S('C101') + 0.0, "合并、强推、改 CI 配置，要先问你"]], {start: 0, pad: 0, first: false, last: true});
+pageShotSafe('C102', 'C103', 'D_batch', [["Send one small piece of the real work", S('C102') + 0.0, "先发一小块真实的活"]], {start: 0, pad: 0, first: true, last: false});
+pageShotSafe('C104', 'C106', 'D_create', [["That turn uses your plan.", S('C106') + 0.0, "这一轮也用你的额度"]], {start: 0, pad: 0, first: false, last: false});
+pageShotSafe('C107', 'C109', 'D_files', [["up to 100 files and 2 GB in one pick", S('C107') + 0.0, "Library：一次最多 100 个文件、2 GB"],["a single file up to 480 MB", S('C108') + 0.0, "单个文件最多 480 MB"],["files over 30 MB are skipped", S('C109') + 0.0, "建项目对话框里超过 30 MB 的文件会被跳过"]], {start: 0, pad: 0, first: false, last: true});
+note(S('C114'), E('C114'), "新项目默认：协调员和线程都是 Opus", "", {"x": 40, "y": 700, "w": 1000});
+note(S('C116'), E('C117'), "演示的设置页：Thread effort = 默认 Medium（文档写的是 high）", "", {"x": 40, "y": 700, "w": 1100});
+note(S('C120'), E('C121'), "演示里把 Thread model 改成了 Sonnet", "", {"x": 40, "y": 700, "w": 900});
+box(S('C114'), E('C114'), 424, 241, 838, 66);
+box(S('C114'), E('C114'), 424, 404, 838, 66);
+box(S('C115'), E('C115'), 424, 322, 838, 66);
+box(S('C115'), E('C117'), 424, 485, 838, 66);
+box(S('C120'), E('C121'), 424, 404, 838, 66);
+note(S('C125'), E('C126'), "Auto memory：Claude 自己写的笔记，每个线程开工都读", "", {"x": 40, "y": 730, "w": 1100});
+note(S('C127'), E('C127'), "项目说明（Project instructions）像 CLAUDE.md，上限 16,000 字符", "", {"x": 40, "y": 730, "w": 1100});
+box(V('d1', 253.4), E('C127'), 355, 465, 1023, 57);
+box(V('d1', 253.4), E('C127'), 385, 648, 960, 72);
+box(V('d1', 253.4), E('C127'), 364, 28, 875, 64);
+pageShotSafe('C128', 'C131', 'D_approval', [["the prompt is inside that thread", S('C129') + 0.0, "批准的提示在线程里"],["Telling Claude in the project conversation to go ahead doesn't reach it.", S('C130') + 0.0, "在项目对话里说“同意”，传不到线程"]], {start: 0, pad: 0, first: true, last: true});
+pageShotSafe('C132', 'C134', 'D_overview', [["Ready for review", S('C133') + 0.0, "6 组：等评审"],["Waiting on you", S('C133') + 1.6, "等你回复"],["Resolved", S('C134') + 0.0, "已解决：一周没动静自动归这里"]], {start: 0, pad: 0, first: true, last: true});
+pageShotSafe('C135', 'C137', 'D_local', [["Work locally", S('C136') + 0.0, "+ 菜单里选 Work locally"],["Both need Claude Code v2.1.280 or later", S('C137') + 0.0, "电脑上的 Claude Code 要 v2.1.280 以上"],["but not with its memory files loaded", S('C137') + 0.0, "收到项目说明，但不加载项目记忆文件"]], {start: 0, pad: 0, first: true, last: true});
+pageShotSafe('C138', 'C140', 'D_tools', [["Cloud threads don't have the skills", S('C138') + 0.0, "云端线程没有你本机装的技能、MCP、插件"],["The project conversation itself has no connectors", S('C140') + 0.0, "项目对话本身没有连接器"]], {start: 0, pad: 0, first: true, last: true});
+pageShotSafe('C146', 'C154', 'A_table', [["Public beta on Pro and Max", S('C150') + 0.0, "Projects：Pro 和 Max 上公开测试"],["Experimental and disabled by default", S('C153') + 0.0, "agent teams：实验性，默认关闭"]], {start: 0, pad: 0, first: true, last: true});
+pageShotSafe('C155', 'C159', 'D_other', [["One task that fits in a session", S('C156') + 0.0, "一个会话够用：开云端会话"],["Work where every task needs your machine", S('C157') + 0.0, "每个任务都要你的机器：本地会话 / agent view"],["One task that repeats on a schedule with no conversation around it", S('C158') + 0.0, "单个定时任务：建例程"],["Several people giving Claude work and steering it together in a Slack channel", S('C159') + 0.0, "多人在 Slack 里指挥：Claude Tag"]], {start: 0, pad: 0, first: true, last: true});

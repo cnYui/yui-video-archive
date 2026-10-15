@@ -1,0 +1,37 @@
+{
+ "_说明": "用户 2026-10-10：“封面用我展示肌肉的作为封面”（0196 录像 8.95 s，开场“展示一下薄肌”那一下）。三个候选都用这一帧，只换封面大字（每行 ≤ 6 字、不和平台标题同一句）。画面是 4K 原片抽的 1920 宽帧（HLG 直接转 8-bit，饱和度 +12%、对比度 +4%）。bg 借短视频那条的 1080×2340 印花。",
+ "bg": "D:/大疆/Claude Code相关/短视频/03_Claude模组/制作/00_整片/bg.png",
+ "candidates": [
+  {
+   "id": "A",
+   "note": "Claude / Project 是啥？（直接问观众最想问的）",
+   "recommend": true,
+   "video": "D:/大疆/Claude Code相关/04_ClaudeProjects/制作/04_封面/_src/flex_8.95.png",
+   "t": 0,
+   "crop": [0.0, 0.0, 1.0, 1.0],
+   "big": ["Claude", "Project 是啥？"],
+   "accent_line": 1,
+   "sticker": "Claude Code"
+  },
+  {
+   "id": "B",
+   "note": "从文件夹 / 到对话（官方博客标题，讲的就是这次升级）",
+   "video": "D:/大疆/Claude Code相关/04_ClaudeProjects/制作/04_封面/_src/flex_8.95.png",
+   "t": 0,
+   "crop": [0.0, 0.0, 1.0, 1.0],
+   "big": ["从文件夹", "到对话"],
+   "accent_line": 1,
+   "sticker": "Claude Code"
+  },
+  {
+   "id": "C",
+   "note": "Claude 新功能 / Project（最直白）",
+   "video": "D:/大疆/Claude Code相关/04_ClaudeProjects/制作/04_封面/_src/flex_8.95.png",
+   "t": 0,
+   "crop": [0.0, 0.0, 1.0, 1.0],
+   "big": ["Claude 新功能", "Project"],
+   "accent_line": 1,
+   "sticker": "Claude Code"
+  }
+ ]
+}
