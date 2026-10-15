@@ -1,29 +1,80 @@
 {
-  "_说明": "交付包阶段先写 titles（3 个候选 × 3 个平台 = 3×3）和各平台默认项；用户回“封面 X 标题 Y 同意”后，把选中的那条标题写进各平台字段（bilibili.title / douyin.title / xiaohongshu.title），approval 记下选择和时间。scripts/check_titles.py 按各平台要求核对字数：B 站标题 ≤ 80 / 抖音 ≤ 30（话题 ≤ 5）/ 小红书 ≤ 20；放不下的完整标题放抖音描述、小红书正文的第一行。三个标题角度要真有区别（事实陈述 / 数字悬念 / 泼冷水），不和封面大字同一句。2026-10-06 起视频号不发（旧的 weixin_channels 字段和短标题 6–16 字存档在 references/_archive/视频号发布_已移除_20261006.md）；小红书“原创声明”开关选开（用户 2026-10-06 定）。",
+  "_说明": "2026-10-14 起默认仅 B 站；其他平台字段只是备用，用户明确指定才启用。交付包阶段先写 titles（3 个候选 × 3 个平台 = 3×3）和各平台默认项；用户回“封面 X 标题 Y 同意”后，把选中的那条标题写进各平台字段（bilibili.title / douyin.title / xiaohongshu.title），approval 记下选择和时间。scripts/check_titles.py 按各平台要求核对字数：B 站标题 ≤ 80 / 抖音 ≤ 30（话题 ≤ 5）/ 小红书 ≤ 20；放不下的完整标题放抖音描述、小红书正文的第一行。三个标题角度要真有区别（事实陈述 / 数字悬念 / 泼冷水），不和封面大字同一句。2026-10-06 起视频号不发（旧的 weixin_channels 字段和短标题 6–16 字存档在 references/_archive/视频号发布_已移除_20261006.md）；小红书“原创声明”开关选开（用户 2026-10-06 定）。",
   "slug": "<录制稿.json 的 slug>",
-  "video": "<成片完整路径>（用户拖进各平台上传区；不压缩、不绕 10 MB）",
+  "video": "<成片完整路径>（小于10MB且已授权时可自动传；达到或超过10MB提醒用户手动上传，不压缩）",
   "duration_s": 0,
-  "approval": {"status": "pending", "cover": null, "title": null, "approved_at": null, "note": ""},
+  "approval": {
+    "status": "pending",
+    "cover": null,
+    "title": null,
+    "approved_at": null,
+    "note": ""
+  },
   "titles": [
-    {"id": 1, "angle": "事实陈述（主体 + 动作 + 数字）", "recommend": true,
-     "bilibili": "", "douyin": "", "xiaohongshu": ""},
-    {"id": 2, "angle": "数字悬念",
-     "bilibili": "", "douyin": "", "xiaohongshu": ""},
-    {"id": 3, "angle": "泼冷水（官方说 / 但是 / 要说明的）",
-     "bilibili": "", "douyin": "", "xiaohongshu": ""}
+    {
+      "id": 1,
+      "angle": "事实陈述（主体 + 动作 + 数字）",
+      "recommend": true,
+      "bilibili": "",
+      "douyin": "",
+      "xiaohongshu": ""
+    },
+    {
+      "id": 2,
+      "angle": "数字悬念",
+      "bilibili": "",
+      "douyin": "",
+      "xiaohongshu": ""
+    },
+    {
+      "id": 3,
+      "angle": "泼冷水（官方说 / 但是 / 要说明的）",
+      "bilibili": "",
+      "douyin": "",
+      "xiaohongshu": ""
+    }
   ],
-  "covers": {"3x4": "制作/04_封面/封面_选定_3x4.png", "16x9": "制作/04_封面/封面_选定_16x9.png", "4x3": "制作/04_封面/封面_选定_4x3.png"},
-  "source": {"original_post": "", "original_author": "", "project_or_site": ""},
+  "covers": {
+    "3x4": "制作/04_封面/封面_选定_3x4.png",
+    "16x9": "制作/04_封面/封面_选定_16x9.png",
+    "4x3": "制作/04_封面/封面_选定_4x3.png"
+  },
+  "source": {
+    "original_post": "",
+    "original_author": "",
+    "project_or_site": ""
+  },
   "bilibili": {
-    "title": "", "desc": "", "declaration": "含AI生成内容", "category": "人工智能（tid 231）",
-    "tags": [], "collection": null, "repost_source": "", "cover": "两个位各传各的（双比例同步改动不勾）：16:9 → 个人空间封面，4:3 → 首页推荐封面", "published": null
+    "title": "",
+    "desc": "",
+    "declaration": "含AI生成内容",
+    "category": "人工智能（tid 231）",
+    "tags": [],
+    "collection": null,
+    "repost_source": "",
+    "cover": "两个位各传各的（双比例同步改动不勾）：16:9 → 个人空间封面，4:3 → 首页推荐封面",
+    "published": null
   },
   "douyin": {
-    "title": "", "desc": "", "topics": [], "declaration": "内容由AI生成", "collection": null,
-    "cover": "竖封面 3:4 = 封面_选定_3x4.png；横封面 4:3 = 封面_选定_4x3.png", "published": null
+    "title": "",
+    "desc": "",
+    "topics": [],
+    "declaration": "内容由AI生成",
+    "collection": null,
+    "cover": "竖封面 3:4 = 封面_选定_3x4.png；横封面 4:3 = 封面_选定_4x3.png",
+    "published": null
   },
   "xiaohongshu": {
-    "title": "", "desc": "", "topics": [], "declaration": "笔记含AI合成内容", "original_declaration": "开（用户 2026-10-06 定）", "cover": "3:4 = 封面_选定_3x4.png", "published": null
+    "title": "",
+    "desc": "",
+    "topics": [],
+    "declaration": "笔记含AI合成内容",
+    "original_declaration": "开（用户 2026-10-06 定）",
+    "cover": "3:4 = 封面_选定_3x4.png",
+    "published": null
   },
-  "published": {}
+  "published": {},
+  "platforms": [
+    "bilibili"
+  ]
 }
