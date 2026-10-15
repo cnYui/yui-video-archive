@@ -1,0 +1,119 @@
+{
+ "repo": {
+  "src": "pages/repo.png",
+  "w": 1600,
+  "h": 4800,
+  "url": "https://github.com/liseami/CCBaga",
+  "bg": "#FFFFFF",
+  "marks": {
+   "CCBaga brings local maintenance": [
+    [
+     98,
+     4371,
+     470,
+     42
+    ]
+   ]
+  }
+ },
+ "closing": {
+  "src": "pages/closing.png",
+  "w": 1600,
+  "h": 1800,
+  "url": "https://github.com/liseami/CCBaga",
+  "bg": "#FFFFFF",
+  "marks": {}
+ },
+ "identity": {
+  "src": "pages/identity.png",
+  "w": 740,
+  "h": 752,
+  "url": "github.com/liseami/CCBaga",
+  "bg": "#faf9f5",
+  "marks": {}
+ },
+ "arch": {
+  "src": "pages/arch.png",
+  "w": 1600,
+  "h": 1800,
+  "url": "https://github.com/liseami/CCBaga",
+  "bg": "#FFFFFF",
+  "marks": {
+   "CCBaga-A": [
+    [
+     557,
+     162,
+     145,
+     42
+    ]
+   ],
+   "CCBaga-B": [
+    [
+     264,
+     210,
+     143,
+     42
+    ]
+   ]
+  }
+ },
+ "browser": {
+  "src": "pages/browser.png",
+  "w": 1600,
+  "h": 2400,
+  "url": "https://github.com/liseami/CCBaga",
+  "bg": "#FFFFFF",
+  "marks": {
+   "The success page appears only": [
+    [
+     98,
+     376,
+     434,
+     42
+    ]
+   ],
+   "A green result describes": [
+    [
+     442,
+     520,
+     339,
+     42
+    ]
+   ]
+  }
+ },
+ "limits": {
+  "src": "pages/limits.png",
+  "w": 1600,
+  "h": 1800,
+  "url": "https://github.com/liseami/CCBaga",
+  "bg": "#FFFFFF",
+  "marks": {
+   "does not change your public IP": [
+    [
+     98,
+     260,
+     876,
+     240
+    ]
+   ]
+  }
+ },
+ "install": {
+  "src": "pages/install.png",
+  "w": 1600,
+  "h": 2300,
+  "url": "https://github.com/liseami/CCBaga",
+  "bg": "#FFFFFF",
+  "marks": {
+   "Windows x86_64 uses one NSIS": [
+    [
+     98,
+     630,
+     444,
+     42
+    ]
+   ]
+  }
+ }
+}

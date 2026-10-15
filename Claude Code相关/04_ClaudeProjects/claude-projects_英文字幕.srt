@@ -1,0 +1,883 @@
+1
+00:00:04,773 --> 00:00:06,427
+Hi everyone, I'm Yui.
+
+2
+00:00:06,447 --> 00:00:08,995
+In this one video I'll walk you through what
+
+3
+00:00:09,015 --> 00:00:11,467
+Claude Code's new Projects feature is.
+
+4
+00:00:11,487 --> 00:00:12,800
+Let me show off my lean muscles.
+
+5
+00:00:12,820 --> 00:00:15,444
+My take: if a task spans several folders,
+
+6
+00:00:15,464 --> 00:00:18,088
+needs to run for a long time,
+
+7
+00:00:18,108 --> 00:00:22,200
+and needs to keep running with your laptop closed, you should use Projects.
+
+8
+00:00:22,220 --> 00:00:23,562
+In the official demo,
+
+9
+00:00:23,582 --> 00:00:28,020
+two messages make Claude start eight threads in the cloud — eight sessions.
+
+10
+00:00:28,040 --> 00:00:31,080
+Eight threads, fixing one website's performance problem at the same time.
+
+11
+00:00:31,100 --> 00:00:33,587
+The feature is called Claude Code Projects.
+
+12
+00:00:33,607 --> 00:00:36,813
+In mid-September it went into public beta in Claude Code.
+
+13
+00:00:36,833 --> 00:00:38,240
+A couple of days ago the official account said:
+
+14
+00:00:38,260 --> 00:00:43,100
+everyone on the Pro and Max waitlist now has access to the beta.
+
+15
+00:00:43,120 --> 00:00:46,360
+So let's first look at what it actually is.
+
+16
+00:00:46,380 --> 00:00:49,894
+Without Projects, you open lots of sessions in different folders.
+
+17
+00:00:49,914 --> 00:00:54,539
+For their agents to talk
+
+18
+00:00:54,559 --> 00:00:57,227
+to each other you have to tell the AI yourself,
+
+19
+00:00:57,247 --> 00:01:01,743
+sending it the other session's ID so it can chat
+
+20
+00:01:01,763 --> 00:01:04,689
+with the AI over there,
+
+21
+00:01:04,709 --> 00:01:08,313
+and you still have to hand out the work yourself. It gets messy.
+
+22
+00:01:08,333 --> 00:01:10,847
+Each session starts with you repeating the background.
+
+23
+00:01:10,867 --> 00:01:15,180
+Then after a while you have to go check: who is done, who is waiting.
+
+24
+00:01:15,200 --> 00:01:17,313
+And then you have to wrap all of it up yourself.
+
+25
+00:01:17,333 --> 00:01:20,227
+Projects hands all of that to Claude.
+
+26
+00:01:20,247 --> 00:01:23,320
+A project is one ongoing conversation.
+
+27
+00:01:23,340 --> 00:01:26,000
+Claude acts as the overall coordinator inside it.
+
+28
+00:01:26,020 --> 00:01:30,080
+You drop in one big task and tell it which folders are involved,
+
+29
+00:01:30,100 --> 00:01:32,647
+and it starts a thread for it.
+
+30
+00:01:32,667 --> 00:01:35,507
+It first loads all those folders,
+
+31
+00:01:35,527 --> 00:01:39,347
+then makes a plan of its own,
+
+32
+00:01:39,367 --> 00:01:42,087
+and gets to work, following your requirements.
+
+33
+00:01:42,107 --> 00:01:47,567
+The blog's comparison is: it's like briefing a chief of staff.
+
+34
+00:01:47,587 --> 00:01:51,213
+The threads I just mentioned are usually Claude Code sessions running in the cloud.
+
+35
+00:01:51,233 --> 00:01:53,232
+Claude Code and most AI tools today
+
+36
+00:01:53,252 --> 00:01:56,420
+all want to push your local files up to the cloud,
+
+37
+00:01:56,440 --> 00:01:59,279
+so that whether your laptop is closed
+
+38
+00:01:59,299 --> 00:02:03,747
+or you're on your phone, you can do live AI web coding, or whatever.
+
+39
+00:02:03,767 --> 00:02:06,101
+In a cloud Claude Code session,
+
+40
+00:02:06,121 --> 00:02:08,693
+it has its own branch and its own context window.
+
+41
+00:02:08,713 --> 00:02:12,633
+If it needs to open a PR, it opens one itself and pushes it.
+
+42
+00:02:12,653 --> 00:02:15,520
+When you close your laptop, the cloud threads keep running.
+
+43
+00:02:15,540 --> 00:02:18,247
+From your phone you can also check progress and send instructions.
+
+44
+00:02:18,267 --> 00:02:20,425
+The name Projects —
+
+45
+00:02:20,445 --> 00:02:24,267
+you may well have used it a while back, or even earlier.
+
+46
+00:02:24,287 --> 00:02:25,840
+A folder,
+
+47
+00:02:25,860 --> 00:02:30,175
+where you can add related chats — maybe with images or videos —
+
+48
+00:02:30,195 --> 00:02:34,007
+all into its knowledge base, plus a block of project instructions.
+
+49
+00:02:34,027 --> 00:02:37,267
+Free users can create them too, but only up to five.
+
+50
+00:02:37,287 --> 00:02:38,795
+Cowork has its own too: tasks,
+
+51
+00:02:38,815 --> 00:02:42,620
+files, instructions and memory all go into one workspace.
+
+52
+00:02:42,640 --> 00:02:45,984
+This time Projects is a big upgrade —
+
+53
+00:02:46,004 --> 00:02:49,480
+the official blog post is titled "from folder to conversation."
+
+54
+00:02:49,500 --> 00:02:53,860
+After the upgrade, a project is one conversation plus a crowd of threads.
+
+55
+00:02:53,880 --> 00:02:56,429
+It's in beta in Claude Code now, and chat
+
+56
+00:02:56,449 --> 00:02:59,580
+and Cowork will open up gradually after that.
+
+57
+00:02:59,600 --> 00:03:04,003
+If you're on a Pro or Max plan,
+
+58
+00:03:04,023 --> 00:03:07,233
+your existing projects keep working as usual,
+
+59
+00:03:07,253 --> 00:03:10,280
+and the official side will upgrade them to the new Projects for you.
+
+60
+00:03:10,300 --> 00:03:11,980
+One difference for now:
+
+61
+00:03:12,000 --> 00:03:14,463
+projects in chat can be shared on Team and Enterprise,
+
+62
+00:03:14,483 --> 00:03:16,013
+the business plans.
+
+63
+00:03:16,033 --> 00:03:18,447
+In the upgraded version, a project belongs to just you.
+
+64
+00:03:18,467 --> 00:03:19,985
+The official side also attached a demo:
+
+65
+00:03:20,005 --> 00:03:23,080
+a four-minute video that walks through one scenario.
+
+66
+00:03:23,100 --> 00:03:25,507
+It's about optimizing a marketing site
+
+67
+00:03:25,527 --> 00:03:29,013
+whose performance has been slipping for a whole month.
+
+68
+00:03:29,033 --> 00:03:33,597
+In the video, they first create the project: a name,
+
+69
+00:03:33,617 --> 00:03:35,547
+a goal, repositories.
+
+70
+00:03:35,567 --> 00:03:40,560
+The goal: get LCP under 2.5 seconds and CLS under 0.1.
+
+71
+00:03:40,580 --> 00:03:44,780
+LCP is when the main content shows up; CLS is how much the page jumps around.
+
+72
+00:03:44,800 --> 00:03:48,413
+Once the main conversation opens, Claude gives four suggestions.
+
+73
+00:03:48,433 --> 00:03:50,973
+For example: read the repo and propose next steps.
+
+74
+00:03:50,993 --> 00:03:54,176
+The video's point: you can pick one, ask a quick question,
+
+75
+00:03:54,196 --> 00:03:57,707
+or just drop in a list of tasks, and it carries them out.
+
+76
+00:03:57,727 --> 00:04:00,295
+The first message: paste in the metrics
+
+77
+00:04:00,315 --> 00:04:02,660
+and have Claude read the code and propose a plan.
+
+78
+00:04:02,680 --> 00:04:06,013
+It starts one thread first, which reads both repositories.
+
+79
+00:04:06,033 --> 00:04:07,540
+It comes back with eight suggestions.
+
+80
+00:04:07,560 --> 00:04:11,880
+It adds that the first three account for most of the LCP and CLS, so start there.
+
+81
+00:04:11,900 --> 00:04:14,880
+The second message is one line: do all of them.
+
+82
+00:04:14,900 --> 00:04:17,640
+Claude replies: eight threads, one per task.
+
+83
+00:04:17,660 --> 00:04:19,583
+Optimizing images, preloading fonts,
+
+84
+00:04:19,603 --> 00:04:21,927
+splitting the JS bundle, reserving space for the banner.
+
+85
+00:04:21,947 --> 00:04:25,167
+Each thread reads its own code and works on its own branch.
+
+86
+00:04:25,187 --> 00:04:28,060
+Open a thread card to see what it's doing, step by step.
+
+87
+00:04:28,080 --> 00:04:31,460
+You can steer it right inside the thread, or stop it.
+
+88
+00:04:31,480 --> 00:04:36,327
+Once a thread has a concrete change, like a bug fix, it opens a PR itself.
+
+89
+00:04:36,347 --> 00:04:38,393
+Or if you just tell it to, it will.
+
+90
+00:04:38,413 --> 00:04:42,234
+After the PR opens it keeps watching: if CI fails it can fix it itself,
+
+91
+00:04:42,254 --> 00:04:45,047
+and if there are review comments it keeps revising.
+
+92
+00:04:45,067 --> 00:04:48,070
+To see every PR's status, go to the PR tab in Overview,
+
+93
+00:04:48,090 --> 00:04:50,747
+and you'll see them all.
+
+94
+00:04:50,767 --> 00:04:54,213
+If you want to merge, just tell Claude to merge.
+
+95
+00:04:54,233 --> 00:04:56,613
+After the merge, tell it one more thing: write a post-mortem.
+
+96
+00:04:56,633 --> 00:05:00,608
+It starts another thread, turns the context from all those threads into a report,
+
+97
+00:05:00,628 --> 00:05:03,687
+and puts it in the Library.
+
+98
+00:05:03,707 --> 00:05:06,867
+The video calls the Library the project's shared folder.
+
+99
+00:05:06,887 --> 00:05:08,183
+Every thread can read it,
+
+100
+00:05:08,203 --> 00:05:11,580
+so next time it can optimize again and simply update the report.
+
+101
+00:05:11,600 --> 00:05:14,165
+The last step: connect a monitoring service
+
+102
+00:05:14,185 --> 00:05:17,580
+to automate it further — Sentry, in the demo.
+
+103
+00:05:17,600 --> 00:05:22,007
+Then have it create a routine — a scheduled task.
+
+104
+00:05:22,027 --> 00:05:24,747
+If it finds a regression, it starts a thread to investigate on its own.
+
+105
+00:05:24,767 --> 00:05:27,020
+Next time you open the project, it's already waiting for you.
+
+106
+00:05:27,040 --> 00:05:29,363
+The routine feature itself is labeled research
+
+107
+00:05:29,383 --> 00:05:31,480
+preview by the official side.
+
+108
+00:05:31,500 --> 00:05:33,440
+Behavior and limits may change.
+
+109
+00:05:33,460 --> 00:05:35,400
+In the demo it actually finds one:
+
+110
+00:05:35,420 --> 00:05:40,540
+on the pricing page, mobile LCP is 3.4 seconds, up from 2.1 the day before.
+
+111
+00:05:40,560 --> 00:05:45,067
+The cause is a 1.9 MB PNG slowing down loading.
+
+112
+00:05:45,087 --> 00:05:47,537
+So how do you get started? Open Claude Code
+
+113
+00:05:47,557 --> 00:05:50,080
+and you should see Projects in your left sidebar.
+
+114
+00:05:50,100 --> 00:05:53,563
+You can also open the web version
+
+115
+00:05:53,583 --> 00:05:55,880
+at claude.ai/code.
+
+116
+00:05:55,900 --> 00:05:57,313
+The mobile app has it too.
+
+117
+00:05:57,333 --> 00:06:00,800
+If you don't see it, it just hasn't reached you yet.
+
+118
+00:06:00,820 --> 00:06:04,260
+The official side has a waitlist, and I'll put the link in the description.
+
+119
+00:06:04,280 --> 00:06:05,551
+If you don't have access yet,
+
+120
+00:06:05,571 --> 00:06:09,753
+check the official page: it lists five ways to run work in parallel.
+
+121
+00:06:09,773 --> 00:06:11,580
+Step two: create a project.
+
+122
+00:06:11,600 --> 00:06:15,013
+Click Projects and a dialog asks for its name.
+
+123
+00:06:15,033 --> 00:06:16,473
+Only the name is required.
+
+124
+00:06:16,493 --> 00:06:20,213
+Write the goal in one line; repositories and files can be added later.
+
+125
+00:06:20,233 --> 00:06:22,060
+For code projects there are three prerequisites:
+
+126
+00:06:22,080 --> 00:06:24,447
+Your code must be on GitHub so it can be linked.
+
+127
+00:06:24,467 --> 00:06:27,927
+Your account needs push access, and the Claude GitHub App must be installed.
+
+128
+00:06:27,947 --> 00:06:31,847
+GitLab and Bitbucket don't work; for now it only supports GitHub.
+
+129
+00:06:31,867 --> 00:06:34,060
+And GitHub Enterprise Server doesn't work either.
+
+130
+00:06:34,080 --> 00:06:36,509
+No repository is fine too: do research, write articles,
+
+131
+00:06:36,529 --> 00:06:38,680
+and put the results in the Library.
+
+132
+00:06:38,700 --> 00:06:42,280
+Step three is writing the project instructions, up to 16,000 characters.
+
+133
+00:06:42,300 --> 00:06:43,920
+The docs suggest writing five things:
+
+134
+00:06:43,940 --> 00:06:47,300
+what the project is for, which branch to use, how to check the work,
+
+135
+00:06:47,320 --> 00:06:50,000
+what to do when something is missing, and what to ask you first.
+
+136
+00:06:50,020 --> 00:06:53,193
+One line in the official example: if something is missing, stop and say exactly what.
+
+137
+00:06:53,213 --> 00:06:55,480
+No substituting, no mocking, no guessing.
+
+138
+00:06:55,500 --> 00:06:57,161
+Merging, force-pushing and changing CI config all need to wait
+
+139
+00:06:57,181 --> 00:06:59,480
+for your answer in the thread first.
+
+140
+00:06:59,500 --> 00:07:02,427
+Step four: send one real task first.
+
+141
+00:07:02,447 --> 00:07:05,920
+See how it reports back, then send in your whole batch.
+
+142
+00:07:05,940 --> 00:07:09,000
+One more thing: after your first project is created,
+
+143
+00:07:09,020 --> 00:07:10,511
+if you haven't sent a message,
+
+144
+00:07:10,531 --> 00:07:13,320
+Claude Code takes a turn on its own to get a feel for it.
+
+145
+00:07:13,340 --> 00:07:15,727
+That turn uses your plan too.
+
+146
+00:07:15,747 --> 00:07:19,307
+The Library takes up to 100 files and 2 GB at a time.
+
+147
+00:07:19,327 --> 00:07:21,667
+A single file can be at most 480 MB.
+
+148
+00:07:21,687 --> 00:07:25,693
+Files over 30 MB are skipped when you create the project; upload them after.
+
+149
+00:07:25,713 --> 00:07:28,173
+At the end of the video the official side gives three tips.
+
+150
+00:07:28,193 --> 00:07:30,847
+Tip one: keep your usage under control.
+
+151
+00:07:30,867 --> 00:07:33,713
+Every thread is a full Claude Code session.
+
+152
+00:07:33,733 --> 00:07:36,847
+Run several at once and your plan drains very fast.
+
+153
+00:07:36,867 --> 00:07:38,840
+A new project runs Opus everywhere by default.
+
+154
+00:07:38,860 --> 00:07:42,647
+The docs say threads at high effort and the coordinator at low.
+
+155
+00:07:42,667 --> 00:07:46,567
+But in the demo's settings page, threads show Medium.
+
+156
+00:07:46,587 --> 00:07:48,213
+Go by what you see on your own screen.
+
+157
+00:07:48,233 --> 00:07:52,073
+The advice: leave the coordinator on low effort.
+
+158
+00:07:52,093 --> 00:07:57,107
+It mostly routes tasks, so turning it up isn't worth much.
+
+159
+00:07:57,127 --> 00:08:02,027
+Threads can default to a smaller model; switch to a better one for bigger tasks.
+
+160
+00:08:02,047 --> 00:08:05,073
+In the demo they switch the thread model to Sonnet.
+
+161
+00:08:05,093 --> 00:08:07,660
+Tip two: tell Claude how you want it to work.
+
+162
+00:08:07,680 --> 00:08:10,640
+How many threads at once, how often to report back.
+
+163
+00:08:10,660 --> 00:08:13,453
+Tip three: threads share memory.
+
+164
+00:08:13,473 --> 00:08:17,113
+Tell it your preferences first, and every later thread will read them.
+
+165
+00:08:17,133 --> 00:08:20,253
+In settings you can see it, edit it, and delete it.
+
+166
+00:08:20,273 --> 00:08:22,592
+It's separate from your local CLAUDE.md
+
+167
+00:08:22,612 --> 00:08:27,133
+and your machine's auto-memory MEMORY.md files.
+
+168
+00:08:27,153 --> 00:08:29,760
+The docs have a few more details that are easy to miss.
+
+169
+00:08:29,780 --> 00:08:33,120
+For example, when a thread needs your approval, you have to go into the thread to approve.
+
+170
+00:08:33,140 --> 00:08:36,680
+Saying yes in the project conversation doesn't reach it.
+
+171
+00:08:36,700 --> 00:08:40,613
+You have to open the thread and click the Allow button.
+
+172
+00:08:40,633 --> 00:08:43,213
+In the Overview pane, threads are sorted into six groups:
+
+173
+00:08:43,233 --> 00:08:47,299
+waiting for your review, waiting for your reply, running,
+
+174
+00:08:47,319 --> 00:08:51,073
+then landing, idle, and finally resolved.
+
+175
+00:08:51,093 --> 00:08:55,047
+A thread with no activity for a week is archived automatically as resolved.
+
+176
+00:08:55,067 --> 00:08:58,813
+If you'd rather not go to the cloud, you can also run it locally.
+
+177
+00:08:58,833 --> 00:09:02,067
+Pick Work Locally from the plus menu.
+
+178
+00:09:02,087 --> 00:09:05,133
+It has a version requirement, and your computer has to stay on.
+
+179
+00:09:05,153 --> 00:09:08,687
+Cloud threads don't inherit anything installed on your machine.
+
+180
+00:09:08,707 --> 00:09:10,465
+To use connectors, connect them
+
+181
+00:09:10,485 --> 00:09:13,120
+to your Claude.ai account — you have to log in first.
+
+182
+00:09:13,140 --> 00:09:14,323
+And skills and subagents
+
+183
+00:09:14,343 --> 00:09:18,540
+need to be committed to the .claude hidden folder in your cloud repository first.
+
+184
+00:09:18,560 --> 00:09:21,247
+So when is Projects worth using?
+
+185
+00:09:21,267 --> 00:09:25,000
+For this kind of task, rather than just working in a local folder:
+
+186
+00:09:25,020 --> 00:09:28,739
+say your goal is bigger than one session,
+
+187
+00:09:28,759 --> 00:09:32,380
+spans several folders, and needs lots of tasks in parallel.
+
+188
+00:09:32,400 --> 00:09:35,580
+For example, migrating an app off a deprecated package,
+
+189
+00:09:35,600 --> 00:09:38,705
+or changing one endpoint across the API, web and mobile repos —
+
+190
+00:09:38,725 --> 00:09:41,193
+that's when you use Projects.
+
+191
+00:09:41,213 --> 00:09:44,873
+Claude Code now has five ways to do many things at once:
+
+192
+00:09:44,893 --> 00:09:47,480
+subagents, agent view, agent teams,
+
+193
+00:09:47,500 --> 00:09:48,553
+dynamic workflows,
+
+194
+00:09:48,573 --> 00:09:51,080
+plus the Projects that just came out.
+
+195
+00:09:51,100 --> 00:09:52,880
+You have plenty of options.
+
+196
+00:09:52,900 --> 00:09:55,380
+The official positioning of Projects is quite specific:
+
+197
+00:09:55,400 --> 00:09:57,676
+work with many tasks, lasting weeks,
+
+198
+00:09:57,696 --> 00:10:01,747
+that has to keep running with your computer off — that's when you use it.
+
+199
+00:10:01,767 --> 00:10:05,012
+And you want to describe it once, not repeat your requirements
+
+200
+00:10:05,032 --> 00:10:08,853
+and preferences in every new window, and not watch each one.
+
+201
+00:10:08,873 --> 00:10:12,193
+Agent teams is still labeled experimental.
+
+202
+00:10:12,213 --> 00:10:14,700
+Projects is in public beta.
+
+203
+00:10:14,720 --> 00:10:18,887
+Conversely, when shouldn't you use Projects? There are four cases:
+
+204
+00:10:18,907 --> 00:10:22,780
+If one session can finish the job, you don't need Projects.
+
+205
+00:10:22,800 --> 00:10:26,300
+If every task needs your local files,
+
+206
+00:10:26,320 --> 00:10:27,907
+run it locally.
+
+207
+00:10:27,927 --> 00:10:30,200
+If it's a single scheduled task
+
+208
+00:10:30,220 --> 00:10:33,113
+with no conversation, a routine is enough.
+
+209
+00:10:33,133 --> 00:10:38,701
+If a group of people want to steer it together in Slack,
+
+210
+00:10:38,721 --> 00:10:42,525
+install Claude Tag in Slack —
+
+211
+00:10:42,545 --> 00:10:45,247
+you don't need Projects.
+
+212
+00:10:45,267 --> 00:10:47,687
+Its usage cost is high,
+
+213
+00:10:47,707 --> 00:10:50,580
+Projects burns through your plan faster than a single session.
+
+214
+00:10:50,600 --> 00:10:53,260
+So — should you use Projects?
+
+215
+00:10:53,280 --> 00:10:57,327
+There's only one test: is your task longer than a single session?
+
+216
+00:10:57,347 --> 00:11:00,431
+If your session is long, spans lots of folders,
+
+217
+00:11:00,451 --> 00:11:02,787
+may take days or weeks, and tasks keep coming,
+
+218
+00:11:02,807 --> 00:11:05,840
+and you want it to keep running in the cloud even after you've left work
+
+219
+00:11:05,860 --> 00:11:07,547
+with your laptop in transit,
+
+220
+00:11:07,567 --> 00:11:09,600
+then it's well worth starting a project.
+
+221
+00:11:09,620 --> 00:11:12,390
+Alright, that's it for this video. Thanks for watching.

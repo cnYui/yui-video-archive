@@ -1,0 +1,1104 @@
+1
+00:00:04,773 --> 00:00:06,427
+嗨，大家好，我是悠一。
+Hi everyone, I'm Yui.
+
+2
+00:00:06,447 --> 00:00:08,995
+今天一个视频，带大家搞懂 Claude Code
+In this one video I'll walk you through what
+
+3
+00:00:09,015 --> 00:00:11,467
+新出的这个 Project 是什么东西。
+Claude Code's new Projects feature is.
+
+4
+00:00:11,487 --> 00:00:12,800
+展示一下薄肌。
+Let me show off my lean muscles.
+
+5
+00:00:12,820 --> 00:00:15,444
+我的理解来讲，就是如果你的一个任务，
+My take: if a task spans several folders,
+
+6
+00:00:15,464 --> 00:00:18,088
+它要跨多个文件夹，而且需要长期地跑，
+needs to run for a long time,
+
+7
+00:00:18,108 --> 00:00:22,200
+而且需要合上电脑还能跑，那你就应该去使用 Project。
+and needs to keep running with your laptop closed, you should use Projects.
+
+8
+00:00:22,220 --> 00:00:23,562
+在官方的演示里面，
+In the official demo,
+
+9
+00:00:23,582 --> 00:00:28,020
+发两条消息，Claude 在云上开了八个线程，也就是八个会话。
+two messages make Claude start eight threads in the cloud — eight sessions.
+
+10
+00:00:28,040 --> 00:00:31,080
+八个线程，同时在修一个网站的性能问题。
+Eight threads, fixing one website's performance problem at the same time.
+
+11
+00:00:31,100 --> 00:00:33,587
+这个功能就叫 Claude Code Project。
+The feature is called Claude Code Projects.
+
+12
+00:00:33,607 --> 00:00:36,813
+在今年 9 月中旬，它在 Claude Code 里面开了公测。
+In mid-September it went into public beta in Claude Code.
+
+13
+00:00:36,833 --> 00:00:38,240
+这两天官方说：
+A couple of days ago the official account said:
+
+14
+00:00:38,260 --> 00:00:43,100
+在等候名单里面的 Pro 和 Max 用户，已经全部开放公测了。
+everyone on the Pro and Max waitlist now has access to the beta.
+
+15
+00:00:43,120 --> 00:00:46,360
+所以我们可以先来看看，它到底是一个什么东西。
+So let's first look at what it actually is.
+
+16
+00:00:46,380 --> 00:00:49,894
+先看如果你不用 Project 的话，会有什么情况。
+Without Projects, you open lots of sessions in different folders.
+
+17
+00:00:49,914 --> 00:00:54,539
+比如说你要开好多个会话，会在不同文件夹下面开很多个会话，
+For their agents to talk
+
+18
+00:00:54,559 --> 00:00:57,227
+然后这些文件夹之间的 agent 交流，
+to each other you have to tell the AI yourself,
+
+19
+00:00:57,247 --> 00:01:01,743
+需要你自己去告诉 AI，把这个会话的 Session ID 都发给他，
+sending it the other session's ID so it can chat
+
+20
+00:01:01,763 --> 00:01:04,689
+告诉他去跟另外一个会话里的 AI 聊天，
+with the AI over there,
+
+21
+00:01:04,709 --> 00:01:08,313
+你自己还要去给他们分不同的活，就会很麻烦。
+and you still have to hand out the work yourself. It gets messy.
+
+22
+00:01:08,333 --> 00:01:10,847
+每个会话的开头，都要重新讲一遍背景。
+Each session starts with you repeating the background.
+
+23
+00:01:10,867 --> 00:01:15,180
+然后过一段时间，可能还要让你去自己看，谁做完了，谁在等。
+Then after a while you have to go check: who is done, who is waiting.
+
+24
+00:01:15,200 --> 00:01:17,313
+然后你还要自己去把这些东西，进行一个收尾。
+And then you have to wrap all of it up yourself.
+
+25
+00:01:17,333 --> 00:01:20,227
+那 Project 就把这些活，全部给了 Claude。
+Projects hands all of that to Claude.
+
+26
+00:01:20,247 --> 00:01:23,320
+一个 Project，就是一场不会结束的对话。
+A project is one ongoing conversation.
+
+27
+00:01:23,340 --> 00:01:26,000
+Claude 在里面去当一个总的协调员。
+Claude acts as the overall coordinator inside it.
+
+28
+00:01:26,020 --> 00:01:30,080
+你把一个总的任务丢进去，跟他说和哪些文件夹有关，
+You drop in one big task and tell it which folders are involved,
+
+29
+00:01:30,100 --> 00:01:32,647
+他又会把这件事，开一个线程。
+and it starts a thread for it.
+
+30
+00:01:32,667 --> 00:01:35,507
+他会先加载所有的文件夹进来，
+It first loads all those folders,
+
+31
+00:01:35,527 --> 00:01:39,347
+然后去定一个他自己的计划，
+then makes a plan of its own,
+
+32
+00:01:39,367 --> 00:01:42,087
+然后开始开工，按照你的要求。
+and gets to work, following your requirements.
+
+33
+00:01:42,107 --> 00:01:47,567
+官方博客的比喻就是，像在给一个幕僚长去交代工作。
+The blog's comparison is: it's like briefing a chief of staff.
+
+34
+00:01:47,587 --> 00:01:51,213
+刚刚说的线程，通常来讲就是一个云端的 Claude Code 会话。
+The threads I just mentioned are usually Claude Code sessions running in the cloud.
+
+35
+00:01:51,233 --> 00:01:53,232
+Claude Code 和现在大部分的 AI，
+Claude Code and most AI tools today
+
+36
+00:01:53,252 --> 00:01:56,420
+他们都想去把这些本地的文件，给推到云端上去，
+all want to push your local files up to the cloud,
+
+37
+00:01:56,440 --> 00:01:59,279
+这样无论电脑合不合，或者说用手机，
+so that whether your laptop is closed
+
+38
+00:01:59,299 --> 00:02:03,747
+都能够去进行实时的 AI web coding，或者怎么样都好。
+or you're on your phone, you can do live AI web coding, or whatever.
+
+39
+00:02:03,767 --> 00:02:06,101
+在云端的这个 Claude Code 会话里面呢，
+In a cloud Claude Code session,
+
+40
+00:02:06,121 --> 00:02:08,693
+它就有自己的分支，自己的上下文窗口。
+it has its own branch and its own context window.
+
+41
+00:02:08,713 --> 00:02:12,633
+它自己如果说要开 PR 的话，它就会自己开 PR，自己去推。
+If it needs to open a PR, it opens one itself and pushes it.
+
+42
+00:02:12,653 --> 00:02:15,520
+你合上电脑的时候，云端线程照样能跑。
+When you close your laptop, the cloud threads keep running.
+
+43
+00:02:15,540 --> 00:02:18,247
+在手机上也能去看进度，也能发指令。
+From your phone you can also check progress and send instructions.
+
+44
+00:02:18,267 --> 00:02:20,425
+那么 Project 这个名字呢，
+The name Projects —
+
+45
+00:02:20,445 --> 00:02:24,267
+其实在前段时间，甚至更早，你可能就用过。
+you may well have used it a while back, or even earlier.
+
+46
+00:02:24,287 --> 00:02:25,840
+做一个资料夹，
+A folder,
+
+47
+00:02:25,860 --> 00:02:30,175
+你可以把相关的聊天记录，聊天里可能有图片，可能有视频，
+where you can add related chats — maybe with images or videos —
+
+48
+00:02:30,195 --> 00:02:34,007
+全部加在它的知识库里，然后再加一段项目说明。
+all into its knowledge base, plus a block of project instructions.
+
+49
+00:02:34,027 --> 00:02:37,267
+免费用户的话也能建，但是最多只能建五个。
+Free users can create them too, but only up to five.
+
+50
+00:02:37,287 --> 00:02:38,795
+Cowork 里面也有一套，
+Cowork has its own too: tasks,
+
+51
+00:02:38,815 --> 00:02:42,620
+任务、文件、说明、记忆，都会放到一个工作区里。
+files, instructions and memory all go into one workspace.
+
+52
+00:02:42,640 --> 00:02:45,984
+那么这次的 Project，就是一个很大的升级，
+This time Projects is a big upgrade —
+
+53
+00:02:46,004 --> 00:02:49,480
+官方博客的名字就叫“从文件夹到对话”。
+the official blog post is titled "from folder to conversation."
+
+54
+00:02:49,500 --> 00:02:53,860
+升级之后，一个 Project 就是一场对话，加一群的这个线程。
+After the upgrade, a project is one conversation plus a crowd of threads.
+
+55
+00:02:53,880 --> 00:02:56,429
+现在 Claude Code 里面在公测，
+It's in beta in Claude Code now, and chat
+
+56
+00:02:56,449 --> 00:02:59,580
+聊天和 Cowork 之后会逐步地开放。
+and Cowork will open up gradually after that.
+
+57
+00:02:59,600 --> 00:03:04,003
+那如果在 Pro 和 Max 这个会员等级上的话，
+If you're on a Pro or Max plan,
+
+58
+00:03:04,023 --> 00:03:07,233
+你已有的项目可以照常去用，
+your existing projects keep working as usual,
+
+59
+00:03:07,253 --> 00:03:10,280
+官方会替你升级到这个 Project。
+and the official side will upgrade them to the new Projects for you.
+
+60
+00:03:10,300 --> 00:03:11,980
+现阶段有一个差别，
+One difference for now:
+
+61
+00:03:12,000 --> 00:03:14,463
+就是聊天里的项目，Team 和 Enterprise，
+projects in chat can be shared on Team and Enterprise,
+
+62
+00:03:14,483 --> 00:03:16,013
+就是企业版，它能共享。
+the business plans.
+
+63
+00:03:16,033 --> 00:03:18,447
+升级版的话，一个项目就是属于你一个人。
+In the upgraded version, a project belongs to just you.
+
+64
+00:03:18,467 --> 00:03:19,985
+官方也附了一个演示，
+The official side also attached a demo:
+
+65
+00:03:20,005 --> 00:03:23,080
+它有一个四分钟的视频，演示了一个场景。
+a four-minute video that walks through one scenario.
+
+66
+00:03:23,100 --> 00:03:25,507
+它是想把一个营销网站去进行优化，
+It's about optimizing a marketing site
+
+67
+00:03:25,527 --> 00:03:29,013
+这个营销网站它的性能已经整整掉了一个月。
+whose performance has been slipping for a whole month.
+
+68
+00:03:29,033 --> 00:03:33,597
+那么官方的视频里，就先建了这个 Project 的项目：
+In the video, they first create the project: a name,
+
+69
+00:03:33,617 --> 00:03:35,547
+名字，目标，仓库。
+a goal, repositories.
+
+70
+00:03:35,567 --> 00:03:40,560
+目标就是把 LCP 压到 2.5 秒以下，CLS 压到 0.1 以下。
+The goal: get LCP under 2.5 seconds and CLS under 0.1.
+
+71
+00:03:40,580 --> 00:03:44,780
+LCP 是主要内容出现的时间，CLS 是页面抖不抖。
+LCP is when the main content shows up; CLS is how much the page jumps around.
+
+72
+00:03:44,800 --> 00:03:48,413
+那么建好了主对话之后就进入，Claude 就给了四条建议。
+Once the main conversation opens, Claude gives four suggestions.
+
+73
+00:03:48,433 --> 00:03:50,973
+Claude 说，比如读仓库、提方案。
+For example: read the repo and propose next steps.
+
+74
+00:03:50,993 --> 00:03:54,176
+官方的话就是说，你可以挑一条，问一个小问题，
+The video's point: you can pick one, ask a quick question,
+
+75
+00:03:54,196 --> 00:03:57,707
+或者直接丢一串任务进去，它都会去进行执行。
+or just drop in a list of tasks, and it carries them out.
+
+76
+00:03:57,727 --> 00:04:00,295
+那么第一条消息就是，把指标贴进去，
+The first message: paste in the metrics
+
+77
+00:04:00,315 --> 00:04:02,660
+让 Claude 先读代码、给方案。
+and have Claude read the code and propose a plan.
+
+78
+00:04:02,680 --> 00:04:06,013
+他先开一个线程，去读了两个仓库。
+It starts one thread first, which reads both repositories.
+
+79
+00:04:06,033 --> 00:04:07,540
+回来列了八条建议。
+It comes back with eight suggestions.
+
+80
+00:04:07,560 --> 00:04:11,880
+还说前三条占据了大部分 LCP 和 CLS，建议先做。
+It adds that the first three account for most of the LCP and CLS, so start there.
+
+81
+00:04:11,900 --> 00:04:14,880
+第二条消息，只有一句：全都做。
+The second message is one line: do all of them.
+
+82
+00:04:14,900 --> 00:04:17,640
+Claude 回：八个线程，一个任务一个。
+Claude replies: eight threads, one per task.
+
+83
+00:04:17,660 --> 00:04:19,583
+优化图片，预加载字体，
+Optimizing images, preloading fonts,
+
+84
+00:04:19,603 --> 00:04:21,927
+拆 JS 包，给横幅留位置。
+splitting the JS bundle, reserving space for the banner.
+
+85
+00:04:21,947 --> 00:04:25,167
+线程各读各的代码，各开各的分支。
+Each thread reads its own code and works on its own branch.
+
+86
+00:04:25,187 --> 00:04:28,060
+点开线程卡片，能看到它一步步在干什么。
+Open a thread card to see what it's doing, step by step.
+
+87
+00:04:28,080 --> 00:04:31,460
+你可以直接在线程里面改它的方向，也可以喊停。
+You can steer it right inside the thread, or stop it.
+
+88
+00:04:31,480 --> 00:04:36,327
+线程手里有了具体改动，比如说修一个 bug，它就会自己开 PR。
+Once a thread has a concrete change, like a bug fix, it opens a PR itself.
+
+89
+00:04:36,347 --> 00:04:38,393
+你一句话和它说了，它也会开。
+Or if you just tell it to, it will.
+
+90
+00:04:38,413 --> 00:04:42,234
+PR 开了之后，他会继续盯着：CI 如果挂了，他就能自己修复，
+After the PR opens it keeps watching: if CI fails it can fix it itself,
+
+91
+00:04:42,254 --> 00:04:45,047
+如果有 review 评审意见，他就会来继续改。
+and if there are review comments it keeps revising.
+
+92
+00:04:45,067 --> 00:04:48,070
+想看所有的 PR 状态呢，就可以去 Overview 里面，
+To see every PR's status, go to the PR tab in Overview,
+
+93
+00:04:48,090 --> 00:04:50,747
+去 PR 的这个标签页，就可以全部看到。
+and you'll see them all.
+
+94
+00:04:50,767 --> 00:04:54,213
+如果想合并的话，只要和 Claude 说一声合并就可以了。
+If you want to merge, just tell Claude to merge.
+
+95
+00:04:54,233 --> 00:04:56,613
+合完之后，再跟他说，写份复盘。
+After the merge, tell it one more thing: write a post-mortem.
+
+96
+00:04:56,633 --> 00:05:00,608
+他就会再开一个线程，把所有的这些线程的前后上下文，
+It starts another thread, turns the context from all those threads into a report,
+
+97
+00:05:00,628 --> 00:05:03,687
+去做成一个报告，放到 Library 里面。
+and puts it in the Library.
+
+98
+00:05:03,707 --> 00:05:06,867
+官方管这个 Library，叫项目的共享文件夹。
+The video calls the Library the project's shared folder.
+
+99
+00:05:06,887 --> 00:05:08,183
+每个线程都读得到，
+Every thread can read it,
+
+100
+00:05:08,203 --> 00:05:11,580
+下次可以再优化，他也会直接更新这份报告。
+so next time it can optimize again and simply update the report.
+
+101
+00:05:11,600 --> 00:05:14,165
+那最后一步就是，接上这个监控服务，
+The last step: connect a monitoring service
+
+102
+00:05:14,185 --> 00:05:17,580
+去让他更加的自动化，演示里用的是 Sentry。
+to automate it further — Sentry, in the demo.
+
+103
+00:05:17,600 --> 00:05:22,007
+再让他新建一个例程，也就是开一个 routine 定时任务。
+Then have it create a routine — a scheduled task.
+
+104
+00:05:22,027 --> 00:05:24,747
+查到回归，他自己开线程调查。
+If it finds a regression, it starts a thread to investigate on its own.
+
+105
+00:05:24,767 --> 00:05:27,020
+你下次打开项目，他已经在等你了。
+Next time you open the project, it's already waiting for you.
+
+106
+00:05:27,040 --> 00:05:29,363
+这个例程，或者说这个 routine 的本身，
+The routine feature itself is labeled research
+
+107
+00:05:29,383 --> 00:05:31,480
+官方标的是 research preview。
+preview by the official side.
+
+108
+00:05:31,500 --> 00:05:33,440
+行为和限制都可能会变。
+Behavior and limits may change.
+
+109
+00:05:33,460 --> 00:05:35,400
+演示里他真的查到了一个：
+In the demo it actually finds one:
+
+110
+00:05:35,420 --> 00:05:40,540
+在 Pricing 价格页面，手机端 LCP 3.4 秒，前一天是 2.1 秒。
+on the pricing page, mobile LCP is 3.4 seconds, up from 2.1 the day before.
+
+111
+00:05:40,560 --> 00:05:45,067
+原因是一张 1.9MB 的 PNG，影响了加载的速度。
+The cause is a 1.9 MB PNG slowing down loading.
+
+112
+00:05:45,087 --> 00:05:47,537
+那么怎么去上手呢？你打开这个 Claude Code，
+So how do you get started? Open Claude Code
+
+113
+00:05:47,557 --> 00:05:50,080
+你就可以看到，你的左侧有一个 Project。
+and you should see Projects in your left sidebar.
+
+114
+00:05:50,100 --> 00:05:53,563
+你也可以在网址 claude.ai/code 里面，
+You can also open the web version
+
+115
+00:05:53,583 --> 00:05:55,880
+去打开它的这个网页端。
+at claude.ai/code.
+
+116
+00:05:55,900 --> 00:05:57,313
+那么手机 App 里面也有。
+The mobile app has it too.
+
+117
+00:05:57,333 --> 00:06:00,800
+如果你没有的话，那说明这个还没有轮到你。
+If you don't see it, it just hasn't reached you yet.
+
+118
+00:06:00,820 --> 00:06:04,260
+官方留了这个等候名单，这个链接会放在简介里。
+The official side has a waitlist, and I'll put the link in the description.
+
+119
+00:06:04,280 --> 00:06:05,551
+如果没有开通的话，
+If you don't have access yet,
+
+120
+00:06:05,571 --> 00:06:09,753
+你就可以去官方那一页去看一下，里面有五种的并行方式。
+check the official page: it lists five ways to run work in parallel.
+
+121
+00:06:09,773 --> 00:06:11,580
+那么第二步就是新建一个项目。
+Step two: create a project.
+
+122
+00:06:11,600 --> 00:06:15,013
+点击这个 Project，它会弹出来，叫你输入它的名字。
+Click Projects and a dialog asks for its name.
+
+123
+00:06:15,033 --> 00:06:16,473
+只有名字是必须的。
+Only the name is required.
+
+124
+00:06:16,493 --> 00:06:20,213
+目标你可以写一行，仓库文件都可以之后再添加。
+Write the goal in one line; repositories and files can be added later.
+
+125
+00:06:20,233 --> 00:06:22,060
+做代码项目里面，有三个前提：
+For code projects there are three prerequisites:
+
+126
+00:06:22,080 --> 00:06:24,447
+就是代码要放在 GitHub 上，它才能关联上。
+Your code must be on GitHub so it can be linked.
+
+127
+00:06:24,467 --> 00:06:27,927
+账号必须要有 push 权限，装了 Claude GitHub App。
+Your account needs push access, and the Claude GitHub App must be installed.
+
+128
+00:06:27,947 --> 00:06:31,847
+GitLab、Bitbucket 都不行，它现在只支持 GitHub。
+GitLab and Bitbucket don't work; for now it only supports GitHub.
+
+129
+00:06:31,867 --> 00:06:34,060
+然后 GitHub Enterprise Server 也不行。
+And GitHub Enterprise Server doesn't work either.
+
+130
+00:06:34,080 --> 00:06:36,509
+没有仓库也行，做调研、写文章，
+No repository is fine too: do research, write articles,
+
+131
+00:06:36,529 --> 00:06:38,680
+成果可以放进 Library 里面。
+and put the results in the Library.
+
+132
+00:06:38,700 --> 00:06:42,280
+第三步的话，就是写项目说明，上限是 16000 个字符。
+Step three is writing the project instructions, up to 16,000 characters.
+
+133
+00:06:42,300 --> 00:06:43,920
+官方建议写五样：
+The docs suggest writing five things:
+
+134
+00:06:43,940 --> 00:06:47,300
+项目是为了什么，分支怎么开，做完怎么检查。
+what the project is for, which branch to use, how to check the work,
+
+135
+00:06:47,320 --> 00:06:50,000
+缺东西怎么办，哪些要先问你。
+what to do when something is missing, and what to ask you first.
+
+136
+00:06:50,020 --> 00:06:53,193
+官方给的例子里有一条：缺什么，就停下来说清楚。
+One line in the official example: if something is missing, stop and say exactly what.
+
+137
+00:06:53,213 --> 00:06:55,480
+不许替代，不许模拟，不许猜。
+No substituting, no mocking, no guessing.
+
+138
+00:06:55,500 --> 00:06:57,161
+合并、强推、改 CI 配置，
+Merging, force-pushing and changing CI config all need to wait
+
+139
+00:06:57,181 --> 00:06:59,480
+都需要先在线程里等你回答。
+for your answer in the thread first.
+
+140
+00:06:59,500 --> 00:07:02,427
+第四步，先丢一块真的任务。
+Step four: send one real task first.
+
+141
+00:07:02,447 --> 00:07:05,920
+先看它怎么汇报，再把你的整批任务给丢进去。
+See how it reports back, then send in your whole batch.
+
+142
+00:07:05,940 --> 00:07:09,000
+还有一个前提就是，你的第一个项目建好之后，
+One more thing: after your first project is created,
+
+143
+00:07:09,020 --> 00:07:10,511
+如果你是没有发消息的话，
+if you haven't sent a message,
+
+144
+00:07:10,531 --> 00:07:13,320
+Claude Code 它会自己先跑一轮，去摸个底。
+Claude Code takes a turn on its own to get a feel for it.
+
+145
+00:07:13,340 --> 00:07:15,727
+这一轮也是会花你的额度的。
+That turn uses your plan too.
+
+146
+00:07:15,747 --> 00:07:19,307
+Library 一次最多可以添加 100 个文件，2GB。
+The Library takes up to 100 files and 2 GB at a time.
+
+147
+00:07:19,327 --> 00:07:21,667
+单个文件最多 480MB。
+A single file can be at most 480 MB.
+
+148
+00:07:21,687 --> 00:07:25,693
+超过 30MB 的这个文件，建项目时会被跳过，建好的话再传。
+Files over 30 MB are skipped when you create the project; upload them after.
+
+149
+00:07:25,713 --> 00:07:28,173
+官方给了三个建议，在视频的最后。
+At the end of the video the official side gives three tips.
+
+150
+00:07:28,193 --> 00:07:30,847
+第一条就是，一定要控制你的额度。
+Tip one: keep your usage under control.
+
+151
+00:07:30,867 --> 00:07:33,713
+这每一个线程，都是一个完整的 Claude Code 会话。
+Every thread is a full Claude Code session.
+
+152
+00:07:33,733 --> 00:07:36,847
+同时开几个的话，额度会掉得非常快。
+Run several at once and your plan drains very fast.
+
+153
+00:07:36,867 --> 00:07:38,840
+新项目默认全都是 Opus。
+A new project runs Opus everywhere by default.
+
+154
+00:07:38,860 --> 00:07:42,647
+文档里面写的是线程 high effort，协调员 low effort。
+The docs say threads at high effort and the coordinator at low.
+
+155
+00:07:42,667 --> 00:07:46,567
+但演示里的这个设置页，线程显示的是 Medium。
+But in the demo's settings page, threads show Medium.
+
+156
+00:07:46,587 --> 00:07:48,213
+以你自己看到的为准。
+Go by what you see on your own screen.
+
+157
+00:07:48,233 --> 00:07:52,073
+官方建议的话，协调员可以留在低的 effort。
+The advice: leave the coordinator on low effort.
+
+158
+00:07:52,093 --> 00:07:57,107
+它主要是分这个任务，调高了也没有太多的性价比。
+It mostly routes tasks, so turning it up isn't worth much.
+
+159
+00:07:57,127 --> 00:08:02,027
+线程可以用默认小一点的模型，大任务再切好一点的模型。
+Threads can default to a smaller model; switch to a better one for bigger tasks.
+
+160
+00:08:02,047 --> 00:08:05,073
+演示里就是把线程的模型改成了 Sonnet。
+In the demo they switch the thread model to Sonnet.
+
+161
+00:08:05,093 --> 00:08:07,660
+第二步，就是要告诉 Claude 你想怎么做。
+Tip two: tell Claude how you want it to work.
+
+162
+00:08:07,680 --> 00:08:10,640
+你想同时跑几个，多久汇报一次。
+How many threads at once, how often to report back.
+
+163
+00:08:10,660 --> 00:08:13,453
+第三点的话，线程是会共享记忆的。
+Tip three: threads share memory.
+
+164
+00:08:13,473 --> 00:08:17,113
+你可以先告诉他你的偏好是什么，之后每个线程都会读到。
+Tell it your preferences first, and every later thread will read them.
+
+165
+00:08:17,133 --> 00:08:20,253
+设置里你能看到，你能改，你能删。
+In settings you can see it, edit it, and delete it.
+
+166
+00:08:20,273 --> 00:08:22,592
+它和你本机的这个 CLAUDE.md，
+It's separate from your local CLAUDE.md
+
+167
+00:08:22,612 --> 00:08:27,133
+本机的这个自动的 memory.md 的 md 文件，是分开来的。
+and your machine's auto-memory MEMORY.md files.
+
+168
+00:08:27,153 --> 00:08:29,760
+那文档里还有几个细节，它比较容易漏。
+The docs have a few more details that are easy to miss.
+
+169
+00:08:29,780 --> 00:08:33,120
+比如说线程你要批准的时候，得点到线程里面去点。
+For example, when a thread needs your approval, you have to go into the thread to approve.
+
+170
+00:08:33,140 --> 00:08:36,680
+然后在项目对话里说同意的时候，它是收不到的。
+Saying yes in the project conversation doesn't reach it.
+
+171
+00:08:36,700 --> 00:08:40,613
+你必须要把这个线程点开，然后去点这个 Allow 这个按钮。
+You have to open the thread and click the Allow button.
+
+172
+00:08:40,633 --> 00:08:43,213
+在 Overview 面板，线程又分成六组：
+In the Overview pane, threads are sorted into six groups:
+
+173
+00:08:43,233 --> 00:08:47,299
+它会等你评审，等你回复，等你跑完了之后，
+waiting for your review, waiting for your reply, running,
+
+174
+00:08:47,319 --> 00:08:51,073
+它会再合并，再闲着，然后最后解决。
+then landing, idle, and finally resolved.
+
+175
+00:08:51,093 --> 00:08:55,047
+如果一周没动静的线程，它会自动归档，归档到已解决。
+A thread with no activity for a week is archived automatically as resolved.
+
+176
+00:08:55,067 --> 00:08:58,813
+如果你还是不想上云的话呢，那你就也可以在本地跑。
+If you'd rather not go to the cloud, you can also run it locally.
+
+177
+00:08:58,833 --> 00:09:02,067
+你可以在加号菜单里面选择 Work Locally。
+Pick Work Locally from the plus menu.
+
+178
+00:09:02,087 --> 00:09:05,133
+它有一个版本要求，然后电脑你得一直开着。
+It has a version requirement, and your computer has to stay on.
+
+179
+00:09:05,153 --> 00:09:08,687
+云端线程的话，它不继承你本机装的任何东西。
+Cloud threads don't inherit anything installed on your machine.
+
+180
+00:09:08,707 --> 00:09:10,465
+如果要用连接器 Connector 的话，
+To use connectors, connect them
+
+181
+00:09:10,485 --> 00:09:13,120
+要连到你的 Claude.ai 账号上，你得先登录。
+to your Claude.ai account — you have to log in first.
+
+182
+00:09:13,140 --> 00:09:14,323
+而技能和子代理呢，
+And skills and subagents
+
+183
+00:09:14,343 --> 00:09:18,540
+你也得先提交到你的云端仓库里的这个 .claude 隐藏目录下面。
+need to be committed to the .claude hidden folder in your cloud repository first.
+
+184
+00:09:18,560 --> 00:09:21,247
+那什么时候值得去用这个 Project？
+So when is Projects worth using?
+
+185
+00:09:21,267 --> 00:09:25,000
+这个任务，而不是在本地的文件夹里去做这个事情呢，
+For this kind of task, rather than just working in a local folder:
+
+186
+00:09:25,020 --> 00:09:28,739
+就比如说，你的目标它会比一次的这个 session 更大，
+say your goal is bigger than one session,
+
+187
+00:09:28,759 --> 00:09:32,380
+而且它会跨好几个文件夹，要并行很多的这个任务。
+spans several folders, and needs lots of tasks in parallel.
+
+188
+00:09:32,400 --> 00:09:35,580
+就比如说，把应用从废弃的这个包给迁走，
+For example, migrating an app off a deprecated package,
+
+189
+00:09:35,600 --> 00:09:38,705
+或者一个接口会同时改 API、网页和手机三个仓库，
+or changing one endpoint across the API, web and mobile repos —
+
+190
+00:09:38,725 --> 00:09:41,193
+那这个时候你就要使用 Project。
+that's when you use Projects.
+
+191
+00:09:41,213 --> 00:09:44,873
+Claude Code 现在有五种，同时可以干很多事情的方式：
+Claude Code now has five ways to do many things at once:
+
+192
+00:09:44,893 --> 00:09:47,480
+比如子代理，agent view，agent teams，
+subagents, agent view, agent teams,
+
+193
+00:09:47,500 --> 00:09:48,553
+Dynamic Workflow，
+dynamic workflows,
+
+194
+00:09:48,573 --> 00:09:51,080
+动态工作流，再加上现在出的这个 Project。
+plus the Projects that just came out.
+
+195
+00:09:51,100 --> 00:09:52,880
+你有很多种选择方式。
+You have plenty of options.
+
+196
+00:09:52,900 --> 00:09:55,380
+官方给 Project 这个定位很具体：
+The official positioning of Projects is quite specific:
+
+197
+00:09:55,400 --> 00:09:57,676
+活儿跨很多的任务，持续几周，
+work with many tasks, lasting weeks,
+
+198
+00:09:57,696 --> 00:10:01,747
+电脑关了也要跑，你就需要去使用它这个 Project。
+that has to keep running with your computer off — that's when you use it.
+
+199
+00:10:01,767 --> 00:10:05,012
+而且你只想描述一次，不是想在每开一个新的窗口，
+And you want to describe it once, not repeat your requirements
+
+200
+00:10:05,032 --> 00:10:08,853
+都需要重复描述你的需求、你的偏好，也不想一个个盯。
+and preferences in every new window, and not watch each one.
+
+201
+00:10:08,873 --> 00:10:12,193
+agent teams 还标着这个实验性质的。
+Agent teams is still labeled experimental.
+
+202
+00:10:12,213 --> 00:10:14,700
+Project 现在是 public beta。
+Projects is in public beta.
+
+203
+00:10:14,720 --> 00:10:18,887
+反过来说，什么情况不要用 Project 呢？有四种：
+Conversely, when shouldn't you use Projects? There are four cases:
+
+204
+00:10:18,907 --> 00:10:22,780
+就是一个会话你就能干完的，你就不用去 Project 干。
+If one session can finish the job, you don't need Projects.
+
+205
+00:10:22,800 --> 00:10:26,300
+还有一个就是，每个任务都离不开你本地的这些文件，
+If every task needs your local files,
+
+206
+00:10:26,320 --> 00:10:27,907
+那就你在你本地跑。
+run it locally.
+
+207
+00:10:27,927 --> 00:10:30,200
+还有一个就是单个的这个定时任务，
+If it's a single scheduled task
+
+208
+00:10:30,220 --> 00:10:33,113
+没有对话，建一个 routine 就能解决了。
+with no conversation, a routine is enough.
+
+209
+00:10:33,133 --> 00:10:38,701
+如果说一群人要在 Slack 里面一起去讨论，一起去指挥的话，
+If a group of people want to steer it together in Slack,
+
+210
+00:10:38,721 --> 00:10:42,525
+那就去 Slack 里面去装这个 Claude Tag，
+install Claude Tag in Slack —
+
+211
+00:10:42,545 --> 00:10:45,247
+就用不到这个 Project。
+you don't need Projects.
+
+212
+00:10:45,267 --> 00:10:47,687
+那它的额度消耗是很大的，
+Its usage cost is high,
+
+213
+00:10:47,707 --> 00:10:50,580
+那 Project 它会比单个会话更费额度。
+Projects burns through your plan faster than a single session.
+
+214
+00:10:50,600 --> 00:10:53,260
+那，所以说，该不该用这个 Project？
+So — should you use Projects?
+
+215
+00:10:53,280 --> 00:10:57,327
+判断的依据只有一个，就是你的任务是不是比一次会话还长。
+There's only one test: is your task longer than a single session?
+
+216
+00:10:57,347 --> 00:11:00,431
+如果你这个会话很长，而且你要跨很多个文件夹，
+If your session is long, spans lots of folders,
+
+217
+00:11:00,451 --> 00:11:02,787
+可能要几天几周，任务会一直来，
+may take days or weeks, and tasks keep coming,
+
+218
+00:11:02,807 --> 00:11:05,840
+而且你希望你下班了，电脑在路上，
+and you want it to keep running in the cloud even after you've left work
+
+219
+00:11:05,860 --> 00:11:07,547
+它也要在云端跑，
+with your laptop in transit,
+
+220
+00:11:07,567 --> 00:11:09,600
+那么你就很值得去开一个 Project。
+then it's well worth starting a project.
+
+221
+00:11:09,620 --> 00:11:12,390
+好的，本期视频就到这里，谢谢大家观看。
+Alright, that's it for this video. Thanks for watching.

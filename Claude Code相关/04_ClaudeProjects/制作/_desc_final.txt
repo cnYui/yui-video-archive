@@ -1,0 +1,33 @@
+这条视频带你看懂 Claude 里的 Projects：它是什么、官方演示里怎么用，以及什么时候值得用。
+
+【章节】
+00:00 开场：一句话结论
+00:46 它是什么：协调员和线程
+03:18 官方演示：8 个线程一起跑
+05:45 怎么用：四步上手 + 三条技巧
+09:18 用不用：什么时候值得用
+10:50 收尾
+
+【要点】（来自官方文档和 @ClaudeDevs 推文，细节以官方为准）
+· Projects 在升级：从“文件夹”变成“和 Claude 的一场对话”，先从 Claude Code 开始；聊天和 Cowork 里本来就有的项目也会跟着升级。
+· 现状：公测，Pro 和 Max 用户逐步放量；Team 和 Enterprise 暂时没有。官方推文说，等候名单里的 Pro 和 Max 用户已经全部放进来了。
+· 入口：claude.ai/code、桌面 App 的 Code 标签页、手机 App；文档写明终端 CLI、VS Code、JetBrains 里没有。
+· 侧栏里看不到 Projects，说明还没轮到你，可以报名等候名单：https://claude.com/form/projects
+
+【说明】
+· 演示画面（官方 4 分钟上手视频、协调员和线程的示意动画、并行方式对比页）来自 @ClaudeDevs 和 Anthropic 官方，仅作介绍和评论引用，版权归原作者。
+· 演示里的线程数量、按钮和界面是官方演示的样子，不代表你的账号现在一定看到一样的界面。
+· 视频里只简单提了用量问题；限额、权限、团队版等边界请看官方文档。
+· 功能仍在公测，版本会变，以官方文档为准。
+
+【资料来源】（2026-10-10 读取）
+· 官方文档（中文）：https://code.claude.com/docs/zh-CN/claude-projects
+· 并行运行 agents：https://code.claude.com/docs/en/agents
+· 帮助中心：https://support.claude.com/en/articles/9517075-what-are-projects
+· 官方博客：Projects redesigned: from folder to conversation（claude.com/blog）
+· 等候名单：https://claude.com/form/projects
+
+【制作】
+· 出镜口播：悠一；拍摄：Pocket 4P
+· 字幕（含英文翻译）、画面编排和剪辑由 Claude Code（Sonnet 5.5）辅助完成，创作声明因此选了“含AI生成内容”
+· 字体：Noto Sans SC（SIL OFL）

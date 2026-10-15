@@ -1,0 +1,19 @@
+{
+  "references_title": "参考文献",
+  "references": [
+    "Anthropic，Projects redesigned: from folder to conversation，claude.com/blog，2026-09",
+    "Anthropic，让 Claude 通过 Projects 协调持续进行的工作，code.claude.com/docs/zh-CN/claude-projects",
+    "Anthropic，Run agents in parallel，code.claude.com/docs/en/agents",
+    "Anthropic，What are projects?，support.claude.com，Help Center",
+    "@ClaudeDevs，Claude Code Projects 4 分钟上手视频，X，2026-10"
+  ],
+  "thanks_title": "致谢",
+  "thanks": [
+    {"label": "演示画面", "value": "@ClaudeDevs · X（官方）"},
+    {"label": "拍摄", "value": "Pocket 4P"},
+    {"label": "剪辑", "value": "Claude Code（Sonnet 5.5）"},
+    {"label": "字体", "value": "Noto Sans SC（SIL OFL）"}
+  ],
+  "closing": "感谢观看，我们下期再见",
+  "signature": "悠一"
+}

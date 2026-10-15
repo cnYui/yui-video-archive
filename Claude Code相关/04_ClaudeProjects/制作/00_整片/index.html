@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<!-- Claude Code相关 引擎模板（从第 3 期《You should know 插件》整理）：2340×1080，30 fps，白底。renderAt(t) 画出第 t 秒（同一个 t 永远是同一帧）。
+     数据：timeline.js（build_timeline.py）、frames.js（prep_frames.py）、pages.js（capture_pages.py，官方页面 / 推文的截图和高亮位置）。
+     版式：全程画外音、不放出镜框；左栏“本期目录”（≤ 3 条、每条 ≤ 7 字）；右边演示区 1504×859（内容按 1474×829 写，不缩放；为了让出 y 922 以下的字幕带）
+     放 @ClaudeDevs 的官方演示视频或官方页面 / 推文录屏；字幕按项目的中英双语标准（Way to AGI/skill/way-to-agi-episode/references/subtitles.md）：
+     y 922 以下，中文一行 52 px + 英文一行 30 px，居中。强调色 Claude Code 系列橙 #FF4F1A。
+     脚本：scenes.js（叠加层、页面录屏）→ engine.js（renderAt）。 -->
+<link rel="stylesheet" href="file:///D:/大疆/AI科普/素材/字体/fonts.css">
+<style>
+:root { --ink:#1B1B1F; --ink2:#374151; --gray:#6B7280; --gray2:#9AA1AC; --line:#E5E7EB; --soft:#F4F5F7; --accent:#FF4F1A; --orange:#FF4F1A; --marker:#FFD84D; --green:#16A34A; --blue:#2563EB; --red:#E11D48; }
+* { box-sizing:border-box; margin:0; padding:0; }
+html, body { width:2340px; height:1080px; background:#fff url(bg.png) 0 0/2340px 1080px no-repeat; overflow:hidden; font-family:'Noto Sans SC', sans-serif; color:var(--ink); }
+.abs { position:absolute; }
+.frame { position:absolute; background:#fff; padding:14px; border:1px solid var(--line); border-radius:10px; box-shadow:0 14px 36px rgba(0,0,0,.14); }
+.frame .inner { position:relative; width:100%; height:100%; border-radius:4px; overflow:hidden; background:#EEF0F3; }
+.tape { position:absolute; width:150px; height:40px; background:rgba(255,214,140,.8); top:-18px; box-shadow:0 1px 2px rgba(0,0,0,.08); z-index:3; }
+.tape.l { left:44px; transform:rotate(-7deg); } .tape.r { right:44px; transform:rotate(6deg); }
+.mark { background:linear-gradient(transparent 58%, var(--marker) 58%, var(--marker) 92%, transparent 92%); }
+
+/* 左栏：本期目录（最多 3 条，每条 ≤ 7 字；框高跟着条目数缩） */
+#toc { position:absolute; left:48px; top:492px; width:696px; height:408px; padding:34px 44px 24px; display:flex; flex-direction:column; justify-content:center; background:rgba(255,255,255,.96); border-top:3px solid var(--accent); border-left:1px solid #E6E6E6; border-right:1px solid #E6E6E6; border-bottom:1px solid #E6E6E6; box-shadow:0 6px 18px rgba(0,0,0,.08); }
+#toc .t { font:800 34px 'Noto Sans SC'; margin-bottom:22px; white-space:nowrap; }
+#toc .t span { display:block; font:600 22px 'Noto Sans SC'; color:var(--gray2); margin:6px 0 0 0; }
+#toc .it { display:flex; align-items:center; gap:12px; font:500 30px/2.1 'Noto Sans SC'; color:#B0B6BF; white-space:nowrap; }
+#toc .it .b { width:6px; height:28px; border-radius:3px; background:transparent; flex:none; }
+#toc .it .n { font:700 22px 'Space Grotesk'; width:24px; flex:none; }
+#toc .it.done { color:var(--gray); }
+#toc .it.now { color:var(--ink); font-weight:800; }
+#toc .it.now .b { background:var(--accent); }
+
+/* 演示区 */
+#demo { left:790px; top:40px; width:1504px; height:859px; }          /* 下沿 899 ≤ 字幕带 922 − 10；右边留 46（Way to AGI 的 B 版式：x 790–2292） */
+
+/* 出镜位（录制用版：空着，录好口播后把出镜画面放进来）。B 版式：左上角 (48,48) 696×402；A 版式：大框 (120,150) 1156×666，右边写要点 */
+#cam { position:absolute; left:48px; top:48px; width:696px; height:402px; z-index:6; }
+#cam .inner { background:#DADDE2; }
+#cam .inner > img { width:100%; height:100%; display:block; object-fit:cover; transform-origin:51% 30%; }       /* 对着脸放大：B 版式 1.35、A 版式 1.06（engine.js 里按版式插值） */
+#nametag { position:absolute; z-index:12; left:0; top:0; background:rgba(255,255,255,.96); border-left:8px solid var(--accent); border-radius:6px; padding:6px 24px 8px 18px; font:800 36px/1.2 'Noto Sans SC'; color:var(--ink); box-shadow:0 8px 22px rgba(0,0,0,.28); opacity:0; white-space:nowrap; }
+#nametag small { display:block; font:700 22px/1.3 'Space Grotesk','Noto Sans SC'; color:var(--gray); letter-spacing:.06em; }
+#cam .ico { width:84px; height:84px; border-radius:50%; border:6px solid #C3C8D0; position:relative; }
+#cam .ico::before { content:''; position:absolute; left:20px; top:12px; width:32px; height:32px; border-radius:50%; background:#C3C8D0; }
+#cam .ico::after { content:''; position:absolute; left:8px; top:46px; width:56px; height:30px; border-radius:30px 30px 0 0; background:#C3C8D0; }
+#cam .lab { font:800 34px 'Noto Sans SC'; color:#6B7280; letter-spacing:.12em; }
+#cam .sub { font:600 22px 'Noto Sans SC'; color:#9AA1AC; }
+/* A 版式右侧的要点区 */
+#apanel { position:absolute; left:1400px; top:120px; width:880px; height:740px; z-index:5; opacity:0; }
+#apanel .pane { position:absolute; inset:0; display:none; }
+#apanel .kick { margin-bottom:14px; }
+#apanel .h1 { font:800 64px/1.25 'Noto Sans SC'; white-space:normal; margin-bottom:34px; }
+#apanel .row { display:flex; align-items:flex-start; gap:18px; margin-bottom:22px; opacity:0; }
+#apanel .row .b { flex:none; width:8px; height:56px; border-radius:4px; background:var(--accent); margin-top:4px; }
+#apanel .row .tx { font:800 44px/1.3 'Noto Sans SC'; color:var(--ink); }
+#apanel .row .tx small { display:block; font:600 26px/1.4 'Noto Sans SC'; color:var(--gray); margin-top:2px; }
+#apanel .row.dim .tx { color:#9AA1AC; }
+#apanel .verdict { display:flex; flex-direction:column; gap:26px; margin-top:6px; }
+#apanel .vbox { opacity:0; border-radius:20px; padding:22px 34px 24px; font:800 48px/1.3 'Noto Sans SC'; box-shadow:0 12px 30px rgba(0,0,0,.14); }
+#apanel .vbox small { display:block; font:600 28px/1.4 'Noto Sans SC'; margin-top:6px; opacity:.85; }
+#apanel .vbox.go { background:var(--accent); color:#fff; }
+#apanel .vbox.no { background:#fff; color:var(--ink); border-left:10px solid var(--accent); }
+#demoin { position:absolute; left:0; top:0; width:1474px; height:829px; }
+#cardbg { position:absolute; inset:0; background:linear-gradient(160deg, #F6F7F9 0%, #E7EBF0 100%); }
+#scrimg { position:absolute; left:0; top:0; width:100%; height:100%; display:block; visibility:hidden; background:#000; }
+#ovB { position:absolute; inset:0; }
+.credit { position:absolute; right:22px; top:20px; background:rgba(17,17,17,.86); color:#fff; font:700 26px 'Noto Sans SC'; padding:8px 20px; border-radius:12px; white-space:nowrap; z-index:5; }
+.chapchip { position:absolute; left:22px; top:20px; background:var(--accent); color:#fff; font:800 30px 'Noto Sans SC'; padding:8px 22px; border-radius:12px; white-space:nowrap; box-shadow:0 8px 20px rgba(0,0,0,.25); z-index:5; }
+.chapchip span { font:700 24px 'Space Grotesk'; opacity:.85; margin-right:12px; }
+.tagpill { position:absolute; background:rgba(255,255,255,.95); color:var(--ink); font:800 30px/1.3 'Noto Sans SC'; padding:8px 22px; border-radius:12px; white-space:nowrap; box-shadow:0 8px 20px rgba(0,0,0,.28); z-index:5; border-left:8px solid var(--accent); }
+.tagpill small { display:block; font:600 22px/1.35 'Noto Sans SC'; color:var(--gray); }
+.tagpill.fill { background:var(--accent); color:#fff; border-left:none; }
+.tagpill.dark { background:rgba(17,17,17,.9); color:#fff; border-left-color:var(--accent); }
+.bigpill { display:inline-block; background:rgba(17,17,17,.88); color:#fff; font:900 66px/1.2 'Noto Sans SC'; padding:10px 40px 14px; border-radius:22px; box-shadow:0 14px 34px rgba(0,0,0,.28); white-space:nowrap; }
+.bigpill em { font-style:normal; color:var(--marker); }
+.kbd { display:inline-block; min-width:54px; text-align:center; padding:2px 16px 4px; border:3px solid var(--ink); border-bottom-width:7px; border-radius:12px; background:#fff; font:800 34px 'JetBrains Mono','Noto Sans SC'; }
+.cmd { display:inline-block; padding:10px 26px; border-radius:14px; background:#16181D; color:#F3F4F6; font:600 38px/1.3 'JetBrains Mono','Noto Sans SC'; white-space:nowrap; box-shadow:0 10px 24px rgba(0,0,0,.22); }
+.cmd .p { color:#FDBA74; } .cmd .g { color:#86EFAC; } .cmd .d { color:#9CA3AF; } .cmd .b { color:#93C5FD; }
+.hl { position:absolute; border:5px solid var(--accent); border-radius:12px; box-shadow:0 0 0 7px rgba(255,79,26,.2); z-index:4; }
+.zhnote { position:absolute; background:rgba(255,255,255,.96); border-left:8px solid var(--accent); border-radius:12px; box-shadow:0 8px 22px rgba(0,0,0,.32); padding:8px 22px 9px 18px; z-index:5; font:800 32px/1.35 'Noto Sans SC'; color:var(--ink); }
+.zhnote small { display:block; font:600 24px/1.4 'Noto Sans SC'; color:var(--gray); margin-top:2px; }
+.kick { font:700 26px 'Noto Sans SC'; letter-spacing:.2em; color:var(--accent); white-space:nowrap; }
+.h1 { font:800 60px/1.25 'Noto Sans SC'; white-space:nowrap; }
+.credits { position:absolute; left:60px; right:60px; text-align:center; font:600 22px/1.5 'Noto Sans SC'; color:var(--gray2); }
+
+/* 字幕：项目的中英双语标准（模板 Way to AGI/…/03_成片/index.html 的 #subs / #subZh / #subEn）：y 922 起，中文一行 + 英文一行，居中 */
+#subs { position:absolute; left:0; top:922px; width:2340px; height:130px; z-index:30; pointer-events:none; }
+#subZh { position:absolute; left:0; right:0; top:0; text-align:center; font:800 52px/66px 'Noto Sans SC'; color:var(--ink); -webkit-text-stroke:10px #fff; paint-order:stroke fill; white-space:nowrap; }
+#subEn { position:absolute; left:0; right:0; top:70px; text-align:center; font:600 30px/40px 'Noto Sans SC'; color:#4B5563; -webkit-text-stroke:6px #fff; paint-order:stroke fill; white-space:nowrap; }
+#subZh .w { display:inline-block; font:800 .62em 'Noto Sans SC'; background:var(--accent); color:#fff; -webkit-text-stroke:0; padding:0 .45em; border-radius:.3em; margin-right:.5em; vertical-align:.12em; line-height:1.5; }
+</style>
+</head>
+<body>
+<div class="frame" id="demo"><div class="tape l"></div><div class="tape r"></div>
+  <div class="inner"><div id="demoin">
+    <div id="cardbg"></div>
+    <img id="scrimg">
+    <div id="ovB"></div>
+  </div></div>
+</div>
+<div id="toc"></div>
+<div class="frame" id="cam"><div class="tape l"></div><div class="tape r"></div>
+  <div class="inner"><img id="camimg" alt=""></div>
+</div>
+<div id="nametag">悠一 Yui<small>AI鼓励师</small></div>
+<div id="apanel"></div>
+<div id="subs"><div id="subZh"></div><div id="subEn"></div></div>
+<script src="timeline.js"></script>
+<script src="frames.js"></script>
+<script src="pages.js"></script>
+<script src="scenes.js"></script>
+<script src="scenes_gen.js"></script>
+<script src="engine.js"></script>
+</body>
+</html>
